@@ -1,0 +1,109 @@
+{
+	"Name": "MechEngineer",
+	"Author": "Maintainer: CptMoore",
+	"Website": "https://github.com/BattletechModders/MechEngineer",
+
+	"Enabled": true,
+	"DependsOn": ["CustomComponents"],
+	"DLL": "MechEngineer.dll",
+	"DLLEntryPoint": "MechEngineer.Control.Start",
+	
+	"LogSettings": {
+		"LogFileEnabled" : true
+	},
+	
+	"CustomResourceTypes": ["MEBonusDescriptions", "MECriticalEffects"],
+	
+	"Manifest": [
+		{
+			"Type": "AdvancedJSONMerge",
+			"Path": "advancedjsonmerge",
+			"ShouldMergeJSON": false
+		},
+		{
+			"Type": "MEBonusDescriptions",
+			"Path": "data/basic/bonusDescriptions/",
+			"ShouldMergeJSON": false
+		},
+		{
+			"Type": "MECriticalEffects",
+			"Path": "data/basic/criticalEffects/",
+			"ShouldMergeJSON": false
+		},
+		{
+			"Type": "CCCategories",
+			"Path": "data/basic/categories/",
+			"ShouldMergeJSON": false
+		},
+		{
+			"Type": "CCTagRestrictions",
+			"Path": "data/basic/tagRestrictions/",
+			"ShouldMergeJSON": false
+		},
+        {
+            "Type": "CCDefaults",
+            "Path": "data/basic/defaults/",
+            "ShouldMergeJSON": false
+        },
+		{
+			"Type": "UpgradeDef",
+			"Path": "data/basic/internals/",
+			"ShouldMergeJSON": false
+		},
+		{
+			"Type": "UpgradeDef",
+			"Path": "data/basic/internalsCompatibility/",
+			"ShouldMergeJSON": false
+		},
+		{
+			"Type": "HeatSinkDef",
+			"Path": "data/basic/engines/",
+			"ShouldMergeJSON": false
+		},
+		{
+			"Type": "HeatSinkDef",
+			"Path": "data/basic/engine_parts/",
+			"ShouldMergeJSON": false
+		},
+		{
+			"Type": "MechDef",
+			"Path": "data/basic/mech/",
+			"ShouldMergeJSON": false
+		},
+		{
+			"Type": "ChassisDef",
+			"Path": "data/basic/chassis/",
+			"ShouldMergeJSON": false
+		},		
+		{
+			"Type": "ItemCollectionDef",
+			"Path": "data/basic/itemCollections/",
+			"ShouldMergeJSON": false
+		},
+		{
+			"Type": "UpgradeDef",
+			"Path": "disabled data/test/upgrades/",
+			"ShouldMergeJSON": false
+		},
+		{
+			"Type": "UpgradeDef",
+			"Path": "disabled data/test/internals/",
+			"ShouldMergeJSON": false
+		},
+		{
+			"Type": "HeatSinkDef",
+			"Path": "disabled data/test/heatsinks/",
+			"ShouldMergeJSON": false
+		},
+		{
+			"Type": "HeatSinkDef",
+			"Path": "disabled data/test/engines/",
+			"ShouldMergeJSON": false
+		},
+		{
+			"Type": "HeatSinkDef",
+			"Path": "disabled data/test/engine_parts/",
+			"ShouldMergeJSON": false
+		}
+	]
+}

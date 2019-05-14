@@ -1,0 +1,73 @@
+{
+	"Custom": {
+		"BonusDescriptions": {
+			"Bonuses": [
+				"ArmAccuracyBonus: 1",
+				"MeleeAccuracyBonus: 1"
+			]
+		},
+		"Category" : { 
+			"CategoryID" : "ArmActuator" 
+		},
+		"ArmActuator" : {
+			"AccuracyBonus" : -1,
+			"Type" : "Hand"
+		}
+	},
+    "Description" : {
+        "Cost" : 0,
+        "Rarity" : 0,
+        "Purchasable" : false,
+        "Manufacturer" : "Generic",
+        "Model" : "Standard",
+        "UIName" : "Arm Hand",
+        "Id" : "emod_arm_hand",
+        "Name" : "Arm Hand Actuator",
+        "Details" : "An Actuator is a component within a BattleMech's limbs, composed of the joint, myomer bundles, and motor control units. The hand actuator requires the lower and upper arm actuators to be installed and working.",
+        "Icon" : "uixSvgIcon_equipment_ActuatorArm"
+    },
+    "BonusValueA" : "",
+    "BonusValueB" : "",
+    "ComponentType" : "Upgrade",
+    "ComponentSubType" : "NotSet",
+    "PrefabIdentifier" : "",
+    "BattleValue" : 0,
+    "InventorySize" : 3,
+    "Tonnage" : 0,
+    "AllowedLocations" : "Arms",
+    "DisallowedLocations" : "All",
+    "CriticalComponent" : false,
+    "statusEffects" : [
+        {
+            "durationData" : {
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "effectTargetType" : "Creator",
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "StatusEffect-Attack_ToHitMelee2-T0",
+                "Name" : "MELEE HIT CHANCE IMPROVED",
+                "Details" : "Melee attacks attempted have their hit improved by [AMT].",
+                "Icon" : "uixSvgIcon_equipment_ActuatorArm"
+            },
+            "nature" : "Buff",
+            "statisticData" : {
+                "statName" : "AccuracyModifier",
+                "operation" : "Float_Add",
+                "modValue" : "-1.0",
+                "modType" : "System.Single",
+                "targetCollection" : "Weapon",
+                "targetWeaponSubType" : "Melee"
+            }
+        }
+    ],
+    "ComponentTags" : {
+        "items" : [
+            "component_type_stock"
+        ],
+        "tagSetSourceFile" : ""
+    }
+}

@@ -1,0 +1,237 @@
+{
+    "MechLabGeneralWidgetEnabled" : false,
+    "HeatDamageInjuryEnabled" : true,
+    "ShutdownInjuryEnabled" : true,
+    "MinimumHeatSinksOnMech" : 10,
+    "EnforceRulesForAdditionalInternalHeatSinks" : true,
+    "AllowMixingHeatSinkTypes" : false,
+    "FractionalAccountingPrecision" : 0.5,
+    "ArmorStructureRatioEnforcement" : false,
+    "ArmorStructureRatioEnforcementSkipMechDefs" : [
+        
+    ],
+    "SaveMechDefOnMechLabConfirm" : false,
+    "DefaultEngineHeatSinkId" : "Gear_HeatSink_Generic_Standard",
+    "EngineMissingFallbackHeatSinkCapacity" : 0,
+    "DynamicSlotsValidateDropEnabled" : false,
+    "MechLabGeneralSlots" : 0,
+    "MechLabArmTopPadding" : 120,
+    "BonusDescriptionsElementTemplate" : " <indent=10%><line-indent=-5%><line-height=65%>{{element}}</line-height></line-indent></indent>\r\n",
+    "BonusDescriptionsDescriptionTemplate" : "Traits:<b><color=#F79B26FF>\r\n{{elements}}</color></b>\r\n{{originalDescription}}",
+    "CriticalEffectsDescriptionTemplate" : "Critical Effects:<b><color=#F79B26FF>\r\n{{elements}}</color></b>\r\n{{originalDescription}}",
+    "AutoFixMechDefSkip" : [
+        
+    ],
+    "AutoFixUpgradeDefSkip" : [
+        "Gear_Cockpit_SLDF_Custom",
+        "Gear_Cockpit_Generic_Small",
+        "Gear_Gyro_Generic_Standard",
+        "emod_arm_part_shoulder",
+        "emod_arm_part_upper",
+        "emod_arm_part_lower",
+        "emod_arm_part_hand",
+        "emod_leg_hip",
+        "emod_leg_upper",
+        "emod_leg_lower",
+        "emod_leg_foot"
+    ],
+    "AutoFixMechDefEngine" : true,
+    "AutoFixMechDefCoolingDef" : "emod_kit_shs",
+    "AutoFixMechDefHeatBlockDef" : "emod_engine_cooling",
+    "AutoFixMechDefCoreDummy" : "emod_engine_dummy",
+    "AutoFixChassisDefSkip" : [
+        
+    ],
+    "AutoFixChassisDefInitialTonnage" : true,
+    "AutoFixChassisDefInitialToTotalTonnageFactor" : 0.1,
+    "AutoFixChassisDefMaxJumpjets" : true,
+    "AutoFixChassisDefMaxJumpjetsCount" : 8,
+    "AutoFixChassisDefMaxJumpjetsRating" : 400,
+    "AutoFixWeaponDefSlotsChanges" : [
+        {
+            "Type" : "AC5",
+            "Change" : {
+                "From" : 2,
+                "By" : 2,
+                "FromIsMin" : false
+            }
+        },
+        {
+            "Type" : "AC10",
+            "Change" : {
+                "From" : 3,
+                "By" : 2,
+                "FromIsMin" : false
+            }
+        },
+        {
+            "Type" : "AC20",
+            "Change" : {
+                "From" : 4,
+                "By" : 2,
+                "FromIsMin" : false
+            }
+        },
+        {
+            "Type" : "Gauss",
+            "Change" : {
+                "From" : 5,
+                "By" : 2,
+                "FromIsMin" : false
+            }
+        },
+        {
+            "Type" : "LargeLaserPulse",
+            "Change" : {
+                "From" : 2,
+                "By" : 0,
+                "FromIsMin" : false
+            }
+        },
+        {
+            "Type" : "LRM20",
+            "Change" : {
+                "From" : 4,
+                "By" : 1,
+                "FromIsMin" : false
+            }
+        }
+    ],
+    "UseArmActuators" : true,
+    "ForceFullDefaultActuators" : false,
+    "DefaultCBTShoulder" : "emod_arm_part_shoulder",
+    "DefaultCBTLower" : "emod_arm_part_lower",
+    "DefaultCBTUpper" : "emod_arm_part_upper",
+    "DefaultCBTHand" : "emod_arm_part_hand",
+    "DefaultCBTDefLower" : "emod_arm_part_lower",
+    "DefaultCBTDefHand" : "emod_arm_part_hand",
+    "InterruptHandDropIfNoLower" : false,
+    "ExtendHandLimit" : true,
+    "CBTMovement" : {
+        "UseGameWalkValues" : true,
+        "JJRoundUp" : false,
+        "TTWalkMultiplier" : 30,
+        "TTSprintMultiplier" : 50
+    },
+    "HardpointFix" : {
+        "AutoFixChassisDefWeaponHardpointCounts" : false,
+        "EnforceHardpointLimits" : false,
+        "AllowDefaultLoadoutWeapons" : false,
+        "WeaponPrefabMappings" : [
+            {
+                "PrefabIdentifier" : "AC2",
+                "HardpointCandidates" : [
+                    "ac2",
+                    "ac",
+                    "lbx"
+                ]
+            },
+            {
+                "PrefabIdentifier" : "AC5",
+                "HardpointCandidates" : [
+                    "ac5",
+                    "uac5",
+                    "ac",
+                    "lbx"
+                ]
+            },
+            {
+                "PrefabIdentifier" : "AC10",
+                "HardpointCandidates" : [
+                    "ac10",
+                    "lbx10",
+                    "ac",
+                    "lbx"
+                ]
+            },
+            {
+                "PrefabIdentifier" : "AC20",
+                "HardpointCandidates" : [
+                    "ac20",
+                    "ac",
+                    "lbx"
+                ]
+            },
+            {
+                "PrefabIdentifier" : "artillery",
+                "HardpointCandidates" : [
+                    "artillery",
+                    "ac20",
+                    "ac",
+                    "lbx"
+                ]
+            },
+            {
+                "PrefabIdentifier" : "lrm5",
+                "HardpointCandidates" : [
+                    "lrm5",
+                    "lrm10",
+                    "lrm15",
+                    "lrm20",
+                    "srm20"
+                ]
+            },
+            {
+                "PrefabIdentifier" : "lrm10",
+                "HardpointCandidates" : [
+                    "lrm10",
+                    "lrm15",
+                    "lrm20",
+                    "srm20",
+                    "lrm5"
+                ]
+            },
+            {
+                "PrefabIdentifier" : "lrm15",
+                "HardpointCandidates" : [
+                    "lrm15",
+                    "lrm20",
+                    "srm20",
+                    "lrm10",
+                    "lrm5"
+                ]
+            },
+            {
+                "PrefabIdentifier" : "lrm20",
+                "HardpointCandidates" : [
+                    "lrm20",
+                    "srm20",
+                    "lrm15",
+                    "lrm10",
+                    "lrm5"
+                ]
+            },
+            {
+                "PrefabIdentifier" : "MachineGun",
+                "HardpointCandidates" : [
+                    "machinegun",
+                    "mg"
+                ]
+            },
+            {
+                "PrefabIdentifier" : "srm2",
+                "HardpointCandidates" : [
+                    "srm2",
+                    "srm4",
+                    "srm6"
+                ]
+            },
+            {
+                "PrefabIdentifier" : "srm4",
+                "HardpointCandidates" : [
+                    "srm4",
+                    "srm6",
+                    "srm2"
+                ]
+            },
+            {
+                "PrefabIdentifier" : "srm6",
+                "HardpointCandidates" : [
+                    "srm6",
+                    "srm4",
+                    "srm2"
+                ]
+            }
+        ]
+    }
+}

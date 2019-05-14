@@ -1,0 +1,227 @@
+{
+  "behaviorVariables": [
+    {
+	    /* How much accuracy (0.0 - 1.0) is required to consider
+	       an attack that will overheat */
+      "k": "Float_AccuracyNeededForOverheatAttack",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.65
+      }
+    },
+    {
+	    /* How much a location must be damaged before an overheat
+	       attack will be considered, as a fraction from 0.0
+	       (undamaged) to 1.0 (location destroyed) */
+      "k": "Float_ExistingTargetDamageForOverheatAttack",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.0
+      }
+    },
+    {
+	    /* How much a location must be damaged before a DFA attack
+	       will be considered , as a fraction from 0.0 (undamaged)
+	       to 1.0 (location destroyed) */
+      "k": "Float_ExistingTargetDamageForDFAAttack",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.0
+      }
+    },
+    {
+	    /* Maximum leg damage allowed for DFA attack (above which
+	       attacks will not be considered), as a fraction from 0.0
+	       (undamaged) to 1.0 (location destroyed) */
+      "k": "Float_OwnMaxLegDamageForDFAAttack",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.99
+      }
+    },
+    {
+	    /* Influence Factor Weight to maximize expected damage to
+	       hostiles.
+	       Hostile Factor: 1.0 / 0.5 / 0.25 based on threat */
+      "k": "Float_PreferHigherExpectedDamageToHostileFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 4.0
+      }
+    },
+    {
+	    /* Influence Factor Weight to minimize expected damage
+	       from hostiles. */
+      "k": "Float_PreferLowerExpectedDamageFromHostileFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 1.0
+      }
+    },
+    {
+	    /* Influence Factor Weight to minimize expected damage
+	       from hostiles WHEN SPRINTING. */
+      "k": "Float_SprintPreferLowerExpectedDamageFromHostileFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 1.0
+      }
+    },
+    {
+	    /* How much heat is acceptable before being subject to "overheat" logic.
+	       0: no heat
+	       1: Heat level 1 (unused?)
+	       2: Heat level 2
+	       3: Max heat */
+      "k": "Float_AcceptableHeatLevel",
+      "v": {
+        "type": "Float",
+        "floatVal": 2.9
+      }
+    },
+    {
+	    /* When considering different kinds of attacks, multiply
+	       the melee damage by this value to decide which attack
+	       to use. */
+      "k": "Float_MeleeDamageMultiplier",
+      "v": {
+        "type": "Float",
+        "floatVal": 3.5
+      }
+    },
+    {
+	    /* When considering different kinds of attacks, multiply
+	       the DFA damage by this value to decide which attack to
+	       use. */
+      "k": "Float_DFADamageMultiplier",
+      "v": {
+        "type": "Float",
+        "floatVal": 3.0
+      }
+    },
+    {
+	    /* Influence Factor Weight to control the desire to be
+	       inside water. */
+      "k": "Float_PreferHigherHeatSinkLocationsFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.4
+      }
+    },
+    {
+	    /* If a target is a melee revenge target, what additional
+	       damage multiplier to apply. The total multiplier is
+	       Float_MeleeDamageMultiplier +
+	       FloatMeleeRevengeBonus. */
+      "k": "Float_MeleeRevengeBonus",
+      "v": {
+        "type": "Float",
+        "floatVal": 3.0
+      }
+    },
+    {
+	    /* If a target is a melee revenge target, but the ratio of
+	       its expected melee damage to my expected melee damage
+	       is higher than this threshold, DO NOT MELEE! It'll all
+	       end in tears! */
+      "k": "Float_MeleeDamageRatioCap",
+      "v": {
+        "type": "Float",
+        "floatVal": 1.75
+      }
+    },
+    {
+	    /* A weight for an influence factor to prefer to get
+	       inside melee range. Negative values will encourage
+	       units to get out of melee range. */
+      "k": "Float_PreferInsideMeleeRangeFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.0
+      }
+    },
+    {
+	    /* The base percentage chance (0-100) to reserve. */
+      "k": "Float_ReserveBasePercentage",
+      "v": {
+        "type": "Float",
+        "floatVal": 25
+      }
+    },
+    {
+	    /* Threshold Percentage (100.0 equals 100%) of target hit
+	       points before we start trying to multi-target. */
+      "k": "Float_MultiTargetOverkillThreshold",
+      "v": {
+        "type": "Float",
+        "floatVal": 90.0
+      }
+    },
+    {
+	    /* If a hostile actor can do this percentage (100.0
+	       equals 100%) of one of my unit's hit points, do
+	       not reserve. */
+      "k": "Float_OverkillFactorForReserve",
+      "v": {
+        "type": "Float",
+        "floatVal": 90.0
+      }
+    },
+    {
+	    /* Base chance for a called shot to the head. Not "out of"
+	       100, or any fixed number, out of the total
+	       applicable. */
+      "k": "Float_CalledShotHeadBaseChance",
+      "v": {
+        "type": "Float",
+        "floatVal": 15.0
+      }
+    },
+    {
+	    /* Influence Factor to prefer not to be surrounded by hostile units.*/
+      "k": "Float_PreferNotSurroundedByHostileUnitsFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.4
+      }
+    },
+    {
+	    /* Influence Factor to prefer not to be surrounded by
+	       hostile units WHEN SPRINTING.*/
+      "k": "Float_SprintPreferNotSurroundedByHostileUnitsFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.4
+      }
+    },
+    {
+	    /* Evasive "to hit" floor - if the to-hit is below this
+	       percentage (0.0 - 100.0), only shoot a single
+	       "conservative" shot. Note: ignored for attackers that
+	       are not mechs. */
+      "k": "Float_EvasiveToHitFloor",
+      "v": {
+        "type": "Float",
+        "floatVal": 30.0
+      }
+    },
+    {
+	    /* Influence Factor Weight to prefer having LOS to most
+		hostiles. */
+      "k": "Float_PreferLOSToMostHostilesFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.2
+      }
+    },
+    {
+	    /* Influence Factor Weight to prefer having LOS to most
+		hostiles WHEN SPRINTING. */
+      "k": "Float_SprintPreferLOSToMostHostilesFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.1
+      }
+    }
+  ]
+}

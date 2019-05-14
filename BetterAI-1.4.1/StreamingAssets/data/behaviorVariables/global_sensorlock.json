@@ -1,0 +1,308 @@
+{
+  "behaviorVariables": [
+    {
+	    /* Percentage (0-100) of time to move towards priority
+	       targets. */
+      "k": "Float_PriorityMovePercentage",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.0
+      }
+    },
+    {
+	    /* Influence Factor Weight for preferring higher
+	       elevations. */
+      "k": "Float_PreferHigherPositionFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.0
+      }
+    },
+    {
+	    /* Influence Factor Weight to maximize expected damage to
+	       hostiles.
+	       Hostile Factor: 1.0 / 0.5 / 0.25 based on threat */
+      "k": "Float_PreferHigherExpectedDamageToHostileFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.0
+      }
+    },
+    {
+	    /* Influence Factor Weight to minimize expected damage
+	       from hostiles. */
+      "k": "Float_PreferLowerExpectedDamageFromHostileFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 1.5
+      }
+    },
+    {
+	    /* Influence Factor Weight to minimize expected damage
+	       from hostiles WHEN SPRINTING. */
+      "k": "Float_SprintPreferLowerExpectedDamageFromHostileFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 1.5
+      }
+    },
+    {
+	    /* Influence Factor Weight to prefer facing hostiles.
+	       Hostile Factor: 1.0 / 0.5 / 0.25 based on threat */
+      "k": "Float_PreferFacingHostileFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.5
+      }
+    },
+    {
+	    /* Influence Factor Weight to prefer locations close to
+	       optimal distance to other allies. */
+      "k": "Float_PreferOptimalDistanceToAllyFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.0
+      }
+    },
+    {
+	    /* How much heat is acceptable before being subject to "overheat" logic.
+	       0: no heat
+	       1: Heat level 1 (unused?)
+	       2: Heat level 2
+	       3: Max heat */
+      "k": "Float_AcceptableHeatLevel",
+      "v": {
+        "type": "Float",
+        "floatVal": 1.4
+      }
+    },
+    {
+	    /* Distance (in meters) outside of which we consider
+	       ourselves OK to stop and cool down. */
+      "k": "Float_CoolDownRange",
+      "v": {
+        "type": "Float",
+        "floatVal": 100.0
+      }
+    },
+    {
+	    /* Influence Factor Weight to control the desire to be
+	       inside e.g. forests. */
+      "k": "Float_PreferLessTargetableLocationFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 1.0
+      }
+    },
+    {
+	    /* Influence Factor Weight to control the desire to be
+	       inside e.g. forests WHEN SPRINTING. */
+      "k": "Float_SprintPreferLessTargetableLocationFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 1.0
+      }
+    },
+    {
+	    /* Influence Factor Weight to control the desire to be
+	       inside water. */
+      "k": "Float_PreferHigherHeatSinkLocationsFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.0
+      }
+    },
+    {
+	    /* Influence Factor Weight to control the desire to be
+	       inside water WHEN SPRINTING. */
+      "k": "Float_SprintPreferHigherHeatSinkLocationsFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.2
+      }
+    },
+    {
+	    /* A weight for an influence factor to prefer to get
+	       inside melee range. Negative values will encourage
+	       units to get out of melee range. */
+      "k": "Float_PreferInsideMeleeRangeFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": -1.3
+      }
+    },
+    {
+	    /* A weight for an influence factor to prefer to get
+	       inside melee range WHEN SPRINTING. Negative values will
+	       encourage units to get out of melee range. */
+      "k": "Float_SprintPreferInsideMeleeRangeFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": -1.75
+      }
+    },
+    {
+	    /* Influence Factor Weight to control the desire to be
+	       inside forests or other locations that grant guard. */
+      "k": "Float_PreferLocationsThatGrantGuardFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 1.5
+      }
+    },
+    {
+	    /* Influence Factor Weight to control the desire to be
+	       inside forests or other locations that grant guard WHEN
+	       SPRINTING. */
+      "k": "Float_SprintPreferLocationsThatGrantGuardFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 1.5
+      }
+    },
+    {
+	    /* Weight to prefer not being in locations that have
+	       lethal amounts of expected damage */
+      "k": "Float_PreferNotLethalPositionFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 1.0
+      }
+    },
+    {
+	    /* Influence Factor Weight to prefer being behind
+	       hostiles.
+	       Hostile Factor: 1.0 / 0.5 / 0.25 based on threat */
+      "k": "Float_PreferAttackFromBehindHostileFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.0
+      }
+    },
+    {
+	    /* Influence Factor Weight to prefer being beside
+	       hostiles.
+	       Hostile Factor: 1.0 / 0.5 / 0.25 based on threat */
+      "k": "Float_PreferAttackFrom90DegreesToHostileFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.0
+      }
+    },
+    {
+	    /* Influence Factor Weight to reject being closer than the
+	       minimum weapon range to hostiles.  */
+      "k": "Float_PreferNoCloserThanMinDistToHostileFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.4
+      }
+    },
+    {
+	    /* Influence Factor Weight to reject being closer than
+	       personal space to allies. */
+      "k": "Float_PreferNoCloserThanPersonalSpaceToAllyFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 10.0
+      }
+    },
+    {
+	    /* Influence Factor Weight for preferring more level (vs
+	       steep) locations. */
+      "k": "Float_PreferLessSteepPositionFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.5
+      }
+    },
+    {
+	    /* Influence Factor Weight to prefer being far away from
+	       closest hostile. Useful for defensive moves. */
+      "k": "Float_PreferHigherDistanceFromClosestHostileFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 1.5
+      }
+    },
+    {
+	    /* Influence Factor Weight to prefer having LOS to
+	       fewest hostiles. Useful for defensive moves. */
+      "k": "Float_PreferLOSToFewestHostileFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 1.0
+      }
+    },
+    {
+	    /* Influence Factor Weight to prefer having LOS to fewest
+	       hostiles WHEN SPRINTING. Useful for defensive moves. */
+      "k": "Float_SprintPreferLOSToFewestHostileFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.5
+      }
+    },
+    {
+	    /* Influence Factor Weight to prefer having LOS to most
+		hostiles. */
+      "k": "Float_PreferLOSToMostHostilesFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.0
+      }
+    },
+    {
+	    /* Influence Factor Weight to prefer having LOS to most
+		hostiles WHEN SPRINTING. */
+      "k": "Float_SprintPreferLOSToMostHostilesFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.0
+      }
+    },
+    {
+	    /* Influence Factor Weight to control the desire to be
+	       outside the cooldown range. */
+      "k": "Float_PreferOutsideCoolDownRangeFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 1.0
+      }
+    },
+    {
+	    /* Influence Factor Weight to control the desire to be in
+	       locations with damage reduction.*/
+      "k": "Float_PreferHigherDamageReductionLocationsFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 1.0
+      }
+    },
+    {
+	    /* Influence Factor Weight to control the desire to be in
+	       locations with damage reduction WHEN SPRINTING.*/
+      "k": "Float_SprintPreferHigherDamageReductionLocationsFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 1.0
+      }
+    },
+    {
+	    /* Influence Factor Weight to control the desire to defend
+	       my own weak armor. */
+      "k": "Float_PreferPresentingHigherArmorToHostileFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 1.0
+      }
+    },
+    {
+      "k": "Float_SprintToCombatPercentage",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.0
+      }
+    }
+  ]
+}
