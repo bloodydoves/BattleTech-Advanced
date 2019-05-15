@@ -1,0 +1,18 @@
+{
+    "TargetID": "lancedef_mech_d4_dynamic_smallMedScout",
+    "Instructions": [
+        {
+            "JSONPath": "LanceUnits[0].pilotTagSet.items",
+            "Action": "ArrayAdd",
+            "Value": "pilot_npc_tactician"
+        },
+        {
+            "JSONPath": "LanceUnits[1].excludedPilotTagSet.items",
+            "Action": "Replace",
+            "Value": [
+                "pilot_npc_gunner",
+                "pilot_npc_defender"
+            ]
+        }
+    ]
+}

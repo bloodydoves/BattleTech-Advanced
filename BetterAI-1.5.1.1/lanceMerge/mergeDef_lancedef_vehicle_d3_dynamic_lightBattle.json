@@ -1,0 +1,31 @@
+{
+    "TargetID": "lancedef_vehicle_d3_dynamic_lightBattle",
+    "Instructions": [
+        {
+            "JSONPath": "LanceUnits[0].excludedPilotTagSet.items",
+            "Action": "Replace",
+            "Value": [
+                "pilot_npc_pilot",
+                "pilot_npc_defender"
+            ]
+        },
+        {
+            "JSONPath": "LanceUnits[1].excludedPilotTagSet.items",
+            "Action": "Replace",
+            "Value": [
+                "pilot_npc_pilot",
+                "pilot_npc_defender"
+            ]
+        },
+        {
+            "JSONPath": "LanceUnits[2].pilotTagSet.items",
+            "Action": "ArrayAdd",
+            "Value": "pilot_npc_gunner"
+        },
+        {
+            "JSONPath": "LanceUnits[3].pilotTagSet.items",
+            "Action": "ArrayAdd",
+            "Value": "pilot_npc_gunner"
+        }
+    ]
+}

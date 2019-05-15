@@ -1,0 +1,23 @@
+{
+    "TargetID": "lancedef_mixed_d6_dynamic_mediumBattle3",
+    "Instructions": [
+        {
+            "JSONPath": "LanceUnits[0].pilotTagSet.items",
+            "Action": "ArrayAdd",
+            "Value": "pilot_npc_gunner"
+        },
+        {
+            "JSONPath": "LanceUnits[1].pilotTagSet.items",
+            "Action": "ArrayAdd",
+            "Value": "pilot_npc_defender"
+        },
+        {
+            "JSONPath": "LanceUnits[2].excludedPilotTagSet.items",
+            "Action": "Replace",
+            "Value": [
+                "pilot_npc_pilot",
+                "pilot_npc_tactician"
+            ]
+        }
+    ]
+}

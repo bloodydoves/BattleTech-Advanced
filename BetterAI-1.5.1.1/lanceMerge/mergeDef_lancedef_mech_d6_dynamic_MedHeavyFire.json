@@ -1,0 +1,17 @@
+{
+    "TargetID": "lancedef_mech_d6_dynamic_MedHeavyFire",
+    "Instructions": [
+        {
+            "JSONPath": "LanceUnits[2].pilotTagSet.items",
+            "Action": "ArrayAdd",
+            "Value": "pilot_npc_defender"
+        },
+        {
+            "JSONPath": "LanceUnits[3].excludedPilotTagSet.items",
+            "Action": "Replace",
+            "Value": [
+                "pilot_npc_tactician"
+            ]
+        }
+    ]
+}
