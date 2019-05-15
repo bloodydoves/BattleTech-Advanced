@@ -1,0 +1,14 @@
+VIP/RogueTech Tanks Ported for BloodyDoves' Battletech Advanced mod.
+Used and adapted with permission and help by Cargo Vroom.
+
+0.0.3 - 5/14/2019
+
+Basic Framework:
+	Tank Defaults,
+	Tank Movement,
+	Tank Pathing,
+	Tank Quirks
+Adding first pass of APCs and noncombat vehicles,
+Adding first pass of Light combat vehicles
+
+Note: MechEngineer tank crit effects defs not included in this folder.
