@@ -1,15 +1,15 @@
 {
 	"Description": {
-		"Id": "vehiclechassisdef_STRIKER_LRM",
-		"Name": "Striker Light Tank",
+		"Id": "vehiclechassisdef_HUNTER_ERL",
+		"Name": "Hunter Light Support Tank",
 		"Details": "",
 		"Icon": "STRIKER",
-		"Cost": 564,
-		"Rarity": 5,
+		"Cost": 993,
+		"Rarity": 0,
 		"Purchasable": false
 	},
-	"MovementCapDefID": "movedef_5-8cv",
-	"PathingCapDefID": "pathingdef_light_wheeled",
+	"MovementCapDefID": "movedef_4-6cv",
+	"PathingCapDefID": "pathingdef_light_tracked",
 	"HardpointDataDefID": "hardpointdatadef_striker",
 	"PrefabIdentifier": "chrPrfVhcl_striker",
 	"PrefabBase": "striker",
@@ -18,7 +18,7 @@
 	"BattleValue": 564,
 	"TopSpeed": 85,
 	"TurnRadius": 90,
-	"movementType": "Wheeled",
+	"movementType": "Tracked",
 	"SpotterDistanceMultiplier": 1,
 	"VisibilityMultiplier": 1,
 	"SensorRangeMultiplier": 1,
@@ -66,7 +66,16 @@
 	"Locations": [
 		{
 			"Location": "Front",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Missile",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 0,
 			"MaxArmor": 160,
@@ -98,12 +107,7 @@
 		},
 		{
 			"Location": "Turret",
-			"Hardpoints": [
-				{
-					"WeaponMount": "Missile",
-					"Omni": false
-				}
-			],
+			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 0,
 			"MaxArmor": 160,
