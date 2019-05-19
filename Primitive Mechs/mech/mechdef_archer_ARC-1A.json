@@ -10,7 +10,7 @@
     ],
     "tagSetSourceFile": ""
   },
-  "ChassisID": "chassisdef_archer_ARC-5S",
+  "ChassisID": "chassisdef_archer_ARC-1A",
   "HeraldryID": null,
   "Description": {
     "Cost": 1582400,
@@ -18,10 +18,10 @@
     "Purchasable": true,
     "Manufacturer": null,
     "Model": null,
-    "UIName": "Archer ARC-5S",
-    "Id": "mechdef_archer_ARC-5S",
-    "Name": "Archer",
-    "Details": "The 5S variant of the Archer, built out of Defiance Industries, was the official variant for the Armed Forces of the Federated Commonwealth. The 5S upgraded the engine to a 280 XL Engine. The 5S also reduced the LRM-20 launchers to LRM-15s. This saved weight was used to add two Streak SRM-2 launchers, one in each arm and fed by two tons of reloads in the side torsos. They also upgraded the four medium lasers to Medium Pulse Lasers. Finally, the 'Mech carried a Narc Missile Beacon launcher in its left torso. All of the ammunition carried by the 5S was protected by CASE.",
+    "UIName": "Primitive Archer ARC-1A",
+    "Id": "mechdef_archer_ARC-1A",
+    "Name": "Primitive Archer",
+    "Details": "The original Archer prototype built for the Terran Hegemony in 2458 with Primitive Technology. It was slower than the successor ARC-2R variant with a top speed of 54 km/h with the inclusion of a Primitive Engine. Its loadout was somewhat similar, with the frame housing a pair of LRM-20's and 4 tons of ammunition, but only mounted two Medium Lasers, one in each fully-articulated arm. It was protected by 16 tons of Primitive Armor. At the time, it was praised for its reliability and ease of maintenance, although in combat produced far more excess heat than the machine could handle if all weapons were fired - a similar issue carried over to the later Archer.",
     "Icon": "uixTxrIcon_archer"
   },
   "simGameMechPartCost": 880000,
@@ -39,64 +39,64 @@
     {
       "DamageLevel": "Functional",
       "Location": "LeftArm",
-      "CurrentArmor": 110,
+      "CurrentArmor": 75,
       "CurrentRearArmor": -1,
       "CurrentInternalStructure": 55,
-      "AssignedArmor": 110,
+      "AssignedArmor": 75,
       "AssignedRearArmor": -1
     },
     {
       "DamageLevel": "Functional",
       "Location": "LeftTorso",
-      "CurrentArmor": 140,
-      "CurrentRearArmor": 40,
+      "CurrentArmor": 100,
+      "CurrentRearArmor": 30,
       "CurrentInternalStructure": 75,
-      "AssignedArmor": 140,
-      "AssignedRearArmor": 40
+      "AssignedArmor": 100,
+      "AssignedRearArmor": 30
     },
     {
       "DamageLevel": "Functional",
       "Location": "CenterTorso",
-      "CurrentArmor": 165,
+      "CurrentArmor": 150,
       "CurrentRearArmor": 50,
       "CurrentInternalStructure": 110,
-      "AssignedArmor": 165,
+      "AssignedArmor": 150,
       "AssignedRearArmor": 50
     },
     {
       "DamageLevel": "Functional",
       "Location": "RightTorso",
-      "CurrentArmor": 140,
-      "CurrentRearArmor": 40,
+      "CurrentArmor": 100,
+      "CurrentRearArmor": 30,
       "CurrentInternalStructure": 75,
-      "AssignedArmor": 140,
-      "AssignedRearArmor": 40
+      "AssignedArmor": 100,
+      "AssignedRearArmor": 30
     },
     {
       "DamageLevel": "Functional",
       "Location": "RightArm",
-      "CurrentArmor": 110,
+      "CurrentArmor": 75,
       "CurrentRearArmor": -1,
       "CurrentInternalStructure": 55,
-      "AssignedArmor": 110,
+      "AssignedArmor": 75,
       "AssignedRearArmor": -1
     },
     {
       "DamageLevel": "Functional",
       "Location": "LeftLeg",
-      "CurrentArmor": 140,
+      "CurrentArmor": 100,
       "CurrentRearArmor": -1,
       "CurrentInternalStructure": 75,
-      "AssignedArmor": 140,
+      "AssignedArmor": 100,
       "AssignedRearArmor": -1
     },
     {
       "DamageLevel": "Functional",
       "Location": "RightLeg",
-      "CurrentArmor": 140,
+      "CurrentArmor": 100,
       "CurrentRearArmor": -1,
       "CurrentInternalStructure": 75,
-      "AssignedArmor": 140,
+      "AssignedArmor": 100,
       "AssignedRearArmor": -1
     }
   ],
@@ -279,7 +279,7 @@
     },	
 	{
       "MountedLocation": "CenterTorso",
-      "ComponentDefID": "emod_armorslots_standard",
+      "ComponentDefID": "Gear_armorslots_Primitive",
       "ComponentDefType": "Upgrade",
       "HardpointSlot": -1,
       "DamageLevel": "Functional",
@@ -308,7 +308,7 @@
     },
 	{
      "MountedLocation": "CenterTorso",
-     "ComponentDefID": "emod_kit_dhs",
+     "ComponentDefID": "emod_kit_shs",
      "SimGameUID": null,
      "ComponentDefType": "HeatSink",
      "HardpointSlot": -1,
@@ -340,63 +340,8 @@
       "hasPrefabName": false
     },
     {
-      "MountedLocation": "CenterTorso",
-      "ComponentDefID": "emod_engineslots_xl_center",
-      "SimGameUID": null,
-      "ComponentDefType": "HeatSink",
-      "HardpointSlot": -1,
-      "GUID": null,
-      "DamageLevel": "Functional",
-      "prefabName": null,
-      "hasPrefabName": false
-    },
-	{
-      "MountedLocation": "RightTorso",
-      "ComponentDefID": "emod_engineslots_size3",
-      "SimGameUID": null,
-      "ComponentDefType": "HeatSink",
-      "HardpointSlot": -1,
-      "GUID": null,
-      "DamageLevel": "Functional",
-      "prefabName": null,
-      "hasPrefabName": false
-    },
-	{
-      "MountedLocation": "LeftTorso",
-      "ComponentDefID": "emod_engineslots_size3",
-      "SimGameUID": null,
-      "ComponentDefType": "HeatSink",
-      "HardpointSlot": -1,
-      "GUID": null,
-      "DamageLevel": "Functional",
-      "prefabName": null,
-      "hasPrefabName": false
-    },
-    {
-      "MountedLocation": "Head",
-      "ComponentDefID": "Gear_Cockpit_Generic_Standard",
-      "SimGameUID": null,
-      "ComponentDefType": "Upgrade",
-      "HardpointSlot": -1,
-      "GUID": null,
-      "DamageLevel": "Functional",
-      "prefabName": null,
-      "hasPrefabName": false
-    },
-    {
       "MountedLocation": "LeftArm",
-      "ComponentDefID": "Weapon_Laser_MediumLaserPulse_0-STOCK",
-      "SimGameUID": null,
-      "ComponentDefType": "Weapon",
-      "HardpointSlot": 1,
-      "GUID": null,
-      "DamageLevel": "Functional",
-      "prefabName": null,
-      "hasPrefabName": false
-    },
-	{
-      "MountedLocation": "LeftArm",
-      "ComponentDefID": "Weapon_SRM_SSRM2_0-STOCK",
+      "ComponentDefID": "Weapon_Laser_MediumLaser_0-STOCK",
       "SimGameUID": null,
       "ComponentDefType": "Weapon",
       "HardpointSlot": 0,
@@ -407,18 +352,7 @@
     },
     {
       "MountedLocation": "LeftTorso",
-      "ComponentDefID": "Weapon_LRM_LRM15_0-STOCK",
-      "SimGameUID": null,
-      "ComponentDefType": "Weapon",
-      "HardpointSlot": 0,
-      "GUID": null,
-      "DamageLevel": "Functional",
-      "prefabName": null,
-      "hasPrefabName": false
-    },
-	{
-      "MountedLocation": "LeftTorso",
-      "ComponentDefID": "Weapon_SRM_SRM_NARC",
+      "ComponentDefID": "Weapon_LRM_LRM20_0-STOCK",
       "SimGameUID": null,
       "ComponentDefType": "Weapon",
       "HardpointSlot": 0,
@@ -440,7 +374,7 @@
     },
 	{
       "MountedLocation": "LeftTorso",
-      "ComponentDefID": "Ammo_AmmunitionBox_Streak_SRM",
+      "ComponentDefID": "Ammo_AmmunitionBox_Generic_LRM",
       "SimGameUID": null,
       "ComponentDefType": "AmmunitionBox",
       "HardpointSlot": -1,
@@ -449,42 +383,9 @@
       "prefabName": null,
       "hasPrefabName": false
     },
-	{
-	  "MountedLocation": "LeftTorso",
-	  "ComponentDefID": "emod_case",
-	  "SimGameUID": "",
-	  "ComponentDefType": "Upgrade",
-	  "HardpointSlot": 0,
-	  "GUID": null,
-	  "DamageLevel": "Functional",
-	  "prefabName": null,
-	  "hasPrefabName": false
-	},
-    {
-      "MountedLocation": "CenterTorso",
-      "ComponentDefID": "Weapon_Laser_MediumLaserPulse_0-STOCK",
-      "SimGameUID": null,
-      "ComponentDefType": "Weapon",
-      "HardpointSlot": 0,
-      "GUID": null,
-      "DamageLevel": "Functional",
-      "prefabName": null,
-      "hasPrefabName": false
-    },
-	{
-      "MountedLocation": "CenterTorso",
-      "ComponentDefID": "Weapon_Laser_MediumLaserPulse_0-STOCK",
-      "SimGameUID": null,
-      "ComponentDefType": "Weapon",
-      "HardpointSlot": 1,
-      "GUID": null,
-      "DamageLevel": "Functional",
-      "prefabName": null,
-      "hasPrefabName": false
-    },
     {
       "MountedLocation": "RightTorso",
-      "ComponentDefID": "Weapon_LRM_LRM15_0-STOCK",
+      "ComponentDefID": "Weapon_LRM_LRM20_0-STOCK",
       "SimGameUID": null,
       "ComponentDefType": "Weapon",
       "HardpointSlot": 0,
@@ -515,53 +416,9 @@
       "prefabName": null,
       "hasPrefabName": false
     },
-	{
-      "MountedLocation": "RightTorso",
-      "ComponentDefID": "Ammo_AmmunitionBox_Narc_Beacon",
-      "SimGameUID": null,
-      "ComponentDefType": "AmmunitionBox",
-      "HardpointSlot": -1,
-      "GUID": null,
-      "DamageLevel": "Functional",
-      "prefabName": null,
-      "hasPrefabName": false
-    },
-	{
-      "MountedLocation": "RightTorso",
-      "ComponentDefID": "Ammo_AmmunitionBox_Streak_SRM",
-      "SimGameUID": null,
-      "ComponentDefType": "AmmunitionBox",
-      "HardpointSlot": -1,
-      "GUID": null,
-      "DamageLevel": "Functional",
-      "prefabName": null,
-      "hasPrefabName": false
-    },
-	{
-	  "MountedLocation": "RightTorso",
-	  "ComponentDefID": "emod_case",
-	  "SimGameUID": "",
-	  "ComponentDefType": "Upgrade",
-	  "HardpointSlot": 0,
-	  "GUID": null,
-	  "DamageLevel": "Functional",
-	  "prefabName": null,
-	  "hasPrefabName": false
-	},
     {
       "MountedLocation": "RightArm",
-      "ComponentDefID": "Weapon_Laser_MediumLaserPulse_0-STOCK",
-      "SimGameUID": null,
-      "ComponentDefType": "Weapon",
-      "HardpointSlot": 1,
-      "GUID": null,
-      "DamageLevel": "Functional",
-      "prefabName": null,
-      "hasPrefabName": false
-    },
-	{
-      "MountedLocation": "RightArm",
-      "ComponentDefID": "Weapon_SRM_SSRM2_0-STOCK",
+      "ComponentDefID": "Weapon_Laser_MediumLaser_0-STOCK",
       "SimGameUID": null,
       "ComponentDefType": "Weapon",
       "HardpointSlot": 0,
@@ -569,6 +426,6 @@
       "DamageLevel": "Functional",
       "prefabName": null,
       "hasPrefabName": false
-    }
+    },
   ]
 }
