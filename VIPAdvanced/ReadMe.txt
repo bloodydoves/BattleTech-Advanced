@@ -1,6 +1,11 @@
 VIP/RogueTech Tanks Ported for BloodyDoves' Battletech Advanced mod.
 Used and adapted with permission and help by Cargo Vroom.
 
+0.0.9 - 5/23/2019
+
+Added a select few 3063 vees that found out the roster and are personal favs,
+Removed a lange number of old VIP vehicles and files that are now obselete,
+
 0.0.7 - 5/20/2019
 
 Actually uploaded the mediums this time,
