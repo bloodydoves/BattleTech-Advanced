@@ -9,7 +9,7 @@
 	"DLLEntryPoint": "CustomSalvage.Control.Init",
 	
 	"Settings" : {
-		"LogLevel" : "Error",
+		"LogLevel" : "None",
 		"RecoveryType" : "PartDestroyed",
 		"PartCountType" : "PartDestroyed",
 		"LostMechAction" : "MoveItemsAndPartsToSalvage",
@@ -62,30 +62,26 @@
 			
 		],
 		"SpecialTags" : [ 
-		{ "Tag" : "unit_legendary", "Mod" : 2.5 },
-		{ "Tag" : "unit_hero", "Mod" : 1.25 },
-		{ "Tag" : "unit_prototype", "Mod" : 2 },
-		{ "Tag" : "unit_totem", "Mod" : 1.75 },
-		{ "Tag" : "unit_elite", "Mod" : 3.0 }
+		
 		],
 		"MaxVariantsInDescription" : 5,
 		"ApplyPartPriceMod": true,
 		"UnEquipedMech" : false,
-		"BrokenMech" : true,
-		"HeadRepaired" : false,
-		"LeftArmRepaired" : false,
-		"RightArmRepaired" : false,
-		"CentralTorsoRepaired" : false,
-		"LeftTorsoRepaired" : false,
-		"RightTorsoRepaired" : false,
-		"LeftLegRepaired" : false,
-		"RightLegRepaired" : false,
+		"BrokenMech" : false,
+		"HeadRepaired" : true,
+		"LeftArmRepaired" : true,
+		"RightArmRepaired" : true,
+		"CentralTorsoRepaired" : true,
+		"LeftTorsoRepaired" : true,
+		"RightTorsoRepaired" : true,
+		"LeftLegRepaired" : true,
+		"RightLegRepaired" : true,
 		"RepairMechLimbs" : true,
-		"RepairMechLimbsChance" : 0.75,
-		"RandomStructureOnRepairedLimbs" : true,
+		"RepairMechLimbsChance" : 1,
+		"RandomStructureOnRepairedLimbs" : false,
 		"MinStructure" : 0.25,
 		"RepairMechComponents" : true,
-		"RepairComponentsFunctionalThreshold" : 0.25,
+		"RepairComponentsFunctionalThreshold" : 1.0,
 		"RepairComponentsNonFunctionalThreshold" : 0.5,
 		"AdaptPartBaseCost" : 0.01,
 		"MaxAdaptMod" : 5,
@@ -95,6 +91,8 @@
         "OmniSpectialtoNormalMod": 0.25,
         "OmniNormalMod": 0
 	},	
+	
+	"BrokenMech" : false,
 		
 	"Manifest": [
 
