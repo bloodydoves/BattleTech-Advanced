@@ -1,6 +1,16 @@
 VIP/RogueTech Tanks Ported for BloodyDoves' Battletech Advanced mod.
 Used and adapted with permission and help by Cargo Vroom.
 
+0.1.2 - 5/30/2019
+
+Added Assault vehicles.
+Pruned dupe vees from your tanks and turrets folder,
+Put engines and motive systems on the non-dupes.
+
+Note: Some Alacorn and Partisan variants valid for the era not yet made.
+Fury Command Tank, Stermfeurer, Schiltron vehicles not made at all.
+When I get around to making them for RT you can have them too.
+
 0.0.9 - 5/23/2019
 
 Added a select few 3063 vees that found out the roster and are personal favs,
