@@ -1,7 +1,12 @@
 Unpack to Mods folder
-
-Settings 
+CustomAmmoCategories settings 
 CustomAmmoCategoriesSettings.json
+WeaponRealizer settings
+WeaponRealizerSettings.json (for description look at the WR-README)
+AttackImprovementMod settings
+AIM_settings.json (for description look at the AIM-README)
+
+WARNING! Shipped versions of AIM and WR can't be loaded by ModTek and can't be used standalone.
 
 click on right side of HUD weapon slot to switch mode (near hit chance)
 click on center of HUD weapon slot to switch ammo (near ammo count)
@@ -35,7 +40,7 @@ ctrl+left click on weapon slot will eject current ammo
 "DynamicDesignMasksDefs":["DesignMaskCrystals","DesignMaskForest","DesignMaskGeothermal","DesignMaskGeothermalLava","DesignMaskIce","DesignMaskRadiation","DesignMaskSpores","DesignMaskBurningForest","DesignMaskBurnedForest","DesignMaskBurningTerrain"],
  list of design mask to load. <BurningForestDesignMask> and <BurnedForestDesignMask> should always included to this list. 
 "BurningFX":"vfxPrfPrtl_fireTerrain_lrgLoop", - VFX prefab spawned in hex cell on fire
-"BurnedFX":"vfxPrfPrtl_miningSmokePlume_lrg_loop", - VFX prefab spawned in hex cell on fire exhaust 
+"BurnedFX":"vfxPrfPrtl_miningSmokePlume_lrg_loop", - not used any more
 "BurningScaleX":1, - scale for burning VFX (note not all VFXes supports scaling vfxPrfPrtl_fireTerrain_lrgLoop does not)
 "BurningScaleY":1,
 "BurningScaleZ":1,
@@ -47,9 +52,101 @@ ctrl+left click on weapon slot will eject current ammo
 "BurnedOffsetZ":0,
 "BurningOffsetX":0, - offset for burned VFX
 "BurningOffsetY":0,
-"BurningOffsetZ":0
+"BurningOffsetZ":0,
+"DontShowNotDangerouceJammMessages": true, - if true cooldown and jamming weapon without damage not cause floatie message
+"MineFieldPathingMods":{ - landmines hit roll modificator by pathing. Effective value multiplicative. If not found in this table consider as 1.0.
+    "pathingdef_light":0,
+	"pathingdef_medium":0.5
+  },
+"JumpLandingMineAttractRadius": 2, - radius of terrain cells affected on landing after jump
+"BurnedTrees":{  - better not to change anything unless you know what you are doing 
+  "Mesh":"envMdlTree_deadWood_polar_frozen_shapeA_LOD0", - prefab containing burned tree mesh (must be loaded as part of additional assets)
+  "BumpMap":"envTxrTree_treesVaried_polar_frozen_nrm", - burned trees textures (must be loaded as part of additional assets)
+  "MainTex":"envTxrTree_treesVaried_polar_frozen_alb",
+  "OcculusionMap":"envTxrTree_treesVaried_polar_frozen_amb",
+  "Transmission":"envTxrTree_treesVaried_polar_frozen_trs",
+  "MetallicGlossMap":"envTxrTree_treesVaried_polar_frozen_mtl",
+  "BurnedTreeScale":2,  - scale of burned trees 
+  "DecalScale":40, - size of burned terrain decale
+  "DecalTexture":"envTxrDecl_terrainDmgSmallBlack_alb" - burned terrain decale texture (must be loaded as part of additional assets)
+},
+"DontShowBurnedTrees":false, - if true burned trees will be hidden instead of drawing burned variant
+"DontShowScorchTerrain":false - if true burned terrain decal will not be applied 
+"AAMSAICoeff":0.2 - factor that determines how much AI will prefer the strategic mode of missile defence in the presence of friendly units in the area of the anti-missile system 
+"ForestBurningDurationBiomeMult":{  -        per biome forest fire duration multiplayer, applied to BurningForestTurns value (rounded to nearest integer)
+	"DesignMaskBiomeBadlandsParched":0.7,
+	"DesignMaskBiomeDesertParched":0.7,
+	"DesignMaskBiomeHighlandsFall":1,
+	"DesignMaskBiomeHighlandsSpring":1,
+	"DesignMaskBiomeJungleTropical":1.5,
+	"DesignMaskBiomeLowlandsCoastal":1,
+	"DesignMaskBiomeLowlandsFall":1,
+	"DesignMaskBiomeLowlandsSpring":1,
+	"DesignMaskBiomeLunarVacuum":0.0,
+	"DesignMaskBiomeMartianVacuum":0.0,
+	"DesignMaskBiomePolarFrozen":0.7,
+	"DesignMaskBiomeTundraFrozen":0.7
+},
+"WeaponBurningDurationBiomeMult":{  -        per biome fire duration multiplayer, applied to effective Weapon.FireDurationWithoutForest value (rounded to nearest integer)
+	"DesignMaskBiomeBadlandsParched":1,
+	"DesignMaskBiomeDesertParched":1,
+	"DesignMaskBiomeHighlandsFall":1,
+	"DesignMaskBiomeHighlandsSpring":1,
+	"DesignMaskBiomeJungleTropical":0.7,
+	"DesignMaskBiomeLowlandsCoastal":1,
+	"DesignMaskBiomeLowlandsFall":1,
+	"DesignMaskBiomeLowlandsSpring":1,
+	"DesignMaskBiomeLunarVacuum":0.2,
+	"DesignMaskBiomeMartianVacuum":0.3,
+	"DesignMaskBiomePolarFrozen":0.7,
+	"DesignMaskBiomeTundraFrozen":0.7
+},
+"ForestBurningStrengthBiomeMult":{  -        per biome forest fire strength multiplayer, applied to BurningForestStrength value (rounded to nearest integer)
+	"DesignMaskBiomeBadlandsParched":1.5,
+	"DesignMaskBiomeDesertParched":1.5,
+	"DesignMaskBiomeHighlandsFall":1,
+	"DesignMaskBiomeHighlandsSpring":1,
+	"DesignMaskBiomeJungleTropical":0.5,
+	"DesignMaskBiomeLowlandsCoastal":1,
+	"DesignMaskBiomeLowlandsFall":1,
+	"DesignMaskBiomeLowlandsSpring":1,
+	"DesignMaskBiomeLunarVacuum":0,
+	"DesignMaskBiomeMartianVacuum":0,
+	"DesignMaskBiomePolarFrozen":0.3,
+	"DesignMaskBiomeTundraFrozen":0.3
+},
+"WeaponBurningStrengthBiomeMult":{   -        per biome fire strength multiplayer, applied to effective Weapon.FireTerrainStrength value (rounded to nearest integer)
+	"DesignMaskBiomeBadlandsParched":1,
+	"DesignMaskBiomeDesertParched":1,
+	"DesignMaskBiomeHighlandsFall":1,
+	"DesignMaskBiomeHighlandsSpring":1,
+	"DesignMaskBiomeJungleTropical":0.7,
+	"DesignMaskBiomeLowlandsCoastal":1,
+	"DesignMaskBiomeLowlandsFall":1,
+	"DesignMaskBiomeLowlandsSpring":1,
+	"DesignMaskBiomeLunarVacuum":1,
+	"DesignMaskBiomeMartianVacuum":1,
+	"DesignMaskBiomePolarFrozen":0.5,
+	"DesignMaskBiomeTundraFrozen":0.5
+},
+"LitFireChanceBiomeMult":{   -        per biome fire chance multiplayer, applied to effective Weapon.FireTerrainChance and BurningForestBaseExpandChance values
+	"DesignMaskBiomeBadlandsParched":2.0,
+	"DesignMaskBiomeDesertParched":2.0,
+	"DesignMaskBiomeHighlandsFall":1,
+	"DesignMaskBiomeHighlandsSpring":1,
+	"DesignMaskBiomeJungleTropical":0.7,
+	"DesignMaskBiomeLowlandsCoastal":1,
+	"DesignMaskBiomeLowlandsFall":1,
+	"DesignMaskBiomeLowlandsSpring":1,
+	"DesignMaskBiomeLunarVacuum":1,
+	"DesignMaskBiomeMartianVacuum":1,
+	"DesignMaskBiomePolarFrozen":0.5,
+	"DesignMaskBiomeTundraFrozen":0.5
+}
+								NOTE: Current values is my own vision of flame mechanics process, adjust them for you own will
 }
 
+now CustomAmmoCategories.dll searching CustomAmmoCategories.json in every subfolder of Mods folder. 
 CustomAmmoCategories.json
 [
 {
@@ -96,11 +193,14 @@ new fields
 					If missile intercepted, no further checks will be made. 
 					Commentary: as you can see, if missile fly path is short chance to be shooted down is less. 
 					If missiles is few, and fly path is long chance to be shooted down grows rapidly. 
-					AMS visual effect commentary: only two visual effects avaible for AMS: ballistic(autocannons) and laser(lasers). 
-					I had experimented with "WeaponEffect-Weapon_Laser_Small" and "WeaponEffect-Weapon_AC2" for LAMS ans AMS accordingly.
 					AMS can become jammed, have damage-on-jam option and so on. AMSHitChance and ShootsWhenFired can be updated in AMS ammo or mode.
 					AMS uses ammunition and heated while firing. Damage and on hit status effects will on be applied. 
   "IsAAMS": false - if true, weapon acts as advanced AMS, it will fire all missiles from enemies in range, not only attacking.
+						NOTE! AMS can be setted by mode, ammo and weapon. Mode have priority, than ammo, and then weapon. 
+						NOTE! If you weapon shoots as AMS in current round you can't use it in offensive mode (if any) until next round.
+							  On other hand if you fired weapon this round you will not be able to use this weapon as AMS until next activation completes 
+						NOTE! Every weapon effect can be used as visuals for AMS fire (missile, machine gun, ballistic, laser, gauss) you can experiment,
+						      but some effects is more suitable.
   "AMSShootsEveryAttack": false, - if true AMS will not share AMS.ShootsWhenFired between all missile attacks this round. 
                                        Every missile attack will cause AMS.ShootsWhenFired shoots. 
 								   if false AMS will shoot AMS.ShootsWhenFired per round
@@ -112,6 +212,7 @@ new fields
                             one for main target - direct hit (this damage can be have variance) and second for all targets in AoE range including main. 
   "AOEHeatDamage": 0 - if > 0 alternative AoE damage algorithm will be used. Main projectile will not always miss. Instead it will inflict damage twice 
                             one for main target - direct hit (this damage can be have variance) and second for all targets in AoE range including main. 
+  "AOEInstability": 0 - instability AoE damage 
   "SpreadRange": 0, - Area of projectiles spread effect. If > 0 projectiles will include in spread calculations. Per weapon, ammo, mode values are additive.
                          if used for missiles, and target have AMS it will fire no matter if it is not advanced and target is not primary.
   "IFFDef" : "IFFComponentDefId", if not empty and target have component with such defId it will exclude form AoE and spread targets list. 
@@ -121,12 +222,8 @@ new fields
   "HasShells": true/false, if defined determinate has shots shrapnel effect or not. If defined can't be overriden by ammo or mode. 
                             Shells count is effective ProjectilesPerShot for this weapon/ammo/mode.
                             Damage per shell - full damage per projectile / ProjectilesPerShot
-                            Only for missiles and ballistic effects. Should not be used with AoE.
-							Please note, if you are using HasShells with wr-clustered_shots tag behavior may be undesired 
-							cause in that case WeaponRealizer's code controlling impact damage calculations.
-							"DisableClustering":false also should not be used either set it to true or delete at all. 
-							"WeaponEffect-Weapon_AC2" should not be used as "WeaponEffectID" you can replace it with "WeaponEffect-Weapon_AC5" 
-							nor internally nor visual it wouldn't have any difference
+                            Only for missiles, ballistic and gauss effects. Should not be used with AoE.
+							NOTE! If ImprovedBallistic is false HasShells considered as false too no matter real value. 
   "ShellsRadius": 90, determines if shells will have spreading. Works same way as SpreadRange. Per weapon value will be used if HasShells is true for this weapon.
   "MinShellsDistance": 30, Minimum distance missile have to fly before explode. Min value 30.
   "MaxShellsDistance": 100, Distance from end of trajectory where missile should separate. Min value 20
@@ -160,6 +257,19 @@ new fields
    "AdditionalImpactVFXScaleX":10, - scale of additional VFX, used only when AdditionalImpactVFX is not empty. Note, not all VFXs supports scaling.
    "AdditionalImpactVFXScaleY":10,
    "AdditionalImpactVFXScaleZ":10,
+   "ClearMineFieldRadius": 4, - radius in in-game terrain cells. Minefields in all cells within radius will be cleared in terrain impact.
+                                Clearing on success hit controled by FireOnSuccessHit flag.
+   "Cooldown": 2, - number of rounds weapon will be unacceptable after fire this mode
+   "ImprovedBallistic": true, - whether use or not own ballistic weapon effect engine. 
+								Difference between "improved" and vanilla engine:
+								1. Improved mode uses ShotsWhenFire properly (vanilla had not used them at all)
+								2. Improved mode can use curvy trajectory for indirect fire (indirect gauss bullet can be used too, but looks very funny)
+								3. Improved mode fire ShotsWhenFire volleys with ProjectilesPerShot bullets in each. 
+								   Bullets in one volley fired simultaneously instead of one by one (as in WeaponRealizer)
+								   But damage still dealt once per volley, not per bullet, to keep compatibility with vanilla.
+								NOTE! If ImprovedBallistic is set DisableClustering is forced to true and "wr-clustered_shots" tag removed from definition. 
+  "BallisticDamagePerPallet": true - if true damage inflicted per pallet instead of per shot. Only working with ImprovedBallistic true, ballistic weapon effect and HasShels false
+                                     Damage will be divided by ProjectilesPerShot value, heat damage and stable damage too. 
    "Modes": array of modes for weapon
 	[{
 		"Id": "x4",  - Must be unique per weapon
@@ -223,15 +333,11 @@ new fields
 									   if not empty weapon owner will be excluded form AoE and spread targets list anyway even it has no suitable IFF component.
 									   supposed weapon have IFF transponder for own projectiles. If not empty ammo transponder has priority, than mode, and than weapon
 									   There is special transponder name "_IFFOffile" - if transponder defId set as IFFOffline it counts as have no transponder at all.
-      "HasShells": true/false, if defined determinate has shots shrapnel effect for this mode or not. If defined can't be overriden by ammo. 
-                            Shells count is effective ProjectilesPerShot for this weapon/ammo/mode.
-                            Damage per shell - full damage per projectile / ProjectilesPerShot
-                            Only for missiles and ballistic effects. Should not be used with AoE.
-							Please note, if you are using HasShells with wr-clustered_shots tag behavior may be undesired 
-							cause in that case WeaponRealizer's code controlling impact damage calculations 
-							"DisableClustering":false also should not be used either set it to true or delete at all. 
-							"WeaponEffect-Weapon_AC2" should not be used as "WeaponEffectID" you can replace it with "WeaponEffect-Weapon_AC5" 
-							nor internally nor visual it wouldn't have any difference
+	  "HasShells": true/false, if defined determinate has shots shrapnel effect or not. If defined can't be overriden by ammo or mode. 
+								Shells count is effective ProjectilesPerShot for this weapon/ammo/mode.
+								Damage per shell - full damage per projectile / ProjectilesPerShot
+								Only for missiles, ballistic and gauss effects. Should not be used with AoE.
+								NOTE! If ImprovedBallistic is false HasShells considered as false too no matter real value. 
 	  "ShellsRadius": 90, determines if shells will have spreading. Works same way as SpreadRange. Per mode value will be used if HasShells is true for this mode.
 	  "MinShellsDistance": 30, Minimum distance missile have to fly before explode. Min value 30.
 	  "MaxShellsDistance": 100, Distance from end of trajectory where missile should separate. Min value 20
@@ -265,6 +371,25 @@ new fields
    "AdditionalImpactVFXScaleX":10, - scale of additional VFX, used only when AdditionalImpactVFX is not empty. Note, not all VFXs supports scaling.
    "AdditionalImpactVFXScaleY":10,
    "AdditionalImpactVFXScaleZ":10,
+   "ClearMineFieldRadius": 4, - radius in in-game terrain cells. Minefields in all cells within radius will be cleared in terrain impact.
+                                Clearing on success hit controled by FireOnSuccessHit flag.
+	  "IsAMS": false, - if true this weapon acts as AMS. It will not fire during normal attack. But tries to intercept incomming missiles.
+						rude model: every 10 meters of missile fly path there is check, if it in range of any AMS. 
+						If so, AMS have AMS.AMSHitChance + missile.AMSHitChance chance to shoot missile down. Avaible shoots count of AMS is decrementing.
+						If AMS have no shoots avaible it will not shoot. At end of turn AMS shoots count set to AMS.ShootsWhenFired.
+						If missile intercepted, no further checks will be made. 
+						Commentary: as you can see, if missile fly path is short chance to be shooted down is less. 
+						If missiles is few, and fly path is long chance to be shooted down grows rapidly. 
+						AMS can become jammed, have damage-on-jam option and so on. AMSHitChance and ShootsWhenFired can be updated in AMS ammo or mode.
+						AMS uses ammunition and heated while firing. Damage and on hit status effects will on be applied. 
+	  "IsAAMS": false - if true, weapon acts as advanced AMS, it will fire all missiles from enemies in range, not only attacking.
+						NOTE! AMS can be setted by mode, ammo and weapon. Mode have priority, than ammo, and then weapon. 
+						NOTE! If you weapon shoots as AMS in current round you can't use it in offensive mode (if any) until next round.
+							  On other hand if you fired weapon this round you will not be able to use this weapon as AMS until next activation completes 
+						NOTE! Every weapon effect can be used as visuals for AMS fire (missile, machine gun, ballistic, laser, gauss) you can experiment,
+						      but some effects is more suitable.
+  "BallisticDamagePerPallet": true - if true damage inflicted per pallet instead of per shot. Only working with ImprovedBallistic true, ballistic weapon effect and HasShels false
+                                     Damage will be divided by ProjectilesPerShot value, heat damage and stable damage too. 
 	}]
   
   
@@ -352,21 +477,33 @@ Ammo definition
                             one for main target - direct hit (this damage can be have variance) and second for all targets in AoE range including main. 
   "AOEHeatDamage": 0 - if > 0 alternative AoE damage algorithm will be used. Main projectile will not always miss. Instead it will inflict damage twice 
                             one for main target - direct hit (this damage can be have variance) and second for all targets in AoE range including main. 
+  "AOEInstability": 0 - instability AoE damage 
   "SpreadRange": 0, - Area of projectiles spread effect. If > 0 projectiles will include in spread calculations. Per weapon, ammo, mode values are additive.
                          if used for missiles, and target have AMS it will fire no matter if it is not advanced and target is not primary.
   "IFFDef" : "IFFComponentDefId", if not empty and target have component with such defId it will exclude form AoE and spread targets list. 
                                    if not empty weapon owner will be excluded form AoE and spread targets list anyway even it has no suitable IFF component.
 								   supposed weapon have IFF transponder for own projectiles. If not empty ammo transponder has priority, than mode, and than weapon
 								   There is special transponder name "_IFFOffile" - if transponder defId set as "_IFFOffline" it counts as have no transponder at all.
-  "HasShells": true/false, if defined determinate has shots shrapnel effect for this ammo or not. 
-						Shells count is effective ProjectilesPerShot for this weapon/ammo/mode.
-						Damage per shell - full damage per projectile / ProjectilesPerShot
-						Only for missiles and ballistic effects. Should not be used with AoE.
-						Please note, if you are using HasShells with wr-clustered_shots tag behavior may be undesired 
-						cause in that case WeaponRealizer's code controlling impact damage calculations 
-						"DisableClustering":false also should not be used either set it to true or delete at all. 
-						"WeaponEffect-Weapon_AC2" should not be used as "WeaponEffectID" you can replace it with "WeaponEffect-Weapon_AC5" 
-						nor internally nor visual it wouldn't have any difference
+  "HasShells": true/false, if defined determinate has shots shrapnel effect or not. If defined can't be overriden by ammo or mode. 
+                            Shells count is effective ProjectilesPerShot for this weapon/ammo/mode.
+                            Damage per shell - full damage per projectile / ProjectilesPerShot
+                            Only for missiles, ballistic and gauss effects. Should not be used with AoE.
+							NOTE! If ImprovedBallistic is false HasShells considered as false too no matter real value. 
+  "IsAMS": false, - if true this weapon acts as AMS. It will not fire during normal attack. But tries to intercept incomming missiles.
+					rude model: every 10 meters of missile fly path there is check, if it in range of any AMS. 
+					If so, AMS have AMS.AMSHitChance + missile.AMSHitChance chance to shoot missile down. Avaible shoots count of AMS is decrementing.
+					If AMS have no shoots avaible it will not shoot. At end of turn AMS shoots count set to AMS.ShootsWhenFired.
+					If missile intercepted, no further checks will be made. 
+					Commentary: as you can see, if missile fly path is short chance to be shooted down is less. 
+					If missiles is few, and fly path is long chance to be shooted down grows rapidly. 
+					AMS can become jammed, have damage-on-jam option and so on. AMSHitChance and ShootsWhenFired can be updated in AMS ammo or mode.
+					AMS uses ammunition and heated while firing. Damage and on hit status effects will on be applied. 
+  "IsAAMS": false - if true, weapon acts as advanced AMS, it will fire all missiles from enemies in range, not only attacking.
+					NOTE! AMS can be setted by mode, ammo and weapon. Mode have priority, than ammo, and then weapon. 
+					NOTE! If you weapon shoots as AMS in current round you can't use it in offensive mode (if any) until next round.
+						  On other hand if you fired weapon this round you will not be able to use this weapon as AMS until next activation completes 
+					NOTE! Every weapon effect can be used as visuals for AMS fire (missile, machine gun, ballistic, laser, gauss) you can experiment,
+						  but some effects is more suitable.
   "ShellsRadius": 90, determines if shells will have spreading. Works same way as SpreadRange. Per mode value will be used if HasShells is true for this mode.
   "MinShellsDistance": 30, Minimum distance missile have to fly before explode. Min value 30.
   "MaxShellsDistance": 100, Distance from end of trajectory where missile should separate. Min value 20
@@ -418,6 +555,9 @@ Ammo definition
 							 For vehicle damage splited between four locations (front,back,left,right) heat impemented as normal damage
    						     Damage inflicted that way are not cause critical damage to internal components only armor and structure.
 	  					     Minefields not saved on battle save/reload.
+							 Note on melee through mine field: if mech while moving to melee targets suffer normal damage attack will be interrupted. 
+							 Mech get close to target but nor attack animation played nor melee damage inflicted.
+							 Note on DFA attack on target standing on mine field: damage will be inflicted normaly AFTER DFA attack completes 
   "FireTerrainChance":1, - chance to fireup hex cell. Additive for weapon, ammo and mode
   "FireDurationWithoutForest":1, - duration of fire if hex cell has no forest, if > 0 even hex cell with no forest will burn. 
                                   If cell have forest burn period is max from FireDurationWithoutForest and BurningForestTurns
@@ -439,6 +579,75 @@ Ammo definition
    "AdditionalImpactVFXScaleX":10, - scale of additional VFX, used only when AdditionalImpactVFX is not empty. Note, not all VFXs supports scaling.
    "AdditionalImpactVFXScaleY":10,
    "AdditionalImpactVFXScaleZ":10,
+   "LongVFXOnImpact": "vfxPrfPrtl_artillerySmokeSignal_loop", - terrain impact vfx supposed to be played few turns 
+   "LongVFXOnImpactScaleX":3, - scale for persistent terrain vfx 
+   "LongVFXOnImpactScaleY":20,
+   "LongVFXOnImpactScaleZ":3,
+   "tempDesignMaskCellRadius":6, - radius in in-game cells to fire check roll. On impact each hex cell containing at least one map cell with in radius will be affected by change
+   "tempDesignMaskOnImpactTurns":3, - count of turns persistent terrain effect played
+   "tempDesignMaskOnImpact":"DesignMaskSmoke", - design mask applied on impact
+                                 NOTE: tempDesignMaskOnImpact design mask are not superseding original mask (if avaible) instead new design mask creating at runtime. 
+								 This new mask is result of addition current terrain mask and tempDesignMaskOnImpact. All integer or float values is addiditve. 
+								 Name will be result of concatenation as well as description. Sticky effects concatenating too. 
+								 Appliance of mask and visuals on success hit is controled by FireOnSuccessHit flag. 
+								 NOTE on design mask concatenation: if no other mask on terrain, temp mask will be implemented as defined. If there is other mask
+	result - effective resulting mask.
+    parentMask - undelying mask
+	newMask - applying mask
+	
+      result.Description.Name = parentMask.Description.Name + " " + newMask.Description.Name;
+      result.Description.Details = parentMask.Description.Details + "\n" + newMask.Description.Details;
+      result.Description.Icon = newMask.Description.Icon;
+      result.hideInUI = newMask.hideInUI;
+      result.moveCostMechLight = parentMask.moveCostMechLight + newMask.moveCostMechLight - 1f;
+      result.moveCostMechMedium = parentMask.moveCostMechMedium + newMask.moveCostMechMedium - 1f; 
+      result.moveCostMechHeavy = parentMask.moveCostMechHeavy + newMask.moveCostMechHeavy - 1f; 
+      result.moveCostMechAssault = parentMask.moveCostMechAssault + newMask.moveCostMechAssault - 1f; 
+      result.moveCostTrackedLight = parentMask.moveCostTrackedLight + newMask.moveCostTrackedLight - 1f; 
+      result.moveCostTrackedMedium = parentMask.moveCostTrackedMedium + newMask.moveCostTrackedMedium - 1f; 
+      result.moveCostTrackedHeavy = parentMask.moveCostTrackedHeavy + newMask.moveCostTrackedHeavy - 1f; 
+      result.moveCostTrackedAssault = parentMask.moveCostTrackedAssault + newMask.moveCostTrackedAssault - 1f; 
+      result.moveCostWheeledLight = parentMask.moveCostWheeledLight + newMask.moveCostWheeledLight - 1f; 
+      result.moveCostWheeledMedium = parentMask.moveCostWheeledMedium + newMask.moveCostWheeledMedium - 1f; 
+      result.moveCostWheeledHeavy = parentMask.moveCostWheeledHeavy + newMask.moveCostWheeledHeavy - 1f; 
+      result.moveCostWheeledAssault = parentMask.moveCostWheeledAssault + newMask.moveCostWheeledAssault - 1f;
+      result.moveCostSprintMultiplier = parentMask.moveCostSprintMultiplier + newMask.moveCostSprintMultiplier - 1f;
+      result.stabilityDamageMultiplier = parentMask.stabilityDamageMultiplier + newMask.stabilityDamageMultiplier - 1f;
+      result.visibilityMultiplier = parentMask.visibilityMultiplier + newMask.visibilityMultiplier - 1f;
+      result.visibilityHeight = parentMask.visibilityHeight + newMask.visibilityHeight;
+      result.signatureMultiplier = parentMask.signatureMultiplier + newMask.signatureMultiplier - 1f;
+      result.sensorRangeMultiplier = parentMask.sensorRangeMultiplier + newMask.sensorRangeMultiplier - 1f;
+      result.targetabilityModifier = parentMask.targetabilityModifier + newMask.targetabilityModifier;
+      result.meleeTargetabilityModifier = parentMask.meleeTargetabilityModifier + newMask.meleeTargetabilityModifier - 1f;
+      result.grantsGuarded = newMask.grantsGuarded;
+      result.grantsEvasive = newMask.grantsEvasive;
+      result.toHitFromModifier = parentMask.toHitFromModifier + newMask.toHitFromModifier;
+      result.heatSinkMultiplier = parentMask.heatSinkMultiplier + newMask.heatSinkMultiplier - 1f;
+      result.heatPerTurn = parentMask.heatPerTurn + newMask.heatPerTurn;
+      result.legStructureDamageMin = parentMask.legStructureDamageMin + newMask.legStructureDamageMin;
+      result.legStructureDamageMax = parentMask.legStructureDamageMax + newMask.legStructureDamageMax;
+      result.canBurn = newMask.canBurn;
+      result.canExplode = newMask.canExplode;
+      result.allDamageDealtMultiplier = parentMask.allDamageDealtMultiplier + newMask.allDamageDealtMultiplier - 1f;
+      result.allDamageTakenMultiplier = parentMask.allDamageTakenMultiplier + newMask.allDamageTakenMultiplier - 1f;
+      result.antipersonnelDamageDealtMultiplier = parentMask.antipersonnelDamageDealtMultiplier + newMask.antipersonnelDamageDealtMultiplier - 1f;
+      result.antipersonnelDamageTakenMultiplier = parentMask.antipersonnelDamageTakenMultiplier + newMask.antipersonnelDamageTakenMultiplier - 1f;
+      result.energyDamageDealtMultiplier = parentMask.energyDamageDealtMultiplier + newMask.energyDamageDealtMultiplier - 1f;
+      result.energyDamageTakenMultiplier = parentMask.energyDamageTakenMultiplier + newMask.energyDamageTakenMultiplier - 1f;
+      result.ballisticDamageDealtMultiplier = parentMask.ballisticDamageDealtMultiplier + newMask.ballisticDamageDealtMultiplier - 1f;
+      result.ballisticDamageTakenMultiplier = parentMask.ballisticDamageTakenMultiplier + newMask.ballisticDamageTakenMultiplier - 1f;
+      result.missileDamageDealtMultiplier = parentMask.missileDamageDealtMultiplier + newMask.missileDamageDealtMultiplier - 1f;
+      result.missileDamageTakenMultiplier = parentMask.missileDamageTakenMultiplier + newMask.missileDamageTakenMultiplier - 1f;
+      result.audioSwitchSurfaceType = parentMask.audioSwitchSurfaceType;
+      result.audioSwitchRainingSurfaceType = parentMask.audioSwitchRainingSurfaceType;
+      result.customBiomeAudioSurfaceType = parentMask.customBiomeAudioSurfaceType;
+								 
+	!!!!!Not all of this parameters actually used by engine. You can make some experiments to know which of them used actually. 
+	
+   "ClearMineFieldRadius": 4, - radius in in-game terrain cells. Minefields in all cells within radius will be cleared in terrain impact.
+                                Clearing on success hit controled by FireOnSuccessHit flag.
+  "BallisticDamagePerPallet": true - if true damage inflicted per pallet instead of per shot. Only working with ImprovedBallistic true, ballistic weapon effect and HasShels false
+                                     Damage will be divided by ProjectilesPerShot value, heat damage and stable damage too. 
    "statusEffects" : [   - will be applied on weapon hit (only "OnHit" effectTriggerType)
         {
             "durationData" : {
