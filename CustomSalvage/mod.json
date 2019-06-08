@@ -9,18 +9,18 @@
 	"DLLEntryPoint": "CustomSalvage.Control.Init",
 	
 	"Settings" : {
-		"LogLevel" : "None",
+		"LogLevel" : "Debug",
 		"RecoveryType" : "PartDestroyed",
 		"PartCountType" : "PartDestroyed",
-		"LostMechAction" : "MoveItemsAndPartsToSalvage",
+		"LostMechAction" : "ReturnItemsToPlayer",
 		"RecoveryMod" : 1,
 		"LimbRecoveryPenalty" : 0.05,
 		"TorsoRecoveryPenalty" : 0.1,
 		"HeadRecoveryPenaly" : 0,
-		"EjectRecoveryBonus" : 0.5,
+		"EjectRecoveryBonus" : 0.25,
 		"CenterTorsoDestroyedParts" : 1,
-		"SalvageArmWeight" : 0.65,
-		"SalvageLegWeight" : 0.65,
+		"SalvageArmWeight" : 0.75,
+		"SalvageLegWeight" : 0.75,
 		"SalvageTorsoWeight" : 1,
 		"SalvageHeadWeight" : 0.5,
 		"VACTDestroyedMod" : 0.35,
@@ -53,46 +53,35 @@
 		"ExcludedColor" : "magenta",
 
 		"AssemblyVariants" : true,
-		"MinPartsToAssembly" : 0.33,
-		"MinPartsToAssemblySpecial": 0.5,
+		"MinPartsToAssembly" : 0.5,
 		"ExcludeTags" : [
 			"BLACKLISTED"
 		],
 		"ExclideVariants" : [
 			
 		],
-		"SpecialTags" : [ 
-		
-		],
 		"MaxVariantsInDescription" : 5,
-		"ApplyPartPriceMod": true,
-		"UnEquipedMech" : false,
-		"BrokenMech" : false,
-		"HeadRepaired" : true,
-		"LeftArmRepaired" : true,
-		"RightArmRepaired" : true,
-		"CentralTorsoRepaired" : true,
-		"LeftTorsoRepaired" : true,
-		"RightTorsoRepaired" : true,
-		"LeftLegRepaired" : true,
-		"RightLegRepaired" : true,
+		"UnEquipedMech" : true,
+		"BrokenMech" : true,
+		"HeadRepaired" : false,
+		"LeftArmRepaired" : false,
+		"RightArmRepaired" : false,
+		"CentralTorsoRepaired" : false,
+		"LeftTorsoRepaired" : false,
+		"RightTorsoRepaired" : false,
+		"LeftLegRepaired" : false,
+		"RightLegRepaired" : false,
 		"RepairMechLimbs" : true,
-		"RepairMechLimbsChance" : 1,
-		"RandomStructureOnRepairedLimbs" : false,
+		"RepairMechLimbsChance" : 0.75,
+		"RandomStructureOnRepairedLimbs" : true,
 		"MinStructure" : 0.25,
 		"RepairMechComponents" : true,
-		"RepairComponentsFunctionalThreshold" : 1.0,
+		"RepairComponentsFunctionalThreshold" : 0.25,
 		"RepairComponentsNonFunctionalThreshold" : 0.5,
-		"AdaptPartBaseCost" : 0.01,
+		"AdaptPartBaseCost" : 0.015,
 		"MaxAdaptMod" : 5,
-		"AdaptModWeight" : 0.33,
-		"OmniTechTag": "OmniMech",
-        "OmniSpectialtoSpecialMod": 0.1,
-        "OmniSpectialtoNormalMod": 0.25,
-        "OmniNormalMod": 0
+		"AdaptModWeight" : 2
 	},	
-	
-	"BrokenMech" : false,
 		
 	"Manifest": [
 
