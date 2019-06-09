@@ -1,0 +1,25 @@
+{
+    "TargetID": "SimpleBattle_RaidingParty",
+    "Instructions": [
+        {
+            "JSONPath": "$.shortDescription",
+            "Action": "Replace",
+            "Value": "We have detected an inbound DropShip belonging to {TEAM_TAR.FactionDef.Name}. Our local defense forces in the expected drop area are ill-equipped to handle a lance of 'Mechs, but with your aid we can ensure that the raid does minimal damage. We'd like you to intercept the {TEAM_TAR.FactionDef.Demonym} lance and destroy it."
+        },
+        {
+            "JSONPath": "$.longDescription",
+            "Action": "Replace",
+            "Value": "Commander, {TEAM_TAR.FactionDef.ShortName} wouldn't send a DropShip if they didn't mean business. So if we take this job, we should stay alert down there."
+        },
+		{
+			"JSONPath": "$.contractObjectiveList[?(@.contractObjective.EncounterObjectGuid== '73275787-720a-4c33-9f20-953b1bbf48bd')].description",
+            "Action": "Replace",
+            "Value": "Interdict the enemy DropShip before the 'Mechs can reach the civilization centers."
+		},
+        {
+            "JSONPath": "$.dialogueList[?(@.name== 'Dialogue_MissionStart')].dialogueContent[0].words",
+            "Action": "Replace",
+            "Value": "The enemy DropShip landed somewhere in this area, Commander."
+        }
+    ]
+}
