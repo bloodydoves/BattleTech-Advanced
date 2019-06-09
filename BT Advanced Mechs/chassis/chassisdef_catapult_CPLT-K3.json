@@ -1,30 +1,30 @@
 {
     "Description": {
-        "Cost": 5200000,
-        "Rarity": 5,
+        "Cost": 5800000,
+        "Rarity": 3,
         "Purchasable": true,
         "Manufacturer": "",
         "Model": "",
-        "UIName": "Jayhawker",
-        "Id": "chassisdef_jayhawker_JHR-X0",
-        "Name": "Jayhawker",
-        "Details": "Designed first and foremost to be as difficult a target as possible, the Jayhawker features an unusually low profile and exceptionally small silhouette for a 55-ton war machine.  Carrying one LRM-5 high on its left torso and another in its left arm, the JHR-X0 can provide indirect support while the AC10 autocannon and Large Laser provide respectable suppressive fire. A pair of Johnson MiniGuns also give the Jayhawker excellent anti-infantry capabilities.",
-        "Icon": "bushwacker"
+        "UIName": "Catapult",
+        "Id": "chassisdef_catapult_CPLT-K3",
+        "Name": "Catapult",
+        "Details": "A variant of the -K2, the -K3 was a lostech upgrade of that fire support mech. Though this design never reached full production, it was prototyped during the War of 3039. It upgraded the PPCs of the K2 to ER PPCs. Twenty double heat sinks kept heat to a minimum.",
+        "Icon": "uixTxrIcon_catapultk2"
     },
-    "MovementCapDefID": "movedef_jayhawker",
-    "PathingCapDefID": "pathingdef_medium",
-    "HardpointDataDefID": "hardpointdatadef_bushwacker",
-    "PrefabIdentifier": "chrprfmech_bushwackerbase-001",
-    "PrefabBase": "bushwacker",
-    "Tonnage": 55,
-    "InitialTonnage": 5.5,
-    "weightClass": "MEDIUM",
-    "BattleValue": 5171000,
+    "MovementCapDefID": "movedef_catapult_CPLT-C1",
+    "PathingCapDefID": "pathingdef_heavy",
+    "HardpointDataDefID": "hardpointdatadef_catapult",
+    "PrefabIdentifier": "chrPrfMech_catapultBase-001",
+    "PrefabBase": "catapult",
+    "Tonnage": 65,
+    "InitialTonnage": 6.5,
+    "weightClass": "HEAVY",
+    "BattleValue": 7150000,
     "Heatsinks": 0,
-    "TopSpeed": 80,
+    "TopSpeed": 64,
     "TurnRadius": 90,
     "MaxJumpjets": 4,
-    "Stability": 130,
+    "Stability": 160,
     "StabilityDefenses": [
         0,
         0,
@@ -37,15 +37,15 @@
     "VisibilityMultiplier": 1,
     "SensorRangeMultiplier": 1,
     "Signature": 0,
-    "Radius": 5,
+    "Radius": 8,
     "PunchesWithLeftArm": false,
-    "MeleeDamage": 50,
-    "MeleeInstability": 55,
+    "MeleeDamage": 60,
+    "MeleeInstability": 65,
     "MeleeToHitModifier": 0,
-    "DFADamage": 70,
+    "DFADamage": 80,
     "DFAToHitModifier": 0,
-    "DFASelfDamage": 70,
-    "DFAInstability": 70,
+    "DFASelfDamage": 80,
+    "DFAInstability": 80,
     "Locations": [
         {
             "Location": "Head",
@@ -60,25 +60,25 @@
             "Location": "LeftArm",
             "Hardpoints": [
                 {
-                    "WeaponMount": "Missile",
+                    "WeaponMount": "Energy",
                     "Omni": false
                 },
-                {
-                    "WeaponMount": "Missile",
+				{
+                    "WeaponMount": "Energy",
                     "Omni": false
                 }
             ],
             "Tonnage": 0,
             "InventorySlots": 12,
-            "MaxArmor": 90,
+            "MaxArmor": 100,
             "MaxRearArmor": -1,
-            "InternalStructure": 45
+            "InternalStructure": 50
         },
         {
             "Location": "LeftTorso",
             "Hardpoints": [
                 {
-                    "WeaponMount": "Missile",
+                    "WeaponMount": "Energy",
                     "Omni": false
                 },
                 {
@@ -92,28 +92,27 @@
             ],
             "Tonnage": 0,
             "InventorySlots": 12,
-            "MaxArmor": 130,
-            "MaxRearArmor": 65,
-            "InternalStructure": 65
+            "MaxArmor": 150,
+            "MaxRearArmor": 75,
+            "InternalStructure": 75
         },
         {
             "Location": "CenterTorso",
-            "Hardpoints": [
-                {
-                  "WeaponMount": "Energy",
-                  "Omni": false
-                }
-            ],
+            "Hardpoints": [],
             "Tonnage": 0,
-            "InventorySlots": 16,
-            "MaxArmor": 180,
-            "MaxRearArmor": 90,
-            "InternalStructure": 90
+            "InventorySlots": 15,
+            "MaxArmor": 210,
+            "MaxRearArmor": 105,
+            "InternalStructure": 105
         },
         {
             "Location": "RightTorso",
             "Hardpoints": [
                 {
+                    "WeaponMount": "Energy",
+                    "Omni": false
+                },
+                {
                     "WeaponMount": "AntiPersonnel",
                     "Omni": false
                 },
@@ -124,96 +123,96 @@
             ],
             "Tonnage": 0,
             "InventorySlots": 12,
-            "MaxArmor": 130,
-            "MaxRearArmor": 65,
-            "InternalStructure": 65
+            "MaxArmor": 150,
+            "MaxRearArmor": 75,
+            "InternalStructure": 75
         },
         {
             "Location": "RightArm",
             "Hardpoints": [
                 {
-                  "WeaponMount": "Ballistic",
-                  "Omni": false
+                    "WeaponMount": "Energy",
+                    "Omni": false
                 },
-                {
-                  "WeaponMount": "AntiPersonnel",
-                  "Omni": false
+				{
+                    "WeaponMount": "Energy",
+                    "Omni": false
                 }
             ],
             "Tonnage": 0,
             "InventorySlots": 12,
-            "MaxArmor": 90,
+            "MaxArmor": 100,
             "MaxRearArmor": -1,
-            "InternalStructure": 45
+            "InternalStructure": 50
         },
         {
             "Location": "LeftLeg",
             "Hardpoints": [],
             "Tonnage": 0,
             "InventorySlots": 6,
-            "MaxArmor": 130,
+            "MaxArmor": 150,
             "MaxRearArmor": -1,
-            "InternalStructure": 65
+            "InternalStructure": 75
         },
         {
             "Location": "RightLeg",
             "Hardpoints": [],
             "Tonnage": 0,
             "InventorySlots": 6,
-            "MaxArmor": 130,
+            "MaxArmor": 150,
             "MaxRearArmor": -1,
-            "InternalStructure": 65
+            "InternalStructure": 75
         }
     ],
     "LOSSourcePositions": [
         {
             "x": 0,
-            "y": 15,
-            "z": 0
+            "y": 12,
+            "z": 1
         },
         {
             "x": 4,
-            "y": 15,
+            "y": 12,
             "z": 0
         },
         {
             "x": -4,
-            "y": 15,
+            "y": 12,
             "z": 0
         }
     ],
     "LOSTargetPositions": [
         {
             "x": 0,
-            "y": 15,
-            "z": 0
+            "y": 12,
+            "z": 1
         },
         {
             "x": 4,
-            "y": 15,
+            "y": 12,
             "z": 0
         },
         {
             "x": -4,
-            "y": 15,
+            "y": 12,
             "z": 0
         },
         {
-            "x": 2.5,
-            "y": 6,
-            "z": 2.5
+            "x": 3,
+            "y": 5,
+            "z": 0
         },
         {
-            "x": -2.5,
-            "y": 6,
-            "z": 2.5
+            "x": -3,
+            "y": 5,
+            "z": 0
         }
     ],
-    "VariantName": "JHR-X0",
+    "VariantName": "CPLT-K3",
     "ChassisTags": {
         "items": [],
         "tagSetSourceFile": ""
     },
-    "StockRole": "Skirmisher & Cavalry",
-    "YangsThoughts": "I heard about this, some sort of Lyran backed experiment from TharHes based on a Griffin chassis.  Can't say it looks comfortable to ride in, and I expect the heat to be a major issue for most pilots.  Great idea, but it may have done better back in the SLDF days with an XL engine."
+    "StockRole": "Sniper & Direct-Fire Support",
+    "YangsThoughts": "A variant of the -K2, the -K3 was a lostech upgrade of that fire support mech. Though this design never reached full production, it was prototyped during the War of 3039. It upgraded the PPCs of the K2 to ER PPCs. Twenty double heat sinks kept heat to a minimum."
 }
