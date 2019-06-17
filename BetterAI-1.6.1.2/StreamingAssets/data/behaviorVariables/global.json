@@ -539,7 +539,7 @@
       "k": "Float_SprintPreferInsideMeleeRangeFactorWeight",
       "v": {
         "type": "Float",
-        "floatVal": -1.5
+        "floatVal": -1.0
       }
     },
     {
@@ -948,7 +948,7 @@
       "k": "Float_SprintExclusionRadius",
       "v": {
         "type": "Float",
-        "floatVal": 200.0
+        "floatVal": 120.0
       }
     },
     {
@@ -1570,8 +1570,8 @@
       }
     },
     {
-            /* Weight for an influence factor that seeks to stay
-            within ECM range of friendlies */
+	    /* Weight for an influence factor that seeks to stay
+	       within ECM range of friendlies */
       "k" : "Float_PreferFriendlyECMFields",
       "v" : {
         "type" : "Float",
@@ -1593,7 +1593,7 @@
       "k" : "Float_PreferHostileECMFields",
       "v" : {
         "type" : "Float",
-        "floatVal" : 1.5
+        "floatVal" : 5.0
       }
     },
     {
@@ -1602,7 +1602,7 @@
       "k" : "Float_SprintPreferHostileECMFields",
       "v" : {
         "type" : "Float",
-        "floatVal" : 0.5
+        "floatVal" : 5.0
       }
     },
     {
@@ -1616,7 +1616,7 @@
     },
     {
 	    /* Weight for an influence factor that seeks to stay
-	       within range of hostile ECM fields to use Active Probe */
+	       within range of hostile ECM fields to use Active Probe WHEN SPRINTING */
       "k" : "Float_SprintPreferActiveProbePositions",
       "v" : {
         "type" : "Float",
@@ -1625,7 +1625,7 @@
     },
     {
 	    /* Number of active probe targets before we even try to activate 
-	    active probe */
+	       active probe */
       "k" : "Int_MinimumActiveProbeCount",
       "v" : {
         "type" : "Int",
@@ -1634,11 +1634,11 @@
     },
     {
 	    /* Minimum number of stealth pips to allow for an ECM
-		ghosted mech to fire weapons */
+		   ghosted mech to fire weapons */
       "k" : "Int_MinimumECMGhostedPipsToFire",
       "v" : {
         "type" : "Int",
-        "intVal" : "2"
+        "intVal" : "1"
       }
     },
     {
@@ -1654,12 +1654,12 @@
       "k" : "Bool_EnableUrbanBiomeNavigationEverywhere",
       "v" : {
         "type" : "Bool",
-        "boolVal" : false
+        "boolVal" : true
       }
     },
     {
 	    /* Float to track what "significant" damage is (0: no damage, 1: destroyed). Used to gauge whether we should fire our weapon
-		from a ghosted state */
+		   from a ghosted state */
       "k" : "Float_SignificantDamageWhileGhostedLevel",
       "v" : {
         "type" : "Float",
@@ -1754,7 +1754,7 @@
     },
     {
 	    /* Influence Factor Weight to prefer having LOS to most
-		hostiles. */
+		   hostiles. */
       "k": "Float_PreferLOSToMostHostilesFactorWeight",
       "v": {
         "type": "Float",
@@ -1763,7 +1763,7 @@
     },
     {
 	    /* Influence Factor Weight to prefer having LOS to most
-		hostiles WHEN SPRINTING. */
+		   hostiles WHEN SPRINTING. */
       "k": "Float_SprintPreferLOSToMostHostilesFactorWeight",
       "v": {
         "type": "Float",

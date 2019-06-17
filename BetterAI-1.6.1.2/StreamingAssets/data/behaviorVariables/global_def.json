@@ -487,6 +487,51 @@
       }
     },
     {
+	    /* Weight for an influence factor that seeks to stay
+	       within ECM range of friendlies */
+      "k" : "Float_PreferFriendlyECMFields",
+      "v" : {
+        "type" : "Float",
+        "floatVal" : 1.75
+      }
+    },
+    {
+	    /* Weight for an influence factor that seeks to stay
+	       within ECM range of friendlies WHEN SPRINTING */
+      "k" : "Float_SprintPreferFriendlyECMFields",
+      "v" : {
+        "type" : "Float",
+        "floatVal" : 1.0
+      }
+    },
+    {
+	    /* Weight for an influence factor that seeks to stay
+	       within range of hostile ECM fields */
+      "k" : "Float_PreferHostileECMFields",
+      "v" : {
+        "type" : "Float",
+        "floatVal" : 0.0
+      }
+    },
+    {
+	    /* Weight for an influence factor that seeks to stay
+	       within range of hostile ECM fields WHEN SPRINTING */
+      "k" : "Float_SprintPreferHostileECMFields",
+      "v" : {
+        "type" : "Float",
+        "floatVal" : 0.0
+      }
+    },
+    {
+	    /* Minimum number of stealth pips to allow for an ECM
+		   ghosted mech to fire weapons */
+      "k" : "Int_MinimumECMGhostedPipsToFire",
+      "v" : {
+        "type" : "Int",
+        "intVal" : "2"
+      }
+    },
+    {
 	    /* Influence Factor Weight to prefer being behind
 	       hostiles.
 	       Hostile Factor: 1.0 / 0.5 / 0.25 based on threat */
@@ -571,7 +616,7 @@
     },
     {
 	    /* Influence Factor Weight to prefer having LOS to most
-		hostiles. */
+		   hostiles. */
       "k": "Float_PreferLOSToMostHostilesFactorWeight",
       "v": {
         "type": "Float",
@@ -580,7 +625,7 @@
     },
     {
 	    /* Influence Factor Weight to prefer having LOS to most
-		hostiles WHEN SPRINTING. */
+		   hostiles WHEN SPRINTING. */
       "k": "Float_SprintPreferLOSToMostHostilesFactorWeight",
       "v": {
         "type": "Float",

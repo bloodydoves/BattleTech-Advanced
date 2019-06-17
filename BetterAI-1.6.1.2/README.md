@@ -45,6 +45,7 @@ https://github.com/BattletechModders/ModTek/releases
     role_ewe.json
     role_lastmanstanding.json
     role_meleeonly.json
+    role_noncombatant.json
     role_scout.json
     role_sniper.json
     role_vehicle.json
