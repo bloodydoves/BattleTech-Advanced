@@ -158,4 +158,5 @@ https://github.com/BattletechModders/ModTek/releases
     mechdef_shadowhawk_SHD-2D.json
     mechdef_urbanmech_UM-R60.json
     mechdef_urbanmech_UM-R90.json
+    mechdef_victor_VTR-9S.json
     mechdef_zeus_ZEU-6S.json
