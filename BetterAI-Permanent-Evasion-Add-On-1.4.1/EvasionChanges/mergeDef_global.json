@@ -1,0 +1,19 @@
+{
+    "TargetID": "global",
+    "Instructions": [
+        {
+            "JSONPath": "$.behaviorVariables[?(@.k== 'Float_PipStripAttackProbabilityThreshold')].v",
+            "Action": "ObjectMerge",
+            "Value": {
+               "floatVal": 1.0
+            }
+        },
+		        {
+            "JSONPath": "$.behaviorVariables[?(@.k== 'Float_EvasiveToHitFloor')].v",
+            "Action": "ObjectMerge",
+            "Value": {
+               "floatVal": 30.0
+            }
+        }
+    ]
+}
