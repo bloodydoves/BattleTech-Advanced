@@ -1,22 +1,17 @@
 {
    "Description": {
-      "Id": "lancedef_mixed_d3_dynamic_lightScout",
-      "Name": "Dynamic Dif 3 Light Mixed Scout",
+      "Id": "lancedef_vehicle_d4_dynamic_convoy",
+      "Name": "Dynamic Dif 4 noncombatant vehicle convoy",
       "Details": "",
       "Icon": "",
       "Cost": 0,
       "Rarity": 0,
       "Purchasable": false
    },
-   "Difficulty": 3,
+   "Difficulty": 4,
    "LanceTags": {
       "items": [
-         "lance_bracket_low",
-         "lance_type_scout",
-         "lance_type_light",
-         "lance_type_mixed",
-         "lance_type_dynamic",
-         "lance_type_notallvehicles"
+         "lance_type_convoy"
       ],
       "tagSetSourceFile": "Tags/LanceTags"
    },
@@ -27,51 +22,22 @@
          "pilotId": "Tagged",
          "unitTagSet": {
             "items": [
-               "unit_medium",
-               "unit_vehicle"
+               "unit_vehicle",
+               "unit_noncombatant",
+               "unit_medium"
             ],
             "tagSetSourceFile": "Tags/UnitTags"
          },
          "excludedUnitTagSet": {
             "items": [
-               "unit_noncombatant",
-               "unit_urbie"
+               "unit_hover",
+               "unit_noconvoy"
             ],
             "tagSetSourceFile": "Tags/UnitTags"
          },
          "pilotTagSet": {
             "items": [
-               "pilot_npc_d3"
-            ],
-            "tagSetSourceFile": "Tags/PilotTags"
-         },
-         "excludedPilotTagSet": {
-            "items": null,
-            "tagSetSourceFile": "Tags/PilotTags"
-         }
-      },
-      {
-         "unitType": "Mech",
-         "unitId": "Tagged",
-         "pilotId": "Tagged",
-         "unitTagSet": {
-            "items": [
-               "unit_medium",
-               "unit_lance_vanguard",
-               "unit_mech"
-            ],
-            "tagSetSourceFile": "Tags/UnitTags"
-         },
-         "excludedUnitTagSet": {
-            "items": [
-               "unit_noncombatant",
-               "unit_urbie"
-            ],
-            "tagSetSourceFile": "Tags/UnitTags"
-         },
-         "pilotTagSet": {
-            "items": [
-               "pilot_npc_d3"
+               "pilot_sensor"
             ],
             "tagSetSourceFile": "Tags/PilotTags"
          },
@@ -86,22 +52,23 @@
          "pilotId": "Tagged",
          "unitTagSet": {
             "items": [
-               "unit_vehicle"
+               "unit_vehicle",
+               "unit_vehicle_apc",
+               "unit_noncombatant",
+               "unit_medium"
             ],
             "tagSetSourceFile": "Tags/UnitTags"
          },
          "excludedUnitTagSet": {
             "items": [
-               "unit_noncombatant",
-               "unit_heavy",
-               "unit_assault",
-               "unit_urbie"
+               "unit_hover",
+               "unit_noconvoy"
             ],
             "tagSetSourceFile": "Tags/UnitTags"
          },
          "pilotTagSet": {
             "items": [
-               "pilot_npc_d3"
+               "pilot_sensor"
             ],
             "tagSetSourceFile": "Tags/PilotTags"
          },
@@ -111,28 +78,59 @@
          }
       },
       {
-         "unitType": "Mech",
+         "unitType": "Vehicle",
          "unitId": "Tagged",
          "pilotId": "Tagged",
          "unitTagSet": {
             "items": [
-               "unit_lance_vanguard",
-               "unit_mech"
+               "unit_vehicle",
+               "unit_vehicle_apc",
+               "unit_noncombatant",
+               "unit_medium"
             ],
             "tagSetSourceFile": "Tags/UnitTags"
          },
          "excludedUnitTagSet": {
             "items": [
-               "unit_noncombatant",
-               "unit_assault",
-               "unit_heavy",
-               "unit_urbie"
+               "unit_hover",
+               "unit_noconvoy"
             ],
             "tagSetSourceFile": "Tags/UnitTags"
          },
          "pilotTagSet": {
             "items": [
-               "pilot_npc_d3"
+               "pilot_sensor"
+            ],
+            "tagSetSourceFile": "Tags/PilotTags"
+         },
+         "excludedPilotTagSet": {
+            "items": null,
+            "tagSetSourceFile": "Tags/PilotTags"
+         }
+      },
+      {
+         "unitType": "Vehicle",
+         "unitId": "Tagged",
+         "pilotId": "Tagged",
+         "unitTagSet": {
+            "items": [
+               "unit_vehicle",
+               "unit_vehicle_apc",
+               "unit_noncombatant",
+               "unit_medium"
+            ],
+            "tagSetSourceFile": "Tags/UnitTags"
+         },
+         "excludedUnitTagSet": {
+            "items": [
+               "unit_hover",
+               "unit_noconvoy"
+            ],
+            "tagSetSourceFile": "Tags/UnitTags"
+         },
+         "pilotTagSet": {
+            "items": [
+               "pilot_sensor"
             ],
             "tagSetSourceFile": "Tags/PilotTags"
          },
