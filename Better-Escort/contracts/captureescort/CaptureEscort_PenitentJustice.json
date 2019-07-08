@@ -7,8 +7,12 @@
     "weight" : 1,
     "scope" : "STANDARD",
     "finalDifficulty" : 0,
-    "shortDescription" : "A long-time enemy of {TEAM_EMP.FactionDef.Name} has unexpectedly turned herself into local authorities, and will now be extradited to another system for trial. {TEAM_TAR.FactionDef.Name} does not want to see her testify, and will try to stop her from leaving the planet. We've secured a convoy of armored vehicles to transport the criminal, but we need the extra fire-power of your 'Mechs to guarantee a safe path to the evacuatation zone.",
-    "longDescription" : "Commander, I've read a bit about this criminal and the things that she's accused of. {TEAM_TAR.FactionDef.ShortName} will do anything to eliminate her. If we take this job, we should expect trouble.",
+    "representativeCastDefIDOverride" : null,
+    "missionSuccessStatementOverride" : null,
+    "badFaithStatementOverride" : null,
+    "goodFaithStatementOverride" : null,
+    "shortDescription" : "A long-time enemy of {TEAM_EMP.FactionDef.Name} has unexpectedly turned herself into local authorities, and will now be extradited to another system for trial. However, {TEAM_TAR.FactionDef.Name} does not want to see her testify, and will try to stop her from leaving the planet. We've secured a convoy of armored vehicles to transport the criminal, but we need the extra fire-power of your 'Mechs to guarantee a safe path to the evacuatation zone.",
+    "longDescription" : "Commander, I've read a bit about this criminal and the things that she's accused of. I suspect {TEAM_TAR.FactionDef.ShortName} will do anything to eliminate her. If we take this job, we should expect trouble.",
     "salvagePotential" : 20,
     "requirementList" : [
         {
@@ -121,7 +125,9 @@
                     "ResultDuration" : 0
                 }
             ],
-            "OnFailureResults" : []
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : null,
+            "OnFailureDialogueGUID" : null
         },
         {
             "objective" : {
@@ -131,7 +137,9 @@
             "description" : "",
             "isPrimary" : true,
             "OnSuccessResults" : [],
-            "OnFailureResults" : []
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : null,
+            "OnFailureDialogueGUID" : null
         },
         {
             "objective" : {
@@ -167,7 +175,9 @@
                     "ResultDuration" : 0
                 }
             ],
-            "OnFailureResults" : []
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : null,
+            "OnFailureDialogueGUID" : null
         },
         {
             "objective" : {
@@ -177,7 +187,9 @@
             "description" : "",
             "isPrimary" : true,
             "OnSuccessResults" : [],
-            "OnFailureResults" : []
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : null,
+            "OnFailureDialogueGUID" : null
         },
         {
             "objective" : {
@@ -213,7 +225,9 @@
                     "ResultDuration" : 0
                 }
             ],
-            "OnFailureResults" : []
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : null,
+            "OnFailureDialogueGUID" : null
         },
         {
             "objective" : {
@@ -223,7 +237,9 @@
             "description" : "Hidden Objective: Destroy hunter lance for mission complete.",
             "isPrimary" : false,
             "OnSuccessResults" : [],
-            "OnFailureResults" : []
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : null,
+            "OnFailureDialogueGUID" : null
         },
         {
             "objective" : {
@@ -233,7 +249,9 @@
             "description" : "",
             "isPrimary" : true,
             "OnSuccessResults" : [],
-            "OnFailureResults" : []
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : null,
+            "OnFailureDialogueGUID" : null
         },
         {
             "objective" : {
@@ -243,7 +261,9 @@
             "description" : "",
             "isPrimary" : true,
             "OnSuccessResults" : [],
-            "OnFailureResults" : []
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : null,
+            "OnFailureDialogueGUID" : null
         },
         {
             "objective" : {
@@ -253,7 +273,9 @@
             "description" : "",
             "isPrimary" : true,
             "OnSuccessResults" : [],
-            "OnFailureResults" : []
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : null,
+            "OnFailureDialogueGUID" : null
         }
     ],
     "artilleryObjectiveList" : [],
@@ -594,6 +616,7 @@
             ]
         }
     ],
+    "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : null,
     "disableNegotations" : false,
     "disableLanceConfiguration" : false,
@@ -606,6 +629,7 @@
     "expirationTimeOverride" : -1,
     "negotiatedSalary" : 1,
     "negotiatedSalvage" : 0,
+    "excludedFromProceduralGeneration" : false,
     "player1Team" : {
         "encounterLayerData" : {
             "EncounterObjectGuid" : "280026b1-259f-44f0-ad82-b6799a05064b"
@@ -1468,6 +1492,14 @@
         },
         "teamGuid" : "3c9f3a20-ab03-4bcb-8ab6-b1ef0442bbf0",
         "teamName" : "Hostile to All",
+        "faction" : "INVALID_UNSET",
+        "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
+        "lanceOverrideList" : []
+    },
+    "employersAllyTeam" : {
+        "encounterLayerData" : null,
+        "teamGuid" : "70af7e7f-39a8-4e81-87c2-bd01dcb01b5e",
+        "teamName" : "Employers Ally",
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
