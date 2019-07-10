@@ -1,25 +1,33 @@
 {
+    "Custom": {
+        "ArmActuatorSupport": {
+            "LeftLimit": "Upper",
+            "RightLimit": "Upper"
+        }
+    },
     "Description": {
-        "Cost": 1900000,
+        "Cost": 2016756,
         "Rarity": 0,
         "Purchasable": true,
         "Manufacturer": "",
         "Model": "",
         "UIName": "UrbanMech",
-        "Id": "chassisdef_urbanmech_UM-R68",
-        "Name": "UrbanMech",
-        "Details": "Designed by the Draconis Combine to resist Clan Ghost Bear, the UM-68 swaps the autocannon of the standard UrbanMech with a MRM 30 and two tons of ammo. For backup, it carries a Small Pulse and standard Small Laser. Otherwise, the mech is entirely unchanged, carrying the same armor and moving the same speed as the standard UrbanMech despite hitting far harder.",
+        "Id": "chassisdef_urbanmech_UM-R90",
+        "Name": "SuburbanMech",
+        "Details": "The UM-R90 'SuburbanMech' adapts the traditional UrbanMech R60 into an energy weapon platform for higher performance. Because its weapons aren't limited by ammunition concerns, the R90 is better-suited to longer engagements.",
         "Icon": "uixTxrIcon_urbanmech"
     },
-    "MovementCapDefID": "movedef_urbanmech_UM-R60",
+    "MovementCapDefID": "movedef_urbanmech_UM-R90",
     "PathingCapDefID": "pathingdef_light",
     "HardpointDataDefID": "hardpointdatadef_urbanmech",
     "PrefabIdentifier": "chrprfmech_urbiebase-001",
     "PrefabBase": "urbie",
+    "VariantName": "UM-R90",
+    "StockRole": "Heavy Defender",
+    "YangsThoughts": "This is an UrbanMech variant I've never even heard of before. It's got the same armor as a standard R60, but this R90 is armed entirely with energy weapons, including a PPC for long-range power. I'm not sure why nobody thought of this sooner.",
     "Tonnage": 30,
-    "InitialTonnage": 3,
+    "InitialTonnage": 10,
     "weightClass": "LIGHT",
-    "BattleValue": 1892000,
     "Heatsinks": 0,
     "TopSpeed": 85,
     "TurnRadius": 90,
@@ -46,6 +54,10 @@
     "DFAToHitModifier": 0,
     "DFASelfDamage": 40,
     "DFAInstability": 40,
+    "ChassisTags": {
+        "items": [],
+        "tagSetSourceFile": ""
+    },
     "Locations": [
         {
             "Location": "Head",
@@ -60,11 +72,11 @@
             "Location": "LeftArm",
             "Hardpoints": [
                 {
-                    "WeaponMount": "AntiPersonnel",
+                    "WeaponMount": "Energy",
                     "Omni": false
                 },
                 {
-                    "WeaponMount": "AntiPersonnel",
+                    "WeaponMount": "Energy",
                     "Omni": false
                 }
             ],
@@ -77,11 +89,11 @@
         {
             "Location": "LeftTorso",
             "Hardpoints": [
-				{
-                    "WeaponMount": "AntiPersonnel",
+                {
+                    "WeaponMount": "Energy",
                     "Omni": false
                 }
-			],
+            ],
             "Tonnage": 0,
             "InventorySlots": 12,
             "MaxArmor": 70,
@@ -92,14 +104,19 @@
             "Location": "CenterTorso",
             "Hardpoints": [],
             "Tonnage": 0,
-            "InventorySlots": 15,
+            "InventorySlots": 12,
             "MaxArmor": 100,
             "MaxRearArmor": 50,
             "InternalStructure": 50
         },
         {
             "Location": "RightTorso",
-            "Hardpoints": [],
+            "Hardpoints": [
+                {
+                    "WeaponMount": "Energy",
+                    "Omni": false
+                }
+            ],
             "Tonnage": 0,
             "InventorySlots": 12,
             "MaxArmor": 70,
@@ -110,15 +127,15 @@
             "Location": "RightArm",
             "Hardpoints": [
                 {
-                    "WeaponMount": "Missile",
+                    "WeaponMount": "Energy",
                     "Omni": false
                 },
                 {
-                    "WeaponMount": "Missile",
+                    "WeaponMount": "Energy",
                     "Omni": false
                 },
                 {
-                    "WeaponMount": "Missile",
+                    "WeaponMount": "AntiPersonnel",
                     "Omni": false
                 }
             ],
@@ -191,11 +208,5 @@
             "z": 0.5
         }
     ],
-    "VariantName": "UM-R68",
-    "ChassisTags": {
-        "items": [],
-        "tagSetSourceFile": ""
-    },
-    "StockRole": "Heavy Defender",
-    "YangsThoughts": "Designed by the Draconis Combine to resist Clan Ghost Bear, the UM-68 swaps the autocannon of the standard UrbanMech with a MRM 30 and two tons of ammo. For backup, it carries a Small Pulse and standard Small Laser. Otherwise, the mech is entirely unchanged, carrying the same armor and moving the same speed as the standard UrbanMech despite hitting far harder."
+    "FixedEquipment": null
 }
