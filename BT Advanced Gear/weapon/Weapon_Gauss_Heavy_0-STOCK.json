@@ -1,6 +1,15 @@
 {
 
-	"Custom": { "ComponentExplosion": { "ExplosionDamage": 75, "StabilityDamage": 30 } },
+	"Custom": { "ComponentExplosion": { "ExplosionDamage": 75, "StabilityDamage": 30 },
+		"BonusDescriptions": {
+            "Bonuses": [
+                "DmgFallOff: 40%",
+                "WpnRecoil: 2",
+                "IsHeavyGauss",
+                "WeaponBoom: 75"
+            ]
+        },
+	},
 
     "Category" : "Ballistic",
     "Type" : "Gauss",
@@ -43,7 +52,7 @@
         "Details" : "A Massively oversized variant of the Gauss Rifle, this weapon trades its immense weight and slightly shorter range for significantly increased damage.",
         "Icon" : "uixSvgIcon_weapon_Ballistic"
     },
-    "BonusValueA" : "",
+    "BonusValueA" : "Damage Falloff",
     "BonusValueB" : "",
     "ComponentType" : "Weapon",
     "ComponentSubType" : "Weapon",
@@ -60,7 +69,8 @@
     "ComponentTags" : {
         "items" : [
             "component_type_stock",
-            "range_very-long"
+            "WR-variance_by_distance-40",
+            "range_standard"
         ],
         "tagSetSourceFile" : ""
     }

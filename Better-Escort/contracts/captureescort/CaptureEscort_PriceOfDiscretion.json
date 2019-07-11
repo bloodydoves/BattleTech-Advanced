@@ -7,6 +7,10 @@
     "weight" : 1,
     "scope" : "STANDARD",
     "finalDifficulty" : 0,
+    "representativeCastDefIDOverride" : null,
+    "missionSuccessStatementOverride" : null,
+    "badFaithStatementOverride" : null,
+    "goodFaithStatementOverride" : null,
     "shortDescription" : "We're looking for a mercenary company with a reputation for discretion. A personal friend of our leadership here in {TGT_SYSTEM.name} has requested protection for a convoy of his, but {TEAM_EMP.FactionDef.Name} can't commit our own forces to this task. While his convoy is armed and armored, he suspects that his enemies have hired mercenaries of their own to interdict this shipment.",
     "longDescription" : "Commander, I suspect that our employers' reluctance to commit their own forces has less to do with any extreme danger of the task, but some distaste with their merchant friend.",
     "salvagePotential" : 16,
@@ -115,7 +119,9 @@
                     "ResultDuration" : 0
                 }
             ],
-            "OnFailureResults" : []
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : null,
+            "OnFailureDialogueGUID" : null
         },
         {
             "objective" : {
@@ -125,7 +131,9 @@
             "description" : "",
             "isPrimary" : true,
             "OnSuccessResults" : [],
-            "OnFailureResults" : []
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : null,
+            "OnFailureDialogueGUID" : null
         },
         {
             "objective" : {
@@ -161,7 +169,9 @@
                     "ResultDuration" : 0
                 }
             ],
-            "OnFailureResults" : []
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : null,
+            "OnFailureDialogueGUID" : null
         },
         {
             "objective" : {
@@ -171,7 +181,9 @@
             "description" : "",
             "isPrimary" : true,
             "OnSuccessResults" : [],
-            "OnFailureResults" : []
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : null,
+            "OnFailureDialogueGUID" : null
         },
         {
             "objective" : {
@@ -207,7 +219,9 @@
                     "ResultDuration" : 0
                 }
             ],
-            "OnFailureResults" : []
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : null,
+            "OnFailureDialogueGUID" : null
         },
         {
             "objective" : {
@@ -217,7 +231,9 @@
             "description" : "Hidden Objective: Destroy hunter lance for mission complete.",
             "isPrimary" : false,
             "OnSuccessResults" : [],
-            "OnFailureResults" : []
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : null,
+            "OnFailureDialogueGUID" : null
         },
         {
             "objective" : {
@@ -227,7 +243,9 @@
             "description" : "",
             "isPrimary" : true,
             "OnSuccessResults" : [],
-            "OnFailureResults" : []
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : null,
+            "OnFailureDialogueGUID" : null
         },
         {
             "objective" : {
@@ -237,7 +255,9 @@
             "description" : "",
             "isPrimary" : true,
             "OnSuccessResults" : [],
-            "OnFailureResults" : []
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : null,
+            "OnFailureDialogueGUID" : null
         },
         {
             "objective" : {
@@ -247,7 +267,9 @@
             "description" : "",
             "isPrimary" : true,
             "OnSuccessResults" : [],
-            "OnFailureResults" : []
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : null,
+            "OnFailureDialogueGUID" : null
         }
     ],
     "artilleryObjectiveList" : [],
@@ -588,6 +610,7 @@
             ]
         }
     ],
+    "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : null,
     "disableNegotations" : false,
     "disableLanceConfiguration" : false,
@@ -600,6 +623,7 @@
     "expirationTimeOverride" : -1,
     "negotiatedSalary" : 1,
     "negotiatedSalvage" : 0,
+    "excludedFromProceduralGeneration" : false,
     "player1Team" : {
         "encounterLayerData" : {
             "EncounterObjectGuid" : "280026b1-259f-44f0-ad82-b6799a05064b"
@@ -1465,6 +1489,14 @@
         },
         "teamGuid" : "3c9f3a20-ab03-4bcb-8ab6-b1ef0442bbf0",
         "teamName" : "Hostile to All",
+        "faction" : "INVALID_UNSET",
+        "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
+        "lanceOverrideList" : []
+    },
+    "employersAllyTeam" : {
+        "encounterLayerData" : null,
+        "teamGuid" : "70af7e7f-39a8-4e81-87c2-bd01dcb01b5e",
+        "teamName" : "Employers Ally",
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
