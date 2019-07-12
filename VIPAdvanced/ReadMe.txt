@@ -1,6 +1,11 @@
 VIP/RogueTech Tanks Ported for BloodyDoves' Battletech Advanced mod.
 Used and adapted with permission and help by Cargo Vroom.
 
+0.2.6
+
+Added OpForConvoy lances,
+Added contract overides to use them.
+
 0.1.6 - 6/24/2019
 
 Pruned some more vee things from outside VIPAdvanced for compat reasons,
