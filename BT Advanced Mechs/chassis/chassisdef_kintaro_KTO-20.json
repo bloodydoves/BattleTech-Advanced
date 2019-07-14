@@ -1,29 +1,29 @@
 {
     "Description": {
         "Cost": 5200000,
-        "Rarity": 5,
+        "Rarity": 3,
         "Purchasable": true,
         "Manufacturer": "",
         "Model": "",
-        "UIName": "Bushwacker",
-        "Id": "chassisdef_bushwacker_BWS-X0",
-        "Name": "Bushwacker",
-        "Details": "Designed first and foremost to be as difficult a target as possible, the Bushwacker prototype, sometimes called a Jawhawker for unclear reasons, features an unusually low profile and exceptionally small silhouette for a 55-ton war machine.  Carrying one LRM-5 high on its left torso and another in its left arm, the BWS-X0 can provide indirect support while the Autocannon/10 and Large Laser provide respectable suppressive fire. A pair of Machine Guns also give the Bushwacker excellent anti-infantry capabilities.",
-        "Icon": "bushwacker"
+        "UIName": "Kintaro",
+        "Id": "chassisdef_kintaro_KTO-20",
+        "Name": "Kintaro",
+        "Details": "The KTO-20, used to good effect in the War of 3039, was the slightly downgraded version of the KTO-19 given to the Draconis Combine by ComStar as part of Operation Rosebud. The KTO-20 was nearly identical to its Star League era cousin, the only real difference being the loss of the Narc Missile beacon in exchange for a Large Laser. It was equipped with double heat sinks.",
+        "Icon": "uixTxrIcon_kintaro"
     },
-    "MovementCapDefID": "movedef_jayhawker",
+    "MovementCapDefID": "movedef_kintaro_KTO-18",
     "PathingCapDefID": "pathingdef_medium",
-    "HardpointDataDefID": "hardpointdatadef_bushwacker",
-    "PrefabIdentifier": "chrprfmech_bushwackerbase-001",
-    "PrefabBase": "bushwacker",
+    "HardpointDataDefID": "hardpointdatadef_kintaro",
+    "PrefabIdentifier": "chrPrfMech_kintaroBase-001",
+    "PrefabBase": "kintaro",
     "Tonnage": 55,
     "InitialTonnage": 5.5,
     "weightClass": "MEDIUM",
-    "BattleValue": 5171000,
+    "BattleValue": 5148000,
     "Heatsinks": 0,
     "TopSpeed": 80,
     "TurnRadius": 90,
-    "MaxJumpjets": 4,
+    "MaxJumpjets": 5,
     "Stability": 130,
     "StabilityDefenses": [
         0,
@@ -39,7 +39,7 @@
     "Signature": 0,
     "Radius": 5,
     "PunchesWithLeftArm": false,
-    "MeleeDamage": 50,
+    "MeleeDamage": 70,
     "MeleeInstability": 55,
     "MeleeToHitModifier": 0,
     "DFADamage": 70,
@@ -76,20 +76,7 @@
         },
         {
             "Location": "LeftTorso",
-            "Hardpoints": [
-                {
-                    "WeaponMount": "Missile",
-                    "Omni": false
-                },
-                {
-                    "WeaponMount": "AntiPersonnel",
-                    "Omni": false
-                },
-                {
-                    "WeaponMount": "AntiPersonnel",
-                    "Omni": false
-                }
-            ],
+            "Hardpoints": [],
             "Tonnage": 0,
             "InventorySlots": 12,
             "MaxArmor": 130,
@@ -105,7 +92,7 @@
                 }
             ],
             "Tonnage": 0,
-            "InventorySlots": 16,
+            "InventorySlots": 15,
             "MaxArmor": 180,
             "MaxRearArmor": 90,
             "InternalStructure": 90
@@ -114,11 +101,11 @@
             "Location": "RightTorso",
             "Hardpoints": [
                 {
-                    "WeaponMount": "AntiPersonnel",
+                    "WeaponMount": "Missile",
                     "Omni": false
                 },
                 {
-                    "WeaponMount": "AntiPersonnel",
+                    "WeaponMount": "Missile",
                     "Omni": false
                 }
             ],
@@ -132,11 +119,11 @@
             "Location": "RightArm",
             "Hardpoints": [
                 {
-                    "WeaponMount": "Ballistic",
+                    "WeaponMount": "Energy",
                     "Omni": false
                 },
-                {
-                    "WeaponMount": "AntiPersonnel",
+				{
+                    "WeaponMount": "Energy",
                     "Omni": false
                 }
             ],
@@ -172,12 +159,12 @@
             "z": 0
         },
         {
-            "x": 4,
+            "x": 3,
             "y": 15,
             "z": 0
         },
         {
-            "x": -4,
+            "x": -3,
             "y": 15,
             "z": 0
         }
@@ -189,31 +176,31 @@
             "z": 0
         },
         {
-            "x": 4,
+            "x": 3,
             "y": 15,
             "z": 0
         },
         {
-            "x": -4,
+            "x": -3,
             "y": 15,
             "z": 0
         },
         {
-            "x": 2.5,
-            "y": 6,
-            "z": 2.5
+            "x": 3,
+            "y": 5,
+            "z": 0
         },
         {
-            "x": -2.5,
-            "y": 6,
-            "z": 2.5
+            "x": -3,
+            "y": 5,
+            "z": 0
         }
     ],
-    "VariantName": "BWS-X0",
+    "VariantName": "KTO-20",
     "ChassisTags": {
         "items": [],
         "tagSetSourceFile": ""
     },
-    "StockRole": "Skirmisher & Cavalry",
-    "YangsThoughts": "I heard about this, some sort of Lyran backed experiment from TharHes based on a Griffin chassis.  Can't say it looks comfortable to ride in, and I expect the heat to be a major issue for most pilots.  Great idea, but it may have done better back in the SLDF days with an XL engine."
+    "StockRole": "Juggernaut & Close Assault",
+    "YangsThoughts": "The KTO-20, used to good effect in the War of 3039, was the slightly downgraded version of the KTO-19 given to the Draconis Combine by ComStar as part of Operation Rosebud. The KTO-20 was nearly identical to its Star League era cousin, the only real difference being the loss of the Narc Missile beacon in exchange for a Large Laser. It was equipped with double heat sinks."
 }
