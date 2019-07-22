@@ -43,6 +43,48 @@
 			]
 		},
 		{
+            "ID" : "diff_skipPrologue",
+            "Name" : "Skip Prologue",
+			"UIOrder" : 0,
+            "TelemetryEventName": "",
+            "Tooltip" : "Skip the prologue of the Campaign. <color=#F79B26>This will bypass the tutorial and some early game missions</color>.",
+            "Enabled" : true,
+            "Visible" : true,
+            "Toggle" : true,
+            "StartOnly" : true,
+            "DefaultIndex" : 0,
+            "Options" : [
+                {
+                    "ID" : "diff_PSKIP_off",
+                    "Name" : "Off",
+                    "TelemetryEventDesc": "",
+                    "DifficultyValue" : 0,
+                    "CareerScoreModifier" : -1,
+                    "DifficultyConstants" : [
+                        {
+                            "ConstantType" : "Story",
+                            "ConstantName" : "SkipTutorial",
+                            "ConstantValue" : "False"
+                        }
+                    ]
+                },
+                {
+                    "ID" : "diff_PSKIP_on",
+                    "Name" : "On",
+                    "TelemetryEventDesc": "",
+                    "DifficultyValue" : 0,
+                    "CareerScoreModifier" : -1,
+                    "DifficultyConstants" : [
+                        {
+                            "ConstantType" : "Story",
+                            "ConstantName" : "SkipTutorial",
+                            "ConstantValue" : "True"
+                        }
+                    ]
+                }
+            ]
+        },
+		{
         "ID": "diff_FriendlyFire",
         "Name": "Friendly Fire",
         "TelemetryEventName": "",
