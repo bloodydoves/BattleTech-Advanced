@@ -1,22 +1,22 @@
 {
-    "ID": "AmbushConvoy_NippedInTheBud_NEW",
-    "contractName": "Nipped in the Bud",
+    "excludedFromProceduralGeneration": true,
+    "ID": "AmbushConvoy_Massacre_Pirate_NEW",
+    "filename": "AmbushConvoy_Massacre_Pirate_NEW.json",
+    "contractName": "Reprisal",
     "contractDisplayStyle": "BaseCampaignNormal",
     "difficulty": 5,
     "difficultyUIModifier": 0,
     "weight": 1,
     "scope": "STANDARD",
     "finalDifficulty": 0,
-    "shortDescription": "A lance of newly manufactured {TEAM_TAR.FactionDef.Name} 'mechs is being moved overland from manufacturing facilities to a their garrison. {TEAM_EMP.FactionDef.Demonym} would like these units destroyed before they enter military service.",
-    "longDescription": "Commander, from what I understand the mechs are being piloted by either rookies or support staff. They'll likely try to escape rather than battle. They will have an escort however.",
-    "salvagePotential": 12,
+    "shortDescription": "We need you to destroy a convoy of {TEAM_TAR.FactionDef.Name} vehicles that was involved in a strike on our holdings. You like credits, yes?",
+    "longDescription": "There's not a lot of detail here, Commander.",
+    "salvagePotential": 14,
     "requirementList": [
         {
             "Scope": "StarSystem",
             "RequirementTags": {
-                "items": [
-                    "planet_industry_manufacturing"
-                ],
+                "items": [],
                 "tagSetSourceFile": ""
             },
             "ExclusionTags": {
@@ -31,11 +31,62 @@
                     "op": "Equal",
                     "val": 1,
                     "valueConstant": null
+                },
+                {
+                    "obj": "Employer.AuriganPirates",
+                    "op": "Equal",
+                    "val": 1,
+                    "valueConstant": null
                 }
             ]
+        },
+        {
+            "Scope": "Company",
+            "RequirementTags": {
+                "items": [],
+                "tagSetSourceFile": ""
+            },
+            "ExclusionTags": {
+                "items": [
+                    "dirtydeedsdonedirtcheap"
+                ],
+                "tagSetSourceFile": ""
+            },
+            "RequirementComparisons": []
         }
     ],
-    "OnContractSuccessResults": [],
+    "OnContractSuccessResults": [
+        {
+            "Scope": "Company",
+            "Requirements": {
+                "Scope": "Company",
+                "RequirementTags": {
+                    "items": [],
+                    "tagSetSourceFile": ""
+                },
+                "ExclusionTags": {
+                    "items": [],
+                    "tagSetSourceFile": ""
+                },
+                "RequirementComparisons": []
+            },
+            "AddedTags": {
+                "items": [
+                    "dirtydeedsdonedirtcheap"
+                ],
+                "tagSetSourceFile": ""
+            },
+            "RemovedTags": {
+                "items": [],
+                "tagSetSourceFile": ""
+            },
+            "Stats": [],
+            "Actions": null,
+            "ForceEvents": null,
+            "TemporaryResult": false,
+            "ResultDuration": 0
+        }
+    ],
     "OnContractFailureResults": [],
     "contractType": "AmbushConvoy",
     "encounterPlayStyle": "SinglePlayer",
@@ -94,8 +145,89 @@
             "title": "Destroy the {TEAM_TAR.FactionDef.Demonym} Convoy",
             "description": "The objective for destroying the convoy units.",
             "isPrimary": false,
-            "OnSuccessResults": [],
-            "OnFailureResults": []
+            "OnSuccessResults": [
+                {
+                    "Scope": "Company",
+                    "Requirements": {
+                        "Scope": "Company",
+                        "RequirementTags": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "ExclusionTags": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "RequirementComparisons": []
+                    },
+                    "AddedTags": {
+                        "items": [],
+                        "tagSetSourceFile": ""
+                    },
+                    "RemovedTags": {
+                        "items": [],
+                        "tagSetSourceFile": ""
+                    },
+                    "Stats": [
+                        {
+                            "typeString": "System.Int32",
+                            "name": "Reputation.Target",
+                            "value": "-25",
+                            "set": false,
+                            "valueConstant": null
+                        },
+                        {
+                            "typeString": "System.Int32",
+                            "name": "Morale",
+                            "value": "-5",
+                            "set": false,
+                            "valueConstant": null
+                        }
+                    ],
+                    "Actions": null,
+                    "ForceEvents": null,
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ],
+            "OnFailureResults": [
+                {
+                    "Scope": "Company",
+                    "Requirements": {
+                        "Scope": "Company",
+                        "RequirementTags": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "ExclusionTags": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "RequirementComparisons": []
+                    },
+                    "AddedTags": {
+                        "items": [],
+                        "tagSetSourceFile": ""
+                    },
+                    "RemovedTags": {
+                        "items": [],
+                        "tagSetSourceFile": ""
+                    },
+                    "Stats": [
+                        {
+                            "typeString": "System.Int32",
+                            "name": "Reputation.Target",
+                            "value": "10",
+                            "set": false,
+                            "valueConstant": null
+                        }
+                    ],
+                    "Actions": null,
+                    "ForceEvents": null,
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ]
         },
         {
             "objective": {
@@ -120,7 +252,7 @@
                         {
                             "typeString": "System.Single",
                             "name": "ContractBonusRewardPct",
-                            "value": "0.10",
+                            "value": "0.15",
                             "set": false,
                             "valueConstant": null
                         }
@@ -131,7 +263,44 @@
                     "ResultDuration": 0
                 }
             ],
-            "OnFailureResults": []
+            "OnFailureResults": [
+                {
+                    "Scope": "Company",
+                    "Requirements": {
+                        "Scope": "Company",
+                        "RequirementTags": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "ExclusionTags": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "RequirementComparisons": []
+                    },
+                    "AddedTags": {
+                        "items": [],
+                        "tagSetSourceFile": ""
+                    },
+                    "RemovedTags": {
+                        "items": [],
+                        "tagSetSourceFile": ""
+                    },
+                    "Stats": [
+                        {
+                            "typeString": "System.Int32",
+                            "name": "Reputation.Target",
+                            "value": "5",
+                            "set": false,
+                            "valueConstant": null
+                        }
+                    ],
+                    "Actions": null,
+                    "ForceEvents": null,
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ]
         },
         {
             "objective": {
@@ -141,7 +310,44 @@
             "description": "The objective for preventing the enemy from reaching their escape point, if this happens the player will lose.",
             "isPrimary": false,
             "OnSuccessResults": [],
-            "OnFailureResults": []
+            "OnFailureResults": [
+                {
+                    "Scope": "Company",
+                    "Requirements": {
+                        "Scope": "Company",
+                        "RequirementTags": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "ExclusionTags": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "RequirementComparisons": []
+                    },
+                    "AddedTags": {
+                        "items": [],
+                        "tagSetSourceFile": ""
+                    },
+                    "RemovedTags": {
+                        "items": [],
+                        "tagSetSourceFile": ""
+                    },
+                    "Stats": [
+                        {
+                            "typeString": "System.Int32",
+                            "name": "Reputation.Target",
+                            "value": "10",
+                            "set": false,
+                            "valueConstant": null
+                        }
+                    ],
+                    "Actions": null,
+                    "ForceEvents": null,
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ]
         },
         {
             "objective": {
@@ -186,7 +392,7 @@
                         {
                             "typeString": "System.Single",
                             "name": "ContractBonusRewardPct",
-                            "value": "0.25",
+                            "value": "0.1",
                             "set": false,
                             "valueConstant": null
                         }
@@ -208,7 +414,7 @@
             "encounterChunk": {
                 "EncounterObjectGuid": "2e0d2e69-6335-49ae-b2bb-61ff3185306b"
             },
-            "enableChunkFromContract": true,
+            "enableChunkFromContract": false,
             "requirementList": []
         }
     ],
@@ -327,6 +533,22 @@
                     "cameraDistance": "Far",
                     "cameraHeight": "Default",
                     "revealRadius": -1
+                },
+                {
+                    "words": "I'll keep an eye out from up here.",
+                    "wordsColor": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_DariusDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "76b654a6-4f2c-4a6f-86e6-d4cf868335fe",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
                 }
             ]
         },
@@ -338,7 +560,7 @@
             "overrideDialogueBucketId": "",
             "dialogueContent": [
                 {
-                    "words": "Mission accomplished. The target mechs have been totaled",
+                    "words": "Mission accomplished.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -363,7 +585,7 @@
             "overrideDialogueBucketId": "",
             "dialogueContent": [
                 {
-                    "words": "Nothing more to do here Commander, lets go home.",
+                    "words": "Well, that didn't go as planned.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -388,7 +610,7 @@
             "overrideDialogueBucketId": "DialogBucketDef_AmbushConvoy_EyesOnTarget",
             "dialogueContent": [
                 {
-                    "words": "The target mechs should be just ahead. Watch out for their escort too.",
+                    "words": "We have a lock on the target vehicles. They should be to your front. Engage and destroy, Commander.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -413,7 +635,55 @@
             "overrideDialogueBucketId": "DialogBucketDef_AmbushConvoy_PriTarDamaged",
             "dialogueContent": [
                 {
-                    "words": "That's got it, primary target damaged. Keep on those ones.",
+                    "words": "Wait, wait! Commander, something is wrong!",
+                    "wordsColor": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_DariusDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                },
+                {
+                    "words": "Those are MASH trucks, they're transporting wounded!",
+                    "wordsColor": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_DariusDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                },
+                {
+                    "words": "Our employer didn't include that detail. Completing this contract could have serious consequences, Commander.",
+                    "wordsColor": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_DariusDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                },
+                {
+                    "words": "This might be one contract where failing is better for our rep than completing it.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -463,7 +733,7 @@
             "overrideDialogueBucketId": "",
             "dialogueContent": [
                 {
-                    "words": "Warning, Commander! The target mechs have begun to arrive at their destination; not much time left before they escape!",
+                    "words": "Heads up, Commander! The target vehicles have begun to arrive at their destination; they'll extract when the last survivor reaches it.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -488,7 +758,7 @@
             "overrideDialogueBucketId": "DialogBucketDef_Universal_KillConfirmed",
             "dialogueContent": [
                 {
-                    "words": "One down. Keep engaging those threats and we'll be out of here.",
+                    "words": "One down.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -513,7 +783,7 @@
             "overrideDialogueBucketId": "DialogBucketDef_Universal_Escape",
             "dialogueContent": [
                 {
-                    "words": "The convoy is finished, now get what 'mechs you have to the extraction point and we'll pull you out. Move quickly.",
+                    "words": "They're all dead... now get what 'mechs you have to the extraction point and we'll pull you out. Move quickly.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -538,7 +808,7 @@
             "overrideDialogueBucketId": "DialogBucketDef_Universal_HostilesInbound",
             "dialogueContent": [
                 {
-                    "words": "We've got company!",
+                    "words": "Enemy Reinforcements, get ready for contact.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -772,7 +1042,7 @@
                 "lanceDefId": "Tagged",
                 "lanceTagSet": {
                     "items": [
-                        "lance_type_mechconvoy"
+                        "lance_type_convoy"
                     ],
                     "tagSetSourceFile": "tags/LanceTags"
                 },
@@ -795,7 +1065,7 @@
                         "customUnitName": "",
                         "customHeraldryDefId": "",
                         "unitType": "Mech",
-                        "unitDefId": "mechDef_InheritLance",
+                        "unitDefId": "Vehicledef_MASHTruck-UA",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": "tags/UnitTags"
@@ -828,7 +1098,7 @@
                         "customUnitName": "",
                         "customHeraldryDefId": "",
                         "unitType": "Mech",
-                        "unitDefId": "mechDef_InheritLance",
+                        "unitDefId": "Vehicledef_MASHTruck-UA",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": "tags/UnitTags"
@@ -861,7 +1131,7 @@
                         "customUnitName": "",
                         "customHeraldryDefId": "",
                         "unitType": "Mech",
-                        "unitDefId": "mechDef_InheritLance",
+                        "unitDefId": "Vehicledef_MASHTruck-UA",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": "tags/UnitTags"
@@ -894,7 +1164,7 @@
                         "customUnitName": "",
                         "customHeraldryDefId": "",
                         "unitType": "Mech",
-                        "unitDefId": "mechDef_InheritLance",
+                        "unitDefId": "Vehicledef_MASHTruck-UA",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": "tags/UnitTags"
@@ -927,11 +1197,10 @@
                     "EncounterObjectGuid": "10e8686f-8d19-4058-9541-119c4dff041c"
                 },
                 "name": "Lance_Enemy_Bodyguard",
-                "lanceDefId": "Tagged",
+                "lanceDefId": "Manual",
                 "lanceTagSet": {
                     "items": [
-                        "lance_type_battle",
-                        "lance_type_vehicle"
+                        "lance_type_battle"
                     ],
                     "tagSetSourceFile": "tags/LanceTags"
                 },
@@ -943,7 +1212,7 @@
                     "items": [],
                     "tagSetSourceFile": "tags/SpawnEffectTags"
                 },
-                "lanceDifficultyAdjustment": 2,
+                "lanceDifficultyAdjustment": -2,
                 "selectedLanceDefId": null,
                 "selectedLanceDifficulty": 0,
                 "unitSpawnPointOverrideList": [
@@ -954,7 +1223,7 @@
                         "customUnitName": "",
                         "customHeraldryDefId": "",
                         "unitType": "Mech",
-                        "unitDefId": "mechDef_InheritLance",
+                        "unitDefId": "mechDef_None",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": "tags/UnitTags"
@@ -987,7 +1256,7 @@
                         "customUnitName": "",
                         "customHeraldryDefId": "",
                         "unitType": "Mech",
-                        "unitDefId": "mechDef_InheritLance",
+                        "unitDefId": "mechDef_None",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": "tags/UnitTags"
@@ -1020,7 +1289,7 @@
                         "customUnitName": "",
                         "customHeraldryDefId": "",
                         "unitType": "Mech",
-                        "unitDefId": "mechDef_InheritLance",
+                        "unitDefId": "mechDef_None",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": "tags/UnitTags"
@@ -1053,7 +1322,7 @@
                         "customUnitName": "",
                         "customHeraldryDefId": "",
                         "unitType": "Mech",
-                        "unitDefId": "mechDef_InheritLance",
+                        "unitDefId": "mechDef_None",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": "tags/UnitTags"
@@ -1089,6 +1358,7 @@
                 "lanceDefId": "Tagged",
                 "lanceTagSet": {
                     "items": [
+                        "lance_type_fire",
                         "lance_type_notallvehicles"
                     ],
                     "tagSetSourceFile": "tags/LanceTags"
@@ -1098,12 +1368,10 @@
                     "tagSetSourceFile": "tags/LanceTags"
                 },
                 "spawnEffectTags": {
-                    "items": [
-                        "spawn_poorly_maintained_25"
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "tags/SpawnEffectTags"
                 },
-                "lanceDifficultyAdjustment": -2,
+                "lanceDifficultyAdjustment": 0,
                 "selectedLanceDefId": null,
                 "selectedLanceDifficulty": 0,
                 "unitSpawnPointOverrideList": [

@@ -1,11 +1,6 @@
 VIP/RogueTech Tanks Ported for BloodyDoves' Battletech Advanced mod.
 Used and adapted with permission and help by Cargo Vroom.
 
-0.2.7
-
-Removed some redundant tag requirements from apc convoy lances,
-Removed some calls for Faction units in custom contracts that might be problematic since BTA doesn't have mechs faction tagged
-
 0.2.6
 
 Added OpForConvoy lances,
