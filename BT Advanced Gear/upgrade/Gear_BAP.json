@@ -32,7 +32,7 @@
         "Icon": "uixSvgIcon_equipment_Comms"
     },
     "BonusValueA": "+20% Sensors/Sight",
-    "BonusValueB": "",
+    "BonusValueB": "Active Probe Ping",
     "ComponentType": "Upgrade",
     "ComponentSubType": "NotSet",
     "PrefabIdentifier": "",
@@ -65,36 +65,30 @@
             "statisticData": {
                 "statName": "SensorDistanceAbsolute",
                 "operation": "Float_Multiply",
-                "modValue": "1.1",
+                "modValue": "1.2",
                 "modType": "System.Single"
             }
         },
         {
-            "durationData": {
-                "duration": -1,
-                "stackLimit": -1
+            "targetingData" : {
+                "effectTriggerType" : "OnActivation",
+                "effectTargetType" : "EnemiesWithinRange",
+				"alsoTargetsCreator" : true,
+                "forceVisRebuild" : true
             },
-            "targetingData": {
-                "effectTriggerType": "Passive",
-                "effectTargetType": "Creator",
-                "showInTargetPreview": false,
-                "showInStatusPanel": false
-            },
-            "effectType": "StatisticEffect",
-            "Description": {
-                "Id": "BAP-Spotting_Gain-T1",
-                "Name": "SPOTTING DISTANCE INCREASED",
-                "Details": "Increases spotting distance by 50m.",
-                "Icon": "uixSvgIcon_equipment_Cockpit"
-            },
-            "nature": "Buff",
-            "statisticData": {
-                "statName": "SpotterDistanceAbsolute",
-                "operation": "Float_Multiply",
-                "modValue": "1.15",
-                "modType": "System.Single"
-            }
-        }
+			"effectType" : "ActiveAbility",
+			"Description" :
+			{
+				"Id" : "ActiveProbe_Ping",
+				"Name" : "ACTIVE PROBE PING",
+				"Details" : "Activated ability (uses Firing action). Performs a Sensor Lock against all enemies within its radius, as indicated by the spinning gold ring. Will go into cooldown state after use.",
+				"Icon" : "uixSvgIcon_action_sensorlock"
+			},
+			"activeAbilityEffectData" : 
+			{
+				"abilityName" : "AbilityDef_ActiveProbe_Ping"
+			}
+		}
     ],
     "ComponentTags": {
         "items": [
