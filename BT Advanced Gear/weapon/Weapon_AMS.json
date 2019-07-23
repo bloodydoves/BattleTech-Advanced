@@ -8,7 +8,7 @@
         "BonusDescriptions": {
             "Bonuses": [
                 "AMS",
-                "AMSShots: 50",
+                "AMSShots: 25",
                 "OLAMSHeat: 2",
                 "OLAMSJam: 30%"
             ]
@@ -29,7 +29,7 @@
     ],
     "AmmoCategory": "AntiMissile",
     "StartingAmmoCapacity": 0,
-    "HeatGenerated": 0,
+    "HeatGenerated": 3,
     "Damage": 0,
     "OverheatedDamageMultiplier": 0,
     "EvasiveDamageMultiplier": 0,
@@ -77,16 +77,17 @@
             "Id": "On",
             "UIName": "On",
             "isBaseMode": true,
-            "ShotsWhenFired": 50,
-            "AMSHitChance": 1
+            "AMSShootsEveryAttack": false,
+            "ShotsWhenFired": 25,
+            "AMSHitChance": 0.02
         },
         {
             "Id": "Overload",
             "UIName": "Overload",
             "isBaseMode": false,
             "AMSShootsEveryAttack": true,
-            "ShotsWhenFired": 50,
-            "AMSHitChance": 1,
+            "ShotsWhenFired": 25,
+            "AMSHitChance": 0.02,
             "FlatJammingChance": 0.30,
             "HeatGenerated": 2
         },
