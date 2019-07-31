@@ -1,6 +1,11 @@
 VIP/RogueTech Tanks Ported for BloodyDoves' Battletech Advanced mod.
 Used and adapted with permission and help by Cargo Vroom.
 
+0.2.8 - 7/30/2019
+
+Set Pegasus to use Colo's model,
+minor fixes
+
 0.2.7
 
 Removed some redundant tag requirements from apc convoy lances,
