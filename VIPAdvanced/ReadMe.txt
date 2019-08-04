@@ -1,6 +1,12 @@
 VIP/RogueTech Tanks Ported for BloodyDoves' Battletech Advanced mod.
 Used and adapted with permission and help by Cargo Vroom.
 
+0.2.9 - 8/4/2019
+
+Temporary (?) addition of some lances from old VIP that solve some problems i forgot existed.
+	They're put in folder OldVIPlances for easy sorting later.
+	They should improve scaling on low skull vehicle lances.
+
 0.2.8 - 7/30/2019
 
 Set Pegasus to use Colo's model,
