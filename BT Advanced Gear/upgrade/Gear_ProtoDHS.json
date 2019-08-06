@@ -1,0 +1,89 @@
+{
+    "Custom": {
+        "Category": [{
+            "CategoryID": "PROTOTYPE"
+        }],
+        "Flags": {
+            "flags": [
+                "not_broken"
+            ]
+        },
+        "BonusDescriptions": {
+            "Bonuses": [
+                "HeatPerTurn: -6",
+            ]
+        },
+        "InventorySorter": {
+            "SortKey": "00024"
+        }
+    },
+    "Description": {
+        "Cost": 125000,
+        "Rarity": 3,
+        "Purchasable": false,
+        "Manufacturer": "NAIS",
+        "Model": "ProtoDHS",
+        "UIName": "Prototype DHS",
+        "Id": "Gear_ProtoDHS",
+        "Name": "Prototype DHS",
+        "Details": "An early attempt at reproducing the LosTech double heat sinks, these prototypes manufactured by NAIS are functionally identical to modern equivalents, except they cannot be mounted in engines and can be mixed with regular single heat sinks.",
+        "Icon": "uixSvgIcon_equipment_Heatsink"
+    },
+    "BonusValueA": "- 6 Heat / Turn",
+    "BonusValueB": null,
+    "ComponentType": "Upgrade",
+    "ComponentSubType": "NotSet",
+    "PrefabIdentifier": "Upgrade",
+    "BattleValue": 0,
+    "InventorySize": 3,
+    "Tonnage": 1,
+    "AllowedLocations": "All",
+    "DisallowedLocations": "All",
+    "CriticalComponent": false,
+    "statusEffects": [
+        {
+            "durationData": {
+                "duration": -1,
+                "ticksOnActivations": false,
+                "useActivationsOfTarget": false,
+                "ticksOnEndOfRound": false,
+                "ticksOnMovements": false,
+                "stackLimit": 1,
+                "clearedWhenAttacked": false
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "triggerLimit": 0,
+                "extendDurationOnTrigger": 0,
+                "specialRules": "NotSet",
+                "effectTargetType": "Creator",
+                "range": 0,
+                "forcePathRebuild": false,
+                "forceVisRebuild": false,
+                "showInTargetPreview": false,
+                "showInStatusPanel": true
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "ProtoHeatSink",
+                "Name": "PROTOTYPE DHS",
+                "Details": "The prototype DHS sink twice as much heat as single heat sinks.",
+                "Icon": "uixSvgIcon_designMask_mineral"
+            },
+            "statisticData": {
+                "statName": "HeatSinkCapacity",
+                "operation": "Int_Add",
+                "modValue": "6",
+                "modType": "System.Int32"
+            },
+            "nature": "Buff"
+        }
+    ],
+    "ComponentTags": {
+        "items": [
+            "component_type_stock",
+            "BLACKLISTED"			
+        ],
+        "tagSetSourceFile": ""
+    }
+}
