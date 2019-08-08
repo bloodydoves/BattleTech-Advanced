@@ -1,0 +1,24 @@
+{
+    "Name": "Give_me_Death",
+    "Enabled": true,
+	
+	"Version": "1.6.2.1",
+	"PackagedOn": "2019-07-31T16:45:00Z",
+
+    "Author": "HBS - with minor adjustments for Grayson Carlyle & lance characters and added unseen 'Mechs by Justin Kase.  Thank you to Solahma Joe/Bloody Doves/Colobos for their Marauder and Rifleman mods.",
+
+    "DependsOn": [  ],
+
+    "OptionallyDependsOn": [ "cFixes", "CommunityBundles" ],
+    
+    "ConflictsWith": [],
+
+    "Manifest": [
+	{ "Type": "ContractOverride", "Path": "contracts" },
+    { "Type": "PilotDef", "Path": "pilot" },
+    { "Type": "Sprite", "Path": "portraits" },
+    { "Type": "MovementCapabilitiesDef", "Path": "movement", "ShouldMergeJSON": false, "AddToDB": true },
+	{ "Type": "MechDef", "Path": "mech", "AddToDB": true },
+    { "Type": "ChassisDef", "Path": "chassis", "ShouldMergeJSON": false, "AddToDB": true }
+    ]
+}
