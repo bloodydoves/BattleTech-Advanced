@@ -1,6 +1,6 @@
 {
-    "ID" : "yangBigScore_b1_3wayBattle",
-    "contractName" : "Yang Virtanen's Big Score II",
+    "ID" : "tournament_a1_3wayBattle",
+    "contractName" : "Tournament of Champions II",
     "contractDisplayStyle" : "BaseFlashpoint",
     "difficulty" : 2,
     "difficultyUIModifier" : 0,
@@ -11,15 +11,15 @@
     "missionSuccessStatementOverride" : null,
     "badFaithStatementOverride" : null,
     "goodFaithStatementOverride" : null,
-    "shortDescription" : "Okay, Boss! We've got the monster trucks, and we're slugging our way to the LZ. Did I mention that I still hate rumble seats? Boy, do I ever! You'd better get on the comms to guide us through this; we're trudging along at a steady pace, but we're about to have company\u2026",
-    "longDescription" : "Let's protect that merchandise, {COMMANDER.FirstName}. It's what we're doing this for, after all.",
+    "shortDescription" : "Welcome to the final round of my Tournament, Commander. Today, your two finest pilots will face off against the cream of the Frontier MechWarrior community. This will be a battle like no other, a clash between veritable <i>gods</i>. I wish your fighters luck, Commander\u2014and I promise you, they will need it.",
+    "longDescription" : "Horvat's going to stack the odds against us, just like Agent Jones said. If we're going to do this, our MechWarriors will have to be ready.",
     "salvagePotential" : 12,
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
     "contractType" : "ThreeWayBattle",
     "encounterPlayStyle" : "SinglePlayer",
-    "maxNumberOfPlayerUnits" : 4,
+    "maxNumberOfPlayerUnits" : 2,
     "lanceMinTonnage" : -1,
     "lanceMaxTonnage" : -1,
     "mechMinTonnages" : [
@@ -34,14 +34,14 @@
         -1,
         -1
     ],
-    "mapMood" : null,
+    "mapMood" : "UrbanSunsetFoggy",
     "startingFogOfWarVisibility" : "Surveyed",
     "contractObjectiveList" : [
         {
             "contractObjective" : {
                 "EncounterObjectGuid" : "8d7e4513-f6c4-4914-a08f-d7baa89672be"
             },
-            "title" : "Destroy Graves's Security Team",
+            "title" : "Defeat Professor Horvat and Win the Tournament of Champions",
             "description" : "",
             "isPrimary" : true,
             "forPlayer" : "Player1",
@@ -67,7 +67,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "d5ee674b-8993-4804-9fa2-b0a73be466e4"
             },
-            "title" : "Destroy Graves's Security Team",
+            "title" : "Defeat Tournament Finalists",
             "description" : "ATTN ANDREW",
             "isPrimary" : true,
             "OnSuccessResults" : [],
@@ -79,8 +79,8 @@
             "objective" : {
                 "EncounterObjectGuid" : "cb9c173c-89b3-4447-b3a0-26193cbeb601"
             },
-            "title" : "Destroy Opposing {TEAM_HOST.FactionDef.Demonym} Forces",
-            "description" : "",
+            "title" : "Defeat Professor Mencius Horvat",
+            "description" : "hostile to all",
             "isPrimary" : true,
             "OnSuccessResults" : [],
             "OnFailureResults" : [],
@@ -371,8 +371,8 @@
             "objective" : {
                 "EncounterObjectGuid" : "cc1f3b6c-4611-4936-8b68-ad8d4777fd13"
             },
-            "title" : "Eliminate Paladin Protection LLC reinforcements",
-            "description" : "ATTN ANDREW",
+            "title" : "Destroy Additional Enemy Reinforcements",
+            "description" : "",
             "isPrimary" : false,
             "OnSuccessResults" : [
                 {
@@ -667,7 +667,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "438f6ead-f05c-40d7-9e85-6f18b878782b"
             },
-            "title" : "Your Entire Lance must survive",
+            "title" : "All of {COMPANY.CompanyName} Lance must survive",
             "description" : "",
             "isPrimary" : true,
             "OnSuccessResults" : [],
@@ -1250,7 +1250,7 @@
             "encounterChunk" : {
                 "EncounterObjectGuid" : "8c5cfff4-066b-44be-9a28-c462461a757a"
             },
-            "enableChunkFromContract" : false,
+            "enableChunkFromContract" : true,
             "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
@@ -1295,7 +1295,7 @@
             "encounterChunk" : {
                 "EncounterObjectGuid" : "5e66f0a6-7853-4795-99ba-d5026a5456cd"
             },
-            "enableChunkFromContract" : true,
+            "enableChunkFromContract" : false,
             "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
@@ -1340,7 +1340,7 @@
             "encounterChunk" : {
                 "EncounterObjectGuid" : "885ba4c2-9faf-44eb-b59c-2a42cef684e5"
             },
-            "enableChunkFromContract" : true,
+            "enableChunkFromContract" : false,
             "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
@@ -1593,14 +1593,14 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Commander, we've got problems down here. Graves's security team is closing in on us, and we're gonna have to fight our way out.",
+                    "words" : "Challengers! You have already proven your might in the arena. Now, you will show Professor Horvat your fortitude.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
                         "b" : 1,
                         "a" : 1
                     },
-                    "selectedCastDefId" : "castDef_YangDefault",
+                    "selectedCastDefId" : "castDef_UW_urbieDerby_GiganteDefault",
                     "emote" : "Default",
                     "audioName" : "NONE",
                     "cameraFocusGuid" : "76b654a6-4f2c-4a6f-86e6-d4cf868335fe",
@@ -1609,33 +1609,17 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "I've looked them up. It's another paramilitary security team, \"Paladin Protection LLC.\"",
+                    "words" : "Indeed they will, Gigante. Indeed they will. Contestants, I call upon you to <i>destroy</i> your rivals! Smash their BattleMechs without hesitation or mercy, for only one of you may be crowned champion!",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
                         "b" : 1,
                         "a" : 1
                     },
-                    "selectedCastDefId" : "castDef_DariusDefault",
+                    "selectedCastDefId" : "castDef_UW_urbieDerby_HorvatDefault",
                     "emote" : "Default",
                     "audioName" : "NONE",
                     "cameraFocusGuid" : "3f899376-6d15-413c-a260-a5f0aecff9bd",
-                    "cameraDistance" : "Far",
-                    "cameraHeight" : "Default",
-                    "revealRadius" : -1
-                },
-                {
-                    "words" : "There's a name to inspire terror in the mercenary heart. Give 'em hell, Commander. When the AO is clear, I'll head on down to pick up our new 'Mechs.",
-                    "wordsColor" : {
-                        "r" : 1,
-                        "g" : 1,
-                        "b" : 1,
-                        "a" : 1
-                    },
-                    "selectedCastDefId" : "castDef_SumireDefault",
-                    "emote" : "Default",
-                    "audioName" : "NONE",
-                    "cameraFocusGuid" : "75580c14-0ed9-4576-91be-6ab0a8026d95",
                     "cameraDistance" : "Far",
                     "cameraHeight" : "Default",
                     "revealRadius" : -1
@@ -1650,14 +1634,14 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Now that's what I call a heist! Four <i>beautiful</i> 'Mechs, and all for the bargain price of two short combat drops and a couple of pissed-off rich guys. Honestly, Boss, you should let me plan our deployments more often.",
+                    "words" : "Gods, what a fighter! I yield to you, Commander\u2014never since Calamar Gigante have I seen such awe-inspiring strength!",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
                         "b" : 1,
                         "a" : 1
                     },
-                    "selectedCastDefId" : "castDef_YangDefault",
+                    "selectedCastDefId" : "castDef_UW_urbieDerby_HorvatDefault",
                     "emote" : "Default",
                     "audioName" : "NONE",
                     "cameraFocusGuid" : "",
@@ -1666,14 +1650,14 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "Might wanna hold off on that gloating, Yang\u2014we've got a problem. You remember that Achilles-class DropShip we saw in Wallo's hangar? The one that was up on blocks, and nowhere <i>near</i> ready for launch?",
+                    "words" : "I weep with joy, for I am no longer alone.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
                         "b" : 1,
                         "a" : 1
                     },
-                    "selectedCastDefId" : "castDef_SumireDefault",
+                    "selectedCastDefId" : "castDef_UW_urbieDerby_GiganteDefault",
                     "emote" : "Default",
                     "audioName" : "NONE",
                     "cameraFocusGuid" : "",
@@ -1682,30 +1666,14 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "Yeah?",
+                    "words" : "You've earned your million C-Bills, Commander. More than that, you've earned my <i>respect</i>. Meet me in orbit, that I may grant you your reward.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
                         "b" : 1,
                         "a" : 1
                     },
-                    "selectedCastDefId" : "castDef_YangDefault",
-                    "emote" : "Default",
-                    "audioName" : "NONE",
-                    "cameraFocusGuid" : "",
-                    "cameraDistance" : "Far",
-                    "cameraHeight" : "Default",
-                    "revealRadius" : -1
-                },
-                {
-                    "words" : "It's right on top of us. You'd better get in here, Commander. Wallo wants to talk.",
-                    "wordsColor" : {
-                        "r" : 1,
-                        "g" : 1,
-                        "b" : 1,
-                        "a" : 1
-                    },
-                    "selectedCastDefId" : "castDef_SumireDefault",
+                    "selectedCastDefId" : "castDef_UW_urbieDerby_HorvatDefault",
                     "emote" : "Default",
                     "audioName" : "NONE",
                     "cameraFocusGuid" : "",
@@ -1723,14 +1691,14 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Gods, this is awful. We've lost our new 'Mechs, I'm beat to hell, and Graves gets to keep the salvage. You ever had to eject while riding in a rumble seat, Boss? I don't recommend it.",
+                    "words" : "A terrible shame, Commander. Your MechWarriors have been eliminated, their BattleMechs torn to scrap. I'm afraid that your time in the Tournament has come to an end.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
                         "b" : 1,
                         "a" : 1
                     },
-                    "selectedCastDefId" : "castDef_YangDefault",
+                    "selectedCastDefId" : "castDef_UW_urbieDerby_HorvatDefault",
                     "emote" : "Default",
                     "audioName" : "NONE",
                     "cameraFocusGuid" : "",
@@ -1739,14 +1707,14 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "You fought the good fight, Yang. Hang tight for pickup, then I'm getting us the hell out of here.",
+                    "words" : "Can't say I didn't warn you, Commander. Such a shame. We could've taken Horvat down <i>together</i>. Instead, you're walking away with nothing but a couple of dead pilots.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
                         "b" : 1,
                         "a" : 1
                     },
-                    "selectedCastDefId" : "castDef_DariusDefault",
+                    "selectedCastDefId" : "castDef_UW_urbieDerby_JackhammerDefault",
                     "emote" : "Default",
                     "audioName" : "NONE",
                     "cameraFocusGuid" : "",
@@ -2003,7 +1971,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "That's the last of 'em, Commander. Graves's security team is down.",
+                    "words" : "PLACEHOLDER Primary targets destroyed Commander.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -2019,7 +1987,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "And I'm on my way to pick you up. Get moving! I'll meet you at the LZ.",
+                    "words" : "PLACEHOLDER I'm inbound to the LZ Commander.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -2044,14 +2012,14 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "PLACEHOLDER The Hostile to All {TEAM_HOST.FactionDef.Demonym} lance has arrived! This is the Primary Version.",
+                    "words" : "Competitors! You have shown yourselves worthy of the greatest honor this Tournament can bestow: the right to face off against the great man himself, PROFESSOR MENCIUS HORVAT!",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
                         "b" : 1,
                         "a" : 1
                     },
-                    "selectedCastDefId" : "castDef_DariusDefault",
+                    "selectedCastDefId" : "castDef_UW_urbieDerby_GiganteDefault",
                     "emote" : "Default",
                     "audioName" : "NONE",
                     "cameraFocusGuid" : "9bd2f5be-f04f-4f2e-a25d-4295f59a0369",
@@ -2060,14 +2028,30 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "PLACEHOLDER Our Employer has kindly added taking this group to the contract. If we want to get paid we need to take them out.",
+                    "words" : "You've gotta be kiddin' me.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
                         "b" : 1,
                         "a" : 1
                     },
-                    "selectedCastDefId" : "castDef_DariusDefault",
+                    "selectedCastDefId" : "castDef_YangDefault",
+                    "emote" : "Default",
+                    "audioName" : "NONE",
+                    "cameraFocusGuid" : "9bd2f5be-f04f-4f2e-a25d-4295f59a0369",
+                    "cameraDistance" : "Far",
+                    "cameraHeight" : "Default",
+                    "revealRadius" : -1
+                },
+                {
+                    "words" : "This is no joke, Mr. Virtanen! I have taken the field myself to put your warriors to their final test. If they defeat me, the prize purse is yours. Should they fail, I will grant them a most glorious death. En garde, Tournament finalists! Your fur-wreathed doom is at hand!",
+                    "wordsColor" : {
+                        "r" : 1,
+                        "g" : 1,
+                        "b" : 1,
+                        "a" : 1
+                    },
+                    "selectedCastDefId" : "castDef_UW_urbieDerby_HorvatDefault",
                     "emote" : "Default",
                     "audioName" : "NONE",
                     "cameraFocusGuid" : "9bd2f5be-f04f-4f2e-a25d-4295f59a0369",
@@ -2481,7 +2465,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "That Paladin Protection DropShip Meyer spotted is touching down now, Commander. We've got a fresh wave of hostiles entering the AO.",
+                    "words" : "PLACEHOLDER Another {TEAM_EMP.FactionDef.Demonym} lance has dropped in Commander! This is the Secondary Objective Version.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -2497,14 +2481,14 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "What is it with these assholes? Give 'em hell, Commander. Don't let 'em bang up our new 'Mechs!",
+                    "words" : "PLACEHOLDER Our Employer has kindly added taking this group to contract as a bonus. If we want to make some extra C-bills we can take them out if we want.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
                         "b" : 1,
                         "a" : 1
                     },
-                    "selectedCastDefId" : "castDef_YangDefault",
+                    "selectedCastDefId" : "castDef_DariusDefault",
                     "emote" : "Default",
                     "audioName" : "NONE",
                     "cameraFocusGuid" : "a7944fc0-efe6-44e4-a5fc-b32fb14dbb3b",
@@ -2628,7 +2612,39 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "PLACHEHOLDER (Hostile to All Primary). In bound hostile Dropship detected, drop zone marked.",
+                    "words" : "We've got an unidentified Leopard hanging out in high orbit, Commander. Could be another surprise, like Agent Jones.",
+                    "wordsColor" : {
+                        "r" : 1,
+                        "g" : 1,
+                        "b" : 1,
+                        "a" : 1
+                    },
+                    "selectedCastDefId" : "castDef_SumireDefault",
+                    "emote" : "Default",
+                    "audioName" : "NONE",
+                    "cameraFocusGuid" : "a4bf84a0-dc52-4a90-8d92-ccb5a380d157",
+                    "cameraDistance" : "Far",
+                    "cameraHeight" : "Default",
+                    "revealRadius" : -1
+                },
+                {
+                    "words" : "Could be, but Gigante isn't making any grand announcements this time. That's kind of an alarming change of pace, don't you think?",
+                    "wordsColor" : {
+                        "r" : 1,
+                        "g" : 1,
+                        "b" : 1,
+                        "a" : 1
+                    },
+                    "selectedCastDefId" : "castDef_YangDefault",
+                    "emote" : "Default",
+                    "audioName" : "NONE",
+                    "cameraFocusGuid" : "a4bf84a0-dc52-4a90-8d92-ccb5a380d157",
+                    "cameraDistance" : "Far",
+                    "cameraHeight" : "Default",
+                    "revealRadius" : -1
+                },
+                {
+                    "words" : "Maybe. Who knows? Just keep focused on the fight, Commander. We'll deal with any surprises if and when they appear.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -2753,14 +2769,14 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "We've got an inbound Paladin Protection DropShip, Commander. Looks like you're about to have more company down there.",
+                    "words" : "PLACHEHOLDER (Additional Target Forces 2 Secondary). In bound hostile Dropship detected, drop zone marked.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
                         "b" : 1,
                         "a" : 1
                     },
-                    "selectedCastDefId" : "castDef_SumireDefault",
+                    "selectedCastDefId" : "castDef_DariusDefault",
                     "emote" : "Default",
                     "audioName" : "NONE",
                     "cameraFocusGuid" : "1c0709e8-70fa-4001-8884-e174f6b73b8f",
@@ -3098,7 +3114,7 @@
     "usesExpiration" : false,
     "expirationTimeOverride" : -1,
     "negotiatedSalary" : 0,
-    "negotiatedSalvage" : 1,
+    "negotiatedSalvage" : 0,
     "excludedFromProceduralGeneration" : true,
     "player1Team" : {
         "encounterLayerData" : {
@@ -3136,9 +3152,9 @@
                             "EncounterObjectGuid" : "ec9d2280-ca9a-4d90-8a20-963d8a4c0a39"
                         },
                         "customUnitName" : "",
-                        "customHeraldryDefId" : "heraldrydef_yangBigScore_stolen",
+                        "customHeraldryDefId" : "heraldrydef_pirate05",
                         "unitType" : "UNDEFINED",
-                        "unitDefId" : "mechdef_thanatos_TNS-4S",
+                        "unitDefId" : "mechdef_urbanmech_UM-R63",
                         "unitTagSet" : {
                             "items" : [],
                             "tagSetSourceFile" : "tags/UnitTags"
@@ -3148,10 +3164,12 @@
                             "tagSetSourceFile" : "tags/UnitTags"
                         },
                         "spawnEffectTags" : {
-                            "items" : [],
+                            "items" : [
+                                "spawn_poorly_maintained_50"
+                            ],
                             "tagSetSourceFile" : "tags/SpawnEffectTags"
                         },
-                        "pilotDefId" : "pilotDef_InheritLance",
+                        "pilotDefId" : "",
                         "pilotTagSet" : {
                             "items" : [],
                             "tagSetSourceFile" : "tags/PilotTags"
@@ -3169,9 +3187,9 @@
                             "EncounterObjectGuid" : "ebc06b6a-c5a8-4165-95ce-480bcf335570"
                         },
                         "customUnitName" : "",
-                        "customHeraldryDefId" : "heraldrydef_yangBigScore_stolen",
+                        "customHeraldryDefId" : "heraldrydef_pirate01",
                         "unitType" : "UNDEFINED",
-                        "unitDefId" : "mechdef_uziel_UZL-2S",
+                        "unitDefId" : "mechdef_urbanmech_UM-R68",
                         "unitTagSet" : {
                             "items" : [],
                             "tagSetSourceFile" : "tags/UnitTags"
@@ -3181,76 +3199,12 @@
                             "tagSetSourceFile" : "tags/UnitTags"
                         },
                         "spawnEffectTags" : {
-                            "items" : [],
+                            "items" : [
+                                "spawn_poorly_maintained_50"
+                            ],
                             "tagSetSourceFile" : "tags/SpawnEffectTags"
                         },
-                        "pilotDefId" : "pilotDef_InheritLance",
-                        "pilotTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/PilotTags"
-                        },
-                        "pilotExcludedTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/PilotTags"
-                        },
-                        "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
-                    },
-                    {
-                        "unitSpawnPoint" : {
-                            "EncounterObjectGuid" : "d50f1e9d-0a0b-4dc8-9a06-a33233aaa8a1"
-                        },
-                        "customUnitName" : "",
-                        "customHeraldryDefId" : "heraldrydef_yangBigScore_stolen",
-                        "unitType" : "UNDEFINED",
-                        "unitDefId" : "mechdef_marauder_MAD-2R",
-                        "unitTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/UnitTags"
-                        },
-                        "unitExcludedTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/UnitTags"
-                        },
-                        "spawnEffectTags" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/SpawnEffectTags"
-                        },
-                        "pilotDefId" : "pilotDef_InheritLance",
-                        "pilotTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/PilotTags"
-                        },
-                        "pilotExcludedTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/PilotTags"
-                        },
-                        "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
-                    },
-                    {
-                        "unitSpawnPoint" : {
-                            "EncounterObjectGuid" : "461141c2-f956-49a5-b2c6-6f951b957a94"
-                        },
-                        "customUnitName" : "",
-                        "customHeraldryDefId" : "heraldrydef_yangBigScore_stolen",
-                        "unitType" : "UNDEFINED",
-                        "unitDefId" : "mechdef_ostroc_OSR-2CB",
-                        "unitTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/UnitTags"
-                        },
-                        "unitExcludedTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/UnitTags"
-                        },
-                        "spawnEffectTags" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/SpawnEffectTags"
-                        },
-                        "pilotDefId" : "pilotDef_InheritLance",
+                        "pilotDefId" : "",
                         "pilotTagSet" : {
                             "items" : [],
                             "tagSetSourceFile" : "tags/PilotTags"
@@ -3965,7 +3919,7 @@
                     "items" : [],
                     "tagSetSourceFile" : "tags/SpawnEffectTags"
                 },
-                "lanceDifficultyAdjustment" : -1,
+                "lanceDifficultyAdjustment" : 0,
                 "selectedLanceDefId" : null,
                 "selectedLanceDifficulty" : 0,
                 "unitSpawnPointOverrideList" : [
@@ -3976,7 +3930,7 @@
                         "customUnitName" : "",
                         "customHeraldryDefId" : "",
                         "unitType" : "Mech",
-                        "unitDefId" : "mechDef_InheritLance",
+                        "unitDefId" : "mechdef_urbanmech_UM-R60",
                         "unitTagSet" : {
                             "items" : [],
                             "tagSetSourceFile" : "tags/UnitTags"
@@ -3986,7 +3940,9 @@
                             "tagSetSourceFile" : "tags/UnitTags"
                         },
                         "spawnEffectTags" : {
-                            "items" : [],
+                            "items" : [
+                                "spawn_poorly_maintained_50"
+                            ],
                             "tagSetSourceFile" : "tags/SpawnEffectTags"
                         },
                         "pilotDefId" : "pilotDef_InheritLance",
@@ -4009,7 +3965,7 @@
                         "customUnitName" : "",
                         "customHeraldryDefId" : "",
                         "unitType" : "Mech",
-                        "unitDefId" : "mechDef_InheritLance",
+                        "unitDefId" : "mechdef_urbanmech_UM-R60",
                         "unitTagSet" : {
                             "items" : [],
                             "tagSetSourceFile" : "tags/UnitTags"
@@ -4019,7 +3975,9 @@
                             "tagSetSourceFile" : "tags/UnitTags"
                         },
                         "spawnEffectTags" : {
-                            "items" : [],
+                            "items" : [
+                                "spawn_poorly_maintained_50"
+                            ],
                             "tagSetSourceFile" : "tags/SpawnEffectTags"
                         },
                         "pilotDefId" : "pilotDef_InheritLance",
@@ -4042,7 +4000,7 @@
                         "customUnitName" : "",
                         "customHeraldryDefId" : "",
                         "unitType" : "Mech",
-                        "unitDefId" : "mechDef_InheritLance",
+                        "unitDefId" : "mechDef_None",
                         "unitTagSet" : {
                             "items" : [],
                             "tagSetSourceFile" : "tags/UnitTags"
@@ -4075,7 +4033,7 @@
                         "customUnitName" : "",
                         "customHeraldryDefId" : "",
                         "unitType" : "Mech",
-                        "unitDefId" : "mechDef_InheritLance",
+                        "unitDefId" : "mechDef_None",
                         "unitTagSet" : {
                             "items" : [],
                             "tagSetSourceFile" : "tags/UnitTags"
@@ -4609,7 +4567,7 @@
                     "items" : [],
                     "tagSetSourceFile" : "tags/SpawnEffectTags"
                 },
-                "lanceDifficultyAdjustment" : -1,
+                "lanceDifficultyAdjustment" : 0,
                 "selectedLanceDefId" : null,
                 "selectedLanceDifficulty" : 0,
                 "unitSpawnPointOverrideList" : [
@@ -5455,10 +5413,10 @@
                         "unitSpawnPoint" : {
                             "EncounterObjectGuid" : "d7b16d2d-d966-4bbf-8593-6cd33b3a8a94"
                         },
-                        "customUnitName" : "",
+                        "customUnitName" : "Mencius Horvat",
                         "customHeraldryDefId" : "",
                         "unitType" : "Mech",
-                        "unitDefId" : "mechDef_InheritLance",
+                        "unitDefId" : "mechdef_blackjack_BJ-1",
                         "unitTagSet" : {
                             "items" : [],
                             "tagSetSourceFile" : "tags/UnitTags"
@@ -5491,7 +5449,7 @@
                         "customUnitName" : "",
                         "customHeraldryDefId" : "",
                         "unitType" : "Mech",
-                        "unitDefId" : "mechDef_InheritLance",
+                        "unitDefId" : "mechDef_None",
                         "unitTagSet" : {
                             "items" : [],
                             "tagSetSourceFile" : "tags/UnitTags"
@@ -5524,7 +5482,7 @@
                         "customUnitName" : "",
                         "customHeraldryDefId" : "",
                         "unitType" : "Mech",
-                        "unitDefId" : "mechDef_InheritLance",
+                        "unitDefId" : "mechDef_None",
                         "unitTagSet" : {
                             "items" : [],
                             "tagSetSourceFile" : "tags/UnitTags"
@@ -5557,7 +5515,7 @@
                         "customUnitName" : "",
                         "customHeraldryDefId" : "",
                         "unitType" : "Mech",
-                        "unitDefId" : "mechDef_InheritLance",
+                        "unitDefId" : "mechDef_None",
                         "unitTagSet" : {
                             "items" : [],
                             "tagSetSourceFile" : "tags/UnitTags"
