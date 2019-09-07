@@ -1,26 +1,29 @@
 {
     "Description" : {
-        "Id" : "fp_MackAttack",
-        "Name" : "Mack Attack",
-        "Details" : "Wallo has a new shiny \"Toy\" he'd like you to show off to his closest \"friends.\"",
-        "Icon" : "uixTxrSpot_MackAttack.png"
+        "Id" : "fp_SmoothCriminal",
+        "Name" : "Smooth Criminal",
+        "Details" : "",
+        "Icon" : "uixTxrSpot_SmoothCriminal.png"
     },
     "Weight" : 200,
-    "InternalName" : "MackAttack",
+    "InternalName" : "SmoothCriminal",
     "PublishState" : "PUBLISHED",
-    "Difficulty" : 5,
+    "Difficulty" : 6,
     "Requirements" : [
         {
             "Scope" : "Company",
             "RequirementTags" : {
                 "items" : [
-                    "flashpoint_yangBigScore_complete"
+                    "flashpoint_yangBigScore_complete",
+					"fp_MackAttack_Complete"
                 ],
                 "tagSetSourceFile" : "Tags/CompanyTags"
             },
             "ExclusionTags" : {
-                "items" : [],
-                "tagSetSourceFile" : ""
+                "items" : [
+					"fp_MackAttack_Betrayed"
+				],
+                "tagSetSourceFile" : "Tags/CompanyTags"
             },
             "RequirementComparisons" : []
         }
@@ -30,19 +33,13 @@
         "RequirementTags" : {
             "items" : [
 			
-                "planet_industry_rich",
-				"planet_other_blackmarket",
-				"planet_other_megacity"
+                "planet_name_claybrooke"
 				
             ],
-            "tagSetSourceFile" : "Tags/PlanetTags"
+            "tagSetSourceFile" : "Tags/PlanetNameTags"
         },
         "ExclusionTags" : {
-            "items" : [
-			
-				"planet_faction_magistracy"
-				
-			],
+            "items" : [],
             "tagSetSourceFile" : "Tags/PlanetTags"
         },
         "RequirementComparisons" : []
@@ -50,18 +47,18 @@
     "PotentialEmployers" : [
         "SecuritySolutionsInc"
     ],
-    "TargetFaction" : "Unknown",
-    "AllowRefitTime" : true,
-    "FlashpointLength" : "SHORT",
+    "TargetFaction" : "Steiner",
+    "AllowRefitTime" : false,
+    "FlashpointLength" : "LONG",
     "Repeatable" : false,
-    "MilestoneSetID" : "ms_fp_MackAttack",
+    "MilestoneSetID" : "ms_fp_SmoothCriminal",
     "UseAvailableTimeoutOverride" : false,
     "AvailableTimeout" : 180,
     "UseInProgressTimeoutOverride" : false,
     "InProgressTimeout" : 180,
-    "RewardCollectionID" : "itemCollection_loot_Item_rare",
+    "RewardCollectionID" : "ItemCollection_loot_FP_smoothcriminal_rare",
     "UnitDropTonnageHint" : "None",
     "LanceDropTonnageHint" : "None",
-    "FlashpointShortDescription" : "I have a most interesting and lucrative proposal for you commander.",
+    "FlashpointShortDescription" : "Commander, I've found something I just must have. Please meet me to discuss this in depth.",
     "FlashpointDescriberCastDefId" : "castDef_UW_bigScore_WalloDefault"
 }
