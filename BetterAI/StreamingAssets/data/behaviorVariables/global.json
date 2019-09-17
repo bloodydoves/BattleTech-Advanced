@@ -235,6 +235,15 @@
       }
     },
     {
+            /* Optimal distance to nearest hostile. (See
+               Float_PreferOptimalDistanceToHostileFactorWeight.) */
+      "k": "Float_OptimalHostileDistance",
+      "v": {
+        "type": "Float",
+        "floatVal": 200
+      }
+    },
+    {
 	    /* Influence Factor Weight to prefer locations close to
 	       optimal distance to other allies. */
       "k": "Float_PreferOptimalDistanceToAllyFactorWeight",
@@ -244,12 +253,30 @@
       }
     },
     {
+          /* Influence Factor Weight to prefer locations close to
+             optimal distance to other hostiles. */
+      "k" : "Float_PreferOptimalDistanceToHostileFactorWeight",
+      "v" : {
+         "type" : "Float",
+         "floatVal" : 0
+      }
+    },
+    {
 	    /* Influence Factor Weight to prefer locations close to
 	       optimal distance to other allies WHEN SPRINTING. */
       "k": "Float_SprintPreferOptimalDistanceToAllyFactorWeight",
       "v": {
         "type": "Float",
         "floatVal": 0.0
+      }
+    },
+    {
+            /* Influence Factor Weight to prefer locations close to
+               optimal distance to other hostiles WHEN SPRINTING. */
+      "k" : "Float_SprintPreferOptimalDistanceToHostileFactorWeight",
+      "v" : {
+         "type" : "Float",
+         "floatVal" : 0
       }
     },
     {
@@ -874,7 +901,7 @@
       "k": "Float_MaxThinkSeconds",
       "v": {
         "type": "Float",
-        "floatVal": 100.0
+        "floatVal": 200.0
       }
     },
     {
@@ -1593,7 +1620,7 @@
       "k" : "Float_PreferHostileECMFields",
       "v" : {
         "type" : "Float",
-        "floatVal" : 5.0
+        "floatVal" : 100
       }
     },
     {
@@ -1602,7 +1629,7 @@
       "k" : "Float_SprintPreferHostileECMFields",
       "v" : {
         "type" : "Float",
-        "floatVal" : 5.0
+        "floatVal" : 100
       }
     },
     {
@@ -1711,18 +1738,36 @@
     },
     {
 	    /*Enables the long-range pathfinding to be aware of actors blocking movement in nodes globally */
-      "k" : "Bool_EnableLongRangePathfindingBeActorAware",
-      "v" : {
-        "type" : "Bool",
-        "boolVal" : true
+      "k": "Bool_EnableLongRangePathfindingBeActorAware",
+      "v": {
+        "type": "Bool",
+        "boolVal": true
       }
     },
     {
 	    /* How close to the target region do we switch to short-range pathfinding */
-      "k" : "Float_LongRangeToShortRangeDistanceThreshold",
-      "v" : {
-        "type" : "Float",
-        "floatVal" : 10
+      "k": "Float_LongRangeToShortRangeDistanceThreshold",
+      "v": {
+        "type": "Float",
+        "floatVal": 10
+      }
+    },
+    {
+            /* Weight penalty multiplier for losing the ECM counter aura when positioning. 
+               If set to 1, it represents -Float_PreferHostileECMFields or -Float_SprintPreferHostileECMFields*/
+      "k": "Float_PreferHostileECMFieldsPenaltyMultiplier",
+      "v": {
+        "type": "Float",
+        "floatVal": 1
+      }
+    },
+    {
+            /* Whether when enemy is ghosted, to use sprint or walk distance as marker to calculate influence map positional factors.
+               Lerp is 0 - 1, Walking to Sprinting*/
+      "k": "Float_SignalInWeapRngWhenEnemyGhostedWithinMoveDistance",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.5
       }
     },
     {

@@ -46,12 +46,30 @@
       }
     },
     {
+            /* Optimal distance to nearest hostile. (See
+               Float_PreferOptimalDistanceToHostileFactorWeight.) */
+      "k": "Float_OptimalHostileDistance",
+      "v": {
+        "type": "Float",
+       "floatVal": 300
+      }
+    },
+    {
 	    /* Influence Factor Weight to prefer locations close to
 	       optimal distance to other allies. */
       "k": "Float_PreferOptimalDistanceToAllyFactorWeight",
       "v": {
         "type": "Float",
         "floatVal": 2.0
+      }
+    },
+    {
+            /* Influence Factor Weight to prefer locations close to
+               optimal distance to other hostiles. */
+      "k": "Float_PreferOptimalDistanceToHostileFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 1.75
       }
     },
     {
