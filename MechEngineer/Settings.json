@@ -23,7 +23,32 @@
         "Path" : "BTASaves"
     },
     "TagManager" : {
-        "Enabled" : true
+        "Enabled" : true,
+        "EnabledDescription" : "Manipulates MechDef and ComponentDef Tags",
+        "LostechStockWeaponVariantFix" : true,
+        "LostechStockWeaponVariantDescription" : "Fixes lostech variant weapon tagging by checking if id ends with -STOCK.",
+        "SkirmishWhitelistTags" : [
+            "component_type_stock"
+        ],
+        "SkirmishWhitelistTagsDescription" : "Components with these tags will appear in the skirmish mechlab, blacklisted tagged items never appear.",
+        "WhitelistComponentTags" : [
+            "component_type_stock",
+            "component_type_variant",
+            "component_type_lostech"
+        ],
+        "WhitelistComponentTagsDescription" : "Whitelists components with specified tags.",
+        "BlacklistComponentTags" : [
+            "BLACKLISTED"
+        ],
+        "BlacklistComponentTagsDescription" : "Blacklists components with specified tags, has precedence over whitelisting.",
+        "WhitelistMechTags" : [
+            "unit_release"
+        ],
+        "WhitelistMechTagsDescription" : "Similar to WhitelistComponentTags but with MechTags",
+        "BlacklistMechTags" : [
+
+        ],
+        "BlacklistMechTagsDescription" : "Similar to BlacklistComponentTags but with MechTags"
     },
 	"ArmorStructureRatio" : {
         "SkipMechDefs" : [],
