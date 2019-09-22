@@ -1,15 +1,15 @@
 {
-    "ID": "Story_2_ThreeYearsLater_Default",
-    "contractName": "Three Years Later",
+    "ID": "StoryTime_4_LiberationOfWeldry_Default",
+    "contractName": "Liberation of Weldry",
     "contractDisplayStyle": "BaseCampaignStory",
-    "difficulty": 2,
+    "difficulty": 3,
     "difficultyUIModifier": 0,
     "weight": 1,
     "scope": "STANDARD",
     "finalDifficulty": 0,
-    "shortDescription" : "The Independent Prospectors' League needs your help, Commander. Two months ago, a fleet of corporate DropShips from Majesty Metals & Manufacturing touched down on Ur Cruinne. They jumped our claim, pushed us off of our own mining platforms, and killed our people. We need your help to make things right.",
-    "longDescription" : "The IPL may not be a high-profile client, but pickings are slim in this part of the Frontier, and... well, let's face it. We're overdue on our loans, and we need the money.",
-    "salvagePotential": 0,
+    "shortDescription": "War is often inevitable, In fact without it how would many of us pay the bills. I personally love watching mechs blow up in grand fashion on the big stage. But wars between family members are often very bloody, like the bloody mary served at Harris bar. Good god I need another drink. ",
+    "longDescription": "I remember this fight, the first strike against the Aurigan Directorate. A literal Jail Break.",
+    "salvagePotential": 28,
     "requirementList": [],
     "OnContractSuccessResults": [
         {
@@ -38,60 +38,196 @@
             "ResultDuration": 0
         }
     ],
-    "OnContractFailureResults": [],
-    "contractType": "Story_2_ThreeYearsLater",
+    "OnContractFailureResults": [
+        {
+            "Scope": "Company",
+            "Requirements": null,
+            "AddedTags": {
+                "items": [],
+                "tagSetSourceFile": ""
+            },
+            "RemovedTags": {
+                "items": [],
+                "tagSetSourceFile": ""
+            },
+            "Stats": [
+                {
+                    "typeString": "System.Int32",
+                    "name": "NextStoryMilestone",
+                    "value": "211",
+                    "set": true,
+                    "valueConstant": ""
+                }
+            ],
+            "Actions": [
+                {
+                    "Type": "System_AddContract",
+                    "value": "trav_story_4_liberation",
+                    "valueConstant": "",
+                    "additionalValues": [
+                        "AuriganDirectorate",
+                        "AuriganRestoration",
+                        "starsystemdef_Weldry"
+                    ]
+                }
+            ],
+            "ForceEvents": [],
+            "TemporaryResult": false,
+            "ResultDuration": 0
+        },
+        {
+            "Scope": "Company",
+            "Requirements": null,
+            "AddedTags": {
+                "items": [],
+                "tagSetSourceFile": ""
+            },
+            "RemovedTags": {
+                "items": [],
+                "tagSetSourceFile": ""
+            },
+            "Stats": [
+                {
+                    "typeString": "System.Int32",
+                    "name": "NextStoryMilestone",
+                    "value": "211",
+                    "set": true,
+                    "valueConstant": ""
+                }
+            ],
+            "Actions": [
+                {
+                    "Type": "System_SimGameCharacterVisible",
+                    "value": "false",
+                    "valueConstant": "",
+                    "additionalValues": [
+                        "Kamea",
+                        "Alexander"
+                    ]
+                }
+            ],
+            "ForceEvents": [],
+            "TemporaryResult": false,
+            "ResultDuration": 0
+        }
+    ],
+    "contractType": "StoryTime_4_LiberationOfWeldry",
     "encounterPlayStyle": "SinglePlayer",
     "maxNumberOfPlayerUnits": 4,
-    "mapMood": "Mission2",
+    "mapMood": "Mission4",
     "startingFogOfWarVisibility": "Surveyed",
     "contractObjectiveList": [
         {
             "contractObjective": {
-                "EncounterObjectGuid": "6898d554-89ee-4950-97e2-977bcc2f80c8"
+                "EncounterObjectGuid": "dee3ebc7-d9df-4e5f-bfbb-0fb7dff587f8"
             },
-            "title": "Recapture Employer's Mining Platforms",
-            "description": "Recapture Employer\u2019s Mining Platforms Engage and Destroy Enemy Units Survive ",
+            "title": "Fight your way to the Icebox prison camp",
+            "description": "",
             "isPrimary": true,
             "forPlayer": "Player1",
             "objectiveGuids": [
-                "3797916d-dd95-4c69-ba72-c11e3a5648b3",
-                "8131c77b-5395-4453-a2e2-8a0114f7b276",
-                "3a4192be-2a53-4383-94ac-19c08883ea5f",
-                "bb71de8a-f383-4ae6-9926-86cf6b79772a",
-                "c02cca7e-6e2c-4a3d-beb0-f9af713a466f"
+                "caf2acf6-f7d4-43eb-8044-826b6180e2d6",
+                "47edcd05-57cb-4f73-a7fb-30560b29519f",
+                "64136f83-ae64-4c0a-ba7a-bc487dba5f7a"
             ]
         },
         {
             "contractObjective": {
-                "EncounterObjectGuid": "cba37132-22bb-4002-b2b1-e192d1094a3b"
+                "EncounterObjectGuid": "1202c8de-4dd7-4d15-ad2c-accf791b2486"
             },
-            "title": "Engage and Destroy Enemy Units",
-            "description": "Engage and Destroy Enemy Units Description",
+            "title": "Destroy all Directorate forces",
+            "description": "",
             "isPrimary": true,
             "forPlayer": "Player1",
-            "objectiveGuids": [
-                "8131c77b-5395-4453-a2e2-8a0114f7b276"
-            ]
+            "objectiveGuids": []
         },
         {
             "contractObjective": {
-                "EncounterObjectGuid": "4f85a623-dc8f-4d6f-aa90-20740f211215"
+                "EncounterObjectGuid": "080b38e4-7c1b-43d7-a2a0-0d8fcdeefbe6"
             },
-            "title": "Survive",
-            "description": "Survive Description",
+            "title": "Liberate the Icebox from Directorate control",
+            "description": "",
             "isPrimary": true,
             "forPlayer": "Player1",
-            "objectiveGuids": [
-                "8131c77b-5395-4453-a2e2-8a0114f7b276"
-            ]
+            "objectiveGuids": []
         }
     ],
     "objectiveList": [
         {
             "objective": {
-                "EncounterObjectGuid": "3797916d-dd95-4c69-ba72-c11e3a5648b3"
+                "EncounterObjectGuid": "3d0a8825-370b-4fee-ae2d-5adfcec557c6"
             },
-            "title": "Destroy the Generator to Eliminate the Turrets",
+            "title": "Hidden destroy turret generator objective",
+            "description": "",
+            "isPrimary": false,
+            "OnSuccessResults": [],
+            "OnFailureResults": []
+        },
+        {
+            "objective": {
+                "EncounterObjectGuid": "493344ed-c792-4b3f-9e42-40802b633f88"
+            },
+            "title": "Destroy enemy units",
+            "description": "",
+            "isPrimary": false,
+            "OnSuccessResults": [],
+            "OnFailureResults": []
+        },
+        {
+            "objective": {
+                "EncounterObjectGuid": "26362f14-4c8d-4d93-a51f-e9476d893914"
+            },
+            "title": "HIDDEN Approaching Prison",
+            "description": "",
+            "isPrimary": false,
+            "OnSuccessResults": [],
+            "OnFailureResults": []
+        },
+        {
+            "objective": {
+                "EncounterObjectGuid": "caf2acf6-f7d4-43eb-8044-826b6180e2d6"
+            },
+            "title": "Breach the Prison Gates",
+            "description": "",
+            "isPrimary": true,
+            "OnSuccessResults": [],
+            "OnFailureResults": []
+        },
+        {
+            "objective": {
+                "EncounterObjectGuid": "c02cca7e-6e2c-4a3d-beb0-f9af713a466f"
+            },
+            "title": "Destroy Base Defense Turrets",
+            "description": "",
+            "isPrimary": false,
+            "OnSuccessResults": [],
+            "OnFailureResults": []
+        },
+        {
+            "objective": {
+                "EncounterObjectGuid": "47edcd05-57cb-4f73-a7fb-30560b29519f"
+            },
+            "title": "Eliminate the Prison Garrison",
+            "description": "",
+            "isPrimary": true,
+            "OnSuccessResults": [],
+            "OnFailureResults": []
+        },
+        {
+            "objective": {
+                "EncounterObjectGuid": "4fa1195b-16db-412a-a0bd-bd9a6001e470"
+            },
+            "title": "Time to Kamea Arrival",
+            "description": "",
+            "isPrimary": false,
+            "OnSuccessResults": [],
+            "OnFailureResults": []
+        },
+        {
+            "objective": {
+                "EncounterObjectGuid": "7617cb28-c434-4a14-8698-a93ccfc3d750"
+            },
+            "title": "Destroy the Enemy Reinforcements",
             "description": "",
             "isPrimary": false,
             "OnSuccessResults": [],
@@ -101,7 +237,7 @@
             "objective": {
                 "EncounterObjectGuid": "3a4192be-2a53-4383-94ac-19c08883ea5f"
             },
-            "title": "Return to your Employers' Platform",
+            "title": "Hold the Prison until Lady Kamea Arano makes landfall",
             "description": "",
             "isPrimary": false,
             "OnSuccessResults": [],
@@ -109,9 +245,19 @@
         },
         {
             "objective": {
-                "EncounterObjectGuid": "c02cca7e-6e2c-4a3d-beb0-f9af713a466f"
+                "EncounterObjectGuid": "64136f83-ae64-4c0a-ba7a-bc487dba5f7a"
             },
-            "title": "Destroy Hostile Forces",
+            "title": "Ensure Kamea Survives",
+            "description": "",
+            "isPrimary": true,
+            "OnSuccessResults": [],
+            "OnFailureResults": []
+        },
+        {
+            "objective": {
+                "EncounterObjectGuid": "2e9136c3-f269-44ac-99ec-5c8b0d3004f5"
+            },
+            "title": "HIIDEN Kamea Occupy Region",
             "description": "",
             "isPrimary": false,
             "OnSuccessResults": [],
@@ -119,29 +265,9 @@
         },
         {
             "objective": {
-                "EncounterObjectGuid": "8131c77b-5395-4453-a2e2-8a0114f7b276"
+                "EncounterObjectGuid": "0e9bd2d9-407c-4687-bc5b-147cf35248b5"
             },
-            "title": "Destroy the Shadow Hawk",
-            "description": "",
-            "isPrimary": false,
-            "OnSuccessResults": [],
-            "OnFailureResults": []
-        },
-        {
-            "objective": {
-                "EncounterObjectGuid": "bb71de8a-f383-4ae6-9926-86cf6b79772a"
-            },
-            "title": "Destroy the Corpsec Tower",
-            "description": "",
-            "isPrimary": false,
-            "OnSuccessResults": [],
-            "OnFailureResults": []
-        },
-        {
-            "objective": {
-                "EncounterObjectGuid": "b6325d3e-3a23-43ba-b22b-1ebc343e91c3"
-            },
-            "title": "HIDDEN Reinforcement Driver",
+            "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
             "OnSuccessResults": [],
@@ -152,63 +278,69 @@
     "chunkList": [],
     "cameraFocusHelperList": [
         {
+            "name": "Spawner_PlayerLance",
+            "encounterObject": {
+                "EncounterObjectGuid": "76b654a6-4f2c-4a6f-86e6-d4cf868335fe"
+            }
+        },
+        {
+            "name": "LanceSpawner",
+            "encounterObject": {
+                "EncounterObjectGuid": "61699a08-1ed7-4ac3-b1f3-79b6b671c4ca"
+            }
+        },
+        {
             "name": "LanceSpawner_Turrets_Alpha",
             "encounterObject": {
-                "EncounterObjectGuid": "c98318df-5521-4b17-9fb2-bca4a8294f0f"
+                "EncounterObjectGuid": "c889b2a0-f46e-443e-9436-b0cd1d286b16"
             }
         },
         {
             "name": "LanceSpawner_Turrets_Bravo",
             "encounterObject": {
-                "EncounterObjectGuid": "10876dfb-8541-471f-be83-6e54025fa7b2"
+                "EncounterObjectGuid": "ea34f78b-b583-4f47-ae98-8349c4e9a571"
             }
         },
         {
-            "name": "LanceSpawner_Turrets_Neutral",
+            "name": "LanceSpawner_Vehicles",
             "encounterObject": {
-                "EncounterObjectGuid": "2171847f-33f7-4937-b48e-c6bbe4649f9c"
+                "EncounterObjectGuid": "4bcca0a6-1941-4033-bfde-175234a3de7f"
             }
         },
         {
-            "name": "LanceSpawner_Urbies",
+            "name": "Spawner_InternalDefenseTurrets",
             "encounterObject": {
-                "EncounterObjectGuid": "bfa9e561-166b-4f4d-9c87-d44be4c680c5"
+                "EncounterObjectGuid": "03098774-4d71-41cd-92ee-b466f6390110"
             }
         },
         {
-            "name": "PlayerLanceSpawner",
+            "name": "DestroyLanceSpawner",
             "encounterObject": {
-                "EncounterObjectGuid": "eb440f61-efce-4d2b-91b5-97a0800e74c6"
+                "EncounterObjectGuid": "8f5cd1f7-9e39-4d37-a6cb-398b5797ab7c"
             }
         },
         {
-            "name": "LanceSpawner_EmployerTurrets_Friendly",
+            "name": "Spawner_ReinforcementsLance",
             "encounterObject": {
-                "EncounterObjectGuid": "4068390d-21fe-4857-8692-879685f8dc33"
+                "EncounterObjectGuid": "1ed1ecd2-449b-4df9-8ab5-29846b40c1ad"
             }
         },
         {
-            "name": "LanceSpawner_EmployerTurrets_Hostile",
+            "name": "LanceSpawner",
             "encounterObject": {
-                "EncounterObjectGuid": "14500e60-ca4a-40f8-bdd5-54c0f866cce3"
+                "EncounterObjectGuid": "7e140c41-dcc0-4e6a-92c5-3b9b1c562dd6"
             }
         },
         {
-            "name": "LanceSpawner_EmployerTurrets_Neutral",
+            "name": "Region_ApproachingPrison",
             "encounterObject": {
-                "EncounterObjectGuid": "5530818e-122a-493a-a19e-f73b9fd146af"
+                "EncounterObjectGuid": "8b193467-e642-4adc-ab49-9555e3c619d9"
             }
         },
         {
-            "name": "DestroyLanceSpawner_Urbies",
+            "name": "Region_GoTo",
             "encounterObject": {
-                "EncounterObjectGuid": "fddf5e8b-07c6-492b-861e-2d9c2bde80ee"
-            }
-        },
-        {
-            "name": "TargetLance",
-            "encounterObject": {
-                "EncounterObjectGuid": "6a480c0d-9da2-45ae-acc4-a3f25777fa2a"
+                "EncounterObjectGuid": "181efcdf-0e34-477b-8a06-39b0ead2d69e"
             }
         },
         {
@@ -218,49 +350,49 @@
             }
         },
         {
-            "name": "Region_PlatformAlpha",
+            "name": "04_KameaOccupyRegion",
             "encounterObject": {
-                "EncounterObjectGuid": "17ad88d1-b086-4d57-a797-1ddeab3c31aa"
+                "EncounterObjectGuid": "cdf833ca-699a-4c06-9b5d-f5f93f0d49e7"
             }
         },
         {
-            "name": "CameraFocus_PlatformBravo",
+            "name": "04_ArtilleryWallBlowRegion",
             "encounterObject": {
-                "EncounterObjectGuid": "e15d94da-5de4-43df-9955-29d206c5076b"
+                "EncounterObjectGuid": "d491ed3a-d63d-4fa1-aaf9-3471d5b6d91a"
             }
         },
         {
-            "name": "CameraFocus_PlatformAlpha",
+            "name": "WorldPoint_Doors",
             "encounterObject": {
-                "EncounterObjectGuid": "4a4fd778-4d76-4284-a45b-716910c63671"
+                "EncounterObjectGuid": "7ead3d46-492e-4aeb-a331-5c6bc1dc5432"
             }
         },
         {
-            "name": "CameraFocus_IPCPlatform",
+            "name": "WorldPoint_Doors2",
             "encounterObject": {
-                "EncounterObjectGuid": "6901e993-9edb-4f6e-9c99-82846438be82"
+                "EncounterObjectGuid": "8e48d373-7f31-407a-b5ec-f3821f386e8b"
             }
         }
     ],
     "dialogueList": [
         {
             "dialogue": {
-                "EncounterObjectGuid": "bf6bf190-249c-4181-9f33-bc5f9e69dcf4"
+                "EncounterObjectGuid": "7fe51130-7759-4256-a3d4-fe78366c4c0e"
             },
-            "name": "Async_ComeBackHome",
+            "name": "Async_IntruderAlert",
             "overrideDialogueBucketId": "",
             "dialogueContent": [
                 {
-                    "words": "Great job, Commander. Double back to our client's platform. The sooner we can collect our pay and break orbit, the better.",
+                    "words": "[static] This is the warden\u2014we have an intruder alert! All combat units, prepare to repel hostiles! [static]",
                     "wordsColor": {
-                        "r": 1,
-                        "g": 1,
-                        "b": 1,
+                        "r": 0.2509804,
+                        "g": 0.2509804,
+                        "b": 0.2509804,
                         "a": 1
                     },
-                    "selectedCastDefId": "castDef_DariusDefault",
+                    "selectedCastDefId": "castDef_SE04_PrisonWardenDefault",
                     "emote": "Default",
-                    "audioName": "m020_060_darius",
+                    "audioName": "m040_070_prisoncom",
                     "cameraFocusGuid": "",
                     "cameraDistance": "Far",
                     "cameraHeight": "Default",
@@ -270,29 +402,13 @@
         },
         {
             "dialogue": {
-                "EncounterObjectGuid": "26127c90-1c42-4cb4-b27b-0b1b225e9233"
+                "EncounterObjectGuid": "10b4f6db-64d8-4d3b-a2c2-ae3b73c1c132"
             },
-            "name": "Inter_Betrayal",
+            "name": "Inter_DestroyDoorsOrJumpWalls",
             "overrideDialogueBucketId": "",
             "dialogueContent": [
                 {
-                    "words": "Brilliant work, Commander. We should have no trouble mopping up at the other platforms now that their defenses are down.",
-                    "wordsColor": {
-                        "r": 1,
-                        "g": 1,
-                        "b": 1,
-                        "a": 1
-                    },
-                    "selectedCastDefId": "castDef_SE02_EmployerDefault",
-                    "emote": "Default",
-                    "audioName": "NONE",
-                    "cameraFocusGuid": "",
-                    "cameraDistance": "Far",
-                    "cameraHeight": "Default",
-                    "revealRadius": 0
-                },
-                {
-                    "words": "We get the job done. Speaking of which\u2014",
+                    "words": "Those prison gates on either side are gonna be your best point of entry into the complex.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -302,29 +418,13 @@
                     "selectedCastDefId": "castDef_DariusDefault",
                     "emote": "Default",
                     "audioName": "NONE",
-                    "cameraFocusGuid": "",
+                    "cameraFocusGuid": "7ead3d46-492e-4aeb-a331-5c6bc1dc5432",
                     "cameraDistance": "Far",
-                    "cameraHeight": "Default",
-                    "revealRadius": 0
+                    "cameraHeight": "High",
+                    "revealRadius": -1
                 },
                 {
-                    "words": "I wasn't finished. These platforms won't do us much good if we can't hold them\u2014Majesty Metals taught us that. So we're going to need your BattleMechs.",
-                    "wordsColor": {
-                        "r": 1,
-                        "g": 1,
-                        "b": 1,
-                        "a": 1
-                    },
-                    "selectedCastDefId": "castDef_SE02_EmployerDefault",
-                    "emote": "Default",
-                    "audioName": "NONE",
-                    "cameraFocusGuid": "",
-                    "cameraDistance": "Far",
-                    "cameraHeight": "Default",
-                    "revealRadius": 0
-                },
-                {
-                    "words": "You're going to want to reconsider that.",
+                    "words": "Blow them down and make your way inside... or jump the walls, if your lance is capable of it. Your call.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -334,79 +434,22 @@
                     "selectedCastDefId": "castDef_DariusDefault",
                     "emote": "Default",
                     "audioName": "NONE",
-                    "cameraFocusGuid": "",
+                    "cameraFocusGuid": "8e48d373-7f31-407a-b5ec-f3821f386e8b",
                     "cameraDistance": "Far",
-                    "cameraHeight": "Default",
-                    "revealRadius": 0
-                },
-                {
-                    "words": "Why? Your lance has already been target locked by our turrets. Now, power down and surrender, and we'll let you walk. Or try to fight, and we'll tear you to shreds. Your call.",
-                    "wordsColor": {
-                        "r": 1,
-                        "g": 1,
-                        "b": 1,
-                        "a": 1
-                    },
-                    "selectedCastDefId": "castDef_SE02_EmployerDefault",
-                    "emote": "Default",
-                    "audioName": "NONE",
-                    "cameraFocusGuid": "",
-                    "cameraDistance": "Far",
-                    "cameraHeight": "Default",
-                    "revealRadius": 0
-                },
-                {
-                    "words": "[sigh] Well, there goes our goddamned payday. Hold tight, Commander\u2014we're on our way.",
-                    "wordsColor": {
-                        "r": 1,
-                        "g": 1,
-                        "b": 1,
-                        "a": 1
-                    },
-                    "selectedCastDefId": "castDef_DariusDefault",
-                    "emote": "Default",
-                    "audioName": "NONE",
-                    "cameraFocusGuid": "",
-                    "cameraDistance": "Far",
-                    "cameraHeight": "Default",
-                    "revealRadius": 0
+                    "cameraHeight": "High",
+                    "revealRadius": -1
                 }
             ]
         },
         {
             "dialogue": {
-                "EncounterObjectGuid": "b7027bf0-8395-40cb-9ccd-83fe15de3700"
+                "EncounterObjectGuid": "9071057f-44c7-44ee-a23e-10bc7bab3e00"
             },
-            "name": "Async_Stop",
+            "name": "Inter_GoToComplete_EnemiesRemain",
             "overrideDialogueBucketId": "",
             "dialogueContent": [
                 {
-                    "words": "You are trespassing on Majesty Metals and Manufacturing property, and acting in collusion with a domestic terrorist organization. Cease your advance immediately or you <i>will</i> be fired upon!",
-                    "wordsColor": {
-                        "r": 1,
-                        "g": 1,
-                        "b": 1,
-                        "a": 1
-                    },
-                    "selectedCastDefId": "castDef_SE02_OpForDefault",
-                    "emote": "Default",
-                    "audioName": "m020_050_miningcom",
-                    "cameraFocusGuid": "",
-                    "cameraDistance": "Far",
-                    "cameraHeight": "Default",
-                    "revealRadius": 0
-                }
-            ]
-        },
-        {
-            "dialogue": {
-                "EncounterObjectGuid": "4af7829b-f342-4cf8-ab40-5cc21b04dd18"
-            },
-            "name": "Inter_ShadowHawk",
-            "overrideDialogueBucketId": "",
-            "dialogueContent": [
-                {
-                    "words": "There's our target, Commander. Proceed with caution\u2014Shadow Hawks can be dangerous at any range.",
+                    "words": "Excellent work, Commander\u2014the prison is ours.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -415,11 +458,143 @@
                     },
                     "selectedCastDefId": "castDef_DariusDefault",
                     "emote": "Default",
-                    "audioName": "m020_180_darius",
+                    "audioName": "NONE",
                     "cameraFocusGuid": "",
                     "cameraDistance": "Far",
                     "cameraHeight": "Default",
                     "revealRadius": -1
+                },
+                {
+                    "words": "[static] All Directorate personnel to action stations, gods damn it! This is NOT a drill! [static]",
+                    "wordsColor": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_SE04_PrisonWardenDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                },
+                {
+                    "words": "Looks like you've got more company\u2014I'm seeing heat signatures coming online in the prison Mech Bay. The warden must've held a lance in reserve.",
+                    "wordsColor": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_DariusDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                }
+            ]
+        },
+        {
+            "dialogue": {
+                "EncounterObjectGuid": "105c7821-3426-46ef-af69-175ffeab6811"
+            },
+            "name": "Async_PostGoToComplete",
+            "overrideDialogueBucketId": "",
+            "dialogueContent": [
+                {
+                    "words": "Sit tight, Commander\u2014Lady Arano is aware of the situation. Reinforcements are on the way.",
+                    "wordsColor": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_MadeiraDefault",
+                    "emote": "Default",
+                    "audioName": "m040_044_alexander",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                }
+            ]
+        },
+        {
+            "dialogue": {
+                "EncounterObjectGuid": "051ec0e7-2c7d-435b-bcbc-ce7715f774a3"
+            },
+            "name": "Inter_KameaArrives",
+            "overrideDialogueBucketId": "",
+            "dialogueContent": [
+                {
+                    "words": "FOR THE AURIGAN PEOPLE!",
+                    "wordsColor": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_KameaPrologue",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                }
+            ]
+        },
+        {
+            "dialogue": {
+                "EncounterObjectGuid": "d61f12a3-f820-4026-b7ca-9d263d1525fa"
+            },
+            "name": "Inter_DropshipLanding",
+            "overrideDialogueBucketId": "",
+            "dialogueContent": [
+                {
+                    "words": "Engines prepped and ready, Commander. I'll set her down as soon as you're finished with those hostiles.",
+                    "wordsColor": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_SumireDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                }
+            ]
+        },
+        {
+            "dialogue": {
+                "EncounterObjectGuid": "538e52fb-f8f3-4001-b3e2-1165adfa83dc"
+            },
+            "name": "Async_DefenderDown_Garrison",
+            "overrideDialogueBucketId": "",
+            "dialogueContent": [
+                {
+                    "words": "[static] FIGHT HARDER, DAMN YOU! We can't let this prison fall! [static]",
+                    "wordsColor": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_SE04_PrisonWardenDefault",
+                    "emote": "Default",
+                    "audioName": "m040_080_warden",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": 0
                 }
             ]
         },
@@ -431,14 +606,14 @@
             "overrideDialogueBucketId": "",
             "dialogueContent": [
                 {
-                    "words": "The Independent Prospectors' League thanks you for your assistance, Commander. We're miners, not soldiers\u2014we can't fight these bastards off on our own.",
+                    "words": "There are two entrances into the complex, Commander. Intel says that each is defended by a series of elevated turrets.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
                         "b": 1,
                         "a": 1
                     },
-                    "selectedCastDefId": "castDef_SE02_EmployerDefault",
+                    "selectedCastDefId": "castDef_DariusDefault",
                     "emote": "Default",
                     "audioName": "NONE",
                     "cameraFocusGuid": "",
@@ -447,7 +622,7 @@
                     "revealRadius": -1
                 },
                 {
-                    "words": "That's what you're paying us for. Don't worry, we'll get your platforms back.",
+                    "words": "I'm also seeing an LRM emplacement between the two checkpoints.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -460,68 +635,36 @@
                     "cameraFocusGuid": "",
                     "cameraDistance": "Far",
                     "cameraHeight": "Default",
-                    "revealRadius": 0
+                    "revealRadius": 50
                 },
                 {
-                    "words": "This isn't just about reclaiming what's ours. Majesty Metals killed hundreds of us when they tried to jump our claim. We want you to make them bleed for what they've done here.",
+                    "words": "BattleMech defenses should be practically nil\u2014as predicted, Lady Arano's preemptive strike has already drawn the prison's standard garrison away. I'm seeing heavy vehicles and turrets on my screen\u2026 nothing that you can't handle.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
                         "b": 1,
                         "a": 1
                     },
-                    "selectedCastDefId": "castDef_SE02_EmployerDefault",
+                    "selectedCastDefId": "castDef_DariusDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "ec9d2280-ca9a-4d90-8a20-963d8a4c0a39",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": 0
+                },
+                {
+                    "words": "Clear away the opposition and capture the prison. Lady Arano and the Restoration Army will take care of the rest. Good hunting, Commander!",
+                    "wordsColor": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_DariusDefault",
                     "emote": "Default",
                     "audioName": "NONE",
                     "cameraFocusGuid": "",
-                    "cameraDistance": "Far",
-                    "cameraHeight": "Default",
-                    "revealRadius": 0
-                },
-                {
-                    "words": "Commander, the OpFor is holding two of the IPL's mining platforms. The first, designated Alpha, is where they're keeping their turret generator. Move in fast and take it out\u2014those turrets hit hard, so you'll want to neutralize them ASAP.",
-                    "wordsColor": {
-                        "r": 1,
-                        "g": 1,
-                        "b": 1,
-                        "a": 1
-                    },
-                    "selectedCastDefId": "castDef_DariusDefault",
-                    "emote": "Default",
-                    "audioName": "NONE",
-                    "cameraFocusGuid": "e15d94da-5de4-43df-9955-29d206c5076b",
-                    "cameraDistance": "Far",
-                    "cameraHeight": "Default",
-                    "revealRadius": 0
-                },
-                {
-                    "words": "Platform Bravo is the site of the OpFor's corporate security tower. Engage and destroy it. If they bring in a 'Mech to protect it, take that out, too. Then circle on back and we'll collect our pay.",
-                    "wordsColor": {
-                        "r": 1,
-                        "g": 1,
-                        "b": 1,
-                        "a": 1
-                    },
-                    "selectedCastDefId": "castDef_DariusDefault",
-                    "emote": "Default",
-                    "audioName": "NONE",
-                    "cameraFocusGuid": "4a4fd778-4d76-4284-a45b-716910c63671",
-                    "cameraDistance": "Far",
-                    "cameraHeight": "Default",
-                    "revealRadius": 0
-                },
-                {
-                    "words": "That's right\u2014I'm ready and waiting to authorize the transfer. Now go on, Commander\u2026 hit those corporate pigs where it hurts. We'll be watching the action from here.",
-                    "wordsColor": {
-                        "r": 1,
-                        "g": 1,
-                        "b": 1,
-                        "a": 1
-                    },
-                    "selectedCastDefId": "castDef_SE02_EmployerDefault",
-                    "emote": "Default",
-                    "audioName": "NONE",
-                    "cameraFocusGuid": "6901e993-9edb-4f6e-9c99-82846438be82",
                     "cameraDistance": "Far",
                     "cameraHeight": "Default",
                     "revealRadius": 0
@@ -536,23 +679,7 @@
             "overrideDialogueBucketId": "",
             "dialogueContent": [
                 {
-                    "words": "Stand by for extraction, Commander\u2014let's get the hell out of here. Oh, and Darius?",
-                    "wordsColor": {
-                        "r": 1,
-                        "g": 1,
-                        "b": 1,
-                        "a": 1
-                    },
-                    "selectedCastDefId": "castDef_SumireDefault",
-                    "emote": "Default",
-                    "audioName": "NONE",
-                    "cameraFocusGuid": "",
-                    "cameraDistance": "Far",
-                    "cameraHeight": "Default",
-                    "revealRadius": -1
-                },
-                {
-                    "words": "I know, Meyer, I know. You want another team meeting.",
+                    "words": "The prison is ours! Thanks for the assist, Lady Arano\u2014I'll have Sumire bring us down for the victory celebration.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -565,23 +692,71 @@
                     "cameraFocusGuid": "",
                     "cameraDistance": "Far",
                     "cameraHeight": "Default",
-                    "revealRadius": 0
+                    "revealRadius": -1
                 },
                 {
-                    "words": "Give the man a prize.",
+                    "words": "There will be no celebrating\u2014not after what I saw out there. Gods, Darius\u2026 the things the Directorate has done to these people\u2026",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
                         "b": 1,
                         "a": 1
                     },
-                    "selectedCastDefId": "castDef_SumireDefault",
+                    "selectedCastDefId": "castDef_KameaPrologue",
                     "emote": "Default",
                     "audioName": "NONE",
                     "cameraFocusGuid": "",
                     "cameraDistance": "Far",
                     "cameraHeight": "Default",
                     "revealRadius": 0
+                },
+                {
+                    "words": "Kamea, I need you to meet me in the prison hospital. Right now.",
+                    "wordsColor": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_MadeiraDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                },
+                {
+                    "words": "What is it?",
+                    "wordsColor": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_KameaPrologue",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                },
+                {
+                    "words": "Better that you see for yourself. And, Kamea\u2026 prepare yourself. This isn't going to be easy.",
+                    "wordsColor": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_MadeiraDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
                 }
             ]
         },
@@ -591,31 +766,15 @@
             },
             "name": "MissionFailureDialogue",
             "overrideDialogueBucketId": "",
-            "dialogueContent": [
-                {
-                    "words": "Commander? Commander, are you reading me? Come in!",
-                    "wordsColor": {
-                        "r": 1,
-                        "g": 1,
-                        "b": 1,
-                        "a": 1
-                    },
-                    "selectedCastDefId": "castDef_DariusDefault",
-                    "emote": "Default",
-                    "audioName": "NONE",
-                    "cameraFocusGuid": "",
-                    "cameraDistance": "Far",
-                    "cameraHeight": "Default",
-                    "revealRadius": -1
-                }
-            ]
+            "dialogueContent": []
         }
     ],
+    "overrideAutoCompleteDialogueId": null,
     "disableNegotations": true,
     "disableLanceConfiguration": false,
-    "disableCancelButton": true,
+    "disableCancelButton": false,
     "disableAfterAction": false,
-    "contractRewardOverride": 800000,
+    "contractRewardOverride": 2944000,
     "travelOnly": false,
     "useTravelCostPenalty": false,
     "usesExpiration": false,
@@ -624,7 +783,7 @@
     "negotiatedSalvage": 0.5,
     "player1Team": {
         "encounterLayerData": {
-            "EncounterObjectGuid": "7e93efda-3634-433a-bd54-e82a05ff532b"
+            "EncounterObjectGuid": "219798b5-9e35-4cbe-8a76-bd1634763e46"
         },
         "teamGuid": "bf40fd39-ccf9-47c4-94a6-061809681140",
         "teamName": "Player 1",
@@ -633,9 +792,9 @@
         "lanceOverrideList": [
             {
                 "lanceSpawner": {
-                    "EncounterObjectGuid": "eb440f61-efce-4d2b-91b5-97a0800e74c6"
+                    "EncounterObjectGuid": "76b654a6-4f2c-4a6f-86e6-d4cf868335fe"
                 },
-                "name": "PlayerLanceSpawner",
+                "name": "Spawner_PlayerLance",
                 "lanceDefId": "Manual",
                 "lanceTagSet": {
                     "items": [],
@@ -655,12 +814,12 @@
                 "unitSpawnPointOverrideList": [
                     {
                         "unitSpawnPoint": {
-                            "EncounterObjectGuid": "3a12170f-4398-4ab3-b731-71740f5becae"
+                            "EncounterObjectGuid": "ec9d2280-ca9a-4d90-8a20-963d8a4c0a39"
                         },
                         "customUnitName": "",
                         "customHeraldryDefId": "",
-                        "unitType": "Mech",
-                        "unitDefId": "mechDef_None",
+                        "unitType": "UNDEFINED",
+                        "unitDefId": "",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": ""
@@ -688,12 +847,12 @@
                     },
                     {
                         "unitSpawnPoint": {
-                            "EncounterObjectGuid": "3e0d80ab-77d3-4c83-8241-7021703a30e6"
+                            "EncounterObjectGuid": "ebc06b6a-c5a8-4165-95ce-480bcf335570"
                         },
                         "customUnitName": "",
                         "customHeraldryDefId": "",
-                        "unitType": "Mech",
-                        "unitDefId": "mechDef_None",
+                        "unitType": "UNDEFINED",
+                        "unitDefId": "",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": ""
@@ -721,12 +880,12 @@
                     },
                     {
                         "unitSpawnPoint": {
-                            "EncounterObjectGuid": "8a68a85d-09b4-41ba-8608-68df0cc45a66"
+                            "EncounterObjectGuid": "d50f1e9d-0a0b-4dc8-9a06-a33233aaa8a1"
                         },
                         "customUnitName": "",
                         "customHeraldryDefId": "",
-                        "unitType": "Mech",
-                        "unitDefId": "mechDef_None",
+                        "unitType": "UNDEFINED",
+                        "unitDefId": "",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": ""
@@ -754,12 +913,12 @@
                     },
                     {
                         "unitSpawnPoint": {
-                            "EncounterObjectGuid": "706341d4-1b6d-4e3c-978c-e0ef92433064"
+                            "EncounterObjectGuid": "461141c2-f956-49a5-b2c6-6f951b957a94"
                         },
                         "customUnitName": "",
                         "customHeraldryDefId": "",
-                        "unitType": "Mech",
-                        "unitDefId": "mechDef_None",
+                        "unitType": "UNDEFINED",
+                        "unitDefId": "",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": ""
@@ -791,7 +950,7 @@
     },
     "player2Team": {
         "encounterLayerData": {
-            "EncounterObjectGuid": "7e93efda-3634-433a-bd54-e82a05ff532b"
+            "EncounterObjectGuid": "219798b5-9e35-4cbe-8a76-bd1634763e46"
         },
         "teamGuid": "757173dd-b4e1-4bb5-9bee-d78e623cc867",
         "teamName": "Player 2",
@@ -801,31 +960,29 @@
     },
     "employerTeam": {
         "encounterLayerData": {
-            "EncounterObjectGuid": "7e93efda-3634-433a-bd54-e82a05ff532b"
+            "EncounterObjectGuid": "219798b5-9e35-4cbe-8a76-bd1634763e46"
         },
         "teamGuid": "ecc8d4f2-74b4-465d-adf6-84445e5dfc230",
         "teamName": "Employer",
-        "faction": "AuriganMercenaries",
+        "faction": "INVALID_UNSET",
         "teamLeaderCastDefId": "castDef_TeamLeader_Current",
         "lanceOverrideList": [
             {
                 "lanceSpawner": {
-                    "EncounterObjectGuid": "4068390d-21fe-4857-8692-879685f8dc33"
+                    "EncounterObjectGuid": "7e140c41-dcc0-4e6a-92c5-3b9b1c562dd6"
                 },
-                "name": "LanceSpawner_EmployerTurrets_Friendly",
+                "name": "LanceSpawner",
                 "lanceDefId": "Manual",
                 "lanceTagSet": {
                     "items": [],
-                    "tagSetSourceFile": "Tags/LanceTags"
+                    "tagSetSourceFile": ""
                 },
                 "lanceExcludedTagSet": {
                     "items": [],
                     "tagSetSourceFile": "Tags/LanceTags"
                 },
                 "spawnEffectTags": {
-                    "items": [
-                        "spawn_poorly_maintained_50"
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/SpawnEffectTags"
                 },
                 "lanceDifficultyAdjustment": 0,
@@ -834,12 +991,12 @@
                 "unitSpawnPointOverrideList": [
                     {
                         "unitSpawnPoint": {
-                            "EncounterObjectGuid": "b0b38333-b74a-459c-8765-a7078d65f5d5"
+                            "EncounterObjectGuid": "f6d42e6e-ee7b-49f2-90de-55541dd1bbcf"
                         },
                         "customUnitName": "",
-                        "customHeraldryDefId": "",
-                        "unitType": "Turret",
-                        "unitDefId": "turretdef_Light_Shredder",
+                        "customHeraldryDefId": "heraldrydef_restoration",
+                        "unitType": "Mech",
+                        "unitDefId": "mechdef_kintaro_KTO-19b",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": ""
@@ -852,109 +1009,10 @@
                             "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
-                        "pilotDefId": "pilot_d3_turret",
+                        "pilotDefId": "pilot_story_kamea",
                         "pilotTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "pilotExcludedTagSet": {
                             "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
-                        },
-                        "selectedUnitType": "UNDEFINED",
-                        "selectedUnitDefId": null,
-                        "selectedPilotDefId": null
-                    },
-                    {
-                        "unitSpawnPoint": {
-                            "EncounterObjectGuid": "cf7d391e-0671-4fd7-b5ba-43da4b7e47cc"
-                        },
-                        "customUnitName": "",
-                        "customHeraldryDefId": "",
-                        "unitType": "Turret",
-                        "unitDefId": "turretdef_Light_Shredder",
-                        "unitTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "unitExcludedTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/UnitTags"
-                        },
-                        "spawnEffectTags": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/SpawnEffectTags"
-                        },
-                        "pilotDefId": "pilot_d3_turret",
-                        "pilotTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "pilotExcludedTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/PilotTags"
-                        },
-                        "selectedUnitType": "UNDEFINED",
-                        "selectedUnitDefId": null,
-                        "selectedPilotDefId": null
-                    },
-                    {
-                        "unitSpawnPoint": {
-                            "EncounterObjectGuid": "ac6e93aa-00ae-4f35-a8b9-b06bc44cd032"
-                        },
-                        "customUnitName": "",
-                        "customHeraldryDefId": "",
-                        "unitType": "Turret",
-                        "unitDefId": "turretdef_Light_Shredder",
-                        "unitTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "unitExcludedTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/UnitTags"
-                        },
-                        "spawnEffectTags": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/SpawnEffectTags"
-                        },
-                        "pilotDefId": "pilot_d3_turret",
-                        "pilotTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "pilotExcludedTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/PilotTags"
-                        },
-                        "selectedUnitType": "UNDEFINED",
-                        "selectedUnitDefId": null,
-                        "selectedPilotDefId": null
-                    },
-                    {
-                        "unitSpawnPoint": {
-                            "EncounterObjectGuid": "eef52987-8424-4bec-97b1-b8cac2de5f47"
-                        },
-                        "customUnitName": "",
-                        "customHeraldryDefId": "",
-                        "unitType": "Turret",
-                        "unitDefId": "turretdef_Light_Shredder",
-                        "unitTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "unitExcludedTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/UnitTags"
-                        },
-                        "spawnEffectTags": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/SpawnEffectTags"
-                        },
-                        "pilotDefId": "pilot_d3_turret",
-                        "pilotTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": ""
                         },
                         "pilotExcludedTagSet": {
                             "items": [],
@@ -970,22 +1028,22 @@
     },
     "targetTeam": {
         "encounterLayerData": {
-            "EncounterObjectGuid": "7e93efda-3634-433a-bd54-e82a05ff532b"
+            "EncounterObjectGuid": "219798b5-9e35-4cbe-8a76-bd1634763e46"
         },
         "teamGuid": "be77cadd-e245-4240-a93e-b99cc98902a5",
         "teamName": "Target",
-        "faction": "MajestyMetals",
+        "faction": "AuriganDirectorate",
         "teamLeaderCastDefId": "castDef_TeamLeader_Current",
         "lanceOverrideList": [
             {
                 "lanceSpawner": {
-                    "EncounterObjectGuid": "c98318df-5521-4b17-9fb2-bca4a8294f0f"
+                    "EncounterObjectGuid": "61699a08-1ed7-4ac3-b1f3-79b6b671c4ca"
                 },
-                "name": "LanceSpawner_Turrets_Alpha",
+                "name": "LanceSpawner",
                 "lanceDefId": "Manual",
                 "lanceTagSet": {
                     "items": [],
-                    "tagSetSourceFile": "Tags/LanceTags"
+                    "tagSetSourceFile": ""
                 },
                 "lanceExcludedTagSet": {
                     "items": [],
@@ -1001,12 +1059,12 @@
                 "unitSpawnPointOverrideList": [
                     {
                         "unitSpawnPoint": {
-                            "EncounterObjectGuid": "4a160ddb-67d1-4f1d-9433-c6edee23ba34"
+                            "EncounterObjectGuid": "7c30108d-c203-4240-a74f-76cc057ccae0"
                         },
                         "customUnitName": "",
                         "customHeraldryDefId": "",
                         "unitType": "Turret",
-                        "unitDefId": "turretdef_Light_Laser",
+                        "unitDefId": "turretdef_Light_LRM",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": ""
@@ -1019,7 +1077,101 @@
                             "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
-                        "pilotDefId": "pilot_d3_turret",
+                        "pilotDefId": "pilot_d4_turret",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": null,
+                        "selectedPilotDefId": null
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "8021f2fc-1990-4f9c-9362-adc183d5fba9"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Turret",
+                        "unitDefId": "turretdef_Light_LRM",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilot_d4_turret",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": null,
+                        "selectedPilotDefId": null
+                    }
+                ]
+            },
+            {
+                "lanceSpawner": {
+                    "EncounterObjectGuid": "c889b2a0-f46e-443e-9436-b0cd1d286b16"
+                },
+                "name": "LanceSpawner_Turrets_Alpha",
+                "lanceDefId": "Manual",
+                "lanceTagSet": {
+                    "items": [],
+                    "tagSetSourceFile": "Tags/LanceTags"
+                },
+                "lanceExcludedTagSet": {
+                    "items": [],
+                    "tagSetSourceFile": "Tags/LanceTags"
+                },
+                "spawnEffectTags": {
+                    "items": [
+                        "spawn_poorly_maintained_25"
+                    ],
+                    "tagSetSourceFile": "Tags/SpawnEffectTags"
+                },
+                "lanceDifficultyAdjustment": 0,
+                "selectedLanceDefId": null,
+                "selectedLanceDifficulty": 0,
+                "unitSpawnPointOverrideList": [
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "d49a3920-b0f8-4d61-8d8d-0522c81b2544"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Vehicle",
+                        "unitDefId": "vehicledef_BULLDOG",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [
+                                "spawn_poorly_maintained_25"
+                            ],
+                            "tagSetSourceFile": "Tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilot_d4_pilot",
                         "pilotTagSet": {
                             "items": [],
                             "tagSetSourceFile": ""
@@ -1034,12 +1186,47 @@
                     },
                     {
                         "unitSpawnPoint": {
-                            "EncounterObjectGuid": "1c69d45b-6c27-4a15-b8ab-94a58d0db9d8"
+                            "EncounterObjectGuid": "53b22db1-42d2-4851-ac51-05b4fe82ac15"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Vehicle",
+                        "unitDefId": "vehicledef_SCORPION",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [
+                                "spawn_poorly_maintained_25"
+                            ],
+                            "tagSetSourceFile": "Tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilot_d4_pilot",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": null,
+                        "selectedPilotDefId": null
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "cdb7f88b-e605-45e9-8c2b-d4b621f24318"
                         },
                         "customUnitName": "",
                         "customHeraldryDefId": "",
                         "unitType": "Turret",
-                        "unitDefId": "turretdef_Light_Laser",
+                        "unitDefId": "turretdef_Light_Sniper",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": ""
@@ -1052,7 +1239,40 @@
                             "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
-                        "pilotDefId": "pilot_d3_turret",
+                        "pilotDefId": "pilot_d4_turret",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": null,
+                        "selectedPilotDefId": null
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "8d88b290-3372-4df9-9b9f-a1124e6b4f29"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Turret",
+                        "unitDefId": "turretdef_Standard_Laser",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilot_d4_turret",
                         "pilotTagSet": {
                             "items": [],
                             "tagSetSourceFile": ""
@@ -1069,7 +1289,7 @@
             },
             {
                 "lanceSpawner": {
-                    "EncounterObjectGuid": "10876dfb-8541-471f-be83-6e54025fa7b2"
+                    "EncounterObjectGuid": "ea34f78b-b583-4f47-ae98-8349c4e9a571"
                 },
                 "name": "LanceSpawner_Turrets_Bravo",
                 "lanceDefId": "Manual",
@@ -1091,7 +1311,73 @@
                 "unitSpawnPointOverrideList": [
                     {
                         "unitSpawnPoint": {
-                            "EncounterObjectGuid": "8bbb23b8-2b83-4861-9d34-700fee9369af"
+                            "EncounterObjectGuid": "af9b9b76-87be-40bc-82b1-62448177262c"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Vehicle",
+                        "unitDefId": "vehicledef_SCORPION",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilot_d4_pilot",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": null,
+                        "selectedPilotDefId": null
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "4236802b-483c-4a5b-86ff-c2d3fbf09f17"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Vehicle",
+                        "unitDefId": "vehicledef_BULLDOG",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilot_d4_pilot",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": null,
+                        "selectedPilotDefId": null
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "5f182e02-7645-482f-8e32-3edf8060f4a6"
                         },
                         "customUnitName": "",
                         "customHeraldryDefId": "",
@@ -1109,7 +1395,7 @@
                             "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
-                        "pilotDefId": "pilot_d3_turret",
+                        "pilotDefId": "pilot_d4_turret",
                         "pilotTagSet": {
                             "items": [],
                             "tagSetSourceFile": ""
@@ -1124,12 +1410,12 @@
                     },
                     {
                         "unitSpawnPoint": {
-                            "EncounterObjectGuid": "18255f26-60f1-4c75-afe8-c5e9b3b7c7b6"
+                            "EncounterObjectGuid": "ae8a9959-56f7-4a3c-8c54-78539c052562"
                         },
                         "customUnitName": "",
                         "customHeraldryDefId": "",
                         "unitType": "Turret",
-                        "unitDefId": "turretdef_Light_Sniper",
+                        "unitDefId": "turretdef_Standard_Laser",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": ""
@@ -1142,73 +1428,7 @@
                             "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
-                        "pilotDefId": "pilot_d3_turret",
-                        "pilotTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "pilotExcludedTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/PilotTags"
-                        },
-                        "selectedUnitType": "UNDEFINED",
-                        "selectedUnitDefId": null,
-                        "selectedPilotDefId": null
-                    },
-                    {
-                        "unitSpawnPoint": {
-                            "EncounterObjectGuid": "8927a918-9c5e-452b-b871-b5c29812ae32"
-                        },
-                        "customUnitName": "",
-                        "customHeraldryDefId": "",
-                        "unitType": "Turret",
-                        "unitDefId": "turretdef_Light_LRM",
-                        "unitTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "unitExcludedTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/UnitTags"
-                        },
-                        "spawnEffectTags": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/SpawnEffectTags"
-                        },
-                        "pilotDefId": "pilot_d3_turret",
-                        "pilotTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "pilotExcludedTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/PilotTags"
-                        },
-                        "selectedUnitType": "UNDEFINED",
-                        "selectedUnitDefId": null,
-                        "selectedPilotDefId": null
-                    },
-                    {
-                        "unitSpawnPoint": {
-                            "EncounterObjectGuid": "6f10033e-b730-4291-bc94-f8e9499fa61f"
-                        },
-                        "customUnitName": "",
-                        "customHeraldryDefId": "",
-                        "unitType": "Turret",
-                        "unitDefId": "turretdef_Light_LRM",
-                        "unitTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "unitExcludedTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/UnitTags"
-                        },
-                        "spawnEffectTags": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/SpawnEffectTags"
-                        },
-                        "pilotDefId": "pilot_d3_turret",
+                        "pilotDefId": "pilot_d4_turret",
                         "pilotTagSet": {
                             "items": [],
                             "tagSetSourceFile": ""
@@ -1225,101 +1445,9 @@
             },
             {
                 "lanceSpawner": {
-                    "EncounterObjectGuid": "bfa9e561-166b-4f4d-9c87-d44be4c680c5"
+                    "EncounterObjectGuid": "4bcca0a6-1941-4033-bfde-175234a3de7f"
                 },
-                "name": "LanceSpawner_Urbies",
-                "lanceDefId": "Manual",
-                "lanceTagSet": {
-                    "items": [],
-                    "tagSetSourceFile": "Tags/LanceTags"
-                },
-                "lanceExcludedTagSet": {
-                    "items": [],
-                    "tagSetSourceFile": "Tags/LanceTags"
-                },
-                "spawnEffectTags": {
-                    "items": [
-                        "spawn_poorly_maintained_50"
-                    ],
-                    "tagSetSourceFile": "Tags/SpawnEffectTags"
-                },
-                "lanceDifficultyAdjustment": 0,
-                "selectedLanceDefId": null,
-                "selectedLanceDifficulty": 0,
-                "unitSpawnPointOverrideList": [
-                    {
-                        "unitSpawnPoint": {
-                            "EncounterObjectGuid": "6f6fe9c5-e252-4c1b-8343-44d461efe327"
-                        },
-                        "customUnitName": "",
-                        "customHeraldryDefId": "",
-                        "unitType": "Mech",
-                        "unitDefId": "mechdef_commando_COM-2D",
-                        "unitTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "unitExcludedTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/UnitTags"
-                        },
-                        "spawnEffectTags": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/SpawnEffectTags"
-                        },
-                        "pilotDefId": "pilot_d3_gunner",
-                        "pilotTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "pilotExcludedTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/PilotTags"
-                        },
-                        "selectedUnitType": "UNDEFINED",
-                        "selectedUnitDefId": null,
-                        "selectedPilotDefId": null
-                    },
-                    {
-                        "unitSpawnPoint": {
-                            "EncounterObjectGuid": "8524f358-3fa7-4533-ba28-5da80727ccbb"
-                        },
-                        "customUnitName": "",
-                        "customHeraldryDefId": "",
-                        "unitType": "Mech",
-                        "unitDefId": "mechdef_spider_SDR-5V",
-                        "unitTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "unitExcludedTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/UnitTags"
-                        },
-                        "spawnEffectTags": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/SpawnEffectTags"
-                        },
-                        "pilotDefId": "pilot_d3_tactician",
-                        "pilotTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "pilotExcludedTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/PilotTags"
-                        },
-                        "selectedUnitType": "UNDEFINED",
-                        "selectedUnitDefId": null,
-                        "selectedPilotDefId": null
-                    }
-                ]
-            },
-            {
-                "lanceSpawner": {
-                    "EncounterObjectGuid": "6a480c0d-9da2-45ae-acc4-a3f25777fa2a"
-                },
-                "name": "TargetLance",
+                "name": "LanceSpawner_Vehicles",
                 "lanceDefId": "Manual",
                 "lanceTagSet": {
                     "items": [],
@@ -1339,47 +1467,12 @@
                 "unitSpawnPointOverrideList": [
                     {
                         "unitSpawnPoint": {
-                            "EncounterObjectGuid": "4b8dbb47-d328-40c0-89f7-6e235618269c"
-                        },
-                        "customUnitName": "",
-                        "customHeraldryDefId": "",
-                        "unitType": "Mech",
-                        "unitDefId": "mechdef_shadowhawk_SHD-2H",
-                        "unitTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "unitExcludedTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/UnitTags"
-                        },
-                        "spawnEffectTags": {
-                            "items": [
-                                "spawn_poorly_maintained_50"
-                            ],
-                            "tagSetSourceFile": "Tags/SpawnEffectTags"
-                        },
-                        "pilotDefId": "pilot_d3_pilot",
-                        "pilotTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "pilotExcludedTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/PilotTags"
-                        },
-                        "selectedUnitType": "UNDEFINED",
-                        "selectedUnitDefId": null,
-                        "selectedPilotDefId": null
-                    },
-                    {
-                        "unitSpawnPoint": {
-                            "EncounterObjectGuid": "86865967-d11a-4baf-afb8-b8e26603f8cb"
+                            "EncounterObjectGuid": "8679983b-56aa-4bb2-aea5-e37fbd07fc01"
                         },
                         "customUnitName": "",
                         "customHeraldryDefId": "",
                         "unitType": "Vehicle",
-                        "unitDefId": "vehicledef_SCORPION",
+                        "unitDefId": "vehicledef_STRIKER",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": ""
@@ -1394,7 +1487,64 @@
                             ],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
-                        "pilotDefId": "pilot_d3_gunner",
+                        "pilotDefId": "pilot_d4_pilot",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": null,
+                        "selectedPilotDefId": null
+                    }
+                ]
+            },
+            {
+                "lanceSpawner": {
+                    "EncounterObjectGuid": "03098774-4d71-41cd-92ee-b466f6390110"
+                },
+                "name": "Spawner_InternalDefenseTurrets",
+                "lanceDefId": "Manual",
+                "lanceTagSet": {
+                    "items": [],
+                    "tagSetSourceFile": ""
+                },
+                "lanceExcludedTagSet": {
+                    "items": [],
+                    "tagSetSourceFile": "Tags/LanceTags"
+                },
+                "spawnEffectTags": {
+                    "items": [],
+                    "tagSetSourceFile": "Tags/SpawnEffectTags"
+                },
+                "lanceDifficultyAdjustment": 0,
+                "selectedLanceDefId": null,
+                "selectedLanceDifficulty": 0,
+                "unitSpawnPointOverrideList": [
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "b749f17a-a9fa-4562-9fe5-66396608cd0a"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Turret",
+                        "unitDefId": "turretdef_Light_LRM",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/SampleTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilot_default",
                         "pilotTagSet": {
                             "items": [],
                             "tagSetSourceFile": ""
@@ -1409,12 +1559,12 @@
                     },
                     {
                         "unitSpawnPoint": {
-                            "EncounterObjectGuid": "a503479e-0a8b-4e71-9012-1a80709e9197"
+                            "EncounterObjectGuid": "4c7a03f7-5842-4798-88af-1d44922c9d92"
                         },
                         "customUnitName": "",
                         "customHeraldryDefId": "",
-                        "unitType": "Vehicle",
-                        "unitDefId": "vehicledef_SCORPION",
+                        "unitType": "Turret",
+                        "unitDefId": "turretdef_Light_Laser",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": ""
@@ -1425,11 +1575,397 @@
                         },
                         "spawnEffectTags": {
                             "items": [
-                                "spawn_poorly_maintained_50"
+                                "spawn_poorly_maintained_25"
                             ],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
-                        "pilotDefId": "pilot_d3_gunner",
+                        "pilotDefId": "pilot_default",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": null,
+                        "selectedPilotDefId": null
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "2c509246-3a91-4ae0-a640-91607bd4f772"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Turret",
+                        "unitDefId": "turretdef_Light_Laser",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [
+                                "spawn_poorly_maintained_25"
+                            ],
+                            "tagSetSourceFile": "Tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilot_default",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": null,
+                        "selectedPilotDefId": null
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "17e8879d-d6f3-4ef5-9fba-8a686fb381d3"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Turret",
+                        "unitDefId": "turretdef_Light_Laser",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilot_default",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": null,
+                        "selectedPilotDefId": null
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "975684d3-8fac-40a8-99a6-953a655b04bc"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Turret",
+                        "unitDefId": "turretdef_Standard_LRM",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilot_default",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": null,
+                        "selectedPilotDefId": null
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "2cee7ba8-d91d-4dbe-a073-15f77e0d1f2d"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Turret",
+                        "unitDefId": "turretdef_Standard_LRM",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [
+                                "spawn_poorly_maintained_25"
+                            ],
+                            "tagSetSourceFile": "Tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilot_default",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": null,
+                        "selectedPilotDefId": null
+                    }
+                ]
+            },
+            {
+                "lanceSpawner": {
+                    "EncounterObjectGuid": "8f5cd1f7-9e39-4d37-a6cb-398b5797ab7c"
+                },
+                "name": "DestroyLanceSpawner",
+                "lanceDefId": "Manual",
+                "lanceTagSet": {
+                    "items": [],
+                    "tagSetSourceFile": ""
+                },
+                "lanceExcludedTagSet": {
+                    "items": [],
+                    "tagSetSourceFile": "Tags/LanceTags"
+                },
+                "spawnEffectTags": {
+                    "items": [],
+                    "tagSetSourceFile": "Tags/SpawnEffectTags"
+                },
+                "lanceDifficultyAdjustment": 0,
+                "selectedLanceDefId": null,
+                "selectedLanceDifficulty": 0,
+                "unitSpawnPointOverrideList": [
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "3d549207-a653-4c23-8b9a-0b47a2e61451"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Mech",
+                        "unitDefId": "mechdef_jagermech_JM6-S",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilot_d4_gunner",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": null,
+                        "selectedPilotDefId": null
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "e80c9758-7e66-44d6-9205-c038cbb5ccc8"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Mech",
+                        "unitDefId": "mechdef_jenner_JR7-D",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilot_d4_tactician",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": null,
+                        "selectedPilotDefId": null
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "2d28a934-86f5-4413-858c-3818faf3100b"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Mech",
+                        "unitDefId": "mechdef_centurion_CN9-A",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilot_d4_defender",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": null,
+                        "selectedPilotDefId": null
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "de1a56b1-7916-4a69-8316-2955ec33d38d"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Mech",
+                        "unitDefId": "mechdef_trebuchet_TBT-7K",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilot_d4_gunner",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": null,
+                        "selectedPilotDefId": null
+                    }
+                ]
+            },
+            {
+                "lanceSpawner": {
+                    "EncounterObjectGuid": "1ed1ecd2-449b-4df9-8ab5-29846b40c1ad"
+                },
+                "name": "Spawner_ReinforcementsLance",
+                "lanceDefId": "Manual",
+                "lanceTagSet": {
+                    "items": [],
+                    "tagSetSourceFile": ""
+                },
+                "lanceExcludedTagSet": {
+                    "items": [],
+                    "tagSetSourceFile": "Tags/LanceTags"
+                },
+                "spawnEffectTags": {
+                    "items": [],
+                    "tagSetSourceFile": "Tags/SpawnEffectTags"
+                },
+                "lanceDifficultyAdjustment": 0,
+                "selectedLanceDefId": null,
+                "selectedLanceDifficulty": 0,
+                "unitSpawnPointOverrideList": [
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "2d8b623b-049d-4dd1-b50f-742b47844399"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Mech",
+                        "unitDefId": "mechdef_grasshopper_GHR-5H",
+                        "unitTagSet": {
+                            "items": [
+                                "unit_light"
+                            ],
+                            "tagSetSourceFile": ""
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilot_default",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": null,
+                        "selectedPilotDefId": null
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "08f8295b-f403-498f-adad-bc52b180df92"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Mech",
+                        "unitDefId": "mechdef_quickdraw_QKD-4G",
+                        "unitTagSet": {
+                            "items": [
+                                "unit_light"
+                            ],
+                            "tagSetSourceFile": ""
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "Tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilot_default",
                         "pilotTagSet": {
                             "items": [],
                             "tagSetSourceFile": ""
@@ -1448,228 +1984,32 @@
     },
     "targetsAllyTeam": {
         "encounterLayerData": {
-            "EncounterObjectGuid": "7e93efda-3634-433a-bd54-e82a05ff532b"
+            "EncounterObjectGuid": "219798b5-9e35-4cbe-8a76-bd1634763e46"
         },
         "teamGuid": "31151ed6-cfc2-467e-98c4-9ae5bea784cf",
         "teamName": "Target's Ally",
-        "faction": "Locals",
+        "faction": "INVALID_UNSET",
         "teamLeaderCastDefId": "castDef_TeamLeader_Current",
         "lanceOverrideList": []
     },
     "neutralToAllTeam": {
         "encounterLayerData": {
-            "EncounterObjectGuid": "7e93efda-3634-433a-bd54-e82a05ff532b"
+            "EncounterObjectGuid": "219798b5-9e35-4cbe-8a76-bd1634763e46"
         },
         "teamGuid": "61612bb3-abf9-4586-952a-0559fa9dcd75",
         "teamName": "Neutral to All",
-        "faction": "Locals",
+        "faction": "INVALID_UNSET",
         "teamLeaderCastDefId": "castDef_TeamLeader_Current",
-        "lanceOverrideList": [
-            {
-                "lanceSpawner": {
-                    "EncounterObjectGuid": "2171847f-33f7-4937-b48e-c6bbe4649f9c"
-                },
-                "name": "LanceSpawner_Turrets_Neutral",
-                "lanceDefId": "Manual",
-                "lanceTagSet": {
-                    "items": [],
-                    "tagSetSourceFile": "Tags/LanceTags"
-                },
-                "lanceExcludedTagSet": {
-                    "items": [],
-                    "tagSetSourceFile": "Tags/LanceTags"
-                },
-                "spawnEffectTags": {
-                    "items": [],
-                    "tagSetSourceFile": "Tags/SpawnEffectTags"
-                },
-                "lanceDifficultyAdjustment": 0,
-                "selectedLanceDefId": null,
-                "selectedLanceDifficulty": 0,
-                "unitSpawnPointOverrideList": []
-            },
-            {
-                "lanceSpawner": {
-                    "EncounterObjectGuid": "5530818e-122a-493a-a19e-f73b9fd146af"
-                },
-                "name": "LanceSpawner_EmployerTurrets_Neutral",
-                "lanceDefId": "Manual",
-                "lanceTagSet": {
-                    "items": [],
-                    "tagSetSourceFile": "Tags/LanceTags"
-                },
-                "lanceExcludedTagSet": {
-                    "items": [],
-                    "tagSetSourceFile": "Tags/LanceTags"
-                },
-                "spawnEffectTags": {
-                    "items": [],
-                    "tagSetSourceFile": "Tags/SpawnEffectTags"
-                },
-                "lanceDifficultyAdjustment": 0,
-                "selectedLanceDefId": null,
-                "selectedLanceDifficulty": 0,
-                "unitSpawnPointOverrideList": []
-            }
-        ]
+        "lanceOverrideList": []
     },
     "hostileToAllTeam": {
         "encounterLayerData": {
-            "EncounterObjectGuid": "7e93efda-3634-433a-bd54-e82a05ff532b"
+            "EncounterObjectGuid": "219798b5-9e35-4cbe-8a76-bd1634763e46"
         },
         "teamGuid": "3c9f3a20-ab03-4bcb-8ab6-b1ef0442bbf0",
         "teamName": "Hostile to All",
-        "faction": "Locals",
+        "faction": "INVALID_UNSET",
         "teamLeaderCastDefId": "castDef_TeamLeader_Current",
-        "lanceOverrideList": [
-            {
-                "lanceSpawner": {
-                    "EncounterObjectGuid": "14500e60-ca4a-40f8-bdd5-54c0f866cce3"
-                },
-                "name": "LanceSpawner_EmployerTurrets_Hostile",
-                "lanceDefId": "Manual",
-                "lanceTagSet": {
-                    "items": [],
-                    "tagSetSourceFile": "Tags/LanceTags"
-                },
-                "lanceExcludedTagSet": {
-                    "items": [],
-                    "tagSetSourceFile": "Tags/LanceTags"
-                },
-                "spawnEffectTags": {
-                    "items": [],
-                    "tagSetSourceFile": "Tags/SpawnEffectTags"
-                },
-                "lanceDifficultyAdjustment": 0,
-                "selectedLanceDefId": null,
-                "selectedLanceDifficulty": 0,
-                "unitSpawnPointOverrideList": []
-            },
-            {
-                "lanceSpawner": {
-                    "EncounterObjectGuid": "fddf5e8b-07c6-492b-861e-2d9c2bde80ee"
-                },
-                "name": "DestroyLanceSpawner_Urbies",
-                "lanceDefId": "Manual",
-                "lanceTagSet": {
-                    "items": [],
-                    "tagSetSourceFile": ""
-                },
-                "lanceExcludedTagSet": {
-                    "items": [],
-                    "tagSetSourceFile": "Tags/LanceTags"
-                },
-                "spawnEffectTags": {
-                    "items": [
-                        "spawn_poorly_maintained_50"
-                    ],
-                    "tagSetSourceFile": "Tags/SpawnEffectTags"
-                },
-                "lanceDifficultyAdjustment": 0,
-                "selectedLanceDefId": null,
-                "selectedLanceDifficulty": 0,
-                "unitSpawnPointOverrideList": [
-                    {
-                        "unitSpawnPoint": {
-                            "EncounterObjectGuid": "37634f3f-6855-4572-b526-1fa66e770831"
-                        },
-                        "customUnitName": "",
-                        "customHeraldryDefId": "",
-                        "unitType": "Vehicle",
-                        "unitDefId": "vehicledef_GALLEON",
-                        "unitTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "unitExcludedTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/UnitTags"
-                        },
-                        "spawnEffectTags": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/SpawnEffectTags"
-                        },
-                        "pilotDefId": "pilot_d3_gunner",
-                        "pilotTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "pilotExcludedTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/PilotTags"
-                        },
-                        "selectedUnitType": "UNDEFINED",
-                        "selectedUnitDefId": null,
-                        "selectedPilotDefId": null
-                    },
-                    {
-                        "unitSpawnPoint": {
-                            "EncounterObjectGuid": "c2f52419-e1ba-43db-bb53-f2d21eba4f8c"
-                        },
-                        "customUnitName": "",
-                        "customHeraldryDefId": "",
-                        "unitType": "Vehicle",
-                        "unitDefId": "vehicledef_STRIKER",
-                        "unitTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "unitExcludedTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/UnitTags"
-                        },
-                        "spawnEffectTags": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/SpawnEffectTags"
-                        },
-                        "pilotDefId": "pilot_d3_gunner",
-                        "pilotTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "pilotExcludedTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/PilotTags"
-                        },
-                        "selectedUnitType": "UNDEFINED",
-                        "selectedUnitDefId": null,
-                        "selectedPilotDefId": null
-                    },
-                    {
-                        "unitSpawnPoint": {
-                            "EncounterObjectGuid": "3ae6c2d2-470c-4c61-866a-1e2ff3cfb918"
-                        },
-                        "customUnitName": "",
-                        "customHeraldryDefId": "",
-                        "unitType": "Vehicle",
-                        "unitDefId": "vehicledef_SCORPION",
-                        "unitTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "unitExcludedTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/UnitTags"
-                        },
-                        "spawnEffectTags": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/SpawnEffectTags"
-                        },
-                        "pilotDefId": "pilot_d3_gunner",
-                        "pilotTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "pilotExcludedTagSet": {
-                            "items": [],
-                            "tagSetSourceFile": "Tags/PilotTags"
-                        },
-                        "selectedUnitType": "UNDEFINED",
-                        "selectedUnitDefId": null,
-                        "selectedPilotDefId": null
-                    }
-                ]
-            }
-        ]
+        "lanceOverrideList": []
     }
 }
