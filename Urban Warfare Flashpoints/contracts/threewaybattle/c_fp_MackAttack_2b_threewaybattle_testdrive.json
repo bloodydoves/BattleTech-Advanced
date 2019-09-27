@@ -81,7 +81,7 @@
             },
             "title" : "Destroy Opposing {TEAM_HOST.FactionDef.Demonym} Forces",
             "description" : "",
-            "isPrimary" : true,
+            "isPrimary" : false,
             "OnSuccessResults" : [],
             "OnFailureResults" : [],
             "OnSuccessDialogueGUID" : "",
@@ -1259,7 +1259,7 @@
             "encounterChunk" : {
                 "EncounterObjectGuid" : "823304d4-356b-42e4-a804-90c957ee3416"
             },
-            "enableChunkFromContract" : true,
+            "enableChunkFromContract" : false,
             "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
@@ -1277,7 +1277,7 @@
             "encounterChunk" : {
                 "EncounterObjectGuid" : "7b19fb59-bccc-4c75-aa2a-e4fe53b1a3bf"
             },
-            "enableChunkFromContract" : false,
+            "enableChunkFromContract" : true,
             "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
@@ -2531,7 +2531,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "PLACEHOLDER More {TEAM_EMP.FactionDef.Demonym} forces on the field. This is the Secondary Objective Version.",
+                    "words" : "Commander, Wallo's dropped in some backup to keep us from leaving.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -2547,7 +2547,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "PLACEHOLDER Our Employer has kindly added taking this group to contract as a bonus. If we want to make some extra C-bills we can take them out if we want.",
+                    "words" : "Take 'em out so Sumire can pick you up.t",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -2687,7 +2687,23 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "PLACHEHOLDER (Additional Target Forces Secondary). In bound hostile Dropship detected, drop zone marked.",
+                    "words" : "Hey, uh, XO? I'm tracking an inbound blip. Coming in fast and low, like they're making a dropoff.",
+                    "wordsColor" : {
+                        "r" : 1,
+                        "g" : 1,
+                        "b" : 1,
+                        "a" : 1
+                    },
+                    "selectedCastDefId" : "castDef_SumireDefault",
+                    "emote" : "Default",
+                    "audioName" : "NONE",
+                    "cameraFocusGuid" : "7138dd09-10ef-4e9c-977c-1df13a11f126",
+                    "cameraDistance" : "Far",
+                    "cameraHeight" : "Default",
+                    "revealRadius" : -1
+                },
+                {
+                    "words" : "Keep us updated, Meyer. Commander, things might be about to get complicated.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -2697,7 +2713,7 @@
                     "selectedCastDefId" : "castDef_DariusDefault",
                     "emote" : "Default",
                     "audioName" : "NONE",
-                    "cameraFocusGuid" : "7138dd09-10ef-4e9c-977c-1df13a11f126",
+                    "cameraFocusGuid" : "143910b7-d02e-4381-9ec4-571286ce7707",
                     "cameraDistance" : "Far",
                     "cameraHeight" : "Default",
                     "revealRadius" : -1
@@ -4089,7 +4105,7 @@
                 "lanceDefId" : "Tagged",
                 "lanceTagSet" : {
                     "items" : [
-                        "lance_type_notallvehicles"
+                        "lancedef_mech_d5_dynamic_MedSupport"
                     ],
                     "tagSetSourceFile" : "tags/LanceTags"
                 },
