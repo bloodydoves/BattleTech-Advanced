@@ -2,17 +2,17 @@
     "Name": "Urban Warfare Flashpoints",
     "Enabled": true,
 	
-    "Version": "0.1.0 beta",
+    "Version": "0.1.1 beta",
     "Description": "Module adding new Flashpoints to BTA",
     "Author": "Necromis and the BTA Team",
 
-    "DependsOn": [ "Flashpoint_Stock_Photos" ],
+    "DependsOn": [ "Flashpoint_Stock_Photos",
+					"BT Advanced Factions"],
     "ConflictsWith": [],
 
     "Manifest": [
 	
 		{ "Type": "BaseDescriptionDef", "Path": "descriptions" },
-		{ "Type": "CastDef", "Path": "cast" },
 		{ "Type": "ChassisDef", "Path": "chassis" },
 		{ "Type": "ContractOverride", "Path": "contracts/ambushconvoy" },
 		{ "Type": "ContractOverride", "Path": "contracts/arenaskirmish" },
@@ -32,17 +32,13 @@
 		{ "Type": "ContractOverride", "Path": "contracts/travelonly" },
 		{ "Type": "ConversationContent", "Path": "conversations" },
 		{ "Type": "DialogBucketDef", "Path": "conversationBuckets" },
-		{ "Type": "FactionDef", "Path": "factions" },
 		{ "Type": "FlashpointDef", "Path": "flashpoints" },
-		{ "Type": "HeraldryDef", "Path": "heraldry" },
 		{ "Type": "ItemCollectionDef", "Path": "itemCollections" },
 		{ "Type": "MechDef", "Path": "mech" },
 		{ "Type": "PilotDef", "Path": "pilot" },
 		{ "Type": "SimGameEventDef", "Path": "events" },
 		{ "Type": "SimGameMilestoneSet", "Path": "milestoneSets" },
 		{ "Type": "SimGameConversations", "Path": "simGameConversations" },
-		{ "Type": "Texture2D", "Path": "textures/emblems/factions" },
-		{ "Type": "Sprite", "Path": "textures/emblems/factions" },
 		{ "Type": "Sprite", "Path": "sprites" },
 		{ "Type": "Texture2D",  "Path": "textures/portraits", "AddToAddendum": "ConversationTexture" }
 		
