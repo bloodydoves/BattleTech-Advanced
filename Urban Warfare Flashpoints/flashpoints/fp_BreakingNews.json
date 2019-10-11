@@ -1,0 +1,63 @@
+{
+    "Description" : {
+        "Id" : "fp_BreakingNews",
+        "Name" : "Breaking News",
+        "Details" : "Big target, big payout. Hunt down these animals.",
+        "Icon" : "uixTxrTimeLine_BreakingNews.png"
+    },
+    "Weight" : 200,
+    "InternalName" : "BreakingNews",
+    "PublishState" : "PUBLISHED",
+    "Difficulty" : 6,
+    "Requirements" : [
+        {
+            "Scope" : "Company",
+            "RequirementTags" : {
+                "items" : [
+					"fp_tbk_enabled"
+				],
+                "tagSetSourceFile" : "Tags/CompanyTags"
+            },
+            "ExclusionTags" : {
+                "items" : [
+					"fp_AKnightAtTheOmni_Complete"
+				],
+                "tagSetSourceFile" : "Tags/CompanyTags"
+            },
+            "RequirementComparisons" : []
+        }
+    ],
+    "LocationRequirements" : {
+        "Scope" : "StarSystem",
+        "RequirementTags" : {
+            "items" : [
+			
+                "planet_name_repulse"
+				
+            ],
+            "tagSetSourceFile" : "Tags/PlanetNameTags"
+        },
+        "ExclusionTags" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/PlanetTags"
+        },
+        "RequirementComparisons" : []
+    },
+    "PotentialEmployers" : [
+        "Liao"
+    ],
+    "TargetFaction" : "Wolfs_Dragoons",
+    "AllowRefitTime" : true,
+    "FlashpointLength" : "MEDIUM",
+    "Repeatable" : false,
+    "MilestoneSetID" : "ms_fp_BreakingNews",
+    "UseAvailableTimeoutOverride" : false,
+    "AvailableTimeout" : 180,
+    "UseInProgressTimeoutOverride" : false,
+    "InProgressTimeout" : 180,
+    "RewardCollectionID" : "itemCollection_loot_FP_generic_rare",
+    "UnitDropTonnageHint" : "None",
+    "LanceDropTonnageHint" : "None",
+    "FlashpointShortDescription" : "We need your company for a large bounty on a rogue company of the Wolf's Dragoons.",
+    "FlashpointDescriberCastDefId" : "castDef_LiaoRepDefault"
+}
