@@ -17,7 +17,6 @@
 				"ThermalVision: 1",
 				"ThermalVisionHeat: 50",
                 "Recoil: -1",
-                "CalledShot: 20%",
                 "FCS"
             ]
         },
@@ -41,7 +40,7 @@
         "Icon": "uixSvgIcon_equipment_Cockpit"
     },
     "BonusValueA": "Breaching Shot",
-    "BonusValueB": "Imprv. Called Shot",
+    "BonusValueB": "",
     "ComponentType": "Upgrade",
     "ComponentSubType": "NotSet",
     "PrefabIdentifier": "",
@@ -86,8 +85,8 @@
             "effectType": "StatisticEffect",
             "Description": {
                 "Id": "TCRecoil",
-                "Name": "Improved Called Shot",
-                "Details": "Called Shots twice as reliable",
+                "Name": "Improved Recoil",
+                "Details": "Recoil reduction",
                 "Icon": "uixSvgIcon_ability_mastertactician"
             },
             "statisticData": {
@@ -96,28 +95,6 @@
                 "modValue": "-1",
                 "modType": "System.Int32",
                 "targetCollection": "Weapon"
-            }
-        },
-        {
-            "durationData": {
-                "duration": -1
-            },
-            "targetingData": {
-                "effectTriggerType": "Passive",
-                "effectTargetType": "Creator"
-            },
-            "effectType": "StatisticEffect",
-            "Description": {
-                "Id": "TCCALLSHOT",
-                "Name": "Improved Called Shot",
-                "Details": "Called Shots twice as reliable",
-                "Icon": "uixSvgIcon_ability_mastertactician"
-            },
-            "statisticData": {
-                "statName": "CalledShotBonusMultiplier",
-                "operation": "Float_Multiply",
-                "modValue": "1.2",
-                "modType": "System.Single"
             }
         }
     ],

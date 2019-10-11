@@ -1,4 +1,4 @@
-CustomSalvage [LOG] Loaded CustomSalvage v0.1.4 for bt 1.5.2
+CustomSalvage [LOG] Loaded CustomSalvage v0.3 for bt 1.7
 CustomSalvage [DEBUG] done
 CustomSalvage [DEBUG] {
     "LogLevel" : "Debug",
@@ -10,12 +10,13 @@ CustomSalvage [DEBUG] {
     "LimbRecoveryPenalty" : 0.05,
     "TorsoRecoveryPenalty" : 0.1,
     "HeadRecoveryPenaly" : 0,
-    "EjectRecoveryBonus" : 0.25,
+    "EjectRecoveryBonus" : 1,
     "CenterTorsoDestroyedParts" : 1,
     "SalvageArmWeight" : 0.75,
     "SalvageLegWeight" : 0.75,
     "SalvageTorsoWeight" : 1,
     "SalvageHeadWeight" : 0.5,
+    "SalvageCTWeight" : 1.5,
     "VACTDestroyedMod" : 0.35,
     "VABLDestroyedMod" : 0.68,
     "SalvageTurrets" : true,
@@ -104,10 +105,13 @@ CustomSalvage [DEBUG] {
     "ExcludeTags" : [
         "BLACKLISTED"
     ],
-    "ExclideVariants" : [
+    "ExcludeVariants" : [
         
     ],
     "SpecialTags" : null,
+    "AllowScrapToParts" : true,
+    "MinScrapParts" : 0.51,
+    "MaxScrapParts" : 0.91,
     "MaxVariantsInDescription" : 5,
     "UnEquipedMech" : false,
     "BrokenMech" : false,
@@ -135,4 +139,3 @@ CustomSalvage [DEBUG] {
     "OmniSpecialtoNormalMod" : 0.25,
     "OmniNormalMod" : 0
 }
-CustomSalvage [DEBUG] Started Event: event_mw_moonlighting_MedLaser

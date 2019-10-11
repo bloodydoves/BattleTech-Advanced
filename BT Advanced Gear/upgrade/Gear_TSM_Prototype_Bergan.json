@@ -200,7 +200,7 @@
             "Description" : {
                 "Id" : "StatusEffect-Heat_TSM",
                 "Name" : "HEAT GENERATION INCREASED",
-                "Details" : "Heat generation increased by 12.",
+                "Details" : "Heat generation increased by 15%.",
                 "Icon" : "uixSvgIcon_equipment_ThermalExchanger"
             },
             "nature" : "Buff",
@@ -208,8 +208,8 @@
                 "appliesEachTick" : false,
                 "effectsPersistAfterDestruction" : false,
                 "statName" : "HeatGenerated",
-                "operation" : "Float_Add",
-                "modValue" : "12",
+                "operation" : "Float_Multiply",
+                "modValue" : "1.15",
                 "modType" : "System.Single",
                 "additionalRules" : "NotSet",
                 "targetCollection" : "Weapon",

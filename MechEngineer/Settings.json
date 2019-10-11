@@ -1,13 +1,9 @@
 {
 	"MechLabGeneralSlots" : 0,
-
     "EngineMissingFallbackHeatSinkCapacity" : 0,
-
 	"MechLabScale" : 0.85,
     "MechLabPositionY" : 40,
-	
 	"AutoFixChassisDefMaxJumpjets" : false,
-	
 	"AutoFixUpgradeDefSkip" : [
         "Gear_Cockpit_SLDF_Custom",
         "Gear_Cockpit_Generic_Small",
@@ -21,23 +17,51 @@
         "emod_leg_lower",
         "emod_leg_foot"
     ],
-	
+	"NewSaveFolder" : {
+        "Enabled" : true,
+        "EnabledDescription" : "Redirects all save operations to use one folder for all save related data.",
+        "Path" : "BTASaves"
+    },
+    "TagManager" : {
+        "Enabled" : true,
+        "EnabledDescription" : "Manipulates MechDef and ComponentDef Tags",
+        "LostechStockWeaponVariantFix" : true,
+        "LostechStockWeaponVariantDescription" : "Fixes lostech variant weapon tagging by checking if id ends with -STOCK.",
+        "SkirmishWhitelistTags" : [
+            "component_type_stock"
+        ],
+        "SkirmishWhitelistTagsDescription" : "Components with these tags will appear in the skirmish mechlab, blacklisted tagged items never appear.",
+        "WhitelistComponentTags" : [
+            "component_type_stock",
+            "component_type_variant",
+            "component_type_lostech"
+        ],
+        "WhitelistComponentTagsDescription" : "Whitelists components with specified tags.",
+        "BlacklistComponentTags" : [
+            "BLACKLISTED"
+        ],
+        "BlacklistComponentTagsDescription" : "Blacklists components with specified tags, has precedence over whitelisting.",
+        "WhitelistMechTags" : [
+            "unit_release"
+        ],
+        "WhitelistMechTagsDescription" : "Similar to WhitelistComponentTags but with MechTags",
+        "BlacklistMechTags" : [
+
+        ],
+        "BlacklistMechTagsDescription" : "Similar to BlacklistComponentTags but with MechTags"
+    },
 	"ArmorStructureRatio" : {
         "SkipMechDefs" : [],
         "Enabled" : false
 	},
-	
 	"AutoFixMechDefSkip" : [
 		"mechdef_urbanmech_UM-R50"
     ],
-	
 	"OverrideTonnage" : {
         "FractionalAccountingPrecision" : 0.5,
         "Enabled" : true
     },
-	
 	"ChassisDefInitialToTotalTonnageFactor" : 0,
-	
 	"AutoFixGyroCategorizer": null,
 	"AutoFixMechDefGyroAdder": null,
 	"AutoFixGyroSlotChange": null,
@@ -56,7 +80,6 @@
 	"AutoFixCockpitSlotChange": null,
 	"AutoFixChassisDefSlotsChanges": null,
 	"ArmorStructureRatioEnforcement" : false,
-	
 	"AutoFixer" : {
         "MechDefSkip" : [
             
@@ -243,7 +266,7 @@
             "Type" : "AC5",
             "Change" : {
                 "From" : 2,
-                "By" : 2,
+                "By" : 0,
                 "FromIsMin" : false
             }
         },
@@ -251,7 +274,7 @@
             "Type" : "AC10",
             "Change" : {
                 "From" : 3,
-                "By" : 2,
+                "By" : 0,
                 "FromIsMin" : false
             }
         },
@@ -259,7 +282,7 @@
             "Type" : "AC20",
             "Change" : {
                 "From" : 4,
-                "By" : 1,
+                "By" : 0,
                 "FromIsMin" : false
             }
         },
@@ -289,5 +312,5 @@
         }
     ],
         "Enabled" : true
-    },
+    }
 }

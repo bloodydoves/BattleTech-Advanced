@@ -9,7 +9,35 @@
 	"ReqSkill" : "Guts",
 	"ReqSkillLevel" : 8,
 	"ActivationTime" : "Passive",
-    "Targeting" : "NotSet",
-    "ActivationCooldown" : 4,
+	"EffectData" :
+	[
+		{
+			"durationData" :
+			{
+				"duration" : -1
+			},
+			"targetingData" : 
+			{
+				"effectTriggerType" : "OnActivation",
+				"effectTargetType" : "Creator"
+			},
+			"effectType" : "StatisticEffect",
+			"Description" :
+			{
+				"Id" : "AbilityDefGu8",
+        		"Name" : "JUGGERNAUT",
+		        "Details" : "PASSIVE: Successful Melee attacks knock your target back one Initiative Phase.",
+				"Icon" : "uixSvgIcon_juggernaut"
+			},
+			"statisticData" : 
+			{
+				"statName" : "MeleeHitPushBackPhases",
+				"operation" : "Int_Add",
+				"modValue" : "1",
+				"modType" : "System.Int32"
+			},
+			"nature" : "Buff"
+		}
+	],
 	"IsPrimaryAbility" : true
 }

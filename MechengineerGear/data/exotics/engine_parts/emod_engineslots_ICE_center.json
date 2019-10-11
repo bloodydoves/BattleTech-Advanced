@@ -9,10 +9,11 @@
 				"CBillCost": "[[Chassis.Tonnage]]/10"
 			}
 		},
-		"Category" : { 
-			"CategoryID" : "EngineShield" 
-		},
-		"Flags" : { "flags" : [ "engine_part" ] },
+		"Category" : [
+			{"CategoryID": "EngineShield"},
+			{"CategoryID": "EnginePart"}
+		],
+		"Flags" : { "flags" : [ "engine_part", "vital", "no_salvage" ] },
 		"ArmorRepair" : { "ArmorTPCost" : 0.8, "ArmorCBCost" : 0.7 },
         "BonusDescriptions": {
             "Bonuses": [
@@ -155,7 +156,7 @@
                 "effectsPersistAfterDestruction" : false,
                 "statName" : "HeatGenerated",
                 "operation" : "Float_Multiply",
-                "modValue" : "0.6",
+                "modValue" : "0.8",
                 "modType" : "System.Single",
                 "additionalRules" : "NotSet",
                 "targetCollection" : "Weapon",

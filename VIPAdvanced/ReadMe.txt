@@ -1,6 +1,28 @@
 VIP/RogueTech Tanks Ported for BloodyDoves' Battletech Advanced mod.
 Used and adapted with permission and help by Cargo Vroom.
 
+0.2.9 - 8/4/2019
+
+Temporary (?) addition of some lances from old VIP that solve some problems i forgot existed.
+	They're put in folder OldVIPlances for easy sorting later.
+	They should improve scaling on low skull vehicle lances.
+
+0.2.8 - 7/30/2019
+
+Set Pegasus to use Colo's model,
+minor fixes
+
+0.2.7
+
+Removed some redundant tag requirements from apc convoy lances,
+Removed some calls for Faction units in custom contracts that might be problematic since BTA doesn't have mechs faction tagged
+
+
+0.2.6
+
+Added OpForConvoy lances,
+Added contract overides to use them.
+
 0.1.6 - 6/24/2019
 
 Pruned some more vee things from outside VIPAdvanced for compat reasons,

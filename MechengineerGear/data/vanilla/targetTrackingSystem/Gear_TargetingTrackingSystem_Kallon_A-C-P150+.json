@@ -1,0 +1,110 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "SensorsB"
+			}
+		],
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "[[Chassis.Tonnage]]/10",
+				"CBillCost": "[[Chassis.Tonnage]] * 1.15"
+			}
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"BallisticAcc: +3",
+				"IsSensorsB"
+			]
+		},
+		"InventorySorter": {
+			"SortKey": "00201"
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 1540000,
+		"Rarity": 5,
+		"Purchasable": true,
+		"Manufacturer": "Kallon",
+		"Model": "A-C P150+",
+		"UIName": "TTS + +",
+		"Id": "Gear_TargetingTrackingSystem_Kallon_A-C-P150+",
+		"Name": "Kallon A-C P150+ TTS",
+		"Details": "All 'Mechs come equipped with a stock targeting and tracking system—or TTS—which can be upgraded for improved performance. Upgrades increase accuracy when attacking with Ballistic, Energy, or Missile weaponry, depending on the type of TTS.",
+		"Icon": "uixSvgIcon_equipment_TTS"
+	},
+	"BonusValueA": "+ 3 Acc. (Ballistic)",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 3,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": -1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-Attack_ToHitBallistic-T3",
+				"Name": "BALLISTIC WEAPON HIT CHANCE IMPROVED",
+				"Details": "Ballistic weapon attacks have their hit improved by [AMT].",
+				"Icon": "uixSvgIcon_equipment_TTS"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "AccuracyModifier",
+				"operation": "Float_Add",
+				"modValue": "-3.0",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "Ballistic",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_variant",
+			"component_type_variant3"
+		],
+		"tagSetSourceFile": ""
+	}
+}
