@@ -1,13 +1,12 @@
 {
 	"Custom": {
-		"ComponentExplosion": { "HeatDamage": 25, "ExplosionDamage": 25, "StabilityDamage": 25 },
+		"ComponentExplosion": { "HeatDamage": 50, "ExplosionDamage": 50, "StabilityDamage": 50 },
 		"BonusDescriptions": {
 			"Bonuses": [
 				"CoolingSystemDHS",
-				"TEHeatgen: -20%",
 				"BankMaxHeat: 30",
-				"BankThreshhold: 30",
-				"BankBoom: 25"
+				"BankThreshhold: 10",
+				"BankBoom: 50"
 			]
 		},
 		"Cooling": {
@@ -40,7 +39,7 @@
         "UIName" : "Heat Sink Kit (Proto)",
         "Id" : "emod_kit_dhs_proto",
         "Name" : "Proto DHS Engine Kit",
-        "Details" : "Converts an SHS engine to use Prototype Double Heatsinks. Treating the Engines <b>Cooling System</b> with this experimental system improves the general performance at risk of a Fatal Explosion. <b><color=#099ff2>VOLATILE!</color></b>",
+        "Details" : "Converts an SHS engine to use Prototype Double Heatsinks. Treating the Engines <b>Cooling System</b> with this experimental system improves the general performance at risk of a Fatal Explosion. The prototype nature of these heat sinks also increases the equipped mech's heat thresholds. <b><color=#099ff2>VOLATILE!</color></b>",
         "Icon" : "uixSvgIcon_equipment_Heatsink"
     },
     "BonusValueA" : "",
@@ -132,7 +131,7 @@
             "Description" : {
                 "Id" : "StatusEffect-Overheat_Threshold-PDHSKIT",
                 "Name" : "Increased Overheat Level",
-                "Details" : "Overheat threshold increased by 5",
+                "Details" : "Overheat threshold increased by 10",
                 "Icon" : "uixSvgIcon_equipment_HeatBank"
             },
             "nature" : "Buff",
@@ -141,7 +140,7 @@
                 "effectsPersistAfterDestruction" : false,
                 "statName" : "OverheatLevel",
                 "operation" : "Int_Add",
-                "modValue" : "30",
+                "modValue" : "10",
                 "modType" : "System.Int32",
                 "additionalRules" : "NotSet",
                 "targetCollection" : "NotSet",
@@ -156,58 +155,7 @@
             "vfxData" : null,
             "instantModData" : null,
             "poorlyMaintainedEffectData" : null
-        },
-        {
-            "durationData" : {
-                "duration" : -1,
-                "ticksOnActivations" : false,
-                "useActivationsOfTarget" : false,
-                "ticksOnEndOfRound" : false,
-                "ticksOnMovements" : false,
-                "stackLimit" : 1,
-                "clearedWhenAttacked" : false
-            },
-            "targetingData" : {
-                "effectTriggerType" : "Passive",
-                "triggerLimit" : 0,
-                "extendDurationOnTrigger" : 0,
-                "specialRules" : "NotSet",
-                "effectTargetType" : "Creator",
-                "range" : 0,
-                "forcePathRebuild" : false,
-                "forceVisRebuild" : false,
-                "showInTargetPreview" : false,
-                "showInStatusPanel" : false
-            },
-            "effectType" : "StatisticEffect",
-            "Description" : {
-                "Id" : "StatusEffect-Heat_GenReduction-PDHSKIT",
-                "Name" : "HEAT GENERATION DECREASED",
-                "Details" : "Heat generation reduced by 10%.",
-                "Icon" : "uixSvgIcon_equipment_ThermalExchanger"
-            },
-            "nature" : "Buff",
-            "statisticData" : {
-                "appliesEachTick" : false,
-                "effectsPersistAfterDestruction" : false,
-                "statName" : "HeatGenerated",
-                "operation" : "Float_Multiply",
-                "modValue" : "0.8",
-                "modType" : "System.Single",
-                "additionalRules" : "NotSet",
-                "targetCollection" : "Weapon",
-                "targetWeaponCategory" : "NotSet",
-                "targetWeaponType" : "NotSet",
-                "targetAmmoCategory" : "NotSet",
-                "targetWeaponSubType" : "NotSet"
-            },
-            "tagData" : null,
-            "floatieData" : null,
-            "actorBurningData" : null,
-            "vfxData" : null,
-            "instantModData" : null,
-            "poorlyMaintainedEffectData" : null
-        }		
+        }	
 	],
     "ComponentTags" : {
         "items" : [
