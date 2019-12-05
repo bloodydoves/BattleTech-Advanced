@@ -21,8 +21,8 @@
             }
         },
         {
-            "Name" : "CockpitFCS",
-            "DisplayName" : "FCS",
+            "Name" : "SensorsA",
+            "DisplayName" : "Sensors",
             "MaxEquiped" : 1,
             "MinEquiped" : 1,
             "AutoReplace" : true,
@@ -57,12 +57,12 @@
                     "Order" : 2
                 },
                 "CriticalEffects" : {
-                    
+                    "DeathMethod" : "PilotKilled"
                 }
             }
         },
         {
-            "Name" : "CockpitSensors",
+            "Name" : "SensorsB",
             "DisplayName" : "Sensors",
             "MaxEquiped" : 1,
             "MinEquiped" : 1,
@@ -110,6 +110,8 @@
             "MinEquiped" : 1,
             "AutoReplace" : true,
             "DefaultCustoms" : {
+                "MechConfiguration" : {
+                },
                 "InventorySorter" : {
                     "SortKey" : "CzOrder0"
                 },
@@ -118,6 +120,12 @@
                 },
                 "Sorter" : {
                     "Order" : 0
+                },
+                "Flags" : {
+                    "Flags" : [
+                        "ignore_damage",
+                        "no_salvage"
+                    ]
                 }
             }
         },
@@ -128,6 +136,8 @@
             "MinEquiped" : 1,
             "AutoReplace" : true,
             "DefaultCustoms" : {
+                "MechConfiguration" : {
+                },
                 "Color" : {
                     "UIColor" : "OrangeHalf"
                 },
@@ -136,6 +146,12 @@
                 },
                 "Sorter" : {
                     "Order" : 1
+                },
+                "Flags" : {
+                    "Flags" : [
+                        "ignore_damage",
+                        "no_salvage"
+                    ]
                 }
             }
         },
@@ -146,11 +162,19 @@
             "MinEquiped" : 1,
             "AutoReplace" : true,
             "DefaultCustoms" : {
+                "MechConfiguration" : {
+                },
                 "InventorySorter" : {
                     "SortKey" : "CzOrder2"
                 },
                 "Sorter" : {
                     "Order" : 2
+                },
+                "Flags" : {
+                    "Flags" : [
+                        "ignore_damage",
+                        "no_salvage"
+                    ]
                 }
             }
         },
@@ -263,6 +287,7 @@
                     "Order" : 0
                 },
                 "CriticalEffects" : {
+                    "DestroyedFloatieMessage" : "Actuator DESTROYED",
                     "OnDestroyedEffectIDs" : ["CriticalEffect-HipDestroyed-{location}"],
 					"OnDestroyedDisableEffectIds" : [
 						"CriticalEffect-LegUpperActuatorDestroyed-{location}",
@@ -286,6 +311,7 @@
                     "Order" : 1
                 },
                 "CriticalEffects" : {
+                    "DestroyedFloatieMessage" : "Actuator DESTROYED",
                     "OnDestroyedEffectIDs" : ["CriticalEffect-LegUpperActuatorDestroyed-{location}"]
                 }
             }
@@ -304,6 +330,7 @@
                     "Order" : 2
                 },
                 "CriticalEffects" : {
+                    "DestroyedFloatieMessage" : "Actuator DESTROYED",
                     "OnDestroyedEffectIDs" : ["CriticalEffect-LegLowerActuatorDestroyed-{location}"]
                 }
             }
@@ -322,6 +349,7 @@
                     "Order" : 3
                 },
                 "CriticalEffects" : {
+                    "DestroyedFloatieMessage" : "Actuator DESTROYED",
                     "OnDestroyedEffectIDs" : ["CriticalEffect-LegFootActuatorDestroyed-{location}"]
                 }
             }
@@ -370,6 +398,7 @@
                     "SortKey" : "ActuatorArm0"
                 },
                 "CriticalEffects" : {
+                    "DestroyedFloatieMessage" : "Actuator DESTROYED",
                     "OnDestroyedEffectIDs" : ["CriticalEffect-ShoulderDestroyed-{location}"],
 					"OnDestroyedDisableEffectIds" : [
 						"CriticalEffect-ArmUpperActuatorDestroyed-{location}",
@@ -387,6 +416,7 @@
                     "SortKey" : "ActuatorArm1"
                 },
                 "CriticalEffects" : {
+                    "DestroyedFloatieMessage" : "Actuator DESTROYED",
                     "OnDestroyedEffectIDs" : ["CriticalEffect-ArmUpperActuatorDestroyed-{location}"]
                 }
             }
@@ -399,6 +429,7 @@
                     "SortKey" : "ActuatorArm2"
                 },
                 "CriticalEffects" : {
+                    "DestroyedFloatieMessage" : "Actuator DESTROYED",
                     "OnDestroyedEffectIDs" : ["CriticalEffect-ArmLowerActuatorDestroyed-{location}"]
                 }
             }
@@ -411,6 +442,7 @@
                     "SortKey" : "ActuatorArm3"
                 },
                 "CriticalEffects" : {
+                    "DestroyedFloatieMessage" : "Actuator DESTROYED",
                     "OnDestroyedEffectIDs" : ["CriticalEffect-ArmHandActuatorDestroyed-{location}"]
                 }
             }

@@ -1,92 +1,98 @@
 {
-  "Name": "PanicSystem",
+    "Name": "PanicSystem",
 
-  "Enabled": true,
+    "Enabled": true,
+    "Hidden": true,
 
-  "Version": "3.4.8",
-  "Description": "Simulates mechwarrior panic and automatic ejections",
-  "Website": "https://github.com/gnivler/PanicSystem",
+    "Version": "3.5.4",
+    "Description": "Simulates mechwarrior panic and automatic ejections",
+    "Website": "https://github.com/gnivler/PanicSystem",
 
-  "DLL": "PanicSystem.dll",
+    "DLL": "PanicSystem.dll",
+    "DLLEntryPoint": "PanicSystem.PanicSystem.Init",
 
-  "Settings": {
-    "Debug": false,
+    "Settings": {
+        "Debug": false,
 
-    /* readds phrases.txt file and displays one randomly at eject */
-    "EnableEjectPhrases": true,
-    "EjectPhraseChance": 100,
+        /* reads phrases.txt file and displays one randomly at eject */
+        "EnableEjectPhrases": true,
+        "EjectPhraseChance": 100,
 
-    /* greatly increases the visual feedback, like saving throw results */
-    "FloatieSpam": false,
-    
-    /* Modify floatie appearance? */
-    "ColorizeFloaties": true,
-    /* Panic Settings */
-    "PlayersCanPanic": false,
-    "EnemiesCanPanic": true,
-    "ConsiderEjectingWithNoWeaps": false,
-	"LosingLimbAlwaysPanics": false,
-    "OneChangePerTurn": false,
+        /* greatly increases the visual feedback, like saving throw results */
+        "FloatieSpam": false,
 
-    /* percent of remaining armor that must be destroyed to cause a panic save */
-    "MinimumArmorDamagePercentageRequired": 10,
+        /* Modify floatie appearance? */
+        "ColorizeFloaties": true,
 
-    /* integer number of cumulative structure damage required to cause a panic save */
-    "MinimumStructureDamageRequired": 5,
+        /* Do Ejections count as kills? */
+        "CountAsKills": true,
 
-	/* Effect Modifiers */
-    "UnsteadyModifier": 5,
-    "PilotHealthMaxModifier": 25,
-    "HeadMaxModifier": 25,
-    "CenterTorsoMaxModifier": 100,
-    "SideTorsoMaxModifier": 25,
-    "LeggedMaxModifier": 15,
-    "WeaponlessModifier": 15,
-    "AloneModifier": 5,
-    "ResolveMaxModifier": 10,
-    "OverheatedModifier": 0,
-    "ShutdownModifier": 0,
-    "HeatDamageModifier": 0,
+        /* Panic Settings */
+        "PlayersCanPanic": false,
+        "EnemiesCanPanic": true,
+        "ConsiderEjectingWithNoWeaps": false,
+        "LosingLimbAlwaysPanics": false,
 
-    /* AI Resolve goes to 50 */
-    "MedianResolve": 50,
-    
-    /* factors that affect only panic saving throws based on existing panic state */
-    "UnsettledPanicModifier": 1,
-    "StressedPanicModifier" : 0.66,
-    "PanickedPanicModifier" : 0.50,
+        /* percent of remaining armor that must be destroyed to cause a panic save */
+        "MinimumArmorDamagePercentageRequired": 10,
 
-	/* Ejection Bonuses and Limits */
-    "GutsEjectionResistPerPoint": 3,
-    "TacticsEjectionResistPerPoint": 0,	
-    
-    /* subtracted from all eject saving throws */
-    "BaseEjectionResist": 75,
+        /* integer number of cumulative structure damage required to cause a panic save */
+        "MinimumStructureDamageRequired": 5,
 
-    /* ceiling for eject saving throw */
-    "MaxEjectChance": 100,
-    
-    /* applied after entire calculation */
-    "EjectChanceMultiplier": 1,
-    
-    /* Pilot Quirk Effects https://www.nexusmods.com/battletech/mods/282/ */
-    "QuirksEnabled": true,
-    "BraveModifier": 5,
-    "DependableModifier": 5,
+        /* Effect Modifiers */
+        "UnsteadyModifier": 5,
+        "PilotHealthMaxModifier": 25,
+        "HeadMaxModifier": 25,
+        "CenterTorsoMaxModifier": 100,
+        "SideTorsoMaxModifier": 25,
+        "LeggedMaxModifier": 15,
+        "WeaponlessModifier": 15,
+        "AloneModifier": 5,
+        "ResolveMaxModifier": 10,
+        "OverheatedModifier": 0,
+        "ShutdownModifier": 0,
+        "HeatDamageModifier": 0,
 
-    /* new Mech Quirk effects TBA */
-    "DistractingModifier": 5,
-	/* to-hit and to-be-hit modifiers, by panic level */
-    "UnsettledAttackModifier": 1,
-    "StressedAimModifier": 1,
-    "StressedToHitModifier": -1,
-    "PanickedAimModifier": 2,
-    "PanickedToHitModifier": -2,
+        /* AI Resolve goes to 50 */
+        "MedianResolve": 50,
 
-    /* panic crits won't occur below this percentage */
-    "MechHealthForCrit": 30,
+        /* factors that affect only panic saving throws based on existing panic state */
+        "UnsettledPanicModifier": 1,
+        "StressedPanicModifier": 0.66,
+        "PanickedPanicModifier": 0.50,
 
-    /* if you miss your saving throw by this number it's a critical failure */
-    "CritOver": 25,
-	}
+        /* Ejection Bonuses and Limits */
+        "GutsEjectionResistPerPoint": 3,
+        "TacticsEjectionResistPerPoint": 0,
+
+        /* subtracted from all eject saving throws */
+        "BaseEjectionResist": 75,
+
+        /* ceiling for eject saving throw */
+        "MaxEjectChance": 100,
+
+        /* applied after entire calculation */
+        "EjectChanceMultiplier": 1,
+
+        /* Pilot Quirk Effects https://www.nexusmods.com/battletech/mods/282/ */
+        "QuirksEnabled": true,
+        "BraveModifier": 5,
+        "DependableModifier": 5,
+
+        /* new Mech Quirk effects TBA */
+        "DistractingModifier": 5,
+
+        /* to-hit and to-be-hit modifiers, by panic level */
+        "UnsettledAttackModifier": 1,
+        "StressedAimModifier": 1,
+        "StressedToHitModifier": -1,
+        "PanickedAimModifier": 2,
+        "PanickedToHitModifier": -2,
+
+        /* panic crits won't occur below this percentage */
+        "MechHealthForCrit": 30,
+
+        /* if you miss your saving throw by this number it's a critical failure */
+        "CritOver": 25
+    }
 }
