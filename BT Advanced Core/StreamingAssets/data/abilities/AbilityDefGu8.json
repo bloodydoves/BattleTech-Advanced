@@ -1,0 +1,43 @@
+{
+	"Description" : {
+		"Id" : "AbilityDefGu8",
+		"Name" : "JUGGERNAUT",
+		"Details" : "PASSIVE: This mechwarrior can CHARGE into melee at sprint range. Successful Melee attacks knock your target back one Initiative Phase. Regular Melee attacks grant GUARDED after the attack.",
+		"Icon" : "uixSvgIcon_juggernaut"
+	},
+    "DisplayParams" : "ShowInMWTRay",
+	"ReqSkill" : "Guts",
+	"ReqSkillLevel" : 8,
+	"ActivationTime" : "Passive",
+	"EffectData" :
+	[
+		{
+			"durationData" :
+			{
+				"duration" : -1
+			},
+			"targetingData" : 
+			{
+				"effectTriggerType" : "OnActivation",
+				"effectTargetType" : "Creator"
+			},
+			"effectType" : "StatisticEffect",
+			"Description" :
+			{
+				"Id" : "AbilityDefGu8",
+        		"Name" : "JUGGERNAUT",
+		        "Details" : "PASSIVE: Successful Melee attacks knock your target back one Initiative Phase.",
+				"Icon" : "uixSvgIcon_juggernaut"
+			},
+			"statisticData" : 
+			{
+				"statName" : "MeleeHitPushBackPhases",
+				"operation" : "Int_Add",
+				"modValue" : "1",
+				"modType" : "System.Int32"
+			},
+			"nature" : "Buff"
+		}
+	],
+	"IsPrimaryAbility" : true
+}
