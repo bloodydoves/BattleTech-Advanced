@@ -1,11 +1,11 @@
 Levels :Spam True :Debug True :Info True :Warn True
 [Info] Harmony? 1.2.0.1
 [Info] Unity? 2018.4.2f1
-[Info] Product? BATTLETECH-1.7.0-589R
-[Info] ModTek? 0.7.3.0
-[Info] Initialized com.github.m22spencer.BattletechPerformanceFix 2.9.14.24202
-[Info] Mod-Dir? F:\Games\GalaxyClient\Games\Battletech - mod testing\Mods\BattletechPerformanceFix
-[Info] BattletechPerformanceFix found BattleTech 1.7.0 and will now load
+[Info] Product? BATTLETECH-1.8.0-629R
+[Info] ModTek? 0.7.6.4
+[Info] Initialized com.github.m22spencer.BattletechPerformanceFix 2.11.2.12678
+[Info] Mod-Dir? F:\Games\GalaxyClient\Games\BATTLETECH\Mods\BattletechPerformanceFix
+[Info] BattletechPerformanceFix found BattleTech 1.8.0 and will now load
 [Info] Features ----------
 [Info] Feature MechlabFix is ON
 [Info] Feature LoadFixes is ON
@@ -16,8 +16,9 @@ Levels :Spam True :Debug True :Info True :Warn True
 [Info] Feature EnableLoggingDuringLoads is ON
 [Info] Feature ExtraLogging is ON
 [Info] Feature ShaderDependencyOverride is ON
-[Info] Feature GhostBlipOverride is OFF
-[Info] Feature DisableDeployAudio is ON
+[Info] Feature DisableDeployAudio is OFF
+[Info] Feature RemovedFlashpointFix is ON
+[Info] Feature DisableSimAnimations is OFF
 [Info] Patches ----------
 [Info] Feature MechlabFix:
 [Info] Patch: AAR_SalvageScreen.BeginSalvageScreen -> MechlabFix.BeginSalvageScreen_Pre
@@ -53,56 +54,131 @@ Levels :Spam True :Debug True :Info True :Warn True
 [Info] Patch: AssetBundleManager.GenerateWebRequest -> ShaderDependencyOverride.GetManager
 [Info] Patch: AssetBundleManager.IsBundleLoaded -> ShaderDependencyOverride.WithShaderDeps
 [Info] Patch: AssetBundleManager.GenerateWebRequest -> ShaderDependencyOverride.WithShaderDeps
-[Info] Feature DisableDeployAudio:
-[Info] Patch: LanceConfiguratorPanel.ContinueConfirmClicked -> DisableDeployAudio.ContinueConfirmClicked_Pre
-[Info] Patch: LanceConfiguratorPanel.ContinueConfirmClicked -> DisableDeployAudio.ContinueConfirmClicked_Post
+[Info] Feature RemovedFlashpointFix:
+[Info] Patch: SimGameState.Rehydrate -> RemovedFlashpointFix.Rehydrate_Pre
 [Info] Runtime ----------
 [Info] Patch out sensitive data log dumps
-[Info] LogLevel Debug
+[Info] LogLevel debug
 Levels :Spam False :Debug True :Info True :Warn True
 [Debug] Found bundle manager
 [Debug] :load "computeshaders" :deps []
 [Debug] :load "computeshaders" :deps []
 [Debug] :load "computeshaders" :deps []
 [Debug] :load "computeshaders" :deps []
-[Debug] :load "flashpoint" :deps []
-[Debug] :load "flashpoint" :deps []
-[Debug] :load "flashpoint" :deps []
-[Debug] :load "shadowhawkdlc" :deps []
-[Debug] :load "shadowhawkdlc" :deps []
-[Debug] :load "shadowhawkdlc" :deps []
-[Debug] :load "urbanwarfare" :deps []
-[Debug] :load "urbanwarfare" :deps []
-[Debug] :load "urbanwarfare" :deps []
-[Debug] :load "urbanwarfare" :deps []
-[Debug] :load "urbanwarfare" :deps []
-[Debug] :load "shadowhawkdlc" :deps []
-[Debug] :load "shadowhawkdlc" :deps []
-[Debug] :load "flashpoint" :deps []
-[Debug] :load "flashpoint" :deps []
 [Debug] :load "computeshaders" :deps []
 [Debug] :load "computeshaders" :deps []
 [Debug] :load "computeshaders" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "shadowhawkdlc" :deps []
+[Debug] :load "shadowhawkdlc" :deps []
+[Debug] :load "shadowhawkdlc" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
 [Debug] :load "urbanwarfare" :deps []
 [Debug] :load "urbanwarfare" :deps []
 [Debug] :load "shadowhawkdlc" :deps []
 [Debug] :load "shadowhawkdlc" :deps []
 [Debug] :load "flashpoint" :deps []
 [Debug] :load "flashpoint" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
 [Debug] :load "urbanwarfare" :deps []
 [Debug] :load "urbanwarfare" :deps []
 [Debug] :load "shadowhawkdlc" :deps []
 [Debug] :load "shadowhawkdlc" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
 [Debug] :load "urbanwarfare" :deps []
 [Debug] :load "urbanwarfare" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
 [Debug] :load "abilitybuttonicons" :deps []
 [Debug] :load "abilitybuttonicons" :deps []
 [Debug] :load "abilitybuttonicons" :deps []
 [Debug] :load "abilitybuttonicons" :deps []
 [Debug] :load "abilitybuttonicons" :deps []
+[Debug] :load "chrprfvhcl_demolisher" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_demolisher" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_demolisher" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_demolisher" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
 [Debug] :load "flashpoint" :deps []
-[Debug] :load "flashpoint" :deps []
-[Debug] :load "flashpoint" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
 [Debug] :load "abilitybuttonicons" :deps []
 [Debug] :load "flashpoint" :deps []
 [Debug] :load "flashpoint" :deps []
@@ -113,8 +189,26 @@ Levels :Spam False :Debug True :Info True :Warn True
 [Debug] :load "flashpoint" :deps []
 [Debug] :load "urbanwarfare" :deps []
 [Debug] :load "urbanwarfare" :deps []
-[Debug] :load "urbanwarfare" :deps []
-[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
 [Debug] :load "mwportraits" :deps []
 [Debug] :load "mwportraits" :deps []
 [Debug] :load "mwportraits" :deps []
@@ -141,14 +235,13 @@ Levels :Spam False :Debug True :Info True :Warn True
 [Debug] :load "mwportraits" :deps []
 [Debug] :load "mwportraits" :deps []
 [Debug] :load "mwportraits" :deps []
-[Debug] :load "mwportraits" :deps []
-[Debug] :load "mwportraits" :deps []
+[Debug] :load "heavymetal" :deps []
 [Debug] [LimitItems] PopulateInventory patching (Mechlab fix)
-[Debug] StorageInventory contains 300
+[Debug] StorageInventory contains 701
 [Debug] Mechbay Patch initialized :simGame? False
 [Debug] Sort using CustomComponents.InventorySorterNotListComparer::Int32 Compare(BattleTech.UI.InventoryItemElement_NotListView, BattleTech.UI.InventoryItemElement_NotListView)
-[Info] Sorted in 29.3846 ms
-[Debug] [LimitItems] inventory cached in 556.8198 ms
+[Info] Sorted in 113.6498 ms
+[Debug] [LimitItems] inventory cached in 270.2244 ms
 [Debug] [LimitItems] Filter changed (reset? True):
   :weapons True
   :equip False
@@ -160,28 +253,54 @@ Levels :Spam False :Debug True :Info True :Warn True
   :jumpjet True
   :upgrade True
 [Debug] Sort using CustomComponents.InventorySorterNotListComparer::Int32 Compare(BattleTech.UI.InventoryItemElement_NotListView, BattleTech.UI.InventoryItemElement_NotListView)
-[Info] Sorted in 17.1404 ms
+[Info] Sorted in 76.7702 ms
 [Debug] [Filter] Removing :id emod_arm_hand :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id emod_arm_lower :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Actuator_Friedhof_Theseus :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Actuator_Coventry_X65-Standard :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Actuator_Coventry_X55-Standard :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Actuator_Friedhof_Perseus :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Actuator_Coventry_X75-Standard :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Actuator_Coventry_B20-Extended :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Actuator_Friedhof_Heracles :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Actuator_Friedhof_Behemoth :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Actuator_Friedhof_Gargantuan :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Actuator_Coventry_B40-Extended :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Actuator_Coventry_B60-Extended :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Actuator_Friedhof_Colossus :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Actuator_Coventry_Alpha :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Actuator_Friedhof_Cronos :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id emod_arm_upper :componentType Upgrade :quantity -2147483648
-[Debug] [Filter] Removing :id Gear_Proto_EWS :componentType Upgrade :quantity -2147483648
-[Debug] [Filter] Removing :id emod_engineslots_size3 :componentType HeatSink :quantity -2147483648
-[Debug] [Filter] Removing :id emod_engineslots_size6 :componentType HeatSink :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Coolant_Pod :componentType HeatSink :quantity -2147483648
 [Debug] [Filter] Removing :id emod_engineslots_size4 :componentType HeatSink :quantity -2147483648
+[Debug] [Filter] Removing :id emod_engineslots_size6 :componentType HeatSink :quantity -2147483648
+[Debug] [Filter] Removing :id emod_engineslots_size3 :componentType HeatSink :quantity -2147483648
 [Debug] [Filter] Removing :id emod_engineslots_size2 :componentType HeatSink :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_HeatSink_Generic_Thermal-Exchanger-I :componentType HeatSink :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_HeatSink_Generic_Thermal-Exchanger-II :componentType HeatSink :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_HeatSink_Generic_Thermal-Exchanger-III :componentType HeatSink :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_FCS_Generic_Standard :componentType Upgrade :quantity -2147483648
-[Debug] [Filter] Removing :id Gear_HeatSink_FDHS :componentType HeatSink :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_HeatSink_Generic_Standard-Bank :componentType HeatSink :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_HeatSink_Generic_Improved-Bank :componentType HeatSink :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_HeatSink_Generic_Bulk-Bank :componentType HeatSink :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_HeatSink_Generic_Standard :componentType HeatSink :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_HeatSink_Generic_Double :componentType HeatSink :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_JumpJet_Generic_Assault :componentType JumpJet :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_JumpJet_Generic_Heavy :componentType JumpJet :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_JumpJet_Generic_Standard :componentType JumpJet :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Mortar_MechMortar :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Sensors_Generic_Standard :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Mortar_Thumper :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_armorslots_Primitive :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id emod_armorslots_ferrosfibrous :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_armorslots_Hardened :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id emod_armorslots_heavyferrosfibrous :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id emod_armorslots_LAM :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id emod_armorslots_lightferrosfibrous :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Reflective_Coating :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id emod_armorslots_stealth :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_structureslots_Composite :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id emod_structureslots_endosteel :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id emod_structureslots_LAM :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_structureslots_Reinforced :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id emod_Engine_LAM :componentType HeatSink :quantity -2147483648
@@ -193,9 +312,110 @@ Levels :Spam False :Debug True :Info True :Warn True
 [Debug] [Filter] Removing :id emod_engineslots_xxl_center :componentType HeatSink :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_HeatSink_Prototype_Double :componentType HeatSink :quantity -2147483648
 [Debug] [Filter] Removing :id emod_kit_dhs_proto :componentType HeatSink :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_StableWeapon_Annihilator :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_PrimitiveRugged_Archer :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_NimbleJumper_Assassin :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_Rugged_Axman :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_Rugged_Banshee :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_PrimitiveRugged_Banshee :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedTargeting_Blackjack :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_StableWeapon_Bombard :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_NarrowProfile_Bushwacker :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedTargeting_Cataphract :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_NimbleJumper_Catapult :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedTargeting_Centurion :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_EasytoMaintain_Charger :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedTargeting_Clint :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_NarrowProfile_Commando :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_PrimitiveRugged_Commando :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_Rugged_Corsair :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedCommunications_Crab :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_EasytoMaintain_Crusader :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_EasytoMaintain_Dervish :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_PrimitiveRugged_Dervish :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Cockpit_DNI :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_NarrowProfile_EmperorCrab :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_PrimitiveRugged_Emperor :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedCoolingJacket_Enforcer :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_StableWeapon_Fafnir :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedCoolingJacket_Firebee :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_PrimitiveRugged_Firebee :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_NimbleJumper_Firestarter :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_NarrowProfile_Flea :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_CombatComputer_GrandDragon :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_Rugged_Grasshopper :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_Rugged_Griffin :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_PrimitiveRugged_Griffin :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_PrimitiveRugged_Helepolis :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_StableWeapon_Helepolis :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedSensors_Hellspawn :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_StableWeapon_Hollander :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedSensors_HuronWarrior :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedTargeting_IcarusII :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_PrimitiveRugged_Icarus :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedTargeting_JagerMech :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_NimbleJumper_Javelin :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedCoolingJacket_Jenner :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedTargeting_KingCrab :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_Rugged_Kintaro :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_StableWeapon_Linesman :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_NarrowProfile_Locust :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_CombatComputer_Longbow :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_PrimitiveRugged_Longbow :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedCommunications_Mackie :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_PrimitiveRugged_Mackie :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_CombatComputer_MarauderII :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_StableWeapon_Mauler :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_CombatComputer_Orion :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_PrimitiveRugged_Orion :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedSensors_Osiris :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_NarrowProfile_Ostroc :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedSensors_Ostsol :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_Rugged_Ostwar :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_PrimitiveRugged_Ostwar :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedTargeting_Panther :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedCommunications_PhoenixHawk :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Cockpit_Primitive :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedCommunications_Quickdraw :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_CombatComputer_Rakshasa :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_NarrowProfile_Raven :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedCommunications_Rifleman :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_PrimitiveRugged_Rifleman :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_Rugged_Roughneck :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_PrimitiveRugged_ShadowHawk :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_NimbleJumper_Spider :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_CombatComputer_Stalker :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_EasytoMaintain_Stinger :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedSensors_Thanatos :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_Rugged_Thunderbolt :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_PrimitiveRugged_Thunderbolt :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Cockpit_Torsomount :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_PrimitiveRugged_Trooper :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_NarrowProfile_Urbanmech :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedSensors_ValkyrieII :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedCommunications_Valkyrie :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_Rugged_Victor :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_Rugged_Vindicator :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_NarrowProfile_Vulcan :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_Rugged_Warhammer :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_NimbleJumper_Wasp :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_PrimitiveRugged_Wasp :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedCommunications_Wolverine :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_PrimitiveRugged_Wolverine :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_Battlefists_Archer :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_Battlefists_Atlas :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_Battlefists_Awesome :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_Battlefists_Hunchback :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_IndustrialClaw_LoaderKing :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Gyro_Friedhof_Osprey :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Gyro_Friedhof_Kite :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Gyro_Friedhof_Sparrow :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Gyro_Coventry_Mark-75 :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Gyro_Coventry_Mark-85 :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Gyro_Coventry_Mark-95 :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Gyro_Rawlings_StabiliTrak-5 :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Gyro_Rawlings_StabiliTrak-10 :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Gyro_Rawlings_StabiliTrak-15 :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_MASC :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Supercharger :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Angel_ECM :componentType Upgrade :quantity -2147483648
@@ -203,9 +423,12 @@ Levels :Spam False :Debug True :Info True :Warn True
 [Debug] [Filter] Removing :id Gear_Bloodhound_AP :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Boosted_BAP :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_C3 :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Proto_EWS :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Experimental_EWAR :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Guardian_ECM :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_ProtoDHS :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_EWS :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_PPC_Capacitator :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_JumpJet_Improved_Heavy :componentType JumpJet :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_PartialWing_Generic_Standard30 :componentType JumpJet :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_PartialWing_Generic_Standard50 :componentType JumpJet :quantity -2147483648
@@ -216,16 +439,47 @@ Levels :Spam False :Debug True :Info True :Warn True
 [Debug] [Filter] Removing :id emod_engine_425 :componentType HeatSink :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_TTS_AdvancedTC :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_TargetingTrackingSystem_ARTEMISIV :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_TargetingTrackingSystem_Kallon_A-C-1000 :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_TargetingTrackingSystem_Hartford_F1800 :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_TargetingTrackingSystem_RCA_InstaTrac-VIII :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_TargetingTrackingSystem_RCA_InstaTrac-IX :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_TargetingTrackingSystem_Kallon_A-C-1500 :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_TargetingTrackingSystem_Hartford_F2400 :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_TargetingTrackingSystem_Hartford_F3000 :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_TargetingTrackingSystem_RCA_InstaTrac-X :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_TargetingTrackingSystem_Kallon_A-C-P150+ :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_TargetingTrackingSystem_Hartford_S2000 :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_TargetingTrackingSystem_RCA_InstaTrac-XII :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_TargetingTrackingSystem_Kallon_Lock-On :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Cockpit_Ceres_Metals_Braced :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Cockpit_Ceres_Metals_Reinforced :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Cockpit_Ceres_Metals_Hardened :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_CommandMech_Battlemaster :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_CommandMech_BlackKnight :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_EasytoPilot_Champion :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_EasytoPilot_Cicada :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Cockpit_CommandConsole :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Cockpit_StarCorps_Improved :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Cockpit_StarCorps_Enhanced :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Cockpit_StarCorps_Advanced :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_Cowl_Cyclops :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedLifeSupport_Dragon :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedLifeSupport_Emperor :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_Cowl_Hatamoto :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_Cowl_Highlander :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedLifeSupport_Juggernaut :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_CommandMech_Marauder :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_EasytoPilot_Mongoose :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_CommandMech_Nightstar :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Cockpit_Majesty_M_M_60KL :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Cockpit_Majesty_M_M_120KL :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Cockpit_Majesty_M_M_180KL :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedLifeSupport_ShadowHawk :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_EasytoPilot_Talos :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_EasytoPilot_Trebuchet :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_Cowl_Uziel :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_ImprovedLifeSupport_Wolfhound :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Quirk_EasytoPilot_Zeus :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id emod_arm_part_shoulder :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id emod_arm_part_upper :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id emod_arm_part_lower :componentType Upgrade :quantity -2147483648
@@ -236,23 +490,29 @@ Levels :Spam False :Debug True :Info True :Warn True
 [Debug] [Filter] Removing :id emod_leg_upper :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id emod_leg_lower :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id emod_leg_foot :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Actuator_Rawlings_Epsilon :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Actuator_Pitban_Jackrabbit :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Actuator_Rawlings_Omicron :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Actuator_Pitban_Wallaby :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Actuator_Pitban_Kangaroo :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Actuator_Rawlings_Omega :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id emod_case :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id emod_case2 :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Cockpit_LifeSupportA_Standard :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Cockpit_SensorsA_Standard :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Cockpit_Generic_Standard :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Cockpit_SLDF_Custom :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Cockpit_StarCorps_Dalban :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Cockpit_Majesty_M_M_MagestrixAlpha :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Cockpit_Generic_Small :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Cockpit_SensorsB_Standard :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Cockpit_LifeSupportB_Standard :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id emod_armorslots_standard :componentType Upgrade :quantity -2147483648
-[Debug] [Filter] Removing :id emod_armorslots_ferrofibrous :componentType Upgrade :quantity -2147483648
-[Debug] [Filter] Removing :id emod_armorslots_ferrosfibrous :componentType Upgrade :quantity -2147483648
-[Debug] [Filter] Removing :id emod_structureslots_endosteel :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id emod_structureslots_standard :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id emod_kit_shs :componentType HeatSink :quantity -2147483648
 [Debug] [Filter] Removing :id emod_kit_dhs :componentType HeatSink :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Gyro_Generic_Standard :componentType Upgrade :quantity -2147483648
+[Debug] [Filter] Removing :id Gear_Gyro_Hermes_Equilibrium :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id Gear_Gyro_Omnimech :componentType Upgrade :quantity -2147483648
 [Debug] [Filter] Removing :id emod_engineslots_std_center :componentType HeatSink :quantity -2147483648
 [Debug] [Filter] Removing :id emod_engineslots_xl_center :componentType HeatSink :quantity -2147483648
@@ -289,240 +549,1109 @@ Levels :Spam False :Debug True :Info True :Warn True
 [Debug] [Filter] Removing :id emod_engine_380 :componentType HeatSink :quantity -2147483648
 [Debug] [Filter] Removing :id emod_engine_400 :componentType HeatSink :quantity -2147483648
 [Debug] [Filter] Removing :id emod_engine_dummy :componentType HeatSink :quantity -2147483648
-[Info] Filter took 34.0612 ms and resulted in 300 -> 172 items
-[Debug] [LimitItems] Refresh: 0 172 8 0
-[Debug] [LimitItems] Items prefixing 0 hanging 164 total 172 (0.0, 0.0)/(0.0, 0.0)
-[Debug] [LimitItems] Refresh with: 165 0
-[Debug] [LimitItems] Refresh: 165 172 8 0
-[Debug] [LimitItems] Items prefixing 165 hanging 0 total 172 (0.0, 0.0)/(0.0, 0.0)
+[Info] Filter took 112.6671 ms and resulted in 701 -> 406 items
+[Debug] [LimitItems] Refresh: 0 406 8 0
+[Debug] [LimitItems] Items prefixing 0 hanging 398 total 406 (0.0, 0.0)/(0.0, 0.0)
+[Debug] [LimitItems] Refresh with: 399 0
+[Debug] [LimitItems] Refresh: 399 406 8 0
+[Debug] [LimitItems] Items prefixing 399 hanging 0 total 406 (0.0, 0.0)/(0.0, 0.0)
 [Debug] [LimitItems] Refresh with: 0 1
-[Debug] [LimitItems] Refresh: 0 172 8 1
-[Debug] [LimitItems] Items prefixing 0 hanging 164 total 172 (243.0, -13252.0)/(243.0, -13332.0)
-[Debug] OnApplyFiltering (refresh-pos? True)
-[Debug] [LimitItems] Filter changed (reset? True):
-  :weapons False
-  :equip True
-  :ballistic True
-  :energy True
-  :missile True
-  :small True
-  :heatsink True
-  :jumpjet True
-  :upgrade True
-[Debug] Sort using CustomComponents.InventorySorterNotListComparer::Int32 Compare(BattleTech.UI.InventoryItemElement_NotListView, BattleTech.UI.InventoryItemElement_NotListView)
-[Info] Sorted in 17.9222 ms
-[Debug] [Filter] Removing :id Weapon_Autocannon_AC2_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Autocannon_AC5_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Autocannon_AC5P_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Autocannon_AC10_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Autocannon_AC10P_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Autocannon_AC20_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Coolant_Pod :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Laser_LargeLaserER_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Laser_MediumLaserER_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_PPC_PPCER_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Laser_SmallLaserER_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Flamer_Flamer_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Gauss_Gauss_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Gauss_Heavy_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Laser_LargeLaser_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Laser_LargeLaser_-1-Tronel :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Gauss_Light_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_LRM_LRM5_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_LRM_LRM10_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_LRM_LRM15_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_LRM_LRM20_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Laser_MediumLaser_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Gauss_Magshot_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_PPC_PPC_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_PPC_PPCp_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_RocketLauncher_RL10_0_STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_RocketLauncher_RL15_0_STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_RocketLauncher_RL20_0_STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Laser_SmallLaser_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_SRM_SRM2_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_SRM_SRM4_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_SRM_SRM6_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Flamer_Heavy_Vehicle :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Gear_JumpJet_Generic_Heavy :componentType JumpJet :quantity -2147483648
-[Debug] [Filter] Removing :id Gear_JumpJet_Generic_Standard :componentType JumpJet :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_AC2 :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_AC2_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_AC5 :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_AC5_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_AC10 :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_AC10_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_AC20 :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_AC20_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Ultra_AC2 :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Ultra_AC2_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Ultra_AC5 :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Ultra_AC5_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Ultra_AC10 :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Ultra_AC10_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Ultra_AC20 :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Ultra_AC20_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_LBX_CLUSTER_AC2 :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_LBX_SLUG_AC2 :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_LBX_CLUSTER_AC5 :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_LBX_SLUG_AC5 :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_LBX_CLUSTER_AC10 :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_LBX_SLUG_AC10 :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_LBX_CLUSTER_AC20 :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_LBX_SLUG_AC20 :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Rotary_AC2 :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Rotary_AC2_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Rotary_AC5 :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Rotary_AC5_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_GAUSS :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_GAUSS_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_HGAUSS :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_LGAUSS :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_MAGSHOT :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_SBGAUSS :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_AntiMissile :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_AntiMissile_double :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_AntiMissile_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_MG :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_AP_MG :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_MG_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_HE_MG :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Tracer_MG :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_MG_Half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Narc_Beacon :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Narc_Haywire :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Narc_Beacon_Improved :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_SRM :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_SRM_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Inferno_SRM :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Acid_SRM :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Streak_SRM_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Streak_SRM :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_MRM :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_MRM_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Improved_MRM :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Thunderbolt_TB5 :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Thunderbolt_TB10 :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Thunderbolt_TB15 :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Thunderbolt_TB20 :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_Sniper :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Inferno_Sniper :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Shaped_Sniper :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_Thumper :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_Thumper_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Fascam_Thumper :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Fascam_Thumper_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Shaped_Thumper :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Shaped_Thumper_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_Longtom :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_Mortar :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_Mortar_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Acid_Mortar :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Acid_Mortar_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Airburst_Mortar :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Airburst_Mortar_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Fascam_Mortar :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Fascam_Mortar_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Flare_Mortar :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Flare_Mortar_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Guided_Mortar :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Guided_Mortar_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Inferno_Mortar :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Inferno_Mortar_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Smoke_Mortar :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Smoke_Mortar_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_C3_Master :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_AMS :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Laser_AMS :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Gear_JumpJet_Improved_Heavy :componentType JumpJet :quantity -2147483648
-[Debug] [Filter] Removing :id Gear_PartialWing_Generic_Standard30 :componentType JumpJet :quantity -2147483648
-[Debug] [Filter] Removing :id Gear_PartialWing_Generic_Standard50 :componentType JumpJet :quantity -2147483648
-[Debug] [Filter] Removing :id Gear_PartialWing_Generic_Standard55 :componentType JumpJet :quantity -2147483648
-[Debug] [Filter] Removing :id Gear_PartialWing_Generic_Standard80 :componentType JumpJet :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_LRM :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_LRM_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_FTL_LRM :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Swarm_LRM :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Thunder_LRM :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Streak_LRM :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Generic_ArrowIV :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Fascam_ArrowIV :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Fascam_ArrowIV_half :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_InfernoFascam_ArrowIV :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Inferno_ArrowIV :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Ammo_AmmunitionBox_Nuke_ArrowIV :componentType AmmunitionBox :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Autocannon_UAC2_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Autocannon_UAC5_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Autocannon_UAC10_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Autocannon_UAC20_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Autocannon_RAC2_0-Mydron :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Autocannon_RAC5_0-Mydron :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Autocannon_AC5_LRIFLE :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Autocannon_AC10_MRIFLE :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Autocannon_AC20_HRIFLE :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Autocannon_LONGTOM :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Autocannon_THUMPER :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Autocannon_SNIPER :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Gauss_Gauss_Silverbullet :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_MachineGun_MachineGun_1-Blackwell :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_MachineGun_Array_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_MachineGun_MachineGun_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Laser_MediumLaser_-1-Agra :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Laser_BinaryLaserCannon_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Laser_BinaryLaserCannon_1-Defiance :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Laser_LargeLaserPulse_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Laser_MediumLaserPulse_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_Laser_SmallLaserPulse_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_PPC_PPC_SNUBNOSE :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_SRM_SSRM2_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_SRM_SSRM4_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_SRM_SSRM6_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_MECHMORTAR_2 :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_MECHMORTAR_4 :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_MECHMORTAR_1 :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_MECHMORTAR_8 :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_LRM_Thunderbolt5 :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_LRM_Thunderbolt10 :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_LRM_Thunderbolt15 :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_ArrowIV :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_LRM_Thunderbolt20 :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_MRM_MRM10_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_MRM_MRM20_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_MRM_MRM30_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [Filter] Removing :id Weapon_MRM_MRM40_0-STOCK :componentType Weapon :quantity -2147483648
-[Debug] [FilterUsingHBSCode] Removing :id emod_arm_upper :componentType Upgrade :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id emod_engineslots_size3 :componentType HeatSink :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id emod_engineslots_size6 :componentType HeatSink :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id emod_engineslots_size4 :componentType HeatSink :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id emod_engineslots_size2 :componentType HeatSink :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id Gear_FCS_Generic_Standard :componentType Upgrade :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id Gear_Sensors_Generic_Standard :componentType Upgrade :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id emod_engine_012 :componentType HeatSink :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id emod_engine_036 :componentType HeatSink :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id emod_arm_part_shoulder :componentType Upgrade :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id emod_arm_part_upper :componentType Upgrade :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id emod_leg_hip :componentType Upgrade :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id emod_leg_upper :componentType Upgrade :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id emod_leg_lower :componentType Upgrade :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id emod_leg_foot :componentType Upgrade :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id Gear_Cockpit_LifeSupportA_Standard :componentType Upgrade :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id Gear_Cockpit_SensorsA_Standard :componentType Upgrade :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id Gear_Cockpit_Generic_Standard :componentType Upgrade :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id Gear_Cockpit_SensorsB_Standard :componentType Upgrade :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id Gear_Cockpit_LifeSupportB_Standard :componentType Upgrade :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id emod_armorslots_standard :componentType Upgrade :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id emod_structureslots_standard :componentType Upgrade :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id emod_kit_shs :componentType HeatSink :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id Gear_Gyro_Generic_Standard :componentType Upgrade :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id emod_engineslots_std_center :componentType HeatSink :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id emod_engine_cooling :componentType HeatSink :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id emod_engine_060 :componentType HeatSink :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id emod_engine_145 :componentType HeatSink :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id emod_engine_155 :componentType HeatSink :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id emod_engine_170 :componentType HeatSink :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id emod_engine_180 :componentType HeatSink :quantity -2147483648 :tonnage 100
-[Debug] [FilterUsingHBSCode] Removing :id emod_engine_dummy :componentType HeatSink :quantity -2147483648 :tonnage 100
-[Info] Filter took 66.7409 ms and resulted in 300 -> 89 items
-[Debug] [LimitItems] Refresh: 0 89 8 1
-[Debug] [LimitItems] Items prefixing 0 hanging 81 total 89 (243.5, -44.0)/(243.5, -124.0)
+[Debug] [LimitItems] Refresh: 0 406 8 1
+[Debug] [LimitItems] Items prefixing 0 hanging 398 total 406 (243.0, -31972.0)/(243.0, -32052.0)
 [Debug] [LimitItems] Exiting mechlab
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "flashpoint" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "heavymetal" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "urbanwarfare" :deps []
+[Debug] :load "chrprfmech_blackjackbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_blackjackbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "chrprfmech_blackjackbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_blackjackbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_blackjackbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_blackjackbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_blackjackbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_blackjackbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_blackjackbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] ShopTabLagFix: AddItemToInventory
+[Debug] ShopTabLagFix: AddItemToInventory
+[Debug] ShopTabLagFix: AddItemToInventory
+[Debug] ShopTabLagFix: AddItemToInventory
+[Debug] ShopTabLagFix: AddItemToInventory
+[Debug] ShopTabLagFix: AddItemToInventory
+[Debug] ShopTabLagFix: AddItemToInventory
+[Debug] ShopTabLagFix: AddItemToInventory
+[Debug] ShopTabLagFix: AddItemToInventory
+[Debug] ShopTabLagFix: AddItemToInventory
+[Debug] ShopTabLagFix: AddItemToInventory
+[Debug] ShopTabLagFix: AddItemToInventory
+[Debug] ShopTabLagFix: AddItemToInventory
+[Debug] ShopTabLagFix: AddItemToInventory
+[Debug] ShopTabLagFix: AddItemToInventory
+[Debug] ShopTabLagFix: AddItemToInventory
+[Debug] ShopTabLagFix: AddItemToInventory
+[Debug] ShopTabLagFix: AddItemToInventory
+[Debug] ShopTabLagFix: AddItemToInventory
+[Debug] ShopTabLagFix: AddItemToInventory
+[Debug] ShopTabLagFix: AddItemToInventory
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Info] (CL) LanceOverride::RequestLance :contract.Name The B Team :requestedDifficulty 1 :lanceDifficultyAdjustment 0 :contract.Difficulty 1
+[Info] (CL) LanceOverride::RequestLance :contract.Name The B Team :requestedDifficulty 1 :lanceDifficultyAdjustment 0 :contract.Difficulty 1
+[Info] (CL) LanceOverride::RequestLance :contract.Name The B Team :requestedDifficulty 1 :lanceDifficultyAdjustment 0 :contract.Difficulty 1
+[Info] (CL) LanceOverride::RequestLance :contract.Name The B Team :requestedDifficulty 1 :lanceDifficultyAdjustment 0 :contract.Difficulty 1
+[Info] (CL) LanceOverride::RequestLance :contract.Name The B Team :requestedDifficulty 1 :lanceDifficultyAdjustment 0 :contract.Difficulty 1
+[Info] (CL) LanceOverride::RequestLance :contract.Name The B Team :requestedDifficulty 1 :lanceDifficultyAdjustment 0 :contract.Difficulty 1
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_commandobase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_pantherbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_urbiebase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_centurionbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_blackjackbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfvhcl_leopard" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_leopard" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_leopard" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_spiderbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_spiderbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_spiderbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_demolisher" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_demolisher" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_demolisher" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "abilitybuttonicons" :deps []
+[Debug] :load "abilitybuttonicons" :deps []
+[Debug] :load "abilitybuttonicons" :deps []
+[Debug] :load "abilitybuttonicons" :deps []
+[Debug] :load "abilitybuttonicons" :deps []
+[Debug] :load "abilitybuttonicons" :deps []
+[Debug] :load "abilitybuttonicons" :deps []
+[Debug] :load "abilitybuttonicons" :deps []
+[Debug] :load "abilitybuttonicons" :deps []
+[Debug] :load "abilitybuttonicons" :deps []
+[Debug] :load "abilitybuttonicons" :deps []
+[Debug] :load "abilitybuttonicons" :deps []
+[Debug] :load "abilitybuttonicons" :deps []
+[Debug] :load "abilitybuttonicons" :deps []
+[Debug] :load "abilitybuttonicons" :deps []
+[Debug] :load "abilitybuttonicons" :deps []
+[Debug] :load "abilitybuttonicons" :deps []
+[Debug] :load "abilitybuttonicons" :deps []
+[Debug] :load "abilitybuttonicons" :deps []
+[Debug] :load "chrprfmech_commandobase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_commandobase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_commandobase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_commandobase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_commandobase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_commandobase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_commandobase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_commandobase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_commandobase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_commandobase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_commandobase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_commandobase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_commandobase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_pantherbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_pantherbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_pantherbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_pantherbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_pantherbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_pantherbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_pantherbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_urbiebase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_urbiebase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_urbiebase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_urbiebase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_urbiebase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_urbiebase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_urbiebase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_goblinbase" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfvhcl_goblinbase" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_goblinbase" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_goblinbase" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_goblinbase" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_goblinbase" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_goblinbase" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_goblinbase" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_wolfhoundbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_stingerhotd-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_locustbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_hollanderbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_centurionbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_centurionbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_centurionbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_centurionbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_centurionbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_centurionbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_centurionbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_centurionbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_centurionbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_centurionbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_centurionbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_blackjackbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfvhcl_goblinbase" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_goblinbase" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfvhcl_goblinbase" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_goblinbase" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_goblinbase" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_wolfhoundbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_wolfhoundbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_wolfhoundbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_wolfhoundbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_wolfhoundbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_wolfhoundbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_wolfhoundbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_stingerhotd-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_stingerhotd-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_stingerhotd-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_stingerhotd-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_stingerhotd-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_stingerhotd-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_stingerhotd-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_locustbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_locustbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_locustbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_locustbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_locustbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_locustbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_locustbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_locustbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_locustbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_hollanderbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_hollanderbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_hollanderbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_hollanderbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_hollanderbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_hollanderbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_hollanderbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprftrt_turretlightsniper" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprftrt_turretlightsniper" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprftrt_turretlightsniper" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprftrt_turretlightlrm" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprftrt_turretlightlrm" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprftrt_turretlightlrm" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprftrt_turretlightshredder" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprftrt_turretlightshredder" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "chrprftrt_turretlightshredder" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_spiderbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "chrprfmech_spiderbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_spiderbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_spiderbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_spiderbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_spiderbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_commandobase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_commandobase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_commandobase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_pantherbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_pantherbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_pantherbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_pantherbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_pantherbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_pantherbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_urbiebase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_urbiebase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_centurionbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_centurionbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_centurionbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_blackjackbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_blackjackbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_blackjackbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_blackjackbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_locustbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_locustbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_locustbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_locustbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_locustbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_locustbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_locustbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_locustbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_locustbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_locustbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_locustbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_hollanderbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_hollanderbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_hollanderbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_hollanderbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_hollanderbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_hollanderbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_hollanderbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_hollanderbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_hollanderbase-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfvhcl_goblinbase" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_goblinbase" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_goblinbase" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_goblinbase" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_goblinbase" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_goblinbase" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_goblinbase" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_goblinbase" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfvhcl_striker" :deps ["shaders"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_firestarterbase-001" :deps ["shaders","vfx"]
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_stingerhotd-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_stingerhotd-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_stingerhotd-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_stingerhotd-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_stingerhotd-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_stingerhotd-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "weaponeffects" :deps ["shaders","vfx"]
+[Debug] :load "chrprfmech_stingerhotd-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_stingerhotd-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_stingerhotd-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_stingerhotd-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_stingerhotd-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "chrprfmech_stingerhotd-001" :deps []
+[Debug] :load "shaders" :deps []
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] :load "vfx" :deps ["shaders"]
+[Debug] [LimitItems] Open Salvage screen
+[Debug] HasAllPriority :negotiated 3 :available 0 :selected 0 :clamped 0
+[Debug] HasAllPriority :negotiated 3 :available 36 :selected 0 :clamped 3
+[Debug] HasAllPriority :negotiated 3 :available 36 :selected 0 :clamped 3
+[Debug] HasAllPriority :negotiated 3 :available 36 :selected 0 :clamped 3
+[Debug] HasAllPriority :negotiated 3 :available 36 :selected 1 :clamped 3
+[Debug] HasAllPriority :negotiated 3 :available 36 :selected 1 :clamped 3
+[Debug] HasAllPriority :negotiated 3 :available 36 :selected 2 :clamped 3
+[Debug] HasAllPriority :negotiated 3 :available 36 :selected 2 :clamped 3
+[Debug] HasAllPriority :negotiated 3 :available 36 :selected 3 :clamped 3
+[Info] (CL) SimGameState::PrepContract(pre) :contract.Name Stealing is a Form of Flattery :contract.Difficulty 5 :GetDifficulty 5 :GlobalDifficulty 0 :ContractDifficultyVariance 1
+[Info] (CL) SimGameState::PrepContract(post) :contract.Name Stealing is a Form of Flattery :contract.Difficulty 6 :contract.Override.finalDifficulty 6 :UIDifficulty 6

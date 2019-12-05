@@ -2,18 +2,17 @@
 	"Name": "MechEngineer",
 	"Author": "Maintainer: CptMoore",
 	"Website": "https://github.com/BattletechModders/MechEngineer",
-
+    "Version": "0.1.8",
 	"Enabled": true,
+	"Hidden": true,
+
 	"DependsOn": ["CustomComponents"],
 	"DLL": "MechEngineer.dll",
 	"DLLEntryPoint": "MechEngineer.Control.Start",
-	
 	"LogSettings": {
-		"Enabled" : false
+		"Enabled": false
 	},
-	
 	"CustomResourceTypes": ["MEBonusDescriptions", "MECriticalEffects"],
-	
 	"Manifest": [
 		{
 			"Type": "MEBonusDescriptions",
@@ -24,16 +23,6 @@
 			"Type": "MECriticalEffects",
 			"Path": "data/basic/criticalEffects/",
 			"ShouldMergeJSON": false
-		},
-		{
-			"Type": "CCCategories",
-			"Path": "data/basic/categories/",
-			"ShouldMergeJSON": false
-		},
-        {
-            "Type": "CCDefaults",
-            "Path": "data/basic/defaults/",
-            "ShouldMergeJSON": false
-        }
+		}
 	]
 }
