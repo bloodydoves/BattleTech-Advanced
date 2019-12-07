@@ -1,7 +1,21 @@
 {
+    "Custom": {
+        "Category": {
+            "CategoryID": "UAC2"
+        },
+        "BonusDescriptions": {
+            "Bonuses": [
+                "WeaponJAM: 4",
+                "Ultra"
+            ]
+        },
+        "InventorySorter": {
+            "SortKey": "01101"
+        }
+    },
     "Category" : "Ballistic",
     "Type" : "Autocannon",
-    "WeaponSubType" : "UAC2",
+    "WeaponSubType" : "AC2",
     "MinRange" : 120,
     "MaxRange" : 720,
     "RangeSplit" : [
@@ -9,48 +23,65 @@
         480,
         720
     ],
-    "AmmoCategory" : "AC2",
+    "AmmoCategory" : "UAC2",
     "StartingAmmoCapacity" : 0,
-    "HeatGenerated" : 8,
-    "Damage" : 25,
+    "HeatGenerated" : 4,
+    "Damage" : 20,
     "OverheatedDamageMultiplier" : 0,
     "EvasiveDamageMultiplier" : 0,
     "EvasivePipsIgnored" : 0,
     "DamageVariance" : 0,
     "HeatDamage" : 0,
-    "StructureDamage" : 0,
     "AccuracyModifier" : 0,
     "CriticalChanceMultiplier" : 1,
     "AOECapable" : false,
     "IndirectFireCapable" : false,
-    "RefireModifier" : 2,
-    "ShotsWhenFired" : 2,
+    "RefireModifier" : 0,
+    "ShotsWhenFired" : 1,
     "ProjectilesPerShot" : 3,
-    "AttackRecoil" : 1,
+    "AttackRecoil" : 2,
     "Instability" : 5,
-    "WeaponEffectID" : "WeaponEffect-Weapon_AC2_Ultra",
+    "WeaponEffectID" : "WeaponEffect-Weapon_AC2",
     "Description" : {
-        "Cost" : 200000,
-        "Rarity" : 99,
+        "Cost" : 140000,
+        "Rarity" : 0,
         "Purchasable" : true,
-        "Manufacturer" : "Imperator",
+        "Manufacturer" : "Mydron",
         "Model" : "Sniper Autocannon",
         "UIName" : "UAC/2",
         "Id" : "Weapon_Autocannon_UAC2_0-STOCK",
         "Name" : "UAC/2",
-        "Details" : "Ultra AC/2s deal twice the damage at extreme range\u2014a massive upgrade over the standard model. Like all Ultra Autocannon weaponry, UAC/2s suffer from substantial recoil effects from firing and consume two ammo per attack.",
+        "Details" : "Ultra autocannon are capable of firing twice in a row, doubling heat and--potentially--damage. Since it is the smallest, the Ultra AC/2 also has the longest range and most ammo per ton of any Ultra autocannon, however it also deals the least amount of damage.",
         "Icon" : "uixSvgIcon_weapon_Ballistic"
     },
     "BonusValueA" : "",
     "BonusValueB" : "",
     "ComponentType" : "Weapon",
     "ComponentSubType" : "Weapon",
-    "PrefabIdentifier" : "uac5",
-    "InventorySize" : 1,
+    "PrefabIdentifier" : "AC2",
+    "BattleValue" : 0,
+    "InventorySize" : 3,
     "Tonnage" : 7,
     "AllowedLocations" : "All",
     "DisallowedLocations" : "All",
     "CriticalComponent" : false,
+				"Modes":[
+		{
+			"Id":"x1",
+			"UIName":"x1",
+			"isBaseMode":false,
+			"ShotsWhenFired":0
+		},
+		{
+			"Id":"x2",
+			"UIName":"x2",
+			"isBaseMode":true,
+			"ShotsWhenFired":1,
+			"RefireModifier" : 1,
+			"HeatGenerated" : 3,
+			"FlatJammingChance": 0.05
+		}
+	],
     "statusEffects" : [
         
     ],
@@ -58,8 +89,8 @@
         "items" : [
             "component_type_stock",
             "range_extreme",
-            "component_type_lostech",
-            "BLACKLISTED"
+			"wr-jammable_weapon",
+            "wr-jam_chance_multiplier-4"
         ],
         "tagSetSourceFile" : ""
     }
