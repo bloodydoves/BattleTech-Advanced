@@ -1,9 +1,9 @@
 {
-    "ID": "AmbushConvoy_Robbery_Hard",
-    "contractName": "Stolen Goods",
+    "ID": "AmbushConvoy_Pirate_EasyPickings",
+    "contractName": "Easy Pickings",
     "contractDisplayStyle": "BaseCampaignNormal",
-    "difficulty": 8,
-    "difficultyUIModifier": 1,
+    "difficulty": 2,
+    "difficultyUIModifier": 0,
     "weight": 1,
     "scope": "STANDARD",
     "finalDifficulty": 0,
@@ -11,10 +11,36 @@
     "missionSuccessStatementOverride": null,
     "badFaithStatementOverride": null,
     "goodFaithStatementOverride": null,
-    "shortDescription": "A team of {TEAM_EMP.FactionDef.Demonym} agents has obtained the schedule and manifest of a {TEAM_TAR.FactionDef.Demonym} convoy. This convoy's cargo is extremely valuable technological components. We want you to steal them for us. Stage an ambush of the convoy, destroy the vehicles, and we'll send in a recovery team to gather the cargo. There's a bonus if you secure the area and eliminate all the convoy guards.",
-    "longDescription": "If this cargo is valuable enough to pay us to steal it, it's going to be extremely well-defended. Be prepared, Commander.",
+    "shortDescription": "Every month, {TEAM_TAR.FactionDef.Name} sends out another supply convoy loaded with military hardware and valuable electronics. They guard it heavily, so we're not asking you to hit the main force; no sense in throwing away good mercenaries. Instead we want you to pick off the tail end of the convoy. The cargo isn't as valuable as what they send out in the vanguard, but it won't be as heavily defended. Take the convoy out, and we'll send in our people to grab whatever's still intact. We don't really want to get shot at, so we'll pay a bonus if you take out all the defenders, as well.",
+    "longDescription": "This job seems sketchy, Commander. I suppose that's not a surprise, given the employer, but we should still be cautious.",
     "salvagePotential": 16,
-    "requirementList": [],
+    "requirementList": [
+        {
+            "Scope": "StarSystem",
+            "RequirementTags": {
+                "items": [],
+                "tagSetSourceFile": ""
+            },
+            "ExclusionTags": {
+                "items": [],
+                "tagSetSourceFile": ""
+            },
+            "RequirementComparisons": [
+                {
+                    "obj": "Employer.locals",
+                    "op": "Equal",
+                    "val": 1,
+                    "valueConstant": null
+                },
+                {
+                    "obj": "Target.IsOwner",
+                    "op": "Equal",
+                    "val": 1,
+                    "valueConstant": null
+                }
+            ]
+        }
+    ],
     "OnContractSuccessResults": [],
     "OnContractFailureResults": [],
     "encounterPlayStyle": "SinglePlayer",
@@ -199,7 +225,7 @@
             "encounterChunk": {
                 "EncounterObjectGuid": "2e0d2e69-6335-49ae-b2bb-61ff3185306b"
             },
-            "enableChunkFromContract": false,
+            "enableChunkFromContract": true,
             "controlledByContractChunkGroupList": [],
             "requirementList": []
         }
@@ -257,7 +283,7 @@
             "overrideDialogueBucketId": "",
             "dialogueContent": [
                 {
-                    "words": "Looks like the intel our employers provided was accurate. We're tracking multiple vehicles in the area.",
+                    "words": "We're getting word that the main convoy has passed by already, leaving just the trailing elements. Time to make our move.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -273,7 +299,7 @@
                     "revealRadius": -1
                 },
                 {
-                    "words": "Let's move up and make contact. Once we start shooting, the convoy will probably make a break for it. Intercept them.",
+                    "words": "Here's where we'll make contact with the targets. Once we start shooting, the convoy will probably make a break for it. Intercept them.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -380,7 +406,7 @@
             "overrideDialogueBucketId": "DialogBucketDef_AmbushConvoy_EyesOnTarget",
             "dialogueContent": [
                 {
-                    "words": "We have a lock on the target vehicles. They should be to your front. Engage and destroy, Commander.",
+                    "words": "We have a lock on the target vehicles. They should be to your front. Engage and destory, Commander.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -505,7 +531,7 @@
             "overrideDialogueBucketId": "DialogBucketDef_Universal_Escape",
             "dialogueContent": [
                 {
-                    "words": "The convoy is finished, now get what 'mechs you have to the extraction point and we'll pull you out. Move quickly.",
+                    "words": "The convoy is finished, now get what mechs you have to the extraction point and we'll pull you out. Move quickly.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -938,7 +964,7 @@
                     "items": [],
                     "tagSetSourceFile": "tags/SpawnEffectTags"
                 },
-                "lanceDifficultyAdjustment": 1,
+                "lanceDifficultyAdjustment": 0,
                 "selectedLanceDefId": null,
                 "selectedLanceDifficulty": 0,
                 "unitSpawnPointOverrideList": [
@@ -1097,7 +1123,7 @@
                     "items": [],
                     "tagSetSourceFile": "tags/SpawnEffectTags"
                 },
-                "lanceDifficultyAdjustment": 0,
+                "lanceDifficultyAdjustment": 1,
                 "selectedLanceDefId": null,
                 "selectedLanceDifficulty": 0,
                 "unitSpawnPointOverrideList": [

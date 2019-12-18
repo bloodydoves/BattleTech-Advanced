@@ -1,9 +1,9 @@
 {
-    "ID": "AmbushConvoy_Robbery_Hard",
-    "contractName": "Stolen Goods",
+    "ID": "AmbushConvoy_Massacre_Pirate_NEW",
+    "contractName": "Reprisal",
     "contractDisplayStyle": "BaseCampaignNormal",
-    "difficulty": 8,
-    "difficultyUIModifier": 1,
+    "difficulty": 5,
+    "difficultyUIModifier": 0,
     "weight": 1,
     "scope": "STANDARD",
     "finalDifficulty": 0,
@@ -11,11 +11,84 @@
     "missionSuccessStatementOverride": null,
     "badFaithStatementOverride": null,
     "goodFaithStatementOverride": null,
-    "shortDescription": "A team of {TEAM_EMP.FactionDef.Demonym} agents has obtained the schedule and manifest of a {TEAM_TAR.FactionDef.Demonym} convoy. This convoy's cargo is extremely valuable technological components. We want you to steal them for us. Stage an ambush of the convoy, destroy the vehicles, and we'll send in a recovery team to gather the cargo. There's a bonus if you secure the area and eliminate all the convoy guards.",
-    "longDescription": "If this cargo is valuable enough to pay us to steal it, it's going to be extremely well-defended. Be prepared, Commander.",
-    "salvagePotential": 16,
-    "requirementList": [],
-    "OnContractSuccessResults": [],
+    "shortDescription": "We need you to destroy a convoy of {TEAM_TAR.FactionDef.Name} vehicles that was involved in a strike on our holdings. You like credits, yes?",
+    "longDescription": "There's not a lot of detail here, Commander.",
+    "salvagePotential": 14,
+    "requirementList": [
+        {
+            "Scope": "StarSystem",
+            "RequirementTags": {
+                "items": [],
+                "tagSetSourceFile": ""
+            },
+            "ExclusionTags": {
+                "items": [
+                    "planet_other_empty"
+                ],
+                "tagSetSourceFile": ""
+            },
+            "RequirementComparisons": [
+                {
+                    "obj": "Target.IsOwner",
+                    "op": "Equal",
+                    "val": 1,
+                    "valueConstant": null
+                },
+                {
+                    "obj": "Employer.locals",
+                    "op": "Equal",
+                    "val": 1,
+                    "valueConstant": null
+                }
+            ]
+        },
+        {
+            "Scope": "Company",
+            "RequirementTags": {
+                "items": [],
+                "tagSetSourceFile": ""
+            },
+            "ExclusionTags": {
+                "items": [
+                    "dirtydeedsdonedirtcheap"
+                ],
+                "tagSetSourceFile": ""
+            },
+            "RequirementComparisons": []
+        }
+    ],
+    "OnContractSuccessResults": [
+        {
+            "Scope": "Company",
+            "Requirements": {
+                "Scope": "Company",
+                "RequirementTags": {
+                    "items": [],
+                    "tagSetSourceFile": ""
+                },
+                "ExclusionTags": {
+                    "items": [],
+                    "tagSetSourceFile": ""
+                },
+                "RequirementComparisons": []
+            },
+            "AddedTags": {
+                "items": [
+                    "dirtydeedsdonedirtcheap"
+                ],
+                "tagSetSourceFile": ""
+            },
+            "RemovedTags": {
+                "items": [],
+                "tagSetSourceFile": ""
+            },
+            "Stats": [],
+            "Actions": null,
+            "ForceEvents": null,
+            "TemporaryResult": false,
+            "ResultDuration": 0
+        }
+    ],
     "OnContractFailureResults": [],
     "encounterPlayStyle": "SinglePlayer",
     "maxNumberOfPlayerUnits": 4,
@@ -57,7 +130,7 @@
                 "EncounterObjectGuid": "e93b9c15-0cbd-46a7-87a4-1d3de6adfd59"
             },
             "title": "Destroy the Convoy Guards",
-            "description": "Send a message by not only destroy the convoy, but eliminte their escorts as well.",
+            "description": "Send a message by not only destroy the convoy, but eliminate their escorts as well.",
             "isPrimary": false,
             "forPlayer": "Player1",
             "objectiveGuids": [
@@ -72,17 +145,96 @@
             },
             "title": "Destroy the {TEAM_TAR.FactionDef.Demonym} Convoy",
             "description": "The objective for destroying the convoy units.",
-            "isPrimary": true,
-            "OnSuccessResults": [],
-            "OnFailureResults": [],
-            "OnSuccessDialogueGUID": null,
-            "OnFailureDialogueGUID": null
+            "isPrimary": false,
+            "OnSuccessResults": [
+                {
+                    "Scope": "Company",
+                    "Requirements": {
+                        "Scope": "Company",
+                        "RequirementTags": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "ExclusionTags": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "RequirementComparisons": []
+                    },
+                    "AddedTags": {
+                        "items": [],
+                        "tagSetSourceFile": ""
+                    },
+                    "RemovedTags": {
+                        "items": [],
+                        "tagSetSourceFile": ""
+                    },
+                    "Stats": [
+                        {
+                            "typeString": "System.Int32",
+                            "name": "Reputation.Target",
+                            "value": "-25",
+                            "set": false,
+                            "valueConstant": null
+                        },
+                        {
+                            "typeString": "System.Int32",
+                            "name": "Morale",
+                            "value": "-5",
+                            "set": false,
+                            "valueConstant": null
+                        }
+                    ],
+                    "Actions": null,
+                    "ForceEvents": null,
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ],
+            "OnFailureResults": [
+                {
+                    "Scope": "Company",
+                    "Requirements": {
+                        "Scope": "Company",
+                        "RequirementTags": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "ExclusionTags": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "RequirementComparisons": []
+                    },
+                    "AddedTags": {
+                        "items": [],
+                        "tagSetSourceFile": ""
+                    },
+                    "RemovedTags": {
+                        "items": [],
+                        "tagSetSourceFile": ""
+                    },
+                    "Stats": [
+                        {
+                            "typeString": "System.Int32",
+                            "name": "Reputation.Target",
+                            "value": "10",
+                            "set": false,
+                            "valueConstant": null
+                        }
+                    ],
+                    "Actions": null,
+                    "ForceEvents": null,
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ]
         },
         {
             "objective": {
                 "EncounterObjectGuid": "43fe5b1b-6c77-4daf-b6be-5735ab59ea11"
             },
-            "title": "Destroy the {TEAM_TAR.FactionDef.Demonym} Escorts",
+            "title": "Destroy the {TEAM_TAR.FactionDef.Demonym} Guards",
             "description": "The objective for destroying the units guarding the convoy.",
             "isPrimary": false,
             "OnSuccessResults": [
@@ -101,7 +253,7 @@
                         {
                             "typeString": "System.Single",
                             "name": "ContractBonusRewardPct",
-                            "value": "0.25",
+                            "value": "0.15",
                             "set": false,
                             "valueConstant": null
                         }
@@ -112,9 +264,44 @@
                     "ResultDuration": 0
                 }
             ],
-            "OnFailureResults": [],
-            "OnSuccessDialogueGUID": null,
-            "OnFailureDialogueGUID": null
+            "OnFailureResults": [
+                {
+                    "Scope": "Company",
+                    "Requirements": {
+                        "Scope": "Company",
+                        "RequirementTags": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "ExclusionTags": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "RequirementComparisons": []
+                    },
+                    "AddedTags": {
+                        "items": [],
+                        "tagSetSourceFile": ""
+                    },
+                    "RemovedTags": {
+                        "items": [],
+                        "tagSetSourceFile": ""
+                    },
+                    "Stats": [
+                        {
+                            "typeString": "System.Int32",
+                            "name": "Reputation.Target",
+                            "value": "5",
+                            "set": false,
+                            "valueConstant": null
+                        }
+                    ],
+                    "Actions": null,
+                    "ForceEvents": null,
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ]
         },
         {
             "objective": {
@@ -122,11 +309,46 @@
             },
             "title": "Stop Convoy from Escaping",
             "description": "The objective for preventing the enemy from reaching their escape point, if this happens the player will lose.",
-            "isPrimary": true,
+            "isPrimary": false,
             "OnSuccessResults": [],
-            "OnFailureResults": [],
-            "OnSuccessDialogueGUID": null,
-            "OnFailureDialogueGUID": null
+            "OnFailureResults": [
+                {
+                    "Scope": "Company",
+                    "Requirements": {
+                        "Scope": "Company",
+                        "RequirementTags": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "ExclusionTags": {
+                            "items": [],
+                            "tagSetSourceFile": ""
+                        },
+                        "RequirementComparisons": []
+                    },
+                    "AddedTags": {
+                        "items": [],
+                        "tagSetSourceFile": ""
+                    },
+                    "RemovedTags": {
+                        "items": [],
+                        "tagSetSourceFile": ""
+                    },
+                    "Stats": [
+                        {
+                            "typeString": "System.Int32",
+                            "name": "Reputation.Target",
+                            "value": "10",
+                            "set": false,
+                            "valueConstant": null
+                        }
+                    ],
+                    "Actions": null,
+                    "ForceEvents": null,
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ]
         },
         {
             "objective": {
@@ -134,11 +356,9 @@
             },
             "title": "Recon the Convoy's Route",
             "description": "The objective for the player to intercept/observe the enemy convoy.",
-            "isPrimary": true,
+            "isPrimary": false,
             "OnSuccessResults": [],
-            "OnFailureResults": [],
-            "OnSuccessDialogueGUID": null,
-            "OnFailureDialogueGUID": null
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -146,11 +366,9 @@
             },
             "title": "Get to the Evac Zone",
             "description": "The objective for the player units escaping and finishing the mission.",
-            "isPrimary": true,
+            "isPrimary": false,
             "OnSuccessResults": [],
-            "OnFailureResults": [],
-            "OnSuccessDialogueGUID": null,
-            "OnFailureDialogueGUID": null
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -186,9 +404,7 @@
                     "ResultDuration": 0
                 }
             ],
-            "OnFailureResults": [],
-            "OnSuccessDialogueGUID": null,
-            "OnFailureDialogueGUID": null
+            "OnFailureResults": []
         }
     ],
     "artilleryObjectiveList": [],
@@ -200,7 +416,6 @@
                 "EncounterObjectGuid": "2e0d2e69-6335-49ae-b2bb-61ff3185306b"
             },
             "enableChunkFromContract": false,
-            "controlledByContractChunkGroupList": [],
             "requirementList": []
         }
     ],
@@ -257,7 +472,7 @@
             "overrideDialogueBucketId": "",
             "dialogueContent": [
                 {
-                    "words": "Looks like the intel our employers provided was accurate. We're tracking multiple vehicles in the area.",
+                    "words": "All right, Commander, our goal is to track down the convoy...",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -266,14 +481,14 @@
                     },
                     "selectedCastDefId": "castDef_DariusDefault",
                     "emote": "Default",
-                    "audioName": "audioevent_universal_hostilesInbound",
+                    "audioName": "NONE",
                     "cameraFocusGuid": "",
                     "cameraDistance": "Far",
                     "cameraHeight": "Default",
                     "revealRadius": -1
                 },
                 {
-                    "words": "Let's move up and make contact. Once we start shooting, the convoy will probably make a break for it. Intercept them.",
+                    "words": "...so let's scout out the target area. When we've found the convoy, we stop it from reaching its destination.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -289,7 +504,7 @@
                     "revealRadius": -1
                 },
                 {
-                    "words": "Once they're dealt with, head to the evac zone for pickup, or clear out the convoy's guards. Your call.",
+                    "words": "Then we make our way to the evac zone.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -305,7 +520,23 @@
                     "revealRadius": -1
                 },
                 {
-                    "words": "Good luck, Commander.",
+                    "words": "Get to it, Commander.",
+                    "wordsColor": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_DariusDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "76b654a6-4f2c-4a6f-86e6-d4cf868335fe",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                },
+                {
+                    "words": "I'll keep an eye out from up here.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -330,7 +561,7 @@
             "overrideDialogueBucketId": "",
             "dialogueContent": [
                 {
-                    "words": "Well done, Commander. Let's debrief back in orbit.",
+                    "words": "Mission accomplished.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -355,7 +586,7 @@
             "overrideDialogueBucketId": "",
             "dialogueContent": [
                 {
-                    "words": "That's a disappointing result, Commander.",
+                    "words": "Well, that didn't go as planned.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -405,7 +636,55 @@
             "overrideDialogueBucketId": "DialogBucketDef_AmbushConvoy_PriTarDamaged",
             "dialogueContent": [
                 {
-                    "words": "That's got it, keep firing on those targets until they are neutralized. ",
+                    "words": "Wait, wait! Commander, something is wrong!",
+                    "wordsColor": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_DariusDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                },
+                {
+                    "words": "Those are MASH trucks, they're transporting wounded!",
+                    "wordsColor": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_DariusDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                },
+                {
+                    "words": "Our employer didn't include that detail. Completing this contract could have serious consequences, Commander.",
+                    "wordsColor": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_DariusDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                },
+                {
+                    "words": "This might be one contract where failing is better for our rep than completing it.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -430,7 +709,7 @@
             "overrideDialogueBucketId": "",
             "dialogueContent": [
                 {
-                    "words": "Escorts are down, Commander. Good work. Let's wrap this up.",
+                    "words": "The guard units are dealt with; a wise move.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -455,7 +734,7 @@
             "overrideDialogueBucketId": "",
             "dialogueContent": [
                 {
-                    "words": "The convoy's almost escaped, Commander. You need to step it up or we're going to miss the window of opportunity.",
+                    "words": "Heads up, Commander! The target vehicles have begun to arrive at their destination; they'll extract when the last survivor reaches it.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -465,7 +744,7 @@
                     "selectedCastDefId": "castDef_DariusDefault",
                     "emote": "Default",
                     "audioName": "NONE",
-                    "cameraFocusGuid": "3560382a-c082-4a0b-8cab-8e6327b74cce",
+                    "cameraFocusGuid": "",
                     "cameraDistance": "Far",
                     "cameraHeight": "Default",
                     "revealRadius": -1
@@ -477,10 +756,10 @@
                 "EncounterObjectGuid": "366443c6-7895-4b4c-aea9-544f1a88c43e"
             },
             "name": "Dialogue_ConvoyTargetDestroyed",
-            "overrideDialogueBucketId": "DialogBucketDef_AmbushConvoy_PriTarDamaged",
+            "overrideDialogueBucketId": "DialogBucketDef_Universal_KillConfirmed",
             "dialogueContent": [
                 {
-                    "words": "One down. Keep engaging those threats and we'll be out of here. ",
+                    "words": "One down.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -505,7 +784,7 @@
             "overrideDialogueBucketId": "DialogBucketDef_Universal_Escape",
             "dialogueContent": [
                 {
-                    "words": "The convoy is finished, now get what 'mechs you have to the extraction point and we'll pull you out. Move quickly.",
+                    "words": "They're all dead... now get what 'mechs you have to the extraction point and we'll pull you out. Move quickly.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -562,7 +841,7 @@
     "expirationTimeOverride": -1,
     "negotiatedSalary": 1,
     "negotiatedSalvage": 0,
-    "excludedFromProceduralGeneration": false,
+    "excludedFromProceduralGeneration": true,
     "player1Team": {
         "encounterLayerData": {
             "EncounterObjectGuid": "e1e9093f-5cb2-4ece-889d-49aa6357e731"
@@ -767,7 +1046,7 @@
                 "lanceDefId": "Tagged",
                 "lanceTagSet": {
                     "items": [
-                        "lance_type_OpForConvoy"
+                        "lance_type_convoy"
                     ],
                     "tagSetSourceFile": "tags/LanceTags"
                 },
@@ -789,8 +1068,8 @@
                         },
                         "customUnitName": "",
                         "customHeraldryDefId": "",
-                        "unitType": "Vehicle",
-                        "unitDefId": "UseLance",
+                        "unitType": "Mech",
+                        "unitDefId": "vehicledef_MASHTruck-UA",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": "tags/UnitTags"
@@ -822,8 +1101,8 @@
                         },
                         "customUnitName": "",
                         "customHeraldryDefId": "",
-                        "unitType": "Vehicle",
-                        "unitDefId": "UseLance",
+                        "unitType": "Mech",
+                        "unitDefId": "Vehicledef_MASHTruck-UA",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": "tags/UnitTags"
@@ -855,8 +1134,8 @@
                         },
                         "customUnitName": "",
                         "customHeraldryDefId": "",
-                        "unitType": "Vehicle",
-                        "unitDefId": "UseLance",
+                        "unitType": "Mech",
+                        "unitDefId": "Vehicledef_MASHTruck-UA",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": "tags/UnitTags"
@@ -888,8 +1167,8 @@
                         },
                         "customUnitName": "",
                         "customHeraldryDefId": "",
-                        "unitType": "Vehicle",
-                        "unitDefId": "UseLance",
+                        "unitType": "Mech",
+                        "unitDefId": "Vehicledef_MASHTruck-UA",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": "tags/UnitTags"
@@ -922,11 +1201,10 @@
                     "EncounterObjectGuid": "10e8686f-8d19-4058-9541-119c4dff041c"
                 },
                 "name": "Lance_Enemy_Bodyguard",
-                "lanceDefId": "Tagged",
+                "lanceDefId": "Manual",
                 "lanceTagSet": {
                     "items": [
-                        "lance_type_battle",
-                        "lance_type_notallvehicles"
+                        "lance_type_battle"
                     ],
                     "tagSetSourceFile": "tags/LanceTags"
                 },
@@ -938,7 +1216,7 @@
                     "items": [],
                     "tagSetSourceFile": "tags/SpawnEffectTags"
                 },
-                "lanceDifficultyAdjustment": 1,
+                "lanceDifficultyAdjustment": -2,
                 "selectedLanceDefId": null,
                 "selectedLanceDifficulty": 0,
                 "unitSpawnPointOverrideList": [
@@ -949,7 +1227,7 @@
                         "customUnitName": "",
                         "customHeraldryDefId": "",
                         "unitType": "Mech",
-                        "unitDefId": "UseLance",
+                        "unitDefId": "mechDef_None",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": "tags/UnitTags"
@@ -982,7 +1260,7 @@
                         "customUnitName": "",
                         "customHeraldryDefId": "",
                         "unitType": "Mech",
-                        "unitDefId": "UseLance",
+                        "unitDefId": "mechDef_None",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": "tags/UnitTags"
@@ -1015,7 +1293,7 @@
                         "customUnitName": "",
                         "customHeraldryDefId": "",
                         "unitType": "Mech",
-                        "unitDefId": "UseLance",
+                        "unitDefId": "mechDef_None",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": "tags/UnitTags"
@@ -1084,7 +1362,7 @@
                 "lanceDefId": "Tagged",
                 "lanceTagSet": {
                     "items": [
-                        "lance_type_support",
+                        "lance_type_fire",
                         "lance_type_notallvehicles"
                     ],
                     "tagSetSourceFile": "tags/LanceTags"
