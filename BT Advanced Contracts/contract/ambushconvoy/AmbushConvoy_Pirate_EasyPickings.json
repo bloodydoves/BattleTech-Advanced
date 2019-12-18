@@ -1,8 +1,8 @@
 {
-    "ID": "AmbushConvoy_CovertSupplies",
-    "contractName": "Covert Supplies",
+    "ID": "AmbushConvoy_Pirate_EasyPickings",
+    "contractName": "Easy Pickings",
     "contractDisplayStyle": "BaseCampaignNormal",
-    "difficulty": 5,
+    "difficulty": 2,
     "difficultyUIModifier": 0,
     "weight": 1,
     "scope": "STANDARD",
@@ -11,16 +11,14 @@
     "missionSuccessStatementOverride": null,
     "badFaithStatementOverride": null,
     "goodFaithStatementOverride": null,
-    "shortDescription": "A routine orbital survey of {TGT_SYSTEM.name} picked up coded transmissions from the surface. Our intelligence experts believe these transmissions come from a well-hidden {TEAM_TAR.FactionDef.Demonym} facility in this supposedly uninhabited system. Needless to say, {TEAM_EMP.FactionDef.Name} is not willing to tolerate secret military bases in this region. We need a mercenary company to intercept one of the supply caravans traveling to the secret base. Even if we can't find their facility, we can still starve them out.",
-    "longDescription": "Our employers don't really have any more legitimate a claim to this system than anyone else, but they do have the money to hire us, which is a solid argument for ownership.",
+    "shortDescription": "Every month, {TEAM_TAR.FactionDef.Name} sends out another supply convoy loaded with military hardware and valuable electronics. They guard it heavily, so we're not asking you to hit the main force; no sense in throwing away good mercenaries. Instead we want you to pick off the tail end of the convoy. The cargo isn't as valuable as what they send out in the vanguard, but it won't be as heavily defended. Take the convoy out, and we'll send in our people to grab whatever's still intact. We don't really want to get shot at, so we'll pay a bonus if you take out all the defenders, as well.",
+    "longDescription": "This job seems sketchy, Commander. I suppose that's not a surprise, given the employer, but we should still be cautious.",
     "salvagePotential": 16,
     "requirementList": [
         {
             "Scope": "StarSystem",
             "RequirementTags": {
-                "items": [
-                    "planet_other_empty"
-                ],
+                "items": [],
                 "tagSetSourceFile": ""
             },
             "ExclusionTags": {
@@ -29,9 +27,15 @@
             },
             "RequirementComparisons": [
                 {
-                    "obj": "Employer.AuriganPirates",
+                    "obj": "Employer.locals",
                     "op": "Equal",
-                    "val": 0,
+                    "val": 1,
+                    "valueConstant": null
+                },
+                {
+                    "obj": "Target.IsOwner",
+                    "op": "Equal",
+                    "val": 1,
                     "valueConstant": null
                 }
             ]
@@ -221,7 +225,7 @@
             "encounterChunk": {
                 "EncounterObjectGuid": "2e0d2e69-6335-49ae-b2bb-61ff3185306b"
             },
-            "enableChunkFromContract": false,
+            "enableChunkFromContract": true,
             "controlledByContractChunkGroupList": [],
             "requirementList": []
         }
@@ -279,7 +283,7 @@
             "overrideDialogueBucketId": "",
             "dialogueContent": [
                 {
-                    "words": "We're tracking multiple units, Commander. That has to be our target.",
+                    "words": "We're getting word that the main convoy has passed by already, leaving just the trailing elements. Time to make our move.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -295,7 +299,7 @@
                     "revealRadius": -1
                 },
                 {
-                    "words": "Let's advance and get eyes on. Once we make contact, we need to strike quickly before the convoy escapes.",
+                    "words": "Here's where we'll make contact with the targets. Once we start shooting, the convoy will probably make a break for it. Intercept them.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -311,7 +315,7 @@
                     "revealRadius": -1
                 },
                 {
-                    "words": "Then proceed to the evac point for pickup.",
+                    "words": "Once they're dealt with, head to the evac zone for pickup, or clear out the convoy's guards. Your call.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -352,7 +356,7 @@
             "overrideDialogueBucketId": "",
             "dialogueContent": [
                 {
-                    "words": "Well done, Commander. Drinks are on me.",
+                    "words": "Well done, Commander. Let's debrief back in orbit.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -402,7 +406,7 @@
             "overrideDialogueBucketId": "DialogBucketDef_AmbushConvoy_EyesOnTarget",
             "dialogueContent": [
                 {
-                    "words": "We have a lock on the target vehicles. They should be to your front. Engage and destroy, Commander.",
+                    "words": "We have a lock on the target vehicles. They should be to your front. Engage and destory, Commander.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -527,7 +531,7 @@
             "overrideDialogueBucketId": "DialogBucketDef_Universal_Escape",
             "dialogueContent": [
                 {
-                    "words": "The convoy is finished, now get what 'mechs you have to the extraction point and we'll pull you out. Move quickly.",
+                    "words": "The convoy is finished, now get what mechs you have to the extraction point and we'll pull you out. Move quickly.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -947,7 +951,7 @@
                 "lanceDefId": "Tagged",
                 "lanceTagSet": {
                     "items": [
-                        "lance_type_cavalry",
+                        "lance_type_battle",
                         "lance_type_notallvehicles"
                     ],
                     "tagSetSourceFile": "tags/LanceTags"
@@ -1070,7 +1074,7 @@
                         "customUnitName": "",
                         "customHeraldryDefId": "",
                         "unitType": "Mech",
-                        "unitDefId": "UseLance",
+                        "unitDefId": "mechDef_None",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": "tags/UnitTags"
@@ -1106,7 +1110,8 @@
                 "lanceDefId": "Tagged",
                 "lanceTagSet": {
                     "items": [
-                        "lance_type_support"
+                        "lance_type_support",
+                        "lance_type_notallvehicles"
                     ],
                     "tagSetSourceFile": "tags/LanceTags"
                 },
@@ -1118,7 +1123,7 @@
                     "items": [],
                     "tagSetSourceFile": "tags/SpawnEffectTags"
                 },
-                "lanceDifficultyAdjustment": 0,
+                "lanceDifficultyAdjustment": 1,
                 "selectedLanceDefId": null,
                 "selectedLanceDifficulty": 0,
                 "unitSpawnPointOverrideList": [

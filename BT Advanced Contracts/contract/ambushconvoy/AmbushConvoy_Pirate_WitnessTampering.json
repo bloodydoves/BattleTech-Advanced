@@ -1,6 +1,6 @@
 {
-    "ID": "AmbushConvoy_CovertSupplies",
-    "contractName": "Covert Supplies",
+    "ID": "AmbushConvoy_Pirate_WitnessTampering",
+    "contractName": "Witness Tampering",
     "contractDisplayStyle": "BaseCampaignNormal",
     "difficulty": 5,
     "difficultyUIModifier": 0,
@@ -11,16 +11,14 @@
     "missionSuccessStatementOverride": null,
     "badFaithStatementOverride": null,
     "goodFaithStatementOverride": null,
-    "shortDescription": "A routine orbital survey of {TGT_SYSTEM.name} picked up coded transmissions from the surface. Our intelligence experts believe these transmissions come from a well-hidden {TEAM_TAR.FactionDef.Demonym} facility in this supposedly uninhabited system. Needless to say, {TEAM_EMP.FactionDef.Name} is not willing to tolerate secret military bases in this region. We need a mercenary company to intercept one of the supply caravans traveling to the secret base. Even if we can't find their facility, we can still starve them out.",
-    "longDescription": "Our employers don't really have any more legitimate a claim to this system than anyone else, but they do have the money to hire us, which is a solid argument for ownership.",
-    "salvagePotential": 16,
+    "shortDescription": "Somehow we've let {TEAM_TAR.FactionDef.Name} get their hands on one of our less reliable suppliers. It only took them a few days to break her, and now she's ready to spill all kinds of secrets in court. That isn't in our best interests, and since you're talking to us, it's not in yours, either. We'd like to do a little bit of witness tampering, of the fatal variety. She's being transported to a secure facility by ground vehicle. We don't know which vehicle she'll be in, so just take them all out. If you help us send a message by wiping out all the escorts, there's a bonus in it for you.",
+    "longDescription": "This is exactly the kind of morally ambiguous job that makes me uncomfortable working with pirates, Commander.",
+    "salvagePotential": 20,
     "requirementList": [
         {
             "Scope": "StarSystem",
             "RequirementTags": {
-                "items": [
-                    "planet_other_empty"
-                ],
+                "items": [],
                 "tagSetSourceFile": ""
             },
             "ExclusionTags": {
@@ -29,9 +27,15 @@
             },
             "RequirementComparisons": [
                 {
-                    "obj": "Employer.AuriganPirates",
+                    "obj": "Employer.locals",
                     "op": "Equal",
-                    "val": 0,
+                    "val": 1,
+                    "valueConstant": null
+                },
+                {
+                    "obj": "Target.IsOwner",
+                    "op": "Equal",
+                    "val": 1,
                     "valueConstant": null
                 }
             ]
@@ -62,7 +66,7 @@
             "contractObjective": {
                 "EncounterObjectGuid": "bad503ac-4f47-47b0-a735-a5b13ff0e352"
             },
-            "title": "Destroy the Supply Convoy and Escape",
+            "title": "Destroy the Prisoner Convoy and Escape",
             "description": "The ENEMYFACTION scum are trying to get from one place to another. Kill them.",
             "isPrimary": true,
             "forPlayer": "Player1",
@@ -279,7 +283,7 @@
             "overrideDialogueBucketId": "",
             "dialogueContent": [
                 {
-                    "words": "We're tracking multiple units, Commander. That has to be our target.",
+                    "words": "Our employers are signaling that the convoy has entered the region. Time to move out.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -295,7 +299,7 @@
                     "revealRadius": -1
                 },
                 {
-                    "words": "Let's advance and get eyes on. Once we make contact, we need to strike quickly before the convoy escapes.",
+                    "words": "Here's where we'll make contact with the targets. Once we start shooting, the convoy will probably make a break for it. Intercept them.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -311,7 +315,7 @@
                     "revealRadius": -1
                 },
                 {
-                    "words": "Then proceed to the evac point for pickup.",
+                    "words": "Once they're dealt with, head to the evac zone for pickup, or clear out the convoy's guards. Your call.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -352,7 +356,7 @@
             "overrideDialogueBucketId": "",
             "dialogueContent": [
                 {
-                    "words": "Well done, Commander. Drinks are on me.",
+                    "words": "Well done, Commander. Let's debrief back in orbit.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -402,7 +406,7 @@
             "overrideDialogueBucketId": "DialogBucketDef_AmbushConvoy_EyesOnTarget",
             "dialogueContent": [
                 {
-                    "words": "We have a lock on the target vehicles. They should be to your front. Engage and destroy, Commander.",
+                    "words": "We have a lock on the target vehicles. They should be to your front. Engage and destory, Commander.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -527,7 +531,7 @@
             "overrideDialogueBucketId": "DialogBucketDef_Universal_Escape",
             "dialogueContent": [
                 {
-                    "words": "The convoy is finished, now get what 'mechs you have to the extraction point and we'll pull you out. Move quickly.",
+                    "words": "The convoy is finished, now get what mechs you have to the extraction point and we'll pull you out. Move quickly.",
                     "wordsColor": {
                         "r": 1,
                         "g": 1,
@@ -947,7 +951,7 @@
                 "lanceDefId": "Tagged",
                 "lanceTagSet": {
                     "items": [
-                        "lance_type_cavalry",
+                        "lance_type_battle",
                         "lance_type_notallvehicles"
                     ],
                     "tagSetSourceFile": "tags/LanceTags"
@@ -960,7 +964,7 @@
                     "items": [],
                     "tagSetSourceFile": "tags/SpawnEffectTags"
                 },
-                "lanceDifficultyAdjustment": 0,
+                "lanceDifficultyAdjustment": 1,
                 "selectedLanceDefId": null,
                 "selectedLanceDifficulty": 0,
                 "unitSpawnPointOverrideList": [
@@ -1070,7 +1074,7 @@
                         "customUnitName": "",
                         "customHeraldryDefId": "",
                         "unitType": "Mech",
-                        "unitDefId": "UseLance",
+                        "unitDefId": "mechDef_None",
                         "unitTagSet": {
                             "items": [],
                             "tagSetSourceFile": "tags/UnitTags"
@@ -1106,7 +1110,8 @@
                 "lanceDefId": "Tagged",
                 "lanceTagSet": {
                     "items": [
-                        "lance_type_support"
+                        "lance_type_support",
+                        "lance_type_notallvehicles"
                     ],
                     "tagSetSourceFile": "tags/LanceTags"
                 },
@@ -1115,10 +1120,12 @@
                     "tagSetSourceFile": "tags/LanceTags"
                 },
                 "spawnEffectTags": {
-                    "items": [],
+                    "items": [
+                        "spawn_poorly_maintained_50"
+                    ],
                     "tagSetSourceFile": "tags/SpawnEffectTags"
                 },
-                "lanceDifficultyAdjustment": 0,
+                "lanceDifficultyAdjustment": 1,
                 "selectedLanceDefId": null,
                 "selectedLanceDifficulty": 0,
                 "unitSpawnPointOverrideList": [
