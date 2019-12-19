@@ -2,6 +2,12 @@
 	"Custom": { 
 		"ComponentExplosion": { 
 			"ExplosionDamage": 30,
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"HeatPerCharge: 1.25",
+				"EvasiveExponent: 0.7"
+			]
 		}
 	},
     "Category" : "AntiPersonnel",
@@ -17,7 +23,7 @@
     "AmmoCategory" : "NotSet",
     "StartingAmmoCapacity" : 0,
     "HeatGenerated" : 30,
-    "Damage" : 15,
+    "Damage" : 30,
     "OverheatedDamageMultiplier" : 0,
     "EvasiveDamageMultiplier" : 0,
     "EvasivePipsIgnored" : 0,
@@ -37,46 +43,58 @@
         "Cost" : 150000,
         "Rarity" : 99,
         "Purchasable" : true,
-        "Manufacturer" : "Herakleion",
+        "Manufacturer" : "Imperator",
         "Model" : "COIL Beam",
         "UIName" : "COIL",
         "Id" : "Weapon_COIL_COIL_0-STOCK",
         "Name" : "COIL",
-        "Details" : "The Contained Overflow Inertia Linkage\u2014COIL\u2014 beam weapon translates power from motion into a kinetic battery for rapid release. In practical terms, this means that the farther a unit moves in a turn (tracked as EVASIVE charges), the more damage it can dish out with its COIL attack, and the more Heat it generates.\n\nThe COIL will explode if destroyed, damaging the installed location.",
+        "Details" : "The Contained Overflow Inertia Linkage\u2014COIL\u2014 beam weapon translates power from motion into a kinetic battery for rapid release. In practical terms, this means that the farther a unit moves in a turn (tracked as EVASIVE charges), the more damage it can dish out with its COIL attack, and the more Heat it generates.\n\nThe COIL has multiple fire modes for maximum modularity, including an Off, On, and Overcharge mode.\n\nThe COIL will explode if destroyed, damaging the installed location.",
         "Icon" : "uixSvgIcon_weapon_Support"
     },
-    "BonusValueA" : "Dmg. X Evasion",
+    "BonusValueA" : "",
     "BonusValueB" : "",
     "ComponentType" : "Weapon",
     "ComponentSubType" : "Weapon",
     "PrefabIdentifier" : "Laser",
     "BattleValue" : 0,
     "InventorySize" : 6,
-    "Tonnage" : 9,
+    "Tonnage" : 7,
     "AllowedLocations" : "All",
     "DisallowedLocations" : "All",
     "CriticalComponent" : false,
+	"Modes":[
+		{
+			"Id":"Off",
+			"UIName":"Off",
+			"isBaseMode":true,
+		},
+		{
+			"Id":"On",
+			"UIName":"On",
+			"isBaseMode":false,
+			"evasivePipsMods": {
+				"Damage": 0.7,
+				"GeneratedHeat": 0.8
+			}
+		},
+		{
+			"Id":"Over",
+			"UIName":"Over",
+			"isBaseMode":false,
+			"evasivePipsMods": {
+				"Damage": 1,
+				"GeneratedHeat": 1.25
+			}
+		}		
+	],
     "statusEffects" : [
         
     ],
-	"additionalData" : [
-		{
-			"statName" : "EvasiveExponent",
-			"statValue" : "1.0",
-			"statType" : "System.Single"
-		},
-		{
-			"statName" : "HeatDivisor",
-			"statValue" : "2.0",
-            "statType" : "System.Single"
-		}
-	],
     "ComponentTags" : {
         "items" : [
             "component_type_stock",
-            "range_close",
-            "BLACKLISTED"
-        ],
+            "range_close"
+		],
         "tagSetSourceFile" : ""
     }
 }
