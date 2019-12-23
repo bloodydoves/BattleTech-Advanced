@@ -5,6 +5,11 @@
 				"CategoryID": "ArmHandActuator"
 			}
 		],
+		"BonusDescriptions": {
+            "Bonuses": [
+                "MeleeAccuracyBonus: 1"
+            ]
+        },
 		"ArmActuator": {
 			"Type": "PartHand"
 		},
@@ -86,6 +91,32 @@
             "vfxData" : null,
             "instantModData" : null,
             "poorlyMaintainedEffectData" : null
+        },
+		{
+            "durationData" : {
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "effectTargetType" : "Creator",
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "StatusEffect-ArmHandActuator",
+                "Name" : "Hand Actuator",
+                "Details" : "Melee attacks attempted have their hit improved by 1.",
+                "Icon" : "uixSvgIcon_equipment_ActuatorArm"
+            },
+            "statisticData" : {
+                "statName" : "AccuracyModifier",
+                "operation" : "Float_Add",
+                "modValue" : "-1.0",
+                "modType" : "System.Single",
+                "targetCollection" : "Weapon",
+                "targetWeaponSubType" : "Melee"
+            },
+            "nature" : "Buff"
         }
     ],
     "ComponentTags" : {
