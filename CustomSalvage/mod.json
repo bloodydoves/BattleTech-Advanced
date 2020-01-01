@@ -2,14 +2,14 @@
 	"Name": "CustomSalvage",
 	"Author": "Denadan",
 	"Website": "https://github.com/Denadan/CustomSalvage",
-	
+
 	"Enabled": true,
 	"Hidden": true,
 	"DependsOn": ["CustomComponents"],
 	"DLL": "CustomSalvage.dll",
 	"DLLEntryPoint": "CustomSalvage.Control.Init",
 	
-	"Settings": {
+	"Settings" : {
 		"LogLevel": "Debug",
 		"RecoveryType": "PartDestroyed",
 		"PartCountType": "PartDestroyed",
@@ -25,6 +25,7 @@
 		"SalvageTorsoWeight": 1,
 		"SalvageHeadWeight": 0.5,
 		"SalvageCTWeight": 1.5,
+		
 		"VACTDestroyedMod": 0.35,
 		"VABLDestroyedMod": 0.68,
 		"SalvageTurrets": true,
@@ -82,6 +83,24 @@
 		"RepairMechComponents": true,
 		"RepairComponentsFunctionalThreshold": 0.25,
 		"RepairComponentsNonFunctionalThreshold": 0.5,
+		"RepairChanceByTP": false,
+		"BaseTP": 10,
+		"LimbChancePerTp": 0.01,
+		"ComponentChancePerTp": 0.01,
+		"LimbMinChance": 0.1,
+		"LimbMaxChance": 0.95,
+		"ComponentMinChance": 0.1,
+		"ComponentMaxChance": 0.95,
+
+		
+		"BrokeByTag": [
+			{ "tag": "hard_to_repair", "BaseTp": "30", "Limb": "0.0075", "Component": "0.0075" },
+			{ "tag": "easy_to_repair", "Limb": "0.015", "Component": "0.015" },
+			{ "tag": "poor_maintained", "BaseTp": "20" }
+		],
+		
+		
+		
 		"AdaptPartBaseCost": 0.015,
 		"MaxAdaptMod": 5,
 		"AdaptModWeight": 2,
@@ -90,8 +109,8 @@
 		"OmniSpectialtoNormalMod": 0.25,
 		"OmniNormalMod": 0,
 		"AllowScrapToParts": true,
-		"MinScrapParts": 0.51,
-		"MaxScrapParts": 0.91
+        "MinScrapParts":  0.51,
+        "MaxScrapParts": 0.91
 	},	
 		
 	"Manifest": [
