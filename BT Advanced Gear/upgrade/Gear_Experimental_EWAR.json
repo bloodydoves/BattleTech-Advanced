@@ -1,128 +1,128 @@
 {
-    "Custom": {
-        "Category": [
-            {
-                "CategoryID": "Probe",
-				"CategoryID": "ECM"
-            }
-        ],
-        "BonusDescriptions": {
-            "Bonuses": [
-                "Sensors: +10%",
-                "Sight: +15%",
-                "Defense: +2"
-            ]
-        },
-        "InventorySorter": {
-            "SortKey": "00024"
-        }
-    },
-    "StatName": null,
-    "RelativeModifier": 0,
-    "AbsoluteModifier": 0,
-    "Description": {
-        "Cost": 370000,
-        "Rarity": 5,
-        "Purchasable": true,
-        "Manufacturer": "Achernar",
-        "Model": "Gen 1 EWE",
-        "UIName": "Experimental EWAR Suite",
-        "Id": "Gear_Experimental_EWAR",
-        "Name": "Experimental EWAR Suite",
-        "Details": "Prototype Electronic Warfare component. Adds a defensive ECM field for the carrying unit and adds the Active Probe ability to unit's weapons panel. Active Probe is a triggered ability that uses the firing action and performs a Sensor Lock against all enemies within range.",
-        "Icon": "uixSvgIcon_equipment_Comms"
-    },
-    "BonusValueA": "ECM Defenses",
-    "BonusValueB": "Active Probe Ping",
-    "ComponentType": "Upgrade",
-    "ComponentSubType": "NotSet",
-    "PrefabIdentifier": "",
-    "BattleValue": 0,
-    "InventorySize": 4,
-    "Tonnage": 7.5,
-    "AllowedLocations": "All",
-    "DisallowedLocations": "All",
-    "CriticalComponent": false,
-    "statusEffects": [
-        {
-            "durationData": {
-                "duration": -1,
-                "stackLimit": -1
-            },
-            "targetingData": {
-                "effectTriggerType": "Passive",
-                "effectTargetType": "Creator",
-                "showInTargetPreview": false,
-                "showInStatusPanel": false
-            },
-            "effectType": "StatisticEffect",
-            "Description": {
-                "Id": "BAProbe",
-                "Name": "Beagle Probe",
-                "Details": "Increased Sight/Sensors",
-                "Icon": "uixSvgIcon_equipment_Cockpit"
-            },
-            "nature": "Buff",
-            "statisticData": {
-                "statName": "SensorDistanceAbsolute",
-                "operation": "Float_Multiply",
-                "modValue": "1.2",
-                "modType": "System.Single"
-            }
-        },
-        {
-            "targetingData" : {
-                "effectTriggerType" : "OnActivation",
-                "effectTargetType" : "EnemiesWithinRange",
-				"alsoTargetsCreator" : true,
-                "forceVisRebuild" : true
-            },
-			"effectType" : "ActiveAbility",
-			"Description" :
+	"Custom": {
+		"Category": [
 			{
-				"Id" : "ActiveProbe_Ping",
-				"Name" : "ACTIVE PROBE PING",
-				"Details" : "Activated ability (uses Firing action). Performs a Sensor Lock against all enemies within its radius, as indicated by the spinning gold ring. Will go into cooldown state after use.",
-				"Icon" : "uixSvgIcon_action_sensorlock"
+				"CategoryID": "Probe"
 			},
-			"activeAbilityEffectData" : 
 			{
-				"abilityName" : "AbilityDef_ActiveProbe_Ping"
+				"CategoryID": "ECM"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"Sensors: +10%",
+				"Sight: +15%",
+				"Defense: +2"
+			]
+		},
+		"InventorySorter": {
+			"SortKey": "00024"
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 370000,
+		"Rarity": 5,
+		"Purchasable": true,
+		"Manufacturer": "Achernar",
+		"Model": "Gen 1 EWE",
+		"UIName": "Experimental EWAR Suite",
+		"Id": "Gear_Experimental_EWAR",
+		"Name": "Experimental EWAR Suite",
+		"Details": "Prototype Electronic Warfare component. Adds a defensive ECM field for the carrying unit and adds the Active Probe ability to unit's weapons panel. Active Probe is a triggered ability that uses the firing action and performs a Sensor Lock against all enemies within range.",
+		"Icon": "uixSvgIcon_equipment_Comms"
+	},
+	"BonusValueA": "ECM Defenses",
+	"BonusValueB": "Active Probe Ping",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 4,
+	"Tonnage": 7.5,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "BAProbe",
+				"Name": "Beagle Probe",
+				"Details": "Increased Sight/Sensors",
+				"Icon": "uixSvgIcon_equipment_Cockpit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "SensorDistanceAbsolute",
+				"operation": "Float_Multiply",
+				"modValue": "1.2",
+				"modType": "System.Single"
 			}
 		},
 		{
-            "durationData": {
-                "duration": -1,
-                "stackLimit": -1
-            },
-            "targetingData": {
-                "effectTriggerType": "Passive",
-                "effectTargetType": "Creator",
-                "showInTargetPreview": false,
-                "showInStatusPanel": false
-            },
-            "effectType": "StatisticEffect",
-            "Description": {
-                "Id": "GECMInterference",
-                "Name": "GECM Interference",
-                "Details": "Guardian ECM making this unit harder to hit.",
-                "Icon": "uixSvgIcon_equipment_Gyro"
-            },
-            "nature": "Buff",
-            "statisticData": {
-                "statName": "ToHitThisActor",
-                "operation": "Float_Add",
-                "modValue": "2.0",
-                "modType": "System.Single"
-            }
-        }
-    ],
-    "ComponentTags": {
-        "items": [
-            "component_type_stock",
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "EnemiesWithinRange",
+				"alsoTargetsCreator": true,
+				"forceVisRebuild": true
+			},
+			"effectType": "ActiveAbility",
+			"Description": {
+				"Id": "ActiveProbe_Ping",
+				"Name": "ACTIVE PROBE PING",
+				"Details": "Activated ability (uses Firing action). Performs a Sensor Lock against all enemies within its radius, as indicated by the spinning gold ring. Will go into cooldown state after use.",
+				"Icon": "uixSvgIcon_action_sensorlock"
+			},
+			"activeAbilityEffectData": {
+				"abilityName": "AbilityDef_ActiveProbe_Ping"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "GECMInterference",
+				"Name": "GECM Interference",
+				"Details": "Guardian ECM making this unit harder to hit.",
+				"Icon": "uixSvgIcon_equipment_Gyro"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "ToHitThisActor",
+				"operation": "Float_Add",
+				"modValue": "2.0",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
 			"ElectronicCounterMeasures",
-            "lv-probe_m2"
-        ],
-        "tagSetSourceFile": ""
-    }
+			"lv-probe_m2"
+		],
+		"tagSetSourceFile": ""
+	}
 }
