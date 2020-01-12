@@ -1,0 +1,101 @@
+{
+	"Custom": {
+		"BonusDescriptions": {
+			"Bonuses": [
+				"VSPL"
+			]
+		}
+	},
+    "Category" : "Energy",
+    "Type" : "Laser",
+    "WeaponSubType" : "LargeLaserPulse",
+    "MinRange" : 0,
+    "MaxRange" : 240,
+    "RangeSplit" : [
+        240,
+        240,
+        240
+    ],
+    "AmmoCategory" : "NotSet",
+    "StartingAmmoCapacity" : 0,
+    "HeatGenerated" : 30,
+    "Damage" : 50,
+    "OverheatedDamageMultiplier" : 0,
+    "EvasiveDamageMultiplier" : 0,
+    "EvasivePipsIgnored" : 1,
+    "DamageVariance" : 0,
+    "HeatDamage" : 0,
+    "AccuracyModifier" : -2,
+    "CriticalChanceMultiplier" : 1,
+    "AOECapable" : false,
+    "IndirectFireCapable" : false,
+    "RefireModifier" : 0,
+    "ShotsWhenFired" : 1,
+    "ProjectilesPerShot" : 1,
+    "AttackRecoil" : 0,
+    "Instability" : 0,
+    "WeaponEffectID" : "WeaponEffect-Weapon_LaserPulse_Large",
+    "Description" : {
+        "Cost" : 350000,
+        "Rarity" : 20,
+        "Purchasable" : false,
+        "Manufacturer" : "SCI",
+        "Model" : "Large Variable-Speed Pulse Laser",
+        "UIName" : "L VSPL",
+        "Id" : "Weapon_Laser_LargeLaserVSPL_0-STOCK",
+        "Name" : "L VSPL",
+        "Details" : "An improvement upon standard Large Lasers, Large Variable-Speed Pulse Lasers use pulses of light instead of a single beam. This results in the VSP inflicting more damage at close range in exchange for a dropoff in damage at longer ranges. Like all Lasers, Large Variable-Speed Pulse Lasers enjoy a baseline accuracy bonus over other weapons.",
+        "Icon" : "uixSvgIcon_weapon_Energy"
+    },
+    "BonusValueA" : "Pulse Accuracy",
+    "BonusValueB" : "Range Modes",
+    "ComponentType" : "Weapon",
+    "ComponentSubType" : "Weapon",
+    "PrefabIdentifier" : "Laser",
+    "BattleValue" : 0,
+    "InventorySize" : 4,
+    "Tonnage" : 9,
+    "AllowedLocations" : "All",
+    "DisallowedLocations" : "All",
+    "CriticalComponent" : false,
+    "statusEffects" : [],
+	"Modes" : [
+		{
+            "Id": "short",
+            "UIName": "Close",
+            "isBaseMode": false,
+			"MaxRange": -120.0,
+            "ShortRange": -120.0,
+            "MiddleRange": -120.0,
+            "LongRange": -120.0,
+			"DamagePerShot": 10.0
+        },
+        {
+            "Id": "mid",
+            "UIName": "Medium",
+            "isBaseMode": true,
+			"forbiddenRangeEnable": true,
+			"ForbiddenRange": 120
+        },
+		{
+            "Id": "long",
+            "UIName": "Long",
+            "isBaseMode": false,
+			"MaxRange": 210.0,
+            "ShortRange": 210.0,
+            "MiddleRange": 210.0,
+            "LongRange": 210.0,
+			"DamagePerShot": -10.0,
+			"forbiddenRangeEnable": true,
+			"ForbiddenRange": 240
+        }
+	],
+    "ComponentTags" : {
+        "items" : [
+            "component_type_stock",
+            "component_type_lostech",
+            "range_long"
+        ],
+        "tagSetSourceFile" : ""
+    }
+}
