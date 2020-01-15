@@ -1527,6 +1527,62 @@
 					]
 				}
 			]
+		},
+		{
+			"ID": "diff_maintenance",
+			"Name": "Mech Maintenance",
+			"TelemetryEventName": "",
+			"UIOrder": 16,
+			"Tooltip": "This setting changes the base cost of each mech per month.",
+			"Enabled": true,
+			"Visible": true,
+			"Toggle": false,
+			"StartOnly": false,
+			"DefaultIndex": 0,
+			"Options": [
+				{
+					"ID": "diff_Maint_low",
+					"Name": "Easy",
+					"TelemetryEventDesc": "",
+					"DifficultyValue": -1,
+					"CareerScoreModifier": -0.5,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "Finances",
+							"ConstantName": "MechCostPerQuarter",
+							"ConstantValue": "1200"
+						}
+					]
+				},
+				{
+					"ID": "diff_Maint_med",
+					"Name": "Normal",
+					"TelemetryEventDesc": "",
+					"DifficultyValue": 0,
+					"CareerScoreModifier": 0,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "Finances",
+							"ConstantName": "MechCostPerQuarter",
+							"ConstantValue": "12000"
+						}
+					]
+				},
+				{
+					"ID": "diff_Maint_high",
+					"Name": "Hard",
+					"TelemetryEventDesc": "",
+					"DifficultyValue": 1,
+					"CareerScoreModifier": 0.5,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "Finances",
+							"ConstantName": "MechCostPerQuarter",
+							"ConstantValue": "22000"
+						}
+					]
+				}
+			]
 		}
 	]
 }
