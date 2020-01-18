@@ -1,10 +1,11 @@
 {
-	"DebugMode": false,
-	"DebugSkirmishMode": false,
-	"DisableIfFlashpointContract": true,
-	"RandomSpawns": {
-		"Enable": true,
-		"ExcludeContractTypes": [
+  "DebugMode": true,
+  "VersionCheck": false,
+  "DebugSkirmishMode": true,
+  "DisableIfFlashpointContract": true,
+  "RandomSpawns": {
+    "Enable": true,
+    "ExcludeContractTypes": [
 			"SoloDuel",
 			"DuoDuel",
 			"Story_1A_Retreat",
@@ -26,22 +27,19 @@
 			"Itrom_Defense",
 			"Tyrlon_Attack"
 		]
-	},
-	"HotDrop": {
-		"Enable": true,
-		"ExcludeContractTypes": [
-			"SoloDuel",
-			"DuoDuel"
-		],
-		"GuardOnHotDrop": true,
-		"EvasionPipsOnHotDrop": 6,
-		"IncludeEnemies": true,
-		"IncludeAllyTurrets": false,
-		"IncludeEnemyTurrets": false
-	},
-	"AdditionalLances": {
-		"Enable": true,
-		"ExcludeContractTypes": [
+  },
+  "HotDrop": {
+    "Enable": true,
+    "ExcludeContractTypes": ["SoloDuel", "DuoDuel"],
+    "GuardOnHotDrop": false,
+    "EvasionPipsOnHotDrop": 6,
+    "IncludeEnemies": true,
+    "IncludeAllyTurrets": false,
+    "IncludeEnemyTurrets": false
+  },
+  "AdditionalLances": {
+    "Enable": true,
+    "ExcludeContractTypes": [
 			"SoloDuel",
 			"DuoDuel",
 			"Story_1A_Retreat",
@@ -63,33 +61,32 @@
 			"Itrom_Defense",
 			"Tyrlon_Attack"
 		],
-		"UseElites": false,
-		"UseDialogue": true,
-		"SkullValueMatters": true,
-		"BasedOnVisibleSkullValue": true,
-		"UseGeneralProfileForSkirmish": true,
-		"DisableIfFlashpointContract": true,
-		"DisableWhenMaxTonnage": {
-			"Enable": true,
-			"Limited": false,
-			"LimitedToUnder": 300
-		}
-	},
-	"ExtendedLances": {
-		"Enable": false,
-		"Autofill": true,
-		"ExcludeContractTypes": [
-			"SoloDuel",
-			"DuoDuel"
-		],
-		"LanceSizes": {
-			"5": [],
-			"6": []
-		}
-	},
-	"ExtendedBoundaries": {
-		"Enable": true,
-		"ExcludeContractTypes": [
+    "IsPrimaryObjectiveIn": ["SimpleBattle", "ThreeWayBattle"],
+    "UseElites": true,
+    "UseDialogue": true,
+    "SkullValueMatters": true,
+    "BasedOnVisibleSkullValue": true,
+    "UseGeneralProfileForSkirmish": true,
+    "DisableIfFlashpointContract": true,
+    "DisableWhenMaxTonnage": {
+      "Enable": true,
+      "Limited": false,
+      "LimitedToUnder": 300
+    },
+    "MatchAllyLanceCountToEnemy": false
+  },
+  "ExtendedLances": {
+    "Enable": false,
+    "Autofill": true,
+    "ExcludeContractTypes": ["SoloDuel", "DuoDuel"],
+    "LanceSizes": {
+      "5": [],
+      "6": []
+    }
+  },
+  "ExtendedBoundaries": {
+    "Enable": true,
+    "ExcludeContractTypes": [
 			"SoloDuel",
 			"DuoDuel",
 			"Story_1A_Retreat",
@@ -111,23 +108,42 @@
 			"Itrom_Defense",
 			"Tyrlon_Attack"
 		],
-		"IncreaseBoundarySizeByPercentage": 1
-	},
-	"DynamicWithdraw": {
-		"Enable": false,
-		"ExcludeContractTypes": [
-			"SoloDuel",
-			"DuoDuel"
-		],
-		"MinDistanceForZone": 50,
-		"MaxDistanceForZone": 400,
-		"DisorderlyWithdrawalCompatibility": false
-	},
-	"AI": {
-		"FollowPlayer": {
-			"Target": "HeaviestMech",
-			"StopWhen": "OnEnemyDetected",
-			"MaxDistanceFromTargetBeforeSprinting": 200
-		}
-	}
+    "IncreaseBoundarySizeByPercentage": 0.5,
+    "Overrides": [
+      {
+        "MapId": "mapGeneral_frigidSteppes_iTnd",
+        "ContractTypeName": "CaptureBase",
+        "IncreaseBoundarySizeByPercentage": 0.75
+      },
+      {
+        "MapId": "mapGeneral_icyOutpost_iGlc",
+        "ContractTypeName": "CaptureBase",
+        "IncreaseBoundarySizeByPercentage": 0.75
+      },
+      {
+        "MapId": "mapGeneral_highPeak_iGlc",
+        "ContractTypeName": "SimpleBattle",
+        "IncreaseBoundarySizeByPercentage": 0.75
+      },
+      {
+        "ContractTypeName": "FireMission",
+        "IncreaseBoundarySizeByPercentage": 0.5
+      }
+    ]
+  },
+  "DynamicWithdraw": {
+    "Enable": false,
+    "ExcludeContractTypes": ["SoloDuel", "DuoDuel"],
+    "MinDistanceForZone": 50,
+    "MaxDistanceForZone": 400,
+    "DisorderlyWithdrawalCompatibility": false
+  },
+  "AI": {
+    "FollowPlayer": {
+      "Target": "HeaviestMech",
+      "StopWhen": "OnEnemyDetected",
+      "MaxDistanceFromTargetBeforeSprinting": 120,
+      "TargetZoneRadius": 120
+    }
+  }
 }
