@@ -39,6 +39,12 @@
         "MechDefTagsSkip" : [
             "noautofix"
         ],
+        "MechDefAutoFixAgainstMaxFreeTonnage" : [
+            "mechdef_atlas_AS7-D-HT",
+            "mechdef_blackknight_BL-6b-KNT",
+            "mechdef_highlander_HGN-732b"
+        ],
+        "MechDefAutoFixInitialTonnageDiffThreshold" : 0.4,
         "MechDefEngine" : true,
         "MechDefCoolingDef" : "emod_kit_shs",
         "MechDefHeatBlockDef" : "emod_engine_cooling",
@@ -230,48 +236,148 @@
         "AutoFixWeaponDefSlotsChanges" : [
             {
                 "Type" : "AC5",
-                "Change" : {
+                "SlotChange" : {
                     "From" : 2,
                     "By" : 2,
                     "FromIsMin" : false,
                     "NewMin" : null
-                }
+                },
+                "TonnageChange" : null
             },
             {
                 "Type" : "AC10",
-                "Change" : {
+                "SlotChange" : {
                     "From" : 3,
                     "By" : 4,
                     "FromIsMin" : false,
                     "NewMin" : null
-                }
+                },
+                "TonnageChange" : null
             },
             {
                 "Type" : "AC20",
-                "Change" : {
+                "SlotChange" : {
                     "From" : 4,
                     "By" : 6,
                     "FromIsMin" : false,
                     "NewMin" : null
-                }
+                },
+                "TonnageChange" : null
             },
             {
                 "Type" : "Gauss",
-                "Change" : {
+                "SlotChange" : {
                     "From" : 5,
                     "By" : 2,
                     "FromIsMin" : false,
                     "NewMin" : null
-                }
+                },
+                "TonnageChange" : null
             },
             {
                 "Type" : "LRM20",
-                "Change" : {
+                "SlotChange" : {
                     "From" : 4,
                     "By" : 1,
                     "FromIsMin" : false,
                     "NewMin" : null
+                },
+                "TonnageChange" : null
+            },
+            {
+                "Type" : "TAG",
+                "SlotChange" : {
+                    "From" : 3,
+                    "By" : -2,
+                    "FromIsMin" : false,
+                    "NewMin" : null
+                },
+                "TonnageChange" : null
+            },
+            {
+                "Type" : "LB2X",
+                "SlotChange" : {
+                    "From" : 1,
+                    "By" : 3,
+                    "FromIsMin" : false,
+                    "NewMin" : null
+                },
+                "TonnageChange" : {
+                    "From" : 5,
+                    "By" : 1,
+                    "FromIsMin" : false,
+                    "NewMin" : null
                 }
+            },
+            {
+                "Type" : "LB5X",
+                "SlotChange" : {
+                    "From" : 2,
+                    "By" : 3,
+                    "FromIsMin" : false,
+                    "NewMin" : null
+                },
+                "TonnageChange" : null
+            },
+            {
+                "Type" : "LB10X",
+                "SlotChange" : {
+                    "From" : 4,
+                    "By" : 2,
+                    "FromIsMin" : false,
+                    "NewMin" : null
+                },
+                "TonnageChange" : null
+            },
+            {
+                "Type" : "LB20X",
+                "SlotChange" : {
+                    "From" : 6,
+                    "By" : 5,
+                    "FromIsMin" : false,
+                    "NewMin" : null
+                },
+                "TonnageChange" : null
+            },
+            {
+                "Type" : "UAC2",
+                "SlotChange" : {
+                    "From" : 1,
+                    "By" : 2,
+                    "FromIsMin" : false,
+                    "NewMin" : null
+                },
+                "TonnageChange" : null
+            },
+            {
+                "Type" : "UAC5",
+                "SlotChange" : {
+                    "From" : 2,
+                    "By" : 3,
+                    "FromIsMin" : false,
+                    "NewMin" : null
+                },
+                "TonnageChange" : null
+            },
+            {
+                "Type" : "UAC10",
+                "SlotChange" : {
+                    "From" : 3,
+                    "By" : 4,
+                    "FromIsMin" : false,
+                    "NewMin" : null
+                },
+                "TonnageChange" : null
+            },
+            {
+                "Type" : "UAC20",
+                "SlotChange" : {
+                    "From" : 4,
+                    "By" : 6,
+                    "FromIsMin" : false,
+                    "NewMin" : null
+                },
+                "TonnageChange" : null
             }
         ]
     },
@@ -290,30 +396,44 @@
         "ElementTemplate" : " <indent=10%><line-indent=-5%><line-height=65%>{{element}}</line-height></line-indent></indent>\r\n",
         "DescriptionUseName" : false,
         "CritFloatieMessage" : "{0} CRIT",
-        "DestroyedFloatieMessage" : "{0} DESTROYED"
+        "DestroyedFloatieMessage" : "{0} DESTROYED",
+        "CritHitText" : "HIT {0}: {1}",
+        "CritDestroyedText" : "DESTROYED: {0}",
+        "CritDestroyedDeathText" : "DESTROYED: Mech is incapacitated, reason is {0}",
+        "CritLinkedText" : "Critical hits are linked to '{0}'"
     },
     "DamageIgnore" : {
         "Enabled" : true,
         "EnabledDescription" : "Enables ignore_damage flag."
     },
-    "DebugCycleCombatSounds" : {
-        "Enabled" : false,
-        "EnabledDescription" : "Cycle through SFX sounds when pressing a specific button on the start menu",
-        "SpecificButton" : "Skirmish"
-    },
-    "DebugSaveMechToFile" : {
-        "Enabled" : false,
-        "EnabledDescription" : "Saves mechdefs to 'MechEngineer/Saves' when saving a mech in the mechlab"
-    },
     "DynamicSlots" : {
         "Enabled" : true,
         "EnabledDescription" : "Allows components to take up space dynamically on a mech.",
-        "DynamicSlotsValidateDropEnabled" : false,
-        "DynamicSlotsValidateDropEnabledDescription" : "Don't allow dropping of items that would exceed the available slots."
+        "DynamicSlotsValidateDropEnabledDescription" : "Don't allow dropping of items that would exceed the available slots.",
+        "DynamicSlotsValidateDropEnabled" : true,
+        "LocationPriorityOrder" : [
+            "CenterTorso",
+            "Head",
+            "LeftTorso",
+            "LeftLeg",
+            "RightTorso",
+            "RightLeg",
+            "LeftArm",
+            "RightArm"
+        ],
+        "LocationPriorityOrderDescription" : "From highest to lowest priority where to add dynamic slots too, relevant if locations have same amount of free slots. Visual impact only.",
+        "ReservedSlotText" : "reserved slot",
+        "MovableSlotText" : "movable slot"
     },
     "Engine" : {
         "Enabled" : true,
         "EnabledDescription" : "Provides engines that can be installed on mechs similar to how CBT works.",
+        "MovementPointDistanceMultiplierDescription" : "The distance of a TT movement point, 24 is vanilla CombatGameConstants.ExperimentalGridDistance .",
+        "MinimJumpHeatDescription" : "Minimum heat when doing a jump, even if only one jump jet exists and only when jumping one hex.",
+        "AutoConvertJumpCapacityInDefToStatDescription" : "All JumpCapacity values in JumpJetDefs will be auto-converted to the JumpCapacity statistic.",
+        "JumpJetDefaultJumpHeatDescription" : "The heat the jump jet produces when fully* used (* jumping below max distance reduces produced heat). Can be adjusted using the JumpHeat statistic.",
+        "RunMultiplierDescription" : "How much faster running is than walking.",
+        "EngineRatingForChassisMovementStatDescription" : "The engine rating to use when evaluating the movement stat of a mech.",
         "AllowMountingAllRatings" : false,
         "AllowMountingAllRatingsDescription" : "Allow mounting all fusion core rating regardless of min/max sprint factors.",
         "MinimumHeatSinksOnMech" : 10,
@@ -326,12 +446,12 @@
         "DefaultEngineHeatSinkIdDescription" : "Default heat sink type for engines without a kit.",
         "EngineMissingFallbackHeatSinkCapacity" : 30,
         "EngineMissingFallbackHeatSinkCapacityDescription" : "Heat sink capacity if no engine is detected.",
-        "UseGameWalkValues" : true,
-        "UseGameWalkValuesDescription" : "Set to false to use more TT like walk values.",
-        "JJRoundUp" : false,
-        "JJRoundUpDescription" : "The allowed number of jump jets is rounded up or down.",
-        "TTWalkMultiplier" : 30,
-        "TTSprintMultiplier" : 50,
+        "MovementPointDistanceMultiplier" : 24,
+        "MinimJumpHeat" : 9,
+        "AutoConvertJumpCapacityInDefToStat" : true,
+        "JumpJetDefaultJumpHeat" : 3,
+        "RunMultiplier" : 1.5,
+        "EngineRatingForChassisMovementStat" : 250,
         "LimitEngineCoresToTonnage" : true,
         "IgnoreLimitEngineChassisTag" : ""
     },
@@ -348,11 +468,16 @@
         "EnforceHardpointLimitsDescription" : "Enforces hardpoint limits in mechlab only allowing configured prefabs.",
         "AllowDefaultLoadoutWeapons" : false,
         "AllowDefaultLoadoutWeaponsDescription" : "Ignore limits that would prevent mounting default loadouts.",
+        "CreateVanillaFallbackPrefabs" : true,
+        "CreateVanillaFallbackPrefabsDescription" : "If no mapping can be found, use the vanilla mapping code (which unfortunatly maps SRM to UAC), fixes mortar issues",
         "WeaponPrefabMappings" : [
             {
                 "PrefabIdentifier" : "AC2",
                 "HardpointCandidates" : [
                     "ac2",
+                    "uac2",
+                    "rac2",
+                    "lbx2",
                     "ac",
                     "lbx"
                 ]
@@ -362,6 +487,8 @@
                 "HardpointCandidates" : [
                     "ac5",
                     "uac5",
+                    "rac5",
+                    "lbx5",
                     "ac",
                     "lbx"
                 ]
@@ -370,6 +497,7 @@
                 "PrefabIdentifier" : "AC10",
                 "HardpointCandidates" : [
                     "ac10",
+                    "uac10",
                     "lbx10",
                     "ac",
                     "lbx"
@@ -379,6 +507,36 @@
                 "PrefabIdentifier" : "AC20",
                 "HardpointCandidates" : [
                     "ac20",
+                    "uac20",
+                    "ac",
+                    "lbx"
+                ]
+            },
+            {
+                "PrefabIdentifier" : "lbx10",
+                "HardpointCandidates" : [
+                    "lbx10",
+                    "lbx20",
+                    "lbx5",
+                    "lbx2",
+                    "ac10",
+                    "ac",
+                    "lbx"
+                ]
+            },
+            {
+                "PrefabIdentifier" : "uac5",
+                "HardpointCandidates" : [
+                    "uac5",
+                    "uac20",
+                    "uac10",
+                    "uac2",
+                    "ac5",
+                    "ac20",
+                    "ac10",
+                    "ac2",
+                    "rac5",
+                    "lbx5",
                     "ac",
                     "lbx"
                 ]
@@ -388,6 +546,8 @@
                 "HardpointCandidates" : [
                     "artillery",
                     "ac20",
+                    "uac20",
+                    "lbx20",
                     "ac",
                     "lbx"
                 ]
@@ -409,7 +569,8 @@
                     "lrm15",
                     "lrm20",
                     "srm20",
-                    "lrm5"
+                    "lrm5",
+                    "rl10"
                 ]
             },
             {
@@ -419,7 +580,9 @@
                     "lrm20",
                     "srm20",
                     "lrm10",
-                    "lrm5"
+                    "lrm5",
+                    "rl20",
+                    "rl15"
                 ]
             },
             {
@@ -429,14 +592,19 @@
                     "srm20",
                     "lrm15",
                     "lrm10",
-                    "lrm5"
+                    "lrm5",
+                    "rl20",
+                    "rl15",
+                    "rl10"
                 ]
             },
             {
                 "PrefabIdentifier" : "MachineGun",
                 "HardpointCandidates" : [
                     "machinegun",
-                    "mg"
+                    "mg",
+                    "lmg",
+                    "hmg"
                 ]
             },
             {
@@ -462,6 +630,23 @@
                     "srm4",
                     "srm2"
                 ]
+            },
+            {
+                "PrefabIdentifier" : "PPC",
+                "HardpointCandidates" : [
+                    "ppc",
+                    "hppc",
+                    "lppc",
+                    "snppc"
+                ]
+            },
+            {
+                "PrefabIdentifier" : "Gauss",
+                "HardpointCandidates" : [
+                    "gauss",
+                    "hgauss",
+                    "lgauss"
+                ]
             }
         ]
     },
@@ -482,11 +667,6 @@
     "MoveMultiplierStat" : {
         "Enabled" : true,
         "EnabledDescription" : "Introduces a new statistic effect to allow easy manipulation of (mech only) movement."
-    },
-    "NewSaveFolder" : {
-        "Enabled" : false,
-        "EnabledDescription" : "Redirects all save operations to use one folder for all save related data.",
-        "Path" : "Mods/Saves"
     },
     "OverrideDescriptions" : {
         "Enabled" : true,
@@ -562,5 +742,20 @@
             
         ],
         "BlacklistMechTagsDescription" : "Similar to BlacklistComponentTags but with MechTags"
+    },
+    "DebugCycleCombatSounds" : {
+        "Enabled" : false,
+        "EnabledDescription" : "Cycle through SFX sounds when pressing a specific button on the start menu",
+        "SpecificButton" : "Skirmish"
+    },
+    "DebugSaveMechToFile" : {
+        "Enabled" : false,
+        "EnabledDescription" : "Saves mechdefs to 'MechEngineer/Saves' when saving a mech in the mechlab"
+    },
+    "DebugScreenshotMechs" : {
+        "Enabled" : false,
+        "EnabledDescription" : "Edit a mech then cancel, it then will go through all mechs and make screenshots for them. To improve loading times use the TagManager to blacklist all components so the MechLab doesn't have to load them.",
+        "ScreenshotDirectoryPath" : "screenshots",
+        "ScreenshotDirectoryPathDescription" : "Create the directory manually first, otherwise it won't save any of the images."
     }
 }

@@ -4,88 +4,113 @@
 	"Website": "https://github.com/Denadan/CustomSalvage",
 
 	"Enabled": true,
+	"Hidden": true,
 	"DependsOn": ["CustomComponents"],
 	"DLL": "CustomSalvage.dll",
 	"DLLEntryPoint": "CustomSalvage.Control.Init",
 	
 	"Settings" : {
-		"LogLevel" : "Debug",
-		"RecoveryType" : "PartDestroyed",
-		"PartCountType" : "PartDestroyed",
-		"LostMechAction" : "ReturnItemsToPlayer",
-		"RecoveryMod" : 1,
-		"LimbRecoveryPenalty" : 0.05,
-		"TorsoRecoveryPenalty" : 0.1,
-		"HeadRecoveryPenaly" : 0,
-		"EjectRecoveryBonus" : 1,
-		"CenterTorsoDestroyedParts" : 1,
-		"SalvageArmWeight" : 0.75,
-		"SalvageLegWeight" : 0.75,
-		"SalvageTorsoWeight" : 1,
-		"SalvageHeadWeight" : 0.5,
-		"SalvageCTWeight" : 1.5,
-		"VACTDestroyedMod" : 0.35,
-		"VABLDestroyedMod" : 0.68,
-		"SalvageTurrets" : true,
-		"SalvageTurretsComponentChance" : 0.33,
-		"UpgradeSalvage" : false,
-		"BGColors" : [
+		"LogLevel": "Debug",
+		"RecoveryType": "PartDestroyed",
+		"PartCountType": "PartDestroyed",
+		"LostMechAction": "ReturnItemsToPlayer",
+		"RecoveryMod": 1,
+		"LimbRecoveryPenalty": 0.05,
+		"TorsoRecoveryPenalty": 0.1,
+		"HeadRecoveryPenaly": 0,
+		"EjectRecoveryBonus": 1,
+		"CenterTorsoDestroyedParts": 1,
+		"SalvageArmWeight": 0.75,
+		"SalvageLegWeight": 0.75,
+		"SalvageTorsoWeight": 1,
+		"SalvageHeadWeight": 0.5,
+		"SalvageCTWeight": 1.5,
+		
+		"VACTDestroyedMod": 0.35,
+		"VABLDestroyedMod": 0.68,
+		"SalvageTurrets": true,
+		"SalvageTurretsComponentChance": 0.33,
+		"UpgradeSalvage": false,
+		"AllowDropBlackListed": true,
+		"NoSalvageMechTag": "NOSALVAGE",
+		"BGColors": [
 			{
-				"Tag" : "unit_assault",
-				"Color" : "#b2babb10"
+				"Tag": "unit_assault",
+				"Color": "#b2babb10"
 			},
 			{
-				"Tag" : "unit_heavy",
-				"Color" : "#f0b27a10"
+				"Tag": "unit_heavy",
+				"Color": "#f0b27a10"
 			},
 			{
-				"Tag" : "unit_medium",
-				"Color" : "#82e0aa10"
+				"Tag": "unit_medium",
+				"Color": "#82e0aa10"
 			},
 			{
-				"Tag" : "unit_light",
-				"Color" : "#85c1e910"
+				"Tag": "unit_light",
+				"Color": "#85c1e910"
 			}
 		],
-		"StoredMechColor" : "#7FFFD4",
-		"ReadyColor" : "#32CD32",
-		"VariantsColor" : "yellow",
-		"NotReadyColor" : "white",
-		"ExcludedColor" : "magenta",
+		"StoredMechColor": "#7FFFD4",
+		"ReadyColor": "#32CD32",
+		"VariantsColor": "yellow",
+		"NotReadyColor": "white",
+		"ExcludedColor": "magenta",
 
-		"AssemblyVariants" : true,
-		"MinPartsToAssembly" : 0.5,
-		"ExcludeTags" : [
+		"AssemblyVariants": true,
+		"MinPartsToAssembly": 0.5,
+		"ExcludeTags": [
 			"BLACKLISTED"
 		],
-		"ExcludeVariants" : [
+		"ExcludeVariants": [
 			
 		],
-		"MaxVariantsInDescription" : 5,
-		"UnEquipedMech" : false,
-		"BrokenMech" : false,
-		"HeadRepaired" : false,
-		"LeftArmRepaired" : false,
-		"RightArmRepaired" : false,
-		"CentralTorsoRepaired" : false,
-		"LeftTorsoRepaired" : false,
-		"RightTorsoRepaired" : false,
-		"LeftLegRepaired" : false,
-		"RightLegRepaired" : false,
-		"RepairMechLimbs" : true,
-		"RepairMechLimbsChance" : 0.75,
-		"RandomStructureOnRepairedLimbs" : true,
-		"MinStructure" : 0.25,
-		"RepairMechComponents" : true,
-		"RepairComponentsFunctionalThreshold" : 0.25,
-		"RepairComponentsNonFunctionalThreshold" : 0.5,
-		"AdaptPartBaseCost" : 0.015,
-		"MaxAdaptMod" : 5,
-		"AdaptModWeight" : 2,
+		"MaxVariantsInDescription": 5,
+		"UnEquipedMech": false,
+		"BrokenMech": false,
+		"HeadRepaired": false,
+		"LeftArmRepaired": false,
+		"RightArmRepaired": false,
+		"CentralTorsoRepaired": false,
+		"LeftTorsoRepaired": false,
+		"RightTorsoRepaired": false,
+		"LeftLegRepaired": false,
+		"RightLegRepaired": false,
+		"RepairMechLimbs": true,
+		"RepairMechLimbsChance": 0.75,
+		"RandomStructureOnRepairedLimbs": true,
+		"MinStructure": 0.25,
+		"RepairMechComponents": true,
+		"RepairComponentsFunctionalThreshold": 0.25,
+		"RepairComponentsNonFunctionalThreshold": 0.5,
+		"RepairChanceByTP": false,
+		"BaseTP": 10,
+		"LimbChancePerTp": 0.01,
+		"ComponentChancePerTp": 0.01,
+		"LimbMinChance": 0.1,
+		"LimbMaxChance": 0.95,
+		"ComponentMinChance": 0.1,
+		"ComponentMaxChance": 0.95,
+
 		
-		"AllowScrapToParts" : true,
-        "MinScrapParts" :  0.51,
-        "MaxScrapParts" : 0.91
+		"BrokeByTag": [
+			{ "tag": "hard_to_repair", "BaseTp": "30", "Limb": "0.0075", "Component": "0.0075" },
+			{ "tag": "easy_to_repair", "Limb": "0.015", "Component": "0.015" },
+			{ "tag": "poor_maintained", "BaseTp": "20" }
+		],
+		
+		
+		
+		"AdaptPartBaseCost": 0.015,
+		"MaxAdaptMod": 5,
+		"AdaptModWeight": 2,
+		"OmniTechTag": "OmniMech",
+		"OmniSpectialtoSpecialMod": 0.1,
+		"OmniSpectialtoNormalMod": 0.25,
+		"OmniNormalMod": 0,
+		"AllowScrapToParts": false,
+        "MinScrapParts":  0.51,
+        "MaxScrapParts": 0.91
 	},	
 		
 	"Manifest": [

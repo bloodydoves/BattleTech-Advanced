@@ -1,196 +1,225 @@
 {
-  "Description": {
-    "Cost": 1871100,
-    "Rarity": 4,
-    "Purchasable": true,
-    "Manufacturer": "",
-    "Model": "",
-    "UIName": "Javelin",
-    "Id": "chassisdef_javelin_JVN-12M",
-    "Name": "Javelin",
-    "Details": "When the FWLM went looking for a light chassis for their Light Gauss Rifle, the venerable Javelin was recommended. The -12M proved an able carrier of the weapon, providing rapid speed to reposition quickly for better shots. To carry the still quite heavy LGR, an upgrade to a XL engine was required, as was stripping all the jump jets. A single ton of ammo gives moderate endurance and a lone ER Medium Laser backs up the main gun.",
-    "Icon": "uixTxrIcon_javelin"
-  },
-  "MovementCapDefID": "movedef_javelin",
-  "PathingCapDefID": "pathingdef_light",
-  "HardpointDataDefID": "hardpointdatadef_javelin",
-  "PrefabIdentifier": "chrPrfMech_javelinBase-001",
-  "PrefabBase": "javelin",
-  "Tonnage": 30,
-  "InitialTonnage": 3,
-  "weightClass": "LIGHT",
-  "BattleValue": 3749000,
-  "Heatsinks": 0,
-  "TopSpeed": 96,
-  "TurnRadius": 90,
-  "MaxJumpjets": 6,
-  "Stability": 100,
-  "StabilityDefenses": [0, 0, 0, 0, 0, 0],
-  "SpotterDistanceMultiplier": 1,
-  "VisibilityMultiplier": 1,
-  "SensorRangeMultiplier": 1,
-  "Signature": 0,
-  "Radius": 4,
-  "PunchesWithLeftArm": false,
-  "MeleeDamage": 30,
-  "MeleeInstability": 8,
-  "MeleeToHitModifier": 0,
-  "DFADamage": 45,
-  "DFAToHitModifier": 0,
-  "DFASelfDamage": 30,
-  "DFAInstability": 22,
-  "Locations": [
-    {
-      "Location": "Head",
-      "Hardpoints": [],
-      "Tonnage": 0,
-      "InventorySlots": 6,
-      "MaxArmor": 45,
-      "MaxRearArmor": -1,
-      "InternalStructure": 16
-    },
-    {
-      "Location": "LeftArm",
-      "Hardpoints": [
-		{
-          "WeaponMount": "Energy",
-          "Omni": false
-        },
-		{
-          "WeaponMount": "Energy",
-          "Omni": false
-        }
-	  ],
-      "Tonnage": 0,
-      "InventorySlots": 12,
-      "MaxArmor": 50,
-      "MaxRearArmor": -1,
-      "InternalStructure": 25
-    },
-    {
-      "Location": "LeftTorso",
-      "Hardpoints": [
-        {
-          "WeaponMount": "AntiPersonnel",
-          "Omni": false
-        }	
-      ],
-      "Tonnage": 0,
-      "InventorySlots": 12,
-      "MaxArmor": 70,
-      "MaxRearArmor": 35,
-      "InternalStructure": 35
-    },
-    {
-      "Location": "CenterTorso",
-      "Hardpoints": [],
-      "Tonnage": 0,
-      "InventorySlots": 15,
-      "MaxArmor": 100,
-      "MaxRearArmor": 50,
-      "InternalStructure": 50
-    },
-    {
-      "Location": "RightTorso",
-      "Hardpoints": [
-        {
-          "WeaponMount": "AntiPersonnel",
-          "Omni": false
-        }
-      ],
-      "Tonnage": 0,
-      "InventorySlots": 12,
-      "MaxArmor": 70,
-      "MaxRearArmor": 35,
-      "InternalStructure": 35
-    },
-    {
-      "Location": "RightArm",
-      "Hardpoints": [
-		{
-          "WeaponMount": "Ballistic",
-          "Omni": false
-        },
-		{
-          "WeaponMount": "Ballistic",
-          "Omni": false
-        }
-	  ],
-      "Tonnage": 0,
-      "InventorySlots": 12,
-      "MaxArmor": 50,
-      "MaxRearArmor": -1,
-      "InternalStructure": 25
-    },
-    {
-      "Location": "LeftLeg",
-      "Hardpoints": [],
-      "Tonnage": 0,
-      "InventorySlots": 6,
-      "MaxArmor": 70,
-      "MaxRearArmor": -1,
-      "InternalStructure": 35
-    },
-    {
-      "Location": "RightLeg",
-      "Hardpoints": [],
-      "Tonnage": 0,
-      "InventorySlots": 6,
-      "MaxArmor": 70,
-      "MaxRearArmor": -1,
-      "InternalStructure": 35
-    }
-  ],
-  "LOSSourcePositions": [
-    {
-      "x": 0,
-      "y": 12.5,
-      "z": 0.5
-    },
-    {
-      "x": -2.5,
-      "y": 11.5,
-      "z": -0.5
-    },
-    {
-      "x": 2.5,
-      "y": 11.5,
-      "z": -0.5
-    }
-  ],
-  "LOSTargetPositions": [
-    {
-      "x": 0,
-      "y": 12.5,
-      "z": 0.5
-    },
-    {
-      "x": -2.5,
-      "y": 11.5,
-      "z": -0.5
-    },
-    {
-      "x": 2.5,
-      "y": 11.5,
-      "z": -0.5
-    },
-    {
-      "x": -2,
-      "y": 3,
-      "z": 0.5
-    },
-    {
-      "x": 2,
-      "y": 3,
-      "z": 0.5
-    }
-  ],
-  "VariantName": "JVN-12M",
-  "ChassisTags": {
-    "items": [
+	"Description": {
+		"Cost": 1871100,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "",
+		"Model": "",
+		"UIName": "Javelin",
+		"Id": "chassisdef_javelin_JVN-12M",
+		"Name": "Javelin",
+		"Details": "When the FWLM went looking for a light chassis for their Light Gauss Rifle, the venerable Javelin was recommended. The -12M proved an able carrier of the weapon, providing rapid speed to reposition quickly for better shots. To carry the still quite heavy LGR, an upgrade to a XL engine was required, as was stripping all the jump jets. A single ton of ammo gives moderate endurance and a lone ER Medium Laser backs up the main gun.",
+		"Icon": "uixTxrIcon_javelin"
+	},
+	"MovementCapDefID": "movedef_javelin",
+	"PathingCapDefID": "pathingdef_light",
+	"HardpointDataDefID": "hardpointdatadef_javelin",
+	"PrefabIdentifier": "chrPrfMech_javelinBase-001",
+	"PrefabBase": "javelin",
+	"Tonnage": 30,
+	"InitialTonnage": 3,
+	"weightClass": "LIGHT",
+	"BattleValue": 3749000,
+	"Heatsinks": 0,
+	"TopSpeed": 96,
+	"TurnRadius": 90,
+	"MaxJumpjets": 30,
+	"Stability": 100,
+	"StabilityDefenses": [
+		0,
+		0,
+		0,
+		0,
+		0,
+		0
 	],
-    "tagSetSourceFile": ""
-  },
-  "StockRole": "Scout & Ambusher",
-  "YangsThoughts": "When the FWLM went looking for a light chassis for their Light Gauss Rifle, the venerable Javelin was recommended. The -12M proved an able carrier of the weapon, providing rapid speed to reposition quickly for better shots. To carry the still quite heavy LGR, an upgrade to a XL engine was required, as was stripping all the jump jets. A single ton of ammo gives moderate endurance and a lone ER Medium Laser backs up the main gun."
+	"SpotterDistanceMultiplier": 1,
+	"VisibilityMultiplier": 1,
+	"SensorRangeMultiplier": 1,
+	"Signature": 0,
+	"Radius": 4,
+	"PunchesWithLeftArm": false,
+	"MeleeDamage": 30,
+	"MeleeInstability": 8,
+	"MeleeToHitModifier": 0,
+	"DFADamage": 45,
+	"DFAToHitModifier": 0,
+	"DFASelfDamage": 30,
+	"DFAInstability": 22,
+	"Locations": [
+		{
+			"Location": "Head",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 6,
+			"MaxArmor": 45,
+			"MaxRearArmor": -1,
+			"InternalStructure": 16
+		},
+		{
+			"Location": "LeftArm",
+			"Hardpoints": [
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 12,
+			"MaxArmor": 50,
+			"MaxRearArmor": -1,
+			"InternalStructure": 25
+		},
+		{
+			"Location": "LeftTorso",
+			"Hardpoints": [
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 12,
+			"MaxArmor": 70,
+			"MaxRearArmor": 35,
+			"InternalStructure": 35
+		},
+		{
+			"Location": "CenterTorso",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 15,
+			"MaxArmor": 100,
+			"MaxRearArmor": 50,
+			"InternalStructure": 50
+		},
+		{
+			"Location": "RightTorso",
+			"Hardpoints": [
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 12,
+			"MaxArmor": 70,
+			"MaxRearArmor": 35,
+			"InternalStructure": 35
+		},
+		{
+			"Location": "RightArm",
+			"Hardpoints": [
+				{
+					"WeaponMount": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Ballistic",
+					"Omni": false
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 12,
+			"MaxArmor": 50,
+			"MaxRearArmor": -1,
+			"InternalStructure": 25
+		},
+		{
+			"Location": "LeftLeg",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 6,
+			"MaxArmor": 70,
+			"MaxRearArmor": -1,
+			"InternalStructure": 35
+		},
+		{
+			"Location": "RightLeg",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 6,
+			"MaxArmor": 70,
+			"MaxRearArmor": -1,
+			"InternalStructure": 35
+		}
+	],
+	"LOSSourcePositions": [
+		{
+			"x": 0,
+			"y": 12.5,
+			"z": 0.5
+		},
+		{
+			"x": -2.5,
+			"y": 11.5,
+			"z": -0.5
+		},
+		{
+			"x": 2.5,
+			"y": 11.5,
+			"z": -0.5
+		}
+	],
+	"LOSTargetPositions": [
+		{
+			"x": 0,
+			"y": 12.5,
+			"z": 0.5
+		},
+		{
+			"x": -2.5,
+			"y": 11.5,
+			"z": -0.5
+		},
+		{
+			"x": 2.5,
+			"y": 11.5,
+			"z": -0.5
+		},
+		{
+			"x": -2,
+			"y": 3,
+			"z": 0.5
+		},
+		{
+			"x": 2,
+			"y": 3,
+			"z": 0.5
+		}
+	],
+	"FixedEquipment": [
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "Gear_Quirk_NimbleJumper_Javelin",
+			"SimGameUID": "",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"IsFixed": true,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+            "MountedLocation" : "CenterTorso",
+            "ComponentDefID" : "emod_structureslots_endosteel",
+            "ComponentDefType" : "Upgrade",
+            "HardpointSlot" : -1,
+            "DamageLevel" : "Functional",
+            "prefabName" : "",
+            "hasPrefabName" : true
+        }
+	],
+	"VariantName": "JVN-12M",
+	"ChassisTags": {
+		"items": [],
+		"tagSetSourceFile": ""
+	},
+	"StockRole": "Scout & Ambusher",
+	"YangsThoughts": "When the FWLM went looking for a light chassis for their Light Gauss Rifle, the venerable Javelin was recommended. The -12M proved an able carrier of the weapon, providing rapid speed to reposition quickly for better shots. To carry the still quite heavy LGR, an upgrade to a XL engine was required, as was stripping all the jump jets. A single ton of ammo gives moderate endurance and a lone ER Medium Laser backs up the main gun."
 }

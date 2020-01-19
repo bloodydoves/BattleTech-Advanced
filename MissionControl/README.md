@@ -1,8 +1,3 @@
-#### MISSION CONTROL V0.3 #####
+[Mission Control]
 
-For the full readme, go to github - https://github.com/CWolfs/MissionControl
-
-#### AUTHOR ####
-
-Richard 'CWolf' Griffiths
-cwolfs@gmail.com
+Visit http://www.missioncontrolmod.com for full information.

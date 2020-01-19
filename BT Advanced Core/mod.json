@@ -1,11 +1,77 @@
 {
     "Name": "BT Advanced Core",
     "Enabled": true,
-
-	"Version": "2.9",
+    "Version": "4.0",
     "Description": "For files that have nowhere else to live and are fundamental to the modpack's functionality.",
-	
-	"Manifest": [
-		
-    ]
+    "DataAddendumEntries": [
+		{ "name": "BattleTech.FactionEnumeration", "path": "Faction.json" },
+		{ "name": "BattleTech.AmmoCategoryEnumeration", "path": "AmmoCategory.json" }
+    ],
+    "DependsOn": [
+        "Merc Emblems", "BattletechPerformanceFix", "bd weapon rebalance", "Better AI",
+        "BTA Contracts", "BTA Difficulty Settings", "BT Advanced Factions", "Xtreme Advanced Gear Component",
+        "BT Advanced Lances", "BT Advanced Mech Quirks", "BT Advanced Mechs", "BT Advanced Tanks", "Select Pilots BTA Edition",
+        "CBTBehaviorsEnhanced", "cFixes", "CommanderPortraitLoader", "CommunityBundles",
+        "Custom Ammo Categories", "CustomComponents", "CustomLocalization", "CustomSalvage",
+        "DynamicShops", "FlashpointEnabler", "FYLS", "IRTweaks", "JK_VariantsCampaign", "LessHeadInjuries",
+        "Loading Screen Tips", "LogoReplacement", "MechEngineer", "MechEngineer Vanilla Mechs",
+        "MechEngineerGear", "MechResizer", "MeleeMover", "Michael Woods Revamp",
+        "NavigationComputer", "NewSaveFolder", "OnePointArmorStep", "PanicSystem",
+        "PilotHealthPopup", "Primitive Mechs", "QuietDarius", "Repair Bays",
+        "SkipIntro", "VehicleEvasivePipsGainiedAdditionalFix", "VIPadvanced",
+		"Mission Control", "BiggerDrops"
+    ],
+    "ConflictsWith": [
+		"RogueTech Enhanced", "RogueTech Enhanced Clans",
+		"BTMLColorLOSMod", "Turbine",
+		"Give_me_Death", "Give_them_Kell",
+		"ScorchedEarth", "PermanentEvasion",
+		"JK_Pilots", "FewerHeadInjuries",
+		"SalvageOperations", "WeaponRealizer",
+		"AIM: Attack Improvement Mod", "CharlesB",
+		"Battletech Enhanced", "All_Gear_One_Slot",
+		"RealHitChance", "BetterBaseDefense",
+		"ShotCountEnabler", "NewStores",
+		"Career Roster", "CBTMovementCore",
+		"AllSalvage", "Advanced Difficulty Settings",
+		"CBTBehaviors", "ISM3025", "Colo-OmniHammer",
+		"AmmoCookOff", "Survivable Arms", "Special Equipment in Stores",
+		"StoresRestored3025", "StoresRestored", "Randomer Starting Mechs: Light And Medium",
+		"Randomer Starting Mechs: No Limits", "Randomer Starting Mechs: Balanced",
+		"Career Defaults", "Unofficial RogueTech Store Patch 0.6.5",
+		"InnerSphereMap", "More Tanks 3025", "Undebuffed Vehicles",
+		"FasterVehiclesModTek", "CareerSelectPilots", "HeadshotWeaponLimit"
+		],
+    "Manifest": [
+		{ "Type": "DesignMaskDef", "Path": "designmask" },
+		{
+			"Type": "CCCategories",
+			"Path": "settings/categories/",
+			"ShouldMergeJSON": false
+		},
+		{
+			"Type": "CCTagRestrictions",
+			"Path": "settings/tagRestrictions/",
+			"ShouldMergeJSON": false
+		},
+        {
+            "Type": "CCDefaults",
+            "Path": "settings/defaults/",
+            "ShouldMergeJSON": false
+        },
+		{
+			"Type": "MEBonusDescriptions",
+			"Path": "settings/bonusDescriptions/",
+			"ShouldMergeJSON": false
+		},
+		{
+			"Type": "MECriticalEffects",
+			"Path": "settings/criticalEffects/",
+			"ShouldMergeJSON": false
+		},
+		{
+            "Type": "MechStatisticsConstants",
+            "Path": "settings/MechStatistics"
+        }
+	]
 }

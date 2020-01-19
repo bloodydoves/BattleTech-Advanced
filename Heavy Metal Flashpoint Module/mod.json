@@ -1,0 +1,25 @@
+{
+    "Name": "Heavy Metal Flashpoint Module",
+    "Enabled": true,
+	
+    "Version": "1.3.2",
+
+    "Author": "bloodydoves and the BTA Team, special thanks to Necromis for Smooth Criminal",
+
+    "DependsOn": [ "BT Advanced Core", "BT Advanced HM Unit Module", "BT Advanced HM Equipment Module" ],
+    "ConflictsWith": [],
+
+    "Manifest": [
+	{ "Type": "ContractOverride", "Path": "contracts" },
+	{ "Type": "MechDef", "Path": "mech", "AddToDB": true },
+    { "Type": "ChassisDef", "Path": "chassis", "ShouldMergeJSON": false, "AddToDB": true },
+    { "Type": "PilotDef", "Path": "pilot" },
+	{ "Type": "ConversationContent", "Path": "conversations" },
+	{ "Type": "DialogBucketDef", "Path": "conversationBuckets" },
+	{ "Type": "FlashpointDef", "Path": "flashpoints" },
+	{ "Type": "ItemCollectionDef", "Path": "itemCollections" },
+	{ "Type": "SimGameMilestoneSet", "Path": "milestoneSets" },
+	{ "Type": "SimGameConversations", "Path": "simGameConversations" },
+	{ "Type": "Sprite", "Path": "sprites" }
+    ]
+}

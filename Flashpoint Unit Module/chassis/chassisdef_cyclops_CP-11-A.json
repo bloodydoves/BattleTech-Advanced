@@ -19,14 +19,13 @@
 		"Rarity": 4,
 		"UIName": "Cyclops"
 	},
-	"FixedEquipment": [],
 	"HardpointDataDefID": "hardpointdatadef_cyclops",
 	"MovementCapDefID": "movedef_cyclops_CP-10-Z",
 	"PathingCapDefID": "pathingdef_assault",
 	"PrefabBase": "cyclops",
 	"PrefabIdentifier": "chrPrfMech_cyclopsBase-001",
 	"weightClass": "ASSAULT",
-	"MaxJumpjets": 4,
+	"MaxJumpjets": 30,
 	"MeleeDamage": 115,
 	"MeleeInstability": 90,
 	"MeleeToHitModifier": 0,
@@ -216,5 +215,39 @@
 	],
 	"VariantName": "CP-11-A",
 	"StockRole": "Command & Fire Support",
-	"YangsThoughts": "A common modification of the Cyclops that uses some rediscovered Star League technology, the 11-A was introduced in 3045 and replaces the massive Autocannon/20 for a Gauss Rifle with two tons of ammo. Although doing slightly less damage it has a much larger effective range. Of course, thanks to recovered Star League technology, the 11-A still carries the powerful B2000 battle computer."
+	"YangsThoughts": "A common modification of the Cyclops that uses some rediscovered Star League technology, the 11-A was introduced in 3045 and replaces the massive Autocannon/20 for a Gauss Rifle with two tons of ammo. Although doing slightly less damage it has a much larger effective range. Of course, thanks to recovered Star League technology, the 11-A still carries the powerful B2000 battle computer.",
+	"FixedEquipment": [
+		{
+			"MountedLocation": "Head",
+			"ComponentDefID": "Gear_Quirk_Cowl_Cyclops",
+			"SimGameUID": "",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"IsFixed": true,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+            "MountedLocation" : "CenterTorso",
+            "ComponentDefID" : "emod_structureslots_standard",
+            "ComponentDefType" : "Upgrade",
+            "HardpointSlot" : -1,
+            "DamageLevel" : "Functional",
+            "prefabName" : "",
+            "hasPrefabName" : true
+        },
+		{
+			"MountedLocation": "Head",
+			"ComponentDefID": "Gear_Cockpit_Tacticon_B2000_Battle_Computer",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		}
+	]
 }

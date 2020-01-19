@@ -1,18 +1,68 @@
 {
   "DebugMode": true,
-  "DebugSkirmishMode": false,
+  "VersionCheck": false,
+  "DebugSkirmishMode": true,
   "DisableIfFlashpointContract": true,
+  "RandomSpawns": {
+    "Enable": true,
+    "ExcludeContractTypes": [
+			"SoloDuel",
+			"DuoDuel",
+			"Story_1A_Retreat",
+			"Story_1B_Retreat",
+			"Story_2_ThreeYearsLater",
+			"Story_3_Axylus",
+			"Story_4_LiberationOfWeldry",
+			"Story_5_ServedCold",
+			"Story_6A_TreasureTrove",
+			"Story_6B_TreasureTrove",
+			"Story_7_GunboatDiplomacy",
+			"Story_8_Locura",
+			"Story_9_Downfall",
+			"Smithon_Attack",
+			"Smithon_Defense",
+			"Panzyr_Attack",
+			"Panzyr_Defense",
+			"Itrom_Attack",
+			"Itrom_Defense",
+			"Tyrlon_Attack"
+		]
+  },
   "HotDrop": {
-    "Enable": false,
-    "GuardOnHotDrop": true,
-    "EvasionPipsOnHotDrop": 4,
+    "Enable": true,
+    "ExcludeContractTypes": ["SoloDuel", "DuoDuel"],
+    "GuardOnHotDrop": false,
+    "EvasionPipsOnHotDrop": 6,
     "IncludeEnemies": true,
     "IncludeAllyTurrets": false,
-    "IncludeEnemyTurrets": false,
+    "IncludeEnemyTurrets": false
   },
   "AdditionalLances": {
     "Enable": true,
-    "UseElites": false,
+    "ExcludeContractTypes": [
+			"SoloDuel",
+			"DuoDuel",
+			"Story_1A_Retreat",
+			"Story_1B_Retreat",
+			"Story_2_ThreeYearsLater",
+			"Story_3_Axylus",
+			"Story_4_LiberationOfWeldry",
+			"Story_5_ServedCold",
+			"Story_6A_TreasureTrove",
+			"Story_6B_TreasureTrove",
+			"Story_7_GunboatDiplomacy",
+			"Story_8_Locura",
+			"Story_9_Downfall",
+			"Smithon_Attack",
+			"Smithon_Defense",
+			"Panzyr_Attack",
+			"Panzyr_Defense",
+			"Itrom_Attack",
+			"Itrom_Defense",
+			"Tyrlon_Attack"
+		],
+    "IsPrimaryObjectiveIn": ["SimpleBattle", "ThreeWayBattle"],
+    "UseElites": true,
     "UseDialogue": true,
     "SkullValueMatters": true,
     "BasedOnVisibleSkullValue": true,
@@ -21,22 +71,79 @@
     "DisableWhenMaxTonnage": {
       "Enable": true,
       "Limited": false,
-      "LimitedToUnder": 300,
-    }
+      "LimitedToUnder": 300
+    },
+    "MatchAllyLanceCountToEnemy": false
   },
   "ExtendedLances": {
     "Enable": false,
     "Autofill": true,
+    "ExcludeContractTypes": ["SoloDuel", "DuoDuel"],
     "LanceSizes": {
       "5": [],
-      "6": [],
+      "6": []
     }
   },
-  "ExtendedBoundaries": true,
+  "ExtendedBoundaries": {
+    "Enable": true,
+    "ExcludeContractTypes": [
+			"SoloDuel",
+			"DuoDuel",
+			"Story_1A_Retreat",
+			"Story_1B_Retreat",
+			"Story_2_ThreeYearsLater",
+			"Story_3_Axylus",
+			"Story_4_LiberationOfWeldry",
+			"Story_5_ServedCold",
+			"Story_6A_TreasureTrove",
+			"Story_6B_TreasureTrove",
+			"Story_7_GunboatDiplomacy",
+			"Story_8_Locura",
+			"Story_9_Downfall",
+			"Smithon_Attack",
+			"Smithon_Defense",
+			"Panzyr_Attack",
+			"Panzyr_Defense",
+			"Itrom_Attack",
+			"Itrom_Defense",
+			"Tyrlon_Attack"
+		],
+    "IncreaseBoundarySizeByPercentage": 0.5,
+    "Overrides": [
+      {
+        "MapId": "mapGeneral_frigidSteppes_iTnd",
+        "ContractTypeName": "CaptureBase",
+        "IncreaseBoundarySizeByPercentage": 0.75
+      },
+      {
+        "MapId": "mapGeneral_icyOutpost_iGlc",
+        "ContractTypeName": "CaptureBase",
+        "IncreaseBoundarySizeByPercentage": 0.75
+      },
+      {
+        "MapId": "mapGeneral_highPeak_iGlc",
+        "ContractTypeName": "SimpleBattle",
+        "IncreaseBoundarySizeByPercentage": 0.75
+      },
+      {
+        "ContractTypeName": "FireMission",
+        "IncreaseBoundarySizeByPercentage": 0.5
+      }
+    ]
+  },
   "DynamicWithdraw": {
-    "Enabled": false,
+    "Enable": false,
+    "ExcludeContractTypes": ["SoloDuel", "DuoDuel"],
     "MinDistanceForZone": 50,
     "MaxDistanceForZone": 400,
-    "DisorderlyWithdrawalCompatibility": false,
+    "DisorderlyWithdrawalCompatibility": false
+  },
+  "AI": {
+    "FollowPlayer": {
+      "Target": "HeaviestMech",
+      "StopWhen": "OnEnemyDetected",
+      "MaxDistanceFromTargetBeforeSprinting": 120,
+      "TargetZoneRadius": 120
+    }
   }
 }

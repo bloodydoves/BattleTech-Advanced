@@ -1,69 +1,65 @@
 {
-	"MechLabGeneralSlots" : 0,
-    "EngineMissingFallbackHeatSinkCapacity" : 0,
-	"MechLabScale" : 0.85,
-    "MechLabPositionY" : 40,
-	"AutoFixChassisDefMaxJumpjets" : false,
-	"AutoFixUpgradeDefSkip" : [
-        "Gear_Cockpit_SLDF_Custom",
-        "Gear_Cockpit_Generic_Small",
-        "Gear_Gyro_Generic_Standard",
-        "emod_arm_part_shoulder",
-        "emod_arm_part_upper",
-        "emod_arm_part_lower",
-        "emod_arm_part_hand",
-        "emod_leg_hip",
-        "emod_leg_upper",
-        "emod_leg_lower",
-        "emod_leg_foot"
-    ],
-	"NewSaveFolder" : {
-        "Enabled" : true,
-        "EnabledDescription" : "Redirects all save operations to use one folder for all save related data.",
-        "Path" : "BTASaves"
-    },
-    "TagManager" : {
-        "Enabled" : true,
-        "EnabledDescription" : "Manipulates MechDef and ComponentDef Tags",
-        "LostechStockWeaponVariantFix" : true,
-        "LostechStockWeaponVariantDescription" : "Fixes lostech variant weapon tagging by checking if id ends with -STOCK.",
-        "SkirmishWhitelistTags" : [
-            "component_type_stock",
+	"MechLabGeneralSlots": 0,
+	"EngineMissingFallbackHeatSinkCapacity": 0,
+	"MechLabScale": 0.85,
+	"MechLabPositionY": 40,
+	"AutoFixChassisDefMaxJumpjets": false,
+	"AutoFixUpgradeDefSkip": [
+		"Gear_Cockpit_SLDF_Custom",
+		"Gear_Cockpit_Generic_Small",
+		"Gear_Gyro_Generic_Standard",
+		"emod_arm_part_shoulder",
+		"emod_arm_part_upper",
+		"emod_arm_part_lower",
+		"emod_arm_part_hand",
+		"emod_leg_hip",
+		"emod_leg_upper",
+		"emod_leg_lower",
+		"emod_leg_foot"
+	],
+	"NewSaveFolder": {
+		"Enabled": true,
+		"EnabledDescription": "Redirects all save operations to use one folder for all save related data.",
+		"Path": "BTASaves"
+	},
+	"TagManager": {
+		"Enabled": true,
+		"EnabledDescription": "Manipulates MechDef and ComponentDef Tags",
+		"LostechStockWeaponVariantFix": true,
+		"LostechStockWeaponVariantDescription": "Fixes lostech variant weapon tagging by checking if id ends with -STOCK.",
+		"SkirmishWhitelistTags": [
+			"component_type_stock",
 			"component_type_variant",
 			"component_type_lostech"
-        ],
-        "SkirmishWhitelistTagsDescription" : "Components with these tags will appear in the skirmish mechlab, blacklisted tagged items never appear.",
-        "WhitelistComponentTags" : [
-            "component_type_stock",
-            "component_type_variant",
-            "component_type_lostech"
-        ],
-        "WhitelistComponentTagsDescription" : "Whitelists components with specified tags.",
-        "BlacklistComponentTags" : [
-            "BLACKLISTED"
-        ],
-        "BlacklistComponentTagsDescription" : "Blacklists components with specified tags, has precedence over whitelisting.",
-        "WhitelistMechTags" : [
-            "unit_release"
-        ],
-        "WhitelistMechTagsDescription" : "Similar to WhitelistComponentTags but with MechTags",
-        "BlacklistMechTags" : [
-
-        ],
-        "BlacklistMechTagsDescription" : "Similar to BlacklistComponentTags but with MechTags"
-    },
-	"ArmorStructureRatio" : {
-        "SkipMechDefs" : [],
-        "Enabled" : false
+		],
+		"SkirmishWhitelistTagsDescription": "Components with these tags will appear in the skirmish mechlab, blacklisted tagged items never appear.",
+		"WhitelistComponentTags": [
+			"component_type_stock",
+			"component_type_variant",
+			"component_type_lostech"
+		],
+		"WhitelistComponentTagsDescription": "Whitelists components with specified tags.",
+		"BlacklistComponentTags": [],
+		"BlacklistComponentTagsDescription": "Blacklists components with specified tags, has precedence over whitelisting.",
+		"WhitelistMechTags": [
+			"unit_release"
+		],
+		"WhitelistMechTagsDescription": "Similar to WhitelistComponentTags but with MechTags",
+		"BlacklistMechTags": [],
+		"BlacklistMechTagsDescription": "Similar to BlacklistComponentTags but with MechTags"
 	},
-	"AutoFixMechDefSkip" : [
+	"ArmorStructureRatio": {
+		"SkipMechDefs": [],
+		"Enabled": false
+	},
+	"AutoFixMechDefSkip": [
 		"mechdef_urbanmech_UM-R50"
-    ],
-	"OverrideTonnage" : {
-        "FractionalAccountingPrecision" : 0.5,
-        "Enabled" : true
-    },
-	"ChassisDefInitialToTotalTonnageFactor" : 0,
+	],
+	"OverrideTonnage": {
+		"FractionalAccountingPrecision": 0.5,
+		"Enabled": true
+	},
+	"ChassisDefInitialToTotalTonnageFactor": 0,
 	"AutoFixGyroCategorizer": null,
 	"AutoFixMechDefGyroAdder": null,
 	"AutoFixGyroSlotChange": null,
@@ -81,238 +77,478 @@
 	"AutoFixArmActuatorSlotChange": null,
 	"AutoFixCockpitSlotChange": null,
 	"AutoFixChassisDefSlotsChanges": null,
-	"ArmorStructureRatioEnforcement" : false,
-	"AutoFixer" : {
-        "MechDefSkip" : [
-            
-        ],
-        "MechDefEngine" : true,
-        "MechDefCoolingDef" : "emod_kit_shs",
-        "MechDefHeatBlockDef" : "emod_engine_cooling",
-        "MechDefCoreDummy" : "emod_engine_dummy",
-        "UpgradeDefSkip" : [
-            "Gear_Cockpit_SLDF_Custom",
-            "Gear_Cockpit_Generic_Small",
-            "Gear_Cockpit_Generic_Standard",
-            "Gear_Cockpit_LifeSupportA_Standard",
-            "Gear_Cockpit_LifeSupportB_Standard",
-            "Gear_Cockpit_SensorsA_Standard",
-            "Gear_Cockpit_SensorsB_Standard",
-            "Gear_Gyro_Generic_Standard",
-            "emod_arm_part_shoulder",
-            "emod_arm_part_upper",
-            "emod_arm_part_lower",
-            "emod_arm_part_hand",
-            "emod_leg_hip",
-            "emod_leg_upper",
-            "emod_leg_lower",
-            "emod_leg_foot"
-        ],
-        "GyroCategorizer" : {
-            "Prefix" : "Gear_Gyro_",
-            "AllowedLocations" : "CenterTorso",
-            "ComponentType" : "Upgrade",
-            "CategoryId" : "Gyro",
-            "AutoAddCategoryIdIfMissing" : true
-        },
-        "GyroSlotChange" : {
-            "From" : 3,
-            "By" : 1,
-            "FromIsMin" : false
-        },
-        "CockpitCategorizer" : {
-            "Prefix" : "Gear_Cockpit_",
-            "AllowedLocations" : "Head",
-            "ComponentType" : "Upgrade",
-            "CategoryId" : "Cockpit",
-            "AutoAddCategoryIdIfMissing" : true
-        },
-        "CockpitTonnageChange" : {
-            "From" : 0,
-            "By" : 3,
-            "FromIsMin" : false
-        },
-        "CockpitSlotChange" : {
-            "From" : 1,
-            "By" : 0,
-            "FromIsMin" : false
-        },
-        "LegUpgradesCategorizer" : {
-            "AllowedLocations" : "Legs",
-            "ComponentType" : "Upgrade",
-            "CategoryId" : "LegFootActuator",
-            "AutoAddCategoryIdIfMissing" : true
-        },
-        "LegUpgradesSlotChange" : {
-            "From" : 3,
-            "By" : -1,
-            "FromIsMin" : true,
-            "NewMin" : 1
-        },
-        "ChassisDefSkip" : [
-            
-        ],
-        "ChassisDefSlotsChanges" : [
-            {
-                "Location" : "LeftTorso",
-                "Change" : {
-                    "From" : 10,
-                    "By" : 2,
-                    "FromIsMin" : false
-                }
-            },
-            {
-                "Location" : "RightTorso",
-                "Change" : {
-                    "From" : 10,
-                    "By" : 2,
-                    "FromIsMin" : false
-                }
-            },
-            {
-                "Location" : "LeftLeg",
-                "Change" : {
-                    "From" : 4,
-                    "By" : 2,
-                    "FromIsMin" : false
-                }
-            },
-            {
-                "Location" : "RightLeg",
-                "Change" : {
-                    "From" : 4,
-                    "By" : 2,
-                    "FromIsMin" : false
-                }
-            },
-            {
-                "Location" : "Head",
-                "Change" : {
-                    "From" : 1,
-                    "By" : 5,
-                    "FromIsMin" : false
-                }
-            },
-            {
-                "Location" : "CenterTorso",
-                "Change" : {
-                    "From" : 4,
-                    "By" : 11,
-                    "FromIsMin" : false
-                }
-            },
-            {
-                "Location" : "LeftArm",
-                "Change" : {
-                    "From" : 8,
-                    "By" : 4,
-                    "FromIsMin" : false
-                }
-            },
-            {
-                "Location" : "RightArm",
-                "Change" : {
-                    "From" : 8,
-                    "By" : 4,
-                    "FromIsMin" : false
-                }
-            },
-            {
-                "Location" : "LeftLeg",
-                "Change" : {
-                    "From" : 2,
-                    "By" : 4,
-                    "FromIsMin" : false
-                }
-            },
-            {
-                "Location" : "RightLeg",
-                "Change" : {
-                    "From" : 2,
-                    "By" : 4,
-                    "FromIsMin" : false
-                }
-            },
-            {
-                "Location" : "Head",
-                "Change" : {
-                    "From" : 3,
-                    "By" : 3,
-                    "FromIsMin" : false
-                }
-            },
-            {
-                "Location" : "LeftArm",
-                "Change" : {
-                    "From" : 11,
-                    "By" : 1,
-                    "FromIsMin" : false
-                }
-            },
-            {
-                "Location" : "RightArm",
-                "Change" : {
-                    "From" : 11,
-                    "By" : 1,
-                    "FromIsMin" : false
-                }
-            }
-        ],
-        "ChassisDefInitialTonnage" : true,
-        "ChassisDefInitialToTotalTonnageFactor" : 0.1,
-        "ChassisDefMaxJumpjets" : true,
-        "ChassisDefMaxJumpjetsCount" : 8,
-        "ChassisDefMaxJumpjetsRating" : 400,
-       "AutoFixWeaponDefSlotsChanges" : [
-        {
-            "Type" : "AC5",
-            "Change" : {
-                "From" : 2,
-                "By" : 0,
-                "FromIsMin" : false
-            }
-        },
-        {
-            "Type" : "AC10",
-            "Change" : {
-                "From" : 3,
-                "By" : 0,
-                "FromIsMin" : false
-            }
-        },
-        {
-            "Type" : "AC20",
-            "Change" : {
-                "From" : 4,
-                "By" : 0,
-                "FromIsMin" : false
-            }
-        },
-        {
-            "Type" : "Gauss",
-            "Change" : {
-                "From" : 5,
-                "By" : 0,
-                "FromIsMin" : false
-            }
-        },
-        {
-            "Type" : "LargeLaserPulse",
-            "Change" : {
-                "From" : 2,
-                "By" : 0,
-                "FromIsMin" : false
-            }
-        },
-        {
-            "Type" : "LRM20",
-            "Change" : {
-                "From" : 4,
-                "By" : 1,
-                "FromIsMin" : false
-            }
-        }
-    ],
-        "Enabled" : true
-    }
+	"ArmorStructureRatioEnforcement": false,
+	"AutoFixer": {
+		"MechDefSkip": [
+			"mechdef_urbanmech_UM-R50"
+		],
+		"MechDefEngine": true,
+		"MechDefCoolingDef": "emod_kit_shs",
+		"MechDefHeatBlockDef": "emod_engine_cooling",
+		"MechDefCoreDummy": "emod_engine_dummy",
+		"UpgradeDefSkip": [
+			"Gear_Cockpit_SLDF_Custom",
+			"Gear_Cockpit_Generic_Small",
+			"Gear_Cockpit_Generic_Standard",
+			"Gear_Cockpit_LifeSupportA_Standard",
+			"Gear_Cockpit_LifeSupportB_Standard",
+			"Gear_Cockpit_SensorsA_Standard",
+			"Gear_Cockpit_SensorsB_Standard",
+			"Gear_Gyro_Generic_Standard",
+			"emod_arm_part_shoulder",
+			"emod_arm_part_upper",
+			"emod_arm_part_lower",
+			"emod_arm_part_hand",
+			"emod_leg_hip",
+			"emod_leg_upper",
+			"emod_leg_lower",
+			"emod_leg_foot"
+		],
+		"GyroCategorizer": {
+			"Prefix": "Gear_Gyro_",
+			"AllowedLocations": "CenterTorso",
+			"ComponentType": "Upgrade",
+			"CategoryId": "Gyro",
+			"AutoAddCategoryIdIfMissing": true
+		},
+		"GyroSlotChange": {
+			"From": 3,
+			"By": 0,
+			"FromIsMin": false
+		},
+		"CockpitCategorizer": {
+			"Prefix": "Gear_Cockpit_",
+			"AllowedLocations": "Head",
+			"ComponentType": "Upgrade",
+			"CategoryId": "Cockpit",
+			"AutoAddCategoryIdIfMissing": true
+		},
+		"CockpitTonnageChange": {
+			"From": 0,
+			"By": 3,
+			"FromIsMin": false
+		},
+		"CockpitSlotChange": {
+			"From": 1,
+			"By": 0,
+			"FromIsMin": false
+		},
+		"LegUpgradesCategorizer": {
+			"AllowedLocations": "Legs",
+			"ComponentType": "Upgrade",
+			"CategoryId": "LegFootActuator",
+			"AutoAddCategoryIdIfMissing": true
+		},
+		"LegUpgradesSlotChange": {
+			"From": 3,
+			"By": -1,
+			"FromIsMin": true,
+			"NewMin": 1
+		},
+		"ChassisDefSkip": [
+			"chassisdef_urbanmech_UM-R50"
+		],
+		"ChassisDefSlotsChanges": [
+			{
+				"Location": "LeftTorso",
+				"Change": {
+					"From": 10,
+					"By": 2,
+					"FromIsMin": false
+				}
+			},
+			{
+				"Location": "RightTorso",
+				"Change": {
+					"From": 10,
+					"By": 2,
+					"FromIsMin": false
+				}
+			},
+			{
+				"Location": "LeftLeg",
+				"Change": {
+					"From": 4,
+					"By": 2,
+					"FromIsMin": false
+				}
+			},
+			{
+				"Location": "RightLeg",
+				"Change": {
+					"From": 4,
+					"By": 2,
+					"FromIsMin": false
+				}
+			},
+			{
+				"Location": "Head",
+				"Change": {
+					"From": 1,
+					"By": 5,
+					"FromIsMin": false
+				}
+			},
+			{
+				"Location": "CenterTorso",
+				"Change": {
+					"From": 4,
+					"By": 11,
+					"FromIsMin": false
+				}
+			},
+			{
+				"Location": "LeftArm",
+				"Change": {
+					"From": 8,
+					"By": 4,
+					"FromIsMin": false
+				}
+			},
+			{
+				"Location": "RightArm",
+				"Change": {
+					"From": 8,
+					"By": 4,
+					"FromIsMin": false
+				}
+			},
+			{
+				"Location": "LeftLeg",
+				"Change": {
+					"From": 2,
+					"By": 4,
+					"FromIsMin": false
+				}
+			},
+			{
+				"Location": "RightLeg",
+				"Change": {
+					"From": 2,
+					"By": 4,
+					"FromIsMin": false
+				}
+			},
+			{
+				"Location": "Head",
+				"Change": {
+					"From": 3,
+					"By": 3,
+					"FromIsMin": false
+				}
+			},
+			{
+				"Location": "LeftArm",
+				"Change": {
+					"From": 11,
+					"By": 1,
+					"FromIsMin": false
+				}
+			},
+			{
+				"Location": "RightArm",
+				"Change": {
+					"From": 11,
+					"By": 1,
+					"FromIsMin": false
+				}
+			}
+		],
+		"ChassisDefInitialTonnage": true,
+		"ChassisDefInitialToTotalTonnageFactor": 0.1,
+		"ChassisDefMaxJumpjets": false,
+		"ChassisDefMaxJumpjetsCount": 8,
+		"ChassisDefMaxJumpjetsRating": 400,
+		"AutoFixWeaponDefSlotsChanges": [
+			{
+				"Type": "AC5",
+				"Change": {
+					"From": 2,
+					"By": 0,
+					"FromIsMin": false
+				}
+			},
+			{
+				"Type": "AC10",
+				"Change": {
+					"From": 3,
+					"By": 0,
+					"FromIsMin": false
+				}
+			},
+			{
+				"Type": "AC20",
+				"Change": {
+					"From": 4,
+					"By": 0,
+					"FromIsMin": false
+				}
+			},
+			{
+				"Type": "Gauss",
+				"Change": {
+					"From": 5,
+					"By": 0,
+					"FromIsMin": false
+				}
+			},
+			{
+				"Type": "LargeLaserPulse",
+				"Change": {
+					"From": 2,
+					"By": 0,
+					"FromIsMin": false
+				}
+			},
+			{
+				"Type": "LRM20",
+				"Change": {
+					"From": 4,
+					"By": 1,
+					"FromIsMin": false
+				}
+			}
+		],
+		"Enabled": true
+	},
+	"Engine" : {
+        "Enabled" : true,
+        "EnabledDescription" : "Provides engines that can be installed on mechs similar to how CBT works.",
+        "MovementPointDistanceMultiplierDescription" : "The distance of a TT movement point, 24 is vanilla CombatGameConstants.ExperimentalGridDistance .",
+        "MinimJumpHeatDescription" : "Minimum heat when doing a jump, even if only one jump jet exists and only when jumping one hex.",
+        "AutoConvertJumpCapacityInDefToStatDescription" : "All JumpCapacity values in JumpJetDefs will be auto-converted to the JumpCapacity statistic.",
+        "JumpJetDefaultJumpHeatDescription" : "The heat the jump jet produces when fully* used (* jumping below max distance reduces produced heat). Can be adjusted using the JumpHeat statistic.",
+        "RunMultiplierDescription" : "How much faster running is than walking.",
+        "EngineRatingForChassisMovementStatDescription" : "The engine rating to use when evaluating the movement stat of a mech.",
+        "AllowMountingAllRatings" : false,
+        "AllowMountingAllRatingsDescription" : "Allow mounting all fusion core rating regardless of min/max sprint factors.",
+        "MinimumHeatSinksOnMech" : 10,
+        "MinimumHeatSinksOnMechDescription" : "Minimum heatsinks a mech requires.",
+        "EnforceRulesForAdditionalInternalHeatSinks" : true,
+        "EnforceRulesForAdditionalInternalHeatSinksDescription" : "Can't have those juicy ++ cooling systems with smaller fusion cores than the rules allow it.",
+        "AllowMixingHeatSinkTypes" : false,
+        "AllowMixingHeatSinkTypesDescription" : "Allow heat sinks patchwork.",
+        "DefaultEngineHeatSinkId" : "Gear_HeatSink_Generic_Standard",
+        "DefaultEngineHeatSinkIdDescription" : "Default heat sink type for engines without a kit.",
+        "EngineMissingFallbackHeatSinkCapacity" : 30,
+        "EngineMissingFallbackHeatSinkCapacityDescription" : "Heat sink capacity if no engine is detected.",
+        "MovementPointDistanceMultiplier" : 28,
+        "MinimJumpHeat" : 9,
+        "AutoConvertJumpCapacityInDefToStat" : true,
+        "JumpJetDefaultJumpHeat" : 3,
+        "RunMultiplier" : 1.5,
+        "EngineRatingForChassisMovementStat" : 250,
+        "LimitEngineCoresToTonnage" : true,
+        "IgnoreLimitEngineChassisTag" : ""
+    },
+	"HardpointFix": {
+		"WeaponPrefabMappings": [
+			{
+				"PrefabIdentifier": "AC2",
+				"HardpointCandidates": [
+					"ac2",
+					"uac2",
+					"rac2",
+					"lbx2",
+					"ac",
+					"lbx",
+					"mg"
+				]
+			},
+			{
+				"PrefabIdentifier": "AC5",
+				"HardpointCandidates": [
+					"ac5",
+					"uac5",
+					"rac5",
+					"lbx5",
+					"ac",
+					"lbx",
+					"mg"
+				]
+			},
+			{
+				"PrefabIdentifier": "AC10",
+				"HardpointCandidates": [
+					"ac10",
+					"uac10",
+					"lbx10",
+					"ac",
+					"lbx",
+					"mg"
+				]
+			},
+			{
+				"PrefabIdentifier": "AC20",
+				"HardpointCandidates": [
+					"ac20",
+					"uac20",
+					"ac",
+					"lbx",
+					"mg"
+				]
+			},
+			{
+				"PrefabIdentifier": "uac5",
+				"HardpointCandidates": [
+					"uac5",
+					"uac20",
+					"uac10",
+					"uac2",
+					"ac5",
+					"ac20",
+					"ac10",
+					"ac2",
+					"rac5",
+					"lbx5",
+					"ac",
+					"lbx",
+					"mg"
+				]
+			},
+			{
+				"PrefabIdentifier": "artillery",
+				"HardpointCandidates": [
+					"artillery",
+					"ac20",
+					"gauss",
+					"ac",
+					"lbx",
+					"ppc",
+					"ams",
+					"machinegun",
+					"mg",
+					"flamer",
+					"laser"
+				]
+			},
+			{
+				"PrefabIdentifier": "lrm5",
+				"HardpointCandidates": [
+					"lrm5",
+					"lrm10",
+					"lrm15",
+					"lrm20",
+					"srm20"
+				]
+			},
+			{
+				"PrefabIdentifier": "lrm10",
+				"HardpointCandidates": [
+					"lrm10",
+					"lrm15",
+					"lrm20",
+					"srm20",
+					"lrm5",
+					"rl10"
+				]
+			},
+			{
+				"PrefabIdentifier": "lrm15",
+				"HardpointCandidates": [
+					"lrm20",
+					"srm20",
+					"lrm15",
+					"lrm10",
+					"lrm5",
+					"rl20",
+					"rl15",
+					"rl10"
+				]
+			},
+			{
+				"PrefabIdentifier": "lrm20",
+				"HardpointCandidates": [
+					"lrm20",
+					"srm20",
+					"lrm15",
+					"lrm10",
+					"lrm5",
+					"rl20",
+					"rl15",
+					"rl10"
+				]
+			},
+			{
+				"PrefabIdentifier": "MachineGun",
+				"HardpointCandidates": [
+					"machinegun",
+					"mg",
+					"lmg",
+					"hmg"
+				]
+			},
+			{
+				"PrefabIdentifier": "srm2",
+				"HardpointCandidates": [
+					"srm2",
+					"srm4",
+					"srm6",
+					"lrm5"
+				]
+			},
+			{
+				"PrefabIdentifier": "srm4",
+				"HardpointCandidates": [
+					"srm4",
+					"srm6",
+					"srm2",
+					"lrm5"
+				]
+			},
+			{
+				"PrefabIdentifier": "srm6",
+				"HardpointCandidates": [
+					"srm6",
+					"srm4",
+					"srm2",
+					"lrm5"
+				]
+			},
+			{
+				"PrefabIdentifier": "PPC",
+				"HardpointCandidates": [
+					"ppc",
+					"hppc",
+					"lppc",
+					"snppc"
+				]
+			},
+			{
+				"PrefabIdentifier": "Gauss",
+				"HardpointCandidates": [
+					"gauss",
+					"hgauss",
+					"lgauss"
+				]
+			},
+			{
+				"PrefabIdentifier": "arrow",
+				"HardpointCandidates": [
+					"arrow",
+					"lrm20",
+					"lrm15",
+					"lrm10",
+					"lrm5"
+				]
+			},
+			{
+				"PrefabIdentifier": "AMS",
+				"HardpointCandidates": [
+					"ams",
+					"laser",
+					"mg",
+					"machinegun",
+					"flamer",
+					"ac2",
+					"ppc",
+					"ac",
+					"lbx"
+				]
+			}
+		]
+	},
+	"OrderedStatusEffects": {
+		"Enabled": false
+	}
 }

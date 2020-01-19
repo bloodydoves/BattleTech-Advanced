@@ -1,0 +1,105 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "SensorsA"
+			}
+		],
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "[[Chassis.Tonnage]]/10",
+				"CBillCost": "[[Chassis.Tonnage]] * 1.15"
+			}
+		},
+		"Flags": {
+			"flags": [
+				"default",
+				"not_broken",
+				"no_salvage",
+				"autorepair"
+			]
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"IsSensorsA",
+				"HeatPerTurn: -3"
+			]
+		},
+		"InventorySorter": {
+			"SortKey": "00019"
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 500000,
+		"Rarity": 99,
+		"Purchasable": false,
+		"Manufacturer": "Quirk",
+		"Model": "Jenner",
+		"UIName": "Jenner Improved Cooling",
+		"Id": "Gear_Quirk_ImprovedCoolingJacket_Jenner",
+		"Name": "Jenner Improved Cooling",
+		"Details": "This piece of gear represents the Jenner's inherent Improved Cooling quirk. This gives the Jenner bonus cooling for its wepaons.",
+		"Icon": "uixSvgIcon_equipment_Cockpit"
+	},
+	"BonusValueA": "-3 Heat / Turn",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "PartialWingSink",
+				"Name": "Improved Cooling",
+				"Details": "Enhanced cooling systems dissipate a little extra heat.",
+				"Icon": "uixSvgIcon_designMask_mineral"
+			},
+			"statisticData": {
+				"statName": "HeatSinkCapacity",
+				"operation": "Int_Add",
+				"modValue": "3",
+				"modType": "System.Int32"
+			},
+			"nature": "Buff"
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"BLACKLISTED",
+			"component_type_stock",
+			"lv-shares-sensors"
+		],
+		"tagSetSourceFile": ""
+	}
+}

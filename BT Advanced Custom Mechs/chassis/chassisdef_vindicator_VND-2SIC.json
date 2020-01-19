@@ -1,216 +1,233 @@
 {
-  "Custom": {
-    "ArmActuatorSupport": {
-      "RightLimit": "Lower"
-    }
-  },
-  "Description": {
-    "Cost": 3818050,
-    "Rarity": 4,
-    "Purchasable": true,
-    "Manufacturer": "",
-    "Model": "",
-    "UIName": "Vindicator",
-    "Id": "chassisdef_vindicator_VND-2SIC",
-    "Name": "Vindicator",
-    "Details": "Designed by the St. Ives Compact as a weapons testbed, the VND-2SIC proved effective enough to become a production model. The -2SIC uses a Medium and Small X-Pulse Laser for close-range combat while a Mech Mortar/4 provides AMS-proof ranged firepower. Backing these experimental weapons up is a dependable ER PPC. The -2SIC also takes a cue from the ill-fated VND-1AA and increases the mech's ground speed to that of a Wolverine. It is well armored and uses double heat sinks to keep the heat under control.",
-    "Icon": "uixTxrIcon_vindicator"
-  },
-  "MovementCapDefID": "movedef_vindicator_VND-1R",
-  "PathingCapDefID": "pathingdef_medium",
-  "HardpointDataDefID": "hardpointdatadef_vindicator",
-  "PrefabIdentifier": "chrPrfMech_vindicatorBase-001",
-  "PrefabBase": "vindicator",
-  "Tonnage": 45,
-  "InitialTonnage": 4.5,
-  "weightClass": "MEDIUM",
-  "BattleValue": 4252000,
-  "Heatsinks": 0,
-  "TopSpeed": 120,
-  "TurnRadius": 90,
-  "MaxJumpjets": 4,
-  "Stability": 130,
-  "StabilityDefenses": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
-  ],
-  "SpotterDistanceMultiplier": 1,
-  "VisibilityMultiplier": 1,
-  "SensorRangeMultiplier": 1,
-  "Signature": 0,
-  "Radius": 5,
-  "PunchesWithLeftArm": true,
-  "MeleeDamage": 55,
-  "MeleeInstability": 45,
-  "MeleeToHitModifier": 0,
-  "DFADamage": 45,
-  "DFAToHitModifier": 0,
-  "DFASelfDamage": 45,
-  "DFAInstability": 23,
-  "Locations": [
-    {
-      "Location": "Head",
-      "Hardpoints": [
-        {
-          "WeaponMount": "Energy",
-          "Omni": false
+	"Custom": {
+		"ArmActuatorSupport": {
+			"RightLimit": "Lower"
+		}
+	},
+	"Description": {
+		"Cost": 3818050,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "",
+		"Model": "",
+		"UIName": "Vindicator",
+		"Id": "chassisdef_vindicator_VND-2SIC",
+		"Name": "Vindicator",
+		"Details": "Designed by the St. Ives Compact as a weapons testbed, the VND-2SIC proved effective enough to become a production model. The -2SIC uses a Medium and Small X-Pulse Laser for close-range combat while a Mech Mortar/4 provides AMS-proof ranged firepower. Backing these experimental weapons up is a dependable ER PPC. The -2SIC also takes a cue from the ill-fated VND-1AA and increases the mech's ground speed to that of a Wolverine. It is well armored and uses double heat sinks to keep the heat under control.",
+		"Icon": "uixTxrIcon_vindicator"
+	},
+	"MovementCapDefID": "movedef_vindicator_VND-1R",
+	"PathingCapDefID": "pathingdef_medium",
+	"HardpointDataDefID": "hardpointdatadef_vindicator",
+	"PrefabIdentifier": "chrPrfMech_vindicatorBase-001",
+	"PrefabBase": "vindicator",
+	"Tonnage": 45,
+	"InitialTonnage": 4.5,
+	"weightClass": "MEDIUM",
+	"BattleValue": 4252000,
+	"Heatsinks": 0,
+	"TopSpeed": 120,
+	"TurnRadius": 90,
+	"MaxJumpjets": 30,
+	"Stability": 130,
+	"StabilityDefenses": [
+		0,
+		0,
+		0,
+		0,
+		0,
+		0
+	],
+	"SpotterDistanceMultiplier": 1,
+	"VisibilityMultiplier": 1,
+	"SensorRangeMultiplier": 1,
+	"Signature": 0,
+	"Radius": 5,
+	"PunchesWithLeftArm": true,
+	"MeleeDamage": 55,
+	"MeleeInstability": 45,
+	"MeleeToHitModifier": 0,
+	"DFADamage": 45,
+	"DFAToHitModifier": 0,
+	"DFASelfDamage": 45,
+	"DFAInstability": 23,
+	"Locations": [
+		{
+			"Location": "Head",
+			"Hardpoints": [
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 6,
+			"MaxArmor": 45,
+			"MaxRearArmor": -1,
+			"InternalStructure": 16
+		},
+		{
+			"Location": "LeftArm",
+			"Hardpoints": [
+				{
+					"WeaponMount": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 12,
+			"MaxArmor": 70,
+			"MaxRearArmor": -1,
+			"InternalStructure": 35
+		},
+		{
+			"Location": "LeftTorso",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 12,
+			"MaxArmor": 110,
+			"MaxRearArmor": 55,
+			"InternalStructure": 55
+		},
+		{
+			"Location": "CenterTorso",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 15,
+			"MaxArmor": 140,
+			"MaxRearArmor": 70,
+			"InternalStructure": 70
+		},
+		{
+			"Location": "RightTorso",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 12,
+			"MaxArmor": 110,
+			"MaxRearArmor": 55,
+			"InternalStructure": 55
+		},
+		{
+			"Location": "RightArm",
+			"Hardpoints": [
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 12,
+			"MaxArmor": 70,
+			"MaxRearArmor": -1,
+			"InternalStructure": 35
+		},
+		{
+			"Location": "LeftLeg",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 6,
+			"MaxArmor": 110,
+			"MaxRearArmor": -1,
+			"InternalStructure": 55
+		},
+		{
+			"Location": "RightLeg",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 6,
+			"MaxArmor": 110,
+			"MaxRearArmor": -1,
+			"InternalStructure": 55
+		}
+	],
+	"LOSSourcePositions": [
+		{
+			"x": 0,
+			"y": 14,
+			"z": 0
+		},
+		{
+			"x": 3.5,
+			"y": 13,
+			"z": 0
+		},
+		{
+			"x": -3.5,
+			"y": 13,
+			"z": 0
+		}
+	],
+	"LOSTargetPositions": [
+		{
+			"x": 0,
+			"y": 14,
+			"z": 0
+		},
+		{
+			"x": 3.5,
+			"y": 13,
+			"z": 0
+		},
+		{
+			"x": -3.5,
+			"y": 13,
+			"z": 0
+		},
+		{
+			"x": 3,
+			"y": 5,
+			"z": 0
+		},
+		{
+			"x": -3,
+			"y": 5,
+			"z": 0
+		}
+	],
+	"VariantName": "VND-2SIC",
+	"ChassisTags": {
+		"items": [],
+		"tagSetSourceFile": ""
+	},
+	"StockRole": "Fire Support & Test Platform",
+	"YangsThoughts": "Designed by the St. Ives Compact as a weapons testbed, the VND-2SIC proved effective enough to become a production model. The -2SIC uses a Medium and Small X-Pulse Laser for close-range combat while a Mech Mortar/4 provides AMS-proof ranged firepower. Backing these experimental weapons up is a dependable ER PPC. The -2SIC also takes a cue from the ill-fated VND-1AA and increases the mech's ground speed to that of a Wolverine. It is well armored and uses double heat sinks to keep the heat under control.",
+	"FixedEquipment": [
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "Gear_Quirk_Rugged_Vindicator",
+			"SimGameUID": "",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"IsFixed": true,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+            "MountedLocation" : "CenterTorso",
+            "ComponentDefID" : "emod_structureslots_endosteel",
+            "ComponentDefType" : "Upgrade",
+            "HardpointSlot" : -1,
+            "DamageLevel" : "Functional",
+            "prefabName" : "",
+            "hasPrefabName" : true
         }
-      ],
-      "Tonnage": 0,
-      "InventorySlots": 6,
-      "MaxArmor": 45,
-      "MaxRearArmor": -1,
-      "InternalStructure": 16
-    },
-    {
-      "Location": "LeftArm",
-      "Hardpoints": [
-        {
-          "WeaponMount": "Ballistic",
-          "Omni": false
-        },
-        {
-          "WeaponMount": "Ballistic",
-          "Omni": false
-        },
-        {
-          "WeaponMount": "AntiPersonnel",
-          "Omni": false
-        }
-      ],
-      "Tonnage": 0,
-      "InventorySlots": 12,
-      "MaxArmor": 70,
-      "MaxRearArmor": -1,
-      "InternalStructure": 35
-    },
-    {
-      "Location": "LeftTorso",
-      "Hardpoints": [],
-      "Tonnage": 0,
-      "InventorySlots": 12,
-      "MaxArmor": 110,
-      "MaxRearArmor": 55,
-      "InternalStructure": 55
-    },
-    {
-      "Location": "CenterTorso",
-      "Hardpoints": [],
-      "Tonnage": 0,
-      "InventorySlots": 15,
-      "MaxArmor": 140,
-      "MaxRearArmor": 70,
-      "InternalStructure": 70
-    },
-    {
-      "Location": "RightTorso",
-      "Hardpoints": [],
-      "Tonnage": 0,
-      "InventorySlots": 12,
-      "MaxArmor": 110,
-      "MaxRearArmor": 55,
-      "InternalStructure": 55
-    },
-    {
-      "Location": "RightArm",
-      "Hardpoints": [
-        {
-          "WeaponMount": "Energy",
-          "Omni": false
-        },
-        {
-          "WeaponMount": "Energy",
-          "Omni": false
-        },
-        {
-          "WeaponMount": "Energy",
-          "Omni": false
-        }
-      ],
-      "Tonnage": 0,
-      "InventorySlots": 12,
-      "MaxArmor": 70,
-      "MaxRearArmor": -1,
-      "InternalStructure": 35
-    },
-    {
-      "Location": "LeftLeg",
-      "Hardpoints": [
-
-      ],
-      "Tonnage": 0,
-      "InventorySlots": 6,
-      "MaxArmor": 110,
-      "MaxRearArmor": -1,
-      "InternalStructure": 55
-    },
-    {
-      "Location": "RightLeg",
-      "Hardpoints": [
-
-      ],
-      "Tonnage": 0,
-      "InventorySlots": 6,
-      "MaxArmor": 110,
-      "MaxRearArmor": -1,
-      "InternalStructure": 55
-    }
-  ],
-  "LOSSourcePositions": [
-    {
-      "x": 0,
-      "y": 14,
-      "z": 0
-    },
-    {
-      "x": 3.5,
-      "y": 13,
-      "z": 0
-    },
-    {
-      "x": -3.5,
-      "y": 13,
-      "z": 0
-    }
-  ],
-  "LOSTargetPositions": [
-    {
-      "x": 0,
-      "y": 14,
-      "z": 0
-    },
-    {
-      "x": 3.5,
-      "y": 13,
-      "z": 0
-    },
-    {
-      "x": -3.5,
-      "y": 13,
-      "z": 0
-    },
-    {
-      "x": 3,
-      "y": 5,
-      "z": 0
-    },
-    {
-      "x": -3,
-      "y": 5,
-      "z": 0
-    }
-  ],
-  "VariantName": "VND-2SIC",
-  "ChassisTags": {
-    "items": [
-
-    ],
-    "tagSetSourceFile": ""
-  },
-  "StockRole": "Fire Support & Test Platform",
-  "YangsThoughts": "Designed by the St. Ives Compact as a weapons testbed, the VND-2SIC proved effective enough to become a production model. The -2SIC uses a Medium and Small X-Pulse Laser for close-range combat while a Mech Mortar/4 provides AMS-proof ranged firepower. Backing these experimental weapons up is a dependable ER PPC. The -2SIC also takes a cue from the ill-fated VND-1AA and increases the mech's ground speed to that of a Wolverine. It is well armored and uses double heat sinks to keep the heat under control."
+	]
 }

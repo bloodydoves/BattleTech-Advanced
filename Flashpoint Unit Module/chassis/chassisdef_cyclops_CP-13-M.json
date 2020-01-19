@@ -31,7 +31,16 @@
 			"DamageLevel": "Functional",
 			"prefabName": null,
 			"hasPrefabName": false
-		}
+		},
+		{
+            "MountedLocation" : "CenterTorso",
+            "ComponentDefID" : "emod_structureslots_endosteel",
+            "ComponentDefType" : "Upgrade",
+            "HardpointSlot" : -1,
+            "DamageLevel" : "Functional",
+            "prefabName" : "",
+            "hasPrefabName" : true
+        }
 	],
 	"HardpointDataDefID": "hardpointdatadef_cyclops",
 	"MovementCapDefID": "movedef_cyclops_CP-10-Z",
@@ -39,7 +48,7 @@
 	"PrefabBase": "cyclops",
 	"PrefabIdentifier": "chrPrfMech_cyclopsBase-001",
 	"weightClass": "ASSAULT",
-	"MaxJumpjets": 4,
+	"MaxJumpjets": 30,
 	"MeleeDamage": 115,
 	"MeleeInstability": 90,
 	"MeleeToHitModifier": 0,
@@ -109,12 +118,7 @@
 	],
 	"Locations": [
 		{
-			"Hardpoints": [
-				{
-					"Omni": false,
-					"WeaponMount": "Energy"
-				}
-			],
+			"Hardpoints": [],
 			"InternalStructure": 16,
 			"InventorySlots": 6,
 			"Location": "Head",
@@ -124,6 +128,10 @@
 		},
 		{
 			"Hardpoints": [
+				{
+					"Omni": false,
+					"WeaponMount": "Energy"
+				},
 				{
 					"Omni": false,
 					"WeaponMount": "Energy"

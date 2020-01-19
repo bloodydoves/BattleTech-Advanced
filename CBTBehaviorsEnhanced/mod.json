@@ -1,0 +1,137 @@
+{
+    "Name": "CBTBehaviorsEnhanced",
+    "Enabled": true,
+    "Version": "0.3.9",
+    "Description": "Provides TableTop like behaviors for heat, movement, and more",
+    "Author": "FrostRaptor",
+    "Website": "https://github.com/IceRaptor/CBTBehaviorsEnhanced/",
+    "Contact": "",
+    "DLL": "CBTBehaviorsEnhanced.dll",
+    "DependsOn" : [ "IRBTModUtils", "MechEngineer", "CustomComponents" ],
+    "ConflictsWith" : [ "CharlesB" ],
+    "Settings": {
+        "Debug" : true,
+        "Trace" : false,
+        "Features" : {
+            "BiomeBreaches" : false,
+            "StartupChecks" : false
+        },
+        
+        "ToHitSelfJumped": 2,
+
+        "Heat" : {
+            "Movement" : { "15": 0, "30" : -1, "45" : -1, "60" : -2, "75" : -2, "93" : -3, "111" : -3, "129" : -4, "147" : -4 },
+            "Firing" : { "24" : 1, "39" : 2, "51" : 3, "72" : 4, "99" : 5, "123" : 6, "144" : 7 },
+            "Shutdown" : { "42" : 0.1, "54" : 0.3, "66" : 0.6, "78" : 0.8,  "90" : 0.9, "102" : 1.0, "114" : 1.1, "126" : 1.2, "138" : 1.3, "150" : -1 },
+            "Explosion" : { "57" : 0.1, "69": 0.3, "84" : 0.5, "105" : 0.8, "120" : 0.95, "135" : -1 },
+            "PilotInjury" : { "84" : 0.3, "117" : 0.6, "141" : 0.8 },
+            "SystemFailures" : { "108" : 0.3, "132" : 0.6 },
+            "ShowLowOverheatAnim" : 42,
+            "ShowExtremeOverheatAnim" : 90,
+            "ShutdownFallThreshold" : 0.75
+        },
+
+        "Melee" : {
+            "SkillMulti" : 0.05,
+            "MadeChargeFallChance" : 0.30,
+            "MadeDFAFallChance" : 2.90,
+            "MissedKickFallChance" : 0.30,
+            "HitByChargeFallChance" : 0.30,
+            "HitByDFAFallChance" : 2.60,
+            "HitByKickFallChance" : 0.30,
+            "AllowMeleeFromSprint" : true,
+        },
+        
+        "Move" : {
+            "SkillMulti" : 0.05,
+            "MinimumMove" : 40.0,
+            "RunMulti" : 1.5,
+            "FallAfterRunChance" : 0.30,
+            "FallAfterJumpChance" : 0.30
+        },
+        
+        "Piloting" : {
+            "SkillMulti" : 0.05,
+            "StabilityCheck" : 0.30,
+            "DFAReductionMulti" : 0.05,
+            "ShowAllStabilityRolls" : false,
+            "StandAttemptFallChance" : 0.30,
+            "FallingDamagePerTenTons" : 5
+        },
+        
+        "Breaches" : {
+            "VacuumCheck" : 0.17,
+            "ThinAtmoCheck" : 0.03
+        },
+
+        "LocalizedFloaties" : {
+            "SHUTDOWN_OVERRIDE_SUCCESS" : "Passed Shutdown Override",
+            "SHUTDOWN_OVERRIDE_FAILED" : "Failed Shutdown Override",
+            "SHUTDOWN_FALL" : "Falling from Shutdown",
+            "EXPLOSION_CHECK" : "Ammo Explosion Check",
+            "VOLATILE_EXPLOSION_CHECK" : "Volatile Ammo Explosion Check",
+            "SHUTDOWN_CHECK" : "Shutdown Check",
+            "STARTUP_CHECK" : "Startup Check",
+            "INJURY_CHECK" : "Pilot Injury Check",
+            "SYSTEM_FAILURE_CHECK": "System Failure Check",
+            "FALLING_CHECK" : "Falling Check",
+            "MELEE_KICK" : "Kick Falling Check",
+            "MELEE_CHARGE" : "Charge Falling Check",
+            "MELEE_DFA" : "DFA Falling Check",
+            "RUN_AND_FALL" : "Sprinted with Damage",
+            "JUMP_AND_FALL" : "Jumped with Damage",
+            "AUTO_FAIL" : "Automatic Failure",
+            "HULL_BREACH" : "Hull Breach Check"
+        },
+
+        "LocalizedCHUDTooltips" : {
+            "TITLE" : "HEAT LEVEL",
+            "HEAT_AND_SINKING" : "Heat: {0} of {1}  Sinking: {2}",
+            "AMMO_EXP_CHANCE" : "\nAmmo Explosion on d100+{0 * 100f} < {1:P1}",
+            "AMMO_EXP_WARNING" : "\nGuaranteed Ammo Explosion!",
+            "PILOT_INJURY_CHANCE" : "\nPilot Injury on d100+{0} < {1:P1}",
+            "SYSTEM_FAILURE_CHANCE" : "\nSystem Failure on d100+{0} < {1:P1}",
+            "SHUTDOWN_CHANCE" : "\nShutdown on d100+{0} < {1:P1}",
+            "SHUTDOWN_WARNING" : "\nGuaranteed Shutdown!",
+            "ATTACK_PENALTY" : "\nAttack Penalty: +{0}",
+            "MOVEMENT_PENALTY" : "\nMovement Penalty: -{0}m"
+        },
+
+        "Quips": {
+            "Breach" : [
+                "Shit, explosive decomission!",
+                "Hull integrity breach detected!",
+                "I've lost something to atmo!",
+                "I hope life support holds up",
+                "I cant breathe!",
+                "There are cracks in my cockpit!"
+            ], 
+            "Knockdown" : [
+                 "Oh .. shit!",
+                "FML",
+                "This is going to hurt..",
+                "This takes the cake",
+                "Not again..",
+                "A bitter pill",
+                "Balls!",
+                "And... here we go",
+                "D'oh!",
+                "Shaken, not stirred",
+                "Resistance is futile",
+                "Well, isn't that special?",
+                "I love you, too",
+                "Just some armor...",
+                "Biting the dust!"
+            ],
+            "Startup" : [
+                "Start damn you",
+                "Can't see through this heat",
+                "Where is the start button?",
+                "Override damn it, override!",
+                "Time to void the warranty",
+                "Why won't you turn on",
+                "I put in the startup sequence!"
+            ]
+        }
+    }
+}

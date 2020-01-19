@@ -1,77 +1,92 @@
 {
-    "Heat": {
-        "InternalHeatSinkCount": 0,
-        "CriticalHeatPerLocationLight": 0,
-        "CriticalHeatPerLocationMedium": 0,
-        "CriticalHeatPerLocationHeavy": 0,
-        "CriticalHeatPerLocationAssault": 0,
-    },
-    "ResolutionConstants": {
-        "DefaultUnsteadyThreshold": 40,
-        "MinCritChance": 10
-    },
-    "MoveConstants": {
-        "LegDestroyedPenalty": 0,
-        "LegDamageRedPenalty": 0,
-        "LegDamageYellowPenalty": 0
-    },
-    "ResolutionConstants": {
-        "AICritChanceBaseMultiplier": 1.0
-    },
-    "Phase": {
-        "PhaseLightVehicle": 2,
-        "PhaseMediumVehicle": 3,
-        "PhaseHeavyVehicle": 4,
-        "PhaseAssaultVehicle": 5,
-        "PhaseLightTurret": 3,
-        "PhaseMediumTurret": 4,
-        "PhaseHeavyTurret": 5,
-        "PhaseAssaultTurret": 5
-        /* Initiative phases for different unit types and weights */
-    },
-    "ResolutionConstants": {
-        "VehicleEvasiveResultMultiplier": 1,
-        "VehiclesGetGuarded": true,
-        "MeleeDamageMultiplierTurret": 2.0,
-        "MeleeDamageMultiplierVehicle": 1.8
-        /* Vanilla uses 2.0 melee damage for Vees. As far as I know this doesn't exist in TT. 
-        1.5 is the number we're moving to in RT for balance reasons. Adjust as you wish obviously. */
-    },
-    "CombatValueMultipliers": {
-        "ArmorMultiplierVehicle": 0.85,
-        "StructureMultiplierVehicle": 2.0
-        /* Vanilla was 9.75, 0.75. Strict Tabletop is 1.0, 1.0 (Same as original VIP), 
-        But because of crit system differences vehicles are hard to crit compared to TT with the same armor.
-         0.85, 2.0 is an adjustement that keeps the same average total durability as TT. But vehicles easier to crit and TAC. */
-    },
-    "Visibility": {
-        "BaseSpotterDistance": 375.0,
-        "BaseSensorDistance": 500.0,
-    },
-    "ToHit": {
-        "ToHitAssault": 0,
-        "ToHitHeavy": 0,
-        "ToHitMedium": 1,
-        "ToHitLight": 3,
-        "ToHitVehicleAssault": 0,
-        "ToHitVehicleHeavy": 0,
-        "ToHitVehicleMedium": 1,
-        "ToHitVehicleLight": 3,
-        "ToHitTurretAssault": -4,
-        "ToHitTurretHeavy": -3,
-        "ToHitTurretMedium": -2,
-        "ToHitTurretLight": -1,
-        "ToHitMinimumRange": 8,
-        "ToHitShortRange": 0,
-        "ToHitMediumRange": 2,
-        "ToHitLongRange": 4,
-        "ToHitMaximumRange": 6,
+	"Phase": {
+		"PhaseLightVehicle": 2,
+		"PhaseMediumVehicle": 3,
+		"PhaseHeavyVehicle": 4,
+		"PhaseAssaultVehicle": 5,
+		"PhaseLightTurret": 3,
+		"PhaseMediumTurret": 4,
+		"PhaseHeavyTurret": 5,
+		"PhaseAssaultTurret": 5
+	},
+	"Heat": {
+		"OverheatLevel": 0.7,
+		"MaxHeat": 150,
+		"WalkHeat": 0,
+		"SprintHeat": 5,
+		"JumpHeatUnitSize": 6,
+		"JumpHeatPerUnit": 1,
+		"JumpHeatMin": 5,
+		"EngineDamageHeat": 0,
+		"InternalHeatSinkCount": 0,
+		"DefaultHeatSinkDissipationCapacity": 3,
+		"StartupSinkRatio": 0.75,
+		"GlobalHeatIncreaseMultiplier": 1.0,
+		"GlobalHeatSinkMultiplier": 1.0,
+		"CriticalHeatPerLocationLight": 0,
+		"CriticalHeatPerLocationMedium": 0,
+		"CriticalHeatPerLocationHeavy": 0,
+		"CriticalHeatPerLocationAssault": 0,
+		"ShutdownCausesInjury": false,
+		"ShowPeakHeat": false
+	},
+	"Visibility": {
+		"BaseSpotterDistance": 375.0,
+		"BaseSensorDistance": 500.0
+	},
+	"ToHit": {
+		"ToHitAssault": 0,
+		"ToHitHeavy": 0,
+		"ToHitMedium": 1,
+		"ToHitLight": 3,
+		"ToHitVehicleAssault": 0,
+		"ToHitVehicleHeavy": 0,
+		"ToHitVehicleMedium": 1,
+		"ToHitVehicleLight": 3,
+		"ToHitTurretAssault": -4,
+		"ToHitTurretHeavy": -3,
+		"ToHitTurretMedium": -2,
+		"ToHitTurretLight": -1,
+		"ToHitMinimumRange": 8,
+		"ToHitShortRange": 0,
+		"ToHitMediumRange": 2,
+		"ToHitLongRange": 4,
+		"ToHitMaximumRange": 6,
 		"ToHitElevationLevelHeight": 20,
 		"ToHitSelfSprinted": 1,
 		"ToHitSelfWalkLight": 1,
 		"ToHitSelfWalkMedium": 1,
 		"ToHitSelfWalkHeavy": 1,
 		"ToHitSelfWalkAssault": 1,
-		"ToHitSelfWalkVehicle": 2,	
-    }
+		"ToHitSelfWalkVehicle": 2,
+		"StrayShotsEnabled": true,
+		"StrayShotsHitUnits": true,
+		"StrayShotValidTargets": 0
+	},
+	"ResolutionConstants": {
+		"MeleeDamageMultiplierTurret": 2.0,
+		"MeleeDamageMultiplierVehicle": 1.8,
+		"DefaultUnsteadyThreshold": 40,
+		"AICritChanceBaseMultiplier": 1.0,
+		"VehicleEvasiveResultMultiplier": 1,
+		"VehiclesGetGuarded": true,
+		"MinCritChance": 10,
+		"COILUsesJumping": false,
+		"COILMultipliesShots": false
+	},
+	"CombatValueMultipliers": {
+		"ArmorMultiplierVehicle": 0.85,
+		"StructureMultiplierVehicle": 2.0
+	},
+	"CombatUIConstants": {
+		"COIL_Footstep_Charge_Med": 2.0,
+		"COIL_Footstep_Charge_Max": 4.0,
+		"COIL_Projectile_Charge_Med": 70.0,
+		"COIL_Projectile_Charge_Max": 140.0
+	},
+	"MoveConstants": {
+		"LegDestroyedPenalty": 0,
+		"LegDamageRedPenalty": 0,
+		"LegDamageYellowPenalty": 0
+	}
 }

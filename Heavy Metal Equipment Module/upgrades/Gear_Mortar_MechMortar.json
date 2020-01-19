@@ -1,0 +1,62 @@
+{	
+	"Custom": {
+		"Flags": {
+            "flags": [
+                "not_broken",
+                "no_salvage"
+            ]
+        }
+	},
+    "Description" : {
+        "Cost" : 3000000,
+        "Rarity" : 99,
+        "Purchasable" : true,
+        "Manufacturer" : "Hellespont",
+        "Model" : "Support Artillery",
+        "UIName" : "Support Artillery",
+        "Id" : "Gear_Mortar_MechMortar",
+        "Name" : "Support Artillery",
+        "Details" : "Essentially a gigantic targeting and communications system, this module allows a mech to call in limited artllery support from air and ground forces elsewhere in the OZ. Due to the hurried nature of battle, the support artillery can only fire once or twice before their ability to assist is exhausted. The targeting and communication system is also bulky, heavy, and easily destroyed, but the power to call in extra firepower is often worth the downsides. Finally, because the Support Artillery system takes over the carrier's fire control systems to coordinate with the supporting allied forces, it cannot be used in the same action as normal weaponry.",
+        "Icon" : "uixSvgIcon_artillery"
+    },
+    "BonusValueA" : "* Artillery",
+    "BonusValueB" : null,
+    "ComponentType" : "Upgrade",
+    "ComponentSubType" : "Prototype_Weapon",
+    "PrefabIdentifier" : "",
+    "InventorySize" : 6,
+    "Tonnage" : 6,
+    "AllowedLocations" : "LeftTorso, RightTorso",
+    "DisallowedLocations" : "All",
+    "CriticalComponent" : false,
+    "statusEffects" : [		
+		{
+            "targetingData" : {
+                "effectTriggerType" : "OnActivation",
+                "effectTargetType" : "SingleTarget",
+				"alsoTargetsCreator" : true,
+                "forceVisRebuild" : true
+            },
+			"effectType" : "ActiveAbility",
+			"Description" :
+			{
+				"Id" : "Activation_Artillery_MechMortar",
+				"Name" : "SUPPORT ARTILLERY",
+				"Details" : "Activated ability (uses Firing action). Fires an artillery attack at target location for area effect damage. Has limited uses per mission.",
+				"Icon" : "uixSvgIcon_artillery"
+			},
+			"activeAbilityEffectData" : 
+			{
+				"abilityName" : "AbilityDef_Mortar_MechMortar"
+			}
+		}
+    ],
+    "ComponentTags" : {
+        "items" : [
+            "component_type_variant",
+            "component_type_variant1",
+			"BLACKLISTED"
+        ],
+        "tagSetSourceFile" : ""
+    }
+}

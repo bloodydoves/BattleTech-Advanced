@@ -17,9 +17,7 @@
         },
         "Category" : [
 			{"CategoryID": "EngineShield"},
-            {"CategoryID": "EnginePart"},
-			{"CategoryID": "Cooling"},
-			{"CategoryID": "EngineHeatBlock"}
+            {"CategoryID": "EnginePart"}
         ],
 		"Flags": {
             "flags": [
@@ -36,7 +34,7 @@
         "BonusDescriptions": {
             "Bonuses": [
                 "EngineWeight: X1.6",
-                "HeatGenerated: -60%",
+                "HeatGenerated: -20%",
                 "ArmorTPCost: -10%",
                 "ArmorCBCost: -10%"
             ]
@@ -95,7 +93,7 @@
             "Description": {
                 "Id": "StatusEffect-Heat_ICE",
                 "Name": "Increased Heat",
-                "Details": "Heat generation increased by 15%.",
+                "Details": "Heat generation decreased by 20%%.",
                 "Icon": "uixSvgIcon_equipment_ThermalExchanger"
             },
             "nature": "Buff",
@@ -104,7 +102,7 @@
                 "effectsPersistAfterDestruction": false,
                 "statName": "HeatGenerated",
                 "operation": "Float_Multiply",
-                "modValue": "0.7",
+                "modValue": "0.8",
                 "modType": "System.Single",
                 "additionalRules": "NotSet",
                 "targetCollection": "Weapon",

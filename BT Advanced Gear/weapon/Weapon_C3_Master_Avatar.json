@@ -7,20 +7,18 @@
             "Bonuses": [
                 "LanceResolve: +1",
                 "LanceAcc: +1",
-                "LanceSensors: +10%",
-                "LanceSight: +10%",
-				"Painter: +1",
-				"PainterSensors: 20%",
-				"PainterVisibility: 20%",
-                "C3Master",
-                "TAG: 10"
+                "LanceSensors: +20%",
+                "LanceSight: +20%"
             ]
         },
 		"Flags": {
-            "flags": [
-				"no_salvage"
-            ]
-        },
+			"flags": [
+				"default",
+				"not_broken",
+				"no_salvage",
+				"autorepair"
+			]
+		},
         "InventorySorter": {
             "SortKey": "00024"
         }
@@ -63,14 +61,14 @@
         "UIName": "C3 Master Avatar",
         "Id": "Weapon_C3_Master_Avatar",
         "Name": "UNique Avatar C3 Master",
-        "Details": "The peak of Kuritan C3 design, this is a unique C3 Master unit that is hard-mounted into a special Avatar variant. It functions as a normal C3 Master unit but takes only a single critical slot due to recent breakthroughs in miniturization. It is hard-mounted and cannot be removed.",
+        "Details": "Acting as the core of a traditional C3 Network, C3 Master units provide a universal Resolve bonus, grant increased accuracy to an entire combat force, improve sensors and sight range by 20%, and even act as a super powerful TAG unit, giving incredible bonuses to hit the painted target. C3 Master units do not require C3 slaves to function.",
         "Icon": "uixSvgIcon_weapon_Support"
     },
-    "BonusValueA": "Target Painter",
-    "BonusValueB": "",
+    "BonusValueA": "+1 Lance to Hit/+1 Resolve",
+    "BonusValueB": "+20% Sensors/Sight",
     "ComponentType": "Weapon",
     "ComponentSubType": "Weapon",
-    "PrefabIdentifier": "flag",
+    "PrefabIdentifier": "Laser",
     "BattleValue": 0,
     "InventorySize": 1,
     "Tonnage": 3,
@@ -113,7 +111,7 @@
                 "effectsPersistAfterDestruction": false,
                 "statName": "SensorDistanceAbsolute",
                 "operation": "Float_Multiply",
-                "modValue": "1.1",
+                "modValue": "1.2",
                 "modType": "System.Single",
                 "additionalRules": "NotSet",
                 "targetCollection": "NotSet",
@@ -164,7 +162,7 @@
                 "effectsPersistAfterDestruction": false,
                 "statName": "SpotterDistanceAbsolute",
                 "operation": "Float_Multiply",
-                "modValue": "1.1",
+                "modValue": "1.2",
                 "modType": "System.Single",
                 "additionalRules": "NotSet",
                 "targetCollection": "NotSet",
@@ -206,7 +204,7 @@
             "Description": {
                 "Id": "StatusEffect-C3MasterAcc",
                 "Name": "C3 Master Unit",
-                "Details": "Provides a +4 bonus to actions that generate Morale.",
+                "Details": "Provides a +1 bonus to accuracy for the entire lance",
                 "Icon": "uixSvgIcon_equipment_Cockpit"
             },
             "nature": "Buff",
@@ -250,7 +248,7 @@
             "Description": {
                 "Id": "StatusEffect-C3MasterResolve",
                 "Name": "C3 Master Unit",
-                "Details": "Provides a +2 bonus to Resolve and +1 Accuracy for the whole Lance.",
+                "Details": "Provides a +2 bonus to Resolve",
                 "Icon": "uixSvgIcon_equipment_Cockpit"
             },
             "nature": "Buff",
@@ -259,7 +257,7 @@
                 "effectsPersistAfterDestruction": false,
                 "statName": "MoraleBonusGain",
                 "operation": "Int_Add",
-                "modValue": "1",
+                "modValue": "2",
                 "modType": "System.Int32",
                 "additionalRules": "NotSet",
                 "targetCollection": "NotSet",
@@ -301,14 +299,14 @@
             "Description": {
                 "Id": "C3M-Effect",
                 "Name": "Target Acquired",
-                "Details": "This target was Acquired by a C3 Master. +1 to hit.",
+                "Details": "This target was Acquired by a C3 Master. +3 to hit.",
                 "Icon": "uixSvgIcon_artillery"
             },
             "nature": "Debuff",
             "statisticData": {
                 "statName": "ToHitThisActor",
                 "operation": "Float_Add",
-                "modValue": "-1.0",
+                "modValue": "-3.0",
                 "modType": "System.Single",
                 "additionalRules": "NotSet",
                 "targetCollection": "NotSet",
@@ -328,108 +326,47 @@
             "instantModData": null,
             "poorlyMaintainedEffectData": null
         },
-        {
-            "durationData": {
-                "duration": 10,
-                "ticksOnActivations": true,
-                "useActivationsOfTarget": true,
-                "ticksOnEndOfRound": false,
-                "ticksOnMovements": true,
-                "stackLimit": -1,
-                "clearedWhenAttacked": false
-            },
-            "targetingData": {
-                "effectTriggerType": "OnHit",
-                "triggerLimit": 0,
-                "extendDurationOnTrigger": 0,
-                "specialRules": "NotSet",
-                "effectTargetType": "NotSet",
-                "range": 0,
-                "forcePathRebuild": false,
-                "forceVisRebuild": false,
-                "showInTargetPreview": false,
-                "showInStatusPanel": false
-            },
-            "effectType": "StatisticEffect",
-            "Description": {
-                "Id": "TAG-C3M-Signature_Increase",
-                "Name": "Detected",
-                "Details": "TAG increases Signature by 35%",
-                "Icon": "uixSvgIcon_artillery"
-            },
-            "nature": "Buff",
-            "statisticData": {
-                "appliesEachTick": false,
-                "effectsPersistAfterDestruction": false,
-                "statName": "SensorSignatureModifier",
-                "operation": "Float_Multiply",
-                "modValue": "1.2",
-                "modType": "System.Single",
-                "additionalRules": "NotSet",
-                "targetCollection": "NotSet",
-                "targetWeaponCategory": "NotSet",
-                "targetWeaponType": "NotSet",
-                "targetAmmoCategory": "NotSet",
-                "targetWeaponSubType": "NotSet"
-            },
-            "tagData": null,
-            "floatieData": null,
-            "actorBurningData": null,
-            "vfxData": null,
-            "instantModData": null,
-            "poorlyMaintainedEffectData": null
-        },
-        {
-            "durationData": {
-                "duration": 10,
-                "ticksOnActivations": true,
-                "useActivationsOfTarget": true,
-                "ticksOnEndOfRound": false,
-                "ticksOnMovements": true,
-                "stackLimit": -1,
-                "clearedWhenAttacked": false
-            },
-            "targetingData": {
-                "effectTriggerType": "Passive",
-                "triggerLimit": 0,
-                "extendDurationOnTrigger": 0,
-                "specialRules": "NotSet",
-                "effectTargetType": "Creator",
-                "range": 0,
-                "forcePathRebuild": false,
-                "forceVisRebuild": false,
-                "showInTargetPreview": false,
-                "showInStatusPanel": false
-            },
-            "effectType": "StatisticEffect",
-            "Description": {
-                "Id": "TAG-C3M-Visibility_Increase",
-                "Name": "Detected",
-                "Details": "TAG increases Visibility by 35%",
-                "Icon": "uixSvgIcon_artillery"
-            },
-            "nature": "Buff",
-            "statisticData": {
-                "appliesEachTick": false,
-                "effectsPersistAfterDestruction": false,
-                "statName": "SpottingVisibilityMultiplier",
-                "operation": "Float_Multiply",
-                "modValue": "1.2",
-                "modType": "System.Single",
-                "additionalRules": "NotSet",
-                "targetCollection": "NotSet",
-                "targetWeaponCategory": "NotSet",
-                "targetWeaponType": "NotSet",
-                "targetAmmoCategory": "NotSet",
-                "targetWeaponSubType": "NotSet"
-            },
-            "tagData": null,
-            "floatieData": null,
-            "actorBurningData": null,
-            "vfxData": null,
-            "instantModData": null,
-            "poorlyMaintainedEffectData": null
-        }		
+		{
+			"durationData": {
+				"duration": 2,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 0,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "NotSet",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false,
+				"hideApplicationFloatie": true
+			},
+			"effectType": "VFXEffect",
+			"Description": {
+				"Id": "StatusEffect-TAG-IndicatorVFX",
+				"Name": "TAG MARKED",
+				"Details": "Visual indicator of the TAG effect",
+				"Icon": "uixSvgIcon_status_sensorsImpaired"
+			},
+			"nature": "Debuff",
+			"vfxData": {
+				"vfxName": "vfxPrfPrtl_TAGmarker_loop",
+				"attachToImpactPoint": true,
+				"location": -1,
+				"isAttached": true,
+				"facesAttacker": false,
+				"isOneShot": false,
+				"duration": -1.0
+			}
+		}
     ],
     "ComponentTags": {
         "items": [

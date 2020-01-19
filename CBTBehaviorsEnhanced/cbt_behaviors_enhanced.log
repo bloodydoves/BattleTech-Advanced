@@ -1,0 +1,386 @@
+2020-01-11 01:56:36.770 - Assembly version: 0.3.9.0
+2020-01-11 01:56:36.770 - ModDir is:D:\Steam\steamapps\common\BATTLETECH\Mods\CBTBehaviorsEnhanced
+2020-01-11 01:56:36.770 - mod.json settings are:({"Debug":true,"Trace":false,"Features":{"BiomeBreaches":false,"StartupChecks":false},"ToHitSelfJumped":2,"Heat":{"Movement":{"15":0,"30":-1,"45":-1,"60":-2,"75":-2,"93":-3,"111":-3,"129":-4,"147":-4},"Firing":{"24":1,"39":2,"51":3,"72":4,"99":5,"123":6,"144":7},"Shutdown":{"42":0.1,"54":0.3,"66":0.6,"78":0.8,"90":0.9,"102":1.0,"114":1.1,"126":1.2,"138":1.3,"150":-1},"Explosion":{"57":0.1,"69":0.3,"84":0.5,"105":0.8,"120":0.95,"135":-1},"PilotInjury":{"84":0.3,"117":0.6,"141":0.8},"SystemFailures":{"108":0.3,"132":0.6},"ShowLowOverheatAnim":42,"ShowExtremeOverheatAnim":90,"ShutdownFallThreshold":0.75},"Melee":{"SkillMulti":0.05,"MadeChargeFallChance":0.3,"MadeDFAFallChance":2.9,"MissedKickFallChance":0.3,"HitByChargeFallChance":0.3,"HitByDFAFallChance":2.6,"HitByKickFallChance":0.3,"AllowMeleeFromSprint":true},"Move":{"SkillMulti":0.05,"MinimumMove":40.0,"RunMulti":1.5,"FallAfterRunChance":0.3,"FallAfterJumpChance":0.3},"Piloting":{"SkillMulti":0.05,"StabilityCheck":0.3,"DFAReductionMulti":0.05,"ShowAllStabilityRolls":false,"StandAttemptFallChance":0.3,"FallingDamagePerTenTons":5},"Breaches":{"VacuumCheck":0.17,"ThinAtmoCheck":0.03},"LocalizedFloaties":{"SHUTDOWN_OVERRIDE_SUCCESS":"Passed Shutdown Override","SHUTDOWN_OVERRIDE_FAILED":"Failed Shutdown Override","SHUTDOWN_FALL":"Falling from Shutdown","EXPLOSION_CHECK":"Ammo Explosion Check","VOLATILE_EXPLOSION_CHECK":"Volatile Ammo Explosion Check","SHUTDOWN_CHECK":"Shutdown Check","STARTUP_CHECK":"Startup Check","INJURY_CHECK":"Pilot Injury Check","SYSTEM_FAILURE_CHECK":"System Failure Check","FALLING_CHECK":"Falling Check","MELEE_KICK":"Kick Falling Check","MELEE_CHARGE":"Charge Falling Check","MELEE_DFA":"DFA Falling Check","RUN_AND_FALL":"Sprinted with Damage","JUMP_AND_FALL":"Jumped with Damage","AUTO_FAIL":"Automatic Failure","HULL_BREACH":"Hull Breach Check"},"LocalizedCHUDTooltips":{"TITLE":"HEAT LEVEL","HEAT_AND_SINKING":"Heat: {0} of {1}  Sinking: {2}","AMMO_EXP_CHANCE":"\nAmmo Explosion on d100+{0 * 100f} < {1:P1}","AMMO_EXP_WARNING":"\nGuaranteed Ammo Explosion!","PILOT_INJURY_CHANCE":"\nPilot Injury on d100+{0} < {1:P1}","SYSTEM_FAILURE_CHANCE":"\nSystem Failure on d100+{0} < {1:P1}","SHUTDOWN_CHANCE":"\nShutdown on d100+{0} < {1:P1}","SHUTDOWN_WARNING":"\nGuaranteed Shutdown!","ATTACK_PENALTY":"\nAttack Penalty: +{0}","MOVEMENT_PENALTY":"\nMovement Penalty: -{0}m"},"Quips":{"Breach":["Shit, explosive decomission!","Hull integrity breach detected!","I've lost something to atmo!","I hope life support holds up","I cant breathe!","There are cracks in my cockpit!"],"Knockdown":["Oh .. shit!","FML","This is going to hurt..","This takes the cake","Not again..","A bitter pill","Balls!","And... here we go","D'oh!","Shaken, not stirred","Resistance is futile","Well, isn't that special?","I love you, too","Just some armor...","Biting the dust!"],"Startup":["Start damn you","Can't see through this heat","Where is the start button?","Override damn it, override!","Time to void the warranty","Why won't you turn on","I put in the startup sequence!"]}})
+2020-01-11 01:56:36.771 - === MOD CONFIG BEGIN ===
+2020-01-11 01:56:36.771 -   DEBUG: True Trace: False
+2020-01-11 01:56:36.771 - === MOVEMENT OPTIONS ===
+2020-01-11 01:56:36.771 - === HEAT OPTIONS ===
+2020-01-11 01:56:36.771 - === MOD CONFIG END ===
+2020-01-11 01:56:36.771 - INFO: No errors reading settings file.
+2020-01-11 02:12:09.016 - AA:IES entered- setting CanShootAfterSprinting for actor:Royal Archer
+2020-01-11 02:12:09.020 - Setting overheat threshold to 42 and maxHeat to 150 for actor:Royal Archer_Apex_7B9F1E30
+2020-01-11 02:12:09.405 - AA:IES entered- setting CanShootAfterSprinting for actor:Royal Archer
+2020-01-11 02:12:09.406 - Setting overheat threshold to 42 and maxHeat to 150 for actor:Royal Archer_Arclight_EC1A10DE
+2020-01-11 02:12:09.449 - AA:IES entered- setting CanShootAfterSprinting for actor:Archer
+2020-01-11 02:12:09.450 - Setting overheat threshold to 42 and maxHeat to 150 for actor:Archer_Blockade_57245CBC
+2020-01-11 02:12:09.491 - AA:IES entered- setting CanShootAfterSprinting for actor:Archer
+2020-01-11 02:12:09.491 - Setting overheat threshold to 42 and maxHeat to 150 for actor:Archer_Buckshot_BF79B444
+2020-01-11 02:12:09.565 - AA:IES entered- setting CanShootAfterSprinting for actor:Locust
+2020-01-11 02:12:09.565 - Setting overheat threshold to 42 and maxHeat to 150 for actor:Locust_Paradise_37443683
+2020-01-11 02:12:09.633 - AA:IES entered- setting CanShootAfterSprinting for actor:Panther
+2020-01-11 02:12:09.633 - Setting overheat threshold to 42 and maxHeat to 150 for actor:Panther_Mockingbird_67C4C2EB
+2020-01-11 02:12:09.771 - AA:IES entered- setting CanShootAfterSprinting for actor:Panther
+2020-01-11 02:12:09.771 - Setting overheat threshold to 42 and maxHeat to 150 for actor:Panther_Showboat_D48D4653
+2020-01-11 02:12:09.859 - AA:IES entered- setting CanShootAfterSprinting for actor:Trebuchet
+2020-01-11 02:12:09.859 - Setting overheat threshold to 42 and maxHeat to 150 for actor:Trebuchet_Kraken_35E8359A
+2020-01-11 02:12:44.275 - T:GNAU invoked with null AA? False
+2020-01-11 02:12:46.682 - Updating heat dialog for actor: Archer_Blockade_57245CBC
+2020-01-11 02:12:46.682 -   current values:  CurrentHeat: 0  ProjectedHeat: 0  TempHeat: 0
+2020-01-11 02:12:46.683 -   heatSinkCapacity: 30  adjustedCapacity: 30
+2020-01-11 02:12:46.683 -   currentHeat: 0  tempHeat: 0  projectedHeat: 5  sinkableHeat: -30  =  futureHeat: 0
+2020-01-11 02:12:46.684 - Actor: Archer_Blockade_57245CBC has rawSkill: 4 normalized to 4
+2020-01-11 02:12:46.684 -   AdjustedSkill: 4 = actorSkill: 4 - malus: 0.
+2020-01-11 02:12:46.684 -   CheckMod: 0.2 = adjustedSkill: 4 * multi: 0.05
+2020-01-11 02:12:46.686 -  Updated values: t: 'Heat' / d: 'Heat: 0 of 150  Sinking: 30' / w: ''
+2020-01-11 02:12:49.987 - Updating heat dialog for actor: Archer_Blockade_57245CBC
+2020-01-11 02:12:49.987 -   current values:  CurrentHeat: 0  ProjectedHeat: 5  TempHeat: 0
+2020-01-11 02:12:49.987 -   heatSinkCapacity: 30  adjustedCapacity: 30
+2020-01-11 02:12:49.987 -   currentHeat: 0  tempHeat: 5  projectedHeat: 0  sinkableHeat: -30  =  futureHeat: 0
+2020-01-11 02:12:49.987 - Actor: Archer_Blockade_57245CBC has rawSkill: 4 normalized to 4
+2020-01-11 02:12:49.987 -   AdjustedSkill: 4 = actorSkill: 4 - malus: 0.
+2020-01-11 02:12:49.987 -   CheckMod: 0.2 = adjustedSkill: 4 * multi: 0.05
+2020-01-11 02:12:49.988 -  Updated values: t: 'Heat' / d: 'Heat: 0 of 150  Sinking: 30' / w: ''
+2020-01-11 02:12:49.989 - AMS:OC TD is not interleaved and no enemies - autobracing 
+2020-01-11 02:12:49.991 - Actor: Archer_Blockade has currentHeat: 0 tempHeat: 5  maxHeat: 150  heatsinkCapacity: 30
+2020-01-11 02:12:50.034 - T:GNAU invoked with null AA? False
+2020-01-11 02:12:50.171 - Updating heat dialog for actor: Royal Archer_Apex_7B9F1E30
+2020-01-11 02:12:50.171 -   current values:  CurrentHeat: 0  ProjectedHeat: 0  TempHeat: 5
+2020-01-11 02:12:50.171 -   heatSinkCapacity: 60  adjustedCapacity: 60
+2020-01-11 02:12:50.171 -   currentHeat: 0  tempHeat: 0  projectedHeat: 5  sinkableHeat: -60  =  futureHeat: 0
+2020-01-11 02:12:50.171 - Actor: Royal Archer_Apex_7B9F1E30 has rawSkill: 6 normalized to 6
+2020-01-11 02:12:50.172 -   AdjustedSkill: 6 = actorSkill: 6 - malus: 0.
+2020-01-11 02:12:50.172 -   CheckMod: 0.3 = adjustedSkill: 6 * multi: 0.05
+2020-01-11 02:12:50.172 -  Updated values: t: 'Heat' / d: 'Heat: 0 of 150  Sinking: 60' / w: ''
+2020-01-11 02:12:50.433 - MHS - executing updated logic for state: Finished on actor:Archer_Blockade.
+2020-01-11 02:12:50.433 - AT END OF TURN - CHECKING EFFECTS
+2020-01-11 02:12:50.433 - Actor: Archer_Blockade_57245CBC has rawSkill: 4 normalized to 4
+2020-01-11 02:12:50.433 -   AdjustedSkill: 4 = actorSkill: 4 - malus: 0.
+2020-01-11 02:12:50.433 -   CheckMod: 0.2 = adjustedSkill: 4 * multi: 0.05
+2020-01-11 02:12:50.434 - Actor: Archer_Blockade_57245CBC has rawSkill: 5 normalized to 5
+2020-01-11 02:12:50.434 -   AdjustedSkill: 5 = actorSkill: 5 - malus: 0.
+2020-01-11 02:12:50.434 -   CheckMod: 0.25 = adjustedSkill: 5 * multi: 0.05
+2020-01-11 02:12:50.434 -  Actor: Archer_Blockade_57245CBC has gutsMulti: 0.2  pilotingMulti: 0.25
+2020-01-11 02:12:50.434 -   target roll set to: 0 for heat: 0
+2020-01-11 02:12:50.435 -   failedInjuryCheck: False
+2020-01-11 02:12:50.435 -   target roll set to: 0 for heat: 0
+2020-01-11 02:12:50.435 -   failedSystemFailureCheck: False
+2020-01-11 02:12:50.436 -  AmmoBox: Ammo LRM has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:12:50.436 -  AmmoBox: Ammo LRM has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:12:50.436 -  AmmoBox: Ammo LRM has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:12:50.436 -  AmmoBox: Ammo LRM has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:12:50.436 -   target roll set to: 0 for heat: 0
+2020-01-11 02:12:50.436 -   failedAmmoCheck: False
+2020-01-11 02:12:50.436 -   AmmoBox: Ammo LRM is not a volatile ammo, skipping.
+2020-01-11 02:12:50.436 -   AmmoBox: Ammo LRM is not a volatile ammo, skipping.
+2020-01-11 02:12:50.436 -   AmmoBox: Ammo LRM is not a volatile ammo, skipping.
+2020-01-11 02:12:50.436 -   AmmoBox: Ammo LRM is not a volatile ammo, skipping.
+2020-01-11 02:12:50.436 -   target roll set to: 0 for heat: 0
+2020-01-11 02:12:50.436 -   failedShutdownCheck: False
+2020-01-11 02:12:50.477 - Actor: Archer_Blockade has currentHeat: 0 tempHeat: 0  maxHeat: 150  heatsinkCapacity: 25
+2020-01-11 02:12:54.345 - Updating heat dialog for actor: Royal Archer_Apex_7B9F1E30
+2020-01-11 02:12:54.345 -   current values:  CurrentHeat: 0  ProjectedHeat: 5  TempHeat: 0
+2020-01-11 02:12:54.346 -   heatSinkCapacity: 60  adjustedCapacity: 60
+2020-01-11 02:12:54.346 -   currentHeat: 0  tempHeat: 5  projectedHeat: 0  sinkableHeat: -60  =  futureHeat: 0
+2020-01-11 02:12:54.346 - Actor: Royal Archer_Apex_7B9F1E30 has rawSkill: 6 normalized to 6
+2020-01-11 02:12:54.346 -   AdjustedSkill: 6 = actorSkill: 6 - malus: 0.
+2020-01-11 02:12:54.346 -   CheckMod: 0.3 = adjustedSkill: 6 * multi: 0.05
+2020-01-11 02:12:54.346 -  Updated values: t: 'Heat' / d: 'Heat: 0 of 150  Sinking: 60' / w: ''
+2020-01-11 02:12:54.347 - AMS:OC TD is not interleaved and no enemies - autobracing 
+2020-01-11 02:12:54.347 - Actor: Royal Archer_Apex has currentHeat: 0 tempHeat: 5  maxHeat: 150  heatsinkCapacity: 60
+2020-01-11 02:12:54.384 - T:GNAU invoked with null AA? False
+2020-01-11 02:12:54.483 - Updating heat dialog for actor: Royal Archer_Arclight_EC1A10DE
+2020-01-11 02:12:54.483 -   current values:  CurrentHeat: 0  ProjectedHeat: 0  TempHeat: 5
+2020-01-11 02:12:54.484 -   heatSinkCapacity: 60  adjustedCapacity: 60
+2020-01-11 02:12:54.484 -   currentHeat: 0  tempHeat: 0  projectedHeat: 5  sinkableHeat: -60  =  futureHeat: 0
+2020-01-11 02:12:54.484 - Actor: Royal Archer_Arclight_EC1A10DE has rawSkill: 2 normalized to 2
+2020-01-11 02:12:54.484 -   AdjustedSkill: 2 = actorSkill: 2 - malus: 0.
+2020-01-11 02:12:54.484 -   CheckMod: 0.1 = adjustedSkill: 2 * multi: 0.05
+2020-01-11 02:12:54.484 -  Updated values: t: 'Heat' / d: 'Heat: 0 of 150  Sinking: 60' / w: ''
+2020-01-11 02:12:54.727 - MHS - executing updated logic for state: Finished on actor:Royal Archer_Apex.
+2020-01-11 02:12:54.727 - AT END OF TURN - CHECKING EFFECTS
+2020-01-11 02:12:54.727 - Actor: Royal Archer_Apex_7B9F1E30 has rawSkill: 6 normalized to 6
+2020-01-11 02:12:54.727 -   AdjustedSkill: 6 = actorSkill: 6 - malus: 0.
+2020-01-11 02:12:54.727 -   CheckMod: 0.3 = adjustedSkill: 6 * multi: 0.05
+2020-01-11 02:12:54.727 - Actor: Royal Archer_Apex_7B9F1E30 has rawSkill: 3 normalized to 3
+2020-01-11 02:12:54.727 -   AdjustedSkill: 3 = actorSkill: 3 - malus: 0.
+2020-01-11 02:12:54.727 -   CheckMod: 0.15 = adjustedSkill: 3 * multi: 0.05
+2020-01-11 02:12:54.727 -  Actor: Royal Archer_Apex_7B9F1E30 has gutsMulti: 0.3  pilotingMulti: 0.15
+2020-01-11 02:12:54.727 -   target roll set to: 0 for heat: 0
+2020-01-11 02:12:54.727 -   failedInjuryCheck: False
+2020-01-11 02:12:54.727 -   target roll set to: 0 for heat: 0
+2020-01-11 02:12:54.727 -   failedSystemFailureCheck: False
+2020-01-11 02:12:54.727 -  AmmoBox: Ammo LRM ARTIV has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:12:54.727 -  AmmoBox: Ammo LRM ARTIV has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:12:54.728 -  AmmoBox: Ammo LRM ARTIV has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:12:54.728 -  AmmoBox: Ammo LRM ARTIV has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:12:54.728 -  AmmoBox: Ammo LRM ARTIV has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:12:54.728 -  AmmoBox: Ammo LRM ARTIV has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:12:54.728 -   target roll set to: 0 for heat: 0
+2020-01-11 02:12:54.728 -   failedAmmoCheck: False
+2020-01-11 02:12:54.728 -   AmmoBox: Ammo LRM ARTIV is not a volatile ammo, skipping.
+2020-01-11 02:12:54.728 -   AmmoBox: Ammo LRM ARTIV is not a volatile ammo, skipping.
+2020-01-11 02:12:54.728 -   AmmoBox: Ammo LRM ARTIV is not a volatile ammo, skipping.
+2020-01-11 02:12:54.728 -   AmmoBox: Ammo LRM ARTIV is not a volatile ammo, skipping.
+2020-01-11 02:12:54.728 -   AmmoBox: Ammo LRM ARTIV is not a volatile ammo, skipping.
+2020-01-11 02:12:54.728 -   AmmoBox: Ammo LRM ARTIV is not a volatile ammo, skipping.
+2020-01-11 02:12:54.728 -   target roll set to: 0 for heat: 0
+2020-01-11 02:12:54.728 -   failedShutdownCheck: False
+2020-01-11 02:12:54.769 - Actor: Royal Archer_Apex has currentHeat: 0 tempHeat: 0  maxHeat: 150  heatsinkCapacity: 55
+2020-01-11 02:13:00.668 - Updating heat dialog for actor: Royal Archer_Arclight_EC1A10DE
+2020-01-11 02:13:00.668 -   current values:  CurrentHeat: 0  ProjectedHeat: 5  TempHeat: 0
+2020-01-11 02:13:00.668 -   heatSinkCapacity: 60  adjustedCapacity: 60
+2020-01-11 02:13:00.669 -   currentHeat: 0  tempHeat: 5  projectedHeat: 0  sinkableHeat: -60  =  futureHeat: 0
+2020-01-11 02:13:00.669 - Actor: Royal Archer_Arclight_EC1A10DE has rawSkill: 2 normalized to 2
+2020-01-11 02:13:00.669 -   AdjustedSkill: 2 = actorSkill: 2 - malus: 0.
+2020-01-11 02:13:00.669 -   CheckMod: 0.1 = adjustedSkill: 2 * multi: 0.05
+2020-01-11 02:13:00.669 -  Updated values: t: 'Heat' / d: 'Heat: 0 of 150  Sinking: 60' / w: ''
+2020-01-11 02:13:00.669 - AMS:OC TD is not interleaved and no enemies - autobracing 
+2020-01-11 02:13:00.670 - Actor: Royal Archer_Arclight has currentHeat: 0 tempHeat: 5  maxHeat: 150  heatsinkCapacity: 60
+2020-01-11 02:13:00.707 - T:GNAU invoked with null AA? False
+2020-01-11 02:13:00.801 - Updating heat dialog for actor: Archer_Buckshot_BF79B444
+2020-01-11 02:13:00.801 -   current values:  CurrentHeat: 0  ProjectedHeat: 0  TempHeat: 5
+2020-01-11 02:13:00.801 -   heatSinkCapacity: 30  adjustedCapacity: 30
+2020-01-11 02:13:00.802 -   currentHeat: 0  tempHeat: 0  projectedHeat: 5  sinkableHeat: -30  =  futureHeat: 0
+2020-01-11 02:13:00.802 - Actor: Archer_Buckshot_BF79B444 has rawSkill: 6 normalized to 6
+2020-01-11 02:13:00.802 -   AdjustedSkill: 6 = actorSkill: 6 - malus: 0.
+2020-01-11 02:13:00.802 -   CheckMod: 0.3 = adjustedSkill: 6 * multi: 0.05
+2020-01-11 02:13:00.802 -  Updated values: t: 'Heat' / d: 'Heat: 0 of 150  Sinking: 30' / w: ''
+2020-01-11 02:13:01.049 - MHS - executing updated logic for state: Finished on actor:Royal Archer_Arclight.
+2020-01-11 02:13:01.049 - AT END OF TURN - CHECKING EFFECTS
+2020-01-11 02:13:01.049 - Actor: Royal Archer_Arclight_EC1A10DE has rawSkill: 2 normalized to 2
+2020-01-11 02:13:01.050 -   AdjustedSkill: 2 = actorSkill: 2 - malus: 0.
+2020-01-11 02:13:01.050 -   CheckMod: 0.1 = adjustedSkill: 2 * multi: 0.05
+2020-01-11 02:13:01.050 - Actor: Royal Archer_Arclight_EC1A10DE has rawSkill: 6 normalized to 6
+2020-01-11 02:13:01.050 -   AdjustedSkill: 6 = actorSkill: 6 - malus: 0.
+2020-01-11 02:13:01.050 -   CheckMod: 0.3 = adjustedSkill: 6 * multi: 0.05
+2020-01-11 02:13:01.050 -  Actor: Royal Archer_Arclight_EC1A10DE has gutsMulti: 0.1  pilotingMulti: 0.3
+2020-01-11 02:13:01.050 -   target roll set to: 0 for heat: 0
+2020-01-11 02:13:01.050 -   failedInjuryCheck: False
+2020-01-11 02:13:01.050 -   target roll set to: 0 for heat: 0
+2020-01-11 02:13:01.050 -   failedSystemFailureCheck: False
+2020-01-11 02:13:01.050 -  AmmoBox: Ammo LRM ARTIV has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:13:01.050 -  AmmoBox: Ammo LRM ARTIV has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:13:01.050 -  AmmoBox: Ammo LRM ARTIV has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:13:01.050 -  AmmoBox: Ammo LRM ARTIV has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:13:01.050 -  AmmoBox: Ammo LRM ARTIV has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:13:01.050 -  AmmoBox: Ammo LRM ARTIV has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:13:01.050 -   target roll set to: 0 for heat: 0
+2020-01-11 02:13:01.050 -   failedAmmoCheck: False
+2020-01-11 02:13:01.050 -   AmmoBox: Ammo LRM ARTIV is not a volatile ammo, skipping.
+2020-01-11 02:13:01.050 -   AmmoBox: Ammo LRM ARTIV is not a volatile ammo, skipping.
+2020-01-11 02:13:01.050 -   AmmoBox: Ammo LRM ARTIV is not a volatile ammo, skipping.
+2020-01-11 02:13:01.050 -   AmmoBox: Ammo LRM ARTIV is not a volatile ammo, skipping.
+2020-01-11 02:13:01.050 -   AmmoBox: Ammo LRM ARTIV is not a volatile ammo, skipping.
+2020-01-11 02:13:01.050 -   AmmoBox: Ammo LRM ARTIV is not a volatile ammo, skipping.
+2020-01-11 02:13:01.050 -   target roll set to: 0 for heat: 0
+2020-01-11 02:13:01.050 -   failedShutdownCheck: False
+2020-01-11 02:13:01.092 - Actor: Royal Archer_Arclight has currentHeat: 0 tempHeat: 0  maxHeat: 150  heatsinkCapacity: 55
+2020-01-11 02:13:02.020 - Updating heat dialog for actor: Archer_Buckshot_BF79B444
+2020-01-11 02:13:02.020 -   current values:  CurrentHeat: 0  ProjectedHeat: 5  TempHeat: 0
+2020-01-11 02:13:02.020 -   heatSinkCapacity: 30  adjustedCapacity: 30
+2020-01-11 02:13:02.020 -   currentHeat: 0  tempHeat: 0  projectedHeat: 0  sinkableHeat: -30  =  futureHeat: 0
+2020-01-11 02:13:02.020 - Actor: Archer_Buckshot_BF79B444 has rawSkill: 6 normalized to 6
+2020-01-11 02:13:02.020 -   AdjustedSkill: 6 = actorSkill: 6 - malus: 0.
+2020-01-11 02:13:02.020 -   CheckMod: 0.3 = adjustedSkill: 6 * multi: 0.05
+2020-01-11 02:13:02.020 -  Updated values: t: 'Heat' / d: 'Heat: 0 of 150  Sinking: 30' / w: ''
+2020-01-11 02:13:03.235 - AMS:OC TD is not interleaved and no enemies - autobracing 
+2020-01-11 02:13:03.235 - Actor: Archer_Buckshot has currentHeat: 0 tempHeat: 0  maxHeat: 150  heatsinkCapacity: 30
+2020-01-11 02:13:03.563 - MHS - executing updated logic for state: Finished on actor:Archer_Buckshot.
+2020-01-11 02:13:03.563 - AT END OF TURN - CHECKING EFFECTS
+2020-01-11 02:13:03.563 - Actor: Archer_Buckshot_BF79B444 has rawSkill: 6 normalized to 6
+2020-01-11 02:13:03.563 -   AdjustedSkill: 6 = actorSkill: 6 - malus: 0.
+2020-01-11 02:13:03.563 -   CheckMod: 0.3 = adjustedSkill: 6 * multi: 0.05
+2020-01-11 02:13:03.563 - Actor: Archer_Buckshot_BF79B444 has rawSkill: 4 normalized to 4
+2020-01-11 02:13:03.563 -   AdjustedSkill: 4 = actorSkill: 4 - malus: 0.
+2020-01-11 02:13:03.563 -   CheckMod: 0.2 = adjustedSkill: 4 * multi: 0.05
+2020-01-11 02:13:03.563 -  Actor: Archer_Buckshot_BF79B444 has gutsMulti: 0.3  pilotingMulti: 0.2
+2020-01-11 02:13:03.563 -   target roll set to: 0 for heat: 0
+2020-01-11 02:13:03.563 -   failedInjuryCheck: False
+2020-01-11 02:13:03.563 -   target roll set to: 0 for heat: 0
+2020-01-11 02:13:03.563 -   failedSystemFailureCheck: False
+2020-01-11 02:13:03.563 -  AmmoBox: Ammo LRM has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:13:03.563 -  AmmoBox: Ammo LRM has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:13:03.563 -  AmmoBox: Ammo LRM has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:13:03.563 -  AmmoBox: Ammo LRM has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:13:03.563 -   target roll set to: 0 for heat: 0
+2020-01-11 02:13:03.563 -   failedAmmoCheck: False
+2020-01-11 02:13:03.563 -   AmmoBox: Ammo LRM is not a volatile ammo, skipping.
+2020-01-11 02:13:03.563 -   AmmoBox: Ammo LRM is not a volatile ammo, skipping.
+2020-01-11 02:13:03.563 -   AmmoBox: Ammo LRM is not a volatile ammo, skipping.
+2020-01-11 02:13:03.563 -   AmmoBox: Ammo LRM is not a volatile ammo, skipping.
+2020-01-11 02:13:03.563 -   target roll set to: 0 for heat: 0
+2020-01-11 02:13:03.563 -   failedShutdownCheck: False
+2020-01-11 02:13:03.594 - Actor: Archer_Buckshot has currentHeat: 0 tempHeat: 0  maxHeat: 150  heatsinkCapacity: 30
+2020-01-11 02:13:03.612 - TD:OTAAC invoked
+2020-01-11 02:13:03.612 - TD isInterleaved: False  isInterleavePending: False  isNonInterleavePending: False
+2020-01-11 02:13:03.612 - There are 0 unusedUnits in the current phase)
+2020-01-11 02:13:03.612 - Incrementing ActiveTurnActor
+2020-01-11 02:13:07.674 - AMS:OC TD is not interleaved but enemies are detected - disabling autobrace. 
+2020-01-11 02:13:10.001 - MHS - executing updated logic for state: Finished on actor:Panther_Mockingbird.
+2020-01-11 02:13:10.001 - AT END OF TURN - CHECKING EFFECTS
+2020-01-11 02:13:10.001 - Actor: Panther_Mockingbird_67C4C2EB has rawSkill: 6 normalized to 6
+2020-01-11 02:13:10.001 -   AdjustedSkill: 6 = actorSkill: 6 - malus: 0.
+2020-01-11 02:13:10.001 -   CheckMod: 0.3 = adjustedSkill: 6 * multi: 0.05
+2020-01-11 02:13:10.001 - Actor: Panther_Mockingbird_67C4C2EB has rawSkill: 4 normalized to 4
+2020-01-11 02:13:10.001 -   AdjustedSkill: 4 = actorSkill: 4 - malus: 0.
+2020-01-11 02:13:10.001 -   CheckMod: 0.2 = adjustedSkill: 4 * multi: 0.05
+2020-01-11 02:13:10.001 -  Actor: Panther_Mockingbird_67C4C2EB has gutsMulti: 0.3  pilotingMulti: 0.2
+2020-01-11 02:13:10.001 -   target roll set to: 0 for heat: 0
+2020-01-11 02:13:10.001 -   failedInjuryCheck: False
+2020-01-11 02:13:10.001 -   target roll set to: 0 for heat: 0
+2020-01-11 02:13:10.001 -   failedSystemFailureCheck: False
+2020-01-11 02:13:10.001 -  AmmoBox: Ammo SRM has 100 rounds with explosion/ammo: 8 heat/ammo: 0 stab/ammo: 2 weight:  for 1000 total damage.
+2020-01-11 02:13:10.001 -   target roll set to: 0 for heat: 0
+2020-01-11 02:13:10.001 -   failedAmmoCheck: False
+2020-01-11 02:13:10.001 -   AmmoBox: Ammo SRM is not a volatile ammo, skipping.
+2020-01-11 02:13:10.001 -   target roll set to: 0 for heat: 0
+2020-01-11 02:13:10.001 -   failedShutdownCheck: False
+2020-01-11 02:13:10.028 - Actor: Panther_Mockingbird has currentHeat: 0 tempHeat: 0  maxHeat: 150  heatsinkCapacity: 34
+2020-01-11 02:13:10.071 - TD:OTAAC invoked
+2020-01-11 02:13:10.071 - TD isInterleaved: False  isInterleavePending: True  isNonInterleavePending: False
+2020-01-11 02:13:10.071 - There are 3 unusedUnits in the current phase)
+2020-01-11 02:13:10.071 - Incrementing ActiveTurnActor
+2020-01-11 02:13:11.644 - TD:OTAAC invoked
+2020-01-11 02:13:11.644 - TD isInterleaved: True  isInterleavePending: False  isNonInterleavePending: False
+2020-01-11 02:13:11.644 - There are 0 unusedUnits in the current phase)
+2020-01-11 02:13:11.644 - Incrementing ActiveTurnActor
+2020-01-11 02:13:15.563 - Updating heat dialog for actor: Royal Archer_Arclight_EC1A10DE
+2020-01-11 02:13:15.564 -   current values:  CurrentHeat: 0  ProjectedHeat: 0  TempHeat: 0
+2020-01-11 02:13:15.564 -   heatSinkCapacity: 60  adjustedCapacity: 60
+2020-01-11 02:13:15.564 -   currentHeat: 0  tempHeat: 0  projectedHeat: 5  sinkableHeat: -60  =  futureHeat: 0
+2020-01-11 02:13:15.564 - Actor: Royal Archer_Arclight_EC1A10DE has rawSkill: 2 normalized to 2
+2020-01-11 02:13:15.564 -   AdjustedSkill: 2 = actorSkill: 2 - malus: 0.
+2020-01-11 02:13:15.564 -   CheckMod: 0.1 = adjustedSkill: 2 * multi: 0.05
+2020-01-11 02:13:15.564 -  Updated values: t: 'Heat' / d: 'Heat: 0 of 150  Sinking: 60' / w: ''
+2020-01-11 02:13:18.793 - Updating heat dialog for actor: Royal Archer_Arclight_EC1A10DE
+2020-01-11 02:13:18.793 -   current values:  CurrentHeat: 0  ProjectedHeat: 5  TempHeat: 0
+2020-01-11 02:13:18.793 -   heatSinkCapacity: 60  adjustedCapacity: 60
+2020-01-11 02:13:18.793 -   currentHeat: 0  tempHeat: 5  projectedHeat: 0  sinkableHeat: -60  =  futureHeat: 0
+2020-01-11 02:13:18.793 - Actor: Royal Archer_Arclight_EC1A10DE has rawSkill: 2 normalized to 2
+2020-01-11 02:13:18.793 -   AdjustedSkill: 2 = actorSkill: 2 - malus: 0.
+2020-01-11 02:13:18.793 -   CheckMod: 0.1 = adjustedSkill: 2 * multi: 0.05
+2020-01-11 02:13:18.794 -  Updated values: t: 'Heat' / d: 'Heat: 0 of 150  Sinking: 60' / w: ''
+2020-01-11 02:13:20.901 - Updating heat dialog for actor: Royal Archer_Arclight_EC1A10DE
+2020-01-11 02:13:20.901 -   current values:  CurrentHeat: 0  ProjectedHeat: 0  TempHeat: 5
+2020-01-11 02:13:20.902 -   heatSinkCapacity: 60  adjustedCapacity: 60
+2020-01-11 02:13:20.902 -   currentHeat: 0  tempHeat: 5  projectedHeat: 66  sinkableHeat: -60  =  futureHeat: 11
+2020-01-11 02:13:20.902 - Actor: Royal Archer_Arclight_EC1A10DE has rawSkill: 2 normalized to 2
+2020-01-11 02:13:20.902 -   AdjustedSkill: 2 = actorSkill: 2 - malus: 0.
+2020-01-11 02:13:20.902 -   CheckMod: 0.1 = adjustedSkill: 2 * multi: 0.05
+2020-01-11 02:13:20.902 -  Updated values: t: 'Heat' / d: 'Heat: 11 of 150  Sinking: 60' / w: ''
+2020-01-11 02:13:22.678 - Updating heat dialog for actor: Royal Archer_Arclight_EC1A10DE
+2020-01-11 02:13:22.678 -   current values:  CurrentHeat: 0  ProjectedHeat: 66  TempHeat: 5
+2020-01-11 02:13:22.679 -   heatSinkCapacity: 60  adjustedCapacity: 60
+2020-01-11 02:13:22.679 -   currentHeat: 0  tempHeat: 5  projectedHeat: 56  sinkableHeat: -60  =  futureHeat: 1
+2020-01-11 02:13:22.679 - Actor: Royal Archer_Arclight_EC1A10DE has rawSkill: 2 normalized to 2
+2020-01-11 02:13:22.679 -   AdjustedSkill: 2 = actorSkill: 2 - malus: 0.
+2020-01-11 02:13:22.679 -   CheckMod: 0.1 = adjustedSkill: 2 * multi: 0.05
+2020-01-11 02:13:22.679 -  Updated values: t: 'Heat' / d: 'Heat: 1 of 150  Sinking: 60' / w: ''
+2020-01-11 02:13:23.953 - Updating heat dialog for actor: Royal Archer_Arclight_EC1A10DE
+2020-01-11 02:13:23.953 -   current values:  CurrentHeat: 0  ProjectedHeat: 56  TempHeat: 5
+2020-01-11 02:13:23.953 -   heatSinkCapacity: 60  adjustedCapacity: 60
+2020-01-11 02:13:23.953 -   currentHeat: 0  tempHeat: 15  projectedHeat: 46  sinkableHeat: -60  =  futureHeat: 1
+2020-01-11 02:13:23.953 - Actor: Royal Archer_Arclight_EC1A10DE has rawSkill: 2 normalized to 2
+2020-01-11 02:13:23.953 -   AdjustedSkill: 2 = actorSkill: 2 - malus: 0.
+2020-01-11 02:13:23.953 -   CheckMod: 0.1 = adjustedSkill: 2 * multi: 0.05
+2020-01-11 02:13:23.953 -  Updated values: t: 'Heat' / d: 'Heat: 1 of 150  Sinking: 60' / w: ''
+2020-01-11 02:13:24.209 - Updating heat dialog for actor: Royal Archer_Arclight_EC1A10DE
+2020-01-11 02:13:24.209 -   current values:  CurrentHeat: 0  ProjectedHeat: 46  TempHeat: 15
+2020-01-11 02:13:24.209 -   heatSinkCapacity: 60  adjustedCapacity: 60
+2020-01-11 02:13:24.209 -   currentHeat: 0  tempHeat: 25  projectedHeat: 36  sinkableHeat: -60  =  futureHeat: 1
+2020-01-11 02:13:24.209 - Actor: Royal Archer_Arclight_EC1A10DE has rawSkill: 2 normalized to 2
+2020-01-11 02:13:24.209 -   AdjustedSkill: 2 = actorSkill: 2 - malus: 0.
+2020-01-11 02:13:24.209 -   CheckMod: 0.1 = adjustedSkill: 2 * multi: 0.05
+2020-01-11 02:13:24.209 -  Updated values: t: 'Heat' / d: 'Heat: 1 of 150  Sinking: 60' / w: ''
+2020-01-11 02:13:24.396 - Updating heat dialog for actor: Royal Archer_Arclight_EC1A10DE
+2020-01-11 02:13:24.396 -   current values:  CurrentHeat: 0  ProjectedHeat: 36  TempHeat: 25
+2020-01-11 02:13:24.396 -   heatSinkCapacity: 60  adjustedCapacity: 60
+2020-01-11 02:13:24.396 -   currentHeat: 0  tempHeat: 43  projectedHeat: 18  sinkableHeat: -60  =  futureHeat: 1
+2020-01-11 02:13:24.396 - Actor: Royal Archer_Arclight_EC1A10DE has rawSkill: 2 normalized to 2
+2020-01-11 02:13:24.396 -   AdjustedSkill: 2 = actorSkill: 2 - malus: 0.
+2020-01-11 02:13:24.396 -   CheckMod: 0.1 = adjustedSkill: 2 * multi: 0.05
+2020-01-11 02:13:24.396 -  Updated values: t: 'Heat' / d: 'Heat: 1 of 150  Sinking: 60' / w: ''
+2020-01-11 02:13:25.203 - Updating heat dialog for actor: Royal Archer_Arclight_EC1A10DE
+2020-01-11 02:13:25.203 -   current values:  CurrentHeat: 0  ProjectedHeat: 18  TempHeat: 43
+2020-01-11 02:13:25.204 -   heatSinkCapacity: 60  adjustedCapacity: 60
+2020-01-11 02:13:25.204 -   currentHeat: 0  tempHeat: 61  projectedHeat: 0  sinkableHeat: -60  =  futureHeat: 1
+2020-01-11 02:13:25.204 - Actor: Royal Archer_Arclight_EC1A10DE has rawSkill: 2 normalized to 2
+2020-01-11 02:13:25.204 -   AdjustedSkill: 2 = actorSkill: 2 - malus: 0.
+2020-01-11 02:13:25.204 -   CheckMod: 0.1 = adjustedSkill: 2 * multi: 0.05
+2020-01-11 02:13:25.204 -  Updated values: t: 'Heat' / d: 'Heat: 1 of 150  Sinking: 60' / w: ''
+2020-01-11 02:13:30.516 - Updating heat dialog for actor: Royal Archer_Arclight_EC1A10DE
+2020-01-11 02:13:30.516 -   current values:  CurrentHeat: 0  ProjectedHeat: 0  TempHeat: 61
+2020-01-11 02:13:30.517 -   heatSinkCapacity: 60  adjustedCapacity: 60
+2020-01-11 02:13:30.517 -   currentHeat: 61  tempHeat: 0  projectedHeat: 0  sinkableHeat: -60  =  futureHeat: 1
+2020-01-11 02:13:30.517 - Actor: Royal Archer_Arclight_EC1A10DE has rawSkill: 2 normalized to 2
+2020-01-11 02:13:30.517 -   AdjustedSkill: 2 = actorSkill: 2 - malus: 0.
+2020-01-11 02:13:30.517 -   CheckMod: 0.1 = adjustedSkill: 2 * multi: 0.05
+2020-01-11 02:13:30.518 -  Updated values: t: 'Heat' / d: 'Heat: 1 of 150  Sinking: 60' / w: ''
+2020-01-11 02:13:30.543 - Updating heat dialog for actor: Royal Archer_Arclight_EC1A10DE
+2020-01-11 02:13:30.543 -   current values:  CurrentHeat: 61  ProjectedHeat: 0  TempHeat: 0
+2020-01-11 02:13:30.543 -   heatSinkCapacity: 0  adjustedCapacity: 0
+2020-01-11 02:13:30.543 -   currentHeat: 1  tempHeat: 0  projectedHeat: 0  sinkableHeat: 0  =  futureHeat: 1
+2020-01-11 02:13:30.543 - Actor: Royal Archer_Arclight_EC1A10DE has rawSkill: 2 normalized to 2
+2020-01-11 02:13:30.543 -   AdjustedSkill: 2 = actorSkill: 2 - malus: 0.
+2020-01-11 02:13:30.543 -   CheckMod: 0.1 = adjustedSkill: 2 * multi: 0.05
+2020-01-11 02:13:30.544 -  Updated values: t: 'Heat' / d: 'Heat: 1 of 150  Sinking: 0' / w: ''
+2020-01-11 02:13:30.726 - MHS - executing updated logic for state: Finished on actor:Royal Archer_Arclight.
+2020-01-11 02:13:30.726 - AT END OF TURN - CHECKING EFFECTS
+2020-01-11 02:13:30.726 - Actor: Royal Archer_Arclight_EC1A10DE has rawSkill: 2 normalized to 2
+2020-01-11 02:13:30.726 -   AdjustedSkill: 2 = actorSkill: 2 - malus: 0.
+2020-01-11 02:13:30.727 -   CheckMod: 0.1 = adjustedSkill: 2 * multi: 0.05
+2020-01-11 02:13:30.727 - Actor: Royal Archer_Arclight_EC1A10DE has rawSkill: 6 normalized to 6
+2020-01-11 02:13:30.727 -   AdjustedSkill: 6 = actorSkill: 6 - malus: 0.
+2020-01-11 02:13:30.727 -   CheckMod: 0.3 = adjustedSkill: 6 * multi: 0.05
+2020-01-11 02:13:30.727 -  Actor: Royal Archer_Arclight_EC1A10DE has gutsMulti: 0.1  pilotingMulti: 0.3
+2020-01-11 02:13:30.727 -   target roll set to: 0 for heat: 1
+2020-01-11 02:13:30.727 -   failedInjuryCheck: False
+2020-01-11 02:13:30.727 -   target roll set to: 0 for heat: 1
+2020-01-11 02:13:30.727 -   failedSystemFailureCheck: False
+2020-01-11 02:13:30.727 -  AmmoBox: Ammo LRM ARTIV has 80 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 400 total damage.
+2020-01-11 02:13:30.727 -  AmmoBox: Ammo LRM ARTIV has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:13:30.727 -  AmmoBox: Ammo LRM ARTIV has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:13:30.727 -  AmmoBox: Ammo LRM ARTIV has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:13:30.727 -  AmmoBox: Ammo LRM ARTIV has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:13:30.727 -  AmmoBox: Ammo LRM ARTIV has 120 rounds with explosion/ammo: 4 heat/ammo: 0 stab/ammo: 1 weight:  for 600 total damage.
+2020-01-11 02:13:30.727 -   target roll set to: 0 for heat: 1
+2020-01-11 02:13:30.727 -   failedAmmoCheck: False
+2020-01-11 02:13:30.727 -   AmmoBox: Ammo LRM ARTIV is not a volatile ammo, skipping.
+2020-01-11 02:13:30.727 -   AmmoBox: Ammo LRM ARTIV is not a volatile ammo, skipping.
+2020-01-11 02:13:30.727 -   AmmoBox: Ammo LRM ARTIV is not a volatile ammo, skipping.
+2020-01-11 02:13:30.727 -   AmmoBox: Ammo LRM ARTIV is not a volatile ammo, skipping.
+2020-01-11 02:13:30.727 -   AmmoBox: Ammo LRM ARTIV is not a volatile ammo, skipping.
+2020-01-11 02:13:30.727 -   AmmoBox: Ammo LRM ARTIV is not a volatile ammo, skipping.
+2020-01-11 02:13:30.727 -   target roll set to: 0 for heat: 1
+2020-01-11 02:13:30.727 -   failedShutdownCheck: False
+2020-01-11 02:13:30.885 - Actor: Royal Archer_Arclight has currentHeat: 1 tempHeat: 0  maxHeat: 150  heatsinkCapacity: 0
+2020-01-11 02:13:30.927 - TD:OTAAC invoked
+2020-01-11 02:13:30.927 - TD isInterleaved: True  isInterleavePending: False  isNonInterleavePending: False
+2020-01-11 02:13:30.927 - There are 0 unusedUnits in the current phase)
+2020-01-11 02:13:30.927 - Incrementing ActiveTurnActor
+2020-01-11 02:13:31.729 - TD:OTAAC invoked
+2020-01-11 02:13:31.729 - TD isInterleaved: True  isInterleavePending: False  isNonInterleavePending: False
+2020-01-11 02:13:31.729 - There are 0 unusedUnits in the current phase)
+2020-01-11 02:13:31.729 - Incrementing ActiveTurnActor
+2020-01-11 02:13:34.070 - Building melee pathing from attacker: Archer_Buckshot_BF79B444 to target: Panther_Mockingbird_67C4C2EB
+2020-01-11 02:13:34.071 -   found 0 nodes that are not blocked and within height
+2020-01-11 02:13:34.080 - Updating heat dialog for actor: Archer_Buckshot_BF79B444
+2020-01-11 02:13:34.080 -   current values:  CurrentHeat: 1  ProjectedHeat: 0  TempHeat: 0
+2020-01-11 02:13:34.080 -   heatSinkCapacity: 30  adjustedCapacity: 30
+2020-01-11 02:13:34.080 -   currentHeat: 0  tempHeat: 0  projectedHeat: 0  sinkableHeat: -30  =  futureHeat: 0
+2020-01-11 02:13:34.080 - Actor: Archer_Buckshot_BF79B444 has rawSkill: 6 normalized to 6
+2020-01-11 02:13:34.080 -   AdjustedSkill: 6 = actorSkill: 6 - malus: 0.
+2020-01-11 02:13:34.080 -   CheckMod: 0.3 = adjustedSkill: 6 * multi: 0.05
+2020-01-11 02:13:34.081 -  Updated values: t: 'Heat' / d: 'Heat: 0 of 150  Sinking: 30' / w: ''
+2020-01-11 02:13:36.747 - Building melee pathing from attacker: Archer_Buckshot_BF79B444 to target: Panther_Mockingbird_67C4C2EB
+2020-01-11 02:13:36.747 -   found 0 nodes that are not blocked and within height
+2020-01-11 02:13:37.403 - Building melee pathing from attacker: Royal Archer_Apex_7B9F1E30 to target: Panther_Mockingbird_67C4C2EB
+2020-01-11 02:13:37.403 -   found 0 nodes that are not blocked and within height
+2020-01-11 02:13:43.141 - Updating heat dialog for actor: Royal Archer_Apex_7B9F1E30
+2020-01-11 02:13:43.141 -   current values:  CurrentHeat: 0  ProjectedHeat: 0  TempHeat: 0
+2020-01-11 02:13:43.141 -   heatSinkCapacity: 60  adjustedCapacity: 60
+2020-01-11 02:13:43.141 -   currentHeat: 0  tempHeat: 0  projectedHeat: 36  sinkableHeat: -60  =  futureHeat: 0
+2020-01-11 02:13:43.141 - Actor: Royal Archer_Apex_7B9F1E30 has rawSkill: 6 normalized to 6
+2020-01-11 02:13:43.141 -   AdjustedSkill: 6 = actorSkill: 6 - malus: 0.
+2020-01-11 02:13:43.141 -   CheckMod: 0.3 = adjustedSkill: 6 * multi: 0.05
+2020-01-11 02:13:43.142 -  Updated values: t: 'Heat' / d: 'Heat: 0 of 150  Sinking: 60' / w: ''
