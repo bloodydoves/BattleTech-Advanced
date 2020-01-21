@@ -1,8 +1,8 @@
 {
     "Description": {
-        "Id": "Ammunition_Mortar_Flare",
+        "Id": "Ammunition_Mortar_Suppressant",
         "Name": "MORTAR Ammo",
-        "UIName": "Flare",
+        "UIName": "Suppressant",
         "Details": "Massive rounds, designed for devastating impact, to be used in an AC/20.",
         "Icon": null,
         "Cost": 0,
@@ -24,12 +24,12 @@
     "statusEffects": [
         {
             "durationData": {
-                "duration": 7,
+                "duration": 2,
                 "ticksOnActivations": true,
                 "useActivationsOfTarget": true,
                 "ticksOnEndOfRound": false,
-                "ticksOnMovements": true,
-                "stackLimit": 1,
+                "ticksOnMovements": false,
+                "stackLimit": 5,
                 "clearedWhenAttacked": false
             },
             "targetingData": {
@@ -37,38 +37,36 @@
                 "triggerLimit": 0,
                 "extendDurationOnTrigger": 0,
                 "specialRules": "NotSet",
-                "effectTargetType": "NotSet",
+                "effectTargetType": "SingleTarget",
                 "range": 0,
                 "forcePathRebuild": false,
                 "forceVisRebuild": false,
-                "showInTargetPreview": false,
+                "showInTargetPreview": true,
                 "showInStatusPanel": true
             },
             "effectType": "StatisticEffect",
             "Description": {
-                "Id": "Flare-Effect",
-                "Name": "Target Illuminated",
-                "Details": "This target was Flared. +1 to hit.",
-                "Icon": "uixSvgIcon_artillery"
+                "Id": "Suppressant-Effect",
+                "Name": "Heat Suppressed",
+                "Details": "High energy residue reduces heat efficiency by 10%.",
+                "Icon": "uixSvgIcon_equipment_ThermalExchanger"
             },
             "nature": "Debuff",
             "statisticData": {
-                "statName": "ToHitThisActor",
-                "operation": "Float_Add",
-                "modValue": "-1.0",
+                "appliesEachTick": false,
+                "effectsPersistAfterDestruction": false,
+                "statName": "HeatGenerated",
+                "operation": "Float_Multiply",
+                "modValue": "1.1",
                 "modType": "System.Single",
                 "additionalRules": "NotSet",
-                "targetCollection": "NotSet",
+                "targetCollection": "Weapon",
                 "targetWeaponCategory": "NotSet",
                 "targetWeaponType": "NotSet",
                 "targetAmmoCategory": "NotSet",
                 "targetWeaponSubType": "NotSet"
             },
-            "tagData": {
-                "tagList": [
-                    "lv-tag-effect"
-                ]
-            },
+            "tagData": null,
             "floatieData": null,
             "actorBurningData": null,
             "vfxData": null,
