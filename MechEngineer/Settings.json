@@ -17,11 +17,6 @@
 		"emod_leg_lower",
 		"emod_leg_foot"
 	],
-	"NewSaveFolder": {
-		"Enabled": true,
-		"EnabledDescription": "Redirects all save operations to use one folder for all save related data.",
-		"Path": "BTASaves"
-	},
 	"TagManager": {
 		"Enabled": true,
 		"EnabledDescription": "Manipulates MechDef and ComponentDef Tags",
@@ -82,6 +77,7 @@
 		"MechDefSkip": [
 			"mechdef_urbanmech_UM-R50"
 		],
+		"MechDefAutoFixAgainstMaxFreeTonnage": [],
 		"MechDefEngine": true,
 		"MechDefCoolingDef": "emod_kit_shs",
 		"MechDefHeatBlockDef": "emod_engine_cooling",
@@ -342,6 +338,20 @@
         "IgnoreLimitEngineChassisTag" : ""
     },
 	"HardpointFix": {
+		"Enabled": true,
+		"EnabledDescription": "Optimizes the way installed weapons are shown on a mech model.",
+		"AutoFixChassisDefWeaponHardpointCounts": false,
+		"AutoFixChassisDefWeaponHardpointCountsDescription": "Changes chassis hardpoints based on configured prefabs.",
+		"EnforceHardpointLimits": false,
+		"EnforceHardpointLimitsDescription": "Enforces hardpoint limits in mechlab only allowing configured prefabs.",
+		"AllowDefaultLoadoutWeapons": false,
+		"AllowDefaultLoadoutWeaponsDescription": "Ignore limits that would prevent mounting default loadouts.",
+		"FallbackPrefabsForComponentDefIds": [
+			"Weapon_Mortar_MechMortar"
+		],
+		"FallbackPrefabsForComponentDefIdsDescription": "A list of components that always should be assigned a weapon prefab to.",
+		"AutoFixHardpointDataDefs": false,
+		"AutoFixHardpointDataDefsDescription": "HardpointDataDef should not contain duplicates and be grouped by slot (mh1 < mh2, eh1 = mh1).",
 		"WeaponPrefabMappings": [
 			{
 				"PrefabIdentifier": "AC2",

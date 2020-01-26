@@ -1,6 +1,11 @@
 VIP/RogueTech Tanks Ported for BloodyDoves' Battletech Advanced mod.
 Used and adapted with permission and help by Cargo Vroom.
 
+0.2.11 - 1/25/2020
+
+Added a handful of additional tanks i made recently.
+Updated APCs to more lore/tt accurate stats.
+
 0.2.9 - 8/4/2019
 
 Temporary (?) addition of some lances from old VIP that solve some problems i forgot existed.

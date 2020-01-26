@@ -346,7 +346,7 @@
         "DefaultEngineHeatSinkIdDescription" : "Default heat sink type for engines without a kit.",
         "EngineMissingFallbackHeatSinkCapacity" : 30,
         "EngineMissingFallbackHeatSinkCapacityDescription" : "Heat sink capacity if no engine is detected.",
-        "MovementPointDistanceMultiplier" : 24,
+        "MovementPointDistanceMultiplier" : 28,
         "MinimJumpHeat" : 9,
         "AutoConvertJumpCapacityInDefToStat" : true,
         "JumpJetDefaultJumpHeat" : 3,
@@ -368,8 +368,12 @@
         "EnforceHardpointLimitsDescription" : "Enforces hardpoint limits in mechlab only allowing configured prefabs.",
         "AllowDefaultLoadoutWeapons" : false,
         "AllowDefaultLoadoutWeaponsDescription" : "Ignore limits that would prevent mounting default loadouts.",
-        "CreateVanillaFallbackPrefabs" : true,
-        "CreateVanillaFallbackPrefabsDescription" : "If no mapping can be found, use the vanilla mapping code (which unfortunatly maps SRM to UAC), fixes mortar issues",
+        "FallbackPrefabsForComponentDefIds" : [
+            "Weapon_Mortar_MechMortar"
+        ],
+        "FallbackPrefabsForComponentDefIdsDescription" : "A list of components that always should be assigned a weapon prefab to.",
+        "AutoFixHardpointDataDefs" : true,
+        "AutoFixHardpointDataDefsDescription" : "HardpointDataDef should not contain duplicates and be grouped by slot (mh1 < mh2, eh1 = mh1).",
         "WeaponPrefabMappings" : [
             {
                 "PrefabIdentifier" : "AC2",
@@ -411,9 +415,22 @@
                 "HardpointCandidates" : [
                     "ac20",
                     "uac20",
+                    "lbx20",
                     "ac",
                     "lbx",
                     "mg"
+                ]
+            },
+            {
+                "PrefabIdentifier" : "lbx10",
+                "HardpointCandidates" : [
+                    "lbx10",
+                    "lbx20",
+                    "lbx5",
+                    "lbx2",
+                    "ac10",
+                    "ac",
+                    "lbx"
                 ]
             },
             {
@@ -442,7 +459,7 @@
                     "gauss",
                     "ac",
                     "lbx",
-                    "PPC",
+                    "ppc",
                     "ams",
                     "machinegun",
                     "mg",
@@ -474,9 +491,9 @@
             {
                 "PrefabIdentifier" : "lrm15",
                 "HardpointCandidates" : [
+                    "lrm15",
                     "lrm20",
                     "srm20",
-                    "lrm15",
                     "lrm10",
                     "lrm5",
                     "rl20",
@@ -574,6 +591,34 @@
                     "ac",
                     "lbx"
                 ]
+            },
+            {
+                "PrefabIdentifier" : "Flamer",
+                "HardpointCandidates" : [
+                    "flamer",
+                    "laser",
+                    "mg",
+                    "machinegun",
+                    "ac2",
+                    "ppc",
+                    "ac",
+                    "lbx",
+                    "ams"
+                ]
+            },
+            {
+                "PrefabIdentifier" : "Laser",
+                "HardpointCandidates" : [
+                    "laser",
+                    "flamer",
+                    "mg",
+                    "machinegun",
+                    "ac2",
+                    "ppc",
+                    "ac",
+                    "lbx",
+                    "ams"
+                ]
             }
         ]
     },
@@ -589,11 +634,35 @@
         "Enabled" : true,
         "EnabledDescription" : "Makes the mech lab adhere to any custom mech slot counts.",
         "MechLabArmTopPadding" : 120,
-        "MechLabGeneralSlots" : 3
+        "MechLabGeneralSlots" : 3,
+        "MechLabGeneralWidgetLabel" : "General"
     },
     "MoveMultiplierStat" : {
         "Enabled" : true,
         "EnabledDescription" : "Introduces a new statistic effect to allow easy manipulation of (mech only) movement."
+    },
+    "OrderedStatusEffects" : {
+        "Enabled" : false,
+        "EnabledDescription" : "Orders status effects, so e.g. install order of mechComponents does not matter for additive and multiplicative effects. Affects all statistic data.",
+        "OrderDescription" : "The order in which operations are sorted. Operations not part of the list are deemded unsortable and only sortable operations after such a unsortable operations are sorted. For Example: '* + SET / * +' =sort=> '* + SET + * /'.",
+        "Order" : [
+            "Int_Add",
+            "Float_Add",
+            "Int_Multiply",
+            "Int_Multiply_Float",
+            "Float_Multiply",
+            "Float_Multiply_Int",
+            "Int_Subtract",
+            "Float_Subtract",
+            "Int_Divide",
+            "Int_Divide_Float",
+            "Float_Divide",
+            "Float_Divide_Int",
+            "Int_Divide_Denom",
+            "Int_Divide_Denom_Float",
+            "Float_Divide_Denom",
+            "Float_Divide_Denom_Int"
+        ]
     },
     "OverrideDescriptions" : {
         "Enabled" : true,
