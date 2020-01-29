@@ -1,0 +1,70 @@
+{
+	"Description" : {
+		"Id" : "AbilityDefT8A",
+		"Name" : "MASTER TACTICIAN",
+		"Details" : "PASSIVE: 'Mechs piloted by this MechWarrior gain +1 Initiative, and remove one bar of stability damage when Reserving.",
+		"Icon" : "uixSvgIcon_ability_mastertactician"
+	},
+    "DisplayParams" : "ShowInMWTRay",
+	"ReqSkill" : "Tactics",
+	"ReqSkillLevel" : 8,
+	"ActivationTime" : "Passive",
+	"EffectData" :
+	[
+		{
+			"durationData" :
+			{
+				"duration" : -1
+			},
+			"targetingData" : 
+			{
+				"effectTriggerType" : "OnActivation",
+				"effectTargetType" : "Creator"
+			},
+			"effectType" : "StatisticEffect",
+			"Description" :
+			{
+				"Id" : "AbilityDefT8A",
+				"Name" : "MASTER TACTICIAN",
+				"Details" : "+1 to base Initiative",
+				"Icon" : "uixSvgIcon_ability_mastertactician"
+			},
+			"statisticData" : 
+			{
+				"statName" : "BaseInitiative",
+				"operation" : "Int_Add",
+				"modValue" : "-1",
+				"modType" : "System.Int32"
+			},
+			"nature" : "Buff"
+		},
+		{
+			"durationData" :
+			{
+				"duration" : -1
+			},
+			"targetingData" : 
+			{
+				"effectTriggerType" : "OnActivation",
+				"effectTargetType" : "Creator"
+			},
+			"effectType" : "StatisticEffect",
+			"Description" :
+			{
+				"Id" : "AbilityDefT8A",
+				"Name" : "MASTER TACTICIAN",
+				"Details" : "DEFER ACTION CLEARS UNSTEADY",
+				"Icon" : "uixSvgIcon_ability_mastertactician"
+			},
+			"statisticData" : 
+			{
+				"statName" : "DeferResetsInstability",
+				"operation" : "Set",
+				"modValue" : "true",
+				"modType" : "System.Boolean"
+			},
+			"nature" : "Buff"
+		},
+	],
+	"IsPrimaryAbility" : true
+}
