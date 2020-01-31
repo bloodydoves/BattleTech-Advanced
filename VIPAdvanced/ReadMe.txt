@@ -1,6 +1,14 @@
 VIP/RogueTech Tanks Ported for BloodyDoves' Battletech Advanced mod.
 Used and adapted with permission and help by Cargo Vroom.
 
+0.3.0 - 1/30/2020
+
+I grabbed the remaining stray tanks I could find outside this folder. I was already maintaining them.
+Updated movement defs on Bandit and J-27 series,
+Deleted newly unused movement defs,
+Added LGR Schreck,
+Added Plasma Schreck
+
 0.2.11 - 1/25/2020
 
 Added a handful of additional tanks i made recently.
