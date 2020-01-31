@@ -1,28 +1,77 @@
 {
 	"Name": "CustomUnits",
 	"Enabled": true,
-	"Version": "0.0.19",
+	"Hidden": true,
+	"Version": "0.0.23",
 	"PackagedOn": "2019-01-31T00:00:00Z",
 	"DLL": "CustomUnits.dll",
 	"DLLEntryPoint": "CustomUnits.Core.Init",
-	"DependsOn": [ "Custom Ammo Categories" ],
-	"ConflictsWith": [ ],
-
+	"DependsOn": [
+		"Custom Ammo Categories"
+	],
+	"ConflictsWith": [
+		"MechResizer"
+	],
 	"Description": "CustomUnits",
 	"Author": "KMiSSioN",
-    "Website": "https://www.nexusmods.com/battletech/mods/XXX",
+	"Website": "https://www.nexusmods.com/battletech/mods/XXX",
 	"Settings": {
 		"debugLog": true,
-    "fixWaterHeight":true,
-    "maxWaterSteppiness":29,
-    "deepWaterSteepness":41,
-    "deepWaterDepth":10,
-    "waterFlatDepth":2
+		"fixWaterHeight": true,
+		"maxWaterSteppiness": 29,
+		"deepWaterSteepness": 41,
+		"deepWaterDepth": 10,
+		"waterFlatDepth": 2,
+		"defaultMechSizeMultiplier": 1,
+		"defaultVehicleSizeMultiplier": 1,
+		"defaultTurretSizeMultiplier": 1,
+		"defaultProjectileSizeMultiplier": 1,
+		"mechSizePrefabMultipliers": {},
+		"vehicleSizePrefabMultipliers": {},
+		"turretSizePrefabMultipliers": {},
+		"projectileSizePrefabMultipliers": {},
+		"mechSizeMultipliers": {
+			"chassisdef_griffin_GRF-2N-X": 1.15,
+			"chassisdef_wasp_WSP-2A-X": 1.1,
+			"chassisdef_riflemanii_RFL-3N-2": 1.15,
+			"chassisdef_griffin_GRF-1A": 1.15,
+			"chassisdef_rifleman_RFL-1N": 0.8,
+			"chassisdef_jagermechii_JM7-L": 1.1,
+			"chassisdef_jagermechii_JM7-D": 1.1,
+			"chassisdef_jagermechii_JM7-F": 1.1,
+			"chassisdef_annihilator_ANH-II-L": 0.85,
+			"chassisdef_hollanderii_BZK-F5": 1.15,
+			"chassisdef_hollanderii_BZK-F7": 1.15,
+			"chassisdef_emperor_EMP-6A": 1.08,
+			"chassisdef_emperor_EMP-5A": 1.08,
+			"chassisdef_emperor_EMP-7AIV": 1.08,
+			"chassisdef_emperor_EMP-7G": 1.08,
+			"chassisdef_axman_AXM-1N": 1.08,
+			"chassisdef_axman_AXM-1TL": 1.08,
+			"chassisdef_axman_AXM-2N": 1.08,
+			"chassisdef_axman_AXM-3S": 1.08,
+			"chassisdef_blackhawkku_BHKU-O": 1.1,
+			"chassisdef_blackhawkku_BHKU-OA": 1.1,
+			"chassisdef_blackhawkku_BHKU-OB": 1.1,
+			"chassisdef_blackhawkku_BHKU-OC": 1.1,
+			"chassisdef_blackhawkku_BHKU-OD": 1.1,
+			"chassisdef_valkyrieii_VLK-II-1A": 0.9,
+			"chassisdef_valkyrieii_VLK-II-1M": 0.9,
+			"chassisdef_valkyrieii_VLK-II-2A": 0.9,
+			"chassisdef_valkyrieii_VLK-II-2L": 0.9,
+			"chassisdef_valkyrieii_VLK-II-2S": 0.9
+		},
+		"projectileSizeMultipliers": {
+			"Weapon_LRM_Thunderbolt5": 2.25,
+			"Weapon_LRM_Thunderbolt10": 2.5,
+			"Weapon_LRM_Thunderbolt15": 2.75,
+			"Weapon_LRM_Thunderbolt20": 3.0,
+			"Weapon_ArrowIV": 3.5
+		}
 	},
 	"Manifest": [
-		{ "Type": "DesignMaskDef", "Path": "designMasks\\" },
-    { "Type": "AssetBundle", "Path": "assetbundles" },	
-
-    { "Id": "battletechstandartshader", "Type": "Prefab", "Path": "assets/shaderscarriers/battletechstandartshader.prefab", "AssetBundleName": "standart_shader" },
+		{ "Type": "DesignMaskDef", "Path": "designMasks" },
+		{ "Type": "AssetBundle", "Path": "assetbundles" },	
+		{ "Id": "battletechstandartshader", "Type": "Prefab", "Path": "assets/shaderscarriers/battletechstandartshader.prefab", "AssetBundleName": "standart_shader" }
 	]
 }
