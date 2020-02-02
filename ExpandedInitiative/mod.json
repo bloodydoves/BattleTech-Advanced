@@ -1,0 +1,38 @@
+{
+    "Name": "ExpandedInitiative",
+    "Enabled": true,
+    "Version": "0.1.0",
+    "Description": "Expands initiative turns from 5 to 10.",
+    "Author": "IceRaptor",
+    "Website": "https://github.com/IceRaptor/ExpandedInitiative",
+    "Contact": "",
+    "DLL": "ExpandedInitiative.dll",
+    "DependsOn" : [ "IRBTModUtils", "CustomComponents", "MechEngineer" ],
+    "ConflictsWith" : [ "SkillBasedInit" ],
+    "Settings": {
+        "Debug" : true,
+        "Trace" : false,
+        "TurretPhases" : {
+            "UnitLight" : 3,
+            "UnitMedium" : 5,
+            "UnitHeavy" : 7,
+            "UnitNone" : 9
+        },
+        "LocalizedText" : {
+            "TOOLTIP_BASE_INIT" : "  Base: {0}",
+            "TOOLTIP_COMPONENTS" : "  Components: <color=#{0}>{1:+0;-#}</color>",
+            "TOOLTIP_LANCE" : "  Lance: <color=#{0}>{1:+0;-#}</color>",
+            "TOOLTIP_PILOT" : "  Pilot: <color=#{0}>{1:+0;-#}</color>",
+            "MECHBAY_TEXT_SUMMARY" : "<b>Initiative Modifiers</b>\n{0}\n<b>TOTAL</b>: {1}",
+            "LANCE_TEXT_SUMMARY" : "<b>Initiative Modifiers</b>\n{0}\n<b>TOTAL</b>: {1}",
+        },
+        "ColorFriendlyUnactivated"      : [ 0.231, 0.694, 0.262, 1.0 ],
+        "ColorFriendlyAlreadyActivated" : [ 0.043, 0.4, 0.137, 1.0 ],
+        "ColorAlliedUnactivated"        : [ 0.521, 0.858, 0.964, 1.0 ],
+        "ColorAlliedAlreadyActivated"   : [ 0.345, 0.545, 0.682, 1.0 ],
+        "ColorNeutralUnactivated"       : [ 0.850, 0.866, 0.862, 1.0 ],
+        "ColorNeutralAlreadyActivated"  : [ 0.466, 0.482, 0.494, 1.0 ],
+        "ColorEnemyUnactivated"         : [ 1.0, 0.031, 0.0, 1.0 ],
+        "ColorEnemyAlreadyActivated"    : [ 0.486, 0.039, 0.007, 1.0 ]
+    }
+}
