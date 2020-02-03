@@ -1,5 +1,12 @@
 VIP/RogueTech Tanks Ported for BloodyDoves' Battletech Advanced mod.
-Used and adapted with permission and help by Cargo Vroom.
+Used and adapted with permission by Cargo Vroom.
+
+0.3.4 - 2/2/2020
+
+Added Rifle Carrier and Heavy Rifle Carrier,
+Added Heavy Mortar Carrier,
+Added Light MRM Carrier,
+Updated contents of Carquirks folder.
 
 0.3.0 - 1/30/2020
 
