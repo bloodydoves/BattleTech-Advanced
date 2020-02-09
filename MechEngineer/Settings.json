@@ -350,7 +350,7 @@
 			"Weapon_Mortar_MechMortar"
 		],
 		"FallbackPrefabsForComponentDefIdsDescription": "A list of components that always should be assigned a weapon prefab to.",
-		"AutoFixHardpointDataDefs": false,
+		"AutoFixHardpointDataDefs": true,
 		"AutoFixHardpointDataDefsDescription": "HardpointDataDef should not contain duplicates and be grouped by slot (mh1 < mh2, eh1 = mh1).",
 		"WeaponPrefabMappings": [
 			{
@@ -365,7 +365,8 @@
 					"ppc",
 					"laser",
 					"mg",
-					"flamer"
+					"flamer",
+					"ams"
 				]
 			},
 			{
@@ -373,13 +374,15 @@
 				"HardpointCandidates": [
 					"ac5",
 					"uac5",
+					"ac",
 					"rac5",
 					"lbx5",
-					"ac",
 					"lbx",
 					"ppc",
 					"laser",
-					"mg"
+					"mg",
+					"flamer",
+					"ams"
 				]
 			},
 			{
@@ -393,7 +396,8 @@
 					"ppc",
 					"laser",
 					"mg",
-					"flamer"
+					"flamer",
+					"ams"
 				]
 			},
 			{
@@ -401,6 +405,7 @@
 				"HardpointCandidates": [
 					"ac20",
 					"uac20",
+					"lbx10",
 					"ac",
 					"lbx",
 					"ppc",
@@ -423,7 +428,8 @@
 					"ppc",
 					"laser",
 					"mg",
-					"flamer"
+					"flamer",
+					"ams"
 				]
 			},
 			{
@@ -444,7 +450,8 @@
 					"ppc",
 					"laser",
 					"mg",
-					"flamer"
+					"flamer",
+					"ams"
 				]
 			},
 			{
@@ -464,6 +471,18 @@
 				]
 			},
 			{
+				"PrefabIdentifier": "mortar",
+				"HardpointCandidates": [
+					"mortar",
+					"ac20",
+					"uac20",
+					"lbx20",
+					"flamer",
+					"ac",
+					"lbx"
+				]
+			},
+			{
 				"PrefabIdentifier": "lrm5",
 				"HardpointCandidates": [
 					"lrm5",
@@ -471,8 +490,12 @@
 					"lrm15",
 					"lrm20",
 					"srm20",
+					"ac",
+					"gauss",
+					"lbx",
 					"machinegun",
 					"mg",
+					"ppc",
 					"flamer",
 					"laser",
 					"ams"
@@ -487,8 +510,12 @@
 					"srm20",
 					"lrm5",
 					"rl10",
+					"ac",
+					"gauss",
+					"lbx",
 					"machinegun",
 					"mg",
+					"ppc",
 					"flamer",
 					"laser",
 					"ams"
@@ -497,16 +524,20 @@
 			{
 				"PrefabIdentifier": "lrm15",
 				"HardpointCandidates": [
+					"lrm15",
 					"lrm20",
 					"srm20",
-					"lrm15",
 					"lrm10",
 					"lrm5",
 					"rl20",
 					"rl15",
 					"rl10",
+					"ac",
+					"gauss",
+					"lbx",
 					"machinegun",
 					"mg",
+					"ppc",
 					"flamer",
 					"laser",
 					"ams"
@@ -523,8 +554,12 @@
 					"rl20",
 					"rl15",
 					"rl10",
+					"ac",
+					"gauss",
+					"lbx",
 					"machinegun",
 					"mg",
+					"ppc",
 					"flamer",
 					"laser",
 					"ams"
@@ -536,6 +571,10 @@
 					"machinegun",
 					"mg",
 					"lmg",
+					"hmg",
+					"ac",
+					"gauss",
+					"lbx",
 					"flamer",
 					"laser",
 					"ams"
@@ -548,6 +587,8 @@
 					"srm4",
 					"srm6",
 					"lrm5",
+					"gauss",
+					"ac",
 					"machinegun",
 					"mg",
 					"flamer",
@@ -562,6 +603,8 @@
 					"srm6",
 					"srm2",
 					"lrm5",
+					"gauss",
+					"ac",
 					"machinegun",
 					"mg",
 					"flamer",
@@ -576,10 +619,13 @@
 					"srm4",
 					"srm2",
 					"lrm5",
+					"gauss",
+					"ac",
 					"machinegun",
 					"mg",
 					"flamer",
 					"laser",
+					"gauss",
 					"ams"
 				]
 			},
@@ -589,6 +635,7 @@
 					"ppc",
 					"hppc",
 					"lppc",
+					"snppc",
 					"ac20",
 					"ac",
 					"lbx",
@@ -605,12 +652,15 @@
 				"HardpointCandidates": [
 					"gauss",
 					"hgauss",
+					"lgauss",
 					"sbgauss",
 					"ac20",
 					"ac",
 					"ppc",
 					"lbx",
 					"laser",
+					"mg",
+					"flamer",
 					"srm2",
 					"srm4",
 					"srm6",
@@ -628,6 +678,7 @@
 				"HardpointCandidates": [
 					"arrow",
 					"lrm20",
+					"srm20",
 					"lrm15",
 					"lrm10",
 					"lrm5",
@@ -676,12 +727,21 @@
 					"ac2",
 					"ppc",
 					"ac",
-					"lbx"
+					"lbx",
+					"ams"
 				]
 			}
 		]
 	},
 	"OrderedStatusEffects": {
-		"Enabled": false
+		"Enabled": true
+	},
+	"DebugScreenshotMechs": {
+		"Enabled": false,
+		"EnabledDescription": "Edit a mech then cancel, it then will go through all mechs and make screenshots for them. To improve loading times use the TagManager to blacklist all components so the MechLab doesn't have to load them.",
+		"ScreenshotDirectoryPath": "Screenshots",
+		"OnlyInvalidMechs": true,
+		"ScreenshotDirectoryPathDescription": "Create the directory manually first, otherwise it won't save any of the images.",
+		"OnlyInvalidMechsDescription": "Only make screenshots of mechs with invalid configurations."
 	}
 }
