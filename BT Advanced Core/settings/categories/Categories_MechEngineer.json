@@ -203,11 +203,20 @@
             "Name" : "EnginePart",
             "DisplayName" : "Engine Part",
             "DefaultCustoms" : {
-                "CriticalEffects" : {
+                "MechCriticalEffects" : {
                     "LinkedStatisticName" : "EngineCrits",
                     "PenalizedEffectIDs" : [
                         ["CriticalEffect-EngineCrit1"],
                         ["CriticalEffect-EngineCrit2"]
+                    ],
+                    "DeathMethod" : "EngineDestroyed"
+                },
+				"VehicleCriticalEffects" : {
+                    "LinkedStatisticName" : "VehicleEngineCrits",
+                    "PenalizedEffectIDs" : [
+                        ["CriticalEffect-VehicleEngineCrit1"],
+						["CriticalEffect-VehicleEngineCrit2"],
+						["CriticalEffect-EngineTankCritPenalty"]
                     ],
                     "DeathMethod" : "EngineDestroyed"
                 }
