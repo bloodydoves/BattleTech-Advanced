@@ -1,6 +1,12 @@
 VIP/RogueTech Tanks Ported for BloodyDoves' Battletech Advanced mod.
 Used and adapted with permission by Cargo Vroom.
 
+0.3.7 - 2/18/2020
+
+Added custom Adarga point defense carrier,
+Updated TankDefaults folder,
+Removed duplicate tank movedefs folder
+
 0.3.4 - 2/2/2020
 
 Added Rifle Carrier and Heavy Rifle Carrier,
