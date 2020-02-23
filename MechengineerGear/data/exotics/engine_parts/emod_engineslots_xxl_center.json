@@ -24,7 +24,8 @@
         "BonusDescriptions": {
             "Bonuses": [
                 "EngineWeight: -66%",
-				"EngineReserved: 12"
+				"EngineReserved: 12",
+				"HeatGenerated: +20%"
             ]
         },
             "InventorySorter" : {
@@ -40,7 +41,7 @@
         "UIName" : "Engine XXL",
         "Id" : "emod_engineslots_xxl_center",
         "Name" : "XXL Engine",
-        "Details" : "The Extra-Extralight Fusion Engine is mechanically similar to a Fusion Engine but uses much lighter radiation shielding. The XXL fusion engine is one third the mass for the same performance, but extrudes into the side torsos of a Battlemech and produces additional waste heat.",
+        "Details" : "The Extra-Extralight Fusion Engine is mechanically similar to a Fusion Engine but uses much lighter radiation shielding. The XXL fusion engine is one third the mass for the same performance, but extrudes into the side torsos of a Battlemech and produces prodigious additional waste heat.",
         "Icon" : "uixSvgIcon_equipment_Heatsink"
     },
     "BonusValueA" : "- 66% Engine Weight",
@@ -54,6 +55,59 @@
     "AllowedLocations" : "CenterTorso",
     "DisallowedLocations" : "All",
     "CriticalComponent" : true,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "XXL_Engine-Heat_Geneartion",
+				"Name": "Increased Heat",
+				"Details": "Heat generation increased by 20%.",
+				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "HeatGenerated",
+				"operation": "Float_Multiply",
+				"modValue": "1.2",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
+		}
+	],
     "ComponentTags" : {
         "items" : [
             "component_type_stock"
