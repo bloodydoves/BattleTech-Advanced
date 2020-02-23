@@ -1,7 +1,7 @@
 {
 	"Custom": {
 		"Category": {
-			"CategoryID": "ProtoTSM"
+			"CategoryID": "TSM"
 		},
         "Flags": {
             "flags": [
@@ -13,14 +13,16 @@
         },
 		"BonusDescriptions": {
 			"Bonuses": [
-				"HeatGenerated: +25%",
-				"Melee: +50%"
+				"HeatGenerated: +30%",
+				"Melee: +50%",
+				"WalkSpeed: +20%",
+				"RunSpeed: +20%"
 			]
 		},
 		"DynamicSlots": {
             "ReservedSlots": 5,
             "ShowIcon": false,
-            "NameText": "Proto-TSM",
+            "NameText": "TSM",
             "BonusAText": "Dynamic Slot",
             "BonusBText": " "
         }
@@ -33,20 +35,20 @@
         "Rarity" : 100,
         "Purchasable" : false,
         "Manufacturer" : "Bergan Industries",
-        "Model" : "Prototype",
-        "UIName" : "T.S.M. (P)",
-        "Id" : "Gear_TSM_Prototype_Bergan",
-        "Name" : "Bergan T.S.M. Prototype",
-        "Details" : "Prototype TSM is the early manufacture version of TSM. This formula was created by the Capellan Confederation as a result of receiving a 'leak' from the Federated Suns in 3028. It increases the physical attack damage of the carrying mech by 50%. The down side is that the 'Mech needs to run hotter to allow the bundles to properly function.",
+        "Model" : "Production",
+        "UIName" : "T.S.M.",
+        "Id" : "Gear_TSM",
+        "Name" : "Triple Strength Myomer",
+        "Details" : "An advanced form of myomer, Triple-Strength Myomer grants the carrying unit a small but potent variety of benefits but with the downside of causing much more heat generation as the myomer itself amplifies the carrying unit's heat generation. Among TSM's benefits are boosted movement speed, both walking and sprinting, as well as drastically increased physical damage.",
         "Icon" : "uixSvgIcon_equipment_HeatBank"
     },
     "BonusValueA" : "+50% Melee Damage",
-    "BonusValueB" : "+25% Heat Generated",
+    "BonusValueB" : "+20% Movement",
     "ComponentType" : "Upgrade",
     "ComponentSubType" : "NotSet",
     "PrefabIdentifier" : "",
     "BattleValue" : 0,
-    "InventorySize" : 1,
+    "InventorySize" : 3,
     "Tonnage" : 0,
     "AllowedLocations" : "Torso",
     "DisallowedLocations" : "All",
@@ -76,8 +78,8 @@
             },
             "effectType" : "StatisticEffect",
             "Description" : {
-                "Id" : "Proto_TSM-Melee_Damage",
-                "Name" : "MELEE DAMAGE INCREASED",
+                "Id" : "TSM-Melee_Damage",
+                "Name" : "TSM Melee Damage",
                 "Details" : "Melee attacks deal 50% more damage.",
                 "Icon" : "uixSvgIcon_equipment_ActuatorArm"
             },
@@ -127,9 +129,9 @@
             },
             "effectType" : "StatisticEffect",
             "Description" : {
-                "Id" : "Proto_TSM-Heat",
-                "Name" : "HEAT GENERATION INCREASED",
-                "Details" : "Heat generation increased by 25%.",
+                "Id" : "TSM-Heat",
+                "Name" : "TSM Heat Generation",
+                "Details" : "Heat generation increased by 30%.",
                 "Icon" : "uixSvgIcon_equipment_ThermalExchanger"
             },
             "nature" : "Buff",
@@ -138,7 +140,7 @@
                 "effectsPersistAfterDestruction" : false,
                 "statName" : "HeatGenerated",
                 "operation" : "Float_Multiply",
-                "modValue" : "1.25",
+                "modValue" : "1.3",
                 "modType" : "System.Single",
                 "additionalRules" : "NotSet",
                 "targetCollection" : "Weapon",
@@ -153,7 +155,69 @@
             "vfxData" : null,
             "instantModData" : null,
             "poorlyMaintainedEffectData" : null
-        }
+        },
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "TSM-WalkSpeed",
+				"Name": "TSM Walk Speed",
+				"Details": "Increased walking speed.",
+				"Icon": "uixSvgIcon_action_evasivemove"
+			},
+			"statisticData": {
+				"statName": "WalkSpeed",
+				"operation": "Float_Multiply",
+				"modValue": "1.2",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "TSM-RunSpeed",
+				"Name": "TSM Run Speed",
+				"Details": "Increased sprint speed.",
+				"Icon": "uixSvgIcon_action_evasivemove"
+			},
+			"statisticData": {
+				"statName": "RunSpeed",
+				"operation": "Float_Multiply",
+				"modValue": "1.2",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
     ],
     "ComponentTags" : {
         "items" : [
