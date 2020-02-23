@@ -1,5 +1,20 @@
 {
-	"DissipationCapacity": 0,
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "HeatBank"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"HeatEfficiency: 20%"
+			]
+		},
+		"InventorySorter": {
+			"SortKey": "00017"
+		}
+	},
+	"DissipationCapacity": 3,
 	"Description": {
 		"Cost": 470000,
 		"Rarity": 5,
@@ -27,28 +42,17 @@
 		{
 			"durationData": {
 				"duration": -1,
-				"ticksOnActivations": false,
-				"useActivationsOfTarget": false,
-				"ticksOnEndOfRound": false,
-				"ticksOnMovements": false,
-				"stackLimit": -1,
-				"clearedWhenAttacked": false
+				"stackLimit": -1
 			},
 			"targetingData": {
 				"effectTriggerType": "Passive",
-				"triggerLimit": 0,
-				"extendDurationOnTrigger": 0,
-				"specialRules": "NotSet",
 				"effectTargetType": "Creator",
-				"range": 0,
-				"forcePathRebuild": false,
-				"forceVisRebuild": false,
 				"showInTargetPreview": false,
-				"showInStatusPanel": true
+				"showInStatusPanel": false
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "StatusEffect-Heat_Max-T3",
+				"Id": "HeatSinkEfficiency_20",
 				"Name": "HEAT DISSIPATION INCREASED",
 				"Details": "Heat dissipation amount increased by [AMT]",
 				"Icon": "uixSvgIcon_equipment_HeatBank"
@@ -60,20 +64,8 @@
 				"statName": "HeatSinkCapacity",
 				"operation": "Int_Multiply_Float",
 				"modValue": "1.2",
-				"modType": "System.Single",
-				"additionalRules": "NotSet",
-				"targetCollection": "NotSet",
-				"targetWeaponCategory": "NotSet",
-				"targetWeaponType": "NotSet",
-				"targetAmmoCategory": "NotSet",
-				"targetWeaponSubType": "NotSet"
-			},
-			"tagData": null,
-			"floatieData": null,
-			"actorBurningData": null,
-			"vfxData": null,
-			"instantModData": null,
-			"poorlyMaintainedEffectData": null
+				"modType": "System.Single"
+			}
 		}
 	],
 	"ComponentTags": {
