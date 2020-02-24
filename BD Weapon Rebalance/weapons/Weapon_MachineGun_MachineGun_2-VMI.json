@@ -2,8 +2,8 @@
 	"Custom": {
         "BonusDescriptions": {
             "Bonuses": [
-                "WpnCrits: 50%",
-				"MGDamage: 1",
+                "WpnCrits: 75%",
+				"Lightweight: 0.25",
                 "IsMG"
             ]
         }
@@ -18,17 +18,17 @@
         60,
         90
     ],
-    "AmmoCategory" : "MG",
+    "ammoCategoryID" : "MG",
     "StartingAmmoCapacity" : 0,
     "HeatGenerated" : 0,
-    "Damage" : 4,
+    "Damage" : 3,
     "OverheatedDamageMultiplier" : 0,
     "EvasiveDamageMultiplier" : 0,
     "EvasivePipsIgnored" : 0,
     "DamageVariance" : 0,
     "HeatDamage" : 0,
     "AccuracyModifier" : 0,
-    "CriticalChanceMultiplier" : 1.5,
+    "CriticalChanceMultiplier" : 1.75,
     "AOECapable" : false,
     "IndirectFireCapable" : false,
     "RefireModifier" : 0,
@@ -38,29 +38,29 @@
     "Instability" : 0,
     "WeaponEffectID" : "WeaponEffect-Weapon_MachineGun",
     "Description" : {
-        "Cost" : 12000,
-        "Rarity" : 4,
+        "Cost" : 30000,
+        "Rarity" : 0,
         "Purchasable" : true,
-        "Manufacturer" : "Blackwell",
+        "Manufacturer" : "VMI",
         "Model" : "Machine Gun",
-        "UIName" : "MG +",
-        "Id" : "Weapon_MachineGun_MachineGun_1-Blackwell",
-        "Name" : "MG +",
+        "UIName" : "MG + +",
+        "Id" : "Weapon_MachineGun_MachineGun_2-VMI",
+        "Name" : "MG + +",
         "Details" : "Machine Guns deal very little damage, have severely limited range, and depend upon volatile ammunition stores. However, they have a greatly increased chance to cause Criticals when they impact a target that has been stripped of its armor.",
         "Icon" : "uixSvgIcon_weapon_Support"
     },
-    "BonusValueA" : "+1 Damage",
-    "BonusValueB" : "",
+    "BonusValueA" : "+ 25% Crit.",
+    "BonusValueB" : "-0.25 Tons",
     "ComponentType" : "Weapon",
     "ComponentSubType" : "Weapon",
     "PrefabIdentifier" : "MachineGun",
     "BattleValue" : 0,
     "InventorySize" : 1,
-    "Tonnage" : 0.5,
+    "Tonnage" : 0.25,
     "AllowedLocations" : "All",
     "DisallowedLocations" : "All",
     "CriticalComponent" : false,
-		"Modes":[
+	"Modes":[
 		{
 			"Id":"x1",
 			"UIName":"x1",
@@ -106,7 +106,8 @@
     ],
     "ComponentTags" : {
         "items" : [
-            "component_type_stock",
+            "component_type_variant",
+            "component_type_variant2",
             "range_close"
         ],
         "tagSetSourceFile" : ""

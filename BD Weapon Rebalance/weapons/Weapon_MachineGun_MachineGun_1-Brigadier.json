@@ -3,7 +3,7 @@
         "BonusDescriptions": {
             "Bonuses": [
                 "WpnCrits: 50%",
-				"MGDamage: 1",
+				"MGBurst: 2",
                 "IsMG"
             ]
         }
@@ -18,10 +18,10 @@
         60,
         90
     ],
-    "AmmoCategory" : "MG",
+    "ammoCategoryID" : "MG",
     "StartingAmmoCapacity" : 0,
     "HeatGenerated" : 0,
-    "Damage" : 4,
+    "Damage" : 3,
     "OverheatedDamageMultiplier" : 0,
     "EvasiveDamageMultiplier" : 0,
     "EvasivePipsIgnored" : 0,
@@ -38,18 +38,18 @@
     "Instability" : 0,
     "WeaponEffectID" : "WeaponEffect-Weapon_MachineGun",
     "Description" : {
-        "Cost" : 12000,
-        "Rarity" : 4,
+        "Cost" : 20000,
+        "Rarity" : 0,
         "Purchasable" : true,
-        "Manufacturer" : "Blackwell",
+        "Manufacturer" : "Brigadier",
         "Model" : "Machine Gun",
         "UIName" : "MG +",
-        "Id" : "Weapon_MachineGun_MachineGun_1-Blackwell",
+        "Id" : "Weapon_MachineGun_MachineGun_1-Brigadier",
         "Name" : "MG +",
         "Details" : "Machine Guns deal very little damage, have severely limited range, and depend upon volatile ammunition stores. However, they have a greatly increased chance to cause Criticals when they impact a target that has been stripped of its armor.",
         "Icon" : "uixSvgIcon_weapon_Support"
     },
-    "BonusValueA" : "+1 Damage",
+    "BonusValueA" : "+2 Shots/Attack",
     "BonusValueB" : "",
     "ComponentType" : "Weapon",
     "ComponentSubType" : "Weapon",
@@ -60,44 +60,44 @@
     "AllowedLocations" : "All",
     "DisallowedLocations" : "All",
     "CriticalComponent" : false,
-		"Modes":[
+	"Modes":[
 		{
 			"Id":"x1",
 			"UIName":"x1",
 			"isBaseMode":false,
-			"ShotsWhenFired":0
+			"ShotsWhenFired":2
 		},
 		{
 			"Id":"x2",
 			"UIName":"x2",
 			"isBaseMode":false,
-			"ShotsWhenFired":1
+			"ShotsWhenFired":3
 		},
 		{
 			"Id":"x3",
 			"UIName":"x3",
 			"isBaseMode":false,
-			"ShotsWhenFired":2
+			"ShotsWhenFired":4
 		},
 		{
 			"Id":"x4",
 			"UIName":"x4",
 			"isBaseMode":true,
-			"ShotsWhenFired":3,
+			"ShotsWhenFired":5,
 			"HeatGenerated" : 1
 		},
 		{
 			"Id":"x5",
 			"UIName":"x5",
 			"isBaseMode":false,
-			"ShotsWhenFired":4,
+			"ShotsWhenFired":6,
 			"HeatGenerated" : 2
 		},
 		{
 			"Id":"x6",
 			"UIName":"x6",
 			"isBaseMode":false,
-			"ShotsWhenFired":5,
+			"ShotsWhenFired":7,
 			"HeatGenerated" : 3
 		}		
 	],
@@ -106,7 +106,8 @@
     ],
     "ComponentTags" : {
         "items" : [
-            "component_type_stock",
+            "component_type_variant",
+            "component_type_variant1",
             "range_close"
         ],
         "tagSetSourceFile" : ""
