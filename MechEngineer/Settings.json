@@ -17,32 +17,6 @@
 		"emod_leg_lower",
 		"emod_leg_foot"
 	],
-	"TagManager": {
-		"Enabled": true,
-		"EnabledDescription": "Manipulates MechDef and ComponentDef Tags",
-		"LostechStockWeaponVariantFix": true,
-		"LostechStockWeaponVariantDescription": "Fixes lostech variant weapon tagging by checking if id ends with -STOCK.",
-		"SkirmishWhitelistTags": [
-			"component_type_stock",
-			"component_type_variant",
-			"component_type_lostech"
-		],
-		"SkirmishWhitelistTagsDescription": "Components with these tags will appear in the skirmish mechlab, blacklisted tagged items never appear.",
-		"WhitelistComponentTags": [
-			"component_type_stock",
-			"component_type_variant",
-			"component_type_lostech"
-		],
-		"WhitelistComponentTagsDescription": "Whitelists components with specified tags.",
-		"BlacklistComponentTags": [],
-		"BlacklistComponentTagsDescription": "Blacklists components with specified tags, has precedence over whitelisting.",
-		"WhitelistMechTags": [
-			"unit_release"
-		],
-		"WhitelistMechTagsDescription": "Similar to WhitelistComponentTags but with MechTags",
-		"BlacklistMechTags": [],
-		"BlacklistMechTagsDescription": "Similar to BlacklistComponentTags but with MechTags"
-	},
 	"ArmorStructureRatio": {
 		"SkipMechDefs": [],
 		"Enabled": false
@@ -340,6 +314,8 @@
 	"HardpointFix": {
 		"Enabled": true,
 		"EnabledDescription": "Optimizes the way installed weapons are shown on a mech model.",
+		"TraceLogDebugMappings": false,
+		"TraceLogDebugMappingsDescription": "Trace all GetComponentBlankNames and GetComponentPrefabName calls. Otherwise only some of them are logged.",
 		"AutoFixChassisDefWeaponHardpointCounts": false,
 		"AutoFixChassisDefWeaponHardpointCountsDescription": "Changes chassis hardpoints based on configured prefabs.",
 		"EnforceHardpointLimits": false,
@@ -756,6 +732,35 @@
 	},
 	"OrderedStatusEffects": {
 		"Enabled": false
+	},
+	"OverrideStatTooltips": {
+		"Enabled": false
+	},
+	"TagManager": {
+		"Enabled": true,
+		"EnabledDescription": "Manipulates MechDef and ComponentDef Tags",
+		"LostechStockWeaponVariantFix": true,
+		"LostechStockWeaponVariantDescription": "Fixes lostech variant weapon tagging by checking if id ends with -STOCK.",
+		"SkirmishWhitelistTags": [
+			"component_type_stock",
+			"component_type_variant",
+			"component_type_lostech"
+		],
+		"SkirmishWhitelistTagsDescription": "Components with these tags will appear in the skirmish mechlab, blacklisted tagged items never appear.",
+		"WhitelistComponentTags": [
+			"component_type_stock",
+			"component_type_variant",
+			"component_type_lostech"
+		],
+		"WhitelistComponentTagsDescription": "Whitelists components with specified tags.",
+		"BlacklistComponentTags": [],
+		"BlacklistComponentTagsDescription": "Blacklists components with specified tags, has precedence over whitelisting.",
+		"WhitelistMechTags": [
+			"unit_release"
+		],
+		"WhitelistMechTagsDescription": "Similar to WhitelistComponentTags but with MechTags",
+		"BlacklistMechTags": [],
+		"BlacklistMechTagsDescription": "Similar to BlacklistComponentTags but with MechTags"
 	},
 	"DebugScreenshotMechs": {
 		"Enabled": false,
