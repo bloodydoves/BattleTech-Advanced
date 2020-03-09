@@ -549,7 +549,7 @@
 		{
 			"ID": "diff_advancedPilots",
 			"Name": "Advanced MechWarriors",
-			"TelemetryEventName": "",
+			"TelemetryEventDesc": "advanced_mech_warriors",
 			"UIOrder": 6,
 			"Tooltip": "In the later parts of the game, new MechWarriors in the Hiring Hall will often have better stats and skills than in the early parts of the game. Modify this setting to change the frequency of new MechWarriors having these improvements.",
 			"Enabled": true,
@@ -561,13 +561,18 @@
 				{
 					"ID": "diff_CMD_easy",
 					"Name": "Often",
-					"TelemetryEventDesc": "",
-					"DifficultyValue": 0,
+					"TelemetryEventDesc": "often",
+					"DifficultyValue": -1,
 					"CareerScoreModifier": 0,
 					"DifficultyConstants": [
 						{
 							"ConstantType": "Pilot",
-							"ConstantName": "ContractDifficultyMod",
+							"ConstantName": "AdvancedPilotDifficultyStep",
+							"ConstantValue": "0.02"
+						},
+						{
+							"ConstantType": "Pilot",
+							"ConstantName": "AdvancedPilotBaseChance",
 							"ConstantValue": "0.12"
 						}
 					]
@@ -575,28 +580,38 @@
 				{
 					"ID": "diff_CMD_med",
 					"Name": "Normal",
-					"TelemetryEventDesc": "",
+					"TelemetryEventDesc": "normal",
 					"DifficultyValue": 0,
-					"CareerScoreModifier": 0.02,
+					"CareerScoreModifier": 0.05,
 					"DifficultyConstants": [
 						{
 							"ConstantType": "Pilot",
-							"ConstantName": "ContractDifficultyMod",
-							"ConstantValue": "0.08"
+							"ConstantName": "AdvancedPilotDifficultyStep",
+							"ConstantValue": "0.02"
+						},
+						{
+							"ConstantType": "Pilot",
+							"ConstantName": "AdvancedPilotBaseChance",
+							"ConstantValue": "0.06"
 						}
 					]
 				},
 				{
 					"ID": "diff_CMD_hard",
 					"Name": "Rare",
-					"TelemetryEventDesc": "",
-					"DifficultyValue": 0,
-					"CareerScoreModifier": 0.04,
+					"TelemetryEventDesc": "rare",
+					"DifficultyValue": 1,
+					"CareerScoreModifier": 0.1,
 					"DifficultyConstants": [
 						{
 							"ConstantType": "Pilot",
-							"ConstantName": "ContractDifficultyMod",
-							"ConstantValue": "0.04"
+							"ConstantName": "AdvancedPilotDifficultyStep",
+							"ConstantValue": "0.02"
+						},
+						{
+							"ConstantType": "Pilot",
+							"ConstantName": "AdvancedPilotBaseChance",
+							"ConstantValue": "0.02"
 						}
 					]
 				}
@@ -1855,6 +1870,58 @@
 							"ConstantType": "Finances",
 							"ConstantName": "MechCostPerQuarter",
 							"ConstantValue": "22000"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "diff_argoUpgradeCost",
+			"Name": "Reduced Argo Upgrade Costs",
+			"TelemetryEventName": "argo_upgrade_cost",
+			"UIOrder": 17,
+			"Tooltip": "This setting controls the costs of Argo Upgrades. If this setting is Enabled, Argo Ship Upgrades will cost less for both the upfront Purchase Costs as well as the Additional Costs paid each month for completed upgrades.",
+			"Enabled": true,
+			"Visible": true,
+			"Toggle": true,
+			"StartOnly": true,
+			"DefaultIndex": 0,
+			"Options": [
+				{
+					"ID": "diff_AUCR_off",
+					"Name": "Full Argo Upgrade Cost",
+					"TelemetryEventDesc": "0",
+					"DifficultyValue": 0,
+					"CareerScoreModifier": 0.05,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "CareerMode",
+							"ConstantName": "ArgoUpgradeCostMultiplier",
+							"ConstantValue": "1"
+						},
+						{
+							"ConstantType": "CareerMode",
+							"ConstantName": "ArgoMaintenanceMultiplier",
+							"ConstantValue": "1"
+						}
+					]
+				},
+				{
+					"ID": "diff_AUCR_on",
+					"Name": "Half Argo Upgrade Cost",
+					"TelemetryEventDesc": "1",
+					"DifficultyValue": 1,
+					"CareerScoreModifier": 0,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "CareerMode",
+							"ConstantName": "ArgoUpgradeCostMultiplier",
+							"ConstantValue": "0.5"
+						},
+						{
+							"ConstantType": "CareerMode",
+							"ConstantName": "ArgoMaintenanceMultiplier",
+							"ConstantValue": "0.5"
 						}
 					]
 				}
