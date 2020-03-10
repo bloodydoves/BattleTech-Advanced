@@ -285,6 +285,7 @@
 		"Enabled": true,
 		"EnabledDescription": "Provides engines that can be installed on mechs similar to how CBT works.",
 		"MovementPointDistanceMultiplierDescription": "The distance of a TT movement point, 24 is vanilla CombatGameConstants.ExperimentalGridDistance .",
+		"JumpJetMovementPointDistanceMultiplierDescription": "The distance of a TT movement point when calculating jump distances, if undefined falls back to MovementPointDistanceMultiplier.",
 		"MinimJumpHeatDescription": "Minimum heat when doing a jump, even if only one jump jet exists and only when jumping one hex.",
 		"AutoConvertJumpCapacityInDefToStatDescription": "All JumpCapacity values in JumpJetDefs will be auto-converted to the JumpCapacity statistic.",
 		"JumpJetDefaultJumpHeatDescription": "The heat the jump jet produces when fully* used (* jumping below max distance reduces produced heat). Can be adjusted using the JumpHeat statistic.",
@@ -303,6 +304,7 @@
 		"EngineMissingFallbackHeatSinkCapacity": 30,
 		"EngineMissingFallbackHeatSinkCapacityDescription": "Heat sink capacity if no engine is detected.",
 		"MovementPointDistanceMultiplier": 28,
+		"JumpJetMovementPointDistanceMultiplier": null,
 		"MinimJumpHeat": 9,
 		"AutoConvertJumpCapacityInDefToStat": true,
 		"JumpJetDefaultJumpHeat": 3,
@@ -450,6 +452,7 @@
 					"ams",
 					"machinegun",
 					"mg",
+					"narc",
 					"flamer",
 					"laser"
 				]
@@ -464,6 +467,7 @@
 					"ac2",
 					"uac20",
 					"lbx20",
+					"narc",
 					"flamer",
 					"ac",
 					"lbx"
@@ -477,6 +481,7 @@
 					"lrm15",
 					"lrm20",
 					"srm20",
+					"narc",
 					"ac",
 					"gauss",
 					"lbx",
@@ -495,6 +500,7 @@
 					"lrm15",
 					"lrm20",
 					"srm20",
+					"narc",
 					"lrm5",
 					"rl10",
 					"ac",
@@ -516,6 +522,7 @@
 					"srm20",
 					"lrm10",
 					"lrm5",
+					"narc",
 					"rl20",
 					"rl15",
 					"rl10",
@@ -538,6 +545,7 @@
 					"lrm15",
 					"lrm10",
 					"lrm5",
+					"narc",
 					"rl20",
 					"rl15",
 					"rl10",
@@ -564,6 +572,8 @@
 					"lbx",
 					"flamer",
 					"laser",
+					"srm20",
+					"narc",
 					"ams"
 				]
 			},
@@ -574,6 +584,11 @@
 					"srm4",
 					"srm6",
 					"lrm5",
+					"lrm10",
+					"lrm15",
+					"lrm20",
+					"srm20",
+					"narc",
 					"gauss",
 					"ac",
 					"machinegun",
@@ -591,6 +606,11 @@
 					"srm6",
 					"srm2",
 					"lrm5",
+					"lrm10",
+					"lrm15",
+					"lrm20",
+					"srm20",
+					"narc",
 					"gauss",
 					"ac",
 					"machinegun",
@@ -608,6 +628,11 @@
 					"srm4",
 					"srm2",
 					"lrm5",
+					"lrm10",
+					"lrm15",
+					"lrm20",
+					"srm20",
+					"narc",
 					"gauss",
 					"ac",
 					"machinegun",
@@ -634,6 +659,15 @@
 					"laser",
 					"flamer",
 					"mg",
+					"srm2",
+					"srm4",
+					"srm6",
+					"lrm5",
+					"lrm10",
+					"lrm15",
+					"lrm20",
+					"srm20",
+					"narc",
 					"ams"
 				]
 			},
@@ -658,6 +692,8 @@
 					"lrm10",
 					"lrm15",
 					"lrm20",
+					"srm20",
+					"narc",
 					"mg",
 					"flamer",
 					"ams"
@@ -672,6 +708,10 @@
 					"lrm15",
 					"lrm10",
 					"lrm5",
+					"srm2",
+					"srm4",
+					"srm6",
+					"narc",
 					"machinegun",
 					"mg",
 					"flamer",
@@ -690,7 +730,16 @@
 					"ac2",
 					"ppc",
 					"ac",
-					"lbx"
+					"srm2",
+					"srm4",
+					"srm6",
+					"lrm5",
+					"lrm10",
+					"lrm15",
+					"lrm20",
+					"srm20",
+					"narc",
+					"lbx10"
 				]
 			},
 			{
@@ -703,7 +752,17 @@
 					"ac2",
 					"ppc",
 					"ac",
-					"lbx",
+					"gauss",
+					"lbx10",
+					"srm2",
+					"srm4",
+					"srm6",
+					"lrm5",
+					"lrm10",
+					"lrm15",
+					"lrm20",
+					"srm20",
+					"narc",
 					"ams"
 				]
 			},
@@ -712,8 +771,8 @@
 				"HardpointCandidates": [
 					"laser",
 					"flamer",
-					"mg",
 					"machinegun",
+					"mg",
 					"ac2",
 					"ppc",
 					"ac",
@@ -725,16 +784,32 @@
 					"lrm10",
 					"lrm15",
 					"lrm20",
+					"srm20",
+					"narc",
 					"ams"
 				]
 			}
 		]
 	},
+	"MechLabSlots": {
+		"HideHelpButton": true,
+		"HideECMButton": true
+	},
 	"OrderedStatusEffects": {
 		"Enabled": false
 	},
 	"OverrideStatTooltips": {
-		"Enabled": false
+		"Enabled": true,
+		"EnabledDescription": "Overrides stat tooltips of mechs including 'progress bar' summaries.",
+		"MovementTitleText": "Medium Range",
+		"HeatEfficiencyTitleText": "Heat Efficiency",
+		"DurabilityTitleText": "Long Range",
+		"AvgRangeTitleText": "Movement",
+		"MeleeTitleText": "Durability",
+		"FirepowerTitleText": "Close Range",
+		"CloseRangeMax": 89,
+		"MediumRangeMax": 359,
+		"LongRangeMax": 569
 	},
 	"TagManager": {
 		"Enabled": true,
