@@ -1,6 +1,21 @@
 VIP/RogueTech Tanks Ported for BloodyDoves' Battletech Advanced mod.
 Used and adapted with permission by Cargo Vroom.
 
+0.4.0 - 3/9/2020
+
+Made rules compliant overides for all the new illegal vehicles HBS added in 1.9
+
+vehicledef_APC_Alsvin
+vehicledef_APC_Arvakr
+vehicledef_DEMOLISHER_LBX
+vehicledef_SCHREK_SPPC
+vehicledef_CARRIER_Inferno
+vehicledef_GALLEON_TAG
+vehicledef_SCORPION_MKII
+vehicledef_STRIKER_Narc
+
+These can't be renamed or removed without weird vanilla stuff appearing.
+
 0.3.7 - 2/18/2020
 
 Added custom Adarga point defense carrier,
