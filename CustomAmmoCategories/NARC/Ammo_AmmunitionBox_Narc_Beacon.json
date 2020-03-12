@@ -1,5 +1,10 @@
 {
 	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "a/m/s/narc"
+			}
+		],
 		"Flags": {
 			"flags": [
 				"not_broken"
@@ -48,92 +53,92 @@
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
 	"statusEffects": [
-        {
-            "durationData" : {
-                "duration" : 2,
-                "ticksOnActivations" : true,
-                "useActivationsOfTarget" : false,
-                "ticksOnEndOfRound" : false,
-                "ticksOnMovements" : false,
-                "stackLimit" : 0,
-                "clearedWhenAttacked" : false
-            },
-            "targetingData" : {
-                "effectTriggerType" : "OnHit",
-                "triggerLimit" : 0,
-                "extendDurationOnTrigger" : 0,
-                "specialRules" : "NotSet",
-                "effectTargetType" : "NotSet",
-                "range" : 0,
-                "forcePathRebuild" : false,
-                "forceVisRebuild" : false,
-                "showInTargetPreview" : true,
-                "showInStatusPanel" : true
-            },
-            "effectType" : "StatisticEffect",
-            "Description" : {
-                "Id" : "StatusEffect-NARC-MissileDmgBonus25",
-                "Name" : "NARC ATTACHED",
-                "Details" : "This unit will take [AMT] more damage from Missile attacks.",
-                "Icon" : "uixSvgIcon_statusMarked"
-            },
-            "nature" : "Debuff",
-            "statisticData" : {
-                "appliesEachTick" : false,
-                "statName": "DamageReductionMultiplierMissile",
-                "operation": "Float_Multiply",
-                "modValue": "1.25",
-                "modType": "System.Single"
-            },
-            "tagData" : null,
-            "floatieData" : null,
-            "actorBurningData" : null,
-            "vfxData" : null,
-            "instantModData" : null,
-            "poorlyMaintainedEffectData" : null
-        },
 		{
-			"durationData" : {
-                "duration" : 2,
-                "ticksOnActivations" : true,
-                "useActivationsOfTarget" : false,
-                "ticksOnEndOfRound" : false,
-                "ticksOnMovements" : false,
-                "stackLimit" : 0,
-                "clearedWhenAttacked" : false
-            },
-			"targetingData" : {
-                "effectTriggerType" : "OnHit",
-                "triggerLimit" : 0,
-                "extendDurationOnTrigger" : 0,
-                "specialRules" : "NotSet",
-                "effectTargetType" : "NotSet",
-                "range" : 0,
-                "forcePathRebuild" : false,
-                "forceVisRebuild" : false,
-                "showInTargetPreview" : false,
-                "showInStatusPanel" : false,
-                "hideApplicationFloatie" : true
-            },
-			"effectType" : "VFXEffect",
-            "Description" : {
-                "Id" : "StatusEffect-NARC-IndicatorVFX",
-                "Name" : "NARC ATTACHED",
-                "Details" : "Visual indicator of the NARC effect",
-                "Icon" : "uixSvgIcon_statusMarked"
-            },
-            "nature" : "Debuff",
-			"vfxData" : {
-				"vfxName" : "vfxPrfPrtl_narcMarker_loop",
-				"attachToImpactPoint" : true,
-				"location" : -1,
-				"isAttached" : true,
-				"facesAttacker" : false,
-				"isOneShot" : false,
-				"duration" : -1.0		
+			"durationData": {
+				"duration": 2,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 0,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "NotSet",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": true,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-NARC-MissileDmgBonus25",
+				"Name": "NARC ATTACHED",
+				"Details": "This unit will take [AMT] more damage from Missile attacks.",
+				"Icon": "uixSvgIcon_statusMarked"
+			},
+			"nature": "Debuff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"statName": "DamageReductionMultiplierMissile",
+				"operation": "Float_Multiply",
+				"modValue": "1.25",
+				"modType": "System.Single"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
+		},
+		{
+			"durationData": {
+				"duration": 2,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 0,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "NotSet",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false,
+				"hideApplicationFloatie": true
+			},
+			"effectType": "VFXEffect",
+			"Description": {
+				"Id": "StatusEffect-NARC-IndicatorVFX",
+				"Name": "NARC ATTACHED",
+				"Details": "Visual indicator of the NARC effect",
+				"Icon": "uixSvgIcon_statusMarked"
+			},
+			"nature": "Debuff",
+			"vfxData": {
+				"vfxName": "vfxPrfPrtl_narcMarker_loop",
+				"attachToImpactPoint": true,
+				"location": -1,
+				"isAttached": true,
+				"facesAttacker": false,
+				"isOneShot": false,
+				"duration": -1.0
 			}
 		}
-    ],
+	],
 	"ComponentTags": {
 		"items": [
 			"component_type_stock"

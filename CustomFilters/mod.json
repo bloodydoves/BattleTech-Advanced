@@ -1,0 +1,519 @@
+{
+	"Name": "CustomFilters",
+	"Author": "Denadan",
+	"Website": "https://github.com/Denadan/CustomFilters",
+	"Enabled": true,
+	"Hidden": true,
+	"DependsOn": [
+		"CustomComponents"
+	],
+	"DLL": "CustomFilters.dll",
+	"DLLEntryPoint": "CustomFilters.Control.Init",
+	"Settings": {
+		"LogLevel": "Error",
+		"ShowDebugButtons": false,
+		"ShowBlacklistedSkirmish": false,
+		"ShowBlacklistedSimGame": true,
+		"Tabs": [
+			{
+				"Caption": "WEAPON",
+				"Filter": {
+					"ComponentTypes": [
+						"Weapon"
+					]
+				},
+				"Buttons": [
+					{
+						"Icon": "uixSvgIcon_weapon_Ballistic",
+						"Tag": "all",
+						"Tooltip": "Show All Weapon",
+						"Filter": {
+							"ComponentTypes": [
+								"Weapon"
+							]
+						}
+					},
+					{
+						"Icon": "uixSvgIcon_weapon_Ballistic",
+						"Tag": "ac",
+						"Tooltip": "Show Autocannons",
+						"Filter": {
+							"Categories": [
+								"w/a/a/ac",
+								"w/a/a/lac",
+								"w/a/a/hvac",
+								"w/a/a/rac",
+								"w/a/a/uac",
+								"w/a/a/lbx",
+								"w/a/a/rifle"
+							]
+						}
+					},
+					{
+						"Icon": "uixSvgIcon_weapon_Ballistic",
+						"Tag": "gauss",
+						"Tooltip": "Show Gauss rifles",
+						"Filter": {
+							"Categories": [
+								"w/a/g/gaussrifle",
+								"w/a/g/sb",
+								"w/a/g/hag"
+							]
+						}
+					},
+					{
+						"Icon": "uixSvgIcon_weapon_Ballistic",
+						"Tag": "arty",
+						"Tooltip": "Show Other Balistics",
+						"Filter": {
+							"Categories": [
+								"w/m/t/arrowiv",
+								"w/a/o/artillery",
+								"w/a/o/mortar"
+							]
+						}
+					},
+					{
+						"Icon": "uixSvgIcon_weapon_Energy",
+						"Tag": "eng",
+						"Tooltip": "Show Energy weapons",
+						"Filter": {
+							"Categories": [
+								"w/e/l/laser",
+								"w/e/l/pulse",
+								"w/e/l/x-pulse",
+								"w/e/l/vspl",
+								"w/e/l/er",
+								"w/e/l/erpulse",
+								"w/e/l/heavy",
+								"w/e/l/bombast",
+								"w/e/l/binary",
+								"w/e/p/ppc",
+								"w/e/p/erppc",
+								"w/e/p/hppc",
+								"w/e/p/snppc",
+								"w/e/p/lppc",
+								"w/e/p/plasma"
+							]
+						}
+					},
+					{
+						"Icon": "uixSvgIcon_weapon_Missile",
+						"Tag": "srm",
+						"Tooltip": "Show SRM, MML, and Narc weapons",
+						"Filter": {
+							"Categories": [
+								"w/m/s/srm",
+								"w/m/s/ssrm",
+								"w/m/s/mml",
+								"w/m/s/narc",
+								"w/m/s/rl"
+							]
+						}
+					},
+					{
+						"Icon": "uixSvgIcon_weapon_Missile",
+						"Tag": "lrm",
+						"Tooltip": "Show LRM and MRM Missile weapons",
+						"Filter": {
+							"Categories": [
+								"w/m/l/lrm",
+								"w/m/l/elrm",
+								"w/m/s/mrm",
+								"w/m/t/thunderbolt"
+							]
+						}
+					},
+					{
+						"Icon": "uixSvgIcon_weapon_Support",
+						"Tag": "sup",
+						"Tooltip": "Show Support weapons",
+						"Filter": {
+							"Categories": [
+								"w/s/a/ams",
+								"w/s/a/lams",
+								"w/s/t/tag",
+								"w/s/m/melee",
+								"w/s/m/sl",
+								"w/s/m/spl",
+								"w/s/m/ersl",
+								"w/e/l/sx-pulse",
+								"w/e/l/svspl",
+								"w/a/g/magshot",
+								"w/a/o/mg",
+								"w/e/p/flamer",
+								"w/e/p/aflamer",
+								"w/s/l/coil"
+							]
+						}
+					}
+				]
+			},
+			{
+				"Caption": "AMMO",
+				"Filter": {
+					"ComponentTypes": [
+						"AmmunitionBox"
+					]
+				},
+				"Buttons": [
+					{
+						"Tag": "All",
+						"Icon": "uixSvgIcon_weapon_Ballistic",
+						"Tooltip": "Show All Ammos"
+					},
+					{
+						"Tag": "AC",
+						"Icon": "uixSvgIcon_weapon_Ballistic",
+						"Tooltip": "Show Autocannon ammo",
+						"Filter": {
+							"Categories": [
+								"a/a/a/ac",
+								"a/a/a/dbac",
+								"a/a/a/hvac",
+								"a/a/a/uac",
+								"a/a/a/lbx",
+								"a/a/a/sg",
+								"a/a/a/rac"
+							]
+						}
+					},
+					{
+						"Tag": "Gauss",
+						"Icon": "uixSvgIcon_weapon_Ballistic",
+						"Tooltip": "Show Ballistic ammo",
+						"Filter": {
+							"Categories": [
+								"a/a/g/gauss"
+							]
+						}
+					},
+					{
+						"Tag": "Artillery",
+						"Icon": "uixSvgIcon_weapon_Ballistic",
+						"Tooltip": "Show Artillery ammo",
+						"Filter": {
+							"Categories": [
+								"a/a/o/artillery",
+								"a/a/o/mortar",
+								"a/m/t/arrowiv"
+							]
+						}
+					},
+					{
+						"Tag": "SRM",
+						"Icon": "uixSvgIcon_weapon_Missile",
+						"Tooltip": "Show SRM and Narc ammo",
+						"Filter": {
+							"Categories": [
+								"a/m/s/srm",
+								"a/m/s/ssrm",
+								"SRMARTIVAmmo",
+								"a/m/s/narc"
+							]
+						}
+					},
+					{
+						"Tag": "LRM",
+						"Icon": "uixSvgIcon_weapon_Missile",
+						"Tooltip": "Show LRM and MRM ammo",
+						"Filter": {
+							"Categories": [
+								"a/m/l/lrm",
+								"a/m/t/thunderbolt",
+								"LRMARTIVAmmo",
+								"a/m/s/mrm",
+								"a/m/s/apm",
+								"a/m/s/vrm"
+							]
+						}
+					},
+					{
+						"Icon": "uixSvgIcon_weapon_Energy",
+						"Tag": "Energy",
+						"Tooltip": "Show Plasma fuel/ammo",
+						"Filter": {
+							"Categories": [
+								"a/e/p/plasma"
+							]
+						}
+					},
+					{
+						"Icon": "uixSvgIcon_weapon_Support",
+						"Tag": "Support",
+						"Tooltip": "Show Support weapons ammo",
+						"Filter": {
+							"Categories": [
+								"a/s/a/mg",
+								"a/s/a/magshot",
+								"a/s/a/ams"
+							]
+						}
+					}
+				]
+			},
+			{
+				"Caption": "Internals",
+				"Filter": {
+					"ComponentTypes": [
+						"HeatSink",
+						"Upgrade"
+					]
+				},
+				"Buttons": [
+					{
+						"Text": "all",
+						"Tooltip": "Show all heatsinks/engine parts"
+					},
+					{
+						"Tag": "",
+						"Icon": "uixSvgIcon_equipment_HeatBank",
+						"Tooltip": "Show engine cores",
+						"Filter": {
+							"Categories": [
+								"EngineCore"
+							]
+						}
+					},
+					{
+						"Tag": "",
+						"Icon": "uixSvgIcon_equipment_ThermalExchanger",
+						"Tooltip": "Show engine shielding",
+						"Filter": {
+							"Categories": [
+								"EngineShield"
+							],
+							"NotCategories": []
+						}
+					},
+					{
+						"Tag": "",
+						"Icon": "uixSvgIcon_equipment_Heatsink",
+						"Tooltip": "Cooling Kits",
+						"Filter": {
+							"Categories": [
+								"Cooling"
+							],
+							"NotCategories": [
+								"EngineShield"
+							]
+						}
+					},
+					{
+						"Tag": "",
+						"Icon": "uixSvgIcon_equipment_Heatsink",
+						"Tooltip": "Engine Cooling",
+						"Filter": {
+							"Categories": [
+								"EngineHeatBlock"
+							],
+							"NotCategories": [
+								"EngineShield"
+							]
+						}
+					},
+					{
+						"Tag": "",
+						"Icon": "uixSvgIcon_equipment_Heatsink",
+						"Tooltip": "Show heatsinks and heat control equipment",
+						"Filter": {
+							"ComponentTypes": [
+								"HeatSink"
+							],
+							"NotCategories": [
+								"EnginePart",
+								"Cooling",
+								"Special",
+								"CoolantPod",
+								"EngineHeatBlock"
+							]
+						}
+					},
+					{
+						"Icon": "uixSvgIcon_quantity",
+						"Tag": "",
+						"Tooltip": "Show Armor",
+						"Filter": {
+							"ComponentTypes": [
+								"Upgrade"
+							],
+							"Categories": [
+								"Armor",
+								"CASE",
+								"CASE2"
+							]
+						}
+					},
+					{
+						"Icon": "uixSvgIcon_quantity",
+						"Tag": "",
+						"Tooltip": "Show Structure",
+						"Filter": {
+							"ComponentTypes": [
+								"Upgrade"
+							],
+							"Categories": [
+								"Structure",
+								"Patchwork"
+							]
+						}
+					},
+					{
+						"Icon": "uixSvgIcon_equipment_Gyro",
+						"Tag": "",
+						"Tooltip": "Show Gyro",
+						"Filter": {
+							"ComponentTypes": [
+								"Upgrade"
+							],
+							"Categories": [
+								"Gyro"
+							]
+						}
+					},
+					{
+						"Icon": "uixSvgIcon_equipment_ActuatorLeg",
+						"Tag": "",
+						"Tooltip": "Show Leg Upgrades",
+						"Filter": {
+							"ComponentTypes": [
+								"Upgrade"
+							],
+							"Categories": [
+								"LegHip",
+								"LegUpperActuator",
+								"LegLowerActuator",
+								"LegFootActuator"
+							]
+						}
+					},
+					{
+						"Icon": "uixSvgIcon_equipment_ActuatorArm",
+						"Tag": "",
+						"Tooltip": "Show Arm Upgrades",
+						"Filter": {
+							"ComponentTypes": [
+								"Upgrade"
+							],
+							"Categories": [
+								"ArmShoulder",
+								"ArmUpperActuator",
+								"ArmLowerActuator",
+								"ArmHandActuator",
+								"OmniLowerActuator",
+								"OmniHandActuator",
+								"MeleeActuator",
+								"MeleeSTAB",
+								"MeleeACC"
+							]
+						}
+					}
+				]
+			},
+			{
+				"Caption": "EQUIP",
+				"Filter": {
+					"ComponentTypes": [
+						"JumpJet",
+						"Upgrade"
+					]
+				},
+				"Buttons": [
+					{
+						"Text": "all"
+					},
+					{
+						"Icon": "uixSvgIcon_action_jump",
+						"Filter": {
+							"ComponentTypes": [
+								"JumpJet"
+							]
+						}
+					},
+					{
+						"Icon": "uixSvgIcon_equipment_Cockpit",
+						"Filter": {
+							"ComponentTypes": [
+								"Upgrade"
+							],
+							"Categories": [
+								"LifeSupportA",
+								"LifeSupportB",
+								"Cockpit",
+								"SensorsA",
+								"SensorsB"
+							]
+						}
+					},
+					{
+						"Icon": "uixSvgIcon_quantity",
+						"Filter": {
+							"ComponentTypes": [
+								"Upgrade"
+							],
+							"Categories": [
+								"Armor",
+								"Structure",
+								"Gyro"
+							]
+						}
+					},
+					{
+						"Icon": "uixSvgIcon_equipment_ActuatorLeg",
+						"Filter": {
+							"ComponentTypes": [
+								"Upgrade"
+							],
+							"Categories": [
+								"LegHip",
+								"LegUpperActuator",
+								"LegLowerActuator",
+								"LegFootActuator"
+							]
+						}
+					},
+					{
+						"Icon": "uixSvgIcon_equipment_ActuatorArm",
+						"Filter": {
+							"ComponentTypes": [
+								"Upgrade"
+							],
+							"Categories": [
+								"ArmShoulder",
+								"ArmUpperActuator",
+								"ArmLowerActuator",
+								"ArmHandActuator"
+							]
+						}
+					},
+					{
+						"Icon": "uixSvgIcon_equipment_Generic",
+						"Filter": {
+							"ComponentTypes": [
+								"Upgrade"
+							],
+							"NotCategories": [
+								"Armor",
+								"Structure",
+								"Gyro",
+								"LifeSupportA",
+								"LifeSupportB",
+								"Cockpit",
+								"SensorsA",
+								"SensorsB",
+								"LegHip",
+								"LegUpperActuator",
+								"LegLowerActuator",
+								"LegFootActuator",
+								"ArmShoulder",
+								"ArmUpperActuator",
+								"ArmLowerActuator",
+								"ArmHandActuator"
+							]
+						}
+					}
+				]
+			}
+		]
+	}
+}
