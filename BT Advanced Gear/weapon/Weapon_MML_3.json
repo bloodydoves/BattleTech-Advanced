@@ -1,92 +1,97 @@
 {
-	"Custom" :  {
-	        "BonusDescriptions": {
-            "Bonuses": [
-                "MML"
-            ]
-        }
-	},	
-    "Category" : "Missile",
-    "Type" : "LRM",
-    "WeaponSubType" : "LRM5",
-    "MinRange" : 180,
-    "MaxRange" : 840,
-    "RangeSplit" : [
-        210,
-        420,
-        630
-    ],
-    "AmmoCategory" : "LRM",
-    "StartingAmmoCapacity" : 0,
-    "HeatGenerated" : 6,
-    "Damage" : 4,
-    "OverheatedDamageMultiplier" : 0,
-    "EvasiveDamageMultiplier" : 0,
-    "EvasivePipsIgnored" : 0,
-    "DamageVariance" : 0,
-    "HeatDamage" : 0,
-    "AccuracyModifier" : 0,
-    "CriticalChanceMultiplier" : 1,
-    "AOECapable" : false,
-    "IndirectFireCapable" : true,
-    "RefireModifier" : 0,
-    "ShotsWhenFired" : 3,
-    "ProjectilesPerShot" : 1,
-    "AttackRecoil" : 1,
-    "Instability" : 1,
-    "WeaponEffectID" : "WeaponEffect-Weapon_LRM5",
-    "Description" : {
-        "Cost" : 85000,
-        "Rarity" : 5,
-        "Purchasable" : true,
-        "Manufacturer" : "Irian",
-        "Model" : "Multi Missile Launcher",
-        "UIName" : "MML3",
-        "Id" : "Weapon_MML_3",
-        "Name" : "MML3",
-        "Details" : "The Multi-Missile Launcher is capable of firing specialized long-range missiles that adjust their damage depending on Range to Target, including any special munitions designed for them, as well as use the Artemis IV fire control system and other TTS.",
-        "Icon" : "uixSvgIcon_weapon_Missile"
-    },
-    "BonusValueA" : "Multi-Missile",
-    "BonusValueB" : "",
-    "ComponentType" : "Weapon",
-    "ComponentSubType" : "Weapon",
-    "PrefabIdentifier" : "lrm5",
-    "BattleValue" : 0,
-    "InventorySize" : 2,
-    "Tonnage" : 1.5,
-    "AllowedLocations" : "All",
-    "DisallowedLocations" : "All",
-    "CriticalComponent" : false,
-    "statusEffects" : [],
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/m/s/mml"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"MML"
+			]
+		}
+	},
+	"Category": "Missile",
+	"Type": "LRM",
+	"WeaponSubType": "LRM5",
+	"MinRange": 180,
+	"MaxRange": 840,
+	"RangeSplit": [
+		210,
+		420,
+		630
+	],
+	"AmmoCategory": "LRM",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 6,
+	"Damage": 4,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 0,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": 0,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": true,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 3,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 1,
+	"Instability": 1,
+	"WeaponEffectID": "WeaponEffect-Weapon_LRM5",
+	"Description": {
+		"Cost": 85000,
+		"Rarity": 5,
+		"Purchasable": true,
+		"Manufacturer": "Irian",
+		"Model": "Multi Missile Launcher",
+		"UIName": "MML3",
+		"Id": "Weapon_MML_3",
+		"Name": "MML3",
+		"Details": "The Multi-Missile Launcher is capable of firing specialized long-range missiles that adjust their damage depending on Range to Target, including any special munitions designed for them, as well as use the Artemis IV fire control system and other TTS.",
+		"Icon": "uixSvgIcon_weapon_Missile"
+	},
+	"BonusValueA": "Multi-Missile",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "lrm5",
+	"BattleValue": 0,
+	"InventorySize": 2,
+	"Tonnage": 1.5,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [],
 	"Modes": [
-        {
-            "Id": "LRM",
-            "UIName": "LRM",
-            "isBaseMode": true,
-            "AmmoCategory": "LRM"
-        },
-        {
-            "Id": "SRM",
-            "UIName": "SRM",
-            "isBaseMode": false,
-            "IndirectFireCapable": false,
-            "DamagePerShot": 4.0,
-            "MinRange": -180.0,
-            "MaxRange": -480.0,
-            "ShortRange": -120.0,
-            "MiddleRange": -240.0,
-            "LongRange": -360.0,
-            "AmmoCategory": "SRM",
-            "WeaponEffectID": "WeaponEffect-Weapon_SRM2",
-			"Instability" : 1
-        }
-    ],
-    "ComponentTags" : {
-        "items" : [
-            "component_type_stock",
-            "range_extreme"
-        ],
-        "tagSetSourceFile" : ""
-    }
+		{
+			"Id": "LRM",
+			"UIName": "LRM",
+			"isBaseMode": true,
+			"AmmoCategory": "LRM"
+		},
+		{
+			"Id": "SRM",
+			"UIName": "SRM",
+			"isBaseMode": false,
+			"IndirectFireCapable": false,
+			"DamagePerShot": 4.0,
+			"MinRange": -180.0,
+			"MaxRange": -480.0,
+			"ShortRange": -120.0,
+			"MiddleRange": -240.0,
+			"LongRange": -360.0,
+			"AmmoCategory": "SRM",
+			"WeaponEffectID": "WeaponEffect-Weapon_SRM2",
+			"Instability": 1
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_extreme"
+		],
+		"tagSetSourceFile": ""
+	}
 }

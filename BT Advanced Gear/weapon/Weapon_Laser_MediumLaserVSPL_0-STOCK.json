@@ -1,103 +1,108 @@
 {
 	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/e/l/vspl"
+			}
+		],
 		"BonusDescriptions": {
 			"Bonuses": [
 				"VSPL"
 			]
 		}
 	},
-    "Category" : "Energy",
-    "Type" : "Laser",
-    "WeaponSubType" : "MediumLaserPulse",
-    "MinRange" : 0,
-    "MaxRange" : 150,
-    "RangeSplit" : [
-        150,
-        150,
-        150
-    ],
-    "AmmoCategory" : "NotSet",
-    "StartingAmmoCapacity" : 0,
-    "HeatGenerated" : 21,
-    "Damage" : 35,
-    "OverheatedDamageMultiplier" : 0,
-    "EvasiveDamageMultiplier" : 0,
-    "EvasivePipsIgnored" : 1,
-    "DamageVariance" : 0,
-    "HeatDamage" : 0,
-    "AccuracyModifier" : -2,
-    "CriticalChanceMultiplier" : 1,
-    "AOECapable" : false,
-    "IndirectFireCapable" : false,
-    "RefireModifier" : 0,
-    "ShotsWhenFired" : 1,
-    "ProjectilesPerShot" : 1,
-    "AttackRecoil" : 1,
-    "Instability" : 0,
-    "WeaponEffectID" : "WeaponEffect-Weapon_LaserPulse_Medium",
-    "Description" : {
-        "Cost" : 160000,
-        "Rarity" : 20,
-        "Purchasable" : false,
-        "Manufacturer" : "SCI",
-        "Model" : "Medium Variable-Speed Pulse Laser",
-        "UIName" : "M VSPL",
-        "Id" : "Weapon_Laser_MediumLaserVSPL_0-STOCK",
-        "Name" : "M VSPL",
-        "Details" : "An improvement upon standard Medium Lasers, Medium Variable-Speed Pulse Lasers use pulses of light instead of a single beam. This results in the VSP inflicting more damage at close range in exchange for a dropoff in damage at longer ranges. Like all Lasers, Medium Variable-Speed Pulse Lasers enjoy a baseline accuracy bonus over other weapons.",
-        "Icon" : "uixSvgIcon_weapon_Energy"
-    },
-    "BonusValueA" : "Pulse Accuracy",
-    "BonusValueB" : "Range Modes",
-    "ComponentType" : "Weapon",
-    "ComponentSubType" : "Weapon",
-    "PrefabIdentifier" : "Laser",
-    "BattleValue" : 0,
-    "InventorySize" : 2,
-    "Tonnage" : 4,
-    "AllowedLocations" : "All",
-    "DisallowedLocations" : "All",
-    "CriticalComponent" : false,
-    "statusEffects" : [],
-	"Modes" : [
+	"Category": "Energy",
+	"Type": "Laser",
+	"WeaponSubType": "MediumLaserPulse",
+	"MinRange": 0,
+	"MaxRange": 150,
+	"RangeSplit": [
+		150,
+		150,
+		150
+	],
+	"AmmoCategory": "NotSet",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 21,
+	"Damage": 35,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 1,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": -2,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 1,
+	"Instability": 0,
+	"WeaponEffectID": "WeaponEffect-Weapon_LaserPulse_Medium",
+	"Description": {
+		"Cost": 160000,
+		"Rarity": 20,
+		"Purchasable": false,
+		"Manufacturer": "SCI",
+		"Model": "Medium Variable-Speed Pulse Laser",
+		"UIName": "M VSPL",
+		"Id": "Weapon_Laser_MediumLaserVSPL_0-STOCK",
+		"Name": "M VSPL",
+		"Details": "An improvement upon standard Medium Lasers, Medium Variable-Speed Pulse Lasers use pulses of light instead of a single beam. This results in the VSP inflicting more damage at close range in exchange for a dropoff in damage at longer ranges. Like all Lasers, Medium Variable-Speed Pulse Lasers enjoy a baseline accuracy bonus over other weapons.",
+		"Icon": "uixSvgIcon_weapon_Energy"
+	},
+	"BonusValueA": "Pulse Accuracy",
+	"BonusValueB": "Range Modes",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "Laser",
+	"BattleValue": 0,
+	"InventorySize": 2,
+	"Tonnage": 4,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [],
+	"Modes": [
 		{
-            "Id": "short",
-            "UIName": "Close",
-            "isBaseMode": false,
+			"Id": "short",
+			"UIName": "Close",
+			"isBaseMode": false,
 			"MaxRange": -90.0,
-            "ShortRange": -90.0,
-            "MiddleRange": -90.0,
-            "LongRange": -90.0,
+			"ShortRange": -90.0,
+			"MiddleRange": -90.0,
+			"LongRange": -90.0,
 			"DamagePerShot": 10.0,
-			"AccuracyModifier" : -1
-        },
-        {
-            "Id": "mid",
-            "UIName": "Medium",
-            "isBaseMode": true,
+			"AccuracyModifier": -1
+		},
+		{
+			"Id": "mid",
+			"UIName": "Medium",
+			"isBaseMode": true,
 			"forbiddenRangeEnable": true,
 			"ForbiddenRange": 60
-        },
+		},
 		{
-            "Id": "long",
-            "UIName": "Long",
-            "isBaseMode": false,
+			"Id": "long",
+			"UIName": "Long",
+			"isBaseMode": false,
 			"MaxRange": 120.0,
-            "ShortRange": 120.0,
-            "MiddleRange": 120.0,
-            "LongRange": 120.0,
+			"ShortRange": 120.0,
+			"MiddleRange": 120.0,
+			"LongRange": 120.0,
 			"DamagePerShot": -10.0,
 			"forbiddenRangeEnable": true,
 			"ForbiddenRange": 150,
-			"AccuracyModifier" : 1
-        }
+			"AccuracyModifier": 1
+		}
 	],
-    "ComponentTags" : {
-        "items" : [
-            "component_type_stock",
-            "component_type_lostech",
-            "range_standard"
-        ],
-        "tagSetSourceFile" : ""
-    }
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"component_type_lostech",
+			"range_standard"
+		],
+		"tagSetSourceFile": ""
+	}
 }
