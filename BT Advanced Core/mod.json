@@ -1,27 +1,28 @@
 {
-    "Name": "BT Advanced Core",
-    "Enabled": true,
-    "Version": "4.4",
-    "Description": "For files that have nowhere else to live and are fundamental to the modpack's functionality.",
-    "DataAddendumEntries": [
+	"Name": "BT Advanced Core",
+	"Enabled": true,
+	"Version": "4.4",
+	"Description": "For files that have nowhere else to live and are fundamental to the modpack's functionality.",
+	"DataAddendumEntries": [
 		{ "name": "BattleTech.FactionEnumeration", "path": "Faction.json" },
 		{ "name": "BattleTech.AmmoCategoryEnumeration", "path": "AmmoCategory.json" }
-    ],
-    "DependsOn": [
-        "Merc Emblems", "BattletechPerformanceFix", "bd weapon rebalance", "Better AI",
-        "BTA Contracts", "BTA Difficulty Settings", "BT Advanced Factions", "Xtreme Advanced Gear Component",
-        "BT Advanced Lances", "BT Advanced Mech Quirks", "BT Advanced Mechs", "BT Advanced Tanks", "Select Pilots BTA Edition",
-        "CBTBehaviorsEnhanced", "cFixes", "CommanderPortraitLoader", "CommunityBundles", "CleverGirl", "CustomFilters",
-        "Custom Ammo Categories", "CustomComponents", "CustomLocalization", "CustomSalvage", "CustomUnits", "CustomVoices",
-        "DynamicShops", "FlashpointEnabler", "ExpandedInitiative", "FYLS", "IRTweaks", "JK_VariantsCampaign", "LessHeadInjuries",
-        "Loading Screen Tips", "LogoReplacement", "MechEngineer", "MechEngineer Vanilla Mechs",
-        "MechEngineerGear", "Michael Woods Revamp", "IRBTModUtils",
-        "NavigationComputer", "NewSaveFolder", "OnePointArmorStep", "PanicSystem",
-        "PilotHealthPopup", "Primitive Mechs", "QuietDarius", "Repair Bays",
-        "SkipIntro", "VehicleEvasivePipsGainiedAdditionalFix", "VIPadvanced",
+	],
+	"CustomResourceTypes": ["MEBonusDescriptions", "MECriticalEffects", "CCCategories", "CCDefaults", "CCTagRestrictions", "CustomSVGIcon"],
+	"DependsOn": [
+		"Merc Emblems", "BattletechPerformanceFix", "bd weapon rebalance", "Better AI", "BT Advanced Custom Mechs",
+		"BTA Contracts", "BTA Difficulty Settings", "BT Advanced Factions", "Xtreme Advanced Gear Component",
+		"BT Advanced Lances", "BT Advanced Mech Quirks", "BT Advanced Mechs", "BT Advanced Tanks", "Select Pilots BTA Edition",
+		"CBTBehaviorsEnhanced", "cFixes", "CommanderPortraitLoader", "CommunityBundles", "CleverGirl", "CustomFilters",
+		"Custom Ammo Categories", "CustomComponents", "CustomLocalization", "CustomSalvage", "CustomUnits", "CustomVoices",
+		"DynamicShops", "FlashpointEnabler", "ExpandedInitiative", "FYLS", "IRTweaks", "JK_VariantsCampaign", "LessHeadInjuries",
+		"Loading Screen Tips", "LogoReplacement", "MechEngineer", "MechEngineer Vanilla Mechs",
+		"MechEngineerGear", "Michael Woods Revamp", "IRBTModUtils",
+		"NavigationComputer", "NewSaveFolder", "OnePointArmorStep", "PanicSystem",
+		"PilotHealthPopup", "Primitive Mechs", "QuietDarius", "Repair Bays",
+		"SkipIntro", "VehicleEvasivePipsGainiedAdditionalFix", "VIPadvanced",
 		"Mission Control", "BiggerDrops", "BattlefieldCSMessage", "BetterJuggernaut"
-    ],
-    "ConflictsWith": [
+	],
+	"ConflictsWith": [
 		"RogueTech Enhanced", "RogueTech Enhanced Clans",
 		"BTMLColorLOSMod", "Turbine",
 		"Give_me_Death", "Give_them_Kell",
@@ -45,7 +46,8 @@
 		"New Mechs HM+", "MechResizer", "The Engine Initiative", "Flashpoints worthwhile rewards",
 		"BetterMortar", "Elite Forces"
 		],
-    "Manifest": [
+	"Manifest": [
+		{ "Type": "SVGAsset", "Path": "icons", "ShouldMergeJSON" : false },
 		{ "Type": "DesignMaskDef", "Path": "designmask" },
 		{
 			"Type": "CCCategories",
@@ -57,11 +59,11 @@
 			"Path": "settings/tagRestrictions/",
 			"ShouldMergeJSON": false
 		},
-        {
-            "Type": "CCDefaults",
-            "Path": "settings/defaults/",
-            "ShouldMergeJSON": false
-        },
+		{
+			"Type": "CCDefaults",
+			"Path": "settings/defaults/",
+			"ShouldMergeJSON": false
+		},
 		{
 			"Type": "MEBonusDescriptions",
 			"Path": "settings/bonusDescriptions/",
@@ -73,8 +75,8 @@
 			"ShouldMergeJSON": false
 		},
 		{
-            "Type": "MechStatisticsConstants",
-            "Path": "settings/MechStatistics"
-        }
+			"Type": "MechStatisticsConstants",
+			"Path": "settings/MechStatistics"
+		}
 	]
 }
