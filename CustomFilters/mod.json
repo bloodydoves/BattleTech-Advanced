@@ -24,8 +24,7 @@
 				},
 				"Buttons": [
 					{
-						"Icon": "uixSvgIcon_weapon_Ballistic",
-						"Tag": "all",
+						"Text": "All",
 						"Tooltip": "Show All Weapon",
 						"Filter": {
 							"ComponentTypes": [
@@ -136,7 +135,7 @@
 								"w/s/m/melee",
 								"w/s/l/laser",
 								"w/s/l/pulse",
-								"w/s/l/ersl",
+								"w/s/l/er",
 								"w/s/l/x-pulse",
 								"w/s/l/vspl",
 								"w/a/g/magshot",
@@ -158,8 +157,7 @@
 				},
 				"Buttons": [
 					{
-						"Tag": "All",
-						"Icon": "uixSvgIcon_weapon_Ballistic",
+						"Text": "All",
 						"Tooltip": "Show All Ammos"
 					},
 					{
@@ -424,14 +422,21 @@
 					},
 					{
 						"Icon": "uixSvgIcon_action_jump",
+						"Tooltip" : "Show JumpJets",
 						"Filter": {
 							"ComponentTypes": [
 								"JumpJet"
+							],
+							"Categories": [
+								"StandardJJ",
+								"ImprovedJJ",
+								"PartialWing"
 							]
 						}
 					},
 					{
 						"Icon": "uixSvgIcon_equipment_Cockpit",
+						"Tooltip" : "Show Cockpits",
 						"Filter": {
 							"ComponentTypes": [
 								"Upgrade"
@@ -446,7 +451,33 @@
 						}
 					},
 					{
+						"Icon" : "UixSvgIcon_specialEquip_System",
+						"Tag" : "",
+						"Tooltip" : "Show Electronic Warfare",
+						"Filter" : {
+							"ComponentTypes" : [
+								"Upgrade"
+							],
+							"Categories" : [
+								"ECM",
+								"Probe",
+								"AdvECM",
+								"UAV",
+								"C3Master",
+								"C3Slave",
+								"C3i",
+								"StealthSystemAdd",
+								"MimeticSystemAdd",
+								"StealthSystem",
+								"MimeticSystem",
+								"Chameleon",
+								"StealthX"
+							]
+						}
+					},
+					{
 						"Icon": "uixSvgIcon_quantity",
+						"Tooltip" : "",
 						"Filter": {
 							"ComponentTypes": [
 								"Upgrade"
@@ -454,12 +485,19 @@
 							"Categories": [
 								"Armor",
 								"Structure",
-								"Gyro"
+								"Gyro",
+								"TSM",
+								"ProtoTSM",
+								"Supercharger",
+								"MASC",
+								"CombatShield",
+								"PPCCAP"
 							]
 						}
 					},
 					{
 						"Icon": "uixSvgIcon_equipment_ActuatorLeg",
+						"Tooltip" : "Show Leg Actutors",
 						"Filter": {
 							"ComponentTypes": [
 								"Upgrade"
@@ -474,6 +512,7 @@
 					},
 					{
 						"Icon": "uixSvgIcon_equipment_ActuatorArm",
+						"Tooltip" : "Show Arm Actuators",
 						"Filter": {
 							"ComponentTypes": [
 								"Upgrade"
@@ -482,12 +521,15 @@
 								"ArmShoulder",
 								"ArmUpperActuator",
 								"ArmLowerActuator",
-								"ArmHandActuator"
+								"ArmHandActuator",
+								"OmniHandActuator",
+								"OmniLowerActuator"
 							]
 						}
 					},
 					{
 						"Icon": "uixSvgIcon_equipment_Generic",
+						"Tooltip" : "Show other equipment",
 						"Filter": {
 							"ComponentTypes": [
 								"Upgrade"
@@ -508,7 +550,9 @@
 								"ArmShoulder",
 								"ArmUpperActuator",
 								"ArmLowerActuator",
-								"ArmHandActuator"
+								"ArmHandActuator",
+								"OmniHandActuator",
+								"OmniLowerActuator"
 							]
 						}
 					}
