@@ -2,34 +2,56 @@
 	"Name": "IRTweaks",
 	"Enabled": true,
 	"Hidden": true,
-	"Version": "0.5.0",
+	"Version": "0.6.1",
 	"Description": "Miscellaneous Tweaks and Fixes",
 	"Author": "IceRaptor",
 	"Website": "https://github.com/IceRaptor/IRTweaks",
 	"Contact": "",
 	"DLL": "IRTweaks.dll",
-	"DependsOn": [ "IRBTModUtils" ],
+	"DependsOn": [
+		"IRBTModUtils"
+	],
 	"Settings": {
 		"Debug": false,
 		"Trace": false,
 		"Fixes": {
 			"BulkPurchasing": true,
 			"CombatLog": false,
-			"DisableCampaign" : true,
+			"DisableCampaign": true,
 			"DisableCombatSaves": true,
 			"ExtendedStats": false,
 			"FlexibleSensorLock": false,
-			"MultiTargetStat" : "true",
+			"MultiTargetStat": true,
+			"PainTolerance": false,
 			"PreventHeadShots": false,
 			"RandomStartByDifficulty": true,
+			"ReduceSaveCompression": true,
+			"ShowAllArgoUpgrades": true,
+			"SkirmishAlwaysUnlimited": false,
 			"SkirmishReset": false,
-			"ReduceSaveCompression" : "true",
-            "SkipDeleteSavePopup" : "true",
+			"SkipDeleteSavePopup": true,
 			"SpawnProtection": false,
 			"StreamlinedMainMenu": true,
 			"WeaponTooltip": false
 		},
+		"Abilities": {
+			"MultiTargetId": "AbilityDefG5"
+		},
 		"Combat": {
+			"FlexibleSensorLock": {
+				"FreeActionWithAbility": false,
+				"AbilityId": "AbilityDefT8A"
+			},
+			"PainTolerance": {
+				"ResistPerGuts": 10,
+				"PenaltyPerHeadDamage": 5,
+				"PenaltyPerAmmoExplosionRatio": 1,
+				"PenaltyPerHeatDamageInjuryRatio": 1,
+				"KnockdownDamage": 6,
+				"ShutdownDamage": 12,
+				"TorsoDestroyedDamage": 10,
+				"HeadHitArmorOnlyMulti": 0.5
+			},
 			"SpawnProtection": {
 				"ApplyGuard": true,
 				"EvasionPips": 6,
@@ -39,9 +61,6 @@
 				"ApplyToReinforcements": true
 			}
 		},
-		"Abilities" : {
-            "MultiTargetId" : "AbilityDefG5"
-        },
 		"Store": {
 			"QuantityOnShift": 5,
 			"QuantityOnControl": 20

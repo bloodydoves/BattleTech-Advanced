@@ -206,17 +206,22 @@
                 "MechCriticalEffects" : {
                     "LinkedStatisticName" : "EngineCrits",
                     "PenalizedEffectIDs" : [
-                        ["CriticalEffect-EngineCrit1"],
-                        ["CriticalEffect-EngineCrit2"]
+                        [
+							"CriticalEffect-EngineCrit1"
+						],
+						[
+							"CriticalEffect-EngineCrit2"
+						]
                     ],
                     "DeathMethod" : "EngineDestroyed"
                 },
 				"VehicleCriticalEffects" : {
                     "LinkedStatisticName" : "VehicleEngineCrits",
                     "PenalizedEffectIDs" : [
-                        ["CriticalEffect-VehicleEngineCrit1"],
-						["CriticalEffect-VehicleEngineCrit2"],
-						["CriticalEffect-EngineTankCritPenalty"]
+                        [
+							"CriticalEffect-VehicleEngineCrit1, CriticalEffect-VehicleEngineCrit2",
+							"CriticalEffect-EngineTankCritPenalty"
+						]
                     ],
                     "DeathMethod" : "EngineDestroyed"
                 }
@@ -459,20 +464,20 @@
 			{ "Name": "Patchwork", "displayName": "Patchwork Materials", "MaxEquipedPerLocation": "1", "AutoReplace": "true"},
 			{ "Name": "ModularArmor", "displayName": "Modular Armor", "MaxEquipedPerLocation": "1", "AutoReplace": "true"},
 			{ "Name": "ModularRearArmor", "displayName": "Modular Rear Armor", "MaxEquipedPerLocation": "1", "AutoReplace": "true"},
-			{ "Name": "Spikes",	"displayName": "Melee Spikes", "MaxEquiped": "10", "AutoReplace": "true" },
+			{ "Name": "Spikes", "displayName": "Melee Spikes", "MaxEquiped": "10", "AutoReplace": "true" },
 			{ "Name": "Supercharger", "displayName": "Supercharger", "MaxEquiped": "1", "AutoReplace": "true" },
 			{ "Name": "HandHeld", "displayName": "Hand Held", "MaxEquiped": "1", "AutoReplace": "true" },
-			{ "Name": "BlueShield",	"displayName": "Blue Shield Project", "MaxEquiped": "1", "AutoReplace": "true" },
+			{ "Name": "BlueShield", "displayName": "Blue Shield Project", "MaxEquiped": "1", "AutoReplace": "true" },
 			{ "Name": "C3Slave", "displayName": "C3 Slave", "MaxEquiped": "1", "AutoReplace": "true" },
 			{ "Name": "C3Master", "displayName": "C3 Master", "MaxEquiped": "1", "AutoReplace": "true" },
-			{ "Name": "C3i", "displayName": "C3 Improved", "MaxEquiped": "1", "AutoReplace": "true"	},
-			{ "Name": "TSM", "displayName": "Triple Strength Myomer", "MaxEquiped": "1", "AutoReplace": "true",	"AddMaximumReached": "Mech already has {1} of {0} installed" },
+			{ "Name": "C3i", "displayName": "C3 Improved", "MaxEquiped": "1", "AutoReplace": "true" },
+			{ "Name": "TSM", "displayName": "Triple Strength Myomer", "MaxEquiped": "1", "AutoReplace": "true", "AddMaximumReached": "Mech already has {1} of {0} installed" },
 			{ "Name": "EndoTSM", "displayName": "Triple Strength Myomer", "MaxEquiped": "1", "AutoReplace": "false", "AddMaximumReached": "Mech already has {1} of {0} installed" },
-			{ "Name": "MASC", "displayName": "MASC", "MaxEquiped": "1",	"AutoReplace": "true" },
-			{ "Name": "AdvMASC", "displayName": "Advanced MASC", "MaxEquiped": "1",	"AutoReplace": "true" },
-			{ "Name": "Turret", "displayName": "Turret Mount", "MaxEquiped": "1",	"AutoReplace": "true" },
-			{ "Name": "Shock", "displayName": "Shock Absorber",	"MaxEquipedPerLocation": "1","MaxEquiped": "2",	"AutoReplace": "true" },
-			{ "Name": "MeleeWeapon", "displayName": "Melee Weapon", "MaxEquipedPerLocation": "1", "AutoReplace": "true"	},
+			{ "Name": "MASC", "displayName": "MASC", "MaxEquiped": "1", "AutoReplace": "true" },
+			{ "Name": "AdvMASC", "displayName": "Advanced MASC", "MaxEquiped": "1", "AutoReplace": "true" },
+			{ "Name": "Turret", "displayName": "Turret Mount", "MaxEquiped": "1", "AutoReplace": "true" },
+			{ "Name": "Shock", "displayName": "Shock Absorber", "MaxEquipedPerLocation": "1","MaxEquiped": "2", "AutoReplace": "true" },
+			{ "Name": "MeleeWeapon", "displayName": "Melee Weapon", "MaxEquipedPerLocation": "1", "AutoReplace": "true" },
 			{ "Name": "CombatShield", "displayName": "Combat Shield", "MaxEquiped": "1", "AutoReplace": "true" },
 			{ "Name": "PPCCAP", "displayName": "PPC Capacitor", "MaxEquiped": "1", "AutoReplace": "true" },
 			{ "Name": "ImprovedJJ", "displayName": "Improved Jumo Jets" },
@@ -483,26 +488,6 @@
 			{ "Name": "BoosterPack", "displayName": "Booster Pack", "MaxEquipedPerLocation": "1", "AutoReplace": "true" },
 			{ "Name": "SHJJ", "displayName": "Superheavy Jump Jet", "MaxEquipedPerLocation": "1", "AutoReplace": "true" },
 			{ "Name": "Articulated", "displayName": "Articulated Jets", "MaxEquiped": "1", "AutoReplace": "true" },
-			{ "Name": "Streak", "displayName": "Streak System" },
-			{ "Name": "StreakLRM", "displayName": "Streak System"},
-			{ "Name": "ArrowIV", "displayName": "Arrow IV Artillery" },
-			{ "Name": "ATM", "displayName": "Advanced Tactical Missile"},
-			{ "Name": "iATM", "displayName": "Improved Advanced Tactical Missile" },
-			{ "Name": "MRM", "displayName": "Medium Range Missile" },
-			{ "Name": "HAGR", "displayName": "Hyper-Assault Gauss Rifle" },
-			{ "Name": "LBX", "displayName": "Large Bore Extended AC" },
-			{ "Name": "LGR", "displayName": "Light Gauss Rifle" },
-			{ "Name": "HGR", "displayName": "Heavy Gauss Rifle"	},
-			{ "Name": "SBGR", "displayName": "Silver Bullet Gauss Rifle" },
-			{ "Name": "PLASMA",	"displayName": "Plasma Cannon" },
-			{ "Name": "UAC2", "displayName": "Ultra Autocannon/2" },
-			{ "Name": "UAC5", "displayName": "Ultra Autocannon/5" },
-			{ "Name": "UAC10", "displayName": "Ultra Autocannon/10" },
-			{ "Name": "UAC20", "displayName": "Ultra Autocannon/20"	},
-			{ "Name": "RAC2", "displayName": "Rotary Autocannon/2" },
-			{ "Name": "RAC5", "displayName": "Rotary Autocannon/5" },
-			{ "Name": "RAC10", "displayName": "Rotary Autocannon/10" },
-			{ "Name": "RAC20", "displayName": "Rotary Autocannon/20" },
 			{ "Name": "BattleComputer", "displayName": "Battle Computer", "MaxEquiped": "1", "AutoReplace": "true" },
 			{ "Name": "ArtemisTTS", "displayName": "Artemis IV System", "MaxEquiped": "1", "AutoReplace": "true" },
 			{ "Name": "LRMARTIVAmmo", "displayName": "Artemis IV LRM", "AutoReplace": "true" },
@@ -525,12 +510,9 @@
 			{ "Name": "HeatBank", "displayName": "Heatbank", "MaxEquiped": "1", "AutoReplace": "true" },
 			{ "Name": "Exchanger", "displayName": "Thermal Exchanger", "MaxEquiped": "1", "AutoReplace": "true" },
 			{ "Name": "VirtualRealityPilotingPod", "displayName": "Virtual Reality Piloting Pod", "MaxEquiped": "1", "AutoReplace": "true" },
-			{ "Name": "Railgun", "displayName": "Railgun" },
-			{ "Name": "ParticleWeapon", "displayName": "Particle Weapon" },
-			{ "Name": "SmartMissile", "displayName": "Smart Missile" },
 			{ "Name": "CGLauncher", "displayName": "Coilgun Launcher" },
 			{ "Name": "ChassisSupport", "displayName": "Integral Chassis Systems", "MaxEquiped": "1", "AutoReplace": "true" },
 			{ "Name": "SensorsRefit", "displayName": "Sensor Refit", "MaxEquiped": "1", "AutoReplace": "true"},
-			{ "Name": "ProtoTSM", "displayName": "Prototype TSM", "MaxEquiped": "2", "AutoReplace": "true" }
+			{ "Name": "ProtoTSM", "displayName": "TSM (P)", "MaxEquiped": "2", "AutoReplace": "true" }
     ]
 }

@@ -40,9 +40,7 @@
             "noautofix"
         ],
         "MechDefAutoFixAgainstMaxFreeTonnage" : [
-            "mechdef_atlas_AS7-D-HT",
-            "mechdef_blackknight_BL-6b-KNT",
-            "mechdef_highlander_HGN-732b"
+            
         ],
         "MechDefAutoFixInitialTonnageDiffThreshold" : 0.4,
         "MechDefEngine" : true,
@@ -242,7 +240,7 @@
         ],
         "ChassisDefInitialTonnage" : true,
         "ChassisDefInitialToTotalTonnageFactor" : 0.1,
-        "ChassisDefMaxJumpjets" : true,
+        "ChassisDefMaxJumpjets" : false,
         "ChassisDefMaxJumpjetsCount" : 8,
         "ChassisDefMaxJumpjetsRating" : 400,
         "WeaponDefTagsSkip" : [
@@ -292,7 +290,8 @@
     "CriticalEffects" : {
         "Enabled" : true,
         "EnabledDescription" : "Allows custom multiple critical hit states for individual components.",
-        "DescriptionTemplate" : "Critical Effects:<b><color=#F79B26FF>\r\n{{elements}}</color></b>\r\n{{originalDescription}}",
+        "DescriptionIdentifier" : "Criticals",
+        "DescriptionTemplate" : "Critical Effects:<b><color=#F79B26FF>\r\n{{elements}}</color></b>\r\n",
         "ElementTemplate" : " <indent=10%><line-indent=-5%><line-height=65%>{{element}}</line-height></line-indent></indent>\r\n",
         "DescriptionUseName" : false,
         "CritFloatieMessage" : "{0} CRIT",
@@ -329,6 +328,7 @@
         "Enabled" : true,
         "EnabledDescription" : "Provides engines that can be installed on mechs similar to how CBT works.",
         "MovementPointDistanceMultiplierDescription" : "The distance of a TT movement point, 24 is vanilla CombatGameConstants.ExperimentalGridDistance .",
+        "JumpJetMovementPointDistanceMultiplierDescription" : "The distance of a TT movement point when calculating jump distances, if undefined falls back to MovementPointDistanceMultiplier.",
         "MinimJumpHeatDescription" : "Minimum heat when doing a jump, even if only one jump jet exists and only when jumping one hex.",
         "AutoConvertJumpCapacityInDefToStatDescription" : "All JumpCapacity values in JumpJetDefs will be auto-converted to the JumpCapacity statistic.",
         "JumpJetDefaultJumpHeatDescription" : "The heat the jump jet produces when fully* used (* jumping below max distance reduces produced heat). Can be adjusted using the JumpHeat statistic.",
@@ -347,6 +347,7 @@
         "EngineMissingFallbackHeatSinkCapacity" : 30,
         "EngineMissingFallbackHeatSinkCapacityDescription" : "Heat sink capacity if no engine is detected.",
         "MovementPointDistanceMultiplier" : 28,
+        "JumpJetMovementPointDistanceMultiplier" : null,
         "MinimJumpHeat" : 9,
         "AutoConvertJumpCapacityInDefToStat" : true,
         "JumpJetDefaultJumpHeat" : 3,
@@ -362,6 +363,8 @@
     "HardpointFix" : {
         "Enabled" : true,
         "EnabledDescription" : "Optimizes the way installed weapons are shown on a mech model.",
+        "TraceLogDebugMappings" : false,
+        "TraceLogDebugMappingsDescription" : "Trace all GetComponentBlankNames and GetComponentPrefabName calls. Otherwise only some of them are logged.",
         "AutoFixChassisDefWeaponHardpointCounts" : false,
         "AutoFixChassisDefWeaponHardpointCountsDescription" : "Changes chassis hardpoints based on configured prefabs.",
         "EnforceHardpointLimits" : false,
@@ -369,7 +372,15 @@
         "AllowDefaultLoadoutWeapons" : false,
         "AllowDefaultLoadoutWeaponsDescription" : "Ignore limits that would prevent mounting default loadouts.",
         "FallbackPrefabsForComponentDefIds" : [
-            "Weapon_Mortar_MechMortar"
+            "Weapon_Mortar_MechMortar",
+            "Weapon_MECHMORTAR_1",
+            "Weapon_MECHMORTAR_2",
+            "Weapon_MECHMORTAR_4",
+            "Weapon_MECHMORTAR_8",
+            "Weapon_AMS",
+            "Weapon_Laser_AMS",
+            "Weapon_Laser_TAG",
+            "Weapon_Laser_TAGLight"
         ],
         "FallbackPrefabsForComponentDefIdsDescription" : "A list of components that always should be assigned a weapon prefab to.",
         "AutoFixHardpointDataDefs" : true,
@@ -384,7 +395,11 @@
                     "lbx2",
                     "ac",
                     "lbx",
-                    "mg"
+                    "ppc",
+                    "laser",
+                    "mg",
+                    "flamer",
+                    "ams"
                 ]
             },
             {
@@ -392,11 +407,15 @@
                 "HardpointCandidates" : [
                     "ac5",
                     "uac5",
+                    "ac",
                     "rac5",
                     "lbx5",
-                    "ac",
                     "lbx",
-                    "mg"
+                    "ppc",
+                    "laser",
+                    "mg",
+                    "flamer",
+                    "ams"
                 ]
             },
             {
@@ -407,7 +426,11 @@
                     "lbx10",
                     "ac",
                     "lbx",
-                    "mg"
+                    "ppc",
+                    "laser",
+                    "mg",
+                    "flamer",
+                    "ams"
                 ]
             },
             {
@@ -415,10 +438,14 @@
                 "HardpointCandidates" : [
                     "ac20",
                     "uac20",
-                    "lbx20",
+                    "lbx10",
                     "ac",
                     "lbx",
-                    "mg"
+                    "ppc",
+                    "laser",
+                    "mg",
+                    "flamer",
+                    "ams"
                 ]
             },
             {
@@ -430,7 +457,12 @@
                     "lbx2",
                     "ac10",
                     "ac",
-                    "lbx"
+                    "lbx",
+                    "ppc",
+                    "laser",
+                    "mg",
+                    "flamer",
+                    "ams"
                 ]
             },
             {
@@ -448,7 +480,11 @@
                     "lbx5",
                     "ac",
                     "lbx",
-                    "mg"
+                    "ppc",
+                    "laser",
+                    "mg",
+                    "flamer",
+                    "ams"
                 ]
             },
             {
@@ -463,8 +499,25 @@
                     "ams",
                     "machinegun",
                     "mg",
+                    "narc",
                     "flamer",
                     "laser"
+                ]
+            },
+            {
+                "PrefabIdentifier" : "mortar",
+                "HardpointCandidates" : [
+                    "mortar",
+                    "ac20",
+                    "ac10",
+                    "ac5",
+                    "ac2",
+                    "uac20",
+                    "lbx20",
+                    "narc",
+                    "flamer",
+                    "ac",
+                    "lbx"
                 ]
             },
             {
@@ -474,7 +527,17 @@
                     "lrm10",
                     "lrm15",
                     "lrm20",
-                    "srm20"
+                    "srm20",
+                    "narc",
+                    "ac",
+                    "gauss",
+                    "lbx",
+                    "machinegun",
+                    "mg",
+                    "ppc",
+                    "flamer",
+                    "laser",
+                    "ams"
                 ]
             },
             {
@@ -484,8 +547,18 @@
                     "lrm15",
                     "lrm20",
                     "srm20",
+                    "narc",
                     "lrm5",
-                    "rl10"
+                    "rl10",
+                    "ac",
+                    "gauss",
+                    "lbx",
+                    "machinegun",
+                    "mg",
+                    "ppc",
+                    "flamer",
+                    "laser",
+                    "ams"
                 ]
             },
             {
@@ -496,9 +569,19 @@
                     "srm20",
                     "lrm10",
                     "lrm5",
+                    "narc",
                     "rl20",
                     "rl15",
-                    "rl10"
+                    "rl10",
+                    "ac",
+                    "gauss",
+                    "lbx",
+                    "machinegun",
+                    "mg",
+                    "ppc",
+                    "flamer",
+                    "laser",
+                    "ams"
                 ]
             },
             {
@@ -509,9 +592,19 @@
                     "lrm15",
                     "lrm10",
                     "lrm5",
+                    "narc",
                     "rl20",
                     "rl15",
-                    "rl10"
+                    "rl10",
+                    "ac",
+                    "gauss",
+                    "lbx",
+                    "machinegun",
+                    "mg",
+                    "ppc",
+                    "flamer",
+                    "laser",
+                    "ams"
                 ]
             },
             {
@@ -520,7 +613,15 @@
                     "machinegun",
                     "mg",
                     "lmg",
-                    "hmg"
+                    "hmg",
+                    "ac",
+                    "gauss",
+                    "lbx",
+                    "flamer",
+                    "laser",
+                    "srm20",
+                    "narc",
+                    "ams"
                 ]
             },
             {
@@ -529,7 +630,20 @@
                     "srm2",
                     "srm4",
                     "srm6",
-                    "lrm5"
+                    "lrm5",
+                    "lrm10",
+                    "lrm15",
+                    "lrm20",
+                    "srm20",
+                    "narc",
+                    "gauss",
+                    "ac",
+                    "machinegun",
+                    "mg",
+                    "ppc",
+                    "flamer",
+                    "laser",
+                    "ams"
                 ]
             },
             {
@@ -538,7 +652,20 @@
                     "srm4",
                     "srm6",
                     "srm2",
-                    "lrm5"
+                    "lrm5",
+                    "lrm10",
+                    "lrm15",
+                    "lrm20",
+                    "srm20",
+                    "narc",
+                    "gauss",
+                    "ac",
+                    "machinegun",
+                    "mg",
+                    "ppc",
+                    "flamer",
+                    "laser",
+                    "ams"
                 ]
             },
             {
@@ -547,17 +674,48 @@
                     "srm6",
                     "srm4",
                     "srm2",
-                    "lrm5"
+                    "lrm5",
+                    "lrm10",
+                    "lrm15",
+                    "lrm20",
+                    "srm20",
+                    "narc",
+                    "gauss",
+                    "ac",
+                    "machinegun",
+                    "mg",
+                    "ppc",
+                    "flamer",
+                    "laser",
+                    "gauss",
+                    "ams"
                 ]
             },
             {
                 "PrefabIdentifier" : "PPC",
                 "HardpointCandidates" : [
-                    "PPC",
                     "ppc",
                     "hppc",
                     "lppc",
-                    "snppc"
+                    "snppc",
+                    "ac20",
+                    "ac",
+                    "lbx",
+                    "ac10",
+                    "lbx10",
+                    "laser",
+                    "flamer",
+                    "mg",
+                    "srm2",
+                    "srm4",
+                    "srm6",
+                    "lrm5",
+                    "lrm10",
+                    "lrm15",
+                    "lrm20",
+                    "srm20",
+                    "narc",
+                    "ams"
                 ]
             },
             {
@@ -565,7 +723,27 @@
                 "HardpointCandidates" : [
                     "gauss",
                     "hgauss",
-                    "lgauss"
+                    "lgauss",
+                    "sbgauss",
+                    "ac20",
+                    "ac",
+                    "ppc",
+                    "lbx",
+                    "laser",
+                    "mg",
+                    "flamer",
+                    "srm2",
+                    "srm4",
+                    "srm6",
+                    "lrm5",
+                    "lrm10",
+                    "lrm15",
+                    "lrm20",
+                    "srm20",
+                    "narc",
+                    "mg",
+                    "flamer",
+                    "ams"
                 ]
             },
             {
@@ -573,9 +751,19 @@
                 "HardpointCandidates" : [
                     "arrow",
                     "lrm20",
+                    "srm20",
                     "lrm15",
                     "lrm10",
-                    "lrm5"
+                    "lrm5",
+                    "srm2",
+                    "srm4",
+                    "srm6",
+                    "narc",
+                    "machinegun",
+                    "mg",
+                    "flamer",
+                    "laser",
+                    "ams"
                 ]
             },
             {
@@ -584,12 +772,21 @@
                     "ams",
                     "laser",
                     "mg",
-                    "MachineGun",
+                    "machinegun",
                     "flamer",
                     "ac2",
                     "ppc",
                     "ac",
-                    "lbx"
+                    "srm2",
+                    "srm4",
+                    "srm6",
+                    "lrm5",
+                    "lrm10",
+                    "lrm15",
+                    "lrm20",
+                    "srm20",
+                    "narc",
+                    "lbx10"
                 ]
             },
             {
@@ -602,7 +799,17 @@
                     "ac2",
                     "ppc",
                     "ac",
-                    "lbx",
+                    "gauss",
+                    "lbx10",
+                    "srm2",
+                    "srm4",
+                    "srm6",
+                    "lrm5",
+                    "lrm10",
+                    "lrm15",
+                    "lrm20",
+                    "srm20",
+                    "narc",
                     "ams"
                 ]
             },
@@ -611,12 +818,21 @@
                 "HardpointCandidates" : [
                     "laser",
                     "flamer",
-                    "mg",
                     "machinegun",
+                    "mg",
                     "ac2",
                     "ppc",
                     "ac",
                     "lbx",
+                    "srm2",
+                    "srm4",
+                    "srm6",
+                    "lrm5",
+                    "lrm10",
+                    "lrm15",
+                    "lrm20",
+                    "srm20",
+                    "narc",
                     "ams"
                 ]
             }
@@ -635,7 +851,9 @@
         "EnabledDescription" : "Makes the mech lab adhere to any custom mech slot counts.",
         "MechLabArmTopPadding" : 120,
         "MechLabGeneralSlots" : 3,
-        "MechLabGeneralWidgetLabel" : "General"
+        "MechLabGeneralWidgetLabel" : "General",
+        "HideHelpButton" : true,
+        "HideECMButton" : true
     },
     "MoveMultiplierStat" : {
         "Enabled" : true,
@@ -667,7 +885,8 @@
     "OverrideDescriptions" : {
         "Enabled" : true,
         "EnabledDescription" : "Allows other features to override tooltips and descriptions, also provides bonus description management.",
-        "BonusDescriptionsDescriptionTemplate" : "Traits:<b><color=#F79B26FF>\r\n{{elements}}</color></b>\r\n{{originalDescription}}",
+        "DescriptionIdentifier" : "Bonuses",
+        "BonusDescriptionsDescriptionTemplate" : "Traits:<b><color=#F79B26FF>\r\n{{elements}}</color></b>\r\n",
         "BonusDescriptionsElementTemplate" : " <indent=10%><line-indent=-5%><line-height=65%>{{element}}</line-height></line-indent></indent>\r\n"
     },
     "OverrideGhostVFX" : {
@@ -680,6 +899,19 @@
         ],
         "BlipWeak" : "Weak",
         "BlipStrong" : "Weak"
+    },
+    "OverrideStatTooltips" : {
+        "Enabled" : true,
+        "EnabledDescription" : "Overrides stat tooltips of mechs including 'progress bar' summaries.",
+        "MovementTitleText" : "Medium Range",
+        "HeatEfficiencyTitleText" : "Heat Efficiency",
+        "DurabilityTitleText" : "Long Range",
+        "AvgRangeTitleText" : "Movement",
+        "MeleeTitleText" : "Durability",
+        "FirepowerTitleText" : "Close Range",
+        "CloseRangeMax" : 89,
+        "MediumRangeMax" : 359,
+        "LongRangeMax" : 569
     },
     "OverrideTonnage" : {
         "Enabled" : true,
@@ -753,7 +985,9 @@
     "DebugScreenshotMechs" : {
         "Enabled" : false,
         "EnabledDescription" : "Edit a mech then cancel, it then will go through all mechs and make screenshots for them. To improve loading times use the TagManager to blacklist all components so the MechLab doesn't have to load them.",
-        "ScreenshotDirectoryPath" : "screenshots",
-        "ScreenshotDirectoryPathDescription" : "Create the directory manually first, otherwise it won't save any of the images."
+        "ScreenshotDirectoryPath" : "Screenshots",
+        "OnlyInvalidMechs" : true,
+        "ScreenshotDirectoryPathDescription" : "Create the directory manually first, otherwise it won't save any of the images.",
+        "OnlyInvalidMechsDescription" : "Only make screenshots of mechs with invalid configurations."
     }
 }
