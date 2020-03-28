@@ -1,27 +1,27 @@
 {
-	"CustomParts": {
+	"CustomParts":{
 		"MoveCost": "Hover"
 	},
 	"Description": {
-		"Id": "vehiclechassisdef_ZEPHYR_SRM2",
-		"Name": "Zephyr",
+		"Id": "vehiclechassisdef_LIGHTNING_ROYAL",
+		"Name": "Lightning Attack Hovercraft",
 		"Details": "",
 		"Icon": "MANTICORE",
-		"Cost": 993,
+		"Cost": 564,
 		"Rarity": 0,
 		"Purchasable": false
 	},
-	"MovementCapDefID": "movedef_9-14cv",
-	"PathingCapDefID": "pathingdef_medium_hover",
-	"HardpointDataDefID": "hardpointdatadef_zephyr",
-	"PrefabIdentifier": "chrprfvhcl_zephyr",
-	"PrefabBase": "zephyr",
-	"Tonnage": 40,
-	"weightClass": "MEDIUM",
-	"BattleValue": 993,
-	"TopSpeed": 85,
+	"MovementCapDefID": "movedef_11-17cv",
+	"PathingCapDefID": "pathingdef_light_hover",
+	"HardpointDataDefID": "hardpointdatadef_lightning",
+	"PrefabIdentifier": "chrprfvhcl_lightning",
+	"PrefabBase": "lightning",
+	"Tonnage": 35,
+	"weightClass": "LIGHT",
+	"BattleValue": 564,
+	"TopSpeed": 125,
 	"TurnRadius": 90,
-	"movementType": "Tracked",
+	"movementType": "Wheeled",
 	"SpotterDistanceMultiplier": 1,
 	"VisibilityMultiplier": 1,
 	"SensorRangeMultiplier": 1,
@@ -30,25 +30,25 @@
 	"LOSSourcePositions": [
 		{
 			"x": 0,
-			"y": 3,
+			"y": 2.5,
 			"z": -0.5
 		},
 		{
-			"x": 0.0,
+			"x": 0,
 			"y": 1.5,
-			"z": 3.5
+			"z": 3
 		}
 	],
 	"LOSTargetPositions": [
 		{
 			"x": 0,
-			"y": 3,
+			"y": 2.5,
 			"z": -0.5
 		},
 		{
-			"x": 0.0,
+			"x": 0,
 			"y": 1.5,
-			"z": 3.5
+			"z": 3
 		},
 		{
 			"x": -2,
@@ -61,27 +61,18 @@
 			"z": 0
 		},
 		{
-			"x": 0.0,
-			"y": 1.6,
-			"z": -4.0
+			"x": 0,
+			"y": 1.5,
+			"z": -4.5
 		}
 	],
 	"Locations": [
 		{
 			"Location": "Front",
-			"Hardpoints": [
-				{
-					"WeaponMount": "AntiPersonnel",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "Missile",
-					"Omni": false
-				}
-			],
+			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 0,
-			"MaxArmor": 145,
+			"MaxArmor": 105,
 			"InternalStructure": 20
 		},
 		{
@@ -89,7 +80,7 @@
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 0,
-			"MaxArmor": 120,
+			"MaxArmor": 90,
 			"InternalStructure": 20
 		},
 		{
@@ -97,12 +88,28 @@
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 0,
-			"MaxArmor": 120,
+			"MaxArmor": 90,
 			"InternalStructure": 20
 		},
 		{
 			"Location": "Rear",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 0,
+			"MaxArmor": 90,
+			"InternalStructure": 20
+		},
+		{
+			"Location": "Turret",
 			"Hardpoints": [
+				{
+					"WeaponMount": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Missile",
+					"Omni": false
+				},
 				{
 					"WeaponMount": "Missile",
 					"Omni": false
@@ -110,28 +117,7 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 0,
-			"MaxArmor": 95,
-			"InternalStructure": 20
-		},
-		{
-			"Location": "Turret",
-			"Hardpoints": [
-				{
-					"WeaponMount": "Energy",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "Energy",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "Energy",
-					"Omni": false
-				}
-			],
-			"Tonnage": 0,
-			"InventorySlots": 0,
-			"MaxArmor": 190,
+			"MaxArmor": 105,
 			"InternalStructure": 20
 		}
 	]
