@@ -4,7 +4,12 @@
 			{
 				"CategoryID": "w/a/a/ac"
 			}
-		]
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"StructureDmgMod: 25"
+			]
+		}
 	},
 	"Category": "Ballistic",
 	"Type": "Autocannon",
@@ -19,14 +24,14 @@
 	"AmmoCategory": "AC20",
 	"StartingAmmoCapacity": 0,
 	"HeatGenerated": 21,
-	"Damage": 100,
+	"Damage": 75,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
 	"EvasivePipsIgnored": 0,
 	"DamageVariance": 0,
 	"HeatDamage": 0,
 	"AccuracyModifier": 0,
-	"CriticalChanceMultiplier": 1.1,
+	"CriticalChanceMultiplier": 1,
 	"AOECapable": false,
 	"IndirectFireCapable": false,
 	"RefireModifier": 2,
@@ -34,6 +39,7 @@
 	"ProjectilesPerShot": 1,
 	"AttackRecoil": 4,
 	"Instability": 40,
+	"APDamage": 25,
 	"WeaponEffectID": "WeaponEffect-Weapon_AC20_Single",
 	"Description": {
 		"Cost": 180000,
@@ -41,13 +47,13 @@
 		"Purchasable": true,
 		"Manufacturer": "Federated",
 		"Model": "Shredder Autocannon",
-		"UIName": "AC/20 +",
+		"UIName": "Pierce AC/20",
 		"Id": "Weapon_Autocannon_AC20_1-Federated",
-		"Name": "AC/20 +",
-		"Details": "The king of the battlefield in terms of raw damage, AC/20s hit harder than any other weapon. However, this comes at the expense of weight, range, and severely limited ammunition. Like all Autocannon weaponry, AC/20s suffer from recoil effects from continuous fire.",
+		"Name": "Pierce AC/20",
+		"Details": "The king of the battlefield in terms of raw damage, AC/20s hit harder than any other weapon. This autocannon has been specially designed to allow for greater target penetration, meaning that while the direct armor damage is reduced somewhat the round does a small amount of direct structure damage.",
 		"Icon": "uixSvgIcon_weapon_Ballistic"
 	},
-	"BonusValueA": "+ 10% Crit.",
+	"BonusValueA": "Piercing",
 	"BonusValueB": "",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",
@@ -63,7 +69,8 @@
 		"items": [
 			"component_type_variant",
 			"component_type_variant1",
-			"range_standard"
+			"range_standard",
+			"BLACKLISTED"
 		],
 		"tagSetSourceFile": ""
 	}

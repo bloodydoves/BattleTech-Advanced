@@ -4,7 +4,14 @@
 			{
 				"CategoryID": "w/a/a/ac"
 			}
-		]
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"AreaOfEffect: 60",
+				"AreaOfEffectDmg: 12",
+				"AreaOfEffectSTABDmg: 2"
+			]
+		}
 	},
 	"Category": "Ballistic",
 	"Type": "Autocannon",
@@ -19,13 +26,13 @@
 	"AmmoCategory": "AC2",
 	"StartingAmmoCapacity": 0,
 	"HeatGenerated": 3,
-	"Damage": 25,
+	"Damage": 12,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
 	"EvasivePipsIgnored": 0,
 	"DamageVariance": 0,
 	"HeatDamage": 0,
-	"AccuracyModifier": -1,
+	"AccuracyModifier": 0,
 	"CriticalChanceMultiplier": 1,
 	"AOECapable": false,
 	"IndirectFireCapable": false,
@@ -33,7 +40,11 @@
 	"ShotsWhenFired": 1,
 	"ProjectilesPerShot": 3,
 	"AttackRecoil": 1,
-	"Instability": 5,
+	"Instability": 2,
+	"AOECapable": true,
+	"AOERange": 60,
+	"AOEDamage": 12,
+    "AOEInstability": 2,
 	"WeaponEffectID": "WeaponEffect-Weapon_AC2",
 	"Description": {
 		"Cost": 90000,
@@ -41,13 +52,13 @@
 		"Purchasable": true,
 		"Manufacturer": "Defiance",
 		"Model": "Sniper Autocannon",
-		"UIName": "AC/2 +",
+		"UIName": "Area AC/2",
 		"Id": "Weapon_Autocannon_AC2_1-Defiance",
-		"Name": "AC/2 +",
-		"Details": "Intended for use as supporting fire at very long range, AC/2s deal moderate damage with low heat and a large ammunition count per ton. Like all Autocannon weaponry, AC/2s suffer from recoil effects from continuous fire.",
+		"Name": "Area AC/2",
+		"Details": "Intended for use as supporting fire at very long range, AC/2s deal moderate damage with low heat and a large ammunition count per ton. This specific autocannon however has been modified to fire a special fragmenting round that deals reduced direct fire damage but then explodes into deadly shrapnel across an area surrounding the target for respectable area of effect damage.",
 		"Icon": "uixSvgIcon_weapon_Ballistic"
 	},
-	"BonusValueA": "+ 1 Acc.",
+	"BonusValueA": "AoE",
 	"BonusValueB": "",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",
@@ -63,7 +74,8 @@
 		"items": [
 			"component_type_variant",
 			"component_type_variant1",
-			"range_extreme"
+			"range_extreme",
+			"BLACKLISTED"
 		],
 		"tagSetSourceFile": ""
 	}

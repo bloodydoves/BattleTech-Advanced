@@ -4,7 +4,12 @@
 			{
 				"CategoryID": "w/e/l/laser"
 			}
-		]
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"ImpSensors: 40%"
+			]
+		}
 	},
 	"Category": "Energy",
 	"Type": "Laser",
@@ -19,12 +24,12 @@
 	"AmmoCategory": "NotSet",
 	"StartingAmmoCapacity": 0,
 	"HeatGenerated": 18,
-	"Damage": 40,
+	"Damage": 30,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
 	"EvasivePipsIgnored": 0,
 	"DamageVariance": 0,
-	"HeatDamage": 0,
+	"HeatDamage": 10,
 	"AccuracyModifier": -1,
 	"CriticalChanceMultiplier": 1.1,
 	"AOECapable": false,
@@ -41,14 +46,14 @@
 		"Purchasable": true,
 		"Manufacturer": "ExoStar",
 		"Model": "Large Laser",
-		"UIName": "L Laser +",
+		"UIName": "Haywire L Laser",
 		"Id": "Weapon_Laser_LargeLaser_1-ExoStar",
-		"Name": "L Laser +",
-		"Details": "Large Lasers exhibit a powerful combination of damage, range, and compactness but generate a substantial amount of heat. Like all Lasers, Large Lasers enjoy a baseline accuracy bonus over other weapons.",
+		"Name": "Haywire L Laser",
+		"Details": "Large Lasers exhibit a powerful combination of damage, range, and compactness but generate a substantial amount of heat. This laser has special circuitry built in that allow it to scramble the target's sensor systems and to temporarily damage their heat systems.",
 		"Icon": "uixSvgIcon_weapon_Energy"
 	},
-	"BonusValueA": "+ 10% Crit.",
-	"BonusValueB": "",
+	"BonusValueA": "+10 Heat Dmg",
+	"BonusValueB": "Sensor Scramble",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",
 	"PrefabIdentifier": "Laser",
@@ -58,7 +63,59 @@
 	"AllowedLocations": "All",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
-	"statusEffects": [],
+	"statusEffects": [
+		{
+            "durationData": {
+                "duration": 2,
+                "ticksOnActivations": true,
+                "useActivationsOfTarget": true,
+                "ticksOnEndOfRound": false,
+                "ticksOnMovements": false,
+                "stackLimit": -1,
+                "clearedWhenAttacked": false
+            },
+            "targetingData": {
+                "effectTriggerType": "OnHit",
+                "triggerLimit": 0,
+                "extendDurationOnTrigger": 0,
+                "specialRules": "NotSet",
+                "effectTargetType": "NotSet",
+                "range": 0,
+                "forcePathRebuild": false,
+                "forceVisRebuild": false,
+                "showInTargetPreview": false,
+                "showInStatusPanel": false
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "Effect_DebuffLaserSensor",
+                "Name": "Sensors Scrambled",
+                "Details": "Reduces Sensor distance by 40%",
+                "Icon": "uixSvgIcon_status_sensorsImpaired"
+            },
+            "nature": "Debuff",
+            "statisticData": {
+                "appliesEachTick": false,
+                "effectsPersistAfterDestruction": false,
+                "statName": "SensorDistanceAbsolute",
+                "operation": "Float_Multiply",
+                "modValue": "0.6",
+                "modType": "System.Single",
+                "additionalRules": "NotSet",
+                "targetCollection": "NotSet",
+                "targetWeaponCategory": "NotSet",
+                "targetWeaponType": "NotSet",
+                "targetAmmoCategory": "NotSet",
+                "targetWeaponSubType": "NotSet"
+            },
+            "tagData": null,
+            "floatieData": null,
+            "actorBurningData": null,
+            "vfxData": null,
+            "instantModData": null,
+            "poorlyMaintainedEffectData": null
+        }
+	],
 	"ComponentTags": {
 		"items": [
 			"component_type_variant",

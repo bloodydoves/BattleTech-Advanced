@@ -4,7 +4,12 @@
 			{
 				"CategoryID": "w/e/l/pulse"
 			}
-		]
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"Acid: 20%"
+			]
+		}
 	},
 	"Category": "Energy",
 	"Type": "Laser",
@@ -41,24 +46,61 @@
 		"Purchasable": false,
 		"Manufacturer": "Thunderbolt 12",
 		"Model": "Large Pulse Laser",
-		"UIName": "L Pulse +",
+		"UIName": "Disintegrate L Pulse",
 		"Id": "Weapon_Laser_LargeLaserPulse_1-Thunderbolt12",
-		"Name": "L Pulse +",
-		"Details": "An improvement upon standard Large Lasers, Large Pulse Lasers use pulses of light instead of a single beam. This results in better accuracy and damage output but with greatly increased heat and weight. Like all Lasers, Large Pulse Lasers enjoy a baseline accuracy bonus over other weapons.",
+		"Name": "Disintegrate L Pulse",
+		"Details": "An improvement upon standard Large Lasers, Large Pulse Lasers use pulses of light instead of a single beam. This results in better accuracy and damage output but with greatly increased heat and weight. This pulse laser has been calibrated to cascade over enemy armor, weakening it for further attacks for a short period of time.",
 		"Icon": "uixSvgIcon_weapon_Energy"
 	},
-	"BonusValueA": "+2 Accuracy",
-	"BonusValueB": "Lightweight",
+	"BonusValueA": "Armor Strip",
+	"BonusValueB": "",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",
 	"PrefabIdentifier": "Laser",
 	"BattleValue": 0,
 	"InventorySize": 2,
-	"Tonnage": 6,
+	"Tonnage": 7,
 	"AllowedLocations": "All",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
-	"statusEffects": [],
+	"statusEffects": [
+		{
+            "durationData": {
+                "duration": 2,
+                "ticksOnActivations": true,
+                "useActivationsOfTarget": true,
+                "ticksOnEndOfRound": false,
+                "ticksOnMovements": false,
+                "stackLimit": 1,
+                "clearedWhenAttacked": false
+            },
+            "targetingData": {
+                "effectTriggerType": "OnHit",
+                "triggerLimit": 0,
+                "extendDurationOnTrigger": 2,
+                "specialRules": "NotSet",
+                "effectTargetType": "NotSet",
+                "range": 0,
+                "forcePathRebuild": false,
+                "forceVisRebuild": false,
+                "showInTargetPreview": true,
+                "showInStatusPanel": true
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "Effect_Disintigration",
+                "Name": "Disintigration",
+                "Details": "This unit's armor is disintigrating. It will take 20% increased Damage.",
+                "Icon": "uixSvgIcon_biome_Heated"
+            },
+            "statisticData": {
+                "statName": "DamageReductionMultiplierAll",
+                "operation": "Float_Add",
+                "modValue": "0.2",
+                "modType": "System.Single"
+            },
+            "nature": "Debuff"
+	],
 	"ComponentTags": {
 		"items": [
 			"component_type_stock",

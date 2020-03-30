@@ -4,7 +4,14 @@
 			{
 				"CategoryID": "w/a/a/ac"
 			}
-		]
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"AreaOfEffect: 60",
+				"AreaOfEffectDmg: 50",
+				"AreaOfEffectSTABDmg: 20"
+			]
+		}
 	},
 	"Category": "Ballistic",
 	"Type": "Autocannon",
@@ -19,13 +26,13 @@
 	"AmmoCategory": "AC20",
 	"StartingAmmoCapacity": 0,
 	"HeatGenerated": 21,
-	"Damage": 100,
+	"Damage": 50,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
 	"EvasivePipsIgnored": 0,
 	"DamageVariance": 0,
 	"HeatDamage": 0,
-	"AccuracyModifier": -1,
+	"AccuracyModifier": 0,
 	"CriticalChanceMultiplier": 1,
 	"AOECapable": false,
 	"IndirectFireCapable": false,
@@ -33,7 +40,11 @@
 	"ShotsWhenFired": 1,
 	"ProjectilesPerShot": 1,
 	"AttackRecoil": 4,
-	"Instability": 40,
+	"Instability": 20,
+	"AOECapable": true,
+	"AOERange": 60,
+	"AOEDamage": 50,
+    "AOEInstability": 20,
 	"WeaponEffectID": "WeaponEffect-Weapon_AC20_Single",
 	"Description": {
 		"Cost": 270000,
@@ -41,13 +52,13 @@
 		"Purchasable": true,
 		"Manufacturer": "Defiance",
 		"Model": "Shredder Autocannon",
-		"UIName": "AC/20 +",
+		"UIName": "Area AC/20",
 		"Id": "Weapon_Autocannon_AC20_1-Defiance",
-		"Name": "AC/20 +",
-		"Details": "The king of the battlefield in terms of raw damage, AC/20s hit harder than any other weapon. However, this comes at the expense of weight, range, and severely limited ammunition. Like all Autocannon weaponry, AC/20s suffer from recoil effects from continuous fire.",
+		"Name": "Area AC/20",
+		"Details": "The king of the battlefield in terms of raw damage, AC/20s hit harder than almost any other weapon. This specific autocannon however has been modified to fire a special fragmenting round that deals reduced direct fire damage but then explodes into deadly shrapnel across an area surrounding the target for respectable area of effect damage.",
 		"Icon": "uixSvgIcon_weapon_Ballistic"
 	},
-	"BonusValueA": "+ 1 Acc.",
+	"BonusValueA": "AoE",
 	"BonusValueB": "",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",
@@ -63,7 +74,8 @@
 		"items": [
 			"component_type_variant",
 			"component_type_variant1",
-			"range_standard"
+			"range_standard",
+			"BLACKLISTED"
 		],
 		"tagSetSourceFile": ""
 	}

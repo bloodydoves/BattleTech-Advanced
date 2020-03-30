@@ -4,7 +4,14 @@
 			{
 				"CategoryID": "w/e/p/ppc"
 			}
-		]
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"AreaOfEffect: 90",
+				"AreaOfEffectDmg: 25",
+				"AreaOfEffectSTABDmg: 10"
+			]
+		}
 	},
 	"Category": "Energy",
 	"Type": "PPC",
@@ -19,7 +26,7 @@
 	"AmmoCategory": "NotSet",
 	"StartingAmmoCapacity": 0,
 	"HeatGenerated": 25,
-	"Damage": 55,
+	"Damage": 30,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
 	"EvasivePipsIgnored": 0,
@@ -33,7 +40,11 @@
 	"ShotsWhenFired": 1,
 	"ProjectilesPerShot": 1,
 	"AttackRecoil": 3,
-	"Instability": 30,
+	"Instability": 10,
+	"AOECapable": true,
+	"AOERange": 90,
+	"AOEDamage": 25,
+    "AOEInstability": 10,
 	"WeaponEffectID": "WeaponEffect-Weapon_PPC",
 	"Description": {
 		"Cost": 200000,
@@ -41,13 +52,13 @@
 		"Purchasable": true,
 		"Manufacturer": "Ceres Arms",
 		"Model": "Particle Projector Cannon",
-		"UIName": "PPC +",
+		"UIName": "AoE PPC",
 		"Id": "Weapon_PPC_PPC_1-Ceres_Arms",
-		"Name": "PPC +",
-		"Details": "Particle Projector Cannons—PPCs—fire streams of energized lightning at their target that deal substantial damage and stability impact. However, this comes with intense heat generation and bulkiness. PPCs also generate a mild EM field that degrades the firing capability of their target.",
+		"Name": "AoE PPC",
+		"Details": "This PPC has been specially redesigned around a unique emitter that shreds the PPC blast as it is emitted. This shredding effect causes some of the effect to spread across a wide area instead of just striking a focused point, doing substantial area of effect damage around the initial target.",
 		"Icon": "uixSvgIcon_weapon_Energy"
 	},
-	"BonusValueA": "+ 10 Stb.Dmg.",
+	"BonusValueA": "AoE",
 	"BonusValueB": "",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",
@@ -94,7 +105,7 @@
 				"effectsPersistAfterDestruction": false,
 				"statName": "AccuracyModifier",
 				"operation": "Float_Add",
-				"modValue": "1.0",
+				"modValue": "2.0",
 				"modType": "System.Single",
 				"additionalRules": "NotSet",
 				"targetCollection": "NotSet",

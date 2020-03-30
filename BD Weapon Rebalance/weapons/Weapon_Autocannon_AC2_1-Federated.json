@@ -4,7 +4,12 @@
 			{
 				"CategoryID": "w/a/a/ac"
 			}
-		]
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"StructureDmgMod: 5"
+			]
+		}
 	},
 	"Category": "Ballistic",
 	"Type": "Autocannon",
@@ -19,14 +24,14 @@
 	"AmmoCategory": "AC2",
 	"StartingAmmoCapacity": 0,
 	"HeatGenerated": 3,
-	"Damage": 25,
+	"Damage": 20,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
 	"EvasivePipsIgnored": 0,
 	"DamageVariance": 0,
 	"HeatDamage": 0,
 	"AccuracyModifier": 0,
-	"CriticalChanceMultiplier": 1.1,
+	"CriticalChanceMultiplier": 1,
 	"AOECapable": false,
 	"IndirectFireCapable": false,
 	"RefireModifier": 1,
@@ -34,6 +39,7 @@
 	"ProjectilesPerShot": 3,
 	"AttackRecoil": 1,
 	"Instability": 5,
+	"APDamage": 5,
 	"WeaponEffectID": "WeaponEffect-Weapon_AC2",
 	"Description": {
 		"Cost": 60000,
@@ -41,13 +47,13 @@
 		"Purchasable": true,
 		"Manufacturer": "Federated",
 		"Model": "Sniper Autocannon",
-		"UIName": "AC/2 +",
+		"UIName": "Pierce AC/2",
 		"Id": "Weapon_Autocannon_AC2_1-Federated",
-		"Name": "AC/2 +",
-		"Details": "Intended for use as supporting fire at very long range, AC/2s deal moderate damage with low heat and a large ammunition count per ton. Like all Autocannon weaponry, AC/2s suffer from recoil effects from continuous fire.",
+		"Name": "Pierce AC/2",
+		"Details": "Intended for use as supporting fire at very long range, AC/2s deal moderate damage with low heat and a large ammunition count per ton. This autocannon has been specially designed to allow for greater target penetration, meaning that while the direct armor damage is reduced somewhat the round does a small amount of direct structure damage.",
 		"Icon": "uixSvgIcon_weapon_Ballistic"
 	},
-	"BonusValueA": "+ 10% Crit.",
+	"BonusValueA": "Piercing",
 	"BonusValueB": "",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",
@@ -63,7 +69,8 @@
 		"items": [
 			"component_type_variant",
 			"component_type_variant1",
-			"range_extreme"
+			"range_extreme",
+			"BLACKLISTED"
 		],
 		"tagSetSourceFile": ""
 	}

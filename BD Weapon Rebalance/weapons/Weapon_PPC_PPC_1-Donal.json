@@ -4,7 +4,12 @@
 			{
 				"CategoryID": "w/e/p/ppc"
 			}
-		]
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"PPCDEBUFF: 4"
+			]
+		}
 	},
 	"Category": "Energy",
 	"Type": "PPC",
@@ -19,7 +24,7 @@
 	"AmmoCategory": "NotSet",
 	"StartingAmmoCapacity": 0,
 	"HeatGenerated": 25,
-	"Damage": 57,
+	"Damage": 45,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
 	"EvasivePipsIgnored": 0,
@@ -33,7 +38,7 @@
 	"ShotsWhenFired": 1,
 	"ProjectilesPerShot": 1,
 	"AttackRecoil": 3,
-	"Instability": 20,
+	"Instability": 15,
 	"WeaponEffectID": "WeaponEffect-Weapon_PPC",
 	"Description": {
 		"Cost": 190000,
@@ -41,13 +46,13 @@
 		"Purchasable": true,
 		"Manufacturer": "Donal",
 		"Model": "Particle Projector Cannon",
-		"UIName": "PPC +",
+		"UIName": "Static PPC",
 		"Id": "Weapon_PPC_PPC_1-Donal",
-		"Name": "PPC +",
-		"Details": "Particle Projector Cannons—PPCs—fire streams of energized lightning at their target that deal substantial damage and stability impact. However, this comes with intense heat generation and bulkiness. PPCs also generate a mild EM field that degrades the firing capability of their target.",
+		"Name": "Static PPC",
+		"Details": "Particle Projector Cannons—PPCs—fire streams of energized lightning at their target that deal substantial damage and stability impact. However, this comes with intense heat generation and bulkiness. Where normal PPCs generate a mild EMP effect on a hit, this one has been calibrated to generate a substantial field, truly scrambling the target. The EMP effect from this PPC also endures slightly longer due to its strength. To get this effect, the weapon had to be calibrated to do less damage up front though.",
 		"Icon": "uixSvgIcon_weapon_Energy"
 	},
-	"BonusValueA": "+ 2 Dmg.",
+	"BonusValueA": "",
 	"BonusValueB": "",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",
@@ -61,7 +66,7 @@
 	"statusEffects": [
 		{
 			"durationData": {
-				"duration": 1,
+				"duration": 2,
 				"ticksOnActivations": true,
 				"useActivationsOfTarget": true,
 				"ticksOnEndOfRound": false,
@@ -94,7 +99,7 @@
 				"effectsPersistAfterDestruction": false,
 				"statName": "AccuracyModifier",
 				"operation": "Float_Add",
-				"modValue": "1.0",
+				"modValue": "4.0",
 				"modType": "System.Single",
 				"additionalRules": "NotSet",
 				"targetCollection": "NotSet",

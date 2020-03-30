@@ -4,7 +4,13 @@
 			{
 				"CategoryID": "w/m/l/lrm"
 			}
-		]
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"AreaOfEffect: 60",
+				"AreaOfEffectDmg: 2"
+			]
+		}
 	},
 	"Category": "Missile",
 	"Type": "LRM",
@@ -19,14 +25,14 @@
 	"AmmoCategory": "LRM",
 	"StartingAmmoCapacity": 0,
 	"HeatGenerated": 12,
-	"Damage": 4,
+	"Damage": 2,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
 	"EvasivePipsIgnored": 0,
 	"DamageVariance": 0,
 	"HeatDamage": 0,
 	"AccuracyModifier": 0,
-	"CriticalChanceMultiplier": 1.1,
+	"CriticalChanceMultiplier": 1,
 	"AOECapable": false,
 	"IndirectFireCapable": true,
 	"RefireModifier": 0,
@@ -35,6 +41,9 @@
 	"AttackRecoil": 1,
 	"Instability": 1,
 	"AMSHitChance": 0,
+	"AOECapable": true,
+	"AOERange": 60,
+	"AOEDamage": 2,
 	"WeaponEffectID": "WeaponEffect-Weapon_LRM10",
 	"Description": {
 		"Cost": 160000,
@@ -42,13 +51,13 @@
 		"Purchasable": true,
 		"Manufacturer": "LongFire",
 		"Model": "Long-Range Missile Launcher",
-		"UIName": "LRM10 +",
+		"UIName": "AoE LRM10",
 		"Id": "Weapon_LRM_LRM10_1-LongFire",
-		"Name": "LRM10 +",
-		"Details": "The LRM10 rack of Long-Range Missiles occupies a supporting fire role when mounted on most units, with fairly low damage balanced by low heat and ammunition consumption. Like all LRMs, LRM10s are capable of indirect fire over obstacles and terrain with the benefit of a spotter unit.",
+		"Name": "AoE LRM10",
+		"Details": "The LRM10 rack of Long-Range Missiles occupies a supporting fire role when mounted on most units, with fairly low damage balanced by low heat and ammunition consumption. These LRMs have been reworked to attach an extra explosive charge to each missile in the tube, such that when the missile impacts its target, it causes a small AoE explosion around the target as well. The damage is minimal, but it adds up fast.",
 		"Icon": "uixSvgIcon_weapon_Missile"
 	},
-	"BonusValueA": "+ 10% Crit.",
+	"BonusValueA": "AoE",
 	"BonusValueB": "",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",

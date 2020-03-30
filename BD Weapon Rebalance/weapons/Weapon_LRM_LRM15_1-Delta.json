@@ -4,7 +4,15 @@
 			{
 				"CategoryID": "w/m/l/lrm"
 			}
-		]
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"PipsIgnored: 1",
+				"WpnAccuracy: +1",
+				"NoIndirect",
+				"Streak"
+			]
+		}
 	},
 	"Category": "Missile",
 	"Type": "LRM",
@@ -19,22 +27,24 @@
 	"AmmoCategory": "LRM",
 	"StartingAmmoCapacity": 0,
 	"HeatGenerated": 15,
-	"Damage": 4,
+	"Damage": 2,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
-	"EvasivePipsIgnored": 0,
+	"EvasivePipsIgnored": 1,
 	"DamageVariance": 0,
 	"HeatDamage": 0,
-	"AccuracyModifier": 0,
+	"AccuracyModifier": -1,
 	"CriticalChanceMultiplier": 1,
 	"AOECapable": false,
-	"IndirectFireCapable": true,
+	"IndirectFireCapable": false,
 	"RefireModifier": 0,
 	"ShotsWhenFired": 15,
 	"ProjectilesPerShot": 1,
 	"AttackRecoil": 1,
-	"Instability": 2,
+	"Instability": 0.5,
 	"AMSHitChance": 0,
+	"Streak": true,
+	"HitGenerator": "Streak",
 	"WeaponEffectID": "WeaponEffect-Weapon_LRM15",
 	"Description": {
 		"Cost": 250000,
@@ -42,13 +52,13 @@
 		"Purchasable": true,
 		"Manufacturer": "Delta",
 		"Model": "Long-Range Missile Launcher",
-		"UIName": "LRM15 +",
+		"UIName": "Streak LRM15",
 		"Id": "Weapon_LRM_LRM15_1-Delta",
-		"Name": "LRM15 +",
-		"Details": "LRM15 Long-Range Missile racks deal substantial damage and stability impact over distance, often found in pairs on indirect-fire support units. Like all LRMs, LRM15s are capable of indirect fire over obstacles and terrain with the benefit of a spotter unit.",
+		"Name": "Streak LRM15",
+		"Details": "LRM15 Long-Range Missile racks deal substantial damage and stability impact over distance, often found in pairs on indirect-fire support units. These LRMs are an attempt for the Inner Sphere to duplicate Clan Streak LRMs, though they had to do so by reducing the weapon's damage values by half and of course had to lose the indirect fire capability, relegating these weapons to the forgotten corner of history.",
 		"Icon": "uixSvgIcon_weapon_Missile"
 	},
-	"BonusValueA": "+ 1 Stb.Dmg.",
+	"BonusValueA": "Streak",
 	"BonusValueB": "",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",

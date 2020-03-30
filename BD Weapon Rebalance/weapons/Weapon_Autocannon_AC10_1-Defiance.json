@@ -4,7 +4,14 @@
 			{
 				"CategoryID": "w/a/a/ac"
 			}
-		]
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"AreaOfEffect: 60",
+				"AreaOfEffectDmg: 30",
+				"AreaOfEffectSTABDmg: 10"
+			]
+		}
 	},
 	"Category": "Ballistic",
 	"Type": "Autocannon",
@@ -19,13 +26,13 @@
 	"AmmoCategory": "AC10",
 	"StartingAmmoCapacity": 0,
 	"HeatGenerated": 9,
-	"Damage": 60,
+	"Damage": 30,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
 	"EvasivePipsIgnored": 0,
 	"DamageVariance": 0,
 	"HeatDamage": 0,
-	"AccuracyModifier": -1,
+	"AccuracyModifier": 0,
 	"CriticalChanceMultiplier": 1,
 	"AOECapable": false,
 	"IndirectFireCapable": false,
@@ -33,7 +40,11 @@
 	"ShotsWhenFired": 1,
 	"ProjectilesPerShot": 1,
 	"AttackRecoil": 3,
-	"Instability": 20,
+	"Instability": 10,
+	"AOECapable": true,
+	"AOERange": 60,
+	"AOEDamage": 30,
+    "AOEInstability": 10,
 	"WeaponEffectID": "WeaponEffect-Weapon_AC10_Single",
 	"Description": {
 		"Cost": 230000,
@@ -41,13 +52,13 @@
 		"Purchasable": true,
 		"Manufacturer": "Defiance",
 		"Model": "Heavy Autocannon",
-		"UIName": "AC/10 +",
+		"UIName": "Area AC/10",
 		"Id": "Weapon_Autocannon_AC10_1-Defiance",
-		"Name": "AC/10 +",
-		"Details": "One of the most powerful and efficient weapons mounted in combat, AC/10s are known for their heavy damage and ability to stagger opponents. Like all Autocannon weaponry, AC/10s suffer from recoil effects from continuous fire.",
+		"Name": "Area AC/10",
+		"Details": "One of the most powerful and efficient weapons mounted in combat, AC/10s are known for their heavy damage and ability to stagger opponents. This specific autocannon however has been modified to fire a special fragmenting round that deals reduced direct fire damage but then explodes into deadly shrapnel across an area surrounding the target for respectable area of effect damage.",
 		"Icon": "uixSvgIcon_weapon_Ballistic"
 	},
-	"BonusValueA": "+ 1 Acc.",
+	"BonusValueA": "AoE",
 	"BonusValueB": "",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",
@@ -63,7 +74,8 @@
 		"items": [
 			"component_type_variant",
 			"component_type_variant1",
-			"range_long"
+			"range_long",
+			"BLACKLISTED"
 		],
 		"tagSetSourceFile": ""
 	}
