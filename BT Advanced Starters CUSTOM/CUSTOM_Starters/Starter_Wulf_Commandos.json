@@ -1,0 +1,29 @@
+{
+    "TargetID": "CareerDifficultySettings",
+    "Instructions": [
+        {
+			"JSONPath": "$.difficultyList[?(@.ID== 'diff_startingplanet')].Options",
+            "Action": "ArrayAdd",
+            "Value": 
+							{
+					"ID": "diff_Commandos",
+					"Name": "Commandos",
+					"TelemetryEventDesc": "",
+					"DifficultyValue": 0,
+					"CareerScoreModifier": 0.0,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "CareerMode",
+							"ConstantName": "StartingSystems",
+							"ConstantValue": "Paf"
+						},
+						{
+							"ConstantType": "CareerMode",
+							"ConstantName": "StartingRandomMechLists",
+							"ConstantValue": "itemCollection_Mechs_Starting_Wulf_Commandos,itemCollection_Mechs_Starting_Wulf_Commandos,itemCollection_Mechs_Starting_Wulf_Commandos,itemCollection_Mechs_Starting_Wulf_Commandos,itemCollection_Mechs_Starting_Wulf_Commandos"
+						}
+					]
+				}
+         }
+    ]
+}
