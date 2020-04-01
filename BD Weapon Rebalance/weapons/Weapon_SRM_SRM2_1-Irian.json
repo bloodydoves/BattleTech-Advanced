@@ -4,7 +4,15 @@
 			{
 				"CategoryID": "w/m/s/srm"
 			}
-		]
+		],
+        "BonusDescriptions": {
+            "Bonuses": [
+                "DelayedImpact: 1",
+                "AreaOfEffect: 30",
+                "AreaOfEffectDmg: 8",
+                "AreaOfEffectSTABDmg: 2"
+            ]
+        }
 	},
 	"Category": "Missile",
 	"Type": "SRM",
@@ -19,21 +27,21 @@
 	"AmmoCategory": "SRM",
 	"StartingAmmoCapacity": 0,
 	"HeatGenerated": 6,
-	"Damage": 8,
+	"Damage": 1,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
 	"EvasivePipsIgnored": 0,
 	"DamageVariance": 0,
 	"HeatDamage": 0,
 	"AccuracyModifier": 0,
-	"CriticalChanceMultiplier": 1.1,
+	"CriticalChanceMultiplier": 0.01,
 	"AOECapable": false,
 	"IndirectFireCapable": false,
 	"RefireModifier": 0,
 	"ShotsWhenFired": 2,
 	"ProjectilesPerShot": 1,
 	"AttackRecoil": 1,
-	"Instability": 3,
+	"Instability": 0,
 	"AMSHitChance": 0,
 	"WeaponEffectID": "WeaponEffect-Weapon_SRM2",
 	"Description": {
@@ -42,13 +50,13 @@
 		"Purchasable": true,
 		"Manufacturer": "Irian",
 		"Model": "Short-Range Missile Launcher",
-		"UIName": "SRM2 +",
+		"UIName": "Sticky SRM2",
 		"Id": "Weapon_SRM_SRM2_1-Irian",
-		"Name": "SRM2 +",
-		"Details": "A tiny rack of Short-Range Missiles, SRM2s deal little damage but also cost almost nothing in the way of weight, space, heat, or ammunition consumption. As for all SRMs, SRM2 shots deal above-average stability impact per hit compared to other weapons.",
+		"Name": "Sticky SRM2",
+		"Details": "A strange weapon indeed, this SRM has been redesigned from the ground up to fire a delayed sticky missile instead of a normal explosive warhead. Upon impact, the missile simply imbeds itself on the target's armor and primes itself. A brief wait later, the warhead detonates, causing a small AoE explosion around the target. This applies to each warhead fired from the launcher, every time the launcher is used, meaning the effect can cascade rapidly and cause extreme AoE damage.",
 		"Icon": "uixSvgIcon_weapon_Missile"
 	},
-	"BonusValueA": "+ 10% Crit.",
+	"BonusValueA": "Sticky Bomb",
 	"BonusValueB": "",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",
@@ -60,6 +68,40 @@
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
 	"statusEffects": [],
+	"deferredEffect": {
+        "id": "SRMSTICKY",
+        "rounds": 1,
+        "text": "Explosive SRM",
+        "VFX": "WFX_ExplosiveSmokeM",
+        "waitVFX": "vfxPrfPrtl_narcMarker_loop",
+        "SFX": "AudioEventList_explosion_explosion_medium",
+        "VFXtime": 1,
+        "damageApplyTime": 1,
+        "AOERange": 30,
+        "AOEDamage": 8,
+        "AOEHeatDamage": 0,
+        "AOEInstability": 2,
+        "RangeColor": {
+            "C": "#00FF00",
+            "I": 1.5
+        },
+        "FireTerrainChance": 0.05,
+        "FireDurationWithoutForest": 2,
+        "FireTerrainStrength": 10,
+        "FireTerrainCellRadius": 3,
+        "TerrainVFX": "",
+        "TerrainVFXScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+        },
+        "tempDesignMask": "",
+        "tempDesignMaskTurns": 1,
+        "tempDesignMaskCellRadius": 1,
+        "statusEffects": [],
+        "statusEffectsRangeFalloff": true,
+        "sticky": true
+    },
 	"ComponentTags": {
 		"items": [
 			"component_type_variant",
