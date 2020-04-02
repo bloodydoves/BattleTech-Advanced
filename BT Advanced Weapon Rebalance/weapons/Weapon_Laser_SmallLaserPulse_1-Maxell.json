@@ -1,0 +1,114 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/s/l/pulse"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"Acid: 5%"
+			]
+		}
+	},
+	"Category": "AntiPersonnel",
+	"Type": "Laser",
+	"WeaponSubType": "SmallLaserPulse",
+	"MinRange": 0,
+	"MaxRange": 120,
+	"RangeSplit": [
+		30,
+		60,
+		90
+	],
+	"AmmoCategory": "NotSet",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 9,
+	"Damage": 20,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 1,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": -2,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 1,
+	"Instability": 0,
+	"WeaponEffectID": "WeaponEffect-Weapon_LaserPulse_Small",
+	"Description": {
+		"Cost": 280000,
+		"Rarity": 100,
+		"Purchasable": false,
+		"Manufacturer": "Maxell Metals",
+		"Model": "Small Pulse Laser",
+		"UIName": "Dissolving S Pulse",
+		"Id": "Weapon_Laser_SmallLaserPulse_1-Maxell",
+		"Name": "Dissolving S Pulse",
+		"Details": "An improvement upon standard Small Lasers, Small Pulse Lasers use pulses of light instead of a single beam. This results in better accuracy and damage output but with greatly increased heat and weight. This pulse laser has been calibrated to cascade over enemy armor, weakening it for further attacks for a short period of time.",
+		"Icon": "uixSvgIcon_weapon_Support"
+	},
+	"BonusValueA": "Armor Strip",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "Laser",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 1,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": 2,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 2,
+				"specialRules": "NotSet",
+				"effectTargetType": "NotSet",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": true,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Effect_Disintigration",
+				"Name": "Disintigration",
+				"Details": "This unit's armor is disintigrating. It will take 5% increased Damage.",
+				"Icon": "uixSvgIcon_biome_Heated"
+			},
+			"statisticData": {
+				"statName": "DamageReductionMultiplierAll",
+				"operation": "Float_Add",
+				"modValue": "0.05",
+				"modType": "System.Single"
+			},
+			"nature": "Debuff"
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"component_type_lostech",
+			"range_close",
+			"BLACKLISTED"
+		],
+		"tagSetSourceFile": ""
+	}
+}

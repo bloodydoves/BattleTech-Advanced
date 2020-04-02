@@ -1,0 +1,179 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/e/l/er"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"MoveSpeed: 20"
+			]
+		}
+	},
+	"Category": "Energy",
+	"Type": "Laser",
+	"WeaponSubType": "MediumLaserER",
+	"MinRange": 0,
+	"MaxRange": 480,
+	"RangeSplit": [
+		120,
+		240,
+		360
+	],
+	"AmmoCategory": "NotSet",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 15,
+	"Damage": 20,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 0,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": -1,
+	"CriticalChanceMultiplier": 1.2,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 1,
+	"Instability": 0,
+	"WeaponEffectID": "WeaponEffect-Weapon_LaserER_Medium",
+	"Description": {
+		"Cost": 820000,
+		"Rarity": 100,
+		"Purchasable": false,
+		"Manufacturer": "Magna VI",
+		"Model": "Extended-Range Medium Laser",
+		"UIName": "Static ER M Laser",
+		"Id": "Weapon_Laser_MediumLaserER_1-MagnaVI",
+		"Name": "Static ER M Laser",
+		"Details": "An improvement upon standard Medium Lasers, Extended-Range Medium Lasers extend their effective range at the cost of considerable heat generation. This particular laser has been specially calibrated to apply a debilitating electrical charge to the target on contact that interferes with the movement functions of the target, slowing them somewhat.",
+		"Icon": "uixSvgIcon_weapon_Energy"
+	},
+	"BonusValueA": "Speed Debuff",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "Laser",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 1,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+        {
+      "durationData": {
+        "duration": 2,
+        "ticksOnActivations": true,
+        "useActivationsOfTarget": true,
+        "ticksOnEndOfRound": false,
+        "ticksOnMovements": false,
+        "stackLimit": 2,
+        "clearedWhenAttacked": false
+      },
+      "targetingData": {
+        "effectTriggerType": "OnHit",
+        "triggerLimit": 0,
+        "extendDurationOnTrigger": 0,
+        "specialRules": "NotSet",
+        "effectTargetType": "NotSet",
+        "range": 0,
+        "forcePathRebuild": false,
+        "forceVisRebuild": false,
+        "showInTargetPreview": false,
+        "showInStatusPanel": false
+      },
+      "effectType": "StatisticEffect",
+      "Description": {
+        "Id": "ERLaser-WalkSlow",
+        "Name": "Walk Impaired",
+        "Details": "The Mech's Movement is reduced.",
+        "Icon": "uixSvgIcon_status_sensorsImpaired"
+      },
+      "nature": "Debuff",
+      "statisticData": {
+        "appliesEachTick": false,
+        "effectsPersistAfterDestruction": false,
+        "statName": "WalkSpeed",
+        "operation": "Float_Multiply",
+        "modValue": "0.8",
+        "modType": "System.Single",
+        "additionalRules": "NotSet",
+        "targetCollection": "NotSet",
+        "targetWeaponCategory": "NotSet",
+        "targetWeaponType": "NotSet",
+        "targetAmmoCategory": "NotSet",
+        "targetWeaponSubType": "NotSet"
+      },
+      "tagData": null,
+      "floatieData": null,
+      "actorBurningData": null,
+      "vfxData": null,
+      "instantModData": null,
+      "poorlyMaintainedEffectData": null
+    },
+    {
+      "durationData": {
+        "duration": 2,
+        "ticksOnActivations": true,
+        "useActivationsOfTarget": true,
+        "ticksOnEndOfRound": false,
+        "ticksOnMovements": false,
+        "stackLimit": 2,
+        "clearedWhenAttacked": false
+      },
+      "targetingData": {
+        "effectTriggerType": "OnHit",
+        "triggerLimit": 0,
+        "extendDurationOnTrigger": 0,
+        "specialRules": "NotSet",
+        "effectTargetType": "NotSet",
+        "range": 0,
+        "forcePathRebuild": false,
+        "forceVisRebuild": false,
+        "showInTargetPreview": false,
+        "showInStatusPanel": false
+      },
+      "effectType": "StatisticEffect",
+      "Description": {
+        "Id": "ERLaser-RunSlow",
+        "Name": "Sprint Impaired",
+        "Details": "The Mech's Movement is reduced.",
+        "Icon": "uixSvgIcon_status_sensorsImpaired"
+      },
+      "nature": "Debuff",
+      "statisticData": {
+        "appliesEachTick": false,
+        "effectsPersistAfterDestruction": false,
+        "statName": "RunSpeed",
+        "operation": "Float_Multiply",
+        "modValue": "0.8",
+        "modType": "System.Single",
+        "additionalRules": "NotSet",
+        "targetCollection": "NotSet",
+        "targetWeaponCategory": "NotSet",
+        "targetWeaponType": "NotSet",
+        "targetAmmoCategory": "NotSet",
+        "targetWeaponSubType": "NotSet"
+      },
+      "tagData": null,
+      "floatieData": null,
+      "actorBurningData": null,
+      "vfxData": null,
+      "instantModData": null,
+      "poorlyMaintainedEffectData": null
+    }
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"component_type_lostech",
+			"range_standard",
+			"BLACKLISTED"
+		],
+		"tagSetSourceFile": ""
+	}
+}
