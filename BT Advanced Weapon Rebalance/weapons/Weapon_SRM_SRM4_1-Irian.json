@@ -7,10 +7,7 @@
 		],
         "BonusDescriptions": {
             "Bonuses": [
-                "DelayedImpact: 1",
-                "AreaOfEffect: 30",
-                "AreaOfEffectDmg: 8",
-                "AreaOfEffectSTABDmg: 2"
+                "StructureDmgMod: 1"
             ]
         }
 	},
@@ -34,15 +31,16 @@
 	"DamageVariance": 0,
 	"HeatDamage": 0,
 	"AccuracyModifier": 0,
-	"CriticalChanceMultiplier": 0.01,
-	"AOECapable": false,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": true,
 	"IndirectFireCapable": false,
 	"RefireModifier": 0,
-	"ShotsWhenFired": 4,
+	"ShotsWhenFired": 2,
 	"ProjectilesPerShot": 1,
 	"AttackRecoil": 1,
 	"Instability": 0,
 	"AMSHitChance": 0,
+	"APDamage": 1,
 	"WeaponEffectID": "WeaponEffect-Weapon_SRM4",
 	"Description": {
 		"Cost": 60000,
@@ -50,13 +48,13 @@
 		"Purchasable": true,
 		"Manufacturer": "Irian",
 		"Model": "Short-Range Missile Launcher",
-		"UIName": "Sticky SRM4",
+		"UIName": "Piercing SRM2",
 		"Id": "Weapon_SRM_SRM4_1-Irian",
-		"Name": "Sticky SRM4",
-		"Details": "A strange weapon indeed, this SRM has been redesigned from the ground up to fire a delayed sticky missile instead of a normal explosive warhead. Upon impact, the missile simply imbeds itself on the target's armor and primes itself. A brief wait later, the warhead detonates, causing a small AoE explosion around the target. This applies to each warhead fired from the launcher, every time the launcher is used, meaning the effect can cascade rapidly and cause extreme AoE damage.",
+		"Name": "Piercing SRM2",
+		"Details": "Unlike normal SRMs, these SRMs have been specially designed for maximum armor penetration. However, to achieve this penetrative power, this SRM rack has half the normal amount of functional missile tubes and does virtually no damage, dealing extremely minimal damage amounts. However, since it instantly pierces through to structure, the appeal lies in gambling on dealing critical damage to the target.",
 		"Icon": "uixSvgIcon_weapon_Missile"
 	},
-	"BonusValueA": "Sticky Bomb",
+	"BonusValueA": "Armor Piercing",
 	"BonusValueB": "",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",
@@ -68,40 +66,6 @@
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
 	"statusEffects": [],
-	"deferredEffect": {
-        "id": "SRMSTICKY",
-        "rounds": 1,
-        "text": "Explosive SRM",
-        "VFX": "WFX_ExplosiveSmokeM",
-        "waitVFX": "vfxPrfPrtl_narcMarker_loop",
-        "SFX": "AudioEventList_explosion_explosion_medium",
-        "VFXtime": 1,
-        "damageApplyTime": 1,
-        "AOERange": 30,
-        "AOEDamage": 8,
-        "AOEHeatDamage": 0,
-        "AOEInstability": 2,
-        "RangeColor": {
-            "C": "#00FF00",
-            "I": 1.5
-        },
-        "FireTerrainChance": 0.05,
-        "FireDurationWithoutForest": 2,
-        "FireTerrainStrength": 10,
-        "FireTerrainCellRadius": 3,
-        "TerrainVFX": "",
-        "TerrainVFXScale": {
-            "x": 1,
-            "y": 1,
-            "z": 1
-        },
-        "tempDesignMask": "",
-        "tempDesignMaskTurns": 1,
-        "tempDesignMaskCellRadius": 1,
-        "statusEffects": [],
-        "statusEffectsRangeFalloff": true,
-        "sticky": true
-    },
 	"ComponentTags": {
 		"items": [
 			"component_type_variant",
