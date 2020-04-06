@@ -7,6 +7,9 @@
 	"DependsOn": [
 		"CustomComponents"
 	],
+	"CustomResourceTypes": [
+		"CustomSVGIcon"
+	],
 	"DLL": "CustomFilters.dll",
 	"DLLEntryPoint": "CustomFilters.Control.Init",
 	"Settings": {
@@ -82,7 +85,8 @@
 								"w/e/l/erpulse",
 								"w/e/l/heavy",
 								"w/e/l/bombast",
-								"w/e/l/binary"
+								"w/e/l/binary",
+								"w/e/l/chemical"
 							]
 						}
 					},
@@ -121,7 +125,9 @@
 								"w/m/l/lrm",
 								"w/m/l/elrm",
 								"w/m/s/mrm",
-								"w/m/t/thunderbolt"
+								"w/m/t/thunderbolt",
+								"w/m/l/atm",
+								"w/m/l/iatm"
 							]
 						}
 					},
@@ -178,10 +184,11 @@
 					},
 					{
 						"Icon": "FerroMag",
-						"Tooltip": "Show Ballistic ammo",
+						"Tooltip": "Show Gauss ammo",
 						"Filter": {
 							"Categories": [
-								"a/a/g/gauss"
+								"a/a/g/gauss",
+								"w/a/g/hag"
 							]
 						}
 					},
@@ -218,16 +225,19 @@
 								"LRMARTIVAmmo",
 								"a/m/s/mrm",
 								"a/m/s/apm",
-								"a/m/s/vrm"
+								"a/m/s/vrm",
+								"a/m/l/atm",
+								"a/m/l/iatm"
 							]
 						}
 					},
 					{
 						"Icon": "particle",
-						"Tooltip": "Show Plasma fuel/ammo",
+						"Tooltip": "Show Plasma/chemical fuel/ammo",
 						"Filter": {
 							"Categories": [
-								"a/e/p/plasma"
+								"a/e/p/plasma",
+								"a/e/l/chemical"
 							]
 						}
 					},
@@ -284,7 +294,8 @@
 						"Tooltip": "Cooling Kits",
 						"Filter": {
 							"Categories": [
-								"Cooling"
+								"Cooling",
+								"CoolingSystemCDHS"
 							],
 							"NotCategories": [
 								"EngineShield"
