@@ -1,0 +1,134 @@
+<?xml version="1.0" ?>
+<BtaConfig>
+	<RequiredBattleTechVersion>1.9.1</RequiredBattleTechVersion>
+	<RequiredLauncherVersion>1.0.0</RequiredLauncherVersion>
+	<SecureHash>FloWJBawFkcWoRaVFiEWxBbXFnoWiRYSFhUWtRZzFmI=</SecureHash>
+	<showCoreItems>true</showCoreItems>
+	<Tasks>
+		<InstallTask>
+			<Id>coreInstall</Id>
+			<canSelect>false</canSelect>
+			<excludePaths>BtaConfig.xml,.git,.modtek,.git,log.txt,Flashpoint DLC Flashpoints,Flashpoint Unit Module,Heavy Metal Equipment Module,Heavy Metal Flashpoint Module,Heavy Metal Unit Module,Urban Warfare Flashpoints,Urban Warfare Unit Module</excludePaths>
+			<isSelected>true</isSelected>
+			<jobOrder>0</jobOrder>
+			<jobType>Install</jobType>
+			<optionGroupId/>
+			<promptConfirmation>false</promptConfirmation>
+			<promptText/>
+			<sourcePath/>
+			<targetPath/>
+			<uiDescription/>
+			<uiName>BTAdvanced Core</uiName>
+		</InstallTask>
+		<InstallTask>
+			<Id>BTAFlashPointModule</Id>
+			<canSelect>true</canSelect>
+			<excludePaths>log.txt</excludePaths>
+			<isSelected>false</isSelected>
+			<jobOrder>0</jobOrder>
+			<jobType>MultiComponentInstall</jobType>
+			<optionGroupId>DLC</optionGroupId>
+			<promptConfirmation>false</promptConfirmation>
+			<promptText/>
+			<sourcePath>Flashpoint DLC Flashpoints, Flashpoint Unit Module</sourcePath>
+			<targetPath>Flashpoint DLC Flashpoints, Flashpoint Unit Module</targetPath>
+			<uiDescription>Adds additional Flashpoints and units based on the FlashPoints DLC</uiDescription>
+			<uiName>Flashpoints</uiName>
+		</InstallTask>
+		<InstallTask>
+			<Id>BTAUrbanWarfareModule</Id>
+			<canSelect>true</canSelect>
+			<excludePaths>log.txt</excludePaths>
+			<isSelected>false</isSelected>
+			<jobOrder>0</jobOrder>
+			<jobType>MultiComponentInstall</jobType>
+			<optionGroupId>DLC</optionGroupId>
+			<promptConfirmation>false</promptConfirmation>
+			<promptText/>
+			<sourcePath>Urban Warfare Flashpoints, Urban Warfare Unit Module</sourcePath>
+			<targetPath>Urban Warfare Flashpoints, Urban Warfare Unit Module</targetPath>
+			<uiDescription>Adds additional Flashpoints and units based on the Urban Warfare DLC</uiDescription>
+			<uiName>Urban Warfare</uiName>
+		</InstallTask>
+		<InstallTask>
+			<Id>BTAHeavyMetalModule</Id>
+			<canSelect>true</canSelect>
+			<excludePaths>log.txt</excludePaths>
+			<isSelected>false</isSelected>
+			<jobOrder>0</jobOrder>
+			<jobType>MultiComponentInstall</jobType>
+			<optionGroupId>DLC</optionGroupId>
+			<promptConfirmation>false</promptConfirmation>
+			<promptText/>
+			<sourcePath>Heavy Metal Equipment Module, Heavy Metal Flashpoint Module, Heavy Metal Unit Module</sourcePath>
+			<targetPath>Heavy Metal Equipment Module, Heavy Metal Flashpoint Module, Heavy Metal Unit Module</targetPath>
+			<uiDescription>Adds additional Flashpoints, units and equipment based on the Heavy Metal DLC</uiDescription>
+			<uiName>Heavy Metal</uiName>
+		</InstallTask>
+		<InstallTask>
+			<Id>ClanCore</Id>
+			<canSelect>true</canSelect>
+			<excludePaths>BtaConfig.xml,.git,.modtek,.git,log.txt,Heavy Metal Unit Module</excludePaths>
+			<isSelected>false</isSelected>
+			<jobOrder>1</jobOrder>
+			<jobType>Install</jobType>
+			<optionGroupId>ClanExpansionOptions</optionGroupId>
+			<promptConfirmation>false</promptConfirmation>
+			<promptText/>
+			<sourcePath/>
+			<targetPath/>
+			<uiDescription>Adds the full Innersphere map and the invading clans</uiDescription>
+			<uiName>Clans Expansion</uiName>
+		</InstallTask>
+		<InstallTask>
+			<Id>ClanHm</Id>
+			<canSelect>true</canSelect>
+			<excludePaths>log.txt</excludePaths>
+			<isSelected>false</isSelected>
+			<jobOrder>1</jobOrder>
+			<jobType>Install</jobType>
+			<optionGroupId>ClanExpansionOptions</optionGroupId>
+			<promptConfirmation>false</promptConfirmation>
+			<promptText/>
+			<sourcePath>Heavy Metal Unit Module</sourcePath>
+			<targetPath>Heavy Metal Unit Module</targetPath>
+			<uiDescription>Heavy Metal Module for Clan Expansion, requires Clan Expansion and Heavy Metal DLC modules to also be installed</uiDescription>
+			<uiName>Clans Expansion - Heavy Metal Module</uiName>
+		</InstallTask>
+		<InstallTask>
+			<Id>modtekInstall</Id>
+			<canSelect>true</canSelect>
+			<excludePaths>log.txt</excludePaths>
+			<isSelected>true</isSelected>
+			<jobOrder>0</jobOrder>
+			<jobType>RunProcess</jobType>
+			<optionGroupId>modtekSetup</optionGroupId>
+			<promptConfirmation>false</promptConfirmation>
+			<promptText/>
+			<sourcePath>ModTek</sourcePath>
+			<targetPath>ModTekInjector.exe /nokeypress</targetPath>
+			<uiDescription/>
+			<uiName>Inject ModTek</uiName>
+		</InstallTask>
+	</Tasks>
+	<Options>
+		<InstallOption>
+			<optionDescription/>
+			<optionId>DLC</optionId>
+			<optionType>MultiSelectOption</optionType>
+			<optionUiName>DLC Modules - Only use when you have it!</optionUiName>
+		</InstallOption>
+		<InstallOption>
+			<optionDescription/>
+			<optionId>ClanExpansionOptions</optionId>
+			<optionType>MultiSelectOption</optionType>
+			<optionUiName>Clan Expansion Options</optionUiName>
+		</InstallOption>
+		<InstallOption>
+			<optionDescription/>
+			<optionId>modtekSetup</optionId>
+			<optionType>ExclusiveOption</optionType>
+			<optionUiName>ModTek</optionUiName>
+		</InstallOption>
+	</Options>
+</BtaConfig>
