@@ -1,6 +1,4 @@
 {
-  "modLoggerLogLevel": "Error",
-  "alwaysClearModCache": false,
   "disableSplashScreens": true,
   "disableIntroMovie": true,
   "enforceMinAppearnceDateForUnits" : false,
@@ -10,29 +8,75 @@
   "addDynamicFactionTagForPilots" : false,
   "addDynamicNotFactionTagForPilots" : false,
   "testToolsEnabled": true,
-   "loggerLevels" : [
+   "loggerLevels" : [   
       {
-         "k" : "*",
-         "v" : "Error"
+         "k" : "CombatLog.Attacking",
+         "v" : "Debug"
       },
       {
-         "k" : "MapExport",
-         "v" : "Log"
+         "k" : "CombatLog.AbilitiesAndEffects",
+         "v" : "Debug"
       },
       {
-        "k" : "Sysinfo",
-        "v" : "Log"
+         "k" : "CombatLog.RoundSequence",
+         "v" : "Debug"
       },
       {
-        "k" : "ModLoader",
-        "v" : "Log"
+         "k" : "CombatLog.ActorActivation",
+         "v" : "Debug"
+      },
+      {
+         "k" : "CombatLog.Heat",
+         "v" : "Debug"
+      },
+      {
+         "k" : "CombatLog.AbstractActor",
+         "v" : "Debug"
+      },
+	  {
+         "k" : "CombatLog.CombatSelectionHandler",
+         "v" : "Debug"
+      },
+	  {
+         "k" : "DebugLog.Pilot",
+         "v" : "Debug"
+      },
+      {
+         "k" : "CombatLog.Initialization",
+         "v" : "Debug"
+      },
+	  {
+         "k" : "LevelLoader",
+         "v" : "Debug"
+      },
+	  {
+         "k" : "BattleTechServerGameVerification.MechData",
+         "v" : "Debug"
+      },
+	  {
+         "k" : "Data.AssetBundleManager",
+         "v" : "Debug"
+      },
+	  {
+         "k" : "Data.DataManager.LoadRequests",
+         "v" : "Debug"
+      },
+	  {
+         "k" : "Data.ResourceLocator",
+         "v" : "Debug"
+      },
+	  {
+         "k" : "EncounterLogic.ContractOverride",
+         "v" : "Debug"
       }
    ],
-    "fileLogAppenders": [
-		"ModLoader"
-	],
+      "fileLogAppenders" : [
+      "CombatLog",
+      "AI",
+	  "ModLoader"
+   ],
    "disablePhysicsOnLoad": true,
-   "disableLoggingOnLoad": true,
+   "disableLoggingOnLoad": false,
    "filesToLoadOnTopOfThis" : [
    ],
    "minSpec": [
@@ -111,5 +155,18 @@
        "v": 7999
      }
   ],
-  "aiLogCacheWriteImmediate": false
+  "aiLogCacheWriteImmediate": false,
+  "debugConsoleFilterLevel" : "Debug",
+   "debugConsoleIncludeFilters" : [
+      
+   ],
+   "debugConsoleExcludeFilters" : [
+      
+   ],
+   "loggerColors" : [
+      {
+         "k" : "AI",
+         "v" : "00ff00"
+      }
+   ]
 }
