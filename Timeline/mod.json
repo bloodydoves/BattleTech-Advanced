@@ -1,0 +1,25 @@
+{
+    "Name": "Timeline",
+    "DLL": "Timeline.dll",
+
+    "Version": "1.8.0",
+    "Description": "Grounds BattleTech in a particular time period in universe. Updated to 1.8 of Battletech by Haree, same license as mpstark used.",
+    "Author": "mpstark, Haree78, verrrrry lightly modified for BTA 3062 by T-Bone",
+    "Website": "www.github.com/BattletechModders/Timeline",
+
+    "ConflictsWith": [ "AddYearToTimeline" ],
+    "CustomResourceTypes": [ "ForcedTimelineEvent", "ItemCollectionRequirement" ],
+
+    "Settings": {
+        "DateFormatString": "{0:yyyy MMMM d}{1}",
+		"UseScroller": false,
+		"ScrollerSpeed" : 0.03,
+		"ReadTimeFactor": 0.4
+    },
+
+    "Manifest": [
+        { "Type": "SimGameEventDef", "Path": "Events" },
+        { "Type": "ForcedTimelineEvent", "Path": "ForcedEvents" },
+        { "Type": "ItemCollectionRequirement", "Path": "ItemCollectionRequirements" }
+    ]
+}

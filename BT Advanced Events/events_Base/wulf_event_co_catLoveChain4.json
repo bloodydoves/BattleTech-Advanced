@@ -1,0 +1,169 @@
+{
+    "Description" : {
+        "Id" : "wulf_event_co_catLoveChain4",
+        "Name" : "Unauthorized Mech Use",
+        "Details" : "\"You wake up to an urgent summons from Yang: \"Remember how I've told you I've been on the lookout since someone seems to mess around with that {SCN_UNIT.Chassis.Description.Name} after lights out? Y'all thought I was crazy. Well, I will be mocked no longer. I got a motion sensor tripping in the Mech Bay right now. Get over here so we can confront them.\"\r\n\r\nYou rub the sleep from your eyes, put on your uniform, and rush to the Mech Bay. This will be settled one way or another.\r\n\r\nWhen you arrive you spot Yang peeking in: \"It's almost like someone is trying to dance in that {SCN_UNIT.Chassis.Description.Name}. It's not even half bad. Did you see the torque on that pirouette?\"\r\n\r\nPuzzled you watch on, until the pilot gets out. It was the [[DM.BaseDescriptionDefs[Wulf_Lore_Cook],Cook]] all along.",
+        "Icon" : "uixTxrSpot_YangTalking.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 10000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : [
+                "wulf_event_co_CatLoveChain3"
+            ]
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "RequirementComparisons" : []
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [
+        {
+            "Scope" : "SecondaryMech",
+            "Requirements" : {
+                "Scope" : "SecondaryMech",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "Tags/UnitTags",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "We can always use more talent. Enlist the [[DM.BaseDescriptionDefs[Wulf_Lore_Cook],Cook]] as MechWarrior.",
+                "Details" : "Get Floppy",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Got",
+                        "Details" : "As you clear your throat, Florence grows beet red, silently awaiting your judgment.\r\n\r\n\"You know, I've seen a lot of new MechWarriors move a lot less graceful than you. Have you considered a career switch?\"\r\n\r\n\r\nRambling the relieved [[DM.BaseDescriptionDefs[Wulf_Lore_Cook],Cook]] responds: \"Thank you for the opportunity. I'd love that. Is that even an option? Isn't there a military exam, and I don't have any experience firing a weapon. I mean, obviously, imagine doing that in here. My friends call me Floppy, do you think that's a good callsign. Wow, a pilot, huh? You won't regret it!\"\r\n\r\n\r\nYou interrupt your new pilot: \"We are a merchenary outfit, Florence, there is no license board here. Besides, we still have some other pilots who can't hit the broad side of a barn. You can learn in the simulators. Go on and move your stuff to Alpha Pod. Oh, and please, no more unsupervised experimenting.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "wulf_event_co_catLoveChain1",
+                                    "wulf_event_co_catLoveChain2",
+                                    "wulf_event_co_catLoveChain3"
+                                ]
+                            },
+                            "Stats" : null,
+                            "Actions" : [
+                                {
+                                    "Type" : "MechWarrior_AddRoster",
+                                    "value" : "pilot_wb_Floppy",
+                                    "valueConstant" : null,
+                                    "additionalValues" : null
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "Send the disillusioned [[DM.BaseDescriptionDefs[Wulf_Lore_Cook],Cook]] back to the kitchen.",
+                "Details" : "NoChoice",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "NoCook",
+                        "Details" : "As you clear your throat, Florence grows beet red, silently awaiting your judgment.\r\n\r\n\" You know, I've seen a lot of cooks under siege in my time, but you were not hired to act out a movie. You have a real job. Do more of that, and less of this. Much less of this. Is that clear?\"\r\n\r\nFlorence nods vigourously, then runs away sobbing.\r\n\r\n\"Don't you think you were you a little harsh on the girl?\" Yang asks.\r\n\r\nYou raise your eyebrow at Yang: \"If I am to convince anyone you weren't crazy, I'd have to reveal to the crew your profound ballet knowledge.\" \r\n\r\nYangs eyes grow wild: \"I meant harsh, but fair, of course. I can see how lenient you are and all, since neither of us is going to bring any of this up ever again.\"\r\n\r\nYou exchange nods and go your seperate ways.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "wulf_event_co_catLoveChain1",
+                                    "wulf_event_co_catLoveChain2",
+                                    "wulf_event_co_catLoveChain3"
+                                ]
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}
