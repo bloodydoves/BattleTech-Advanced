@@ -1,0 +1,368 @@
+{
+    "Description" : {
+        "Id" : "wulf_event_co_TexTalks3",
+        "Name" : "Tex Talks",
+        "Details" : "You get a message from [[DM.BaseDescriptionDefs[TooltipSimGameCharacterFARAH],Farah]]: \r\n\r\n\"Commander {Commander.LastName}, it seems that Professor [[SCN_MW,{SCN_MW.Callsign}]] is broadcasting again. Do you want to tune into the guest lecture?\"",
+        "Icon" : "uixTxrSpot_wulf_TexTalks.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 200,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "RequirementComparisons" : [
+            {
+                "obj" : "Travel",
+                "op" : "NotEqual",
+                "val" : 0,
+                "valueConstant" : "0"
+            }
+        ]
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [
+        {
+            "Scope" : "SecondaryMechWarrior",
+            "Requirements" : {
+                "Scope" : "SecondaryMechWarrior",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : [
+                        "name_Tex"
+                    ]
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Oh no, interrupt this connection.",
+                "Details" : "-",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "No",
+                        "Details" : "\"Look, you weirdo, if you want me to stop telling folks about what kind of fucked up world we live in and the people who shape it, you're going to have to destroy the antenna or find where I am and burn it down. \r\n\r\nI've had smarter people than you try, [[Commander,{Commander.Callsign}]]. \r\n\r\nAlso, if you hope Capellans will actually pay your bills you are going to die penniless.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : [
+                                    "pilot_morale_high"
+                                ]
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : [
+                                    "pilot_morale_low"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 14
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "Lecture: \"FIELD TRIP\"",
+                "Details" : "1",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "1",
+                        "Details" : "In debt to the Lyran Government over a \"Misunderstanding regarding certain things in German\" and \"negative portrayal of Lyran Military aptitude\", the professor is leading a Field Trip to former Star League holdings to garner artifacts for a Lyran Museum. It is a pity that these artifacts are currently being held by local pirates who use them for god knows what. Probably paperweights.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.Steiner",
+                                    "value" : "2",
+                                    "set" : false,
+                                    "valueConstant" : "[rep_gain_medium]"
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.AuriganPirates",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : "[rep_loss_medium]"
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_2",
+                "Name" : "Lecture: \"OLD DEBTS\"",
+                "Details" : "-",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_2_0",
+                        "Name" : "2",
+                        "Details" : "To solve his problem with Clanners once and for all, Professor Tex has decided to answer a Clanner Batchall. The Clanners bid two Stars of Omnimechs. Professor Tex is bidding whoever will show up to shoot Clanners in the face for money. The question is who will show up on such short notice.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.ClanBurrock",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : "[rep_loss_medium]"
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.ClanCloudCobra",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : "[rep_loss_medium]"
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.ClanCoyote",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : "[rep_loss_medium]"
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.ClanDiamondShark",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : "[rep_loss_medium]"
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.ClanFireMandrill",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : "[rep_loss_medium]"
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.ClanGhostBear",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : "[rep_loss_medium]"
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.ClanGoliathScorpion",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : "[rep_loss_medium]"
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.ClanHellsHorses",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : "[rep_loss_medium]"
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.ClanIceHellion",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : "[rep_loss_medium]"
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.ClanJadeFalcon",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : "[rep_loss_medium]"
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.ClanNovaCat",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : "[rep_loss_medium]"
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.ClansGeneric",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : "[rep_loss_medium]"
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.ClanSmokeJaguar",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : "[rep_loss_medium]"
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.ClanSnowRaven",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : "[rep_loss_medium]"
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.ClanStarAdder",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : "[rep_loss_medium]"
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.ClanSteelViper",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : "[rep_loss_medium]"
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.ClanWolf",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : "[rep_loss_medium]"
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : false,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}

@@ -1,0 +1,174 @@
+{
+    "Description" : {
+        "Id" : "wulf_event_co_catLoveChain2",
+        "Name" : "Distress Call",
+        "Details" : "Sumire catches your attention on the bridge.\r\n\r\n\"Commander, I've picked up a distress call from a nearby transport. It's not exactly our job to assist in matters like this, but we may be the nearest ship available.\"\r\n\r\nShe studies the display.\r\n\r\n\"Wait Commander, false alarm. It looks like a terribly voiced request for cat pictures from a bored voyager.\"",
+        "Icon" : "uixTxrSpot_Sumire.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 10000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : [
+                "wulf_event_co_CatLoveChain1"
+            ]
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "RequirementComparisons" : []
+    },
+    "AdditionalRequirements" : [
+        {
+            "Scope" : "Commander",
+            "RequirementTags" : {
+                "tagSetSourceFile" : "",
+                "items" : []
+            },
+            "ExclusionTags" : {
+                "tagSetSourceFile" : "",
+                "items" : []
+            },
+            "RequirementComparisons" : [
+                {
+                    "obj" : "Injuries",
+                    "op" : "Equal",
+                    "val" : 0,
+                    "valueConstant" : "0"
+                }
+            ]
+        }
+    ],
+    "AdditionalObjects" : [],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Sigh. That's not what the radio array is for.",
+                "Details" : "Or is it",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Cats anyway",
+                        "Details" : "You shake your head at the crew. As you prepare to concentrate again Sumire raises her voice:\r\n\r\n\"Commander, someone aboard must've responded by short range broadcaster. Listen, we got another message.\"\r\n\r\nAfter a nod, the speakers crackle to life with a heavy periphery accent: \"I visch I could pe zere vith zee loffely kitdies. Eck! If I effer Hencounder into your commando {COMMANDER.LastName} recruiding, I'll zign up right avay. \r\n\r\nKoodpye, [[DM.BaseDescriptionDefs[Wulf_Lore_Wulfbanes],Wulf]].\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "wulf_event_co_catLoveChain2"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "wulf_event_co_catLoveChain1"
+                                ]
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "Tell Sumire to forward some pictures of the [[DM.BaseDescriptionDefs[Wulf_Lore_Artemis],company cat]].",
+                "Details" : "Catpics",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "Cat Fish",
+                        "Details" : "Sumire pulls up her old [[DM.BaseDescriptionDefs[Wulf_Lore_Artemis],Artemis]] collection and takes her time pruning for some highlights.\r\n\r\nDarius offers: \"Just send the whole lot.\"\r\n\r\nAfter a little while you receive a broadcasted thank you: \"Hallo commando {COMMANDER.LastName}, haby to make your Hacquaintance. Eck! I haffe receiffed zee bicdures of zee pusscat in great condizion. If ve effer cross baths, I'd loffe to choin your crew. Koodpye, [[DM.BaseDescriptionDefs[Wulf_Lore_Wulfbanes],Wulf]].\"\r\n\r\nWhat a colourful individual. People laugh about it for days.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "wulf_event_co_catLoveChain2"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "wulf_event_co_catLoveChain1"
+                                ]
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Morale",
+                                    "value" : "1",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}
