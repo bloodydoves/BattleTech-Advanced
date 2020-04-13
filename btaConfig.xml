@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <BtaConfig>
 	<RequiredBattleTechVersion>1.9.1</RequiredBattleTechVersion>
-	<RequiredLauncherVersion>1.0.0</RequiredLauncherVersion>
-	<SecureHash>FloWJBawFkcWoRaVFiEWxBbXFnoWiRYSFhUWtRZzFmI=</SecureHash>
+	<RequiredLauncherVersion>1.0.1</RequiredLauncherVersion>
+	<SecureHash>FqkWrRb5FvkWehbRFm8WbRaFFkoWSBYGFqcWkxa1Fs8=</SecureHash>
 	<showCoreItems>true</showCoreItems>
 	<Tasks>
 		<InstallTask>
@@ -110,6 +110,36 @@
 			<uiDescription/>
 			<uiName>Inject ModTek</uiName>
 		</InstallTask>
+		<InstallTask>
+			<Id>defaultRender</Id>
+			<canSelect>true</canSelect>
+			<excludePaths>log.txt</excludePaths>
+			<isSelected>true</isSelected>
+			<jobOrder>0</jobOrder>
+			<jobType>DefaultBootConfig</jobType>
+			<optionGroupId>PerfOps</optionGroupId>
+			<promptConfirmation>false</promptConfirmation>
+			<promptText/>
+			<sourcePath/>
+			<targetPath/>
+			<uiDescription>Use the default rendering style for BattleTech</uiDescription>
+			<uiName>Default Rendering</uiName>
+		</InstallTask>
+		<InstallTask>
+			<Id>mThreadRender</Id>
+			<canSelect>true</canSelect>
+			<excludePaths>log.txt</excludePaths>
+			<isSelected>false</isSelected>
+			<jobOrder>0</jobOrder>
+			<jobType>MThreadBootConfig</jobType>
+			<optionGroupId>PerfOps</optionGroupId>
+			<promptConfirmation>false</promptConfirmation>
+			<promptText/>
+			<sourcePath/>
+			<targetPath/>
+			<uiDescription>Use multi-threaded rendering, may increase game performance - Experimental</uiDescription>
+			<uiName>MultiThread Rendering</uiName>
+		</InstallTask>
 	</Tasks>
 	<Options>
 		<InstallOption>
@@ -129,6 +159,12 @@
 			<optionId>modtekSetup</optionId>
 			<optionType>ExclusiveOption</optionType>
 			<optionUiName>ModTek</optionUiName>
+		</InstallOption>
+		<InstallOption>
+			<optionDescription/>
+			<optionId>PerfOps</optionId>
+			<optionType>ExclusiveOption</optionType>
+			<optionUiName>Performance Rendering Options</optionUiName>
 		</InstallOption>
 	</Options>
 </BtaConfig>
