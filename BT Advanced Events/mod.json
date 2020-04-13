@@ -1,0 +1,28 @@
+{
+    "Name": "BTA Events",
+	"Version": "0.2",
+    "Enabled": true,
+	"Hidden": true,
+
+    "Description": "Custom Events intended to deepen relationship with specific crew members.",
+    "Author": "Wulfbanes",
+    "Contact": "Discord Wulfbanes#9884",
+	
+			"Manifest": [
+	{ "Type": "PilotDef", 			"Path": "pilot", 	"AddToDB": true  },
+    { "Type": "Sprite", 			"Path": "sprite"},
+	{ "Type": "Sprite", 			"Path": "illustrations", 	"AddToDB": true },
+	{ "Type": "SimGameEventDef",	"Path": "events_Base",	"AddToDB": true },
+	{ "Type": "SimGameEventDef",	"Path": "events_Clans",	"AddToDB": true },
+	{ "Type": "SimGameEventDef",	"Path": "events_Debug",	"AddToDB": true },
+	{ "Type": "BaseDescriptionDef",	"Path": "lore",	"AddToDB": true },
+	{ "Type": "SimGameStatDescDef", "Path": "simGameStatDesc", "AddToDB": true  },
+	{ "Type": "ForcedTimelineEvent", "Path": "ForcedEvents", "AddToDB": true },
+  ],
+    "OptionallyDependsOn": [		
+    ],
+	"DependsOn": [					"Select Pilots BTA Edition"
+	],
+	"ConflictsWith": [				
+	]
+}
