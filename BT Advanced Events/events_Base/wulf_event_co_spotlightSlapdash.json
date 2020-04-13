@@ -1,0 +1,371 @@
+{
+    "Description" : {
+        "Id" : "wulf_event_co_spotlightSlapdash",
+        "Name" : "Red Ones Go Faster",
+        "Details" : "You get a ping from [[SCN_MW,{SCN_MW.Callsign}]] and [[DM.BaseDescriptionDefs[TooltipSimGameCharacterFARAH],Farah]] asking you to come down to the Engineering Deck. Almost as soon as you step off the lift, they start talking excitedly:\r\n\r\n\"Commander! We think we can get another half-gee out of the drives if we just-\"\r\n\r\n\"Fabricobble a scaled-up BattleMech Supercharger system and-\"\r\n\r\n\"Reinforce the drive mountings and auxiliary cooling systems!\" they finish simultaneously.\r\n\r\nThey hand you a design document with options for installation, maintenance costs and risk mitigation. As with most things, there's a right way and a cheap way. The right way costs 1.000.000 C-Bills but should be finished relatively quickly. The cheap way costs a quarter as much, but [[DM.BaseDescriptionDefs[TooltipSimGameCharacterFARAH],Farah]] will be ironing out the kinks in the new drive for a while. Either way, the increased g-force will be an uncomfortable adjustment for the crew.",
+        "Icon" : "uixTxrSpot_wulf_ArgoRedEngine.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 10000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : [
+                "argo_drive2"
+            ]
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : [
+                "argo_driveSlapdash"
+            ]
+        },
+        "RequirementComparisons" : []
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [
+        {
+            "Scope" : "SecondaryMechWarrior",
+            "Requirements" : {
+                "Scope" : "SecondaryMechWarrior",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : [
+                        "name_Slapdash"
+                    ]
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "Tags/PilotTags",
+                    "items" : [
+                        "pilot_morale_low"
+                    ]
+                },
+                "RequirementComparisons" : [
+                    {
+                        "obj" : "Injuries",
+                        "op" : "Equal",
+                        "val" : 0,
+                        "valueConstant" : "0"
+                    }
+                ]
+            }
+        }
+    ],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Do it the right way.",
+                "Details" : "[\u00A21.000.000]",
+                "Icon" : null
+            },
+            "RequirementList" : [
+                {
+                    "Scope" : "Company",
+                    "RequirementTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "ExclusionTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "RequirementComparisons" : [
+                        {
+                            "obj" : "Funds",
+                            "op" : "GreaterThanOrEqual",
+                            "val" : 1000000,
+                            "valueConstant" : "1000000"
+                        }
+                    ]
+                }
+            ],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Right Way",
+                        "Details" : "Modifying an interplanetary drive is no easy task, especially on a ship the size of the Argo. By spending the extra time and money to prefabricate most of the drive and cooling reinforcements, [[SCN_MW,{SCN_MW.Callsign}]] and [[DM.BaseDescriptionDefs[TooltipSimGameCharacterFARAH],Farah]] manage to have the supercharged drive system up and running with almost no downtime. Slapdash and Farah say the new system has added another .5 g to the drives. For ease of reference, they've painted the new components a particularly hideous shade of red.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "argo_driveSlapdash"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Funds",
+                                    "value" : "-1000000",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Single",
+                                    "name" : "DriveTravelMultiplier",
+                                    "value" : "-0.1",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Morale",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : [
+                                    "pilot_morale_high"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 60
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "Do it on the cheap.",
+                "Details" : "[\u00A2250.000]",
+                "Icon" : null
+            },
+            "RequirementList" : [
+                {
+                    "Scope" : "Company",
+                    "RequirementTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "ExclusionTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "RequirementComparisons" : [
+                        {
+                            "obj" : "Funds",
+                            "op" : "GreaterThanOrEqual",
+                            "val" : 250000,
+                            "valueConstant" : "250000"
+                        }
+                    ]
+                }
+            ],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "Cheap",
+                        "Details" : "Modifying an interplanetary drive is no easy task, especially on a ship the size of the Argo. In order to save money on the installation, [[SCN_MW,{SCN_MW.Callsign}]] and [[DM.BaseDescriptionDefs[TooltipSimGameCharacterFARAH],Farah]] had to remove half the drive mountings and most of the auxiliary cooling systems to even begin installing the supercharger system. The drive performance will be a little unpredictable until they calibrate the new systems, but Slapdash estimates the supercharger should add another .5 g once it\u2019s up and running.  For ease of reference, they've painted the new components a particularly hideous shade of red.\r\n\r\nThe Argo makes for a jarring and bumpy ride that no-one appreciates. Farah says the Argo will be slow for 30 days, and you keep reminding the crew this will pay off in the end.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "argo_driveSlapdash"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Funds",
+                                    "value" : "-250000",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Morale",
+                                    "value" : "-5",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Single",
+                                    "name" : "DriveTravelMultiplier",
+                                    "value" : "-0.1",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Single",
+                                    "name" : "DriveTravelMultiplier",
+                                    "value" : "1",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 30
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_2",
+                "Name" : "Hold off on the upgrade for now.",
+                "Details" : "-",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_2_0",
+                        "Name" : "Delay",
+                        "Details" : "Unfortunately, sometimes speed takes a back seat to the bottom line, and the bottom line is that an extra .5 g just isn\u2019t worth the cost right now. Maybe once the company finances show more black than red, you can take another look at their proposal. In the meantime, [[SCN_MW,{SCN_MW.Callsign}]] is pretty disappointed.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : [
+                                    "pilot_morale_high"
+                                ]
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : [
+                                    "pilot_morale_low"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 30
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : false,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}

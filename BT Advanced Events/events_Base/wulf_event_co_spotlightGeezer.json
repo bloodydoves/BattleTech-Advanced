@@ -1,0 +1,190 @@
+{
+    "Description" : {
+        "Id" : "wulf_event_co_spotlightGeezer",
+        "Name" : "LS Swap All The Things",
+        "Details" : "While making the rounds, you come across [[SCN_MW,{SCN_MW.Callsign}]] in the mechbay, arguing with [[DM.BaseDescriptionDefs[TooltipSimGameCharacterYang,Yang]] over the best fusion cores. Before you can sneak out, Geezer calls you over:\r\n\r\n\"Hey Commander, maybe you can settle an argument for us. What's the best BattleMech engine? Boring-ass [[DM.BaseDescriptionDefs[TooltipSimGameCharacterYang,Yang]] here says: \"Buy Quality, Buy Vlar blah blah blah.\" That's a crock of shit. Everyone knows the best engines are made by GM\"\r\n\r\n\"Look, it's just a fact that for reliability in the field it doesn't get any better than a Vlar 300.\" counters Yang.\r\n\r\n\"I may be older'n dirt in dog years, but I ain't stuck in the past. General Motors' new 360XXL is a superb piece of engineering.\u201D retorts Geezer.",
+        "Icon" : "uixTxrSpot_YangWorking.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 10000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "RequirementComparisons" : []
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [
+        {
+            "Scope" : "SecondaryMechWarrior",
+            "Requirements" : {
+                "Scope" : "SecondaryMechWarrior",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : [
+                        "name_Geezer"
+                    ]
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : [
+                    {
+                        "obj" : "Tactics",
+                        "op" : "GreaterThan",
+                        "val" : 4,
+                        "valueConstant" : "4"
+                    },
+                    {
+                        "obj" : "Injuries",
+                        "op" : "Equal",
+                        "val" : 0,
+                        "valueConstant" : "0"
+                    }
+                ]
+            }
+        }
+    ],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Side with Yang.",
+                "Details" : "-",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "3x300",
+                        "Details" : "\"Sorry Geezer, but you know what GM stands for: \"Got Mechanic?\" I'll take reliability in the field.\"\r\n\r\n\r\nA little later, Yang stumbles over a crate holding 3 Vlar 300 Fusion Cores with a note from [[SCN_MW,{SCN_MW.Callsign}]] that reads: \"Just cuz they can fit anywhere don't mean you should put them everywhere. But they <i>are</i> pretty good. Just don\u2019t ask where I got 'em. If I told ya I'd have ta kill ya!\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Item.HeatSinkDef.emod_engine_300",
+                                    "value" : "3",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "Side with Geezer.",
+                "Details" : "-",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "1x360xxl",
+                        "Details" : "\"The lighter the engine, the more fun you can have with the rest, Yang. Besides, you know Vlar just means Verified Loser at Racetrack.\"\r\n\r\n\r\nA little later, Yang stumbles over a crate holding a GM 360XXL with note from [[SCN_MW,{SCN_MW.Callsign}]] that just reads: \"No hard feelins, bud!\"\r\n\r\n\r\nYang glances over at you, wondering: \"Where the hell does he get this stuff?\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Item.HeatSinkDef.emod_engineslots_xxl_center",
+                                    "value" : "1",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Item.HeatSinkDef.emod_engine_360",
+                                    "value" : "1",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}
