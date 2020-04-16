@@ -1,0 +1,171 @@
+{
+    "Description" : {
+        "Id" : "wulf_event_co_introTaintedLoki",
+        "Name" : "Distress Call",
+        "Details" : "Sumire catches your attention on the bridge. \"Commander, I've picked up a distress call from a nearby civilian transport. It's not exactly our job to assist in matters like this, but I have identified a signal handshake from what seems to be our own tech.\"\r\n\r\nIt looks like the corresponder used by [[DM.BaseDescriptionDefs[Wulf_Lore_TaintedLokiAWOL],TaintedLoki]] has fallen into someone hands.",
+        "Icon" : "uixTxrSpot_SumireStarMap.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 3000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : [
+                "TaintedLokiAWOL"
+            ]
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "RequirementComparisons" : [
+            {
+                "obj" : "Travel",
+                "op" : "Equal",
+                "val" : 0,
+                "valueConstant" : "0"
+            }
+        ]
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Is that really him? I never lost hope.",
+                "Details" : "-",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "HELLO",
+                        "Details" : "After some brief exchanges you think it is indeed [[DM.BaseDescriptionDefs[Wulf_Lore_TaintedLokiAWOL],TaintedLoki]] who has shown up. Once you meet up you see the bruises and a lump on his head. \"How about the Pirates?\" You inquire: \"I thought you got worse than captured.\"\r\n\r\nLoki scowls: \"One of them got behind me. Next thing I knew everything goes black, and I wake up with a headache, and left stripped of my gear to die in the dirt. Well, I made sure to follow their tracks and return the favour. I've been trying to catch up with the Argo ever since.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "TaintedLokiAWOL"
+                                ]
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Morale",
+                                    "value" : "1",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : [
+                                {
+                                    "Type" : "MechWarrior_AddRoster",
+                                    "value" : "pilot_tl_TaintedLoki",
+                                    "valueConstant" : null,
+                                    "additionalValues" : null
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "It must be a Pirate playing a dirty trick.",
+                "Details" : "-",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "Pirate",
+                        "Details" : "Warily you plan to trigger the trap. It's only an ambush if you aren't aware of it, after all. The reverse ambush strategy is what you're going for here.\r\n\r\nYou find absolutely no pirate presence of note. You later spot [[DM.BaseDescriptionDefs[Wulf_Lore_TaintedLokiAWOL],TaintedLoki]] in the hiring hall with a few bruises and a lump on his head. \r\n\r\n\"How about the Pirates?\" You inquire: \"I thought you got worse than captured.\"\r\n\r\nLoki scowls: \"One of them got behind me. Next thing I knew everything goes black, and I wake up with a headache, and left stripped of my gear to die in the dirt. Well, I made sure to follow their tracks and return the favour. I thought about retiring until I spotted the Argo in orbit. I'm up for hire, if you want me back.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "TaintedLokiAWOL"
+                                ]
+                            },
+                            "Stats" : null,
+                            "Actions" : [
+                                {
+                                    "Type" : "MechWarrior_AddHiring",
+                                    "value" : "pilot_tl_TaintedLoki",
+                                    "valueConstant" : null,
+                                    "additionalValues" : null
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}
