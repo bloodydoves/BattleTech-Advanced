@@ -1,26 +1,20 @@
 {
-	"Name": "CleverGirl",
-	"Enabled": true,
-	"Hidden": true,
-	"Version": "0.4.1",
-	"Description": "Provides little nudges for the AI",
-	"Author": "IceRaptor",
-	"Website": "https://github.com/IceRaptor/CleverGirl",
-	"Contact": "",
-	"DLL": "CleverGirl.dll",
-	"DependsOn": [
-		"IRBTModUtils"
-	],
-	"OptionallyDependsOn": [
-		"CustomAmmoCategories",
-		"CustomComponents"
-	],
-	"Settings": {
-		"Debug": false,
-		"Trace": false,
-		"Profile": false,
-		"Weights": {
-			"FriendlyDamageMulti": 2.0
-		}
-	}
+    "Name": "CleverGirl",
+    "Enabled": true,
+    "Version": "0.4.3",
+    "Description": "Provides little nudges for the AI",
+    "Author": "IceRaptor",
+    "Website": "https://github.com/IceRaptor/CleverGirl",
+    "Contact": "",
+    "DLL": "CleverGirl.dll",
+    "DLLEntryPoint" : "CleverGirl.Mod.Init",
+    "DependsOn" : [ "IRBTModUtils", "CustomComponents", "Custom Ammo Categories" ],
+    "Settings": {
+        "Debug" : true,
+        "Trace" : false,
+        "Profile" : false,
+        "Weights" : {
+            "FriendlyDamageMulti" : 2.0
+        }
+    }
 }
