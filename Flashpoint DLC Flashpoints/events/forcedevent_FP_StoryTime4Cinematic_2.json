@@ -1,0 +1,153 @@
+{
+    "Description" : {
+        "Id" : "forcedevent_FP_StoryTime4Cinematic_2",
+        "Name" : "The Arano Restoration",
+        "Details" : "\"Lady Kamea is making an announcement over the HPG,\" Sumire interrupts. \"Seems important. Shall I put it on screen?\"",
+        "Icon" : "uixTxrSpot_SumireStarMap.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 20,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "Tags/CompanyTags",
+            "items" : []
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "Tags/CompanyTags",
+            "items" : []
+        },
+        "RequirementComparisons" : []
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Watch the announcement.",
+                "Details" : "Put it on ship's speakers. Everyone should hear this.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "The Arano Restoration",
+                        "Details" : "Lord Madeira speaks up. \"It was impressive work over the last few weeks, Dr. Murad, getting the Scharia up and running. The Magistocracy is paying well, and we'll need those funds if we're to wage our war on the Directorate. Let's discuss our next steps.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "Tags/CompanyTags",
+                                "items" : []
+                            },
+                            "Stats" : [],
+                            "Actions" : [
+                                {
+                                    "Type": "System_ForceDropshipRoom",
+                                    "value": "Ship",
+                                    "valueConstant": null,
+                                    "additionalValues": null
+                                },
+                                {
+                                    "Type" : "System_PlayVideo",
+                                    "value" : "4B-revolution.bk2",
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "Type" : "System_StartConversation",
+                                    "value" : "Storytime4b-HaveShipWillTravel",
+                                    "additionalValues" : [
+                                        "HAVE SHIP, WILL TRAVEL",
+                                        "In Orbit — Weldry",
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "Let the crew watch, I'm busy.",
+                "Details" : "Skip conversation and cutscene",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "The Restoration.",
+                        "Details" : "The crew watches Lady Arano's announcement while you retire to your cabin. It's emotional, but time waits for no one, and the Restoration isn't going to plan itself.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "Tags/CompanyTags",
+                                "items" : []
+                            },
+                            "Stats" : [],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "UNSELECTABLE"
+}
