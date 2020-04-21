@@ -1,0 +1,315 @@
+{
+    "Description" : {
+        "Id" : "tbone_event_co_byeFreakshow",
+        "Name" : "Fill and Forget",
+        "Details" : "<b>\"Commander {Commander.LastName} to the MedBay. Repeat, Commander {Commander.LastName} to the MedBay.\"</b>\r\n\r\nYou make your way through the corridors to find [[DM.BaseDescriptionDefs[TBoneLoreDoc],Doc Cobble]] standing outside one of the MedBay operating theaters.\r\n\r\n\"Commander, I warned you what would happen if you kept having me shoot [[SCN_MW,{SCN_MW.Callsign}]] up with [[DM.BaseDescriptionDefs[TBoneLoreQuikStim],Quickstim]] for every op. Chronic stim usage combined with the fact that he's drinking more than ever. His organs are shutting down, one by one. With the hospital facilities here fully restored, we might have a chance at saving him and conducting a full organ transplant. Without them, he's got no hope.\"",
+        "Icon" : "uixTxrSpot_MedBay.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 10000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "RequirementComparisons" : []
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [
+        {
+            "Scope" : "SecondaryMechWarrior",
+            "Requirements" : {
+                "Scope" : "SecondaryMechWarrior",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : [
+                        "name_Freakshow",
+                        "freakshow_stims"
+                    ]
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : [
+                    {
+                        "obj" : "Guts",
+                        "op" : "GreaterThanOrEqual",
+                        "val" : 7,
+                        "valueConstant" : "7"
+                    },
+                    {
+                        "obj" : "Piloting",
+                        "op" : "GreaterThanOrEqual",
+                        "val" : 7,
+                        "valueConstant" : "7"
+                    },
+                    {
+                        "obj" : "Gunnery",
+                        "op" : "GreaterThanOrEqual",
+                        "val" : 7,
+                        "valueConstant" : "7"
+                    },
+                    {
+                        "obj" : "Tactics",
+                        "op" : "GreaterThanOrEqual",
+                        "val" : 7,
+                        "valueConstant" : "7"
+                    }
+                ]
+            }
+        },
+        {
+            "Scope" : "SecondaryMech",
+            "Requirements" : {
+                "Scope" : "SecondaryMech",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "Tags/UnitTags",
+                    "items" : [
+                        "name_Freakshow"
+                    ]
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : [
+                    {
+                        "obj" : "Guts",
+                        "op" : "GreaterThanOrEqual",
+                        "val" : 7,
+                        "valueConstant" : "7"
+                    },
+                    {
+                        "obj" : "Gunnery",
+                        "op" : "GreaterThanOrEqual",
+                        "val" : 7,
+                        "valueConstant" : "7"
+                    },
+                    {
+                        "obj" : "Piloting",
+                        "op" : "GreaterThanOrEqual",
+                        "val" : 7,
+                        "valueConstant" : "7"
+                    },
+                    {
+                        "obj" : "Tactics",
+                        "op" : "GreaterThanOrEqual",
+                        "val" : 7,
+                        "valueConstant" : "7"
+                    }
+                ]
+            }
+        }
+    ],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Try to save him.",
+                "Details" : "[Argo Hospital Bay]",
+                "Icon" : null
+            },
+            "RequirementList" : [
+                {
+                    "Scope" : "Company",
+                    "RequirementTags" : {
+                        "tagSetSourceFile" : "Tags/CompanyTags",
+                        "items" : [
+                            "argo_medbay_hospital"
+                        ]
+                    },
+                    "ExclusionTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "RequirementComparisons" : []
+                }
+            ],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "save1",
+                        "Details" : "\"Do what you can to save him, [[DM.BaseDescriptionDefs[TBoneLoreDoc],Doc]]. He's a good pilot and I don't want to lose him.\"\r\n\r\n\"I'll do my best. You need to know that even if he survives, it'll be a long recovery. Be prepared for that.\"\r\n\r\n\"Just do it, [[DM.BaseDescriptionDefs[TBoneLoreDoc],Doc]].\"\r\n\r\nNearly twelve hours later, [[DM.BaseDescriptionDefs[TBoneLoreDoc],Doc Cobble]] walks out of the operating theater, ever-present cigarette hanging from his lips.\r\n\r\n\"He's stable, but I'm keeping him in a medically induced coma while his body acclimates to the new organs. He'll be out of commission for a while, and he won't be 100% for a long time after that.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : [
+                                    "pilot_drunk",
+                                    "pilot_unstable"
+                                ]
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Guts",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Gunnery",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Injuries",
+                                    "value" : "3",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "Watch him die.",
+                "Details" : "Watch him die.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "Letdie1",
+                        "Details" : "\"This was a long time coming. Do what you can to ease things for him, then report to me.\"\r\n\r\nA few hours later, [[DM.BaseDescriptionDefs[TBoneLoreDoc],Doc]] arrives at your quarters.\r\n\r\n\"It's done then?\" You ask as you pour two glasses.\r\n\r\n\"Yeah, he's gone. Sometimes we forget \u2018do no harm' is a luxury in this business.\"\r\n\r\n\"And sometimes \u2018do no harm' just means minimizing pain. Don't blame yourself, Doc. [[SCN_MW,{SCN_MW.FirstName}]] knew the cost. So did I, and now I gotta live with it.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Morale",
+                                    "value" : "-1",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "Commander",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : [
+                                    "pilot_morale_low"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 30
+                        },
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : [
+                                {
+                                    "Type" : "MechWarrior_Kill",
+                                    "value" : null,
+                                    "valueConstant" : null,
+                                    "additionalValues" : [
+                                        "Better to burn out than fade away"
+                                    ]
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}
