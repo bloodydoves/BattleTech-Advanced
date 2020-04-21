@@ -1,0 +1,342 @@
+{
+    "Description" : {
+        "Id" : "tbone_event_co_spotlightfreakshow",
+        "Name" : "Seeing Pink Elephants",
+        "Details" : "[[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]] summons you to the medbay where [[SCN_MW,{SCN_MW.Callsign}]] is strapped to a bed, muttering.\r\n\r\n\"...They're always departing but they never arrive... And the ones that do arrive... They never leave... You never see them go they're always full... No one ever gets on but they're always...\"\r\n\r\n\"He's been like this since he took a hit in that last op. [[DM.BaseDescriptionDefs[TBoneLoreDoc],Doc Cobble]] gave him an antipsychotic so he should be coming around now.\"\r\n\r\n\"[[SCN_MW,{SCN_MW.Callsign}]], we need to start getting you sober. You're no good to anyone like this.\"\r\n\r\n\"M-M-Maybe not, but I need the booze. To keep my e-e-edge. Doc just needs to give me somethin'. A little boost.\"",
+        "Icon" : "uixTxrSpot_MedBayDoc.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 10000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "Tags/CompanyTags",
+            "items" : [
+                "argo_medBay2"
+            ]
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "RequirementComparisons" : []
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [
+        {
+            "Scope" : "SecondaryMechWarrior",
+            "Requirements" : {
+                "Scope" : "SecondaryMechWarrior",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : [
+                        "name_Freakshow"
+                    ]
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : [
+                    {
+                        "obj" : "Injuries",
+                        "op" : "GreaterThan",
+                        "val" : 0,
+                        "valueConstant" : "0"
+                    }
+                ]
+            }
+        }
+    ],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Order him into rehab.",
+                "Details" : "Rehab it is.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "rehab1",
+                        "Details" : "\"You're going to start a rehab program, and that's an order.\"\r\n\r\n\"But I <i>need</i> the drugs\u2026\" [[SCN_MW,{SCN_MW.Callsign}]] starts.\r\n\r\n\"Bullshit! You were a fine pilot before you started downing a bottle of solvent with every op, and you'll be a fine pilot after you dry up a bit. [[DM.BaseDescriptionDefs[TBoneLoreDoc],Doc]], on a ship this large there's bound to be a support group of some kind. I don't need to know the details, but I'll trust you to handle the necessary introductions.\"\r\n\r\n\"Copy that, Commander. Drying up is gonna kick your ass for a while, [[SCN_MW,{SCN_MW.Callsign}]], but I daresay you'll live a hell of a lot longer.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : [
+                                    "pilot_drunk"
+                                ]
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Tactics",
+                                    "value" : "1",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Guts",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Piloting",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Gunnery",
+                                    "value" : "-1",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Tactics",
+                                    "value" : "-1",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 30
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "Have Doc give him something.",
+                "Details" : "Give him some stims.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "stims",
+                        "Details" : "\"Doc, you have anything to stabilize him longer-term?\"\r\n\r\n[[DM.BaseDescriptionDefs[TBoneLoreDoc],Doc]] sighs and lights up another smoke. \"I'll tell you the same thing I told him. That cocktail of shit he keeps putting in himself is gonna kill him eventually, and without a [[DM.BaseDescriptionDefs[WulfLoreHospitalBay],Hospital Bay]] there's nothing I can do to prevent it. But yeah, I can give him an injection of [[DM.BaseDescriptionDefs[TBoneLoreQuikStim],QuickStim]] to keep him going for a while.\"\r\n\r\n\"Hot damn Doc, you're the best!\" [[SCN_MW,{SCN_MW.Callsign}]] immediately perks up and begins to roll up his sleeve.\r\n\r\nDoc glances at [[SCN_MW,{SCN_MW.Callsign}]] with a smirk, picks up the largest needle you've ever seen, and says \"Oh, its not <i>that</i> kind of injection. Now roll over.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "freakshow_stims"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Gunnery",
+                                    "value" : "1",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Tactics",
+                                    "value" : "1",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : [
+                                    "pilot_morale_high"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : [
+                                    "pilot_morale_low"
+                                ]
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 30
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_2",
+                "Name" : "Fire him.",
+                "Details" : "Fire him.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_2_0",
+                        "Name" : "fired1",
+                        "Details" : "\"Oh, you don't wanna dry up? Fine. You're fired.\"\r\n\r\n\"But Comman-\"\r\n\r\n\"No buts. You've been a gods-damned liability since day one, and I'm not about to sink any more time and money into you or the mechs you wreck. Next shuttle, I want your sorry ass off my ship.\"\r\n\r\nA little while later, [[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]] meets you in your quarters. \"Commander, I know [[SCN_MW,{SCN_MW.Callsign}]] was a liability, but he's also a former pirate. He could make trouble for us later.\"\r\n\r\n\"Then we'll deal with that the same way we deal with anything else. Dismissed.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : [
+                                {
+                                    "Type" : "MechWarrior_Fire",
+                                    "value" : null,
+                                    "valueConstant" : null,
+                                    "additionalValues" : null
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "freakshow_fired"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Morale",
+                                    "value" : "-1",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}

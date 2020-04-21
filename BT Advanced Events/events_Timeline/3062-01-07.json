@@ -1,0 +1,138 @@
+{
+    "Description": {
+        "Id": "3062-01-07",
+        "Name": "MercNews Broadcast",
+        "Details": "{Company.Morale?12:TEXT IF MORALE GREATER 12|Default:DEFAULT_MORALE_TEXT}\r\n
+		{Company.Funds?6000:TEXT IF FUNDS 600k|Default:DEFAULTFUNDTEXT}\r\n
+				
+		FOCHT RESIGNS; KURITA ELECTED FIRST LORD!\r\n\n\nTharkad, [[DM.BaseDescriptionDefs[LoreLyranAlliance],Lyran Alliance]]: According to the recently amended [[DM.BaseDescriptionDefs[LoreStarLeague2],Star League]] Constitution, the [[DM.Factions[faction_ComStar],ComStar]] representative is charged with casting the deciding vote in the event of a tie. With the vote for new First Lord hopelessly deadlocked on 5 November, it was anyone's guess who [[DM.Factions[faction_ComStar],ComStar]] Precentor Martial Anastasius Focht would favor.\r\n\n\nWould you like to know more?",
+        "Icon": "uixTxrSpot_ComputerScreen.png"
+    },
+    "Scope": "Company",
+    "Weight": 0,
+    "Requirements": {
+        "Scope": "Company",
+        "RequirementTags": {
+            "items": null,
+            "tagSetSourceFile": ""
+        },
+        "ExclusionTags": {
+            "items": null,
+            "tagSetSourceFile": ""
+        },
+        "RequirementComparisons": []
+    },
+    "AdditionalRequirements": [],
+    "AdditionalObjects": [],
+    "Options": [
+        {
+            "Description": {
+                "Id": "continue",
+                "Name": "Yes.",
+                "Details": "Broadcast continues.",
+                "Icon": ""
+            },
+            "RequirementList": [],
+            "ResultSets": [
+                {
+                    "Description": {
+                        "Id": "continue1",
+                        "Name": "MercNews Broadcast",
+                        "Details": "In a dramatic twist of the deadlocked 2nd [[DM.BaseDescriptionDefs[LoreWhittingCon],Whitting Conference]], Anastasius Focht resigned, naming [[DM.BaseDescriptionDefs[LoreVictorSD],Victor Steiner-Davion]] as his successor and new Precentor Martial. Steiner-Davion quickly cast the deciding vote in favor of [[DM.BaseDescriptionDefs[LoreTedKurita],Theodore Kurita]]. As the new First Lord of the [[DM.BaseDescriptionDefs[LoreStarLeague2],Star League]], it falls on Kurita to maintain the uneasy peace between the [[DM.BaseDescriptionDefs[LoreGreatHouses],Great Houses]] and protect the Inner Sphere from the dormant Clan threat.",
+                        "Icon": ""
+                    },
+                    "Weight": 100,
+                    "Results": [
+                        {
+                            "Scope": "",
+                            "Requirements": null,
+                            "AddedTags": {
+                                "items" : [
+                                ],
+                                "tagSetSourceFile" : ""
+                            
+                            },
+                            "RemovedTags": {
+                                "items": null,
+                                "tagSetSourceFile": ""
+                            },
+                            "Stats": null,
+                            "Actions": null,
+                            "ForceEvents": null,
+                            "TemporaryResult": false,
+                            "ResultDuration": 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements": {
+                "Scope": "Company",
+                "RequirementTags": {
+                    "items": null,
+                    "tagSetSourceFile": ""
+                },
+                "ExclusionTags": {
+                    "items": null,
+                    "tagSetSourceFile": ""
+                },
+                "RequirementComparisons": []
+            }
+        },
+		        {
+            "Description": {
+                "Id": "end",
+                "Name": "No.",
+                "Details": "Broadcast ends.",
+                "Icon": ""
+            },
+            "RequirementList": [],
+            "ResultSets": [
+                {
+                    "Description": {
+                        "Id": "end1",
+                        "Name": "MercNews Broadcast",
+                        "Details": "Transmission terminated.",
+                        "Icon": ""
+                    },
+                    "Weight": 100,
+                    "Results": [
+                        {
+                            "Scope": "",
+                            "Requirements": null,
+                            "AddedTags": {
+                                "items" : [
+                                ],
+                                "tagSetSourceFile" : ""
+                            
+                            },
+                            "RemovedTags": {
+                                "items": null,
+                                "tagSetSourceFile": ""
+                            },
+                            "Stats": null,
+                            "Actions": null,
+                            "ForceEvents": null,
+                            "TemporaryResult": false,
+                            "ResultDuration": 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements": {
+                "Scope": "Company",
+                "RequirementTags": {
+                    "items": null,
+                    "tagSetSourceFile": ""
+                },
+                "ExclusionTags": {
+                    "items": null,
+                    "tagSetSourceFile": ""
+                },
+                "RequirementComparisons": []
+            }
+        }
+    ],
+    "PublishState": "PUBLISHED",
+    "ValidationState": "UNTESTED",
+    "EventType": "UNSELECTABLE"
+}
