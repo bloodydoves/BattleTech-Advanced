@@ -1,0 +1,355 @@
+{
+    "Description" : {
+        "Id" : "tbone_event_co_freakshowrevenge",
+        "Name" : "John Barleycorn's Revenge",
+        "Details" : "Blaring klaxons interrupt an otherwise quiet morning routine as several fast-moving ships appear, pacing the <i>Argo</i>. Darius broadcasts their hail to the bridge.\r\n\r\n\"Hello again, {Commander.FirstName}. This is [[DM.BaseDescriptionDefs[TBoneLoreFreakshow],Freakshow]], remember me? You fired me. Tossed me out like garbage. Well now you're flying through my space, and you'll have to pay. Don't try anything, pay up, and no one gets hurt. I know full well that Sumire is itching to try a last-minute rapid fire-up of the Leopard, so don't even try it. I'll be just as happy to collect 'mechs from your debris cloud as I will collecting c-bills from your account. Your call <i>commander</i>.\"\r\n\r\nWhile you consider your options, Sumire pipes up. \"Commander, I'm still willing to try the rapid fire-up of the Leopard. Just say the word.\"",
+        "Icon" : "uixTxrSpot_UnidentifiedObject.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 10000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : [
+                "freakshow_fired"
+            ]
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "Tags/CompanyTags",
+            "items" : []
+        },
+        "RequirementComparisons" : [
+            {
+                "obj" : "MechTechSkill",
+                "op" : "GreaterThanOrEqual",
+                "val" : 2,
+                "valueConstant" : "2"
+            }
+        ]
+    },
+    "AdditionalRequirements" : [
+        {
+            "Scope" : "StarSystem",
+            "RequirementTags" : {
+                "tagSetSourceFile" : "Tags/PlanetTags",
+                "items" : []
+            },
+            "ExclusionTags" : {
+                "tagSetSourceFile" : "Tags/PlanetTags",
+                "items" : [
+                    "planet_faction_nofaction"
+                ]
+            },
+            "RequirementComparisons" : []
+        }
+    ],
+    "AdditionalObjects" : [
+        {
+            "Scope" : "SecondaryMechWarrior",
+            "Requirements" : {
+                "Scope" : "SecondaryMechWarrior",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "Tags/PilotTags",
+                    "items" : [
+                        "pilot_lucky"
+                    ]
+                },
+                "RequirementComparisons" : [
+                    {
+                        "obj" : "Injuries",
+                        "op" : "Equal",
+                        "val" : 0,
+                        "valueConstant" : "0"
+                    }
+                ]
+            }
+        }
+    ],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Pay them off.",
+                "Details" : "[\u00A2200,000]",
+                "Icon" : null
+            },
+            "RequirementList" : [
+                {
+                    "Scope" : "Company",
+                    "RequirementTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "ExclusionTags" : {
+                        "tagSetSourceFile" : "Tags/CompanyTags",
+                        "items" : []
+                    },
+                    "RequirementComparisons" : [
+                        {
+                            "obj" : "Funds",
+                            "op" : "GreaterThan",
+                            "val" : 250000,
+                            "valueConstant" : "250000"
+                        }
+                    ]
+                }
+            ],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Lose C-Bills & Morale",
+                        "Details" : "Swallowing your pride, you approve the payment to [[DM.BaseDescriptionDefs[TBoneLoreFreakshow],Freakshow]]. The look of disappointment on Sumire's face echoes that of the rest of the bridge crew.\r\n\r\nAdding insult to injury, [[DM.BaseDescriptionDefs[TBoneLoreFreakshow],Freakshow's]] voice over the bridge speaker drips with satisfaction. \"A pleasure doing business with you, {Commander.FirstName}. Don't be a stranger.\"\r\n\r\nAs the [[DM.BaseDescriptionDefs[TBoneLoreFreakshow],Freakshow's]] ships disappear into the starry distance, it's not the first time you find yourself wishing that the <i>Argo</i> was a battleship\u2026",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "Tags/CompanyTags",
+                                "items" : [
+                                    "freakshow_fired"
+                                ]
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Funds",
+                                    "value" : "-200000",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Morale",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "Stall until the Leopard is ready.",
+                "Details" : "Risky option",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "Sumire destroys Freakshow's brigands",
+                        "Details" : "You try to talk [[DM.BaseDescriptionDefs[TBoneLoreFreakshow],Freakshow]] down, stalling while Sumire gets the Leopard warmed up. Just as promised, he is ready when the Leopard leaps free from its docking collar on the side of the <i>Argo</i> and the pirate ships open fire immediately with lasers and PPCs, inflicting heavy damage. Within seconds, Sumire is able to acquire a firing solution and several LRM salvos impact [[DM.BaseDescriptionDefs[TBoneLoreFreakshow],Freakshow's]] ramshackle fleet, destroying them utterly.\r\n\r\nAs the damage control teams call in, Yang reports heavy damage to the MechBay that will cost a pretty penny to repair and [[DM.BaseDescriptionDefs[TBoneLoreDoc],Doc]] reports a few casualties in the MedBay, including [[SCN_MW,{SCN_MW.Callsign}]], who is suffering from severe burns and decompression sickness.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Injuries",
+                                    "value" : "2",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "freakshow_fired"
+                                ]
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "MechTechSkill",
+                                    "value" : "-4",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 21
+                        },
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Funds",
+                                    "value" : "-50000",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_2",
+                "Name" : "Broadcast for help from the system authorities.",
+                "Details" : "[Friendly with local {TGT_SYSTEM.OwnerDef.ShortName}]",
+                "Icon" : null
+            },
+            "RequirementList" : [
+                {
+                    "Scope" : "Company",
+                    "RequirementTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "ExclusionTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "RequirementComparisons" : [
+                        {
+                            "obj" : "Reputation.Owner",
+                            "op" : "GreaterThanOrEqual",
+                            "val" : 40,
+                            "valueConstant" : "[rep_friendly_min]"
+                        }
+                    ]
+                }
+            ],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_2_0",
+                        "Name" : "Local",
+                        "Details" : "Darius sends an SOS, and you set about buying time until help arrives.\r\n\r\nJust as the [[DM.BaseDescriptionDefs[TBoneLoreFreakshow],Freakshow]] begins to lose patience, several interceptors bearing the colors of the local authorities arrive on the scene. Without even broadcasting a hail, they open fire on the little flotilla. Soon, nothing but a silently expanding debris field is left to commemorate a MechWarrior named [[DM.BaseDescriptionDefs[TBoneLoreFreakshow],Freakshow]].\r\n\r\nIt was always going to end like this.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "freakshow_fired"
+                                ]
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}
