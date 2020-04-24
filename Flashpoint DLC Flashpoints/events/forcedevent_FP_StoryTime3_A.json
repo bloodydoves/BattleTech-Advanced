@@ -1,12 +1,12 @@
 {
     "Description" : {
-        "Id" : "forcedevent_FP_StoryTime4Cinematic_1",
-        "Name" : "Tragedy in the Icebox",
-        "Details" : "Lady Kamea requests permission to come aboard immediately, to discuss what her troops found down on Wedldry. She looks distraught, Commander. They must have found something bad down there.",
-        "Icon" : "uixTxrSpot_SumireStarMap.png"
+        "Id" : "forcedevent_FP_StoryTime3_A",
+        "Name" : "The Scheria",
+        "Details" : "The ancient ship stirs to life, power conduits humming and frame creaking as Dr. Murad's team brings the engines to life.\r\n\n\nHer voice crackles over the coms. \"Stay in your mech, commander. I'm not sure pressure will hold anywhere other than command.\"",
+        "Icon" : "uixTxrSpot_EngineeringInnards.png"
     },
     "Scope" : "Company",
-    "Weight" : 20,
+    "Weight" : 0,
     "Requirements" : {
         "Scope" : "Company",
         "RequirementTags" : {
@@ -25,8 +25,8 @@
         {
             "Description" : {
                 "Id" : "outcome_0",
-                "Name" : "Invite her aboard.",
-                "Details" : "Let's see what they've found down there.",
+                "Name" : "Look out the window",
+                "Details" : "Cinamatic and debriefing",
                 "Icon" : null
             },
             "RequirementList" : [],
@@ -34,8 +34,8 @@
                 {
                     "Description" : {
                         "Id" : "outcome_0_0",
-                        "Name" : "The Restoration",
-                        "Details" : "Dr. Murad seems crestfallen - given her history, it's likely she hasn't seen many battlefields up close before. Certainly not concentration camps like the Directorate was running. \"What are we going to do, Commander? We can't just turn our backs on this.\"\r\n\r\nDarius looks about to object, but the com chimes with Lady Arano and Lord Madeira on the line.",
+                        "Name" : "The Scheria",
+                        "Details" : "The entire crew crowds into the hallway to greet the new arrivals, but only a few of you recognize her by sight. Time has wrought great changes to the woman you once know. Darius quickly clears the area, leading everyone to the command deck for a conference.",
                         "Icon" : null
                     },
                     "Weight" : 100,
@@ -55,20 +55,28 @@
                             "Actions" : [
                                 {
                                     "Type" : "System_PlayVideo",
-                                    "value" : "4A-mastiff.bk2",
+                                    "value" : "3-argo.bk2",
                                     "valueConstant" : null
                                 },
                                 {
-                                    "Type" : "System_StartConversation",
-                                    "value" : "Storytime4a-Restoration",
-                                    "valueConstant" : null,
+                                    "Type" : "System_SimGameCharacterVisible",
+                                    "value" : true,
                                     "additionalValues" : [
-                                        "THE ARANO RESTORATION",
-                                        "The Icebox — Weldry",
+                                        "Kamea",
+                                        "Alexander"
+                                    ]
+                                },
+                                {
+                                    "Type" : "System_StartConversation",
+                                    "value" : "Storytime3b-InExile",
+                                    "additionalValues" : [
+                                        "IN EXILE",
+                                        "High Orbit — Alloway",
                                         null,
                                         null
                                     ]
                                 }
+
                             ],
                             "ForceEvents" : null,
                             "TemporaryResult" : false,
@@ -93,8 +101,8 @@
         {
             "Description" : {
                 "Id" : "outcome_1",
-                "Name" : "Darius will have to deal with her, I'm busy.",
-                "Details" : "Skip conversation and cutscene",
+                "Name" : "I know what space looks like. (Skip cutscene)",
+                "Details" : "Skip cutscene asd debriefing",
                 "Icon" : null
             },
             "RequirementList" : [],
@@ -102,8 +110,8 @@
                 {
                     "Description" : {
                         "Id" : "outcome_1_0",
-                        "Name" : "The Restoration.",
-                        "Details" : "Darius discusses matters with Lady Arano, while you grieve in private over Raju's death in the Directorate's hands. But time waits for no one, and you've got work to do.",
+                        "Name" : "The Scheria.",
+                        "Details" : "It's good to have Lady Arano back, especially with the Magistocracy bankrolling her. The crew is looking forward to having an honorable patron, for a change - and a rich one.",
                         "Icon" : null
                     },
                     "Weight" : 100,

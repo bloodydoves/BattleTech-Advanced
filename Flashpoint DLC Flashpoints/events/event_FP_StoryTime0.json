@@ -1,12 +1,12 @@
 {
     "Description" : {
-        "Id" : "forcedevent_FP_StoryTime4Cinematic_2",
-        "Name" : "The Arano Restoration",
-        "Details" : "\"Lady Kamea is making an announcement over the HPG,\" Sumire interrupts. \"Seems important. Shall I put it on screen?\"",
-        "Icon" : "uixTxrSpot_SumireStarMap.png"
+        "Id" : "event_FP_StoryTime0",
+        "Name" : "MercNews Broadcast",
+        "Details" : "AURIGAN COALITION SUCCESSION: TENSION IN THE HIGH HOUSE!\r\n\n\n[[DM.BaseDescriptionDefs[LoreHighLordTamatiArano],High Lord Tamati Arano II]] is dead, leaving the [[DM.BaseDescriptionDefs[LoreAuriganCoalition],Aurigan Coalition]] leaderless. Sources report that he and his wife were killed in an accident yesterday, leaving Kamea Arano as the only heir. Sources indicate growing tension within the palace, as Lord Santiago Espinoza and Lady Kamea wrangle for power. With tensions high in this region of the periphery, MercNews is on the scene, bringing you the latest.\r\n\n\nDarius interrupts your news reading to say that your old mentor, Raju Montgomery is on the line with a job offer.",
+        "Icon" : "uixTxrSpot_ComputerScreen.png"
     },
     "Scope" : "Company",
-    "Weight" : 20,
+    "Weight" : 0,
     "Requirements" : {
         "Scope" : "Company",
         "RequirementTags" : {
@@ -15,7 +15,10 @@
         },
         "ExclusionTags" : {
             "tagSetSourceFile" : "Tags/CompanyTags",
-            "items" : []
+            "items" : [
+                "flashpoint_Storytime0_accept",
+                "flashpoint_Storytime0_cancel"
+            ]
         },
         "RequirementComparisons" : []
     },
@@ -25,8 +28,8 @@
         {
             "Description" : {
                 "Id" : "outcome_0",
-                "Name" : "Watch the announcement.",
-                "Details" : "Put it on ship's speakers. Everyone should hear this.",
+                "Name" : "Raju with a job? Let's go. (Add Campaign Flashpoints)",
+                "Details" : "Replay the campaign as Flashpoints",
                 "Icon" : null
             },
             "RequirementList" : [],
@@ -34,8 +37,8 @@
                 {
                     "Description" : {
                         "Id" : "outcome_0_0",
-                        "Name" : "The Arano Restoration",
-                        "Details" : "Lord Madeira speaks up. \"It was impressive work over the last few weeks, Dr. Murad, getting the Scharia up and running. The Magistocracy is paying well, and we'll need those funds if we're to wage our war on the Directorate. Let's discuss our next steps.\"",
+                        "Name" : "Troubles in the Coalition",
+                        "Details" : "After reaching out to him, Darius has more details on the contract. Raju Montgomery would like you to be one of [[DM.BaseDescriptionDefs[LoreKameaArano],Lady Kamea Arano's]] honor guards on the day of her coronation, taking place on [[DM.BaseDescriptionDefs[LoreCoromodir],Coromodir]] shortly. He worries that internal politics will be a danger to his charge, and wants a trusted outsider to help ensure her safety.",
                         "Icon" : null
                     },
                     "Weight" : 100,
@@ -45,7 +48,9 @@
                             "Requirements" : null,
                             "AddedTags" : {
                                 "tagSetSourceFile" : "",
-                                "items" : []
+                                "items": [
+                                    "flashpoint_Storytime0_accept"
+                                ],
                             },
                             "RemovedTags" : {
                                 "tagSetSourceFile" : "Tags/CompanyTags",
@@ -54,25 +59,17 @@
                             "Stats" : [],
                             "Actions" : [
                                 {
-                                    "Type": "System_ForceDropshipRoom",
-                                    "value": "Ship",
-                                    "valueConstant": null,
-                                    "additionalValues": null
+                                    "Type" : "System_AddFlashpoint",
+                                    "value" : "fp_StoryTime1",
+                                    "valueConstant" : null,
+                                    "additionalValues": [
+                                        "starsystemdef_Coromodir"
+                                    ]
                                 },
                                 {
                                     "Type" : "System_PlayVideo",
-                                    "value" : "4B-revolution.bk2",
+                                    "value" : "1A-prologue.bk2",
                                     "valueConstant" : null
-                                },
-                                {
-                                    "Type" : "System_StartConversation",
-                                    "value" : "Storytime4b-HaveShipWillTravel",
-                                    "additionalValues" : [
-                                        "HAVE SHIP, WILL TRAVEL",
-                                        "In Orbit — Weldry",
-                                        null,
-                                        null
-                                    ]
                                 }
                             ],
                             "ForceEvents" : null,
@@ -98,8 +95,8 @@
         {
             "Description" : {
                 "Id" : "outcome_1",
-                "Name" : "Let the crew watch, I'm busy.",
-                "Details" : "Skip conversation and cutscene",
+                "Name" : "No thank you. (Do NOT create campaign Flashpoints)",
+                "Details" : "Don't replay the campaign this career",
                 "Icon" : null
             },
             "RequirementList" : [],
@@ -107,8 +104,8 @@
                 {
                     "Description" : {
                         "Id" : "outcome_1_0",
-                        "Name" : "The Restoration.",
-                        "Details" : "The crew watches Lady Arano's announcement while you retire to your cabin. It's emotional, but time waits for no one, and the Restoration isn't going to plan itself.",
+                        "Name" : "MercNews Broadcast",
+                        "Details" : "BREAKING NEWS: AURIGAN SUCCESSION BLOODY!\r\n\r\nSources inside the Aurigan Coalition report that, concerned with her Lord Santiago Espinoza's possible treachery and continual disrespect towards his protege, Raju Montgomery drew a laser psitol during council this morning and killed him. While Raju Montgomery awaits trial in prison, Lady Kamea Arano has ascended to the throne of the Aurigan Coalition without challenge.",
                         "Icon" : null
                     },
                     "Weight" : 100,
@@ -118,7 +115,9 @@
                             "Requirements" : null,
                             "AddedTags" : {
                                 "tagSetSourceFile" : "",
-                                "items" : []
+                                "items" : [
+                                    "flashpoint_Storytime0_cancel"
+                                ]
                             },
                             "RemovedTags" : {
                                 "tagSetSourceFile" : "Tags/CompanyTags",
