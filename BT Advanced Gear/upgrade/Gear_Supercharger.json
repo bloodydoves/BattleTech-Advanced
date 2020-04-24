@@ -9,7 +9,6 @@
 		"BonusDescriptions": {
 			"Bonuses": [
 				"WalkSpeed: +40%",
-				"RunSpeed: +10%",
 				"HeatGenerated: 15%"
 			]
 		},
@@ -26,10 +25,10 @@
 		"UIName": "Supercharger",
 		"Id": "Gear_Supercharger",
 		"Name": "Supercharger",
-		"Details": "The supercharger allows a 'Mech to exceed its normal engine output, increasing walk and run distance at the cost of higher heat generation. <b><color=#099ff2>INSTABILITY WHEN DESTROYED!</color></b>",
+		"Details": "The supercharger allows a 'Mech to exceed its normal engine output, increasing walk distance at the cost of higher heat generation. <b><color=#099ff2>INSTABILITY WHEN DESTROYED!</color></b>",
 		"Icon": "uixSvgIcon_equipment_HeatBank"
 	},
-	"BonusValueA": "+40%Walk|+10%Sprint|",
+	"BonusValueA": "+40% Walk",
 	"BonusValueB": "+15% Heat Generated",
 	"ComponentType": "Upgrade",
 	"ComponentSubType": "NotSet",
@@ -97,8 +96,8 @@
 			},
 			"statisticData": {
 				"statName": "CBTBE_RunMultiMod",
-				"operation": "Float_Multiply",
-				"modValue": "0.78",
+				"operation": "Float_Add",
+				"modValue": "-0.43",
 				"modType": "System.Single"
 			},
 			"nature": "Buff"
