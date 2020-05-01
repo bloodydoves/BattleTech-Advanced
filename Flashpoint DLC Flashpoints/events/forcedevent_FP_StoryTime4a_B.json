@@ -1,6 +1,6 @@
 {
     "Description" : {
-        "Id" : "forcedevent_FP_StoryTime4_B",
+        "Id" : "forcedevent_FP_StoryTime4a_B",
         "Name" : "The Arano Restoration",
         "Details" : "\"Lady Kamea is making an announcement over the HPG,\" Sumire calls for attention. \"Seems important. Shall I put it on screen?\"",
         "Icon" : "uixTxrSpot_SumireStarMap.png"
@@ -8,16 +8,10 @@
     "Scope" : "Company",
     "Weight" : 0,
     "Requirements" : {
-        "Scope" : "Company",
-        "RequirementTags" : {
-            "tagSetSourceFile" : "Tags/CompanyTags",
-            "items" : []
-        },
-        "ExclusionTags" : {
-            "tagSetSourceFile" : "Tags/CompanyTags",
-            "items" : []
-        },
-        "RequirementComparisons" : []
+        "Scope": "Company",
+        "RequirementTags": {},
+        "ExclusionTags": {},
+        "RequirementComparisons": []
     },
     "AdditionalRequirements" : [],
     "AdditionalObjects" : [],
@@ -43,14 +37,8 @@
                         {
                             "Scope" : "Company",
                             "Requirements" : null,
-                            "AddedTags" : {
-                                "tagSetSourceFile" : "",
-                                "items" : []
-                            },
-                            "RemovedTags" : {
-                                "tagSetSourceFile" : "Tags/CompanyTags",
-                                "items" : []
-                            },
+                            "AddedTags" : {},
+                            "RemovedTags" : {},
                             "Stats" : [],
                             "Actions" : [
                                 {
@@ -73,7 +61,7 @@
                                 },
                                 {
                                     "Type" : "System_StartConversation",
-                                    "value" : "Storytime4b-HaveShipWillTravel",
+                                    "value" : "StoryTime4a-HaveShipWillTravel",
                                     "additionalValues" : [
                                         "HAVE SHIP, WILL TRAVEL",
                                         "In Orbit — Weldry",
@@ -90,16 +78,10 @@
                 }
             ],
             "Requirements" : {
-                "Scope" : "Company",
-                "RequirementTags" : {
-                    "tagSetSourceFile" : "",
-                    "items" : []
-                },
-                "ExclusionTags" : {
-                    "tagSetSourceFile" : "",
-                    "items" : []
-                },
-                "RequirementComparisons" : []
+                "Scope": "Company",
+                "RequirementTags": {},
+                "ExclusionTags": {},
+                "RequirementComparisons": []
             }
         },
         {
@@ -123,16 +105,18 @@
                         {
                             "Scope" : "Company",
                             "Requirements" : null,
-                            "AddedTags" : {
-                                "tagSetSourceFile" : "",
-                                "items" : []
-                            },
-                            "RemovedTags" : {
-                                "tagSetSourceFile" : "Tags/CompanyTags",
-                                "items" : []
-                            },
+                            "AddedTags" : {},
+                            "RemovedTags" : {},
                             "Stats" : [],
-                            "Actions" : null,
+                            "Actions" : [
+                                {
+                                    "Type" : "System_SimGameCharacterVisible",
+                                    "value" : false,
+                                    "additionalValues" : [
+                                        "Kamea"
+                                    ]
+                                }
+                            ],
                             "ForceEvents" : null,
                             "TemporaryResult" : false,
                             "ResultDuration" : 0
@@ -141,16 +125,10 @@
                 }
             ],
             "Requirements" : {
-                "Scope" : "Company",
-                "RequirementTags" : {
-                    "tagSetSourceFile" : "",
-                    "items" : []
-                },
-                "ExclusionTags" : {
-                    "tagSetSourceFile" : "",
-                    "items" : []
-                },
-                "RequirementComparisons" : []
+                "Scope": "Company",
+                "RequirementTags": {},
+                "ExclusionTags": {},
+                "RequirementComparisons": []
             }
         }
     ],

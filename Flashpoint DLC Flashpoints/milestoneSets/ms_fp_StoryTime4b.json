@@ -1,9 +1,9 @@
 {
-    "StartingMilestoneID": "ms_fp_StoryTime1_001_Start",
+    "StartingMilestoneID": "ms_fp_StoryTime4b_001_Start",
     "Milestones": [
         {
             "Description": {
-                "Id": "ms_fp_StoryTime1_001_Start",
+                "Id": "ms_fp_StoryTime4b_001_Start",
                 "Name": "Start",
                 "Details": "flashpoint",
                 "Icon": null
@@ -19,13 +19,23 @@
                     "Stats": [],
                     "Actions": [
                         {
-                            "Type" : "System_PlayVideo",
-                            "value" : "1B-betrayal.bk2",
-                            "valueConstant" : null
+                            "Type": "System_SimGameCharacterVisible",
+                            "value": true,
+                            "additionalValues": [
+                                "Alexander"
+                            ]
+                        },
+                        {
+                            "Type" : "System_StartConversation",
+                            "value": "StoryTime4b-Perdition",
+                            "additionalValues": [
+                                "PERDITION",
+                                "In Orbit - Panzyr"
+                            ]
                         },
                         {
                             "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime1_002_Mission",
+                            "value": "ms_fp_StoryTime4b_002_Mission",
                             "valueConstant": null,
                             "additionalValues": null
                         }
@@ -41,8 +51,8 @@
         },
         {
             "Description": {
-                "Id": "ms_fp_StoryTime1_002_Mission",
-                "Name": "A-Mission",
+                "Id": "ms_fp_StoryTime4b_002_Mission",
+                "Name": "Mission",
                 "Details": "flashpoint",
                 "Icon": null
             },
@@ -61,13 +71,13 @@
                             "value": "",
                             "valueConstant": null,
                             "additionalValues": [
-                                null,
-                                null,
-                                "StoryTime_1_Retreat_Default",
+                                "",
+                                "",
+                                "StoryTime_4b_AttackPanzyr_Default",
                                 "AuriganRestoration",
                                 null,
-                                "2",
-                                "ms_fp_StoryTime1_003_Complete"
+                                "5",
+                                "ms_fp_StoryTime4b_003_Complete"
                             ]
                         },
                         {
@@ -90,8 +100,8 @@
         },
         {
             "Description": {
-                "Id": "ms_fp_StoryTime1_003_Complete",
-                "Name": "Cancel-Complete",
+                "Id": "ms_fp_StoryTime4b_003_Complete",
+                "Name": "Complete",
                 "Details": "flashpoint",
                 "Icon": null
             },
@@ -103,7 +113,7 @@
                     "Requirements": null,
                     "AddedTags": {
                         "items": [
-                            "flashpoint_StoryTime1_complete"
+                            "flashpoint_StoryTime4b_complete"
                         ],
                         "tagSetSourceFile": "Tags/CompanyTags"
                     },
@@ -111,36 +121,28 @@
                     "Stats": null,
                     "Actions": [
                         {
-                            "Type": "System_ForceDropshipRoom",
-                            "value": "Ship",
-                            "valueConstant": null,
-                            "additionalValues": null
+                            "Type" : "System_SimGameCharacterVisible",
+                            "value" : true,
+                            "additionalValues" : [
+                                "Kamea"
+                            ]
+                        },
+                        {
+                            "Type" : "System_StartConversation",
+                            "value" : "StoryTime4b-Anomaly",
+                            "additionalValues" : [
+                                "ANOMALY",
+                                "The Rimward Frontier"
+                            ]
                         },
                         {
                             "Type": "Flashpoint_CompleteFlashpoint",
-                            "value": "ms_fp_StoryTime1_004_Reward",
+                            "value": "ms_fp_StoryTime4b_004_Reward",
                             "valueConstant": null,
                             "additionalValues": null
-                        },
-                        {
-                            "Type" : "System_PauseNotification",
-                            "value" : "Punching out of your overheating mech, the last thing you remember is noise and pain and a vast open sky.",
-                            "additionalValues" : [
-                                  "Ejecting",
-                                  "castDef_None"
-                            ],
-                            "valueConstant" : null
                         }
                     ],
-                    "ForceEvents": [
-                        {
-                            "Scope" : "Company",
-                            "EventID" : "forcedevent_FP_StoryTime1_A",
-                            "MinDaysWait" : 0,
-                            "MaxDaysWait" : 0,
-                            "Probability" : 100
-                        }
-                    ],
+                    "ForceEvents": null,
                     "TemporaryResult": false,
                     "ResultDuration": 0
                 }
@@ -151,7 +153,7 @@
         },
         {
             "Description": {
-                "Id": "ms_fp_StoryTime1_004_Reward",
+                "Id": "ms_fp_StoryTime4b_004_Reward",
                 "Name": "Reward",
                 "Details": "Extra rewards, including Reputation and bonus C-Bills go here",
                 "Icon": null
@@ -168,7 +170,7 @@
                         {
                             "typeString": "System.Int32",
                             "name": "Funds",
-                            "value": "180000",
+                            "value": "300000",
                             "set": false,
                             "valueConstant": null
                         },
@@ -180,7 +182,15 @@
                             "valueConstant": null
                         }
                     ],
-                    "Actions": null,
+                    "Actions": [
+                        {
+                            "Type" : "System_SimGameCharacterVisible",
+                            "value" : false,
+                            "additionalValues" : [
+                                "Kamea"
+                            ]
+                        }
+                    ],
                     "ForceEvents": null,
                     "TemporaryResult": false,
                     "ResultDuration": 0
