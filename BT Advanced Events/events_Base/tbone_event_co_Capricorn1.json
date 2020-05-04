@@ -1,0 +1,203 @@
+{
+    "Description" : {
+        "Id" : "tbone_event_co_Capricorn1",
+        "Name" : "Meatbag: Report Card I",
+        "Details" : "[[SCN_MW,{SCN_MW.Callsign}]] has brought you another message from [[DM.BaseDescriptionDefs[TBoneLoreOMTC],Outreach Mercenary Training Command]]: \r\n\r\n\r\n<b><i>[THIS IS AN AUTOMATED MESSAGE - PLEASE DO NOT REPLY DIRECTLY]\r\n\r\n\r\nAccording to our records, {TRT_MW.FirstName} {TRT_MW.LastName}, callsign: [[TRT_MW,{TRT_MW.Callsign}]] has achieved level 3 [[DM.BaseDescriptionDefs[TBoneLoreMCC],MCCs]]. As per our contract, the first lump-sum payment has been released to the account on record, pending confirmation of message receipt. Thank you for your continued work with the Field Experience Enhanced Training program. \r\n\r\n\r\nAccounts Payable, FEET Program\r\n\nOutreach Mercenary Training Command</b></i>",
+        "Icon" : "uixTxrSpot_ConferenceRoom.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 10000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "RequirementComparisons" : []
+    },
+    "AdditionalRequirements" : [
+        {
+            "Scope" : "StarSystem",
+            "RequirementTags" : {
+                "tagSetSourceFile" : "",
+                "items" : []
+            },
+            "ExclusionTags" : {
+                "tagSetSourceFile" : "",
+                "items" : []
+            },
+            "RequirementComparisons" : []
+        }
+    ],
+    "AdditionalObjects" : [
+        {
+            "Scope" : "SecondaryMechWarrior",
+            "Requirements" : {
+                "Scope" : "SecondaryMechWarrior",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : [
+                        "name_Capricorn",
+                        "omtc_feet_0"
+                    ]
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : [
+                    {
+                        "obj" : "ExperienceSpent",
+                        "op" : "GreaterThanOrEqual",
+                        "val" : 22000,
+                        "valueConstant" : "22000"
+                    }
+                ]
+            }
+        },
+        {
+            "Scope" : "TertiaryMechWarrior",
+            "Requirements" : {
+                "Scope" : "TertiaryMechWarrior",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : [
+                        "name_Meatbag"
+                    ]
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : [
+                    {
+                        "obj" : "Guts",
+                        "op" : "GreaterThanOrEqual",
+                        "val" : 3,
+                        "valueConstant" : "3"
+                    },
+                    {
+                        "obj" : "Piloting",
+                        "op" : "GreaterThanOrEqual",
+                        "val" : 3,
+                        "valueConstant" : "3"
+                    },
+                    {
+                        "obj" : "Tactics",
+                        "op" : "GreaterThanOrEqual",
+                        "val" : 3,
+                        "valueConstant" : "3"
+                    },
+                    {
+                        "obj" : "Gunnery",
+                        "op" : "GreaterThanOrEqual",
+                        "val" : 3,
+                        "valueConstant" : "3"
+                    }
+                ]
+            }
+        }
+    ],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Confirm receipt of message.",
+                "Details" : "Confirm receipt of message.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Confirm receipt of message.",
+                        "Details" : "\"So [[SCN_MW,{SCN_MW.Callsign}]], how <i>is</i> training [[TRT_MW,{TRT_MW.Callsign}]] coming along? Anything I can help with?\"\r\n\r\n\r\n\"It's actually going pretty well, Commander. [[TRT_MW,{TRT_MW.FirstName}]] is still pretty green, but he's coming around. At least he knows how many heatsinks a core requires now.\"\r\n\r\n\r\n\"Glad to hear it. Sooner we get him trained up, the more we make off this deal. Just be careful, the more advanced {TRT_MW.Callsign} gets, the more of your attention training him is going to take.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "omtc_feet_1"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "omtc_feet_0"
+                                ]
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Piloting",
+                                    "value" : "-1",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Funds",
+                                    "value" : "100000",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}
