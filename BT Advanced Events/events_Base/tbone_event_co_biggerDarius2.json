@@ -1,0 +1,131 @@
+{
+    "Description" : {
+        "Id" : "tbone_event_co_biggerDarius2",
+        "Name" : "Larger Than Life",
+        "Details" : "On your way to a meeting with [[DM.BaseDescriptionDefs[TooltipSimGameCharacterFARAH],Farah]], you run into  [[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]], freshly returned from his trip to Nassau Heights.\r\n\r\n\r\n\"Hey Darius! So, how was it being back home?\"\r\n\r\n\"It was great Commander! But the <i>Argo</i> is my home now. I don't ever need to go back to Nassau Heights.\"\r\n\r\n\"Oh-kay. Say, Darius...you seem different. Taller somehow.\"\r\n\r\n\"Nope, I'm still just the same old me I've always been, Commander! You have a great day!\"",
+        "Icon" : "uixTxrSpot_BiggerTalking.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 10000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "RequirementComparisons" : []
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [
+        {
+            "Scope" : "SecondaryMechWarrior",
+            "Requirements" : {
+                "Scope" : "SecondaryMechWarrior",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : [
+                        "name_Darius",
+                        "bxo_1"
+                    ]
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Continue to your meeting with Farah.",
+                "Details" : "Continue to your meeting with Farah.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Continue to your meeting with Farah.",
+                        "Details" : "\"[[DM.BaseDescriptionDefs[TooltipSimGameCharacterFARAH],Farah]], just wanted to check in and thank you for programming [[DM.BaseDescriptionDefs[TBoneLoreD4r1U5],<b>D4r1U5</b>]] to take over while [[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]] was away. Any trouble shutting it down?\"\r\n\r\n\"Of course not, Commander. What I wrote was nothing like the [[DM.BaseDescriptionDefs[LoreLocura],<b>Locura</b>]]. Closer to a computerized version of checkers.\"\r\n\r\n\"Glad to hear it.\"\r\n\r\n\r\nAfter making the rounds, the scuttlebutt around the ship is that [[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]] has been taking a markedly lighter touch to discipline since his return. Contrary to improving morale, it mostly seems to have the traditionally superstitious MechWarriors a bit unsettled. Unfortunately, lax discipline also means things in the MechBay aren't running as smoothly. You hope Darius gets back to his old self soon, or you may need to have a talk with him. He really does seem a little bigger than before...",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "MechTechSkill",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 14
+                        },
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "bxo_2"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}
