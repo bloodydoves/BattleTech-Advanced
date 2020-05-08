@@ -1,0 +1,239 @@
+{
+    "Description" : {
+        "Id" : "tbone_event_co_rep_Kurita",
+        "Name" : "Ambushed!",
+        "Details" : "The general quarters alarm sounds as [[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]] pages you on the intercom.\r\n\r\n\r\n\"Commander. As you know, we have people down on the planet surface on a supply run, including [[TRT_MW,{TRT_MW.Callsign}]]. We've just detected a small [[DM.Factions[faction_Kurita],Draconis Combine]] kill team on track to ambush our people before they make it back to the shuttle. We need to drop immediately and take out the kill team before they can intercept our supply run. \"\r\n\r\n\r\n\"Copy that, XO. [[DM.BaseDescriptionDefs[TooltipSimGameCharacterSUMIRE],Sumire]], get the <i>Leopard</i> prepped for launch!",
+        "Icon" : "uixTxrSpot_ambushConvoyContract.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 10000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : [
+                "rep_Kurita_cooldown"
+            ]
+        },
+        "RequirementComparisons" : [
+            {
+                "obj" : "Reputation.Kurita",
+                "op" : "LessThanOrEqual",
+                "val" : -80,
+                "valueConstant" : "-80"
+            },
+            {
+                "obj" : "Travel",
+                "op" : "Equal",
+                "val" : 0,
+                "valueConstant" : "0"
+            }
+        ]
+    },
+    "AdditionalRequirements" : [
+        {
+            "Scope" : "Commander",
+            "RequirementTags" : {
+                "tagSetSourceFile" : "",
+                "items" : []
+            },
+            "ExclusionTags" : {
+                "tagSetSourceFile" : "",
+                "items" : []
+            },
+            "RequirementComparisons" : [
+                {
+                    "obj" : "Injuries",
+                    "op" : "Equal",
+                    "val" : 0,
+                    "valueConstant" : "0"
+                }
+            ]
+        }
+    ],
+    "AdditionalObjects" : [
+        {
+            "Scope" : "SecondaryMechWarrior",
+            "Requirements" : {
+                "Scope" : "SecondaryMechWarrior",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : [
+                    {
+                        "obj" : "Injuries",
+                        "op" : "Equal",
+                        "val" : 0,
+                        "valueConstant" : "0"
+                    }
+                ]
+            }
+        },
+        {
+            "Scope" : "TertiaryMechWarrior",
+            "Requirements" : {
+                "Scope" : "TertiaryMechWarrior",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : [
+                    {
+                        "obj" : "Injuries",
+                        "op" : "Equal",
+                        "val" : 0,
+                        "valueConstant" : "0"
+                    }
+                ]
+            }
+        }
+    ],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Proceed to Mission Brief",
+                "Details" : "Proceed to Mission Brief",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Proceed to Mission Brief",
+                        "Details" : "\"OK people, this is gonna get hairy. We're dropping between the [[DM.Factions[faction_Kurita],Combine]] kill team and our people. We'll hit the kill team in some old ruins that make for a natural choke point. If the OpFor makes it past us, there's nothing to stop them from from hitting our people on the ground. Let's take out the kill team and escort our people home. We only have time to prep a couple mechs, and we're shorthanded with [[TRT_MW,{TRT_MW.Callsign}]] down on the surface.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "rep_Kurita_fought"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "rep_ambush_stat",
+                                    "value" : "0",
+                                    "set" : true,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : [
+                                {
+                                    "Type" : "System_StartContract",
+                                    "value" : "DuoDuel_RepAmbush",
+                                    "valueConstant" : null,
+                                    "additionalValues" : [
+                                        "Kurita",
+                                        "SelfEmployed"
+                                    ]
+                                }
+                            ],
+                            "ForceEvents" : [
+                                {
+                                    "Scope" : "Company",
+                                    "EventID" : "tbone_event_co_rep_Kurita2",
+                                    "MinDaysWait" : 0,
+                                    "MaxDaysWait" : 0,
+                                    "Probability" : 100,
+                                    "RetainPilot" : false
+                                }
+                            ],
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "rep_Kurita_cooldown"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 180
+                        },
+                        {
+                            "Scope" : "TertiaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "supply_run"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : [
+                                {
+                                    "Type" : "MechWarrior_SetTimeout",
+                                    "value" : "1",
+                                    "valueConstant" : null,
+                                    "additionalValues" : null
+                                }
+                            ],
+                            "ForceEvents" : [],
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 2
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : false,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}
