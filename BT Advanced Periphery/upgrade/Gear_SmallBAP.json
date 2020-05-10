@@ -1,0 +1,123 @@
+{
+    "Custom": {
+        "Category": [
+            {
+                "CategoryID": "Probe"
+            }
+        ],
+        "BonusDescriptions": {
+            "Bonuses": [
+                "Sensors: +5%",
+                "Sight: +5%"
+            ]
+        },
+        "InventorySorter": {
+            "SortKey": "00024"
+        }
+    },
+    "StatName": null,
+    "RelativeModifier": 0,
+    "AbsoluteModifier": 0,
+    "Description": {
+        "Cost": 135000,
+        "Rarity": 5,
+        "Purchasable": true,
+        "Manufacturer": "Achernar",
+        "Model": "BAP",
+        "UIName": "Small Probe",
+        "Id": "Gear_SmallBAP",
+        "Name": "Small Active Probe",
+        "Details": "The Small Active Probe is a much less powerful version of the Beagle Active Probe in wide use by the Inner Sphere and the Clans. The Small Probe functions much the same as its larger, more powerful, cousin but has much reduced range. However, the system cycles much faster, allowing it to be used more rapidly. The Small Active Probe found fairly wide acceptance in the Periphery where the standard Active Probe was a little too difficult to acquire.",
+        "Icon": "uixSvgIcon_equipment_Comms"
+    },
+    "BonusValueA": "+5% Sensors/Sight",
+    "BonusValueB": "Active Probe Ping",
+    "ComponentType": "Upgrade",
+    "ComponentSubType": "NotSet",
+    "PrefabIdentifier": "",
+    "BattleValue": 0,
+    "InventorySize": 1,
+    "Tonnage": 1,
+    "AllowedLocations": "All",
+    "DisallowedLocations": "All",
+    "CriticalComponent": false,
+    "statusEffects": [
+        {
+            "durationData": {
+                "duration": -1,
+                "stackLimit": -1
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "effectTargetType": "Creator",
+                "showInTargetPreview": false,
+                "showInStatusPanel": false
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "BAProbe",
+                "Name": "Beagle Probe",
+                "Details": "Increased Sight/Sensors",
+                "Icon": "uixSvgIcon_equipment_Cockpit"
+            },
+            "nature": "Buff",
+            "statisticData": {
+                "statName": "SensorDistanceAbsolute",
+                "operation": "Float_Multiply",
+                "modValue": "1.05",
+                "modType": "System.Single"
+            }
+        },
+        {
+            "targetingData" : {
+                "effectTriggerType" : "OnActivation",
+                "effectTargetType" : "EnemiesWithinRange",
+				"alsoTargetsCreator" : true,
+                "forceVisRebuild" : true
+            },
+			"effectType" : "ActiveAbility",
+			"Description" :
+			{
+				"Id" : "ActiveProbe_Ping",
+				"Name" : "ACTIVE PROBE PING",
+				"Details" : "Activated ability (uses Firing action). Performs a Sensor Lock against all enemies within its radius, as indicated by the spinning gold ring. Will go into cooldown state after use.",
+				"Icon" : "uixSvgIcon_action_sensorlock"
+			},
+			"activeAbilityEffectData" : 
+			{
+				"abilityName" : "AbilityDef_ActiveProbe_Small"
+			}
+		},
+        {
+            "durationData": {
+                "duration": -1,
+                "stackLimit": -1
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "effectTargetType": "Creator"
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "Blood-Spotting_Gain-T1",
+                "Name": "SPOTTING DISTANCE INCREASED",
+                "Details": "Increases spotting distance by 50m.",
+                "Icon": "uixSvgIcon_equipment_Cockpit"
+            },
+            "nature": "Buff",
+            "statisticData": {
+                "statName": "SpotterDistanceAbsolute",
+                "operation": "Float_Multiply",
+                "modValue": "1.05",
+                "modType": "System.Single"
+            }
+        }
+    ],
+    "ComponentTags": {
+        "items": [
+            "component_type_stock",
+            "lv-probe_m2"
+        ],
+        "tagSetSourceFile": ""
+    }
+}
