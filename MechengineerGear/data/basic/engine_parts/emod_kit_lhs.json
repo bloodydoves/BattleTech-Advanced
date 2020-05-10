@@ -3,8 +3,8 @@
         "BonusDescriptions": {
             "Bonuses": [
                 "CoolingSystemLHS",
-				"Defense: -2",
-				"EndMoveHeat: -60"
+				"Defense: -3",
+				"EndMoveHeat: -50"
             ]
         },
         "Cooling": {
@@ -35,10 +35,10 @@
         "Purchasable": true,
         "Manufacturer": "Clan",
         "Model": "Engine Kit",
-        "UIName": "Laser Heat Sink Kit (C)",
+        "UIName": "Heat Sink Kit (Laser)",
         "Id": "emod_kit_lhs",
-        "Name": "Laser Heat Sink Kit (C)",
-        "Details": "Converts an SHS engine to LHS. A Mech' <b>Cooling System</b> provides heat dissipation for components inside the mech and compatible extension points for additional heat sinks throughout the mech. It differs from the closed cooling system of the engine. Unlike a normal heat sink which uses radiators and heat-conductive fluids to cool a 'Mech, a laser heat sink uses lasers to excite the hot exhaust gasses to a higher-energy state, converting the infrared energy of the gasses to light which is then shunted out of the 'Mech via a series of highly polished surfaces. Functionally identical to a Clan-tech double heat sink, the lack of liquid and gas in the system reduces the chances of heat-based ammunition cook-off and means that laser heat sinks don't get the decreased performance on warmer worlds that single and double heat sinks have, while at the same time preventing laser heat sinks from taking advantage of immersion in water or colder weather to boost their performance.",
+        "Name": "Heat Sink Kit (Laser)",
+        "Details": "Converts an SHS engine to LHS. A Mech' <b>Cooling System</b> provides heat dissipation for components inside the mech and compatible extension points for additional heat sinks throughout the mech. It differs from the closed cooling system of the engine. Unlike a normal heat sink which uses radiators and heat-conductive fluids to cool a 'Mech, a laser heat sink uses lasers to excite the hot exhaust gasses to a higher-energy state, converting the infrared energy of the gasses to light which is then shunted out of the 'Mech via a series of highly polished surfaces. The lack of liquid and gas in the system reduces the chances of heat-based ammunition cook-off and means that laser heat sinks don't get the decreased performance on warmer worlds that single and double heat sinks have, while at the same time preventing laser heat sinks from taking advantage of immersion in water or colder weather to boost their performance. Laser heat sinks are slightly less efficient than normal double heat sinks but the environmental benefits and the fact that they're slightly easier to produce lead to them proliferating throughout the Periphery in the 3060s.",
         "Icon": "uixSvgIcon_equipment_Heatsink"
     },
     "BonusValueA": "",
@@ -75,7 +75,7 @@
 			"statisticData": {
 				"statName": "ToHitThisActor",
 				"operation": "Float_Add",
-				"modValue": "-2.0",
+				"modValue": "-3.0",
 				"modType": "System.Single"
 			}
 		},
@@ -103,9 +103,9 @@
             },
             "effectType": "StatisticEffect",
             "Description": {
-                "Id": "LHS_Heat_Venting_60",
+                "Id": "LHS_Heat_Venting_50",
                 "Name": "Laser Heat Sink",
-                "Details": "Laser Heat Sink system venting 60 heat",
+                "Details": "Laser Heat Sink system venting 50 heat",
                 "Icon": "uixSvgIcon_equipment_ThermalExchanger"
             },
             "nature": "Buff",
@@ -114,7 +114,7 @@
                 "effectsPersistAfterDestruction": false,
                 "statName": "EndMoveHeat",
                 "operation": "Int_Add",
-                "modValue": "-60",
+                "modValue": "-50",
                 "modType": "System.Int32",
                 "additionalRules": "NotSet",
                 "targetCollection": "NotSet",

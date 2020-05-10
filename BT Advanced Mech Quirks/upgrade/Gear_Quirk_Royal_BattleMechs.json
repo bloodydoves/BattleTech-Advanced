@@ -18,7 +18,7 @@
 		},
 		"BonusDescriptions": {
 			"Bonuses": [
-				"HeatEfficiency: 20%"
+				"EndMoveHeat: -12"
 			]
 		}
 	},
@@ -31,10 +31,10 @@
 		"UIName": "Royal Mech Quirk",
 		"Id": "Gear_Quirk_Royal_BattleMechs",
 		"Name": "Royal Mech Quirk",
-		"Details": "This piece of equipment represents the inherent bonuses that Star League-vintage Royal BattleMechs, have over their regular counterparts. It grants 20% improved cooling systems.",
+		"Details": "This piece of equipment represents the inherent bonuses that Star League-vintage Royal BattleMechs, have over their regular counterparts. It grants a flat 12 bonus heat venting, regardless of terrain or environment.",
 		"Icon": "uixSvgIcon_equipment_Cockpit"
 	},
-	"BonusValueA": "20% Better Dissipation",
+	"BonusValueA": "Vents 12 Heat",
 	"BonusValueB": "",
 	"ComponentType": "Upgrade",
 	"ComponentSubType": "NotSet",
@@ -47,33 +47,56 @@
 	"CriticalComponent": false,
 	"statusEffects": [
 		{
-			"durationData": {
-				"duration": -1,
-				"stackLimit": -1
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"effectTargetType": "Creator",
-				"showInTargetPreview": false,
-				"showInStatusPanel": false
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "Royal_HeatEfficiency_20",
-				"Name": "HEAT DISSIPATION INCREASED",
-				"Details": "Heat dissipation amount increased by 20%.",
-				"Icon": "uixSvgIcon_equipment_HeatBank"
-			},
-			"nature": "Buff",
-			"statisticData": {
-				"appliesEachTick": false,
-				"effectsPersistAfterDestruction": false,
-				"statName": "HeatSinkCapacity",
-				"operation": "Int_Multiply_Float",
-				"modValue": "1.2",
-				"modType": "System.Single"
-			}
-		}
+            "durationData": {
+                "duration": -1,
+                "ticksOnActivations": false,
+                "useActivationsOfTarget": false,
+                "ticksOnEndOfRound": false,
+                "ticksOnMovements": false,
+                "stackLimit": -1,
+                "clearedWhenAttacked": false
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "triggerLimit": 0,
+                "extendDurationOnTrigger": 0,
+                "specialRules": "NotSet",
+                "effectTargetType": "Creator",
+                "range": 0,
+                "forcePathRebuild": false,
+                "forceVisRebuild": false,
+                "showInTargetPreview": false,
+                "showInStatusPanel": false
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "RoyalQuirk_Venting",
+                "Name": "Royal BattleMech Venting",
+                "Details": "Royal BattleMechs automatically vent an extra 12 heat",
+                "Icon": "uixSvgIcon_equipment_ThermalExchanger"
+            },
+            "nature": "Buff",
+            "statisticData": {
+                "appliesEachTick": false,
+                "effectsPersistAfterDestruction": false,
+                "statName": "EndMoveHeat",
+                "operation": "Int_Add",
+                "modValue": "-12",
+                "modType": "System.Int32",
+                "additionalRules": "NotSet",
+                "targetCollection": "NotSet",
+                "targetWeaponCategory": "NotSet",
+                "targetWeaponType": "NotSet",
+                "targetAmmoCategory": "NotSet",
+                "targetWeaponSubType": "NotSet"
+            },
+            "tagData": null,
+            "floatieData": null,
+            "actorBurningData": null,
+            "vfxData": null,
+            "instantModData": null,
+            "poorlyMaintainedEffectData": null
+        }
 	],
 	"ComponentTags": {
 		"items": [

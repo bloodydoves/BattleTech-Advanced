@@ -1,0 +1,1156 @@
+2020-05-02 22:47:09.884 - Assembly version: 0.1.11.0
+2020-05-02 22:47:09.885 -  == Initializing Configuration
+2020-05-02 22:47:09.885 -  -- Patched After Battle - {0}% 
+2020-05-02 22:47:09.885 -  -- Battle Fatigue - {0}% 
+2020-05-02 22:47:09.885 -  -- Mothballed - {0}% 
+2020-05-02 22:47:09.885 -  -- Scavenged - {0}% 
+2020-05-02 22:47:09.885 -  == Configuration Initialized
+2020-05-02 22:47:09.885 - ModDir is:D:\Steam\steamapps\common\BATTLETECH\Mods\FieldRepairs
+2020-05-02 22:47:09.885 - mod.json settings are:({"Debug":true,"Trace":false,"Skirmish":{"Tag":"spawn_poorly_maintained_50"},"DamageRollsConfig":{"MechRolls":{"PM25_MinRolls":2,"PM25_MaxRolls":3,"PM50_MinRolls":3,"PM50_MaxRolls":5,"PM75_MinRolls":4,"PM75_MaxRolls":7},"VehicleRolls":{"PM25_MinRolls":1,"PM25_MaxRolls":4,"PM50_MinRolls":2,"PM50_MaxRolls":5,"PM75_MinRolls":3,"PM75_MaxRolls":6},"TurretRolls":{"PM25_MinRolls":1,"PM25_MaxRolls":3,"PM50_MinRolls":1,"PM50_MaxRolls":4,"PM75_MinRolls":2,"PM75_MaxRolls":5}},"Themes":[{"Label":"Patched After Battle - {0}%","MechWeights":["Armor","Structure","Structure","Structure","Component","Component","Weapon","Weapon","AmmoBox","Skill"],"VehicleWeights":["Armor","Armor","Armor","Structure","Structure","Structure","Component","Weapon","AmmoBox","Skill"],"TurretWeights":["Armor","Armor","Armor","Structure","Structure","Structure","Component","Weapon","AmmoBox","Skill"]},{"Label":"Battle Fatigue - {0}%","MechWeights":["Armor","Armor","Armor","Structure","Weapon","AmmoBox","AmmoBox","HeatSink","Skill","Skill"],"VehicleWeights":["Armor","Armor","Armor","Armor","Structure","Weapon","AmmoBox","AmmoBox","Skill","Skill"],"TurretWeights":["Armor","Armor","Armor","Armor","Structure","Weapon","AmmoBox","AmmoBox","Skill","Skill"]},{"Label":"Mothballed - {0}%","MechWeights":["Structure","Component","Component","Weapon","Weapon","Weapon","Engine","Engine","Gyro","Gyro"],"VehicleWeights":["Armor","Armor","Structure","Structure","Component","Component","Component","Weapon","Weapon","Weapon"],"TurretWeights":["Armor","Armor","Structure","Structure","Component","Component","Component","Weapon","Weapon","Weapon"]},{"Label":"Scavenged - {0}%","MechWeights":["Armor","Structure","Component","Component","Weapon","Weapon","AmmoBox","HeatSink","Engine","Gyro"],"VehicleWeights":["Armor","Armor","Structure","Structure","Component","Component","Weapon","Weapon","AmmoBox","AmmoBox"],"TurretWeights":["Armor","Armor","Structure","Structure","Component","Component","Weapon","Weapon","AmmoBox","AmmoBox"]}],"CustomComponentCategories":{"Gyros":"Gyro","EngineParts":"EnginePart","Blacklisted":["Armor","Structure","CASE","PositiveQuirk","Cockpit"]},"HitPenalties":{"MinArmorLossPerHit":0.2,"MaxArmorLossPerHit":0.5,"MinStructureLossPerHit":0.1,"MaxStructureLossPerHit":0.3,"MinSkillPenaltyPerHit":1,"MaxSkillPenaltyPerHit":3,"MinAmmoRemaining":0.05,"MaxAmmoRemaining":0.25},"LocalizedText":{"COMP_DAMAGE":"<color=#FF0000>COMPONENT DAMAGE</color>\n","PILOT_DAMAGE":"<color=#FF0000>HEALTH DAMAGE</color>\n","SKILL_DAMAGE":"<color=#FF0000>SKILL PENALTY</color>\n","SKILL_GUNNERY":" - Gunnery: -{0}\n","SKILL_GUTS":" - Guts: -{0}\n","SKILL_PILOTING":" - Piloting: -{0}\n","SKILL_TACTICS":" - Tactics: -{0}\n","PILOT_HEALTH":" - Health: -{0}\n","PILOT_BONUS_HEALTH":" - Bonus Health: -{0}\n"}})
+2020-05-02 22:47:09.886 - === MOD CONFIG BEGIN ===
+2020-05-02 22:47:09.886 -   DEBUG:True Trace:False
+2020-05-02 22:47:09.886 -  --- SKIRMISH ---
+2020-05-02 22:47:09.886 -   TAG: spawn_poorly_maintained_50
+2020-05-02 22:47:09.886 -  --- DAMAGE ROLLS ---
+2020-05-02 22:47:09.886 -   MECH ROLLS: 
+2020-05-02 22:47:09.886 -     poorly_maintained_25 -> min: 2 / max: 3
+2020-05-02 22:47:09.886 -     poorly_maintained_50 -> min: 3 / max: 5
+2020-05-02 22:47:09.886 -     poorly_maintained_75 -> min: 4 / max: 7
+2020-05-02 22:47:09.886 -   VEHICLE ROLLS: 
+2020-05-02 22:47:09.886 -     poorly_maintained_25 -> min: 1 / max: 4
+2020-05-02 22:47:09.886 -     poorly_maintained_50 -> min: 2 / max: 5
+2020-05-02 22:47:09.886 -     poorly_maintained_75 -> min: 3 / max: 6
+2020-05-02 22:47:09.886 -   TURRET ROLLS: 
+2020-05-02 22:47:09.886 -     poorly_maintained_25 -> min: 1 / max: 3
+2020-05-02 22:47:09.886 -     poorly_maintained_50 -> min: 1 / max: 4
+2020-05-02 22:47:09.886 -     poorly_maintained_75 -> min: 2 / max: 5
+2020-05-02 22:47:09.886 -  --- CUSTOM COMPONENTS CATEGORIES ---
+2020-05-02 22:47:09.886 -   Gyros: Gyro  EngineParts: EnginePart  Blacklisted: Armor, Structure, CASE, PositiveQuirk, Cockpit, Armor, Structure, CASE, PositiveQuirk, Cockpit
+2020-05-02 22:47:09.886 -  --- PER HIT PENALTIES ---
+2020-05-02 22:47:09.886 -   ArmorLoss =>  min: 0.2 max: 0.5
+2020-05-02 22:47:09.886 -   StructureLoss =>  min: 0.1 max: 0.3
+2020-05-02 22:47:09.886 -   SkillPenalty =>  min: 1 max: 3
+2020-05-02 22:47:09.886 -  --- THEMES ---
+2020-05-02 22:47:09.886 -   THEME: Patched After Battle - {0}%
+2020-05-02 22:47:09.887 -     MECH WEIGHTS: Armor, Structure, Structure, Structure, Component, Component, Weapon, Weapon, AmmoBox, Skill
+2020-05-02 22:47:09.887 -     VEHICLE WEIGHTS: Armor, Armor, Armor, Structure, Structure, Structure, Component, Weapon, AmmoBox, Skill
+2020-05-02 22:47:09.887 -     TURRET WEIGHTS: Armor, Armor, Armor, Structure, Structure, Structure, Component, Weapon, AmmoBox, Skill
+2020-05-02 22:47:09.887 -  
+2020-05-02 22:47:09.887 -   THEME: Battle Fatigue - {0}%
+2020-05-02 22:47:09.887 -     MECH WEIGHTS: Armor, Armor, Armor, Structure, Weapon, AmmoBox, AmmoBox, HeatSink, Skill, Skill
+2020-05-02 22:47:09.887 -     VEHICLE WEIGHTS: Armor, Armor, Armor, Armor, Structure, Weapon, AmmoBox, AmmoBox, Skill, Skill
+2020-05-02 22:47:09.887 -     TURRET WEIGHTS: Armor, Armor, Armor, Armor, Structure, Weapon, AmmoBox, AmmoBox, Skill, Skill
+2020-05-02 22:47:09.887 -  
+2020-05-02 22:47:09.887 -   THEME: Mothballed - {0}%
+2020-05-02 22:47:09.887 -     MECH WEIGHTS: Structure, Component, Component, Weapon, Weapon, Weapon, Engine, Engine, Gyro, Gyro
+2020-05-02 22:47:09.887 -     VEHICLE WEIGHTS: Armor, Armor, Structure, Structure, Component, Component, Component, Weapon, Weapon, Weapon
+2020-05-02 22:47:09.887 -     TURRET WEIGHTS: Armor, Armor, Structure, Structure, Component, Component, Component, Weapon, Weapon, Weapon
+2020-05-02 22:47:09.887 -  
+2020-05-02 22:47:09.887 -   THEME: Scavenged - {0}%
+2020-05-02 22:47:09.887 -     MECH WEIGHTS: Armor, Structure, Component, Component, Weapon, Weapon, AmmoBox, HeatSink, Engine, Gyro
+2020-05-02 22:47:09.887 -     VEHICLE WEIGHTS: Armor, Armor, Structure, Structure, Component, Component, Weapon, Weapon, AmmoBox, AmmoBox
+2020-05-02 22:47:09.887 -     TURRET WEIGHTS: Armor, Armor, Structure, Structure, Component, Component, Weapon, Weapon, AmmoBox, AmmoBox
+2020-05-02 22:47:09.887 -  
+2020-05-02 22:47:09.887 - === MOD CONFIG END ===
+2020-05-02 22:47:09.887 - INFO: No errors reading settings file.
+2020-05-02 23:08:31.249 - Set StateTheme to: Battle Fatigue - {0}%
+2020-05-03 00:06:35.069 - Set StateTheme to: Patched After Battle - {0}%
+2020-05-03 00:08:21.773 -  Applying PoorlyMaintainedEffect to unit: Dervish_Tactician_3503C7C0
+2020-05-03 00:08:21.775 - 75% effect supplied, stateRolls = 5
+2020-05-03 00:08:21.776 - Checking component: Dervish Easy to Maintain / Dervish Easy to Maintain / Dervish Easy to Maintain
+2020-05-03 00:08:21.776 -   - Found gyro: Dervish Easy to Maintain
+2020-05-03 00:08:21.776 -       gyro has maxhits: 2
+2020-05-03 00:08:21.776 - Checking component: Standard Structure / Structure / Structure
+2020-05-03 00:08:21.777 -   - Skipping blacklisted component: Structure
+2020-05-03 00:08:21.777 - Checking component: Standard Cockpit / Cockpit / Cockpit
+2020-05-03 00:08:21.777 -   - Skipping blacklisted component: Cockpit
+2020-05-03 00:08:21.777 - Checking component: Standard Armor / Armor / Armor
+2020-05-03 00:08:21.777 -   - Skipping blacklisted component: Armor
+2020-05-03 00:08:21.777 - Checking component: E-Cooling / E-Cooling / E-Cooling
+2020-05-03 00:08:21.777 -   - Found engine: E-Cooling
+2020-05-03 00:08:21.777 -       engine has maxhits: 3
+2020-05-03 00:08:21.777 - Checking component: Cooling / Cooling / Cooling
+2020-05-03 00:08:21.777 -   - Found engine: Cooling
+2020-05-03 00:08:21.777 - Checking component: Fusion Core 275 / Core 275 / Core 275
+2020-05-03 00:08:21.777 -   - Found engine: Core 275
+2020-05-03 00:08:21.777 - Checking component: Standard Engine / Std. Engine / Std. Engine
+2020-05-03 00:08:21.777 -   - Found engine: Std. Engine
+2020-05-03 00:08:21.777 - Checking component: M Laser / M Laser / M Laser
+2020-05-03 00:08:21.777 -   - Found weapon: M Laser
+2020-05-03 00:08:21.778 - Checking component: M Laser / M Laser / M Laser
+2020-05-03 00:08:21.778 -   - Found weapon: M Laser
+2020-05-03 00:08:21.778 - Checking component: SRM2 / SRM2 / SRM2
+2020-05-03 00:08:21.778 -   - Found weapon: SRM2
+2020-05-03 00:08:21.778 - Checking component: SRM2 / SRM2 / SRM2
+2020-05-03 00:08:21.778 -   - Found weapon: SRM2
+2020-05-03 00:08:21.778 - Checking component: LRM10 / LRM10 / LRM10
+2020-05-03 00:08:21.778 -   - Found weapon: LRM10
+2020-05-03 00:08:21.778 - Checking component: LRM10 / LRM10 / LRM10
+2020-05-03 00:08:21.778 -   - Found weapon: LRM10
+2020-05-03 00:08:21.778 - Checking component: SRM Ammo / Ammo SRM / Ammo SRM
+2020-05-03 00:08:21.778 -   - Found ammoBox: Ammo SRM
+2020-05-03 00:08:21.778 - Checking component: SRM Ammo / Ammo SRM / Ammo SRM
+2020-05-03 00:08:21.778 -   - Found ammoBox: Ammo SRM
+2020-05-03 00:08:21.778 - Checking component: LRM Ammo / Ammo LRM / Ammo LRM
+2020-05-03 00:08:21.778 -   - Found ammoBox: Ammo LRM
+2020-05-03 00:08:21.778 - Checking component: LRM Ammo / Ammo LRM / Ammo LRM
+2020-05-03 00:08:21.778 -   - Found ammoBox: Ammo LRM
+2020-05-03 00:08:21.778 - Checking component: Standard Jump Jet (S) / Jump Jet (S) / Jump Jet (S)
+2020-05-03 00:08:21.778 -   - Found component: Jump Jet (S) in location: 8
+2020-05-03 00:08:21.778 - Checking component: Standard Jump Jet (S) / Jump Jet (S) / Jump Jet (S)
+2020-05-03 00:08:21.778 -   - Found component: Jump Jet (S) in location: 64
+2020-05-03 00:08:21.778 - Checking component: Standard Jump Jet (S) / Jump Jet (S) / Jump Jet (S)
+2020-05-03 00:08:21.778 -   - Found component: Jump Jet (S) in location: 64
+2020-05-03 00:08:21.778 - Checking component: Standard Jump Jet (S) / Jump Jet (S) / Jump Jet (S)
+2020-05-03 00:08:21.778 -   - Found component: Jump Jet (S) in location: 128
+2020-05-03 00:08:21.778 - Checking component: Standard Jump Jet (S) / Jump Jet (S) / Jump Jet (S)
+2020-05-03 00:08:21.778 -   - Found component: Jump Jet (S) in location: 128
+2020-05-03 00:08:21.778 - Checking component: Life Support A / Life Support / Life Support
+2020-05-03 00:08:21.778 -   - Found component: Life Support in location: 1
+2020-05-03 00:08:21.778 - Checking component: Sensors A / Sensors / Sensors
+2020-05-03 00:08:21.779 -   - Found component: Sensors in location: 1
+2020-05-03 00:08:21.779 - Checking component: Sensors B / Sensors / Sensors
+2020-05-03 00:08:21.779 -   - Found component: Sensors in location: 1
+2020-05-03 00:08:21.779 - Checking component: Life Support B / Life Support / Life Support
+2020-05-03 00:08:21.779 -   - Found component: Life Support in location: 1
+2020-05-03 00:08:21.779 - Checking component: Hip / Hip / Hip
+2020-05-03 00:08:21.779 -   - Found component: Hip in location: 64
+2020-05-03 00:08:21.779 - Checking component: Upper Leg Actuator / Upper Leg / Upper Leg
+2020-05-03 00:08:21.779 -   - Found component: Upper Leg in location: 64
+2020-05-03 00:08:21.779 - Checking component: Lower Leg Actuator / Lower Leg / Lower Leg
+2020-05-03 00:08:21.779 -   - Found component: Lower Leg in location: 64
+2020-05-03 00:08:21.779 - Checking component: Foot Actuator / Foot / Foot
+2020-05-03 00:08:21.779 -   - Found component: Foot in location: 64
+2020-05-03 00:08:21.779 - Checking component: Hip / Hip / Hip
+2020-05-03 00:08:21.779 -   - Found component: Hip in location: 128
+2020-05-03 00:08:21.779 - Checking component: Upper Leg Actuator / Upper Leg / Upper Leg
+2020-05-03 00:08:21.779 -   - Found component: Upper Leg in location: 128
+2020-05-03 00:08:21.779 - Checking component: Lower Leg Actuator / Lower Leg / Lower Leg
+2020-05-03 00:08:21.779 -   - Found component: Lower Leg in location: 128
+2020-05-03 00:08:21.779 - Checking component: Foot Actuator / Foot / Foot
+2020-05-03 00:08:21.779 -   - Found component: Foot in location: 128
+2020-05-03 00:08:21.779 - Checking component: Shoulder / Shoulder / Shoulder
+2020-05-03 00:08:21.779 -   - Found component: Shoulder in location: 32
+2020-05-03 00:08:21.779 - Checking component: Upper Arm Actuator / Upper Arm / Upper Arm
+2020-05-03 00:08:21.779 -   - Found component: Upper Arm in location: 32
+2020-05-03 00:08:21.779 - Checking component: Lower Arm Actuator / Lower Arm / Lower Arm
+2020-05-03 00:08:21.779 -   - Found component: Lower Arm in location: 32
+2020-05-03 00:08:21.779 - Checking component: Shoulder / Shoulder / Shoulder
+2020-05-03 00:08:21.779 -   - Found component: Shoulder in location: 2
+2020-05-03 00:08:21.779 - Checking component: Upper Arm Actuator / Upper Arm / Upper Arm
+2020-05-03 00:08:21.779 -   - Found component: Upper Arm in location: 2
+2020-05-03 00:08:21.779 - Checking component: Lower Arm Actuator / Lower Arm / Lower Arm
+2020-05-03 00:08:21.780 -   - Found component: Lower Arm in location: 2
+2020-05-03 00:08:21.780 -   0 is damageType: Armor.
+2020-05-03 00:08:21.780 -   1 is damageType: Structure.
+2020-05-03 00:08:21.781 -   2 is damageType: Weapon.
+2020-05-03 00:08:21.781 -   3 is damageType: Component.
+2020-05-03 00:08:21.781 -   4 is damageType: Structure.
+2020-05-03 00:08:21.781 - Damaging component: M Laser
+2020-05-03 00:08:21.784 - Damaging component: Jump Jet (S)
+2020-05-03 00:08:21.785 - Reducing armor in location RightLeg by 0.36% for 27 points
+2020-05-03 00:08:21.785 - Reducing structure in location LeftLeg by 0.14% for 9 points
+2020-05-03 00:08:21.786 - Reducing structure in location CenterTorso by 0.11% for 9 points
+2020-05-03 00:08:21.860 -  Applying PoorlyMaintainedEffect to unit: Dervish_Defender_2D2AA81E
+2020-05-03 00:08:21.860 - 75% effect supplied, stateRolls = 6
+2020-05-03 00:08:21.860 - Checking component: Dervish Easy to Maintain / Dervish Easy to Maintain / Dervish Easy to Maintain
+2020-05-03 00:08:21.860 -   - Found gyro: Dervish Easy to Maintain
+2020-05-03 00:08:21.860 -       gyro has maxhits: 2
+2020-05-03 00:08:21.860 - Checking component: Standard Structure / Structure / Structure
+2020-05-03 00:08:21.860 -   - Skipping blacklisted component: Structure
+2020-05-03 00:08:21.860 - Checking component: Standard Cockpit / Cockpit / Cockpit
+2020-05-03 00:08:21.860 -   - Skipping blacklisted component: Cockpit
+2020-05-03 00:08:21.860 - Checking component: Standard Armor / Armor / Armor
+2020-05-03 00:08:21.860 -   - Skipping blacklisted component: Armor
+2020-05-03 00:08:21.860 - Checking component: E-Cooling / E-Cooling / E-Cooling
+2020-05-03 00:08:21.860 -   - Found engine: E-Cooling
+2020-05-03 00:08:21.860 -       engine has maxhits: 3
+2020-05-03 00:08:21.860 - Checking component: Cooling / Cooling / Cooling
+2020-05-03 00:08:21.860 -   - Found engine: Cooling
+2020-05-03 00:08:21.860 - Checking component: Fusion Core 275 / Core 275 / Core 275
+2020-05-03 00:08:21.860 -   - Found engine: Core 275
+2020-05-03 00:08:21.860 - Checking component: Standard Engine / Std. Engine / Std. Engine
+2020-05-03 00:08:21.860 -   - Found engine: Std. Engine
+2020-05-03 00:08:21.860 - Checking component: M Laser / M Laser / M Laser
+2020-05-03 00:08:21.860 -   - Found weapon: M Laser
+2020-05-03 00:08:21.860 - Checking component: M Laser / M Laser / M Laser
+2020-05-03 00:08:21.860 -   - Found weapon: M Laser
+2020-05-03 00:08:21.860 - Checking component: SRM2 / SRM2 / SRM2
+2020-05-03 00:08:21.860 -   - Found weapon: SRM2
+2020-05-03 00:08:21.860 - Checking component: SRM2 / SRM2 / SRM2
+2020-05-03 00:08:21.860 -   - Found weapon: SRM2
+2020-05-03 00:08:21.860 - Checking component: LRM10 / LRM10 / LRM10
+2020-05-03 00:08:21.860 -   - Found weapon: LRM10
+2020-05-03 00:08:21.860 - Checking component: LRM10 / LRM10 / LRM10
+2020-05-03 00:08:21.860 -   - Found weapon: LRM10
+2020-05-03 00:08:21.860 - Checking component: SRM Ammo / Ammo SRM / Ammo SRM
+2020-05-03 00:08:21.861 -   - Found ammoBox: Ammo SRM
+2020-05-03 00:08:21.861 - Checking component: SRM Ammo / Ammo SRM / Ammo SRM
+2020-05-03 00:08:21.861 -   - Found ammoBox: Ammo SRM
+2020-05-03 00:08:21.861 - Checking component: LRM Ammo / Ammo LRM / Ammo LRM
+2020-05-03 00:08:21.861 -   - Found ammoBox: Ammo LRM
+2020-05-03 00:08:21.861 - Checking component: LRM Ammo / Ammo LRM / Ammo LRM
+2020-05-03 00:08:21.861 -   - Found ammoBox: Ammo LRM
+2020-05-03 00:08:21.861 - Checking component: Standard Jump Jet (S) / Jump Jet (S) / Jump Jet (S)
+2020-05-03 00:08:21.861 -   - Found component: Jump Jet (S) in location: 8
+2020-05-03 00:08:21.861 - Checking component: Standard Jump Jet (S) / Jump Jet (S) / Jump Jet (S)
+2020-05-03 00:08:21.861 -   - Found component: Jump Jet (S) in location: 64
+2020-05-03 00:08:21.861 - Checking component: Standard Jump Jet (S) / Jump Jet (S) / Jump Jet (S)
+2020-05-03 00:08:21.861 -   - Found component: Jump Jet (S) in location: 64
+2020-05-03 00:08:21.861 - Checking component: Standard Jump Jet (S) / Jump Jet (S) / Jump Jet (S)
+2020-05-03 00:08:21.861 -   - Found component: Jump Jet (S) in location: 128
+2020-05-03 00:08:21.861 - Checking component: Standard Jump Jet (S) / Jump Jet (S) / Jump Jet (S)
+2020-05-03 00:08:21.861 -   - Found component: Jump Jet (S) in location: 128
+2020-05-03 00:08:21.861 - Checking component: Life Support A / Life Support / Life Support
+2020-05-03 00:08:21.861 -   - Found component: Life Support in location: 1
+2020-05-03 00:08:21.861 - Checking component: Sensors A / Sensors / Sensors
+2020-05-03 00:08:21.861 -   - Found component: Sensors in location: 1
+2020-05-03 00:08:21.861 - Checking component: Sensors B / Sensors / Sensors
+2020-05-03 00:08:21.861 -   - Found component: Sensors in location: 1
+2020-05-03 00:08:21.861 - Checking component: Life Support B / Life Support / Life Support
+2020-05-03 00:08:21.861 -   - Found component: Life Support in location: 1
+2020-05-03 00:08:21.861 - Checking component: Hip / Hip / Hip
+2020-05-03 00:08:21.861 -   - Found component: Hip in location: 64
+2020-05-03 00:08:21.861 - Checking component: Upper Leg Actuator / Upper Leg / Upper Leg
+2020-05-03 00:08:21.861 -   - Found component: Upper Leg in location: 64
+2020-05-03 00:08:21.861 - Checking component: Lower Leg Actuator / Lower Leg / Lower Leg
+2020-05-03 00:08:21.861 -   - Found component: Lower Leg in location: 64
+2020-05-03 00:08:21.861 - Checking component: Foot Actuator / Foot / Foot
+2020-05-03 00:08:21.861 -   - Found component: Foot in location: 64
+2020-05-03 00:08:21.861 - Checking component: Hip / Hip / Hip
+2020-05-03 00:08:21.861 -   - Found component: Hip in location: 128
+2020-05-03 00:08:21.861 - Checking component: Upper Leg Actuator / Upper Leg / Upper Leg
+2020-05-03 00:08:21.861 -   - Found component: Upper Leg in location: 128
+2020-05-03 00:08:21.861 - Checking component: Lower Leg Actuator / Lower Leg / Lower Leg
+2020-05-03 00:08:21.861 -   - Found component: Lower Leg in location: 128
+2020-05-03 00:08:21.861 - Checking component: Foot Actuator / Foot / Foot
+2020-05-03 00:08:21.861 -   - Found component: Foot in location: 128
+2020-05-03 00:08:21.861 - Checking component: Shoulder / Shoulder / Shoulder
+2020-05-03 00:08:21.861 -   - Found component: Shoulder in location: 32
+2020-05-03 00:08:21.861 - Checking component: Upper Arm Actuator / Upper Arm / Upper Arm
+2020-05-03 00:08:21.861 -   - Found component: Upper Arm in location: 32
+2020-05-03 00:08:21.862 - Checking component: Lower Arm Actuator / Lower Arm / Lower Arm
+2020-05-03 00:08:21.862 -   - Found component: Lower Arm in location: 32
+2020-05-03 00:08:21.862 - Checking component: Shoulder / Shoulder / Shoulder
+2020-05-03 00:08:21.862 -   - Found component: Shoulder in location: 2
+2020-05-03 00:08:21.862 - Checking component: Upper Arm Actuator / Upper Arm / Upper Arm
+2020-05-03 00:08:21.862 -   - Found component: Upper Arm in location: 2
+2020-05-03 00:08:21.862 - Checking component: Lower Arm Actuator / Lower Arm / Lower Arm
+2020-05-03 00:08:21.862 -   - Found component: Lower Arm in location: 2
+2020-05-03 00:08:21.862 -   0 is damageType: Structure.
+2020-05-03 00:08:21.862 -   1 is damageType: Armor.
+2020-05-03 00:08:21.862 -   2 is damageType: Structure.
+2020-05-03 00:08:21.862 -   3 is damageType: Weapon.
+2020-05-03 00:08:21.862 -   4 is damageType: Component.
+2020-05-03 00:08:21.862 -   5 is damageType: Armor.
+2020-05-03 00:08:21.862 - Damaging component: M Laser
+2020-05-03 00:08:21.866 - Damaging component: Life Support
+2020-05-03 00:08:21.868 - Reducing armor in location RightTorso by 0.49% for 36 points
+2020-05-03 00:08:21.868 - Reducing armor in location RightArm by 0.48% for 23 points
+2020-05-03 00:08:21.868 - Reducing structure in location LeftArm by 0.25% for 11 points
+2020-05-03 00:08:21.868 - Reducing structure in location LeftLeg by 0.13% for 8 points
+2020-05-03 00:08:21.990 -  Applying PoorlyMaintainedEffect to unit: Blackjack_Gunner_56C5D533
+2020-05-03 00:08:21.990 - 75% effect supplied, stateRolls = 5
+2020-05-03 00:08:21.991 - Checking component: Blackjack Improved Targeting / Blackjack Improved Targeting / Blackjack Improved Targeting
+2020-05-03 00:08:21.991 -   - Found component: Blackjack Improved Targeting in location: 1
+2020-05-03 00:08:21.991 - Checking component: Standard Structure / Structure / Structure
+2020-05-03 00:08:21.991 -   - Skipping blacklisted component: Structure
+2020-05-03 00:08:21.991 - Checking component: Standard Armor / Armor / Armor
+2020-05-03 00:08:21.991 -   - Skipping blacklisted component: Armor
+2020-05-03 00:08:21.991 - Checking component: Fusion Core 180 / Core 180 / Core 180
+2020-05-03 00:08:21.991 -   - Found engine: Core 180
+2020-05-03 00:08:21.991 -       engine has maxhits: 3
+2020-05-03 00:08:21.991 - Checking component: Heat Sink Kit (DHS) / Heat Sink Kit (DHS) / Heat Sink Kit (DHS)
+2020-05-03 00:08:21.991 -   - Found engine: Heat Sink Kit (DHS)
+2020-05-03 00:08:21.991 - Checking component: E-Cooling / E-Cooling / E-Cooling
+2020-05-03 00:08:21.991 -   - Found engine: E-Cooling
+2020-05-03 00:08:21.991 - Checking component: Standard Gyro / Gyro / Gyro
+2020-05-03 00:08:21.991 -   - Found gyro: Gyro
+2020-05-03 00:08:21.991 -       gyro has maxhits: 2
+2020-05-03 00:08:21.991 - Checking component: Engine XL / Engine XL / Engine XL
+2020-05-03 00:08:21.991 -   - Found engine: Engine XL
+2020-05-03 00:08:21.991 - Checking component: Engine / Engine / Engine
+2020-05-03 00:08:21.991 -   - Found engine: Engine
+2020-05-03 00:08:21.991 - Checking component: Engine / Engine / Engine
+2020-05-03 00:08:21.991 -   - Found engine: Engine
+2020-05-03 00:08:21.991 - Checking component: Standard Cockpit / Cockpit / Cockpit
+2020-05-03 00:08:21.991 -   - Skipping blacklisted component: Cockpit
+2020-05-03 00:08:21.991 - Checking component: Hip / Hip / Hip
+2020-05-03 00:08:21.991 -   - Found component: Hip in location: 64
+2020-05-03 00:08:21.992 - Checking component: Upper Leg Actuator / Upper Leg / Upper Leg
+2020-05-03 00:08:21.992 -   - Found component: Upper Leg in location: 64
+2020-05-03 00:08:21.992 - Checking component: Lower Leg Actuator / Lower Leg / Lower Leg
+2020-05-03 00:08:21.992 -   - Found component: Lower Leg in location: 64
+2020-05-03 00:08:21.992 - Checking component: Foot Actuator / Foot / Foot
+2020-05-03 00:08:21.992 -   - Found component: Foot in location: 64
+2020-05-03 00:08:21.992 - Checking component: Hip / Hip / Hip
+2020-05-03 00:08:21.992 -   - Found component: Hip in location: 128
+2020-05-03 00:08:21.992 - Checking component: Upper Leg Actuator / Upper Leg / Upper Leg
+2020-05-03 00:08:21.992 -   - Found component: Upper Leg in location: 128
+2020-05-03 00:08:21.992 - Checking component: Lower Leg Actuator / Lower Leg / Lower Leg
+2020-05-03 00:08:21.992 -   - Found component: Lower Leg in location: 128
+2020-05-03 00:08:21.992 - Checking component: Foot Actuator / Foot / Foot
+2020-05-03 00:08:21.992 -   - Found component: Foot in location: 128
+2020-05-03 00:08:21.992 - Checking component: Shoulder / Shoulder / Shoulder
+2020-05-03 00:08:21.992 -   - Found component: Shoulder in location: 2
+2020-05-03 00:08:21.992 - Checking component: Upper Arm Actuator / Upper Arm / Upper Arm
+2020-05-03 00:08:21.992 -   - Found component: Upper Arm in location: 2
+2020-05-03 00:08:21.992 - Checking component: Shoulder / Shoulder / Shoulder
+2020-05-03 00:08:21.992 -   - Found component: Shoulder in location: 32
+2020-05-03 00:08:21.992 - Checking component: Upper Arm Actuator / Upper Arm / Upper Arm
+2020-05-03 00:08:21.992 -   - Found component: Upper Arm in location: 32
+2020-05-03 00:08:21.992 - Checking component: Heat Sink Double (D) / Heat Sink (D) / Heat Sink (D)
+2020-05-03 00:08:21.992 -   - Found heatSink: Heat Sink (D)
+2020-05-03 00:08:21.992 - Checking component: Heat Sink Double (D) / Heat Sink (D) / Heat Sink (D)
+2020-05-03 00:08:21.992 -   - Found heatSink: Heat Sink (D)
+2020-05-03 00:08:21.992 - Checking component: Heat Sink Double (D) / Heat Sink (D) / Heat Sink (D)
+2020-05-03 00:08:21.993 -   - Found heatSink: Heat Sink (D)
+2020-05-03 00:08:21.993 - Checking component: Heat Sink Double (D) / Heat Sink (D) / Heat Sink (D)
+2020-05-03 00:08:21.993 -   - Found heatSink: Heat Sink (D)
+2020-05-03 00:08:21.993 - Checking component: Heat Sink Double (D) / Heat Sink (D) / Heat Sink (D)
+2020-05-03 00:08:21.993 -   - Found heatSink: Heat Sink (D)
+2020-05-03 00:08:21.993 - Checking component: Heat Sink Double (D) / Heat Sink (D) / Heat Sink (D)
+2020-05-03 00:08:21.993 -   - Found heatSink: Heat Sink (D)
+2020-05-03 00:08:21.993 - Checking component: Blazer / Binary Laser / Binary Laser
+2020-05-03 00:08:21.993 -   - Found weapon: Binary Laser
+2020-05-03 00:08:21.993 - Checking component: S Laser / S Laser / S Laser
+2020-05-03 00:08:21.993 -   - Found weapon: S Laser
+2020-05-03 00:08:21.993 - Checking component: Blazer / Binary Laser / Binary Laser
+2020-05-03 00:08:21.993 -   - Found weapon: Binary Laser
+2020-05-03 00:08:21.993 - Checking component: Standard Jump Jet (S) / Jump Jet (S) / Jump Jet (S)
+2020-05-03 00:08:21.993 -   - Found component: Jump Jet (S) in location: 64
+2020-05-03 00:08:21.993 - Checking component: Standard Jump Jet (S) / Jump Jet (S) / Jump Jet (S)
+2020-05-03 00:08:21.993 -   - Found component: Jump Jet (S) in location: 64
+2020-05-03 00:08:21.993 - Checking component: Standard Jump Jet (S) / Jump Jet (S) / Jump Jet (S)
+2020-05-03 00:08:21.993 -   - Found component: Jump Jet (S) in location: 128
+2020-05-03 00:08:21.993 - Checking component: Standard Jump Jet (S) / Jump Jet (S) / Jump Jet (S)
+2020-05-03 00:08:21.993 -   - Found component: Jump Jet (S) in location: 128
+2020-05-03 00:08:21.993 - Checking component: Life Support A / Life Support / Life Support
+2020-05-03 00:08:21.993 -   - Found component: Life Support in location: 1
+2020-05-03 00:08:21.993 - Checking component: Sensors B / Sensors / Sensors
+2020-05-03 00:08:21.993 -   - Found component: Sensors in location: 1
+2020-05-03 00:08:21.993 - Checking component: Life Support B / Life Support / Life Support
+2020-05-03 00:08:21.993 -   - Found component: Life Support in location: 1
+2020-05-03 00:08:21.994 -   0 is damageType: Structure.
+2020-05-03 00:08:21.994 -   1 is damageType: Armor.
+2020-05-03 00:08:21.994 -   2 is damageType: Component.
+2020-05-03 00:08:21.994 -   3 is damageType: Component.
+2020-05-03 00:08:21.994 -   4 is damageType: Component.
+2020-05-03 00:08:21.994 - Damaging component: Jump Jet (S)
+2020-05-03 00:08:21.997 - Damaging component: Upper Leg
+2020-05-03 00:08:21.999 - Damaging component: Upper Arm
+2020-05-03 00:08:22.001 - Reducing armor in location LeftArm by 0.44% for 26 points
+2020-05-03 00:08:22.001 - Reducing structure in location LeftArm by 0.29% for 10 points
+2020-05-03 00:08:22.120 -  Applying PoorlyMaintainedEffect to unit: Royal Archer_Tactician_53D444F3
+2020-05-03 00:08:22.120 - 75% effect supplied, stateRolls = 5
+2020-05-03 00:08:22.120 - Checking component: Archer Battlefists / Archer Battlefists / Archer Battlefists
+2020-05-03 00:08:22.120 -   - Found component: Archer Battlefists in location: 2
+2020-05-03 00:08:22.120 - Checking component: Archer Battlefists / Archer Battlefists / Archer Battlefists
+2020-05-03 00:08:22.120 -   - Found component: Archer Battlefists in location: 32
+2020-05-03 00:08:22.120 - Checking component: Endo-Steel Structure / Endo-Steel / Endo-Steel
+2020-05-03 00:08:22.120 -   - Skipping blacklisted component: Endo-Steel
+2020-05-03 00:08:22.120 - Checking component: Shoulder / Shoulder / Shoulder
+2020-05-03 00:08:22.120 -   - Found component: Shoulder in location: 2
+2020-05-03 00:08:22.120 - Checking component: Upper Arm Actuator / Upper Arm / Upper Arm
+2020-05-03 00:08:22.120 -   - Found component: Upper Arm in location: 2
+2020-05-03 00:08:22.120 - Checking component: Shoulder / Shoulder / Shoulder
+2020-05-03 00:08:22.121 -   - Found component: Shoulder in location: 32
+2020-05-03 00:08:22.121 - Checking component: Upper Arm Actuator / Upper Arm / Upper Arm
+2020-05-03 00:08:22.121 -   - Found component: Upper Arm in location: 32
+2020-05-03 00:08:22.121 - Checking component: Hip / Hip / Hip
+2020-05-03 00:08:22.121 -   - Found component: Hip in location: 64
+2020-05-03 00:08:22.121 - Checking component: Upper Leg Actuator / Upper Leg / Upper Leg
+2020-05-03 00:08:22.121 -   - Found component: Upper Leg in location: 64
+2020-05-03 00:08:22.121 - Checking component: Lower Leg Actuator / Lower Leg / Lower Leg
+2020-05-03 00:08:22.121 -   - Found component: Lower Leg in location: 64
+2020-05-03 00:08:22.121 - Checking component: Foot Actuator / Foot / Foot
+2020-05-03 00:08:22.121 -   - Found component: Foot in location: 64
+2020-05-03 00:08:22.121 - Checking component: Hip / Hip / Hip
+2020-05-03 00:08:22.121 -   - Found component: Hip in location: 128
+2020-05-03 00:08:22.121 - Checking component: Upper Leg Actuator / Upper Leg / Upper Leg
+2020-05-03 00:08:22.121 -   - Found component: Upper Leg in location: 128
+2020-05-03 00:08:22.121 - Checking component: Lower Leg Actuator / Lower Leg / Lower Leg
+2020-05-03 00:08:22.121 -   - Found component: Lower Leg in location: 128
+2020-05-03 00:08:22.121 - Checking component: Foot Actuator / Foot / Foot
+2020-05-03 00:08:22.121 -   - Found component: Foot in location: 128
+2020-05-03 00:08:22.121 - Checking component: Standard Armor / Armor / Armor
+2020-05-03 00:08:22.121 -   - Skipping blacklisted component: Armor
+2020-05-03 00:08:22.121 - Checking component: Fusion Core 280 / Core 280 / Core 280
+2020-05-03 00:08:22.121 -   - Found engine: Core 280
+2020-05-03 00:08:22.121 -       engine has maxhits: 3
+2020-05-03 00:08:22.121 - Checking component: Heat Sink Kit (DHS) / Heat Sink Kit (DHS) / Heat Sink Kit (DHS)
+2020-05-03 00:08:22.121 -   - Found engine: Heat Sink Kit (DHS)
+2020-05-03 00:08:22.121 - Checking component: E-Cooling / E-Cooling / E-Cooling
+2020-05-03 00:08:22.121 -   - Found engine: E-Cooling
+2020-05-03 00:08:22.121 - Checking component: Standard Gyro / Gyro / Gyro
+2020-05-03 00:08:22.121 -   - Found gyro: Gyro
+2020-05-03 00:08:22.121 -       gyro has maxhits: 2
+2020-05-03 00:08:22.121 - Checking component: Standard Engine / Std. Engine / Std. Engine
+2020-05-03 00:08:22.121 -   - Found engine: Std. Engine
+2020-05-03 00:08:22.121 - Checking component: M Laser / M Laser / M Laser
+2020-05-03 00:08:22.121 -   - Found weapon: M Laser
+2020-05-03 00:08:22.121 - Checking component: LRM20 / LRM20 / LRM20
+2020-05-03 00:08:22.121 -   - Found weapon: LRM20
+2020-05-03 00:08:22.121 - Checking component: LRM Artemis IV Ammo / Ammo LRM ARTIV / Ammo LRM ARTIV
+2020-05-03 00:08:22.121 -   - Found ammoBox: Ammo LRM ARTIV
+2020-05-03 00:08:22.121 - Checking component: LRM Artemis IV Ammo / Ammo LRM ARTIV / Ammo LRM ARTIV
+2020-05-03 00:08:22.121 -   - Found ammoBox: Ammo LRM ARTIV
+2020-05-03 00:08:22.121 - Checking component: LRM Artemis IV Ammo / Ammo LRM ARTIV / Ammo LRM ARTIV
+2020-05-03 00:08:22.121 -   - Found ammoBox: Ammo LRM ARTIV
+2020-05-03 00:08:22.121 - Checking component: Artemis IV FCS / FCS Artemis IV / FCS Artemis IV
+2020-05-03 00:08:22.121 -   - Skipping blacklisted component: FCS Artemis IV
+2020-05-03 00:08:22.122 - Checking component: C.A.S.E. / CASE / CASE
+2020-05-03 00:08:22.122 -   - Skipping blacklisted component: CASE
+2020-05-03 00:08:22.122 - Checking component: M Laser / M Laser / M Laser
+2020-05-03 00:08:22.122 -   - Found weapon: M Laser
+2020-05-03 00:08:22.122 - Checking component: LRM20 / LRM20 / LRM20
+2020-05-03 00:08:22.122 -   - Found weapon: LRM20
+2020-05-03 00:08:22.122 - Checking component: LRM Artemis IV Ammo / Ammo LRM ARTIV / Ammo LRM ARTIV
+2020-05-03 00:08:22.122 -   - Found ammoBox: Ammo LRM ARTIV
+2020-05-03 00:08:22.122 - Checking component: LRM Artemis IV Ammo / Ammo LRM ARTIV / Ammo LRM ARTIV
+2020-05-03 00:08:22.122 -   - Found ammoBox: Ammo LRM ARTIV
+2020-05-03 00:08:22.122 - Checking component: LRM Artemis IV Ammo / Ammo LRM ARTIV / Ammo LRM ARTIV
+2020-05-03 00:08:22.122 -   - Found ammoBox: Ammo LRM ARTIV
+2020-05-03 00:08:22.122 - Checking component: C.A.S.E. / CASE / CASE
+2020-05-03 00:08:22.122 -   - Skipping blacklisted component: CASE
+2020-05-03 00:08:22.122 - Checking component: M Laser / M Laser / M Laser
+2020-05-03 00:08:22.122 -   - Found weapon: M Laser
+2020-05-03 00:08:22.122 - Checking component: Royal Mech Quirk / Royal Mech Quirk / Royal Mech Quirk
+2020-05-03 00:08:22.122 -   - Found component: Royal Mech Quirk in location: 1
+2020-05-03 00:08:22.122 - Checking component: Life Support A / Life Support / Life Support
+2020-05-03 00:08:22.122 -   - Found component: Life Support in location: 1
+2020-05-03 00:08:22.122 - Checking component: Sensors A / Sensors / Sensors
+2020-05-03 00:08:22.122 -   - Found component: Sensors in location: 1
+2020-05-03 00:08:22.122 - Checking component: Sensors B / Sensors / Sensors
+2020-05-03 00:08:22.122 -   - Found component: Sensors in location: 1
+2020-05-03 00:08:22.122 -   0 is damageType: Component.
+2020-05-03 00:08:22.122 -   1 is damageType: Structure.
+2020-05-03 00:08:22.122 -   2 is damageType: Structure.
+2020-05-03 00:08:22.122 -   3 is damageType: Structure.
+2020-05-03 00:08:22.122 -   4 is damageType: Structure.
+2020-05-03 00:08:22.122 - Damaging component: Upper Leg
+2020-05-03 00:08:22.127 - Reducing structure in location LeftArm by 0.1% for 5 points
+2020-05-03 00:08:22.127 - Reducing structure in location RightTorso by 0.22% for 16 points
+2020-05-03 00:08:22.127 - Reducing structure in location RightTorso by 0.21% for 15 points
+2020-05-03 00:08:22.127 - Reducing structure in location RightTorso by 0.2% for 15 points
+2020-05-03 00:08:22.276 -  Applying PoorlyMaintainedEffect to unit: Stalker_Outrider_548A795B
+2020-05-03 00:08:22.276 - 50% effect supplied, stateRolls = 4
+2020-05-03 00:08:22.276 - Checking component: Stalker Combat Computer / Stalker Combat Computer / Stalker Combat Computer
+2020-05-03 00:08:22.276 -   - Found component: Stalker Combat Computer in location: 1
+2020-05-03 00:08:22.276 - Checking component: Standard Structure / Structure / Structure
+2020-05-03 00:08:22.276 -   - Skipping blacklisted component: Structure
+2020-05-03 00:08:22.276 - Checking component: Standard Armor / Armor / Armor
+2020-05-03 00:08:22.276 -   - Skipping blacklisted component: Armor
+2020-05-03 00:08:22.276 - Checking component: Fusion Core 225 / Core 225 / Core 225
+2020-05-03 00:08:22.276 -   - Found engine: Core 225
+2020-05-03 00:08:22.276 -       engine has maxhits: 3
+2020-05-03 00:08:22.276 - Checking component: Cooling / Cooling / Cooling
+2020-05-03 00:08:22.276 -   - Found engine: Cooling
+2020-05-03 00:08:22.276 - Checking component: E-Cooling / E-Cooling / E-Cooling
+2020-05-03 00:08:22.276 -   - Found engine: E-Cooling
+2020-05-03 00:08:22.276 - Checking component: Standard Gyro / Gyro / Gyro
+2020-05-03 00:08:22.276 -   - Found gyro: Gyro
+2020-05-03 00:08:22.276 -       gyro has maxhits: 2
+2020-05-03 00:08:22.276 - Checking component: Standard Engine / Std. Engine / Std. Engine
+2020-05-03 00:08:22.276 -   - Found engine: Std. Engine
+2020-05-03 00:08:22.276 - Checking component: Standard Cockpit / Cockpit / Cockpit
+2020-05-03 00:08:22.276 -   - Skipping blacklisted component: Cockpit
+2020-05-03 00:08:22.276 - Checking component: Hip / Hip / Hip
+2020-05-03 00:08:22.276 -   - Found component: Hip in location: 64
+2020-05-03 00:08:22.276 - Checking component: Upper Leg Actuator / Upper Leg / Upper Leg
+2020-05-03 00:08:22.276 -   - Found component: Upper Leg in location: 64
+2020-05-03 00:08:22.276 - Checking component: Lower Leg Actuator / Lower Leg / Lower Leg
+2020-05-03 00:08:22.276 -   - Found component: Lower Leg in location: 64
+2020-05-03 00:08:22.276 - Checking component: Foot Actuator / Foot / Foot
+2020-05-03 00:08:22.276 -   - Found component: Foot in location: 64
+2020-05-03 00:08:22.276 - Checking component: Hip / Hip / Hip
+2020-05-03 00:08:22.276 -   - Found component: Hip in location: 128
+2020-05-03 00:08:22.276 - Checking component: Upper Leg Actuator / Upper Leg / Upper Leg
+2020-05-03 00:08:22.277 -   - Found component: Upper Leg in location: 128
+2020-05-03 00:08:22.277 - Checking component: Lower Leg Actuator / Lower Leg / Lower Leg
+2020-05-03 00:08:22.277 -   - Found component: Lower Leg in location: 128
+2020-05-03 00:08:22.277 - Checking component: Foot Actuator / Foot / Foot
+2020-05-03 00:08:22.277 -   - Found component: Foot in location: 128
+2020-05-03 00:08:22.277 - Checking component: Shoulder / Shoulder / Shoulder
+2020-05-03 00:08:22.277 -   - Found component: Shoulder in location: 2
+2020-05-03 00:08:22.277 - Checking component: Upper Arm Actuator / Upper Arm / Upper Arm
+2020-05-03 00:08:22.277 -   - Found component: Upper Arm in location: 2
+2020-05-03 00:08:22.277 - Checking component: Shoulder / Shoulder / Shoulder
+2020-05-03 00:08:22.277 -   - Found component: Shoulder in location: 32
+2020-05-03 00:08:22.277 - Checking component: Upper Arm Actuator / Upper Arm / Upper Arm
+2020-05-03 00:08:22.277 -   - Found component: Upper Arm in location: 32
+2020-05-03 00:08:22.277 - Checking component: M Laser / M Laser / M Laser
+2020-05-03 00:08:22.277 -   - Found weapon: M Laser
+2020-05-03 00:08:22.277 - Checking component: M Laser / M Laser / M Laser
+2020-05-03 00:08:22.277 -   - Found weapon: M Laser
+2020-05-03 00:08:22.277 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 00:08:22.277 -   - Found heatSink: Heat Sink
+2020-05-03 00:08:22.277 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 00:08:22.277 -   - Found heatSink: Heat Sink
+2020-05-03 00:08:22.277 - Checking component: L Laser / L Laser / L Laser
+2020-05-03 00:08:22.277 -   - Found weapon: L Laser
+2020-05-03 00:08:22.277 - Checking component: SRM6 / SRM6 / SRM6
+2020-05-03 00:08:22.277 -   - Found weapon: SRM6
+2020-05-03 00:08:22.277 - Checking component: SRM Ammo / Ammo SRM / Ammo SRM
+2020-05-03 00:08:22.277 -   - Found ammoBox: Ammo SRM
+2020-05-03 00:08:22.277 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 00:08:22.277 -   - Found heatSink: Heat Sink
+2020-05-03 00:08:22.277 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 00:08:22.277 -   - Found heatSink: Heat Sink
+2020-05-03 00:08:22.277 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 00:08:22.277 -   - Found heatSink: Heat Sink
+2020-05-03 00:08:22.277 - Checking component: L Laser / L Laser / L Laser
+2020-05-03 00:08:22.277 -   - Found weapon: L Laser
+2020-05-03 00:08:22.277 - Checking component: SRM6 / SRM6 / SRM6
+2020-05-03 00:08:22.277 -   - Found weapon: SRM6
+2020-05-03 00:08:22.277 - Checking component: SRM Ammo / Ammo SRM / Ammo SRM
+2020-05-03 00:08:22.277 -   - Found ammoBox: Ammo SRM
+2020-05-03 00:08:22.277 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 00:08:22.277 -   - Found heatSink: Heat Sink
+2020-05-03 00:08:22.277 - Checking component: M Laser / M Laser / M Laser
+2020-05-03 00:08:22.277 -   - Found weapon: M Laser
+2020-05-03 00:08:22.277 - Checking component: M Laser / M Laser / M Laser
+2020-05-03 00:08:22.277 -   - Found weapon: M Laser
+2020-05-03 00:08:22.277 - Checking component: LRM10 / LRM10 / LRM10
+2020-05-03 00:08:22.277 -   - Found weapon: LRM10
+2020-05-03 00:08:22.277 - Checking component: LRM Ammo / Ammo LRM / Ammo LRM
+2020-05-03 00:08:22.277 -   - Found ammoBox: Ammo LRM
+2020-05-03 00:08:22.278 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 00:08:22.278 -   - Found heatSink: Heat Sink
+2020-05-03 00:08:22.278 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 00:08:22.278 -   - Found heatSink: Heat Sink
+2020-05-03 00:08:22.278 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 00:08:22.278 -   - Found heatSink: Heat Sink
+2020-05-03 00:08:22.278 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 00:08:22.278 -   - Found heatSink: Heat Sink
+2020-05-03 00:08:22.278 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 00:08:22.278 -   - Found heatSink: Heat Sink
+2020-05-03 00:08:22.278 - Checking component: Life Support A / Life Support / Life Support
+2020-05-03 00:08:22.278 -   - Found component: Life Support in location: 1
+2020-05-03 00:08:22.278 - Checking component: Sensors B / Sensors / Sensors
+2020-05-03 00:08:22.278 -   - Found component: Sensors in location: 1
+2020-05-03 00:08:22.278 - Checking component: Life Support B / Life Support / Life Support
+2020-05-03 00:08:22.278 -   - Found component: Life Support in location: 1
+2020-05-03 00:08:22.278 -   0 is damageType: Armor.
+2020-05-03 00:08:22.278 -   1 is damageType: Weapon.
+2020-05-03 00:08:22.278 -   2 is damageType: Armor.
+2020-05-03 00:08:22.278 -   3 is damageType: Component.
+2020-05-03 00:08:22.278 - Damaging component: M Laser
+2020-05-03 00:08:22.281 - Damaging component: Hip
+2020-05-03 00:08:22.285 - Reducing armor in location RightArm by 0.2% for 22 points
+2020-05-03 00:08:22.285 - Reducing armor in location LeftTorso by 0.49% for 58 points
+2020-05-03 00:08:22.453 -  Applying PoorlyMaintainedEffect to unit: Ostsol_Striker_66F1C11B
+2020-05-03 00:08:22.453 - 50% effect supplied, stateRolls = 3
+2020-05-03 00:08:22.453 - Checking component: Ostsol Improved Sensors / Ostsol Improved Sensors / Ostsol Improved Sensors
+2020-05-03 00:08:22.453 -   - Found component: Ostsol Improved Sensors in location: 1
+2020-05-03 00:08:22.453 - Checking component: Standard Structure / Structure / Structure
+2020-05-03 00:08:22.453 -   - Skipping blacklisted component: Structure
+2020-05-03 00:08:22.453 - Checking component: Shoulder / Shoulder / Shoulder
+2020-05-03 00:08:22.453 -   - Found component: Shoulder in location: 2
+2020-05-03 00:08:22.453 - Checking component: Upper Arm Actuator / Upper Arm / Upper Arm
+2020-05-03 00:08:22.453 -   - Found component: Upper Arm in location: 2
+2020-05-03 00:08:22.453 - Checking component: Lower Arm Actuator / Lower Arm / Lower Arm
+2020-05-03 00:08:22.453 -   - Found component: Lower Arm in location: 2
+2020-05-03 00:08:22.454 - Checking component: Shoulder / Shoulder / Shoulder
+2020-05-03 00:08:22.454 -   - Found component: Shoulder in location: 32
+2020-05-03 00:08:22.454 - Checking component: Upper Arm Actuator / Upper Arm / Upper Arm
+2020-05-03 00:08:22.454 -   - Found component: Upper Arm in location: 32
+2020-05-03 00:08:22.454 - Checking component: Lower Arm Actuator / Lower Arm / Lower Arm
+2020-05-03 00:08:22.454 -   - Found component: Lower Arm in location: 32
+2020-05-03 00:08:22.454 - Checking component: Hip / Hip / Hip
+2020-05-03 00:08:22.454 -   - Found component: Hip in location: 64
+2020-05-03 00:08:22.454 - Checking component: Upper Leg Actuator / Upper Leg / Upper Leg
+2020-05-03 00:08:22.454 -   - Found component: Upper Leg in location: 64
+2020-05-03 00:08:22.454 - Checking component: Lower Leg Actuator / Lower Leg / Lower Leg
+2020-05-03 00:08:22.454 -   - Found component: Lower Leg in location: 64
+2020-05-03 00:08:22.454 - Checking component: Foot Actuator / Foot / Foot
+2020-05-03 00:08:22.454 -   - Found component: Foot in location: 64
+2020-05-03 00:08:22.454 - Checking component: Hip / Hip / Hip
+2020-05-03 00:08:22.454 -   - Found component: Hip in location: 128
+2020-05-03 00:08:22.454 - Checking component: Upper Leg Actuator / Upper Leg / Upper Leg
+2020-05-03 00:08:22.454 -   - Found component: Upper Leg in location: 128
+2020-05-03 00:08:22.454 - Checking component: Lower Leg Actuator / Lower Leg / Lower Leg
+2020-05-03 00:08:22.454 -   - Found component: Lower Leg in location: 128
+2020-05-03 00:08:22.454 - Checking component: Foot Actuator / Foot / Foot
+2020-05-03 00:08:22.454 -   - Found component: Foot in location: 128
+2020-05-03 00:08:22.454 - Checking component: Standard Cockpit / Cockpit / Cockpit
+2020-05-03 00:08:22.454 -   - Skipping blacklisted component: Cockpit
+2020-05-03 00:08:22.454 - Checking component: Standard Armor / Armor / Armor
+2020-05-03 00:08:22.454 -   - Skipping blacklisted component: Armor
+2020-05-03 00:08:22.454 - Checking component: Engine Cooling + 2 / E-Cooling + 2 / E-Cooling + 2
+2020-05-03 00:08:22.454 -   - Found engine: E-Cooling + 2
+2020-05-03 00:08:22.455 -       engine has maxhits: 3
+2020-05-03 00:08:22.455 - Checking component: Cooling / Cooling / Cooling
+2020-05-03 00:08:22.455 -   - Found engine: Cooling
+2020-05-03 00:08:22.455 - Checking component: Standard Gyro / Gyro / Gyro
+2020-05-03 00:08:22.455 -   - Found gyro: Gyro
+2020-05-03 00:08:22.455 -       gyro has maxhits: 2
+2020-05-03 00:08:22.455 - Checking component: Fusion Core 300 / Core 300 / Core 300
+2020-05-03 00:08:22.455 -   - Found engine: Core 300
+2020-05-03 00:08:22.455 - Checking component: Standard Engine / Std. Engine / Std. Engine
+2020-05-03 00:08:22.455 -   - Found engine: Std. Engine
+2020-05-03 00:08:22.455 - Checking component: L Laser / L Laser / L Laser
+2020-05-03 00:08:22.455 -   - Found weapon: L Laser
+2020-05-03 00:08:22.455 - Checking component: M Laser / M Laser / M Laser
+2020-05-03 00:08:22.455 -   - Found weapon: M Laser
+2020-05-03 00:08:22.455 - Checking component: L Laser / L Laser / L Laser
+2020-05-03 00:08:22.455 -   - Found weapon: L Laser
+2020-05-03 00:08:22.455 - Checking component: M Laser / M Laser / M Laser
+2020-05-03 00:08:22.455 -   - Found weapon: M Laser
+2020-05-03 00:08:22.455 - Checking component: M Laser / M Laser / M Laser
+2020-05-03 00:08:22.455 -   - Found weapon: M Laser
+2020-05-03 00:08:22.455 - Checking component: M Laser / M Laser / M Laser
+2020-05-03 00:08:22.455 -   - Found weapon: M Laser
+2020-05-03 00:08:22.455 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 00:08:22.455 -   - Found heatSink: Heat Sink
+2020-05-03 00:08:22.455 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 00:08:22.455 -   - Found heatSink: Heat Sink
+2020-05-03 00:08:22.455 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 00:08:22.455 -   - Found heatSink: Heat Sink
+2020-05-03 00:08:22.455 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 00:08:22.455 -   - Found heatSink: Heat Sink
+2020-05-03 00:08:22.455 - Checking component: Life Support A / Life Support / Life Support
+2020-05-03 00:08:22.455 -   - Found component: Life Support in location: 1
+2020-05-03 00:08:22.456 - Checking component: Sensors B / Sensors / Sensors
+2020-05-03 00:08:22.456 -   - Found component: Sensors in location: 1
+2020-05-03 00:08:22.456 - Checking component: Life Support B / Life Support / Life Support
+2020-05-03 00:08:22.456 -   - Found component: Life Support in location: 1
+2020-05-03 00:08:22.456 -   0 is damageType: Component.
+2020-05-03 00:08:22.456 -   1 is damageType: Structure.
+2020-05-03 00:08:22.456 -   2 is damageType: Weapon.
+2020-05-03 00:08:22.456 - Damaging component: Shoulder
+2020-05-03 00:08:22.462 - Damaging component: M Laser
+2020-05-03 00:08:22.463 - Reducing structure in location CenterTorso by 0.28% for 28 points
+2020-05-03 00:08:22.545 -  Applying PoorlyMaintainedEffect to unit: Orion_Outrider_2E4CD4A8
+2020-05-03 00:08:22.545 - 50% effect supplied, stateRolls = 3
+2020-05-03 00:08:22.545 - Checking component: Orion Combat Computer / Orion Combat Computer / Orion Combat Computer
+2020-05-03 00:08:22.545 -   - Found component: Orion Combat Computer in location: 1
+2020-05-03 00:08:22.545 - Checking component: Standard Structure / Structure / Structure
+2020-05-03 00:08:22.545 -   - Skipping blacklisted component: Structure
+2020-05-03 00:08:22.545 - Checking component: Standard Armor / Armor / Armor
+2020-05-03 00:08:22.545 -   - Skipping blacklisted component: Armor
+2020-05-03 00:08:22.545 - Checking component: Fusion Core 300 / Core 300 / Core 300
+2020-05-03 00:08:22.545 -   - Found engine: Core 300
+2020-05-03 00:08:22.545 -       engine has maxhits: 3
+2020-05-03 00:08:22.545 - Checking component: Cooling / Cooling / Cooling
+2020-05-03 00:08:22.545 -   - Found engine: Cooling
+2020-05-03 00:08:22.545 - Checking component: E-Cooling / E-Cooling / E-Cooling
+2020-05-03 00:08:22.545 -   - Found engine: E-Cooling
+2020-05-03 00:08:22.545 - Checking component: Standard Gyro / Gyro / Gyro
+2020-05-03 00:08:22.545 -   - Found gyro: Gyro
+2020-05-03 00:08:22.545 -       gyro has maxhits: 2
+2020-05-03 00:08:22.545 - Checking component: Standard Engine / Std. Engine / Std. Engine
+2020-05-03 00:08:22.545 -   - Found engine: Std. Engine
+2020-05-03 00:08:22.545 - Checking component: Standard Cockpit / Cockpit / Cockpit
+2020-05-03 00:08:22.545 -   - Skipping blacklisted component: Cockpit
+2020-05-03 00:08:22.545 - Checking component: Hip / Hip / Hip
+2020-05-03 00:08:22.545 -   - Found component: Hip in location: 64
+2020-05-03 00:08:22.545 - Checking component: Upper Leg Actuator / Upper Leg / Upper Leg
+2020-05-03 00:08:22.545 -   - Found component: Upper Leg in location: 64
+2020-05-03 00:08:22.545 - Checking component: Lower Leg Actuator / Lower Leg / Lower Leg
+2020-05-03 00:08:22.545 -   - Found component: Lower Leg in location: 64
+2020-05-03 00:08:22.545 - Checking component: Foot Actuator / Foot / Foot
+2020-05-03 00:08:22.545 -   - Found component: Foot in location: 64
+2020-05-03 00:08:22.545 - Checking component: Hip / Hip / Hip
+2020-05-03 00:08:22.545 -   - Found component: Hip in location: 128
+2020-05-03 00:08:22.545 - Checking component: Upper Leg Actuator / Upper Leg / Upper Leg
+2020-05-03 00:08:22.545 -   - Found component: Upper Leg in location: 128
+2020-05-03 00:08:22.545 - Checking component: Lower Leg Actuator / Lower Leg / Lower Leg
+2020-05-03 00:08:22.545 -   - Found component: Lower Leg in location: 128
+2020-05-03 00:08:22.545 - Checking component: Foot Actuator / Foot / Foot
+2020-05-03 00:08:22.545 -   - Found component: Foot in location: 128
+2020-05-03 00:08:22.545 - Checking component: Shoulder / Shoulder / Shoulder
+2020-05-03 00:08:22.545 -   - Found component: Shoulder in location: 2
+2020-05-03 00:08:22.545 - Checking component: Upper Arm Actuator / Upper Arm / Upper Arm
+2020-05-03 00:08:22.546 -   - Found component: Upper Arm in location: 2
+2020-05-03 00:08:22.546 - Checking component: Lower Arm Actuator / Lower Arm / Lower Arm
+2020-05-03 00:08:22.546 -   - Found component: Lower Arm in location: 2
+2020-05-03 00:08:22.546 - Checking component: Shoulder / Shoulder / Shoulder
+2020-05-03 00:08:22.546 -   - Found component: Shoulder in location: 32
+2020-05-03 00:08:22.546 - Checking component: Upper Arm Actuator / Upper Arm / Upper Arm
+2020-05-03 00:08:22.546 -   - Found component: Upper Arm in location: 32
+2020-05-03 00:08:22.546 - Checking component: Lower Arm Actuator / Lower Arm / Lower Arm
+2020-05-03 00:08:22.546 -   - Found component: Lower Arm in location: 32
+2020-05-03 00:08:22.546 - Checking component: M Laser / M Laser / M Laser
+2020-05-03 00:08:22.546 -   - Found weapon: M Laser
+2020-05-03 00:08:22.546 - Checking component: SRM4 / SRM4 / SRM4
+2020-05-03 00:08:22.546 -   - Found weapon: SRM4
+2020-05-03 00:08:22.546 - Checking component: LRM15 / LRM15 / LRM15
+2020-05-03 00:08:22.546 -   - Found weapon: LRM15
+2020-05-03 00:08:22.546 - Checking component: LRM Ammo / Ammo LRM / Ammo LRM
+2020-05-03 00:08:22.546 -   - Found ammoBox: Ammo LRM
+2020-05-03 00:08:22.546 - Checking component: LRM Ammo / Ammo LRM / Ammo LRM
+2020-05-03 00:08:22.546 -   - Found ammoBox: Ammo LRM
+2020-05-03 00:08:22.546 - Checking component: SRM Ammo / Ammo SRM / Ammo SRM
+2020-05-03 00:08:22.546 -   - Found ammoBox: Ammo SRM
+2020-05-03 00:08:22.546 - Checking component: SRM Ammo / Ammo SRM / Ammo SRM
+2020-05-03 00:08:22.546 -   - Found ammoBox: Ammo SRM
+2020-05-03 00:08:22.546 - Checking component: AC/10 / AC/10 / AC/10
+2020-05-03 00:08:22.546 -   - Found weapon: AC/10
+2020-05-03 00:08:22.546 - Checking component: AC/10 Ammo / Ammo AC/10 / Ammo AC/10
+2020-05-03 00:08:22.546 -   - Found ammoBox: Ammo AC/10
+2020-05-03 00:08:22.546 - Checking component: AC/10 Ammo / Ammo AC/10 / Ammo AC/10
+2020-05-03 00:08:22.546 -   - Found ammoBox: Ammo AC/10
+2020-05-03 00:08:22.546 - Checking component: M Laser / M Laser / M Laser
+2020-05-03 00:08:22.546 -   - Found weapon: M Laser
+2020-05-03 00:08:22.546 - Checking component: SRM4 / SRM4 / SRM4
+2020-05-03 00:08:22.546 -   - Found weapon: SRM4
+2020-05-03 00:08:22.546 - Checking component: Life Support A / Life Support / Life Support
+2020-05-03 00:08:22.546 -   - Found component: Life Support in location: 1
+2020-05-03 00:08:22.546 - Checking component: Sensors B / Sensors / Sensors
+2020-05-03 00:08:22.546 -   - Found component: Sensors in location: 1
+2020-05-03 00:08:22.546 - Checking component: Life Support B / Life Support / Life Support
+2020-05-03 00:08:22.547 -   - Found component: Life Support in location: 1
+2020-05-03 00:08:22.547 -   0 is damageType: Structure.
+2020-05-03 00:08:22.547 -   1 is damageType: Weapon.
+2020-05-03 00:08:22.547 -   2 is damageType: Weapon.
+2020-05-03 00:08:22.547 - Damaging component: SRM4
+2020-05-03 00:08:22.550 - Damaging component: M Laser
+2020-05-03 00:08:22.550 - Reducing structure in location CenterTorso by 0.22% for 25 points
+2020-05-03 00:08:22.628 -  Applying PoorlyMaintainedEffect to unit: Huron Warrior_Brawler_F83DACA3
+2020-05-03 00:08:22.628 - 50% effect supplied, stateRolls = 4
+2020-05-03 00:08:22.628 - Checking component: Huron Warrior Improved Sensors / Huron Warrior Improved Sensors / Huron Warrior Improved Sensors
+2020-05-03 00:08:22.628 -   - Found component: Huron Warrior Improved Sensors in location: 1
+2020-05-03 00:08:22.628 - Checking component: Endo-Steel Structure / Endo-Steel / Endo-Steel
+2020-05-03 00:08:22.628 -   - Skipping blacklisted component: Endo-Steel
+2020-05-03 00:08:22.628 - Checking component: Standard Cockpit / Cockpit / Cockpit
+2020-05-03 00:08:22.628 -   - Skipping blacklisted component: Cockpit
+2020-05-03 00:08:22.628 - Checking component: Standard Armor / Armor / Armor
+2020-05-03 00:08:22.628 -   - Skipping blacklisted component: Armor
+2020-05-03 00:08:22.628 - Checking component: E-Cooling / E-Cooling / E-Cooling
+2020-05-03 00:08:22.628 -   - Found engine: E-Cooling
+2020-05-03 00:08:22.628 -       engine has maxhits: 3
+2020-05-03 00:08:22.628 - Checking component: Cooling / Cooling / Cooling
+2020-05-03 00:08:22.628 -   - Found engine: Cooling
+2020-05-03 00:08:22.628 - Checking component: Standard Gyro / Gyro / Gyro
+2020-05-03 00:08:22.628 -   - Found gyro: Gyro
+2020-05-03 00:08:22.628 -       gyro has maxhits: 2
+2020-05-03 00:08:22.628 - Checking component: Fusion Core 250 / Core 250 / Core 250
+2020-05-03 00:08:22.628 -   - Found engine: Core 250
+2020-05-03 00:08:22.629 - Checking component: Engine XL / Engine XL / Engine XL
+2020-05-03 00:08:22.629 -   - Found engine: Engine XL
+2020-05-03 00:08:22.629 - Checking component: Engine / Engine / Engine
+2020-05-03 00:08:22.629 -   - Found engine: Engine
+2020-05-03 00:08:22.629 - Checking component: Engine / Engine / Engine
+2020-05-03 00:08:22.629 -   - Found engine: Engine
+2020-05-03 00:08:22.629 - Checking component: Hip / Hip / Hip
+2020-05-03 00:08:22.629 -   - Found component: Hip in location: 64
+2020-05-03 00:08:22.629 - Checking component: Upper Leg Actuator / Upper Leg / Upper Leg
+2020-05-03 00:08:22.629 -   - Found component: Upper Leg in location: 64
+2020-05-03 00:08:22.629 - Checking component: Lower Leg Actuator / Lower Leg / Lower Leg
+2020-05-03 00:08:22.629 -   - Found component: Lower Leg in location: 64
+2020-05-03 00:08:22.629 - Checking component: Foot Actuator / Foot / Foot
+2020-05-03 00:08:22.629 -   - Found component: Foot in location: 64
+2020-05-03 00:08:22.629 - Checking component: Hip / Hip / Hip
+2020-05-03 00:08:22.629 -   - Found component: Hip in location: 128
+2020-05-03 00:08:22.629 - Checking component: Upper Leg Actuator / Upper Leg / Upper Leg
+2020-05-03 00:08:22.629 -   - Found component: Upper Leg in location: 128
+2020-05-03 00:08:22.629 - Checking component: Lower Leg Actuator / Lower Leg / Lower Leg
+2020-05-03 00:08:22.629 -   - Found component: Lower Leg in location: 128
+2020-05-03 00:08:22.629 - Checking component: Foot Actuator / Foot / Foot
+2020-05-03 00:08:22.629 -   - Found component: Foot in location: 128
+2020-05-03 00:08:22.629 - Checking component: Shoulder / Shoulder / Shoulder
+2020-05-03 00:08:22.629 -   - Found component: Shoulder in location: 2
+2020-05-03 00:08:22.629 - Checking component: Upper Arm Actuator / Upper Arm / Upper Arm
+2020-05-03 00:08:22.629 -   - Found component: Upper Arm in location: 2
+2020-05-03 00:08:22.629 - Checking component: Lower Arm Actuator / Lower Arm / Lower Arm
+2020-05-03 00:08:22.629 -   - Found component: Lower Arm in location: 2
+2020-05-03 00:08:22.629 - Checking component: Shoulder / Shoulder / Shoulder
+2020-05-03 00:08:22.629 -   - Found component: Shoulder in location: 32
+2020-05-03 00:08:22.629 - Checking component: Upper Arm Actuator / Upper Arm / Upper Arm
+2020-05-03 00:08:22.629 -   - Found component: Upper Arm in location: 32
+2020-05-03 00:08:22.630 - Checking component: Lower Arm Actuator / Lower Arm / Lower Arm
+2020-05-03 00:08:22.630 -   - Found component: Lower Arm in location: 32
+2020-05-03 00:08:22.630 - Checking component: Hand Actuator / Hand / Hand
+2020-05-03 00:08:22.630 -   - Found component: Hand in location: 32
+2020-05-03 00:08:22.630 - Checking component: ER L Laser / ER L Laser / ER L Laser
+2020-05-03 00:08:22.630 -   - Found weapon: ER L Laser
+2020-05-03 00:08:22.630 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 00:08:22.630 -   - Found heatSink: Heat Sink
+2020-05-03 00:08:22.630 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 00:08:22.630 -   - Found heatSink: Heat Sink
+2020-05-03 00:08:22.630 - Checking component: M Laser / M Laser / M Laser
+2020-05-03 00:08:22.630 -   - Found weapon: M Laser
+2020-05-03 00:08:22.630 - Checking component: Gauss Ammo / Ammo Gauss / Ammo Gauss
+2020-05-03 00:08:22.630 -   - Found ammoBox: Ammo Gauss
+2020-05-03 00:08:22.630 - Checking component: Gauss Ammo / Ammo Gauss / Ammo Gauss
+2020-05-03 00:08:22.630 -   - Found ammoBox: Ammo Gauss
+2020-05-03 00:08:22.630 - Checking component: Gauss Rifle / Gauss Rifle / Gauss Rifle
+2020-05-03 00:08:22.630 -   - Found weapon: Gauss Rifle
+2020-05-03 00:08:22.630 -       weapon has component explosion: 75 / 0 / 18
+2020-05-03 00:08:22.630 - Checking component: Life Support A / Life Support / Life Support
+2020-05-03 00:08:22.630 -   - Found component: Life Support in location: 1
+2020-05-03 00:08:22.630 - Checking component: Sensors B / Sensors / Sensors
+2020-05-03 00:08:22.630 -   - Found component: Sensors in location: 1
+2020-05-03 00:08:22.630 - Checking component: Life Support B / Life Support / Life Support
+2020-05-03 00:08:22.630 -   - Found component: Life Support in location: 1
+2020-05-03 00:08:22.631 -   0 is damageType: AmmoBox.
+2020-05-03 00:08:22.631 -   1 is damageType: Weapon.
+2020-05-03 00:08:22.631 -   2 is damageType: Component.
+2020-05-03 00:08:22.631 -   3 is damageType: Component.
+2020-05-03 00:08:22.631 - Reducing ammoBox: Ammo Gauss from 8 x 0.06 = 0
+2020-05-03 00:08:22.631 - Damaging component: M Laser
+2020-05-03 00:08:22.634 - Damaging component: Hand
+2020-05-03 00:08:22.638 - Damaging component: Shoulder
+2020-05-03 01:05:12.862 - Set StateTheme to: Mothballed - {0}%
+2020-05-03 01:06:53.738 -  Applying PoorlyMaintainedEffect to unit: Avatar_Defender_548A795B
+2020-05-03 01:06:53.738 - 50% effect supplied, stateRolls = 4
+2020-05-03 01:06:53.738 - Checking component: M Laser / M Laser / M Laser
+2020-05-03 01:06:53.738 -   - Found weapon: M Laser
+2020-05-03 01:06:53.738 - Checking component: M Laser / M Laser / M Laser
+2020-05-03 01:06:53.738 -   - Found weapon: M Laser
+2020-05-03 01:06:53.738 - Checking component: Standard Structure / Structure / Structure
+2020-05-03 01:06:53.738 -   - Skipping blacklisted component: Structure
+2020-05-03 01:06:53.738 - Checking component: OmniMech Gyro / OmniMech / OmniMech
+2020-05-03 01:06:53.738 -   - Found gyro: OmniMech
+2020-05-03 01:06:53.738 -       gyro has maxhits: 2
+2020-05-03 01:06:53.738 - Checking component: Fusion Core 280 / Core 280 / Core 280
+2020-05-03 01:06:53.738 -   - Found engine: Core 280
+2020-05-03 01:06:53.738 -       engine has maxhits: 3
+2020-05-03 01:06:53.739 - Checking component: Engine / Engine / Engine
+2020-05-03 01:06:53.739 -   - Found engine: Engine
+2020-05-03 01:06:53.739 - Checking component: Engine / Engine / Engine
+2020-05-03 01:06:53.739 -   - Found engine: Engine
+2020-05-03 01:06:53.739 - Checking component: Engine XL / Engine XL / Engine XL
+2020-05-03 01:06:53.739 -   - Found engine: Engine XL
+2020-05-03 01:06:53.739 - Checking component: Standard Armor / Armor / Armor
+2020-05-03 01:06:53.739 -   - Skipping blacklisted component: Armor
+2020-05-03 01:06:53.739 - Checking component: Heat Sink Kit (DHS) / Heat Sink Kit (DHS) / Heat Sink Kit (DHS)
+2020-05-03 01:06:53.739 -   - Found engine: Heat Sink Kit (DHS)
+2020-05-03 01:06:53.739 - Checking component: E-Cooling / E-Cooling / E-Cooling
+2020-05-03 01:06:53.739 -   - Found engine: E-Cooling
+2020-05-03 01:06:53.739 - Checking component: Shoulder / Shoulder / Shoulder
+2020-05-03 01:06:53.739 -   - Found component: Shoulder in location: 2
+2020-05-03 01:06:53.739 - Checking component: Upper Arm Actuator / Upper Arm / Upper Arm
+2020-05-03 01:06:53.739 -   - Found component: Upper Arm in location: 2
+2020-05-03 01:06:53.739 - Checking component: Lower Arm Actuator / OmniPod Lower Arm / OmniPod Lower Arm
+2020-05-03 01:06:53.739 -   - Found component: OmniPod Lower Arm in location: 2
+2020-05-03 01:06:53.739 - Checking component: Shoulder / Shoulder / Shoulder
+2020-05-03 01:06:53.739 -   - Found component: Shoulder in location: 32
+2020-05-03 01:06:53.739 - Checking component: Upper Arm Actuator / Upper Arm / Upper Arm
+2020-05-03 01:06:53.739 -   - Found component: Upper Arm in location: 32
+2020-05-03 01:06:53.739 - Checking component: Lower Arm Actuator / OmniPod Lower Arm / OmniPod Lower Arm
+2020-05-03 01:06:53.739 -   - Found component: OmniPod Lower Arm in location: 32
+2020-05-03 01:06:53.739 - Checking component: Hip / Hip / Hip
+2020-05-03 01:06:53.739 -   - Found component: Hip in location: 64
+2020-05-03 01:06:53.739 - Checking component: Upper Leg Actuator / Upper Leg / Upper Leg
+2020-05-03 01:06:53.739 -   - Found component: Upper Leg in location: 64
+2020-05-03 01:06:53.739 - Checking component: Lower Leg Actuator / Lower Leg / Lower Leg
+2020-05-03 01:06:53.739 -   - Found component: Lower Leg in location: 64
+2020-05-03 01:06:53.739 - Checking component: Foot Actuator / Foot / Foot
+2020-05-03 01:06:53.739 -   - Found component: Foot in location: 64
+2020-05-03 01:06:53.739 - Checking component: Hip / Hip / Hip
+2020-05-03 01:06:53.739 -   - Found component: Hip in location: 128
+2020-05-03 01:06:53.739 - Checking component: Upper Leg Actuator / Upper Leg / Upper Leg
+2020-05-03 01:06:53.739 -   - Found component: Upper Leg in location: 128
+2020-05-03 01:06:53.739 - Checking component: Lower Leg Actuator / Lower Leg / Lower Leg
+2020-05-03 01:06:53.739 -   - Found component: Lower Leg in location: 128
+2020-05-03 01:06:53.739 - Checking component: Foot Actuator / Foot / Foot
+2020-05-03 01:06:53.739 -   - Found component: Foot in location: 128
+2020-05-03 01:06:53.739 - Checking component: ER L Laser / ER L Laser / ER L Laser
+2020-05-03 01:06:53.739 -   - Found weapon: ER L Laser
+2020-05-03 01:06:53.740 - Checking component: SRM6 / SRM6 / SRM6
+2020-05-03 01:06:53.740 -   - Found weapon: SRM6
+2020-05-03 01:06:53.740 - Checking component: SRM Ammo / Ammo SRM / Ammo SRM
+2020-05-03 01:06:53.740 -   - Found ammoBox: Ammo SRM
+2020-05-03 01:06:53.740 - Checking component: SRM Ammo / Ammo SRM / Ammo SRM
+2020-05-03 01:06:53.740 -   - Found ammoBox: Ammo SRM
+2020-05-03 01:06:53.740 - Checking component: C.A.S.E. / CASE / CASE
+2020-05-03 01:06:53.740 -   - Skipping blacklisted component: CASE
+2020-05-03 01:06:53.740 - Checking component: SRM6 / SRM6 / SRM6
+2020-05-03 01:06:53.740 -   - Found weapon: SRM6
+2020-05-03 01:06:53.740 - Checking component: AC/20 Ammo / Ammo AC/20 / Ammo AC/20
+2020-05-03 01:06:53.740 -   - Found ammoBox: Ammo AC/20
+2020-05-03 01:06:53.740 - Checking component: AC/20 Ammo / Ammo AC/20 / Ammo AC/20
+2020-05-03 01:06:53.740 -   - Found ammoBox: Ammo AC/20
+2020-05-03 01:06:53.740 - Checking component: AC/20 Ammo / Ammo AC/20 / Ammo AC/20
+2020-05-03 01:06:53.740 -   - Found ammoBox: Ammo AC/20
+2020-05-03 01:06:53.740 - Checking component: C.A.S.E. / CASE / CASE
+2020-05-03 01:06:53.740 -   - Skipping blacklisted component: CASE
+2020-05-03 01:06:53.740 - Checking component: AC/20 / AC/20 / AC/20
+2020-05-03 01:06:53.740 -   - Found weapon: AC/20
+2020-05-03 01:06:53.740 - Checking component: Heavy Jump Jet (H) / Jump Jet (H) / Jump Jet (H)
+2020-05-03 01:06:53.740 -   - Found component: Jump Jet (H) in location: 128
+2020-05-03 01:06:53.740 - Checking component: Heavy Jump Jet (H) / Jump Jet (H) / Jump Jet (H)
+2020-05-03 01:06:53.740 -   - Found component: Jump Jet (H) in location: 128
+2020-05-03 01:06:53.740 - Checking component: Heavy Jump Jet (H) / Jump Jet (H) / Jump Jet (H)
+2020-05-03 01:06:53.740 -   - Found component: Jump Jet (H) in location: 64
+2020-05-03 01:06:53.740 - Checking component: Heavy Jump Jet (H) / Jump Jet (H) / Jump Jet (H)
+2020-05-03 01:06:53.740 -   - Found component: Jump Jet (H) in location: 64
+2020-05-03 01:06:53.740 - Checking component: Life Support A / Life Support / Life Support
+2020-05-03 01:06:53.740 -   - Found component: Life Support in location: 1
+2020-05-03 01:06:53.740 - Checking component: Sensors A / Sensors / Sensors
+2020-05-03 01:06:53.740 -   - Found component: Sensors in location: 1
+2020-05-03 01:06:53.740 - Checking component: Standard Cockpit / Cockpit / Cockpit
+2020-05-03 01:06:53.741 -   - Skipping blacklisted component: Cockpit
+2020-05-03 01:06:53.741 - Checking component: Sensors B / Sensors / Sensors
+2020-05-03 01:06:53.741 -   - Found component: Sensors in location: 1
+2020-05-03 01:06:53.741 - Checking component: Life Support B / Life Support / Life Support
+2020-05-03 01:06:53.741 -   - Found component: Life Support in location: 1
+2020-05-03 01:06:53.741 -   0 is damageType: Gyro.
+2020-05-03 01:06:53.741 -   1 is damageType: Weapon.
+2020-05-03 01:06:53.741 -   2 is damageType: Weapon.
+2020-05-03 01:06:53.741 -   3 is damageType: Component.
+2020-05-03 01:06:53.741 - Damaging component: OmniMech
+2020-05-03 01:06:53.742 - Damaging component: AC/20
+2020-05-03 01:06:53.743 - Damaging component: ER L Laser
+2020-05-03 01:06:53.743 - Damaging component: Lower Leg
+2020-05-03 01:06:53.824 -  Applying PoorlyMaintainedEffect to unit: Kintaro_Defender_66F1C11B
+2020-05-03 01:06:53.824 - 50% effect supplied, stateRolls = 4
+2020-05-03 01:06:53.824 - Checking component: Kintaro Rugged / Kintaro Rugged / Kintaro Rugged
+2020-05-03 01:06:53.824 -   - Found gyro: Kintaro Rugged
+2020-05-03 01:06:53.824 -       gyro has maxhits: 2
+2020-05-03 01:06:53.824 - Checking component: Endo-Steel Structure / Endo-Steel / Endo-Steel
+2020-05-03 01:06:53.824 -   - Skipping blacklisted component: Endo-Steel
+2020-05-03 01:06:53.824 - Checking component: Ferro-Fibrous Armor / Ferro-Fibrous / Ferro-Fibrous
+2020-05-03 01:06:53.824 -   - Skipping blacklisted component: Ferro-Fibrous
+2020-05-03 01:06:53.824 - Checking component: Fusion Core 275 / Core 275 / Core 275
+2020-05-03 01:06:53.824 -   - Found engine: Core 275
+2020-05-03 01:06:53.824 -       engine has maxhits: 3
+2020-05-03 01:06:53.824 - Checking component: Heat Sink Kit (DHS) / Heat Sink Kit (DHS) / Heat Sink Kit (DHS)
+2020-05-03 01:06:53.824 -   - Found engine: Heat Sink Kit (DHS)
+2020-05-03 01:06:53.824 - Checking component: Engine Cooling + 1 / E-Cooling + 1 / E-Cooling + 1
+2020-05-03 01:06:53.824 -   - Found engine: E-Cooling + 1
+2020-05-03 01:06:53.824 - Checking component: Standard Engine / Std. Engine / Std. Engine
+2020-05-03 01:06:53.824 -   - Found engine: Std. Engine
+2020-05-03 01:06:53.824 - Checking component: Standard Cockpit / Cockpit / Cockpit
+2020-05-03 01:06:53.824 -   - Skipping blacklisted component: Cockpit
+2020-05-03 01:06:53.825 - Checking component: Hip / Hip / Hip
+2020-05-03 01:06:53.825 -   - Found component: Hip in location: 64
+2020-05-03 01:06:53.825 - Checking component: Upper Leg Actuator / Upper Leg / Upper Leg
+2020-05-03 01:06:53.825 -   - Found component: Upper Leg in location: 64
+2020-05-03 01:06:53.825 - Checking component: Lower Leg Actuator / Lower Leg / Lower Leg
+2020-05-03 01:06:53.825 -   - Found component: Lower Leg in location: 64
+2020-05-03 01:06:53.825 - Checking component: Foot Actuator / Foot / Foot
+2020-05-03 01:06:53.825 -   - Found component: Foot in location: 64
+2020-05-03 01:06:53.825 - Checking component: Hip / Hip / Hip
+2020-05-03 01:06:53.825 -   - Found component: Hip in location: 128
+2020-05-03 01:06:53.825 - Checking component: Upper Leg Actuator / Upper Leg / Upper Leg
+2020-05-03 01:06:53.825 -   - Found component: Upper Leg in location: 128
+2020-05-03 01:06:53.825 - Checking component: Lower Leg Actuator / Lower Leg / Lower Leg
+2020-05-03 01:06:53.825 -   - Found component: Lower Leg in location: 128
+2020-05-03 01:06:53.825 - Checking component: Foot Actuator / Foot / Foot
+2020-05-03 01:06:53.825 -   - Found component: Foot in location: 128
+2020-05-03 01:06:53.825 - Checking component: Shoulder / Shoulder / Shoulder
+2020-05-03 01:06:53.825 -   - Found component: Shoulder in location: 2
+2020-05-03 01:06:53.825 - Checking component: Upper Arm Actuator / Upper Arm / Upper Arm
+2020-05-03 01:06:53.825 -   - Found component: Upper Arm in location: 2
+2020-05-03 01:06:53.825 - Checking component: Lower Arm Actuator / Lower Arm / Lower Arm
+2020-05-03 01:06:53.825 -   - Found component: Lower Arm in location: 2
+2020-05-03 01:06:53.825 - Checking component: Hand Actuator / Hand / Hand
+2020-05-03 01:06:53.825 -   - Found component: Hand in location: 2
+2020-05-03 01:06:53.825 - Checking component: Shoulder / Shoulder / Shoulder
+2020-05-03 01:06:53.825 -   - Found component: Shoulder in location: 32
+2020-05-03 01:06:53.825 - Checking component: Upper Arm Actuator / Upper Arm / Upper Arm
+2020-05-03 01:06:53.825 -   - Found component: Upper Arm in location: 32
+2020-05-03 01:06:53.825 - Checking component: Lower Arm Actuator / Lower Arm / Lower Arm
+2020-05-03 01:06:53.825 -   - Found component: Lower Arm in location: 32
+2020-05-03 01:06:53.825 - Checking component: Hand Actuator / Hand / Hand
+2020-05-03 01:06:53.825 -   - Found component: Hand in location: 32
+2020-05-03 01:06:53.825 - Checking component: LRM5 / LRM5 / LRM5
+2020-05-03 01:06:53.825 -   - Found weapon: LRM5
+2020-05-03 01:06:53.825 - Checking component: L Laser / L Laser / L Laser
+2020-05-03 01:06:53.825 -   - Found weapon: L Laser
+2020-05-03 01:06:53.825 - Checking component: LRM10 / LRM10 / LRM10
+2020-05-03 01:06:53.825 -   - Found weapon: LRM10
+2020-05-03 01:06:53.825 - Checking component: LRM Ammo / Ammo LRM / Ammo LRM
+2020-05-03 01:06:53.825 -   - Found ammoBox: Ammo LRM
+2020-05-03 01:06:53.825 - Checking component: LRM Ammo / Ammo LRM / Ammo LRM
+2020-05-03 01:06:53.825 -   - Found ammoBox: Ammo LRM
+2020-05-03 01:06:53.825 - Checking component: L Laser / L Laser / L Laser
+2020-05-03 01:06:53.825 -   - Found weapon: L Laser
+2020-05-03 01:06:53.825 - Checking component: Life Support A / Life Support / Life Support
+2020-05-03 01:06:53.825 -   - Found component: Life Support in location: 1
+2020-05-03 01:06:53.826 - Checking component: Sensors A / Sensors / Sensors
+2020-05-03 01:06:53.826 -   - Found component: Sensors in location: 1
+2020-05-03 01:06:53.826 - Checking component: Sensors B / Sensors / Sensors
+2020-05-03 01:06:53.826 -   - Found component: Sensors in location: 1
+2020-05-03 01:06:53.826 - Checking component: Life Support B / Life Support / Life Support
+2020-05-03 01:06:53.826 -   - Found component: Life Support in location: 1
+2020-05-03 01:06:53.826 -   0 is damageType: Component.
+2020-05-03 01:06:53.826 -   1 is damageType: Gyro.
+2020-05-03 01:06:53.826 -   2 is damageType: Component.
+2020-05-03 01:06:53.826 -   3 is damageType: Weapon.
+2020-05-03 01:06:53.826 - Damaging component: Sensors
+2020-05-03 01:06:53.827 - Damaging component: Kintaro Rugged
+2020-05-03 01:06:53.827 - Damaging component: Hand
+2020-05-03 01:06:53.832 - Damaging component: LRM10(Normal)
+2020-05-03 01:06:53.878 -  Applying PoorlyMaintainedEffect to unit: Raven_Tactician_D6521018
+2020-05-03 01:06:53.878 - 50% effect supplied, stateRolls = 3
+2020-05-03 01:06:53.878 - Checking component: Raven Narrow Profile / Raven Narrow Profile / Raven Narrow Profile
+2020-05-03 01:06:53.878 -   - Found gyro: Raven Narrow Profile
+2020-05-03 01:06:53.878 -       gyro has maxhits: 2
+2020-05-03 01:06:53.878 - Checking component: Standard Structure / Structure / Structure
+2020-05-03 01:06:53.878 -   - Skipping blacklisted component: Structure
+2020-05-03 01:06:53.878 - Checking component: Standard Cockpit / Cockpit / Cockpit
+2020-05-03 01:06:53.878 -   - Skipping blacklisted component: Cockpit
+2020-05-03 01:06:53.878 - Checking component: Ferro-Fibrous Armor / Ferro-Fibrous / Ferro-Fibrous
+2020-05-03 01:06:53.878 -   - Skipping blacklisted component: Ferro-Fibrous
+2020-05-03 01:06:53.878 - Checking component: E-Cooling / E-Cooling / E-Cooling
+2020-05-03 01:06:53.879 -   - Found engine: E-Cooling
+2020-05-03 01:06:53.879 -       engine has maxhits: 3
+2020-05-03 01:06:53.879 - Checking component: Cooling / Cooling / Cooling
+2020-05-03 01:06:53.879 -   - Found engine: Cooling
+2020-05-03 01:06:53.879 - Checking component: Fusion Core 210 / Core 210 / Core 210
+2020-05-03 01:06:53.879 -   - Found engine: Core 210
+2020-05-03 01:06:53.879 - Checking component: Engine XL / Engine XL / Engine XL
+2020-05-03 01:06:53.879 -   - Found engine: Engine XL
+2020-05-03 01:06:53.879 - Checking component: Engine / Engine / Engine
+2020-05-03 01:06:53.879 -   - Found engine: Engine
+2020-05-03 01:06:53.879 - Checking component: Engine / Engine / Engine
+2020-05-03 01:06:53.879 -   - Found engine: Engine
+2020-05-03 01:06:53.879 - Checking component: Shoulder / Shoulder / Shoulder
+2020-05-03 01:06:53.879 -   - Found component: Shoulder in location: 2
+2020-05-03 01:06:53.879 - Checking component: Upper Arm Actuator / Upper Arm / Upper Arm
+2020-05-03 01:06:53.879 -   - Found component: Upper Arm in location: 2
+2020-05-03 01:06:53.879 - Checking component: Shoulder / Shoulder / Shoulder
+2020-05-03 01:06:53.879 -   - Found component: Shoulder in location: 32
+2020-05-03 01:06:53.879 - Checking component: Upper Arm Actuator / Upper Arm / Upper Arm
+2020-05-03 01:06:53.879 -   - Found component: Upper Arm in location: 32
+2020-05-03 01:06:53.879 - Checking component: Hip / Hip / Hip
+2020-05-03 01:06:53.879 -   - Found component: Hip in location: 64
+2020-05-03 01:06:53.879 - Checking component: Upper Leg Actuator / Upper Leg / Upper Leg
+2020-05-03 01:06:53.879 -   - Found component: Upper Leg in location: 64
+2020-05-03 01:06:53.879 - Checking component: Lower Leg Actuator / Lower Leg / Lower Leg
+2020-05-03 01:06:53.879 -   - Found component: Lower Leg in location: 64
+2020-05-03 01:06:53.879 - Checking component: Foot Actuator / Foot / Foot
+2020-05-03 01:06:53.879 -   - Found component: Foot in location: 64
+2020-05-03 01:06:53.879 - Checking component: Hip / Hip / Hip
+2020-05-03 01:06:53.879 -   - Found component: Hip in location: 128
+2020-05-03 01:06:53.879 - Checking component: Upper Leg Actuator / Upper Leg / Upper Leg
+2020-05-03 01:06:53.879 -   - Found component: Upper Leg in location: 128
+2020-05-03 01:06:53.879 - Checking component: Lower Leg Actuator / Lower Leg / Lower Leg
+2020-05-03 01:06:53.879 -   - Found component: Lower Leg in location: 128
+2020-05-03 01:06:53.879 - Checking component: Foot Actuator / Foot / Foot
+2020-05-03 01:06:53.879 -   - Found component: Foot in location: 128
+2020-05-03 01:06:53.879 - Checking component: Narc Launcher / NARC Launcher / NARC Launcher
+2020-05-03 01:06:53.879 -   - Found weapon: NARC Launcher
+2020-05-03 01:06:53.880 - Checking component: S Pulse / S Pulse / S Pulse
+2020-05-03 01:06:53.880 -   - Found weapon: S Pulse
+2020-05-03 01:06:53.880 - Checking component: S Laser / S Laser / S Laser
+2020-05-03 01:06:53.880 -   - Found weapon: S Laser
+2020-05-03 01:06:53.880 - Checking component: S Laser / S Laser / S Laser
+2020-05-03 01:06:53.880 -   - Found weapon: S Laser
+2020-05-03 01:06:53.880 - Checking component: LRM15 / LRM15 / LRM15
+2020-05-03 01:06:53.880 -   - Found weapon: LRM15
+2020-05-03 01:06:53.880 - Checking component: LRM Ammo / Ammo LRM / Ammo LRM
+2020-05-03 01:06:53.880 -   - Found ammoBox: Ammo LRM
+2020-05-03 01:06:53.880 - Checking component: LRM Ammo / Ammo LRM / Ammo LRM
+2020-05-03 01:06:53.880 -   - Found ammoBox: Ammo LRM
+2020-05-03 01:06:53.880 - Checking component: Narc Beacon Ammo / Ammo Narc Beacon / Ammo Narc Beacon
+2020-05-03 01:06:53.880 -   - Found ammoBox: Ammo Narc Beacon
+2020-05-03 01:06:53.880 - Checking component: C.A.S.E. / CASE / CASE
+2020-05-03 01:06:53.880 -   - Skipping blacklisted component: CASE
+2020-05-03 01:06:53.880 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 01:06:53.880 -   - Found heatSink: Heat Sink
+2020-05-03 01:06:53.880 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 01:06:53.880 -   - Found heatSink: Heat Sink
+2020-05-03 01:06:53.880 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 01:06:53.880 -   - Found heatSink: Heat Sink
+2020-05-03 01:06:53.880 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 01:06:53.880 -   - Found heatSink: Heat Sink
+2020-05-03 01:06:53.880 - Checking component: Life Support A / Life Support / Life Support
+2020-05-03 01:06:53.880 -   - Found component: Life Support in location: 1
+2020-05-03 01:06:53.880 - Checking component: Sensors A / Sensors / Sensors
+2020-05-03 01:06:53.880 -   - Found component: Sensors in location: 1
+2020-05-03 01:06:53.880 - Checking component: Sensors B / Sensors / Sensors
+2020-05-03 01:06:53.880 -   - Found component: Sensors in location: 1
+2020-05-03 01:06:53.880 - Checking component: Life Support B / Life Support / Life Support
+2020-05-03 01:06:53.880 -   - Found component: Life Support in location: 1
+2020-05-03 01:06:53.880 -   0 is damageType: Gyro.
+2020-05-03 01:06:53.880 -   1 is damageType: Component.
+2020-05-03 01:06:53.880 -   2 is damageType: Component.
+2020-05-03 01:06:53.880 - Damaging component: Raven Narrow Profile
+2020-05-03 01:06:53.880 - Damaging component: Hip
+2020-05-03 01:06:53.884 - Damaging component: Lower Leg
+2020-05-03 01:06:53.930 -  Applying PoorlyMaintainedEffect to unit: Raven_Pilot_5496125A
+2020-05-03 01:06:53.930 - 50% effect supplied, stateRolls = 4
+2020-05-03 01:06:53.930 - Checking component: Raven Narrow Profile / Raven Narrow Profile / Raven Narrow Profile
+2020-05-03 01:06:53.930 -   - Found gyro: Raven Narrow Profile
+2020-05-03 01:06:53.930 -       gyro has maxhits: 2
+2020-05-03 01:06:53.930 - Checking component: Standard Structure / Structure / Structure
+2020-05-03 01:06:53.930 -   - Skipping blacklisted component: Structure
+2020-05-03 01:06:53.930 - Checking component: Standard Cockpit / Cockpit / Cockpit
+2020-05-03 01:06:53.930 -   - Skipping blacklisted component: Cockpit
+2020-05-03 01:06:53.930 - Checking component: Ferro-Fibrous Armor / Ferro-Fibrous / Ferro-Fibrous
+2020-05-03 01:06:53.930 -   - Skipping blacklisted component: Ferro-Fibrous
+2020-05-03 01:06:53.930 - Checking component: E-Cooling / E-Cooling / E-Cooling
+2020-05-03 01:06:53.930 -   - Found engine: E-Cooling
+2020-05-03 01:06:53.930 -       engine has maxhits: 3
+2020-05-03 01:06:53.930 - Checking component: Cooling / Cooling / Cooling
+2020-05-03 01:06:53.930 -   - Found engine: Cooling
+2020-05-03 01:06:53.930 - Checking component: Fusion Core 210 / Core 210 / Core 210
+2020-05-03 01:06:53.930 -   - Found engine: Core 210
+2020-05-03 01:06:53.930 - Checking component: Engine XL / Engine XL / Engine XL
+2020-05-03 01:06:53.930 -   - Found engine: Engine XL
+2020-05-03 01:06:53.930 - Checking component: Engine / Engine / Engine
+2020-05-03 01:06:53.931 -   - Found engine: Engine
+2020-05-03 01:06:53.931 - Checking component: Engine / Engine / Engine
+2020-05-03 01:06:53.931 -   - Found engine: Engine
+2020-05-03 01:06:53.931 - Checking component: Shoulder / Shoulder / Shoulder
+2020-05-03 01:06:53.931 -   - Found component: Shoulder in location: 2
+2020-05-03 01:06:53.931 - Checking component: Upper Arm Actuator / Upper Arm / Upper Arm
+2020-05-03 01:06:53.931 -   - Found component: Upper Arm in location: 2
+2020-05-03 01:06:53.931 - Checking component: Shoulder / Shoulder / Shoulder
+2020-05-03 01:06:53.931 -   - Found component: Shoulder in location: 32
+2020-05-03 01:06:53.931 - Checking component: Upper Arm Actuator / Upper Arm / Upper Arm
+2020-05-03 01:06:53.931 -   - Found component: Upper Arm in location: 32
+2020-05-03 01:06:53.931 - Checking component: Hip / Hip / Hip
+2020-05-03 01:06:53.931 -   - Found component: Hip in location: 64
+2020-05-03 01:06:53.931 - Checking component: Upper Leg Actuator / Upper Leg / Upper Leg
+2020-05-03 01:06:53.931 -   - Found component: Upper Leg in location: 64
+2020-05-03 01:06:53.931 - Checking component: Lower Leg Actuator / Lower Leg / Lower Leg
+2020-05-03 01:06:53.931 -   - Found component: Lower Leg in location: 64
+2020-05-03 01:06:53.931 - Checking component: Foot Actuator / Foot / Foot
+2020-05-03 01:06:53.931 -   - Found component: Foot in location: 64
+2020-05-03 01:06:53.931 - Checking component: Hip / Hip / Hip
+2020-05-03 01:06:53.931 -   - Found component: Hip in location: 128
+2020-05-03 01:06:53.931 - Checking component: Upper Leg Actuator / Upper Leg / Upper Leg
+2020-05-03 01:06:53.931 -   - Found component: Upper Leg in location: 128
+2020-05-03 01:06:53.931 - Checking component: Lower Leg Actuator / Lower Leg / Lower Leg
+2020-05-03 01:06:53.931 -   - Found component: Lower Leg in location: 128
+2020-05-03 01:06:53.931 - Checking component: Foot Actuator / Foot / Foot
+2020-05-03 01:06:53.931 -   - Found component: Foot in location: 128
+2020-05-03 01:06:53.931 - Checking component: Narc Launcher / NARC Launcher / NARC Launcher
+2020-05-03 01:06:53.931 -   - Found weapon: NARC Launcher
+2020-05-03 01:06:53.931 - Checking component: S Pulse / S Pulse / S Pulse
+2020-05-03 01:06:53.931 -   - Found weapon: S Pulse
+2020-05-03 01:06:53.931 - Checking component: S Laser / S Laser / S Laser
+2020-05-03 01:06:53.931 -   - Found weapon: S Laser
+2020-05-03 01:06:53.931 - Checking component: S Laser / S Laser / S Laser
+2020-05-03 01:06:53.931 -   - Found weapon: S Laser
+2020-05-03 01:06:53.931 - Checking component: LRM15 / LRM15 / LRM15
+2020-05-03 01:06:53.931 -   - Found weapon: LRM15
+2020-05-03 01:06:53.931 - Checking component: LRM Ammo / Ammo LRM / Ammo LRM
+2020-05-03 01:06:53.931 -   - Found ammoBox: Ammo LRM
+2020-05-03 01:06:53.931 - Checking component: LRM Ammo / Ammo LRM / Ammo LRM
+2020-05-03 01:06:53.931 -   - Found ammoBox: Ammo LRM
+2020-05-03 01:06:53.931 - Checking component: Narc Beacon Ammo / Ammo Narc Beacon / Ammo Narc Beacon
+2020-05-03 01:06:53.931 -   - Found ammoBox: Ammo Narc Beacon
+2020-05-03 01:06:53.931 - Checking component: C.A.S.E. / CASE / CASE
+2020-05-03 01:06:53.931 -   - Skipping blacklisted component: CASE
+2020-05-03 01:06:53.931 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 01:06:53.932 -   - Found heatSink: Heat Sink
+2020-05-03 01:06:53.932 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 01:06:53.932 -   - Found heatSink: Heat Sink
+2020-05-03 01:06:53.932 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 01:06:53.932 -   - Found heatSink: Heat Sink
+2020-05-03 01:06:53.932 - Checking component: Heat Sink Standard (S) / Heat Sink / Heat Sink
+2020-05-03 01:06:53.932 -   - Found heatSink: Heat Sink
+2020-05-03 01:06:53.932 - Checking component: Life Support A / Life Support / Life Support
+2020-05-03 01:06:53.932 -   - Found component: Life Support in location: 1
+2020-05-03 01:06:53.932 - Checking component: Sensors A / Sensors / Sensors
+2020-05-03 01:06:53.932 -   - Found component: Sensors in location: 1
+2020-05-03 01:06:53.932 - Checking component: Sensors B / Sensors / Sensors
+2020-05-03 01:06:53.932 -   - Found component: Sensors in location: 1
+2020-05-03 01:06:53.932 - Checking component: Life Support B / Life Support / Life Support
+2020-05-03 01:06:53.932 -   - Found component: Life Support in location: 1
+2020-05-03 01:06:53.932 -   0 is damageType: Weapon.
+2020-05-03 01:06:53.932 -   1 is damageType: Structure.
+2020-05-03 01:06:53.932 -   2 is damageType: Weapon.
+2020-05-03 01:06:53.932 -   3 is damageType: Engine.
+2020-05-03 01:06:53.932 - Damaging component: S Laser
+2020-05-03 01:06:53.933 - Damaging component: NARC Launcher(Beacon)
+2020-05-03 01:06:53.933 - Damaging component: Cooling
+2020-05-03 01:06:53.933 - Reducing structure in location LeftTorso by 0.23% for 9 points
+2020-05-03 01:42:03.324 - Set StateTheme to: Battle Fatigue - {0}%

@@ -1,0 +1,69 @@
+{
+	"Custom": {
+		"Weights": {
+			"ReservedSlots": 12,
+			"EngineFactor": 0.5
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"EngineWeight: 50%",
+				"ReservedSlots: 12"
+			]
+		},
+		"WorkOrderCosts": {
+			"Default": {
+				"TechCost": "0",
+				"CBillCost": "0"
+			},
+			"Install": {
+				"TechCost": "1 * [[Chassis.Tonnage]] * [[Chassis.Tonnage]] / 40",
+				"CBillCost": "1000 * [[Chassis.Tonnage]] * [[Chassis.Tonnage]] / 40"
+			}
+		},
+		"Flags": {
+            "flags": [
+                    "vital"
+            ]
+        },
+		"Category" : [
+			{"CategoryID": "EngineShield"},
+			{"CategoryID": "EnginePart"}
+		],
+		"Linked" : {
+			"Links" : [
+				{ "ComponentDefId" : "emod_engineslots_size6", "Location" : "LeftTorso" },
+				{ "ComponentDefId" : "emod_engineslots_size6", "Location" : "RightTorso" }
+			]
+		}
+	},
+    "Description" : {
+        "Cost" : 500000,
+        "Rarity" : 0,
+        "Purchasable" : false,
+        "Manufacturer" : "Lostech",
+        "Model" : "Extra-light",
+        "UIName" : "Engine Jury-Rigged XL",
+        "Id" : "emod_engineslots_juryrigxl_center",
+        "Name" : "Jury-Rigged XL Engine",
+        "Details" : "During the technology revival of the 3050s many technologies were rediscovered and put back into wide production. Among these was the Extra-Light Engine. However, the reactor shielding was complex on the XL and was beyond the capacity of many smaller manufacturers to make. Therefore, this type of engine was created, the so-called Jury-Rigged XL. While actually a production model, it is called jury-rigged because it uses extremely bulky but lightweight materials to reproduce the effect of the more advanced and capable standard XL. The Jury-Rigged XL has only one real advantage over its more conventional cousin, which is ease of installation since it was designed to be quickly and cheaply installed.",
+        "Icon" : "uixSvgIcon_equipment_Heatsink"
+    },
+    "BonusValueA" : "",
+    "BonusValueB" : "",
+    "ComponentType" : "HeatSink",
+    "ComponentSubType" : "Heatsink",
+    "PrefabIdentifier" : "",
+    "BattleValue" : 0,
+    "InventorySize" : 4,
+    "Tonnage" : 0,
+    "AllowedLocations" : "CenterTorso",
+    "DisallowedLocations" : "All",
+    "CriticalComponent" : false,
+    "statusEffects" : null,
+    "ComponentTags" : {
+        "items" : [
+            "component_type_stock"
+        ],
+        "tagSetSourceFile" : ""
+    }
+}

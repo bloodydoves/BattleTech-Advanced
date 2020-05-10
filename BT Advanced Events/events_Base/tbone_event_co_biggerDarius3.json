@@ -1,0 +1,140 @@
+{
+    "Description" : {
+        "Id" : "tbone_event_co_biggerDarius3",
+        "Name" : "More of Me To Love",
+        "Details" : "After yet another shuttle run, [[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]] asks for senior staff to meet him in the command center. What greets you upon entering the room is...well, two Dariuses. Darii. One is <i>definitely</i> taller than the other, and you realize that the shorter of the two is the Darius you've known all along.\r\n\r\n\r\n\"H-okayyy...who wants to start?\"\r\n\r\nDarius Prime begins \"Commander, I'm sorry for all this. This is my...clone, I guess. For the last few years, I've been spending all my earnings on an...insurance policy. I opened an account at a gray market cloning facility, with instructions that if I ever died, they'd release my clone and send it...him...to replace me. Well, the facility went under and a clone-rights sympathizer sent me a message warning me that they were just going to farm all the clones out for parts. I couldn't let that happen, which is why I had to leave. I sent my clone back first, in case I didn't make it. He's the only family I've got left.\"",
+        "Icon" : "uixTxrSpot_BiggerBriefing.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 10000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : [
+                "MODIFIED_STAT_MechTechSkill"
+            ]
+        },
+        "RequirementComparisons" : []
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [
+        {
+            "Scope" : "SecondaryMechWarrior",
+            "Requirements" : {
+                "Scope" : "SecondaryMechWarrior",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : [
+                        "name_Darius",
+                        "bxo_2"
+                    ]
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Continue unraveling this mess.",
+                "Details" : "Continue unraveling this mess.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Continue unraveling this mess.",
+                        "Details" : "\"Ok, so now we have a clone of you. What do we do with...him? What do we even call him?\"\r\n\r\nBigger Darius interjects, \"Commander, I'd like to earn my keep here. On top of the neural imprinting, they had us working with IndustrialMechs at the facility, so if anything I'm even better in the cockpit as [[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]]...he'll resume his duties as XO, and you can treat me like any other pilot. As for what to call me, my first name is \"Dariuus\", and I'll use \"BXO\" as my callsign.\"\r\n\r\n<b>BXO</b> is now in the barracks.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "bxo_1",
+                                    "bxo_2"
+                                ]
+                            },
+                            "Stats" : null,
+                            "Actions" : [
+                                {
+                                    "Type" : "MechWarrior_AddRoster",
+                                    "value" : "pilot_tbone_Dariuus",
+                                    "valueConstant" : null,
+                                    "additionalValues" : null
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : [
+                                {
+                                    "Type" : "MechWarrior_Fire",
+                                    "value" : null,
+                                    "valueConstant" : null,
+                                    "additionalValues" : null
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}
