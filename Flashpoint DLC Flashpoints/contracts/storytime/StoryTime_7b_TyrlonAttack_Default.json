@@ -1,5 +1,5 @@
 {
-    "ID": "StoryTime_7b_TyrlonAttack",
+    "ID": "StoryTime_7b_TyrlonAttack_Default",
     "contractName": "Liberation: Tyrlon",
     "contractDisplayStyle": "BaseCampaignRestoration",
     "difficulty": 7,
@@ -10,88 +10,9 @@
     "shortDescription": "This is it, {COMMANDER.Callsign}\u2014the Directorate's last stronghold on our way to Coromodir. We're going to liberate this system and set House Parata free. I have an invasion fleet en route to take the spaceport in a surprise attack, but the shipyard's gun batteries are going to be a problem. You need to take them off-line before our ships arrive.",
     "longDescription": "Most of Espinosa's DropShip fleet is grounded on Tyrlon right now. If we take this system from them, there'll be nothing left between us and the throne world!",
     "salvagePotential": 34,
-    "requirementList": [
-
-    ],
-    "OnContractSuccessResults": [
-        {
-            "Scope": "Company",
-            "Requirements": null,
-            "AddedTags": {
-                "items": [
-
-                ],
-                "tagSetSourceFile": ""
-            },
-            "RemovedTags": {
-                "items": [
-
-                ],
-                "tagSetSourceFile": ""
-            },
-            "Stats": [
-                {
-                    "typeString": "System.Int32",
-                    "name": "NextStoryMilestone",
-                    "value": "1",
-                    "set": false,
-                    "valueConstant": ""
-                }
-            ],
-            "Actions": [
-
-            ],
-            "ForceEvents": [
-
-            ],
-            "TemporaryResult": false,
-            "ResultDuration": 0
-        }
-    ],
-    "OnContractFailureResults": [
-        {
-            "Scope": "Company",
-            "Requirements": null,
-            "AddedTags": {
-                "items": [
-
-                ],
-                "tagSetSourceFile": ""
-            },
-            "RemovedTags": {
-                "items": [
-
-                ],
-                "tagSetSourceFile": ""
-            },
-            "Stats": [
-                {
-                    "typeString": "System.Int32",
-                    "name": "NextStoryMilestone",
-                    "value": "611",
-                    "set": true,
-                    "valueConstant": ""
-                }
-            ],
-            "Actions": [
-                {
-                    "Type": "System_AddContract",
-                    "value": "trav_restoration_7_tyrlonAttack",
-                    "valueConstant": "",
-                    "additionalValues": [
-                        "AuriganDirectorate",
-                        "AuriganRestoration",
-                        "starsystemdef_Tyrlon"
-                    ]
-                }
-            ],
-            "ForceEvents": [
-
-            ],
-            "TemporaryResult": false,
-            "ResultDuration": 0
-        }
-    ],
+    "requirementList": [],
+    "OnContractSuccessResults": [],
+    "OnContractFailureResults": [],
     "contractType": "Tyrlon_Attack",
     "encounterPlayStyle": "SinglePlayer",
     "maxNumberOfPlayerUnits": 4,
@@ -120,9 +41,7 @@
             "description": "",
             "isPrimary": true,
             "forPlayer": "Player1",
-            "objectiveGuids": [
-
-            ]
+            "objectiveGuids": []
         },
         {
             "contractObjective": {
@@ -132,9 +51,7 @@
             "description": "",
             "isPrimary": true,
             "forPlayer": "Player1",
-            "objectiveGuids": [
-
-            ]
+            "objectiveGuids": []
         }
     ],
     "objectiveList": [
@@ -145,12 +62,8 @@
             "title": "Destroy All Three Generators in Time",
             "description": "",
             "isPrimary": true,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -159,12 +72,8 @@
             "title": "Eliminate all hostiles",
             "description": "",
             "isPrimary": true,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -173,12 +82,8 @@
             "title": "Hidden Spawn Timer",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -187,12 +92,8 @@
             "title": "Hidden Ref Flag 1",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -201,12 +102,8 @@
             "title": "Time Left to Destroy the Generators",
             "description": "",
             "isPrimary": true,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -215,12 +112,8 @@
             "title": "Hidden",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -229,12 +122,8 @@
             "title": "Set2ActiveFlagFalse",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -243,51 +132,33 @@
             "title": "Hidden Spotter Async 1",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
+            "OnSuccessResults": [],
             "OnFailureResults": [
                 {
                     "Scope": "Company",
                     "Requirements": {
                         "Scope": "Company",
                         "RequirementTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "ExclusionTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
-                        "RequirementComparisons": [
-
-                        ]
+                        "RequirementComparisons": []
                     },
                     "AddedTags": {
-                        "items": [
-
-                        ],
+                        "items": [],
                         "tagSetSourceFile": ""
                     },
                     "RemovedTags": {
-                        "items": [
-
-                        ],
+                        "items": [],
                         "tagSetSourceFile": ""
                     },
-                    "Stats": [
-
-                    ],
-                    "Actions": [
-
-                    ],
-                    "ForceEvents": [
-
-                    ],
+                    "Stats": [],
+                    "Actions": [],
+                    "ForceEvents": [],
                     "TemporaryResult": false,
                     "ResultDuration": 0
                 }
@@ -300,51 +171,33 @@
             "title": "Hidden Spotter Async 2",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
+            "OnSuccessResults": [],
             "OnFailureResults": [
                 {
                     "Scope": "Company",
                     "Requirements": {
                         "Scope": "Company",
                         "RequirementTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "ExclusionTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
-                        "RequirementComparisons": [
-
-                        ]
+                        "RequirementComparisons": []
                     },
                     "AddedTags": {
-                        "items": [
-
-                        ],
+                        "items": [],
                         "tagSetSourceFile": ""
                     },
                     "RemovedTags": {
-                        "items": [
-
-                        ],
+                        "items": [],
                         "tagSetSourceFile": ""
                     },
-                    "Stats": [
-
-                    ],
-                    "Actions": [
-
-                    ],
-                    "ForceEvents": [
-
-                    ],
+                    "Stats": [],
+                    "Actions": [],
+                    "ForceEvents": [],
                     "TemporaryResult": false,
                     "ResultDuration": 0
                 },
@@ -353,42 +206,26 @@
                     "Requirements": {
                         "Scope": "Company",
                         "RequirementTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "ExclusionTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
-                        "RequirementComparisons": [
-
-                        ]
+                        "RequirementComparisons": []
                     },
                     "AddedTags": {
-                        "items": [
-
-                        ],
+                        "items": [],
                         "tagSetSourceFile": ""
                     },
                     "RemovedTags": {
-                        "items": [
-
-                        ],
+                        "items": [],
                         "tagSetSourceFile": ""
                     },
-                    "Stats": [
-
-                    ],
-                    "Actions": [
-
-                    ],
-                    "ForceEvents": [
-
-                    ],
+                    "Stats": [],
+                    "Actions": [],
+                    "ForceEvents": [],
                     "TemporaryResult": false,
                     "ResultDuration": 0
                 }
@@ -401,12 +238,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -415,12 +248,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -429,12 +258,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -443,12 +268,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -457,12 +278,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -471,12 +288,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -485,12 +298,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -499,12 +308,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -513,12 +318,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -527,12 +328,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -541,12 +338,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -555,12 +348,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -569,12 +358,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -583,12 +368,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -597,12 +378,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -611,12 +388,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -625,12 +398,8 @@
             "title": "Destroy the Spotters",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -639,12 +408,8 @@
             "title": "Hidden Spotter Timer Objective",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -653,12 +418,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -667,12 +428,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -681,12 +438,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -695,12 +448,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -709,12 +458,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -723,12 +468,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -737,12 +478,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -751,12 +488,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -765,12 +498,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -779,12 +508,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -793,12 +518,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -807,12 +528,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -821,12 +538,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -835,12 +548,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -849,12 +558,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -863,12 +568,8 @@
             "title": "Artillery hits in ",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -877,12 +578,8 @@
             "title": "Artillery hits in",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -891,12 +588,8 @@
             "title": "Artillery hits in",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -905,12 +598,8 @@
             "title": "Set 1 Timer Objective",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -919,12 +608,8 @@
             "title": "Set 2 Timer Objective",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         },
         {
             "objective": {
@@ -933,20 +618,12 @@
             "title": "Destroy the Third Spotter",
             "description": "",
             "isPrimary": false,
-            "OnSuccessResults": [
-
-            ],
-            "OnFailureResults": [
-
-            ]
+            "OnSuccessResults": [],
+            "OnFailureResults": []
         }
     ],
-    "buildingList": [
-
-    ],
-    "chunkList": [
-
-    ],
+    "buildingList": [],
+    "chunkList": [],
     "cameraFocusHelperList": [
         {
             "name": "PlayerLanceSpawner",
@@ -1956,9 +1633,7 @@
             },
             "name": "MissionFailureDialogue",
             "overrideDialogueBucketId": "",
-            "dialogueContent": [
-
-            ]
+            "dialogueContent": []
         },
         {
             "dialogue": {
@@ -2387,21 +2062,15 @@
                 "name": "PlayerLanceSpawner",
                 "lanceDefId": "Manual",
                 "lanceTagSet": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": ""
                 },
                 "lanceExcludedTagSet": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/LanceTags"
                 },
                 "spawnEffectTags": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/SpawnEffectTags"
                 },
                 "lanceDifficultyAdjustment": 0,
@@ -2417,34 +2086,24 @@
                         "unitType": "UNDEFINED",
                         "unitDefId": "",
                         "unitTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "unitExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "spawnEffectTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
                         "pilotDefId": "pilot_default",
                         "pilotTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "pilotExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "selectedUnitType": "UNDEFINED",
@@ -2460,34 +2119,24 @@
                         "unitType": "UNDEFINED",
                         "unitDefId": "",
                         "unitTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "unitExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "spawnEffectTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
                         "pilotDefId": "pilot_default",
                         "pilotTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "pilotExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "selectedUnitType": "UNDEFINED",
@@ -2503,34 +2152,24 @@
                         "unitType": "UNDEFINED",
                         "unitDefId": "",
                         "unitTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "unitExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "spawnEffectTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
                         "pilotDefId": "pilot_default",
                         "pilotTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "pilotExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "selectedUnitType": "UNDEFINED",
@@ -2546,34 +2185,24 @@
                         "unitType": "UNDEFINED",
                         "unitDefId": "",
                         "unitTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "unitExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "spawnEffectTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
                         "pilotDefId": "pilot_default",
                         "pilotTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "pilotExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "selectedUnitType": "UNDEFINED",
@@ -2592,9 +2221,7 @@
         "teamName": "Player 2",
         "faction": "Player2sMercUnit",
         "teamLeaderCastDefId": "castDef_TeamLeader_Current",
-        "lanceOverrideList": [
-
-        ]
+        "lanceOverrideList": []
     },
     "employerTeam": {
         "encounterLayerData": {
@@ -2604,9 +2231,7 @@
         "teamName": "Employer",
         "faction": "INVALID_UNSET",
         "teamLeaderCastDefId": "castDef_TeamLeader_Current",
-        "lanceOverrideList": [
-
-        ]
+        "lanceOverrideList": []
     },
     "targetTeam": {
         "encounterLayerData": {
@@ -2624,21 +2249,15 @@
                 "name": "Turrets Alpha",
                 "lanceDefId": "Manual",
                 "lanceTagSet": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/LanceTags"
                 },
                 "lanceExcludedTagSet": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/LanceTags"
                 },
                 "spawnEffectTags": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/SpawnEffectTags"
                 },
                 "lanceDifficultyAdjustment": 0,
@@ -2654,34 +2273,24 @@
                         "unitType": "Turret",
                         "unitDefId": "turretdef_Standard_Laser",
                         "unitTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "unitExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "spawnEffectTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
                         "pilotDefId": "pilot_d7_turret",
                         "pilotTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "pilotExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "selectedUnitType": "UNDEFINED",
@@ -2697,34 +2306,24 @@
                         "unitType": "Turret",
                         "unitDefId": "turretdef_Standard_Laser",
                         "unitTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "unitExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "spawnEffectTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
                         "pilotDefId": "pilot_d7_turret",
                         "pilotTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "pilotExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "selectedUnitType": "UNDEFINED",
@@ -2740,21 +2339,15 @@
                 "name": "Turrets Bravo",
                 "lanceDefId": "Manual",
                 "lanceTagSet": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/LanceTags"
                 },
                 "lanceExcludedTagSet": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/LanceTags"
                 },
                 "spawnEffectTags": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/SpawnEffectTags"
                 },
                 "lanceDifficultyAdjustment": 0,
@@ -2770,34 +2363,24 @@
                         "unitType": "Turret",
                         "unitDefId": "turretdef_Standard_Laser",
                         "unitTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "unitExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "spawnEffectTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
                         "pilotDefId": "pilot_d7_turret",
                         "pilotTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "pilotExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "selectedUnitType": "UNDEFINED",
@@ -2813,34 +2396,24 @@
                         "unitType": "Turret",
                         "unitDefId": "turretdef_Standard_Laser",
                         "unitTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "unitExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "spawnEffectTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
                         "pilotDefId": "pilot_d7_turret",
                         "pilotTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "pilotExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "selectedUnitType": "UNDEFINED",
@@ -2856,21 +2429,15 @@
                 "name": "Turrets Charlie",
                 "lanceDefId": "Manual",
                 "lanceTagSet": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/LanceTags"
                 },
                 "lanceExcludedTagSet": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/LanceTags"
                 },
                 "spawnEffectTags": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/SpawnEffectTags"
                 },
                 "lanceDifficultyAdjustment": 0,
@@ -2886,34 +2453,24 @@
                         "unitType": "Turret",
                         "unitDefId": "turretdef_Standard_Laser",
                         "unitTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "unitExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "spawnEffectTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
                         "pilotDefId": "pilot_d7_turret",
                         "pilotTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "pilotExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "selectedUnitType": "UNDEFINED",
@@ -2929,34 +2486,24 @@
                         "unitType": "Turret",
                         "unitDefId": "turretdef_Standard_Laser",
                         "unitTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "unitExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "spawnEffectTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
                         "pilotDefId": "pilot_d7_turret",
                         "pilotTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "pilotExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "selectedUnitType": "UNDEFINED",
@@ -2972,21 +2519,15 @@
                 "name": "Guards 1",
                 "lanceDefId": "Manual",
                 "lanceTagSet": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/LanceTags"
                 },
                 "lanceExcludedTagSet": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/LanceTags"
                 },
                 "spawnEffectTags": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/SpawnEffectTags"
                 },
                 "lanceDifficultyAdjustment": 0,
@@ -3015,22 +2556,16 @@
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "spawnEffectTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
                         "pilotDefId": "pilot_d7_gunner",
                         "pilotTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "pilotExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "selectedUnitType": "UNDEFINED",
@@ -3053,28 +2588,20 @@
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "unitExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "spawnEffectTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
                         "pilotDefId": "pilot_d7_flanker",
                         "pilotTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "pilotExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "selectedUnitType": "UNDEFINED",
@@ -3090,34 +2617,24 @@
                         "unitType": "Vehicle",
                         "unitDefId": "vehicledef_STRIKER",
                         "unitTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "unitExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "spawnEffectTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
                         "pilotDefId": "pilot_d7_defender",
                         "pilotTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "pilotExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "selectedUnitType": "UNDEFINED",
@@ -3133,34 +2650,24 @@
                         "unitType": "Vehicle",
                         "unitDefId": "vehicledef_STRIKER",
                         "unitTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "unitExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "spawnEffectTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
                         "pilotDefId": "pilot_d7_gunner",
                         "pilotTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "pilotExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "selectedUnitType": "UNDEFINED",
@@ -3176,21 +2683,15 @@
                 "name": "Turrets Delta",
                 "lanceDefId": "Manual",
                 "lanceTagSet": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/LanceTags"
                 },
                 "lanceExcludedTagSet": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/LanceTags"
                 },
                 "spawnEffectTags": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/SpawnEffectTags"
                 },
                 "lanceDifficultyAdjustment": 0,
@@ -3206,34 +2707,24 @@
                         "unitType": "Turret",
                         "unitDefId": "turretdef_Light_Laser",
                         "unitTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "unitExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "spawnEffectTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
                         "pilotDefId": "pilot_d7_turret",
                         "pilotTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "pilotExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "selectedUnitType": "UNDEFINED",
@@ -3249,34 +2740,24 @@
                         "unitType": "Turret",
                         "unitDefId": "turretdef_Standard_Laser",
                         "unitTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "unitExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "spawnEffectTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
                         "pilotDefId": "pilot_d7_turret",
                         "pilotTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "pilotExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "selectedUnitType": "UNDEFINED",
@@ -3292,34 +2773,24 @@
                         "unitType": "Turret",
                         "unitDefId": "turretdef_Standard_Laser",
                         "unitTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "unitExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "spawnEffectTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
                         "pilotDefId": "pilot_d7_turret",
                         "pilotTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "pilotExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "selectedUnitType": "UNDEFINED",
@@ -3335,21 +2806,15 @@
                 "name": "FieldLance2a (1)",
                 "lanceDefId": "Manual",
                 "lanceTagSet": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/LanceTags"
                 },
                 "lanceExcludedTagSet": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/LanceTags"
                 },
                 "spawnEffectTags": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/SpawnEffectTags"
                 },
                 "lanceDifficultyAdjustment": 0,
@@ -3372,28 +2837,20 @@
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "unitExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "spawnEffectTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
                         "pilotDefId": "pilot_d7_pilot",
                         "pilotTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "pilotExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "selectedUnitType": "UNDEFINED",
@@ -3416,28 +2873,20 @@
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "unitExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "spawnEffectTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
                         "pilotDefId": "pilot_d7_gunner",
                         "pilotTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "pilotExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "selectedUnitType": "UNDEFINED",
@@ -3460,28 +2909,20 @@
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "unitExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "spawnEffectTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
                         "pilotDefId": "pilot_default",
                         "pilotTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "pilotExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "selectedUnitType": "UNDEFINED",
@@ -3504,28 +2945,20 @@
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "unitExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "spawnEffectTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
                         "pilotDefId": "pilot_d7_tactician",
                         "pilotTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "pilotExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "selectedUnitType": "UNDEFINED",
@@ -3541,21 +2974,15 @@
                 "name": "Spotter Unit1",
                 "lanceDefId": "Manual",
                 "lanceTagSet": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/LanceTags"
                 },
                 "lanceExcludedTagSet": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/LanceTags"
                 },
                 "spawnEffectTags": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/SpawnEffectTags"
                 },
                 "lanceDifficultyAdjustment": 0,
@@ -3571,34 +2998,24 @@
                         "unitType": "Mech",
                         "unitDefId": "mechdef_spider_SDR-5V",
                         "unitTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "unitExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "spawnEffectTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
                         "pilotDefId": "pilot_d7_sharpshooter",
                         "pilotTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "pilotExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "selectedUnitType": "UNDEFINED",
@@ -3614,21 +3031,15 @@
                 "name": "Spotter Unit2",
                 "lanceDefId": "Manual",
                 "lanceTagSet": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/LanceTags"
                 },
                 "lanceExcludedTagSet": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/LanceTags"
                 },
                 "spawnEffectTags": {
-                    "items": [
-
-                    ],
+                    "items": [],
                     "tagSetSourceFile": "Tags/SpawnEffectTags"
                 },
                 "lanceDifficultyAdjustment": 0,
@@ -3644,34 +3055,24 @@
                         "unitType": "Mech",
                         "unitDefId": "mechdef_spider_SDR-5V",
                         "unitTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "unitExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/UnitTags"
                         },
                         "spawnEffectTags": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/SpawnEffectTags"
                         },
                         "pilotDefId": "pilot_d7_sharpshooter",
                         "pilotTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": ""
                         },
                         "pilotExcludedTagSet": {
-                            "items": [
-
-                            ],
+                            "items": [],
                             "tagSetSourceFile": "Tags/PilotTags"
                         },
                         "selectedUnitType": "UNDEFINED",
@@ -3690,9 +3091,7 @@
         "teamName": "Target's Ally",
         "faction": "INVALID_UNSET",
         "teamLeaderCastDefId": "castDef_TeamLeader_Current",
-        "lanceOverrideList": [
-
-        ]
+        "lanceOverrideList": []
     },
     "neutralToAllTeam": {
         "encounterLayerData": {
@@ -3702,9 +3101,7 @@
         "teamName": "Neutral to All",
         "faction": "INVALID_UNSET",
         "teamLeaderCastDefId": "castDef_TeamLeader_Current",
-        "lanceOverrideList": [
-
-        ]
+        "lanceOverrideList": []
     },
     "hostileToAllTeam": {
         "encounterLayerData": {
@@ -3714,8 +3111,6 @@
         "teamName": "Hostile to All",
         "faction": "INVALID_UNSET",
         "teamLeaderCastDefId": "castDef_TeamLeader_Current",
-        "lanceOverrideList": [
-
-        ]
+        "lanceOverrideList": []
     }
 }

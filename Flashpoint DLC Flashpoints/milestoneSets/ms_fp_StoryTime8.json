@@ -20,7 +20,7 @@
                     "Actions": [
                         {
                             "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime8_002_Cuscene",
+                            "value": "ms_fp_StoryTime8_002_Cutscene",
                             "valueConstant": null,
                             "additionalValues": null
                         },
@@ -83,7 +83,7 @@
                             "value" : "Commander, you're not going to believe this. Commodore Ostergaard is inbound. I guess we're not done fighting my people yet.",
                             "additionalValues" : [
                                   "Iberia Inbound",
-                                  "castDef_Sumiere"
+                                  "castDef_SumiereDefault"
                             ],
                             "valueConstant" : null
                         }
@@ -131,7 +131,7 @@
                                 "",
                                 "StoryTime_8_a_Locura_Default",
                                 "AuriganRestoration",
-                                null,
+                                "AuriganDirectorate",
                                 "6",
                                 "ms_fp_StoryTime8_004_Cutscene",
                                 null,
@@ -336,6 +336,14 @@
                             "value": "ms_fp_StoryTime8_008_Reward",
                             "valueConstant": null,
                             "additionalValues": null
+                        },
+                        {
+                            "Type" : "System_SimGameCharacterVisible",
+                            "value" : false,
+                            "additionalValues" : [
+                                "Kamea",
+                                "Alexander"
+                            ]
                         }
                     ],
                     "ForceEvents": [],
@@ -371,16 +379,7 @@
                             "valueConstant": null
                         }
                     ],
-                    "Actions": [
-                        {
-                            "Type" : "System_SimGameCharacterVisible",
-                            "value" : false,
-                            "additionalValues" : [
-                                "Kamea",
-                                "Alexander"
-                            ]
-                        }
-                    ],
+                    "Actions": [],
                     "ForceEvents": null,
                     "TemporaryResult": false,
                     "ResultDuration": 0
