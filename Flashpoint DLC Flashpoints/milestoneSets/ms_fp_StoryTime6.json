@@ -114,7 +114,7 @@
                     "Actions": [
                         {
                             "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime6_004_Talk",
+                            "value": "ms_fp_StoryTime6_004_Mission",
                             "valueConstant": null,
                             "additionalValues": null
                         },
@@ -123,7 +123,7 @@
                             "value" : "Commander, I finally identified that incoming ship... Not good news.",
                             "additionalValues" : [
                                   "Castle Nautilus",
-                                  "castDef_Sumiere"
+                                  "castDef_SumiereDefault"
                             ],
                             "valueConstant" : null
                         }
@@ -147,95 +147,7 @@
         },
         {
             "Description": {
-                "Id": "ms_fp_StoryTime6_004_Talk",
-                "Name": "Discussions",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Company",
-                        "RequirementTags": {},
-                        "ExclusionTags": {
-                            "items": [
-                                "flashpoint_StoryTime6_skipCutscene"
-                            ],
-                            "tagSetSourceFile": "Tags/CompanyTags"
-                        },
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {},
-                    "RemovedTags": {},
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime6_005_Mission",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        },
-                        {
-                            "Type" : "System_SimGameCharacterVisible",
-                            "value" : false,
-                            "additionalValues" : [
-                                "Kamea",
-                                "Yang",
-                                "Farah"
-                            ]
-                        },
-                        {
-                            "Type": "System_StartConversation",
-                            "value": "StoryTime6-DeadInSpace",
-                            "additionalValues": [
-                                "DEAD IN SPACE",
-                                "In Orbit — Artru"
-                            ]
-                        }
-                    ],
-                    "ForceEvents": [],
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                },
-                {
-                    "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Company",
-                        "RequirementTags": {
-                            "items": [
-                                "flashpoint_StoryTime6_skipCutscene"
-                            ],
-                            "tagSetSourceFile": "Tags/CompanyTags"
-                        },
-                        "ExclusionTags": {},
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {},
-                    "RemovedTags": null,
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime6_005_Mission",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        }
-                    ],
-                    "ForceEvents": [],
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime6_005_Mission",
+                "Id": "ms_fp_StoryTime6_004_Mission",
                 "Name": "Mission 2",
                 "Details": "flashpoint",
                 "Icon": null
@@ -259,9 +171,9 @@
                                 "",
                                 "StoryTime_6_b_TreasureTrove_Default",
                                 "AuriganRestoration",
-                                null,
+                                "TaurianConcordat",
                                 "6",
-                                "ms_fp_StoryTime6_006_Cutscene",
+                                "ms_fp_StoryTime6_005_Cutscene",
                                 null,
                                 null,
                                 null,
@@ -281,7 +193,7 @@
         },
         {
             "Description": {
-                "Id": "ms_fp_StoryTime6_006_Cutscene",
+                "Id": "ms_fp_StoryTime6_005_Cutscene",
                 "Name": "Cutscene or skip",
                 "Details": "flashpoint",
                 "Icon": null
@@ -294,12 +206,7 @@
                     "Requirements": {
                         "Scope": "Company",
                         "RequirementTags": {},
-                        "ExclusionTags": {
-                            "items": [
-                                "flashpoint_StoryTime6_skipCutscene"
-                            ],
-                            "tagSetSourceFile": "Tags/CompanyTags"
-                        },
+                        "ExclusionTags": {},
                         "RequirementComparisons": []
                     },
                     "AddedTags": {},
@@ -308,7 +215,7 @@
                     "Actions": [
                         {
                             "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime6_007_Talk",
+                            "value": "ms_fp_StoryTime6_006_Complete",
                             "valueConstant": null,
                             "additionalValues": null
                         },
@@ -333,48 +240,6 @@
                     ],
                     "TemporaryResult": false,
                     "ResultDuration": 0
-                },
-                {
-                    "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Company",
-                        "RequirementTags": {
-                            "items": [
-                                "flashpoint_StoryTime6_skipCutscene"
-                            ],
-                            "tagSetSourceFile": "Tags/CompanyTags"
-                        },
-                        "ExclusionTags": {},
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {},
-                    "RemovedTags": {
-                        "items": [
-                            "flashpoint_StoryTime6_skipCutscene"
-                        ],
-                        "tagSetSourceFile": "Tags/CompanyTags"
-                    },
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type" : "System_PauseNotification",
-                            "value" : "Farah confirms that there's no more danger from the Locura, and Lady Arano returns to Restoration space on her own ship to figure out what to do about the Taurians. The immediate crisis is over, but the larger one is just beginning.",
-                            "additionalValues" : [
-                                  "Damage Report",
-                                  "castDef_FarahDefault"
-                            ],
-                            "valueConstant" : null
-                        },
-                        {
-                            "Type": "Flashpoint_CompleteFlashpoint",
-                            "value": "ms_fp_StoryTime6_008_Reward",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        }
-                    ],
-                    "ForceEvents": [],
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
                 }
             ],
             "Repeatable": false,
@@ -383,8 +248,8 @@
         },
         {
             "Description": {
-                "Id": "ms_fp_StoryTime6_007_Talk",
-                "Name": "Talk - Bypassed if skipping cutscene",
+                "Id": "ms_fp_StoryTime6_006_Complete",
+                "Name": "Complete",
                 "Details": "flashpoint",
                 "Icon": null
             },
@@ -410,26 +275,9 @@
                     "Actions": [
                         {
                             "Type": "Flashpoint_CompleteFlashpoint",
-                            "value": "ms_fp_StoryTime6_008_Reward",
+                            "value": "ms_fp_StoryTime6_007_Reward",
                             "valueConstant": null,
                             "additionalValues": null
-                        },
-                        {
-                            "Type" : "System_SimGameCharacterVisible",
-                            "value" : true,
-                            "additionalValues" : [
-                                "Kamea",
-                                "Yang",
-                                "Farah"
-                            ]
-                        },
-                        {
-                            "Type" : "System_StartConversation",
-                            "value" : "StoryTime6-DamageReport",
-                            "additionalValues" : [
-                                "DAMAGE REPORT",
-                                "In Orbit — Artru"
-                            ]
                         }
                     ],
                     "ForceEvents": [],
@@ -443,7 +291,7 @@
         },
         {
             "Description": {
-                "Id": "ms_fp_StoryTime6_008_Reward",
+                "Id": "ms_fp_StoryTime6_007_Reward",
                 "Name": "Reward",
                 "Details": "Extra rewards, including Reputation and bonus C-Bills go here",
                 "Icon": null

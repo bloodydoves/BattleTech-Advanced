@@ -1,0 +1,76 @@
+{
+    "Description": {
+        "Id": "forcedevent_FP_StoryTime8_C",
+        "Name": "Epilogue",
+        "Details": "The next few days - and few years - promise to be busy for Kamea Arano and all her supporters. You are of course invited to her corronation, and given a position of honor during the ceremony.",
+        "Icon": "uixTxrSpot_DailyBriefing.png"
+    },
+    "Scope": "Company",
+    "Weight": 0,
+    "Requirements": {
+        "Scope": "Company",
+        "RequirementTags": {},
+        "ExclusionTags": {},
+        "RequirementComparisons": []
+    },
+    "AdditionalRequirements": [],
+    "AdditionalObjects": [],
+    "Options": [
+        {
+            "Description": {
+                "Id": "outcome_0",
+                "Name": "Over a sea of blood, here we are.",
+                "Details": "Cinamatic and epilogue",
+                "Icon": null
+            },
+            "RequirementList": [],
+            "ResultSets": [
+                {
+                    "Description": {
+                        "Id": "outcome_0_0",
+                        "Name": "Epilogue",
+                        "Details": "You gather together aboard the <i>Argo</i> one last time to discuss events - Lord Madiera and Lady Arano on the viewscreen. As newly crowned ruler of a dozen worlds, she can't spare the time to visit you in person anymore.",
+                        "Icon": null
+                    },
+                    "Weight": 100,
+                    "Results": [
+                        {
+                            "Scope": "Company",
+                            "Requirements": null,
+                            "AddedTags": {},
+                            "RemovedTags": {},
+                            "Stats": [],
+                            "Actions": [
+                                {
+                                    "Type": "System_PlayVideo",
+                                    "value": "9-finale.bk2",
+                                    "valueConstant": null
+                                },
+                                {
+                                    "Type": "System_StartConversation",
+                                    "value": "StoryTime8-Epilogue",
+                                    "additionalValues": [
+                                        "EPILOGUE",
+                                        "In Orbit — Coromodir"
+                                    ]
+                                }
+                            ],
+                            "ForceEvents": null,
+                            "TemporaryResult": false,
+                            "ResultDuration": 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements": {
+                "Scope": "Company",
+                "RequirementTags": {},
+                "ExclusionTags": {},
+                "RequirementComparisons": []
+            }
+        }
+    ],
+    "PublishState": "PUBLISHED",
+    "ValidationState": "UNTESTED",
+    "EventType": "UNSELECTABLE"
+}

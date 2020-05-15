@@ -1,9 +1,9 @@
 {
-    "StartingMilestoneID": "ms_fp_StoryTime7_001_Start",
+    "StartingMilestoneID": "ms_fp_StoryTime6d_001_Start",
     "Milestones": [
         {
             "Description": {
-                "Id": "ms_fp_StoryTime7_001_Start",
+                "Id": "ms_fp_StoryTime6d_001_Start",
                 "Name": "Start",
                 "Details": "flashpoint",
                 "Icon": null
@@ -20,24 +20,9 @@
                     "Actions": [
                         {
                             "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime7_002_Mission",
+                            "value": "ms_fp_StoryTime6d_002_Mission",
                             "valueConstant": null,
                             "additionalValues": null
-                        },
-                        {
-                            "Type" : "System_SimGameCharacterVisible",
-                            "value" : true,
-                            "additionalValues" : [
-                                "Kamea"
-                            ]
-                        },
-                        {
-                            "Type" : "System_StartConversation",
-                            "value" : "StoryTime7-DeadDrop",
-                            "additionalValues" : [
-                                "DEAD DROP",
-                                "In Orbit — Guldra"
-                            ]
                         }
                     ],
                     "ForceEvents": [],
@@ -51,7 +36,7 @@
         },
         {
             "Description": {
-                "Id": "ms_fp_StoryTime7_002_Mission",
+                "Id": "ms_fp_StoryTime6d_002_Mission",
                 "Name": "Mission",
                 "Details": "flashpoint",
                 "Icon": null
@@ -67,22 +52,30 @@
                     "Stats": null,
                     "Actions": [
                         {
-                            "Type": "Flashpoint_StartContract",
+                            "Type": "Flashpoint_AddContract",
                             "value": "",
                             "valueConstant": null,
                             "additionalValues": [
                                 "",
                                 "",
-                                "StoryTime_7_GunboatDiplomacy_Default",
+                                "StoryTime_6d_PanzyrDefense_Default",
                                 "AuriganRestoration",
-                                "AuriganDirectorate",
+                                "TaurianConcordat",
                                 "6",
-                                "ms_fp_StoryTime7_003_Cutscene",
+                                "ms_fp_StoryTime6d_003_Complete",
                                 null,
                                 null,
                                 null,
                                 null,
                                 null
+                            ]
+                        },
+                        {
+                            "Type": "System_ForceDropshipRoom",
+                            "value": "Contract",
+                            "valueConstant": null,
+                            "additionalValues": [
+                                "BaseFlashpoint"
                             ]
                         }
                     ],
@@ -97,63 +90,7 @@
         },
         {
             "Description": {
-                "Id": "ms_fp_StoryTime7_003_Cutscene",
-                "Name": "Complete",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": null,
-                    "AddedTags": {},
-                    "RemovedTags": {},
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "System_ForceDropshipRoom",
-                            "value": "Ship",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        },
-                        {
-                            "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime7_004_Complete",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        },
-                        {
-                            "Type" : "System_PauseNotification",
-                            "value" : "Incoming recording from Lady Espinoza, Commander. I'll have it ready when Lady Arano's on board.",
-                            "additionalValues" : [
-                                  "Capture",
-                                  "castDef_Sumiere"
-                            ],
-                            "valueConstant" : null
-                        }
-                    ],
-                    "ForceEvents": [
-                        {
-                            "Scope" : "Company",
-                            "EventID" : "forcedevent_FP_StoryTime7_A",
-                            "MinDaysWait" : 0,
-                            "MaxDaysWait" : 0,
-                            "Probability" : 100
-                        }
-                    ],
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime7_004_Complete",
+                "Id": "ms_fp_StoryTime6d_003_Complete",
                 "Name": "Complete",
                 "Details": "flashpoint",
                 "Icon": null
@@ -166,7 +103,7 @@
                     "Requirements": null,
                     "AddedTags": {
                         "items": [
-                            "flashpoint_StoryTime7_complete"
+                            "flashpoint_StoryTime6d_complete"
                         ],
                         "tagSetSourceFile": "Tags/CompanyTags"
                     },
@@ -175,9 +112,29 @@
                     "Actions": [
                         {
                             "Type": "Flashpoint_CompleteFlashpoint",
-                            "value": "ms_fp_StoryTime7_005_Reward",
+                            "value": "ms_fp_StoryTime6d_004_Reward",
                             "valueConstant": null,
                             "additionalValues": null
+                        },
+                        {
+                            "Type" : "System_SimGameCharacterVisible",
+                            "value" : true,
+                            "additionalValues" : [
+                                "Kamea"
+                            ]
+                        },
+                        {
+                            "Type" : "System_StartConversation",
+                            "value" : "StoryTime6d-Message",
+                            "additionalValues" : [
+                                "MESSAGE",
+                                "In Orbit — Panzyr"
+                            ]
+                        },
+                        {
+                            "Type" : "System_AddFlashpoint",
+                            "value" : "fp_StoryTime7",
+                            "additionalValueNameList" : []
                         }
                     ],
                     "ForceEvents": [],
@@ -191,7 +148,7 @@
         },
         {
             "Description": {
-                "Id": "ms_fp_StoryTime7_005_Reward",
+                "Id": "ms_fp_StoryTime6d_004_Reward",
                 "Name": "Reward",
                 "Details": "Extra rewards, including Reputation and bonus C-Bills go here",
                 "Icon": null
@@ -218,7 +175,8 @@
                             "Type" : "System_SimGameCharacterVisible",
                             "value" : false,
                             "additionalValues" : [
-                                "Kamea"
+                                "Kamea",
+                                "Alexander"
                             ]
                         }
                     ],

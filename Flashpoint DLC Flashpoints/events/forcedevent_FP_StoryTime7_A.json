@@ -1,8 +1,8 @@
 {
     "Description": {
-        "Id": "forcedevent_FP_StoryTime6_A",
-        "Name": "Ambush",
-        "Details": "Sumiere is worried, though she hides it well, catching you as soon as the drop is complete, while the MechWarriors are still disembarking. \"Commander, I've identified that ship I warned you about. It's Taurian, and they don't sound happy.\"",
+        "Id": "forcedevent_FP_StoryTime7_A",
+        "Name": "Capture",
+        "Details": "Sumiere pulls you aside as the Mechwarriors debark. \"I have the transmission from the Directorate ready, Commander. Lady Espinoza sent us a video of what they did to Alexander. Nothing of value in there, and it will just upset Lady Arano more. We should delete it.\"",
         "Icon": "uixTxrSpot_IncomingTransimission.png"
     },
     "Scope": "Company",
@@ -19,7 +19,7 @@
         {
             "Description": {
                 "Id": "outcome_0",
-                "Name": "Get Lady Arano on the line",
+                "Name": "We'll do her no favors hiding what she already knows.",
                 "Details": "Cinamatic and debriefing",
                 "Icon": null
             },
@@ -28,8 +28,8 @@
                 {
                     "Description": {
                         "Id": "outcome_0_0",
-                        "Name": "Ambush",
-                        "Details": "Darius has rounded up the staff not on the surface below or already desperately fighting to keep the ship in the air when Sumiere finally gets in contact with Lady Arano.",
+                        "Name": "Capture",
+                        "Details": "Farah works as quickly as she can to unpack the archive while a distraught Kimea composes herself for the debriefing.",
                         "Icon": null
                     },
                     "Weight": 100,
@@ -43,24 +43,15 @@
                             "Actions": [
                                 {
                                     "Type": "System_PlayVideo",
-                                    "value": "6A-ambush.bk2",
+                                    "value": "7-capture.bk2",
                                     "valueConstant": null
                                 },
                                 {
-                                    "Type" : "System_SimGameCharacterVisible",
-                                    "value" : false,
-                                    "additionalValues" : [
-                                        "Kamea",
-                                        "Yang",
-                                        "Farah"
-                                    ]
-                                },
-                                {
                                     "Type": "System_StartConversation",
-                                    "value": "StoryTime6-DeadInSpace",
+                                    "value": "StoryTime7-InsurancePolicy",
                                     "additionalValues": [
-                                        "DEAD IN SPACE",
-                                        "In Orbit — Artru"
+                                        "INSURANCE POLICY",
+                                        "In Orbit — Guldra"
                                     ]
                                 }
                             ],
@@ -81,7 +72,7 @@
         {
             "Description": {
                 "Id": "outcome_1",
-                "Name": "Taurians. Great. (Skip cutscene)",
+                "Name": "Agreed. We need her sharp, not mourning. (Skip cutscene)",
                 "Details": "Skip cutscene and debriefing",
                 "Icon": null
             },
@@ -90,8 +81,8 @@
                 {
                     "Description": {
                         "Id": "outcome_1_0",
-                        "Name": "Ambush",
-                        "Details": "Sumiere quickly brings everyone up to speed - The Taurians are here, everything is going to hell in a handbasket, and Lady Arano is trapped on the surface. Time to get on the coms and guide her out of there.",
+                        "Name": "Capture",
+                        "Details": "When Farah finally unlocks the archive Alexander gave his freedom recovering, it contains enough damning evidence to bring Lord Espinoza to the top of the Taurian's hit-list - finally, something going right. Lady Kamea departs to plan a strike on Tyrlon in preparation for the end of the war.",
                         "Icon": null
                     },
                     "Weight": 100,
