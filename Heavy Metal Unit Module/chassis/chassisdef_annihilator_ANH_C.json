@@ -1,31 +1,28 @@
 {
-	"Custom": {
-		"ArmActuatorSupport": {
-			"LeftLimit": "Lower",
-			"RightLimit": "Lower"
-		}
-	},
 	"Description": {
-		"Cost": 9500000,
+		"Cost": 10800000,
 		"Rarity": 5,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
 		"UIName": "Annihilator",
-		"Id": "chassisdef_annihilator_ANH-JH",
+		"Id": "chassisdef_annihilator_ANH_C",
 		"Name": "Annihilator",
-		"Details": "The Annihilator is an extremely rare 'Mech that is essentially a mobile siege tower. It can kick out more damage than almost any other unit on the field. It's unbelievably slow, though, and poorly armored for its size.",
+		"Details": "A variant of the Annihilator that was built using only Clan technology, the Annihilator C increased its maximum speed to 54 kph. The 'Mech was armed with four Ultra Autocannon/10s and four ER Medium Lasers. The Ultra Autocannon/10s allowed the 'Mech to fire at twice the rate of a normal autocannon, allowing it to put as much fire out as if it was carrying eight regular autocannons.",
 		"Icon": "uixTxrIcon_annihilator"
 	},
 	"MovementCapDefID": "movedef_annihilator_ANH-1A",
 	"PathingCapDefID": "pathingdef_assault",
 	"HardpointDataDefID": "hardpointdatadef_annihilator",
-	"PrefabIdentifier": "chrPrfMech_annihilator_BlackWidowBase-001",
+	"PrefabIdentifier": "chrPrfMech_annihilatorBase-001",
 	"PrefabBase": "annihilator",
 	"Tonnage": 100,
-	"InitialTonnage": 23.5,
+	"InitialTonnage": 10,
 	"weightClass": "ASSAULT",
+	"BattleValue": 10581000,
 	"Heatsinks": 0,
+	"TopSpeed": 60,
+	"TurnRadius": 90,
 	"MaxJumpjets": 30,
 	"Stability": 200,
 	"StabilityDefenses": [
@@ -63,11 +60,15 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
 					"WeaponMount": "Ballistic",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Ballistic",
 					"Omni": false
 				}
 			],
@@ -81,15 +82,11 @@
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMount": "Energy",
 					"Omni": false
 				},
 				{
 					"WeaponMount": "Ballistic",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -113,19 +110,19 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 15,
-			"MaxArmor": 310,
-			"MaxRearArmor": 155,
-			"InternalStructure": 155
+			"MaxArmor": 320,
+			"MaxRearArmor": 160,
+			"InternalStructure": 160
 		},
 		{
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMount": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMount": "Ballistic",
 					"Omni": false
 				}
 			],
@@ -139,15 +136,15 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
 					"WeaponMount": "Ballistic",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Ballistic",
 					"Omni": false
 				}
 			],
@@ -220,15 +217,6 @@
 			"z": 1
 		}
 	],
-	"VariantName": "ANH-JH",
-	"ChassisTags": {
-		"items": [
-			"NOSALVAGE"
-		],
-		"tagSetSourceFile": ""
-	},
-	"YangsThoughts": "The Annihilator is an extremely rare 'Mech that is essentially a mobile siege tower. It can kick out more damage than almost any other unit on the field. It's unbelievably slow, though, and poorly armored for its size.",
-	"StockRole": "Juggernaut",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",
@@ -244,7 +232,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_structureslots_standard",
+			"ComponentDefID": "emod_structureslots_clanendosteel",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
@@ -254,5 +242,14 @@
 			"prefabName": "",
 			"hasPrefabName": false
 		}
-	]
+	],
+	"VariantName": "ANH C",
+	"ChassisTags": {
+		"items": [
+			"ClanMech"
+		],
+		"tagSetSourceFile": ""
+	},
+	"StockRole": "Juggernaut & Siege Mech",
+	"YangsThoughts": "A variant of the Annihilator that was built using only Clan technology, the Annihilator C increased its maximum speed to 54 kph. The 'Mech was armed with four Ultra Autocannon/10s and four ER Medium Lasers. The Ultra Autocannon/10s allowed the 'Mech to fire at twice the rate of a normal autocannon, allowing it to put as much fire out as if it was carrying eight regular autocannons."
 }
