@@ -1,34 +1,28 @@
 {
-	"Custom": {
-		"ArmActuatorSupport": {
-			"LeftLimit": "Lower",
-			"RightLimit": "Upper"
-		}
-	},
 	"Description": {
-		"Cost": 9900000,
-		"Rarity": 0,
+		"Cost": 10800000,
+		"Rarity": 5,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Primitive Mackie",
-		"Id": "chassisdef_mackie-7S",
-		"Name": "Primitive Mackie",
-		"Details": "While the Mackie-6S was made with relatively primitive components because they were all that existed back then, the -7S is not. It is made with primitive components to save on costs for cheap Periphery buyers who can't afford anything better. The Mackie's ancient but rugged frame proved durable and easy to repair, pros for cash-strapped buyers. This variant, the -7S, carries a simple weapon payload: a PPC and 2 Medium Lasers provide ammo-free firepower while a pair of Heavy Rifles provide the heavy punch and are simple plug-and-go components.",
-		"Icon": "uixTxrIcon_mackie"
+		"UIName": "Gausszilla",
+		"Id": "chassisdef_annihilator_ANH_C_GAUSS",
+		"Name": "Gausszilla",
+		"Details": "Built on an Annihilator chassis, this customized variant carried a mammoth five Gauss Rifles, with altogether only eight tons of ammunition. While completely devastating, the mech is slow and comparatively poorly armored. Still, with the withering firepower of the Gauss Rifles, does it matter?",
+		"Icon": "uixTxrIcon_annihilator"
 	},
-	"MovementCapDefID": "movedef_mackie-9H",
+	"MovementCapDefID": "movedef_annihilator_ANH-1A",
 	"PathingCapDefID": "pathingdef_assault",
-	"HardpointDataDefID": "hardpointdatadef_mackie",
-	"PrefabIdentifier": "chrprfmech_mackiebase-001",
-	"PrefabBase": "mackie",
+	"HardpointDataDefID": "hardpointdatadef_annihilator",
+	"PrefabIdentifier": "chrPrfMech_annihilatorBase-001",
+	"PrefabBase": "annihilator",
 	"Tonnage": 100,
 	"InitialTonnage": 10,
 	"weightClass": "ASSAULT",
-	"BattleValue": 1892000,
+	"BattleValue": 10581000,
 	"Heatsinks": 0,
-	"TopSpeed": 65,
-	"TurnRadius": 120,
+	"TopSpeed": 60,
+	"TurnRadius": 90,
 	"MaxJumpjets": 30,
 	"Stability": 200,
 	"StabilityDefenses": [
@@ -43,14 +37,14 @@
 	"VisibilityMultiplier": 1,
 	"SensorRangeMultiplier": 1,
 	"Signature": 0,
-	"Radius": 4,
+	"Radius": 8,
 	"PunchesWithLeftArm": false,
-	"MeleeDamage": 100,
+	"MeleeDamage": 105,
 	"MeleeInstability": 50,
 	"MeleeToHitModifier": 0,
-	"DFADamage": 100,
+	"DFADamage": 105,
 	"DFAToHitModifier": 0,
-	"DFASelfDamage": 100,
+	"DFASelfDamage": 105,
 	"DFAInstability": 50,
 	"Locations": [
 		{
@@ -66,7 +60,11 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Ballistic",
 					"Omni": false
 				}
 			],
@@ -78,7 +76,16 @@
 		},
 		{
 			"Location": "LeftTorso",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Ballistic",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
 			"MaxArmor": 210,
@@ -98,14 +105,23 @@
 				}
 			],
 			"Tonnage": 0,
-			"InventorySlots": 16,
+			"InventorySlots": 15,
 			"MaxArmor": 320,
 			"MaxRearArmor": 160,
 			"InternalStructure": 160
 		},
 		{
 			"Location": "RightTorso",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Ballistic",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
 			"MaxArmor": 210,
@@ -152,60 +168,53 @@
 	"LOSSourcePositions": [
 		{
 			"x": 0,
-			"y": 9.5,
-			"z": 0.5
+			"y": 19,
+			"z": 0
 		},
 		{
-			"x": -2.5,
-			"y": 8.5,
+			"x": 4.5,
+			"y": 16,
 			"z": -0.5
 		},
 		{
-			"x": 2.5,
-			"y": 8.5,
+			"x": -4.5,
+			"y": 16,
 			"z": -0.5
 		}
 	],
 	"LOSTargetPositions": [
 		{
 			"x": 0,
-			"y": 9.5,
-			"z": 0.5
+			"y": 19,
+			"z": 0
 		},
 		{
-			"x": -2.5,
-			"y": 8.5,
+			"x": 4.5,
+			"y": 16,
 			"z": -0.5
 		},
 		{
-			"x": 2.5,
-			"y": 8.5,
+			"x": -4.5,
+			"y": 16,
 			"z": -0.5
 		},
 		{
-			"x": -1.5,
-			"y": 3,
-			"z": 0.5
+			"x": 3,
+			"y": 5.5,
+			"z": 1
 		},
 		{
-			"x": 1.5,
-			"y": 3,
-			"z": 0.5
+			"x": -3,
+			"y": 5.5,
+			"z": 1
 		}
 	],
-	"VariantName": "MSK-7S",
-	"ChassisTags": {
-		"items": [],
-		"tagSetSourceFile": ""
-	},
-	"StockRole": "The First Battlemech",
-	"YangsThoughts": "While the Mackie-6S was made with relatively primitive components because they were all that existed back then, the -7S is not. It is made with primitive components to save on costs for cheap Periphery buyers who can't afford anything better. The Mackie's ancient but rugged frame proved durable and easy to repair, pros for cash-strapped buyers. This variant, the -7S, carries a simple weapon payload: a PPC and 2 Medium Lasers provide ammo-free firepower while a pair of Heavy Rifles provide the heavy punch and are simple plug-and-go components.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engineslots_Primitive_center",
+			"ComponentDefID": "Gear_Quirk_StableWeapon_Annihilator",
 			"SimGameUID": "",
-			"ComponentDefType": "HeatSink",
+			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
 			"IsFixed": true,
 			"GUID": null,
@@ -215,27 +224,24 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "Gear_Quirk_PrimitiveRugged_Mackie",
+			"ComponentDefID": "emod_structureslots_clanendosteel",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
 			"IsFixed": true,
 			"GUID": null,
 			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "Head",
-			"ComponentDefID": "Gear_Cockpit_Primitive",
-			"SimGameUID": "",
-			"ComponentDefType": "Upgrade",
-			"HardpointSlot": -1,
-			"IsFixed": true,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
+			"prefabName": "",
 			"hasPrefabName": false
 		}
-	]
+	],
+	"VariantName": "ANH-GAUSS",
+	"ChassisTags": {
+		"items": [
+			"ClanMech"
+		],
+		"tagSetSourceFile": ""
+	},
+	"StockRole": "Juggernaut & Siege Mech",
+	"YangsThoughts": "Built on an Annihilator chassis, this customized variant carried a mammoth five Gauss Rifles, with altogether only eight tons of ammunition. While completely devastating, the mech is slow and comparatively poorly armored. Still, with the withering firepower of the Gauss Rifles, does it matter?"
 }
