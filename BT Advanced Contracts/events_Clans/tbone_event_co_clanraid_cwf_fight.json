@@ -1,0 +1,203 @@
+{
+    "Description" : {
+        "Id" : "tbone_event_co_clanraid_cwf_fight",
+        "Name" : "Freelancing: Gone Fishing",
+        "Details" : "Darius calls you into the Command Center. Seems he has an interesting proposition:\r\n\r\n\"Commander, we've spotted a lone [[DM.Factions[faction_ClanWolf],Clan Wolf]] heavy unit operating alone. Whether it's actually alone or not, this could be a great chance to rack up some clan salvage. No employers, no contracts...just us walking off with whatever we can carry. What do you say?\"",
+        "Icon" : "uixTxrSpot_battleContract.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 10000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : [
+                "CWF_cooldown"
+            ]
+        },
+        "RequirementComparisons" : [
+            {
+                "obj" : "Reputation.ClanGhostBear",
+                "op" : "LessThanOrEqual",
+                "val" : -10,
+                "valueConstant" : "-10"
+            },
+            {
+                "obj" : "Reputation.ClanJadeFalcon",
+                "op" : "LessThanOrEqual",
+                "val" : -10,
+                "valueConstant" : "-10"
+            }
+        ]
+    },
+    "AdditionalRequirements" : [
+        {
+            "Scope" : "StarSystem",
+            "RequirementTags" : {
+                "tagSetSourceFile" : "",
+                "items" : [
+                    "planet_faction_clanwolf"
+                ]
+            },
+            "ExclusionTags" : {
+                "tagSetSourceFile" : "",
+                "items" : []
+            },
+            "RequirementComparisons" : []
+        }
+    ],
+    "AdditionalObjects" : [],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Look over the op details.",
+                "Details" : "Look over the op details.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Look over the op details.",
+                        "Details" : "\"Sound like a decent idea, XO. What are we looking at?\"\r\n\r\n\"Basically just a standard lance destruction op, but with the twist that the only one paying us, is us. It's a salvage-only op, so we need to minimize damage and maximize our salvage. It's also worth mentioning that the active Clans in this AO absolutely <i>hate</i> eachother. The only thing Clanners respect is force and skill on the battlefield. Hitting one hard might increase our standing with the others.\"\r\n\r\n\r\n<b>A contract named <i>Freelancing: Gone Fishing</i> has been added to the Command Center.</b>",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : [
+                                {
+                                    "Type" : "System_AddContract",
+                                    "value" : "SimpleBattle_ClanGrudge_TakeTheBaitCWF",
+                                    "valueConstant" : null,
+                                    "additionalValues" : [
+                                        "ClanWolf",
+                                        "SelfEmployed",
+										null,
+										null,
+										null,
+										null,
+										null,
+										"2"
+                                    ]
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "CWF_cooldown"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 90
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "Pass on this for now.",
+                "Details" : "Pass on this for now.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "Pass on this for now.",
+                        "Details" : "\"It's not a bad idea, but I don't want to piss off the clanners too much just yet. Not without someone else footing the bill at least.\"\r\n\r\n\"Understood, Commander.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "CWF_cooldown"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 90
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : false,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}
