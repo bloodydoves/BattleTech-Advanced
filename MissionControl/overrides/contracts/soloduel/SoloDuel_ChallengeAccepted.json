@@ -1,6 +1,6 @@
 {
-  "ID": "SoloDuel_LifeLesson",
-  "contractName": "Life Lesson",
+  "ID": "SoloDuel_ChallengeAccepted",
+  "contractName": "Challenge Accepted",
   "contractDisplayStyle": "BaseCampaignNormal",
   "difficulty": 2,
   "difficultyUIModifier": 0,
@@ -11,8 +11,8 @@
   "missionSuccessStatementOverride": null,
   "badFaithStatementOverride": null,
   "goodFaithStatementOverride": null,
-  "shortDescription": "A rich {TEAM_EMP.FactionDef.Demonym} business man has requested that we show his arrogant step-son what real fighting feels like. We thought {COMPANY.CompanyName} could help us here. Don't hold back. This father wants to teach a real life lesson - especially for his {TEAM_TAR.FactionDef.Demonym} side of the family.",
-  "longDescription": "I have to hand it to this guy. At least he cares enough about his son to teach him a thing or two. Even if that means a knock on the head... or two.",
+  "shortDescription": "Over the past few weeks we've been engaged in small stage skirmishes with {TEAM_TAR.FactionDef.ShortName} in and around {TGT_SYSTEM.name}. The company commander must feel they can't continue their campaign because they've requested a duel to claim this local forward base. Little do they know that we've recently run out of supplies so we've very much taken them up on their offer. This is where you come in. We need to you win this for us, Commander.",
+  "longDescription": "No ammo left? What kind of idiot set up their supply lines. Let's clean this duel up and cash in, Commander.",
   "salvagePotential": 2,
   "requirementList": [
     {
@@ -50,7 +50,7 @@
       "contractObjective": {
         "EncounterObjectGuid": "73275787-720a-4c33-9f20-953b1bbf48bd"
       },
-      "title": "Teach a life lesson",
+      "title": "Save the forward base",
       "description": "",
       "isPrimary": true,
       "forPlayer": "Player1",
@@ -62,7 +62,7 @@
       "objective": {
         "EncounterObjectGuid": "a0b9c5b2-c594-4c5a-be1d-028a51c51519"
       },
-      "title": "Destroy Arrogant Step-Son's Mech",
+      "title": "Destroy Duelist Commander",
       "description": "",
       "isPrimary": true,
       "OnSuccessResults": [],
@@ -105,23 +105,7 @@
       "overrideDialogueBucketId": "",
       "dialogueContent": [
         {
-          "words": "There he is, Commander.",
-          "wordsColor": {
-            "r": 1,
-            "g": 1,
-            "b": 1,
-            "a": 1
-          },
-          "selectedCastDefId": "castDef_DariusDefault",
-          "emote": "Default",
-          "audioName": "NONE",
-          "cameraFocusGuid": "",
-          "cameraDistance": "Far",
-          "cameraHeight": "Default",
-          "revealRadius": -1
-        },
-        {
-          "words": "This might be a real easy job but it's a job all the same. Knock him about a bit then finish things up. His Dad will be happier than he'll be.",
+          "words": "That's the one, Commander. Take him out.",
           "wordsColor": {
             "r": 1,
             "g": 1,
@@ -146,7 +130,7 @@
       "overrideDialogueBucketId": "",
       "dialogueContent": [
         {
-          "words": "He should get over his shock in a week or so, Commander. He might be sore for a bit longer.",
+          "words": "Done and done. Great job, Commander. Let's go home.",
           "wordsColor": {
             "r": 1,
             "g": 1,
@@ -171,7 +155,7 @@
       "overrideDialogueBucketId": "",
       "dialogueContent": [
         {
-          "words": "That was unexpected, Commander. I don't think his Dad will pay up since we've just subjected him to a few years of bragging.",
+          "words": "We're coming in to pick you up fast, Commander. Hold on. We'll sort out the polical fallout from this later.",
           "wordsColor": {
             "r": 1,
             "g": 1,
@@ -196,14 +180,14 @@
       "overrideDialogueBucketId": "",
       "dialogueContent": [
         {
-          "words": "So you're the rubbish my father is sending to train against? Just like the other servants... pitiful.",
+          "words": "I know they said they were going to send a proxy but, a lowly Merc? What a waste of a perfectly good duel.",
           "wordsColor": {
             "r": 1,
             "g": 1,
             "b": 1,
             "a": 1
           },
-          "selectedCastDefId": "castDef_MC_ArrogantSon",
+          "selectedCastDefId": "castDef_TeamLeader_Current",
           "emote": "Default",
           "audioName": "NONE",
           "cameraFocusGuid": "f426f0dc-969d-477d-81a9-d02f9e1eff79",
@@ -352,7 +336,7 @@
             "unitSpawnPoint": {
               "EncounterObjectGuid": "6cd3107e-0f9d-4809-ab8c-fb30faf4cd80"
             },
-            "customUnitName": "Arrogant Step-Son",
+            "customUnitName": "Commander",
             "customHeraldryDefId": "",
             "unitType": "Mech",
             "unitDefId": "mechDef_InheritLance",
