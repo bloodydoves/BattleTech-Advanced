@@ -1,0 +1,360 @@
+{
+    "Name": "ConcreteJungle",
+    "Enabled": true,
+    "Version": "0.6.0",
+    "Description": "Provides fun surprises on urban maps.",
+    "Author": "IceRaptor",
+    "Website": "https://github.com/IceRaptor/ConcreteJungle",
+    "Contact": "",
+    "DLL": "ConcreteJungle.dll",
+    "DLLEntryPoint" : "ConcreteJungle.Mod.Init",
+    "DependsOn" : [ "IRBTModUtils", "Custom Ammo Categories" ],
+    "Manifest" : [
+        { "Type": "WeaponDef", "Path": "weapon", "AddToDB": true }
+    ],
+    "Settings": {
+        "Debug" : true,
+        "Trace" : false,
+
+        "Ambush" :
+        {
+            "MaxPerMap" : 2,
+            "MinDistanceBetween" : 500.0,
+            "BaseChance" : 0.3,
+            "ChancePerActor" : 0.05,
+            "SearchRadius" : 250.0,
+            "AmbushWeights" : [ 
+                "Explosion", "Explosion", "Infantry", "Infantry", "Infantry", "Mech", "Vehicle"
+            ]
+        },
+
+        "Devastation" : {
+            "Enabled" : false,
+            "DefaultRange" : { "MinDevastation" : 0.3, "MaxDevastation" : 0.9 },
+            "RangesByPlanetTag" : [
+                { "PlanetTag" : "FOO_FIXME", "MinDevastation" : 0.3, "MaxDevastation" : 0.9 },
+                { "PlanetTag" : "BAR_FIXME", "MinDevastation" : 0.1, "MaxDevastation" : 0.3 }
+            ]
+        },
+
+       "ExplosionAmbush" : {
+            "Enabled" : true,
+            "VFX" : "WFX_Nuke",
+            "SFX" : "big_explosion",
+            "Ambushes" : [
+                { 
+                    "MinDifficulty" : 1,
+                    "MaxDifficulty" : 4,
+                    "MinSpawns" : 1,
+                    "MaxSpawns" : 1,
+                    "SpawnPool" : [
+                        {  
+                            "FloatieTextKey" : "FT_IED_HE",
+                            "Radius" : 60.0,
+                            "Damage" : 60.0,
+                            "Heat" : 5.0,
+                            "Stability" : 5.0,
+                            "FireRadius" : 1,
+                            "FireStrength" : 3,
+                            "FireChance" : 30.0,
+                            "FireDurationNoForest" : 2
+                        },
+                         {  
+                            "FloatieTextKey" : "FT_IED_INFERNO",
+                            "Radius" : 60.0,
+                            "Damage" : 5.0,
+                            "Heat" : 60.0,
+                            "Stability" : 5.0,
+                            "FireRadius" : 3,
+                            "FireStrength" : 15,
+                            "FireChance" : 99.0,
+                            "FireDurationNoForest" : 3
+                        }, 
+                        {  
+                            "FloatieTextKey" : "FT_IED_VBIED",
+                            "Radius" : 60.0,
+                            "Damage" : 5.0,
+                            "Heat" : 5.0,
+                            "Stability" : 60.0,
+                            "FireRadius" : 0,
+                            "FireStrength" : 0,
+                            "FireChance" : 0.0,
+                            "FireDurationNoForest" : 0
+                        }
+                    ]
+                },
+				{ 
+                    "MinDifficulty" : 5,
+                    "MaxDifficulty" : 7,
+                    "MinSpawns" : 1,
+                    "MaxSpawns" : 1,
+                    "SpawnPool" : [
+                        {  
+                            "FloatieTextKey" : "FT_IED_HE",
+                            "Radius" : 90.0,
+                            "Damage" : 90.0,
+                            "Heat" : 5.0,
+                            "Stability" : 5.0,
+                            "FireRadius" : 2,
+                            "FireStrength" : 3,
+                            "FireChance" : 30.0,
+                            "FireDurationNoForest" : 2
+                        },
+                         {  
+                            "FloatieTextKey" : "FT_IED_INFERNO",
+                            "Radius" : 90.0,
+                            "Damage" : 5.0,
+                            "Heat" : 60.0,
+                            "Stability" : 5.0,
+                            "FireRadius" : 4,
+                            "FireStrength" : 15,
+                            "FireChance" : 99.0,
+                            "FireDurationNoForest" : 3
+                        }, 
+                        {  
+                            "FloatieTextKey" : "FT_IED_VBIED",
+                            "Radius" : 90.0,
+                            "Damage" : 5.0,
+                            "Heat" : 5.0,
+                            "Stability" : 90.0,
+                            "FireRadius" : 0,
+                            "FireStrength" : 0,
+                            "FireChance" : 0.0,
+                            "FireDurationNoForest" : 0
+                        }
+                    ]
+                },
+				{ 
+                    "MinDifficulty" : 8,
+                    "MaxDifficulty" : 10,
+                    "MinSpawns" : 1,
+                    "MaxSpawns" : 1,
+                    "SpawnPool" : [
+                        {  
+                            "FloatieTextKey" : "FT_IED_HE",
+                            "Radius" : 120.0,
+                            "Damage" : 120.0,
+                            "Heat" : 5.0,
+                            "Stability" : 5.0,
+                            "FireRadius" : 2,
+                            "FireStrength" : 4,
+                            "FireChance" : 30.0,
+                            "FireDurationNoForest" : 2
+                        },
+                         {  
+                            "FloatieTextKey" : "FT_IED_INFERNO",
+                            "Radius" : 120.0,
+                            "Damage" : 5.0,
+                            "Heat" : 60.0,
+                            "Stability" : 5.0,
+                            "FireRadius" : 3,
+                            "FireStrength" : 15,
+                            "FireChance" : 99.0,
+                            "FireDurationNoForest" : 3
+                        }, 
+                        {  
+                            "FloatieTextKey" : "FT_IED_VBIED",
+                            "Radius" : 120.0,
+                            "Damage" : 5.0,
+                            "Heat" : 5.0,
+                            "Stability" : 120.0,
+                            "FireRadius" : 0,
+                            "FireStrength" : 0,
+                            "FireChance" : 0.0,
+                            "FireDurationNoForest" : 0
+                        }
+                    ]
+                }
+            ]
+        },
+
+        "InfantryAmbush" : {
+            "Enabled" : true,
+            "FreeAttackEnabled" : true,
+            "VisibleTrapTurrets" : false,
+            "Ambushes" : [
+                { 
+                    "MinDifficulty" : 1,
+                    "MaxDifficulty" : 4,
+                    "MinSpawns" : 3,
+                    "MaxSpawns" : 6,
+                     "SpawnPool" : [
+                        { "TurretDefId" : "turretdef_infantryrifles", "PilotDefId" : "pilot_d3_turret" },
+                        { "TurretDefId" : "turretdef_infantryrifles", "PilotDefId" : "pilot_d3_turret" },
+                        { "TurretDefId" : "turretdef_infantrysrm", "PilotDefId" : "pilot_d3_turret" }
+                    ]
+                },
+				{ 
+                    "MinDifficulty" : 5,
+                    "MaxDifficulty" : 7,
+                    "MinSpawns" : 3,
+                    "MaxSpawns" : 6,
+                     "SpawnPool" : [
+                        { "TurretDefId" : "turretdef_infantryrifles", "PilotDefId" : "pilot_d5_turret" },
+                        { "TurretDefId" : "turretdef_infantryheavyrifles", "PilotDefId" : "pilot_d5_turret" },
+						{ "TurretDefId" : "turretdef_infantryheavyrifles", "PilotDefId" : "pilot_d5_turret" },
+						{ "TurretDefId" : "turretdef_infantryheavyrifles", "PilotDefId" : "pilot_d5_turret" },
+                        { "TurretDefId" : "turretdef_infantrysrm", "PilotDefId" : "pilot_d5_turret" },
+                        { "TurretDefId" : "turretdef_infantrysrm", "PilotDefId" : "pilot_d5_turret" },
+                        { "TurretDefId" : "turretdef_infantryflamer", "PilotDefId" : "pilot_d5_turret" },
+                        { "TurretDefId" : "turretdef_infantryflamer", "PilotDefId" : "pilot_d5_turret" }
+                    ]
+                },
+				{ 
+                    "MinDifficulty" : 8,
+                    "MaxDifficulty" : 10,
+                    "MinSpawns" : 3,
+                    "MaxSpawns" : 6,
+                     "SpawnPool" : [
+                        { "TurretDefId" : "turretdef_infantryheavyrifles", "PilotDefId" : "pilot_d7_turret" },
+                        { "TurretDefId" : "turretdef_infantryheavyrifles", "PilotDefId" : "pilot_d7_turret" },
+						{ "TurretDefId" : "turretdef_infantryheavyrifles", "PilotDefId" : "pilot_d7_turret" },
+						{ "TurretDefId" : "turretdef_infantrygauss", "PilotDefId" : "pilot_d7_turret" },
+						{ "TurretDefId" : "turretdef_infantrymrm", "PilotDefId" : "pilot_d7_turret" },
+                        { "TurretDefId" : "turretdef_infantrymrm", "PilotDefId" : "pilot_d7_turret" },
+                        { "TurretDefId" : "turretdef_infantryflamer", "PilotDefId" : "pilot_d7_turret" },
+                        { "TurretDefId" : "turretdef_infantryflamer", "PilotDefId" : "pilot_d7_turret" }
+                    ]
+                }
+            ]
+        },
+
+        "MechAmbush" : {
+            "Enabled" : true,
+            "FreeAttackEnabled" : true,
+            "Ambushes" : [
+                { 
+                    "MinDifficulty" : 1,
+                    "MaxDifficulty" : 4,
+                    "MinSpawns" : 1,
+                    "MaxSpawns" : 2,
+                    "SpawnPool" : [
+                        { "MechDefId" : "mechdef_urbanmech_UM-R60", "PilotDefId" : "pilot_d3_gunner" },
+                        { "MechDefId" : "mechdef_urbanmech_UM-R60", "PilotDefId" : "pilot_d3_gunner" },
+                        { "MechDefId" : "mechdef_urbanmech_UM-R60L", "PilotDefId" : "pilot_d3_gunner" },
+                        { "MechDefId" : "mechdef_urbanmech_UM-R90", "PilotDefId" : "pilot_d3_gunner" },
+                        { "MechDefId" : "mechdef_hollander_BZK-G1", "PilotDefId" : "pilot_d3_pilot" },
+                        { "MechDefId" : "mechdef_commando_COM-2D", "PilotDefId" : "pilot_d3_pilot" }
+                    ]
+                },
+				{ 
+                    "MinDifficulty" : 5,
+                    "MaxDifficulty" : 7,
+                    "MinSpawns" : 1,
+                    "MaxSpawns" : 2,
+                    "SpawnPool" : [
+                        { "MechDefId" : "mechdef_blitzkrieg_BTZ-3F", "PilotDefId" : "pilot_d5_gunner" },
+                        { "MechDefId" : "mechdef_urbanmech_UM-R60", "PilotDefId" : "pilot_d5_gunner" },
+						{ "MechDefId" : "mechdef_blackjack_BJ-2", "PilotDefId" : "pilot_d5_gunner" },
+                        { "MechDefId" : "mechdef_firestarter_O-PRIME", "PilotDefId" : "pilot_d7_brawler" },
+                        { "MechDefId" : "mechdef_kintaro_KTO-18", "PilotDefId" : "pilot_d5_gunner" },
+						{ "MechDefId" : "mechdef_hunchback_HBK-4SP", "PilotDefId" : "pilot_d5_gunner" },
+                        { "MechDefId" : "mechdef_hunchback_HBK-4G", "PilotDefId" : "pilot_d5_gunner" }
+                    ]
+                },
+				{ 
+                    "MinDifficulty" : 8,
+                    "MaxDifficulty" : 10,
+                    "MinSpawns" : 2,
+                    "MaxSpawns" : 3,
+                    "SpawnPool" : [
+                        { "MechDefId" : "mechdef_grasshopper_GHR-5H", "PilotDefId" : "pilot_d7_sentinel" },
+                        { "MechDefId" : "mechdef_banshee_BNC-3E", "PilotDefId" : "pilot_d7_gladiator" },
+                        { "MechDefId" : "mechdef_banshee_BNC-3Q", "PilotDefId" : "pilot_d7_gladiator" },
+						{ "MechDefId" : "mechdef_victor_VTR-9B", "PilotDefId" : "pilot_d7_sentinel" },
+                        { "MechDefId" : "mechdef_victor_VTR-9B", "PilotDefId" : "pilot_d7_sentinel" },
+						{ "MechDefId" : "mechdef_urbanmech_UM-R25", "PilotDefId" : "pilot_d5_gunner" },
+                        { "MechDefId" : "mechdef_hunchback_HBK-4P", "PilotDefId" : "pilot_d5_gunner" },
+						{ "MechDefId" : "mechdef_hunchback_HBK-4SP", "PilotDefId" : "pilot_d5_gunner" }
+                    ]
+                }
+            ]
+        },
+
+        "VehicleAmbush" : {
+            "Enabled" : true,
+            "FreeAttackEnabled" : true,
+            "Ambushes" : [
+				{ 
+                    "MinDifficulty" : 1,
+                    "MaxDifficulty" : 4,
+                    "MinSpawns" : 2,
+                    "MaxSpawns" : 2,
+                    "SpawnPool" : [
+                        { "VehicleDefId" : "vehicledef_HARASSER", "PilotDefId" : "pilot_d3_gunner" },
+						{ "VehicleDefId" : "vehicledef_HARASSER", "PilotDefId" : "pilot_d3_gunner" },
+                        { "VehicleDefId" : "vehicledef_SALADIN", "PilotDefId" : "pilot_d3_gunner" },
+						{ "VehicleDefId" : "vehicledef_SAVANNAHMASTER", "PilotDefId" : "pilot_d3_gunner" },
+                        { "VehicleDefId" : "vehicledef_SCIMITAR", "PilotDefId" : "pilot_d3_gunner" },
+                        { "VehicleDefId" : "vehicledef_SCIMITAR", "PilotDefId" : "pilot_d3_gunner" },
+                        { "VehicleDefId" : "vehicledef_CHEVALIER", "PilotDefId" : "pilot_d3_gunner" },
+                        { "VehicleDefId" : "vehicledef_SCORPION_MRM", "PilotDefId" : "pilot_d3_gunner" }
+                    ]
+                },
+				{ 
+                    "MinDifficulty" : 5,
+                    "MaxDifficulty" : 7,
+                    "MinSpawns" : 2,
+                    "MaxSpawns" : 3,
+                    "SpawnPool" : [
+                        { "VehicleDefId" : "vehicledef_BULLDOG", "PilotDefId" : "pilot_d5_gunner" },
+						{ "VehicleDefId" : "vehicledef_BULLDOG", "PilotDefId" : "pilot_d5_gunner" },
+                        { "VehicleDefId" : "vehicledef_MYRMIDON", "PilotDefId" : "pilot_d5_gunner" },
+						{ "VehicleDefId" : "vehicledef_CARRIER_LIGHT_SRM", "PilotDefId" : "pilot_d5_gunner" },
+                        { "VehicleDefId" : "vehicledef_HETZER", "PilotDefId" : "pilot_d5_gunner" },
+                        { "VehicleDefId" : "vehicledef_HETZER", "PilotDefId" : "pilot_d5_gunner" },
+                        { "VehicleDefId" : "vehicledef_VEDETTE_NETC", "PilotDefId" : "pilot_d5_gunner" },
+                        { "VehicleDefId" : "vehicledef_VEDETTE_NETC", "PilotDefId" : "pilot_d5_gunner" }
+                    ]
+                },
+				{ 
+                    "MinDifficulty" : 8,
+                    "MaxDifficulty" : 10,
+                    "MinSpawns" : 2,
+                    "MaxSpawns" : 4,
+                    "SpawnPool" : [
+                        { "VehicleDefId" : "vehicledef_ROMMEL", "PilotDefId" : "pilot_d7_lancer" },
+						{ "VehicleDefId" : "vehicledef_VONLUCKNER_K70", "PilotDefId" : "pilot_d7_gunner" },
+                        { "VehicleDefId" : "vehicledef_MANTICORE", "PilotDefId" : "pilot_d7_gunner" },
+						{ "VehicleDefId" : "vehicledef_MANTICORE", "PilotDefId" : "pilot_d7_gunner" },
+                        { "VehicleDefId" : "vehicledef_CARRIER_SRM", "PilotDefId" : "pilot_d7_gunner" },
+                        { "VehicleDefId" : "vehicledef_BEHEMOTH", "PilotDefId" : "pilot_d7_lancer" },
+                        { "VehicleDefId" : "vehicledef_DEMOLISHER", "PilotDefId" : "pilot_d7_lancer" },
+                        { "VehicleDefId" : "vehicledef_ZHUKOV", "PilotDefId" : "pilot_d7_gunner" },
+                        { "VehicleDefId" : "vehicledef_ZHUKOV", "PilotDefId" : "pilot_d7_gunner" }
+                    ]
+                }
+            ]
+        },
+
+        "Quips" : {
+            "ExplosiveAmbush" : [
+                "Watch your step",
+                "Pushing the plunger",
+                "Boom goes the dynamite",
+                "Not this time invaders",
+                "Blast them!",
+            ],
+            "InfantryAmbush" : [
+                "Wrong neighborhood, mechwarriors!",
+                "Concentrate on the lead!",
+                "Open fire!",
+                "Fire, fire, fire!",
+                "Focus on the critical points!",
+                "Welcome to the jungle!"
+            ],
+            "SpawnAmbush" : [
+                "Charge!",
+                "Get'em boys!"
+            ]
+        },
+
+        "LocalizedText" : {
+            "FT_IED_DEFAULT" : "Explosive IED",
+            "FT_IED_HE" : "High Explosive IED",
+            "FT_IED_INFERNO" : "Inferno IED",
+            "FT_IED_VBIED" : "Vibration IED",
+            "TURRET_DEATH" : "{0} DESTROYED"
+        }
+    }
+}
