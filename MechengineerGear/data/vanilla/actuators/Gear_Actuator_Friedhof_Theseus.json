@@ -11,7 +11,7 @@
 		"BonusDescriptions": {
             "Bonuses": [
                 "ArmAccuracy: +1",
-				"MeleeStab: +10",
+				"MeleeStab: +10%",
 				"IsLowerArm"
             ]
         }
@@ -31,7 +31,7 @@
         "Details" : "Actuators control a 'Mech\u2019s limbs and are used to perform Melee attacks at close quarters. All 'Mechs come equipped with stock Actuators, which can be upgraded for improved performance.",
         "Icon" : "uixSvgIcon_equipment_ActuatorArm"
     },
-    "BonusValueA" : "+ 10 Melee Stb.Dmg.",
+    "BonusValueA" : "+ 10% Melee Stb.Dmg.",
     "BonusValueB" : "Lower Arm",
     "ComponentType" : "Upgrade",
     "ComponentSubType" : "NotSet",
@@ -69,7 +69,7 @@
             "Description" : {
                 "Id" : "StatusEffect-Attack_DamageStabMelee-T1",
                 "Name" : "MELEE STABILITY DAMAGE INCREASED",
-                "Details" : "Melee attacks deal [AMT] more stability damage.",
+                "Details" : "Melee attacks deal 10% more stability damage.",
                 "Icon" : "uixSvgIcon_equipment_ActuatorArm"
             },
             "nature" : "Buff",
@@ -77,8 +77,8 @@
                 "appliesEachTick" : false,
                 "effectsPersistAfterDestruction" : false,
                 "statName" : "Instability",
-                "operation" : "Float_Add",
-                "modValue" : "10.0",
+                "operation" : "Float_Multiply",
+                "modValue" : "1.1",
                 "modType" : "System.Single",
                 "additionalRules" : "NotSet",
                 "targetCollection" : "Weapon",
