@@ -8,7 +8,7 @@
 		"BonusDescriptions": {
             "Bonuses": [
                 "MeleeAcc: +1",
-				"Melee: +20",
+				"Melee: +20%",
 				"IsHand"
             ]
         },
@@ -31,14 +31,14 @@
         "Details" : "Actuators control a 'Mech\u2019s limbs and are used to perform Melee attacks at close quarters. All 'Mechs come equipped with stock Actuators, which can be upgraded for improved performance.",
         "Icon" : "uixSvgIcon_equipment_ActuatorArm"
     },
-    "BonusValueA" : "+ 20 Melee Dmg.",
+    "BonusValueA" : "+20% Melee Dmg.",
     "BonusValueB" : "Hand",
     "ComponentType" : "Upgrade",
     "ComponentSubType" : "NotSet",
     "PrefabIdentifier" : "",
     "BattleValue" : 0,
     "InventorySize" : 1,
-    "Tonnage" : 1,
+    "Tonnage" : 1.5,
     "AllowedLocations" : "Arms",
     "DisallowedLocations" : "All",
     "CriticalComponent" : false,
@@ -69,7 +69,7 @@
             "Description" : {
                 "Id" : "StatusEffect-Attack_DamageMelee-T4",
                 "Name" : "MELEE DAMAGE INCREASED",
-                "Details" : "Melee attacks deal [AMT] more damage.",
+                "Details" : "Melee attacks deal 20% more damage.",
                 "Icon" : "uixSvgIcon_equipment_ActuatorArm"
             },
             "nature" : "Buff",
@@ -77,8 +77,8 @@
                 "appliesEachTick" : false,
                 "effectsPersistAfterDestruction" : false,
                 "statName" : "DamagePerShot",
-                "operation" : "Float_Add",
-                "modValue" : "20.0",
+                "operation" : "Float_Multiply",
+                "modValue" : "1.2",
                 "modType" : "System.Single",
                 "additionalRules" : "NotSet",
                 "targetCollection" : "Weapon",
