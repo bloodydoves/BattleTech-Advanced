@@ -1,0 +1,153 @@
+{
+    "Description" : {
+        "Id" : "tbone_event_co_aPiratesLife1",
+        "Name" : "A Pirates Life",
+        "Details" : "[[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]] calls you to the command center, where he has a message from one of your pirate contacts pulled up. Apparently, your contact has a proposal for you:\r\n\r\n<i><b>Greetin's Commander {Commander.LastName},\r\n\r\nOn occasion, in the course of doing business, I come privy to certain knowledge and opportunities. Opportunities which, me and mine bein' the well-known rabblerousers and buckleswashers we are, be not in a position to take advantage of. But you and yours, what with bein' all \"registered\" and \"licensed\" and \"whatnot\" with the veneer civilization an' legitimatism, could do. If'n yer interested, give us a nod or a wink an' we'll surely keep you apprised when choice chances do occur. Mind, if'n we come to ye with a job, ye best be takin' it or we'll find some other outfit fit for the task.\r\n\r\n-[[DM.BaseDescriptionDefs[TBoneLoreRoberts],D.P. Roberts]]</i></b>\r\n\r\n\"Darius? Mind translating? Their speech-to-text software must <i>hate</i> them...no one actually writes like that, do they?\"\r\n\r\n\"Commander, I <i>think</i> what they're saying is that they'll contact us with special jobs if we agree, but they'll be upset if they bring us a contract and we <i>don't</i> take it.\"",
+        "Icon" : "uixTxrSpot_IncomingTransimission.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 10000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "RequirementComparisons" : [
+            {
+                "obj" : "Reputation.AuriganPirates",
+                "op" : "GreaterThanOrEqual",
+                "val" : 75,
+                "valueConstant" : "75"
+            }
+        ]
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "[Agree to receive special contracts from Roberts]",
+                "Details" : "[Agree to receive special contracts from Roberts]",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "[Agree to receive special contracts from Roberts]",
+                        "Details" : "A few hours after agreeing to Roberts' proposal, [[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]] meets you with an update.\r\n\r\n\"Commander, our contact [[DM.BaseDescriptionDefs[TBoneLoreRoberts],Roberts]] is basically the 2IC for the [[DM.BaseDescriptionDefs[TBoneLoreDamned],Band of the Damned]] under Vance Rezak. Rezak is famous for his spy network, and the Band is perfectly capable of running these jobs themselves. If Roberts is going behind Rezak and the rest of the Band, there's definitely something else going on here. Could be dangerous.\"\r\n\r\n\"Where there's danger, there's opportunity. We'll be careful.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "APiratesLife"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "[Turn down Roberts' offer]",
+                "Details" : "[Turn down Roberts' offer]",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "[Turn down Roberts' offer]",
+                        "Details" : "\"Darius, we've done some jobs over the years that I'm not proud of, but I don't think we should jump into bed with this [[DM.BaseDescriptionDefs[TBoneLoreRoberts],Roberts]] character.\"\r\n\r\n\"Understood Commander. You know, Roberts is basically the 2IC for the [[DM.BaseDescriptionDefs[TBoneLoreDamned],Band of the Damned]] under Vance Rezak. We don't have much on them, but the Damned have been raiding the [[DM.Factions[faction_Kurita],Draconis Combine]] for years.  I bet the [[DM.BaseDescriptionDefs[LoreKuritaDCMS],DCMS]] would appreciate it if we quietly forwarded this information to them.\"\r\n\r\n\"Do it, XO.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.Kurita",
+                                    "value" : "7",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}
