@@ -1,0 +1,76 @@
+{
+    "Description": {
+        "Id": "forcedevent_FP_StoryTime5_C",
+        "Name": "Unearthed Secrets",
+        "Details": "Dr. Farah calls you on the intercom, sounding excited. \"Hey, Commander, remember that codebreaker we've had working? It just started blinking green and beeping at me. I think we're ready to find out what's in that storage device.\"",
+        "Icon": "uixTxrSpot_Farah.png"
+    },
+    "Scope": "Company",
+    "Weight": 0,
+    "Requirements": {
+        "Scope": "Company",
+        "RequirementTags": {},
+        "ExclusionTags": {},
+        "RequirementComparisons": []
+    },
+    "AdditionalRequirements": [],
+    "AdditionalObjects": [],
+    "Options": [
+        {
+            "Description": {
+                "Id": "outcome_0",
+                "Name": "Gather the staff, let's have a look.",
+                "Details": "Convesation",
+                "Icon": null
+            },
+            "RequirementList": [],
+            "ResultSets": [
+                {
+                    "Description": {
+                        "Id": "outcome_0_0",
+                        "Name": "Unearthed Secrets",
+                        "Details": "The command staff gathers on the <i>Argo's</i> bridge to discuss what the Doctor has uncovered.",
+                        "Icon": null
+                    },
+                    "Weight": 100,
+                    "Results": [
+                        {
+                            "Scope": "Company",
+                            "Requirements": null,
+                            "AddedTags": {
+                                "items": [
+                                    "flashpoint_StoryTime5_codebreaker"
+                                ],
+                                "tagSetSourceFile": "Tags/CompanyTags"
+                            },
+                            "RemovedTags": {},
+                            "Stats": [],
+                            "Actions": [
+                                {
+                                    "Type": "System_StartConversation",
+                                    "value": "StoryTime5-UnearthedSecrets",
+                                    "additionalValues": [
+                                        "UNEARTHED SECRETS",
+                                        "The Rimward Frontier"
+                                    ]
+                                }
+                            ],
+                            "ForceEvents": null,
+                            "TemporaryResult": false,
+                            "ResultDuration": 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements": {
+                "Scope": "Company",
+                "RequirementTags": {},
+                "ExclusionTags": {},
+                "RequirementComparisons": []
+            }
+        }
+    ],
+    "PublishState": "PUBLISHED",
+    "ValidationState": "UNTESTED",
+    "EventType": "UNSELECTABLE"
+}

@@ -12,43 +12,32 @@
             "Requirements": [],
             "Results": [
                 {
-                    "Scope": "Flashpoint",
-                    "Requirements": null,
-                    "AddedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "RemovedTags": {
-                        "items": [
-                            "fp_choice_b",
-                            "fp_choice_a"
-                        ],
-                        "tagSetSourceFile": ""
-                    },
-                    "Stats": [],
-                    "Actions": [],
-                    "ForceEvents": [],
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                },
-                {
                     "Scope": "Company",
                     "Requirements": null,
-                    "AddedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "RemovedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
+                    "AddedTags": {},
+                    "RemovedTags": {},
                     "Stats": [],
                     "Actions": [
                         {
                             "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime7_100_A-Mission",
+                            "value": "ms_fp_StoryTime7_002_Mission",
                             "valueConstant": null,
                             "additionalValues": null
+                        },
+                        {
+                            "Type" : "System_SimGameCharacterVisible",
+                            "value" : true,
+                            "additionalValues" : [
+                                "Kamea"
+                            ]
+                        },
+                        {
+                            "Type" : "System_StartConversation",
+                            "value" : "StoryTime7-DeadDrop",
+                            "additionalValues" : [
+                                "DEAD DROP",
+                                "In Orbit — Guldra"
+                            ]
                         }
                     ],
                     "ForceEvents": [],
@@ -62,754 +51,9 @@
         },
         {
             "Description": {
-                "Id": "ms_fp_StoryTime7_002_Talk",
-                "Name": "Talk",
+                "Id": "ms_fp_StoryTime7_002_Mission",
+                "Name": "Mission",
                 "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Company",
-                        "RequirementTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "ExclusionTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "RemovedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "System_StartConversation",
-                            "value": "9cfae737aff9cd7e45a782b5",
-                            "valueConstant": null,
-                            "additionalValues": [
-                                "Gunboat Diplomancy",
-                                "High Orbit \u2014 Merlin",
-                                "Conference",
-                                null
-                            ]
-                        },
-                        {
-                            "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime7_003_MissionSim",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        }
-                    ],
-                    "ForceEvents": null,
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime7_003_MissionSim",
-                "Name": "Mission Sim",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Company",
-                        "RequirementTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "ExclusionTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "RemovedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "Flashpoint_AddContract",
-                            "value": "",
-                            "valueConstant": null,
-                            "additionalValues": [
-                                "",
-                                "",
-                                "StoryTime_7_GunboatDiplomacy_Default",
-                                "AuriganRestoration",
-                                null,
-                                "6",
-                                "StoryTime_5_ServedCold_Default",
-                                null,
-                                null,
-                                null,
-                                null,
-                                null
-                            ]
-                        },
-                        {
-                            "Type": "System_ForceDropshipRoom",
-                            "value": "Contract",
-                            "valueConstant": null,
-                            "additionalValues": [
-                                "BaseFlashpoint"
-                            ]
-                        }
-                    ],
-                    "ForceEvents": null,
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime7_004_TalkChoice",
-                "Name": "Talk Choice",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Company",
-                        "RequirementTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "ExclusionTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "RemovedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "System_StartConversation",
-                            "value": "9cfae737aff9cd7e45a782b5",
-                            "valueConstant": null,
-                            "additionalValues": [
-                                "Gunboat Diplomancy II",
-                                "High Orbit \u2014 Merlin",
-                                "Conference",
-                                null
-                            ]
-                        },
-                        {
-                            "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime7_005_Branch",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        }
-                    ],
-                    "ForceEvents": null,
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime7_005_Branch",
-                "Name": "Branch",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Flashpoint",
-                        "RequirementTags": {
-                            "items": [
-                                "fp_choice_a"
-                            ],
-                            "tagSetSourceFile": ""
-                        },
-                        "ExclusionTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "RemovedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "Stats": [],
-                    "Actions": [
-                        {
-                            "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime7_100_A-Mission",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        }
-                    ],
-                    "ForceEvents": [],
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                },
-                {
-                    "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Flashpoint",
-                        "RequirementTags": {
-                            "items": [
-                                "fp_choice_b"
-                            ],
-                            "tagSetSourceFile": ""
-                        },
-                        "ExclusionTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "RemovedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "Stats": [],
-                    "Actions": [
-                        {
-                            "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime7_200_B-Mission",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        }
-                    ],
-                    "ForceEvents": [],
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                },
-                {
-                    "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Flashpoint",
-                        "RequirementTags": {
-                            "items": [
-                                "fp_choice_cancel"
-                            ],
-                            "tagSetSourceFile": ""
-                        },
-                        "ExclusionTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "RemovedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "Stats": [],
-                    "Actions": [
-                        {
-                            "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime7_300_Cancel-Talk",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        }
-                    ],
-                    "ForceEvents": [],
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime7_100_A-Mission",
-                "Name": "A-Mission",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Company",
-                        "RequirementTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "ExclusionTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "RemovedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "Flashpoint_AddContract",
-                            "value": "",
-                            "valueConstant": null,
-                            "additionalValues": [
-                                "",
-                                "",
-                                "StoryTime_7_GunboatDiplomacy_Default",
-                                "AuriganRestoration",
-                                null,
-                                "6",
-                                "ms_fp_StoryTime7_301_Cancel-Complete",
-                                null,
-                                null,
-                                null,
-                                null,
-                                null
-                            ]
-                        },
-                        {
-                            "Type": "System_ForceDropshipRoom",
-                            "value": "Contract",
-                            "valueConstant": null,
-                            "additionalValues": [
-                                "BaseFlashpoint"
-                            ]
-                        }
-                    ],
-                    "ForceEvents": null,
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime7_101_A-Talk",
-                "Name": "A-Talk",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Company",
-                        "RequirementTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "ExclusionTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "RemovedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "System_StartConversation",
-                            "value": "9cfae737aff9cd7e45a782b5",
-                            "valueConstant": null,
-                            "additionalValues": [
-                                "Gunboat Diplomancy III",
-                                "High Orbit \u2014 Merlin",
-                                null,
-                                null
-                            ]
-                        },
-                        {
-                            "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime7_102_A-Complete",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        }
-                    ],
-                    "ForceEvents": null,
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime7_102_A-Complete",
-                "Name": "A-Complete",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Company",
-                        "RequirementTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "ExclusionTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {
-                        "items": [
-                            "flashpoint_StoryTime7_complete",
-                            "flashpoint_StoryTime7_a"
-                        ],
-                        "tagSetSourceFile": ""
-                    },
-                    "RemovedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "Flashpoint_CompleteFlashpoint",
-                            "value": "ms_fp_StoryTime7_103_A-Reward",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        }
-                    ],
-                    "ForceEvents": null,
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime7_103_A-Reward",
-                "Name": "A-Reward",
-                "Details": "Extra rewards, including Reputation and bonus C-Bills go here",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Company",
-                        "RequirementTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "ExclusionTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "RemovedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "Stats": [
-                        {
-                            "typeString": "System.Int32",
-                            "name": "Funds",
-                            "value": "900000",
-                            "set": false,
-                            "valueConstant": null
-                        },
-                        {
-                            "typeString": "System.Int32",
-                            "name": "Reputation.MercenaryReviewBoard",
-                            "value": "8",
-                            "set": false,
-                            "valueConstant": null
-                        }
-                    ],
-                    "Actions": null,
-                    "ForceEvents": null,
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime7_200_B-Mission",
-                "Name": "B-Mission",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Company",
-                        "RequirementTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "ExclusionTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "RemovedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "Flashpoint_AddContract",
-                            "value": "",
-                            "valueConstant": null,
-                            "additionalValues": [
-                                "",
-                                "",
-                                "StoryTime_7_GunboatDiplomacy_Default",
-                                "AuriganRestoration",
-                                null,
-                                "6",
-                                "ms_fp_StoryTime7_301_Cancel-Complete",
-                                null,
-                                null,
-                                null,
-                                null,
-                                null
-                            ]
-                        },
-                        {
-                            "Type": "System_ForceDropshipRoom",
-                            "value": "Contract",
-                            "valueConstant": null,
-                            "additionalValues": [
-                                "BaseFlashpoint"
-                            ]
-                        }
-                    ],
-                    "ForceEvents": null,
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime7_201_B-Talk",
-                "Name": "B-Talk",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Company",
-                        "RequirementTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "ExclusionTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "RemovedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "System_StartConversation",
-                            "value": "9cfae737aff9cd7e45a782b5",
-                            "valueConstant": null,
-                            "additionalValues": [
-                                "Gunboat Diplomancy III",
-                                "High Orbit \u2014 Merlin"
-                            ]
-                        },
-                        {
-                            "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime7_202_B-Complete",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        }
-                    ],
-                    "ForceEvents": null,
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime7_202_B-Complete",
-                "Name": "B-Complete",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Company",
-                        "RequirementTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "ExclusionTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {
-                        "items": [
-                            "flashpoint_StoryTime7_complete",
-                            "flashpoint_StoryTime7_b"
-                        ],
-                        "tagSetSourceFile": ""
-                    },
-                    "RemovedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "Flashpoint_CompleteFlashpoint",
-                            "value": "ms_fp_StoryTime7_203_B-Reward",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        }
-                    ],
-                    "ForceEvents": null,
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime7_203_B-Reward",
-                "Name": "B-Reward",
-                "Details": "Extra rewards, including Reputation and bonus C-Bills go here",
                 "Icon": null
             },
             "Scope": "Company",
@@ -818,73 +62,28 @@
                 {
                     "Scope": "Company",
                     "Requirements": null,
-                    "AddedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "RemovedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "Stats": [],
-                    "Actions": [],
-                    "ForceEvents": [],
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime7_300_Cancel-Talk",
-                "Name": "Cancel-Talk",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Company",
-                        "RequirementTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "ExclusionTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "RemovedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
+                    "AddedTags": {},
+                    "RemovedTags": {},
                     "Stats": null,
                     "Actions": [
                         {
-                            "Type": "System_StartConversation",
-                            "value": "9cfae737aff9cd7e45a782b5",
+                            "Type": "Flashpoint_StartContract",
+                            "value": "",
                             "valueConstant": null,
                             "additionalValues": [
-                                "Gunboat Diplomancy III",
-                                "High Orbit \u2014 Merlin"
+                                "",
+                                "",
+                                "StoryTime_7_GunboatDiplomacy_Default",
+                                "AuriganRestoration",
+                                "AuriganDirectorate",
+                                "6",
+                                "ms_fp_StoryTime7_003_Cutscene",
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
                             ]
-                        },
-                        {
-                            "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime7_301_Cancel-Complete",
-                            "valueConstant": null,
-                            "additionalValues": null
                         }
                     ],
                     "ForceEvents": null,
@@ -898,8 +97,8 @@
         },
         {
             "Description": {
-                "Id": "ms_fp_StoryTime7_301_Cancel-Complete",
-                "Name": "Cancel-Complete",
+                "Id": "ms_fp_StoryTime7_003_Cutscene",
+                "Name": "Complete",
                 "Details": "flashpoint",
                 "Icon": null
             },
@@ -908,29 +107,9 @@
             "Results": [
                 {
                     "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Company",
-                        "RequirementTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "ExclusionTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {
-                        "items": [
-                            "flashpoint_StoryTime7_complete",
-                            "flashpoint_StoryTime7_cancel"
-                        ],
-                        "tagSetSourceFile": ""
-                    },
-                    "RemovedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
+                    "Requirements": null,
+                    "AddedTags": {},
+                    "RemovedTags": {},
                     "Stats": null,
                     "Actions": [
                         {
@@ -940,13 +119,30 @@
                             "additionalValues": null
                         },
                         {
-                            "Type": "Flashpoint_CompleteFlashpoint",
-                            "value": "ms_fp_StoryTime7_302_Cancel-Reward",
+                            "Type": "Flashpoint_SetNextMilestone",
+                            "value": "ms_fp_StoryTime7_004_Complete",
                             "valueConstant": null,
                             "additionalValues": null
+                        },
+                        {
+                            "Type" : "System_PauseNotification",
+                            "value" : "Incoming recording from Lady Espinoza, Commander. I'll have it ready when Lady Arano's on board.",
+                            "additionalValues" : [
+                                  "Capture",
+                                  "castDef_Sumiere"
+                            ],
+                            "valueConstant" : null
                         }
                     ],
-                    "ForceEvents": null,
+                    "ForceEvents": [
+                        {
+                            "Scope" : "Company",
+                            "EventID" : "forcedevent_FP_StoryTime7_A",
+                            "MinDaysWait" : 0,
+                            "MaxDaysWait" : 0,
+                            "Probability" : 100
+                        }
+                    ],
                     "TemporaryResult": false,
                     "ResultDuration": 0
                 }
@@ -957,8 +153,46 @@
         },
         {
             "Description": {
-                "Id": "ms_fp_StoryTime7_302_Cancel-Reward",
-                "Name": "Cancel-Reward",
+                "Id": "ms_fp_StoryTime7_004_Complete",
+                "Name": "Complete",
+                "Details": "flashpoint",
+                "Icon": null
+            },
+            "Scope": "Company",
+            "Requirements": [],
+            "Results": [
+                {
+                    "Scope": "Company",
+                    "Requirements": null,
+                    "AddedTags": {
+                        "items": [
+                            "flashpoint_StoryTime7_complete"
+                        ],
+                        "tagSetSourceFile": "Tags/CompanyTags"
+                    },
+                    "RemovedTags": {},
+                    "Stats": null,
+                    "Actions": [
+                        {
+                            "Type": "Flashpoint_CompleteFlashpoint",
+                            "value": "ms_fp_StoryTime7_005_Reward",
+                            "valueConstant": null,
+                            "additionalValues": null
+                        }
+                    ],
+                    "ForceEvents": [],
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ],
+            "Repeatable": false,
+            "UseRandomInvocation": false,
+            "InvokeChance": 0
+        },
+        {
+            "Description": {
+                "Id": "ms_fp_StoryTime7_005_Reward",
+                "Name": "Reward",
                 "Details": "Extra rewards, including Reputation and bonus C-Bills go here",
                 "Icon": null
             },
@@ -967,26 +201,9 @@
             "Results": [
                 {
                     "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Company",
-                        "RequirementTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "ExclusionTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "RemovedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
+                    "Requirements": null,
+                    "AddedTags": {},
+                    "RemovedTags": {},
                     "Stats": [
                         {
                             "typeString": "System.Int32",
@@ -994,16 +211,17 @@
                             "value": "300000",
                             "set": false,
                             "valueConstant": null
-                        },
-                        {
-                            "typeString": "System.Int32",
-                            "name": "Reputation.MercenaryReviewBoard",
-                            "value": "8",
-                            "set": false,
-                            "valueConstant": null
                         }
                     ],
-                    "Actions": null,
+                    "Actions": [
+                        {
+                            "Type" : "System_SimGameCharacterVisible",
+                            "value" : false,
+                            "additionalValues" : [
+                                "Kamea"
+                            ]
+                        }
+                    ],
                     "ForceEvents": null,
                     "TemporaryResult": false,
                     "ResultDuration": 0

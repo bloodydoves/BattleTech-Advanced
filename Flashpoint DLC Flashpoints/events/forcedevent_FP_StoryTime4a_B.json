@@ -1,0 +1,138 @@
+{
+    "Description" : {
+        "Id" : "forcedevent_FP_StoryTime4a_B",
+        "Name" : "The Arano Restoration",
+        "Details" : "\"Lady Kamea is making an announcement over the HPG,\" Sumire calls for attention. \"Seems important. Shall I put it on screen?\"",
+        "Icon" : "uixTxrSpot_SumireStarMap.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 0,
+    "Requirements" : {
+        "Scope": "Company",
+        "RequirementTags": {},
+        "ExclusionTags": {},
+        "RequirementComparisons": []
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Watch the announcement.",
+                "Details" : "Put it on ship's speakers. Everyone should hear this.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "The Arano Restoration",
+                        "Details" : "Lord Madeira speaks up. \"I have some things to discuss, if you'll gather the command staff?\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {},
+                            "RemovedTags" : {},
+                            "Stats" : [],
+                            "Actions" : [
+                                {
+                                    "Type": "System_ForceDropshipRoom",
+                                    "value": "Ship",
+                                    "valueConstant": null,
+                                    "additionalValues": null
+                                },
+                                {
+                                    "Type" : "System_PlayVideo",
+                                    "value" : "4B-revolution.bk2",
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "Type" : "System_SimGameCharacterVisible",
+                                    "value" : false,
+                                    "additionalValues" : [
+                                        "Kamea"
+                                    ]
+                                },
+                                {
+                                    "Type" : "System_StartConversation",
+                                    "value" : "StoryTime4a-HaveShipWillTravel",
+                                    "additionalValues" : [
+                                        "HAVE SHIP, WILL TRAVEL",
+                                        "In Orbit — Weldry",
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope": "Company",
+                "RequirementTags": {},
+                "ExclusionTags": {},
+                "RequirementComparisons": []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "Let the crew watch, I'm busy. (Skip cutscene)",
+                "Details" : "Skip conversation and cutscene",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "The Restoration.",
+                        "Details" : "The crew watches Lady Arano's announcement while you retire to your cabin. It's emotional, but time waits for no one, and the Restoration isn't going to plan itself.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {},
+                            "RemovedTags" : {},
+                            "Stats" : [],
+                            "Actions" : [
+                                {
+                                    "Type" : "System_SimGameCharacterVisible",
+                                    "value" : false,
+                                    "additionalValues" : [
+                                        "Kamea"
+                                    ]
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope": "Company",
+                "RequirementTags": {},
+                "ExclusionTags": {},
+                "RequirementComparisons": []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "UNSELECTABLE"
+}

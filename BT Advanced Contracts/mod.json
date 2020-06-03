@@ -8,9 +8,11 @@
     "Website": "https://www.nexusmods.com/battletech/mods/452",
     "Contact": "realbloodydoves@gmail.com",
     "Manifest": [
-        {
-            "Type": "ContractOverride",
-            "Path": "contract"
-        }
-    ]
+	{ "Type": "SimGameEventDef",		"Path": "events_Base",			"AddToDB": true },
+	{ "Type": "SimGameEventDef",		"Path": "events_Clans",			"AddToDB": true },
+	{ "Type": "SimGameStatDescDef", 	"Path": "simGameStatDesc", 		"AddToDB": true },
+	{ "Type": "ContractOverride",		"Path": "contract"								},
+	{ "Type": "ItemCollectionDef",		"Path": "itemCollections"						},
+	{ "Type": "BaseDescriptionDef",		"Path": "lore",					"AddToDB": true }
+  ]
 }

@@ -1,0 +1,226 @@
+{
+    "Description" : {
+        "Id" : "tbone_event_co_biggerDarius1",
+        "Name" : "Big Trouble in Little Nassau",
+        "Details" : "[[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]] knocks on your door one evening with a troubled look on his face.\r\n\r\n\"Commander, I'd like to use some personal leave, if you can spare me. I've just received a message from home and, well...I can't really talk about it. But I really need to get back there soon.\"\r\n\r\n\"Back to Artru? Nassau Heights? I thought you didn't have anyone left back there...\"\r\n\r\n\"So did I, Commander. So did I.\"",
+        "Icon" : "uixTxrSpot_CommandersQuarters.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 10000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "RequirementComparisons" : []
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [
+        {
+            "Scope" : "SecondaryMechWarrior",
+            "Requirements" : {
+                "Scope" : "SecondaryMechWarrior",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : [
+                        "name_Darius"
+                    ]
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : [
+                    {
+                        "obj" : "ExperienceSpent",
+                        "op" : "LessThanOrEqual",
+                        "val" : 15000,
+                        "valueConstant" : "15000"
+                    },
+                    {
+                        "obj" : "ExperienceSpent",
+                        "op" : "GreaterThanOrEqual",
+                        "val" : 2000,
+                        "valueConstant" : "2000"
+                    }
+                ]
+            }
+        }
+    ],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Refuse.",
+                "Details" : "Refuse",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Refuse.",
+                        "Details" : "\"Sorry, [[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]], we really can't spare you right now. We've got too many new MechWarriors on board, and it's hard enough keeping them all in line as it is. Besides, you know I hate spreadsheets and Yang is bad at math. Who'll do the monthly financial reports?\"\r\n\r\n\"Understood, Commander.\"\r\n\r\nApparently, the rumor mill had already heard Darius was taking some personal time, and the disappointment among the rank and file is palpable.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Morale",
+                                    "value" : "-4",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "Let him go.",
+                "Details" : "Let him go.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "Let him go.",
+                        "Details" : "\"Sure, [[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]]. We can get along without you for a while. Go do what you need to do.\"\r\n\r\n\r\nAfter [[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]] departs, you notice markedly improved morale among the pilots and crew. What's more, [[DM.BaseDescriptionDefs[TooltipSimGameCharacterFARAH],Farah]] presents you with a side-project of hers: an extremely limited program she calls [[DM.BaseDescriptionDefs[TBoneLoreD4r1U5],<b>D4r1U5</b>]]. By feeding battlefield and orbital telemetry into a limited machine-learning system, she's developed an artificial system that can generate a series of canned responses and recommendations that should be indistinguishable from the real thing.\r\n\r\n\r\nYou're flabbergasted but impressed. \"Farah, this is incredible! How is it possible we have enough storage and processing capacity for all this?\"\r\n\r\n\"Oh, it's really nothing, Commander. It's such a simple system, it only uses about as much computational power as an old graphical calculator!\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Morale",
+                                    "value" : "1",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : [
+                                {
+                                    "Type" : "MechWarrior_SetTimeout",
+                                    "value" : "14",
+                                    "valueConstant" : null,
+                                    "additionalValues" : null
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 14
+                        },
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "bxo_1"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}

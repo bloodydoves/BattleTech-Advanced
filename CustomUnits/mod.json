@@ -2,7 +2,7 @@
 	"Name": "CustomUnits",
 	"Enabled": true,
 	"Hidden": true,
-	"Version": "0.0.23",
+	"Version": "0.0.42",
 	"PackagedOn": "2019-01-31T00:00:00Z",
 	"DLL": "CustomUnits.dll",
 	"DLLEntryPoint": "CustomUnits.Core.Init",
@@ -67,7 +67,23 @@
 			"chassisdef_imp_IMP-2E": 1.05,
 			"chassisdef_imp_IMP-3E": 1.05,
 			"chassisdef_imp_IMP-4E": 1.05,
-			"chassisdef_anubis_ABS-3L": 0.9
+			"chassisdef_hussar_HSR-200-D": 0.85,
+			"chassisdef_hussar_HSR-200-Db": 0.85,
+			"chassisdef_hussar_HSR-300-D": 0.85,
+			"chassisdef_hussar_HSR-350-D": 0.85,
+			"chassisdef_hussar_HSR-400-D": 0.85,
+			"chassisdef_argus_AGS-2D": 0.95,
+			"chassisdef_argus_AGS-4D": 0.95,
+			"chassisdef_anubis_ABS-2L": 0.85,
+			"chassisdef_anubis_ABS-3L": 0.85,
+			"chassisdef_anubis_ABS-3D": 0.85,
+			"chassisdef_chimera_CMA-1S": 0.9,
+			"chassisdef_chimera_CMA-C": 0.9,
+			"chassisdef_merlin_MLN-1A": 0.95,
+			"chassisdef_merlin_MLN-1B": 0.95
+		},
+		"mechSizeMultiplierVectors": {
+			"chassisdef_centurion_CN9-S": { "x": -1, "y": 1, "z": 1 }
 		},
 		"projectileSizeMultipliers": {
 			"Weapon_LRM_Thunderbolt5": 2.25,
@@ -75,11 +91,26 @@
 			"Weapon_LRM_Thunderbolt15": 2.75,
 			"Weapon_LRM_Thunderbolt20": 3.0,
 			"Weapon_ArrowIV": 3.5
-		}
+		},
+		"MaxVehicleRandomPilots": 2,
+		"ShowVehicleBays":false,
+		"CountContractMaxUnits4AsUnlimited": true,
+		"ArgoBaysFix": 0,
+		"BaysCountExternalControl": true,
+		"CanPilotVehicleProbability": 0.5,
+		"CanPilotAlsoMechProbability": 0.5,
+		"LancesIcons": [ "one", "two", "three" ],
+		"overallDeploySize": 6,
+		"Lances": [ 
+			{"size":6,"allow":5,"is_vehicle":false},
+			{"size":4,"allow":3,"is_vehicle":true}
+		]
 	},
 	"Manifest": [
 		{ "Type": "DesignMaskDef", "Path": "designMasks" },
-		{ "Type": "AssetBundle", "Path": "assetbundles" },	
-		{ "Id": "battletechstandartshader", "Type": "Prefab", "Path": "assets/shaderscarriers/battletechstandartshader.prefab", "AssetBundleName": "standart_shader" }
+		{ "Type": "AssetBundle", "Path": "assetbundles" },
+		{ "Type": "SVGAsset", "Path": "icons" },
+		{ "Id": "battletechstandartshader", "Type": "Prefab", "Path": "assets/shaderscarriers/battletechstandartshader.prefab", "AssetBundleName": "standart_shader" },
+		{ "Id": "fake_weapon_prefab", "Type": "Prefab", "Path": "assets/character/vehicle/prefabs/fake_weapon_prefab.prefab", "AssetBundleName": "fake_weapon_prefab" }
 	]
 }

@@ -7,66 +7,89 @@
 		],
 		"BonusDescriptions": {
 			"Bonuses": [
-				"HeatEfficiency: 20%"
+				"EndMoveHeat: -16"
 			]
 		},
 		"InventorySorter": {
 			"SortKey": "00017"
 		}
 	},
-	"DissipationCapacity": 3,
+	"DissipationCapacity": 0,
 	"Description": {
 		"Cost": 470000,
 		"Rarity": 5,
 		"Purchasable": true,
 		"Manufacturer": "Generic",
 		"Model": "Bulk Bank",
-		"UIName": "Heat Bank + +",
+		"UIName": "Bulk Heat Bank",
 		"Id": "Gear_HeatSink_Generic_Bulk-Bank",
-		"Name": "Bulk Bank Heat Bank",
-		"Details": "Heat Banks are installed to allow for more thermal energy collection, improving the efficiency of a mech's installed heat sinking mechanisms.",
+		"Name": "Bulk Heat Bank",
+		"Details": "Heat Banks are installed to allow for more thermal energy venting. However, where standard heat sinks rely on coolants (which have varied effectiveness in different environments) heat banks do not. They simply collect and expel heat automatically, though only in certain increments. What this means is that, while their effect doesn't get accounted for by a mech's cooling systems, they always vent off their collected heat regardless of environments. This trait makes Heat Banks invaluable in extremely hazardous environments such as Martian or Lunar settings.",
 		"Icon": "uixSvgIcon_equipment_HeatBank"
 	},
-	"BonusValueA": "20% More Heat Sinking",
+	"BonusValueA": "Vents 16 Heat",
 	"BonusValueB": "",
 	"ComponentType": "HeatSink",
 	"ComponentSubType": "Heatsink",
 	"PrefabIdentifier": "",
 	"BattleValue": 0,
 	"InventorySize": 4,
-	"Tonnage": 1,
+	"Tonnage": 2,
 	"AllowedLocations": "All",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
 	"statusEffects": [
 		{
-			"durationData": {
-				"duration": -1,
-				"stackLimit": -1
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"effectTargetType": "Creator",
-				"showInTargetPreview": false,
-				"showInStatusPanel": false
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "HeatSinkEfficiency_20",
-				"Name": "HEAT DISSIPATION INCREASED",
-				"Details": "Heat dissipation amount increased by 20%.",
-				"Icon": "uixSvgIcon_equipment_HeatBank"
-			},
-			"nature": "Buff",
-			"statisticData": {
-				"appliesEachTick": false,
-				"effectsPersistAfterDestruction": false,
-				"statName": "HeatSinkCapacity",
-				"operation": "Int_Multiply_Float",
-				"modValue": "1.2",
-				"modType": "System.Single"
-			}
-		}
+            "durationData": {
+                "duration": -1,
+                "ticksOnActivations": false,
+                "useActivationsOfTarget": false,
+                "ticksOnEndOfRound": false,
+                "ticksOnMovements": false,
+                "stackLimit": -1,
+                "clearedWhenAttacked": false
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "triggerLimit": 0,
+                "extendDurationOnTrigger": 0,
+                "specialRules": "NotSet",
+                "effectTargetType": "Creator",
+                "range": 0,
+                "forcePathRebuild": false,
+                "forceVisRebuild": false,
+                "showInTargetPreview": false,
+                "showInStatusPanel": false
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "HeatBank_Venting",
+                "Name": "Bulk Heat Bank",
+                "Details": "Bulk Heat Bank system venting 16 heat",
+                "Icon": "uixSvgIcon_equipment_ThermalExchanger"
+            },
+            "nature": "Buff",
+            "statisticData": {
+                "appliesEachTick": false,
+                "effectsPersistAfterDestruction": false,
+                "statName": "EndMoveHeat",
+                "operation": "Int_Add",
+                "modValue": "-16",
+                "modType": "System.Int32",
+                "additionalRules": "NotSet",
+                "targetCollection": "NotSet",
+                "targetWeaponCategory": "NotSet",
+                "targetWeaponType": "NotSet",
+                "targetAmmoCategory": "NotSet",
+                "targetWeaponSubType": "NotSet"
+            },
+            "tagData": null,
+            "floatieData": null,
+            "actorBurningData": null,
+            "vfxData": null,
+            "instantModData": null,
+            "poorlyMaintainedEffectData": null
+        }
 	],
 	"ComponentTags": {
 		"items": [

@@ -1,0 +1,132 @@
+{
+    "Description": {
+        "Id": "forcedevent_FP_StoryTime1_A",
+        "Name": "The Aurigan Directorate",
+        "Details": "Groggy, you wake up in medbay, with the crew waiting around you with concern. Darius explains. \"You took a nasty bump on the head punching out, Commander.\"",
+        "Icon": "uixTxrSpot_MedBay.png"
+    },
+    "Scope": "Company",
+    "Weight": 0,
+    "Requirements": {
+        "Scope": "Company",
+        "RequirementTags": {},
+        "ExclusionTags": {},
+        "RequirementComparisons": []
+    },
+    "AdditionalRequirements": [],
+    "AdditionalObjects": [],
+    "Options": [
+        {
+            "Description": {
+                "Id": "outcome_0",
+                "Name": "I remember...",
+                "Details": "Cinamatic and debriefing",
+                "Icon": null
+            },
+            "RequirementList": [],
+            "ResultSets": [
+                {
+                    "Description": {
+                        "Id": "outcome_0_0",
+                        "Name": "The Aurigan Directorate",
+                        "Details": "Darius looks worried. \"Easy there, {COMMANDER.FirstName}. You took a nasty crack on the head when you punched out. You made the right call - Yang said that your 'Mech shows signs of deliberate sabotage. Whoever the Aurigans had working on it really did a number on the reactor.\" He hesitates before delivering more bad news. \"We found Sir Raju's 'Mech. It was completely cored out. Nobody survives a hit like that.\"\r\n\n\n\"Things aren't looking so hot around here, what with the coup and all. [[DM.BaseDescriptionDefs[LoreHouseEspinosa],House Espinosa]]'s Directorate is the new de facto government of the [[DM.BaseDescriptionDefs[LoreAuriganReach],Aurigan Reach]]. I'm sorry we couldn't do more. A lot of good people died today, and I have a feeling this is only the beginning.",
+                        "Icon": null
+                    },
+                    "Weight": 100,
+                    "Results": [
+                        {
+                            "Scope": "Company",
+                            "Requirements": null,
+                            "AddedTags": {},
+                            "RemovedTags": {},
+                            "Stats": [],
+                            "Actions": [
+                                {
+                                    "Type": "System_PlayVideo",
+                                    "value": "1C-coup.bk2",
+                                    "valueConstant": null
+                                }
+                            ],
+                            "ForceEvents": null,
+                            "TemporaryResult": false,
+                            "ResultDuration": 0
+                        },
+                        {
+                            "Scope": "Commander",
+                            "Requirements": null,
+                            "AddedTags": {},
+                            "RemovedTags": {},
+                            "Stats": null,
+                            "Actions": [
+                                {
+                                    "Type": "MechWarrior_AddInjuries",
+                                    "value": "1",
+                                    "valueConstant": null,
+                                    "additionalValues": null
+                                }
+                            ],
+                            "ForceEvents": null,
+                            "TemporaryResult": false,
+                            "ResultDuration": 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements": {
+                "Scope": "Company",
+                "RequirementTags": {},
+                "ExclusionTags": {},
+                "RequirementComparisons": []
+            }
+        },
+        {
+            "Description": {
+                "Id": "outcome_1",
+                "Name": "Lady Kamea is dead, I know. (Skip cutscene)",
+                "Details": "Skip cutscene asd debriefing",
+                "Icon": null
+            },
+            "RequirementList": [],
+            "ResultSets": [
+                {
+                    "Description": {
+                        "Id": "outcome_1_0",
+                        "Name": "The Restoration.",
+                        "Details": "Dr. Murad looks like she wants to say more, but you're in a sour mood, and Darius shoos everyone back to their stations. Time waits for no one, and they've got work to do.",
+                        "Icon": null
+                    },
+                    "Weight": 100,
+                    "Results": [
+                        {
+                            "Scope": "Commander",
+                            "Requirements": null,
+                            "AddedTags": {},
+                            "RemovedTags": {},
+                            "Stats": null,
+                            "Actions": [
+                                {
+                                    "Type": "MechWarrior_AddInjuries",
+                                    "value": "1",
+                                    "valueConstant": null,
+                                    "additionalValues": null
+                                }
+                            ],
+                            "ForceEvents": null,
+                            "TemporaryResult": false,
+                            "ResultDuration": 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements": {
+                "Scope": "Company",
+                "RequirementTags": {},
+                "ExclusionTags": {},
+                "RequirementComparisons": []
+            }
+        }
+    ],
+    "PublishState": "PUBLISHED",
+    "ValidationState": "UNTESTED",
+    "EventType": "UNSELECTABLE"
+}

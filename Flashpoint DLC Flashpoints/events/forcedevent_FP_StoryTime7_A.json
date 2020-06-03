@@ -1,0 +1,103 @@
+{
+    "Description": {
+        "Id": "forcedevent_FP_StoryTime7_A",
+        "Name": "Capture",
+        "Details": "Sumiere pulls you aside as the Mechwarriors debark. \"I have the transmission from the Directorate ready, Commander. Lady Espinoza sent us a video of what they did to Alexander. Nothing of value in there, and it will just upset Lady Arano more. We should delete it.\"",
+        "Icon": "uixTxrSpot_IncomingTransimission.png"
+    },
+    "Scope": "Company",
+    "Weight": 0,
+    "Requirements": {
+        "Scope": "Company",
+        "RequirementTags": {},
+        "ExclusionTags": {},
+        "RequirementComparisons": []
+    },
+    "AdditionalRequirements": [],
+    "AdditionalObjects": [],
+    "Options": [
+        {
+            "Description": {
+                "Id": "outcome_0",
+                "Name": "We'll do her no favors hiding what she already knows.",
+                "Details": "Cinamatic and debriefing",
+                "Icon": null
+            },
+            "RequirementList": [],
+            "ResultSets": [
+                {
+                    "Description": {
+                        "Id": "outcome_0_0",
+                        "Name": "Capture",
+                        "Details": "Farah works as quickly as she can to unpack the archive while a distraught Kimea composes herself for the debriefing.",
+                        "Icon": null
+                    },
+                    "Weight": 100,
+                    "Results": [
+                        {
+                            "Scope": "Company",
+                            "Requirements": null,
+                            "AddedTags": {},
+                            "RemovedTags": {},
+                            "Stats": [],
+                            "Actions": [
+                                {
+                                    "Type": "System_PlayVideo",
+                                    "value": "7-capture.bk2",
+                                    "valueConstant": null
+                                },
+                                {
+                                    "Type": "System_StartConversation",
+                                    "value": "StoryTime7-InsurancePolicy",
+                                    "additionalValues": [
+                                        "INSURANCE POLICY",
+                                        "In Orbit — Guldra"
+                                    ]
+                                }
+                            ],
+                            "ForceEvents": null,
+                            "TemporaryResult": false,
+                            "ResultDuration": 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements": {
+                "Scope": "Company",
+                "RequirementTags": {},
+                "ExclusionTags": {},
+                "RequirementComparisons": []
+            }
+        },
+        {
+            "Description": {
+                "Id": "outcome_1",
+                "Name": "Agreed. We need her sharp, not mourning. (Skip cutscene)",
+                "Details": "Skip cutscene and debriefing",
+                "Icon": null
+            },
+            "RequirementList": [],
+            "ResultSets": [
+                {
+                    "Description": {
+                        "Id": "outcome_1_0",
+                        "Name": "Capture",
+                        "Details": "When Farah finally unlocks the archive Alexander gave his freedom recovering, it contains enough damning evidence to bring Lord Espinoza to the top of the Taurian's hit-list - finally, something going right. Lady Kamea departs to plan a strike on Tyrlon in preparation for the end of the war.",
+                        "Icon": null
+                    },
+                    "Weight": 100,
+                    "Results": []
+                }
+            ],
+            "Requirements":{
+                "Scope": "Company",
+                "RequirementTags": {},
+                "ExclusionTags": {},
+                "RequirementComparisons": []
+            }
+        }
+    ],
+    "PublishState": "PUBLISHED",
+    "ValidationState": "UNTESTED",
+    "EventType": "UNSELECTABLE"
+}

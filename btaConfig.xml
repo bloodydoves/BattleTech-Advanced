@@ -2,13 +2,13 @@
 <BtaConfig>
 	<RequiredBattleTechVersion>1.9.1</RequiredBattleTechVersion>
 	<RequiredLauncherVersion>1.0.1</RequiredLauncherVersion>
-	<SecureHash>Fm8WoBYnFhoWcRZtFhAWFRZDFskWNRYRFosWWBa/Fv4=</SecureHash>
+	<SecureHash>FvkW/BY+FtoWSxZfFtQW5RYSFnQW0BbvFiUWABZyFj8=</SecureHash>
 	<showCoreItems>true</showCoreItems>
 	<Tasks>
 		<InstallTask>
 			<Id>coreInstall</Id>
 			<canSelect>false</canSelect>
-			<excludePaths>btaConfig.xml,.git,.modtek,.git,log.txt,Flashpoint DLC Flashpoints,Flashpoint Unit Module,Heavy Metal Equipment Module,Heavy Metal Flashpoint Module,Heavy Metal Unit Module,Urban Warfare Flashpoints,Urban Warfare Unit Module</excludePaths>
+			<excludePaths>btaConfig.xml,.git,.modtek,.git,log.txt,Flashpoint DLC Flashpoints,Flashpoint Unit Module,Heavy Metal Equipment Module,Heavy Metal Flashpoint Module,Heavy Metal Unit Module,Urban Warfare Flashpoints,Urban Warfare Unit Module,DefaultFire,LinuxFire</excludePaths>
 			<isSelected>true</isSelected>
 			<jobOrder>0</jobOrder>
 			<jobType>Install</jobType>
@@ -140,6 +140,36 @@
 			<uiDescription>Use multi-threaded rendering, may increase game performance - Experimental</uiDescription>
 			<uiName>MultiThread Rendering</uiName>
 		</InstallTask>
+		<InstallTask>
+			<Id>DefaultFire</Id>
+			<canSelect>true</canSelect>
+			<excludePaths>log.txt</excludePaths>
+			<isSelected>true</isSelected>
+			<jobOrder>0</jobOrder>
+			<jobType>Install</jobType>
+			<optionGroupId>FireSelection</optionGroupId>
+			<promptConfirmation>false</promptConfirmation>
+			<promptText/>
+			<sourcePath>DefaultFire</sourcePath>
+			<targetPath>CustomAmmoCategories</targetPath>
+			<uiDescription>Use BTA's updated new fire animation, intended for all non-Linux users</uiDescription>
+			<uiName>Updated BTA Fire</uiName>
+		</InstallTask>
+		<InstallTask>
+			<Id>LinuxFire</Id>
+			<canSelect>true</canSelect>
+			<excludePaths>log.txt</excludePaths>
+			<isSelected>false</isSelected>
+			<jobOrder>0</jobOrder>
+			<jobType>Install</jobType>
+			<optionGroupId>FireSelection</optionGroupId>
+			<promptConfirmation>false</promptConfirmation>
+			<promptText/>
+			<sourcePath>LinuxFire</sourcePath>
+			<targetPath>CustomAmmoCategories</targetPath>
+			<uiDescription>Old fire animation, for Linux only.</uiDescription>
+			<uiName>Old Fire for Linux Users</uiName>
+		</InstallTask>
 	</Tasks>
 	<Options>
 		<InstallOption>
@@ -165,6 +195,12 @@
 			<optionId>PerfOps</optionId>
 			<optionType>ExclusiveOption</optionType>
 			<optionUiName>Performance Rendering Options</optionUiName>
+		</InstallOption>
+		<InstallOption>
+			<optionDescription/>
+			<optionId>FireSelection</optionId>
+			<optionType>ExclusiveOption</optionType>
+			<optionUiName>Fire Option for Linux Users</optionUiName>
 		</InstallOption>
 	</Options>
 </BtaConfig>

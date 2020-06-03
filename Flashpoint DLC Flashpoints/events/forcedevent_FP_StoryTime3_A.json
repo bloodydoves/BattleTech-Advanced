@@ -1,0 +1,140 @@
+{
+    "Description": {
+        "Id": "forcedevent_FP_StoryTime3_A",
+        "Name": "The Scheria",
+        "Details": "The ancient ship stirs to life, power conduits humming and frame creaking as Dr. Murad's team brings the engines to life.\r\n\n\nHer voice crackles over the coms. \"Stay in your mech, commander. I'm not sure pressure will hold anywhere other than command.\"",
+        "Icon": "uixTxrSpot_EngineeringInnards.png"
+    },
+    "Scope": "Company",
+    "Weight": 0,
+    "Requirements": {
+        "Scope": "Company",
+        "RequirementTags": {},
+        "ExclusionTags": {},
+        "RequirementComparisons": []
+    },
+    "AdditionalRequirements": [],
+    "AdditionalObjects": [],
+    "Options": [
+        {
+            "Description": {
+                "Id": "outcome_0",
+                "Name": "Look out the window",
+                "Details": "Cinamatic and debriefing",
+                "Icon": null
+            },
+            "RequirementList": [],
+            "ResultSets": [
+                {
+                    "Description": {
+                        "Id": "outcome_0_0",
+                        "Name": "The Scheria",
+                        "Details": "The entire crew crowds into the hallway to greet the new arrivals, but only a few of you recognize her by sight. Time has wrought great changes to the woman you once know. Darius quickly clears the area, leading everyone to the command deck for a conference.",
+                        "Icon": null
+                    },
+                    "Weight": 100,
+                    "Results": [
+                        {
+                            "Scope": "Company",
+                            "Requirements": null,
+                            "AddedTags": {},
+                            "RemovedTags": {},
+                            "Stats": [],
+                            "Actions": [
+                                {
+                                    "Type": "System_PlayVideo",
+                                    "value": "3-argo.bk2",
+                                    "valueConstant": null
+                                },
+                                {
+                                    "Type": "System_SimGameCharacterVisible",
+                                    "value": true,
+                                    "additionalValues": [
+                                        "Kamea",
+                                        "Alexander"
+                                    ]
+                                },
+                                {
+                                    "Type": "System_StartConversation",
+                                    "value": "StoryTime3b-InExile",
+                                    "additionalValues": [
+                                        "IN EXILE",
+                                        "High Orbit — Alloway"
+                                    ]
+                                }
+
+                            ],
+                            "ForceEvents": [
+                                {
+                                    "Scope": "Company",
+                                    "EventID": "forcedevent_FP_StoryTime3_B",
+                                    "MinDaysWait": 2,
+                                    "MaxDaysWait": 2,
+                                    "Probability": 100
+                                }
+                            ],
+                            "TemporaryResult": false,
+                            "ResultDuration": 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements": {
+                "Scope": "Company",
+                "RequirementTags": {},
+                "ExclusionTags": {},
+                "RequirementComparisons": []
+            }
+        },
+        {
+            "Description": {
+                "Id": "outcome_1",
+                "Name": "I know what space looks like. (Skip cutscene)",
+                "Details": "Skip cutscene and debriefing",
+                "Icon": null
+            },
+            "RequirementList": [],
+            "ResultSets": [
+                {
+                    "Description": {
+                        "Id": "outcome_1_0",
+                        "Name": "The Scheria.",
+                        "Details": "It's good to have Lady Arano back, especially with the Magistocracy bankrolling her. The crew is looking forward to having an honorable patron, for a change - and a rich one.",
+                        "Icon": null
+                    },
+                    "Weight": 100,
+                    "Results": [
+                        {
+                            "Scope": "Company",
+                            "Requirements": null,
+                            "AddedTags": {},
+                            "RemovedTags": {},
+                            "Stats": [],
+                            "Actions": null,
+                            "ForceEvents": [
+                                {
+                                    "Scope": "Company",
+                                    "EventID": "forcedevent_FP_StoryTime3_B",
+                                    "MinDaysWait": 2,
+                                    "MaxDaysWait": 2,
+                                    "Probability": 100
+                                }
+                            ],
+                            "TemporaryResult": false,
+                            "ResultDuration": 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements": {
+                "Scope": "Company",
+                "RequirementTags": {},
+                "ExclusionTags": {},
+                "RequirementComparisons": []
+            }
+        }
+    ],
+    "PublishState": "PUBLISHED",
+    "ValidationState": "UNTESTED",
+    "EventType": "UNSELECTABLE"
+}

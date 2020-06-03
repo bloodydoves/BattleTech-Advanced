@@ -13,7 +13,7 @@
 		},
 		"BonusDescriptions": {
 			"Bonuses": [
-				"BallisticAcc: +3",
+				"EvasionIgnore: +1",
 				"IsSensorsB"
 			]
 		},
@@ -30,20 +30,20 @@
 		"Purchasable": true,
 		"Manufacturer": "Kallon",
 		"Model": "A-C P150+",
-		"UIName": "TTS Ballistic + +",
+		"UIName": "TTS Ballistic Evasion +",
 		"Id": "Gear_TargetingTrackingSystem_Kallon_A-C-P150+",
 		"Name": "Kallon A-C P150+ TTS",
-		"Details": "All 'Mechs come equipped with a stock targeting and tracking system—or TTS—which can be upgraded for improved performance. Upgrades increase accuracy when attacking with Ballistic, Energy, or Missile weaponry, depending on the type of TTS.",
+		"Details": "All 'Mechs come equipped with a stock targeting and tracking system—or TTS—which can be upgraded for improved performance. Upgrades ignore some evasion when attacking with Ballistic, Energy, or Missile weaponry, depending on the type of TTS.",
 		"Icon": "uixSvgIcon_equipment_TTS"
 	},
-	"BonusValueA": "+ 3 Acc. (Ballistic)",
+	"BonusValueA": "+ 1 Evasion Ignore (Ballistic)",
 	"BonusValueB": "",
 	"ComponentType": "Upgrade",
 	"ComponentSubType": "NotSet",
 	"PrefabIdentifier": "",
 	"BattleValue": 0,
 	"InventorySize": 1,
-	"Tonnage": 3,
+	"Tonnage": 1,
 	"AllowedLocations": "Head",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
@@ -81,9 +81,9 @@
 			"statisticData": {
 				"appliesEachTick": false,
 				"effectsPersistAfterDestruction": false,
-				"statName": "AccuracyModifier",
+				"statName": "EvasivePipsIgnored",
 				"operation": "Float_Add",
-				"modValue": "-3.0",
+				"modValue": "1.0",
 				"modType": "System.Single",
 				"additionalRules": "NotSet",
 				"targetCollection": "Weapon",

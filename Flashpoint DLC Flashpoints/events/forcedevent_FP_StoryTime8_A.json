@@ -1,0 +1,103 @@
+{
+    "Description": {
+        "Id": "forcedevent_FP_StoryTime8_A",
+        "Name": "Desperation Play",
+        "Details": "Grim faces join you around the command console as Sumiere plots the course of the Ibera. It's inbound, and doesn't look friendly. Another transmission.",
+        "Icon": "uixTxrSpot_DailyBriefing.png"
+    },
+    "Scope": "Company",
+    "Weight": 0,
+    "Requirements": {
+        "Scope": "Company",
+        "RequirementTags": {},
+        "ExclusionTags": {},
+        "RequirementComparisons": []
+    },
+    "AdditionalRequirements": [],
+    "AdditionalObjects": [],
+    "Options": [
+        {
+            "Description": {
+                "Id": "outcome_0",
+                "Name": "Put him on screen.",
+                "Details": "Cinamatic and debriefing",
+                "Icon": null
+            },
+            "RequirementList": [],
+            "ResultSets": [
+                {
+                    "Description": {
+                        "Id": "outcome_0_0",
+                        "Name": "Desperation Play",
+                        "Details": "Lady Arano speaks up, breaking the silence that's descended in the make of Ostergaard's broadcast.",
+                        "Icon": null
+                    },
+                    "Weight": 100,
+                    "Results": [
+                        {
+                            "Scope": "Company",
+                            "Requirements": null,
+                            "AddedTags": {},
+                            "RemovedTags": {},
+                            "Stats": [],
+                            "Actions": [
+                                {
+                                    "Type": "System_PlayVideo",
+                                    "value": "7-hostage.bk2",
+                                    "valueConstant": null
+                                },
+                                {
+                                    "Type": "System_StartConversation",
+                                    "value": "StoryTime8-DesperationPlay",
+                                    "additionalValues": [
+                                        "DESPERATION PLAY",
+                                        "In Orbit — Coromodir"
+                                    ]
+                                }
+                            ],
+                            "ForceEvents": null,
+                            "TemporaryResult": false,
+                            "ResultDuration": 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements": {
+                "Scope": "Company",
+                "RequirementTags": {},
+                "ExclusionTags": {},
+                "RequirementComparisons": []
+            }
+        },
+        {
+            "Description": {
+                "Id": "outcome_1",
+                "Name": "Just tell us where we're needed. (Skip cutscene and conversation)",
+                "Details": "Skip cutscene and debriefing",
+                "Icon": null
+            },
+            "RequirementList": [],
+            "ResultSets": [
+                {
+                    "Description": {
+                        "Id": "outcome_1_0",
+                        "Name": "Desperation Play",
+                        "Details": "\"I'll be brief, Commander. You'll drop on Coromodir's second moon and sieze a communication's array. Expect heavy resistance.\"\r\n\n\nYou agree to the desperate plan - using the Locura to crash the Iberia's systems is risky, but it it's the only plan you've got.",
+                        "Icon": null
+                    },
+                    "Weight": 100,
+                    "Results": []
+                }
+            ],
+            "Requirements": {
+                "Scope": "Company",
+                "RequirementTags": {},
+                "ExclusionTags": {},
+                "RequirementComparisons": []
+            }
+        }
+    ],
+    "PublishState": "PUBLISHED",
+    "ValidationState": "UNTESTED",
+    "EventType": "UNSELECTABLE"
+}
