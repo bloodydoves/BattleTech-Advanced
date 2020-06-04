@@ -1,8 +1,8 @@
 {
     "Description" : {
-        "Id" : "tbone_event_co_aPiratesLife_Steiner2",
-        "Name" : "The Devil You Know",
-        "Details" : "\"Commander, [[DM.BaseDescriptionDefs[TBoneLoreRoberts],Roberts]] has forwarded us the details for one of his \"special\" contracts. I'll spare you the mental anguish of reading the message yourself, but suffice to say that he's found the location and manifest for a secret [[DM.Factions[faction_Steiner],Lyran]] equipment cache. Apparently it includes a lot of high-end gear, stuff they reserve for their elite units. As always, if we're going to do it, we have to drop immediately.\"",
+        "Id" : "tbone_event_co_aPiratesLife_Delphi",
+        "Name" : "X Marks the Spot",
+        "Details" : "\"Commander, [[DM.BaseDescriptionDefs[TBoneLoreRoberts],Roberts]] has forwarded us the details for one of his \"special\" contracts. I'll spare you the mental anguish of reading the message yourself, but suffice to say that he's found the location and manifest for a secret [[DM.Factions[faction_Delphi],New Delphi Compact]] equipment cache. Apparently it includes a lot of high-end gear, stuff they reserve for their elite units. As always, if we're going to do it, we have to drop immediately.\"",
         "Icon" : "uixTxrSpot_IncomingTransimission.png"
     },
     "Scope" : "Company",
@@ -18,7 +18,7 @@
         "ExclusionTags" : {
             "tagSetSourceFile" : "",
             "items" : [
-                "pirate_cooldown_Steiner"
+                "pirate_cooldown_Delphi"
             ]
         },
         "RequirementComparisons" : [
@@ -27,12 +27,6 @@
                 "op" : "Equal",
                 "val" : 0,
                 "valueConstant" : "0"
-            },
-            {
-                "obj" : "Reputation.Steiner",
-                "op" : "GreaterThanOrEqual",
-                "val" : 75,
-                "valueConstant" : "75"
             },
 			{
                 "obj" : "HasTravelContract",
@@ -55,7 +49,7 @@
             },
             "RequirementComparisons" : [
                 {
-                    "obj" : "Owner.Steiner",
+                    "obj" : "Owner.Delphi",
                     "op" : "Equal",
                     "val" : 1,
                     "valueConstant" : "1"
@@ -78,7 +72,7 @@
                     "Description" : {
                         "Id" : "outcome_0_0",
                         "Name" : "[Take the contract]",
-                        "Details" : "\"Ok people, you know the drill. [[DM.BaseDescriptionDefs[TooltipSimGameCharacterSUMIRE],Sumire]], get the <i>Leopard</i> warmed up. [[DM.BaseDescriptionDefs[TooltipSimGameCharacterYANG],Yang]], get the MechBay ready for repair and recovery. We have friendly relations with the OpFor on this one. If we want to keep things that way, we'll need to complete the secondary objective, wiping the evidence of our intrusion and implicating another unit in the raid.\"",
+                        "Details" : "\"Ok people, you know the drill. [[DM.BaseDescriptionDefs[TooltipSimGameCharacterSUMIRE],Sumire]], get the <i>Leopard</i> warmed up. [[DM.BaseDescriptionDefs[TooltipSimGameCharacterYANG],Yang]], get the MechBay ready for repair and recovery. We'll drop in, hit the guards, load up the goods, and get out.\"",
                         "Icon" : null
                     },
                     "Weight" : 100,
@@ -89,7 +83,7 @@
                             "AddedTags" : {
                                 "tagSetSourceFile" : "",
                                 "items" : [
-                                    "pirate_cooldown_Steiner"
+                                    "pirate_cooldown_Delphi"
                                 ]
                             },
                             "RemovedTags" : {
@@ -117,16 +111,16 @@
                             "Actions" : [
                                 {
                                     "Type" : "System_StartContract",
-                                    "value" : "Rescue_Pirate_DevilYouKnow_Steiner",
+                                    "value" : "Rescue_Pirate_XMarks_Delphi",
                                     "valueConstant" : null,
                                     "additionalValues" : [
-                                        "Steiner",
+                                        "Delphi",
                                         "AuriganPirates",
                                         null,
                                         null,
                                         null,
                                         null,
-                                        "5"
+                                        "8"
                                     ]
                                 }
                             ],
@@ -174,7 +168,7 @@
                             "AddedTags" : {
                                 "tagSetSourceFile" : "",
                                 "items" : [
-                                    "pirate_cooldown_Steiner"
+                                    "pirate_cooldown_Delphi"
                                 ]
                             },
                             "RemovedTags" : {
