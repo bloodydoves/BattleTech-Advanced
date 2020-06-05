@@ -1,8 +1,8 @@
 {
-  "ID" : "DuoDuel_RepAmbush",
-  "contractName" : "Ambushed!",
+  "ID" : "DuoDuel_aPiratesLife",
+  "contractName" : "A Pirate's Life For Me",
   "contractDisplayStyle" : "BaseCampaignNormal",
-  "difficulty" : 8,
+  "difficulty" : 9,
   "difficultyUIModifier" : 0,
   "weight" : 0,
   "scope" : "STANDARD",
@@ -11,9 +11,9 @@
   "missionSuccessStatementOverride" : null,
   "badFaithStatementOverride" : null,
   "goodFaithStatementOverride" : null,
-  "shortDescription" : "A small {TEAM_TAR.FactionDef.Demonym} kill team is on track to intercept one of our supply runs. Drop hot, take out the kill team, and get our people out of there.",
-  "longDescription" : "Bloody the {TEAM_TAR.FactionDef.Demonym}s' nose on this one, and hopefully they'll think twice before coming after our people again.",
-  "salvagePotential" : 4,
+  "shortDescription" : "Vance Rezak has agreed to your terms: a fight to the death for control of the Band of the Damned.",
+  "longDescription" : "Commander, I don't know if I ever told you this, but I've always wanted to be a pirate.",
+  "salvagePotential" : 3,
   "requirementList" : [
       {
         "Scope" : "StarSystem",
@@ -34,23 +34,35 @@
                             "Requirements" : null,
                             "AddedTags" : {
                                 "tagSetSourceFile" : "",
-                                "items" : []
+                                "items" : [
+								"pirate_lord"
+								]
                             },
                             "RemovedTags" : {
                                 "tagSetSourceFile" : "",
                                 "items" : []
                             },
-                            "Stats" : [
+                            "Stats" : [],
+                            "Actions" : [
                                 {
-                                    "typeString" : "System.Int32",
-                                    "name" : "rep_ambush_stat",
-                                    "value" : "1",
-                                    "set" : true,
-                                    "valueConstant" : null
+                                    "Type" : "System_StartConversation",
+                                    "value" : "tbone_aPiratesLifeConvo3",
+                                    "valueConstant" : null,
+                                    "additionalValues" : [
+                                        "A Pirate's Life For Me - Aftermath",
+                                        "High Orbit - Antallos",
+                                        "Argo",
+                                        null
+                                    ]
+                                },
+								{
+                                    "Type" : "Mech_AddRoster",
+                                    "value" : "mechdef_corsair_COR-PL",
+                                    "valueConstant" : null,
+                                    "additionalValues" : null
                                 }
                             ],
-                            "Actions" : [],
-                            "ForceEvents" : null,
+                            "ForceEvents" : [],
                             "TemporaryResult" : false,
                             "ResultDuration" : 0
                         }
@@ -79,7 +91,7 @@
           "contractObjective" : {
               "EncounterObjectGuid" : "73275787-720a-4c33-9f20-953b1bbf48bd"
           },
-          "title" : "Take out the kill team",
+          "title" : "Defeat Vance Rezak and become a Pirate Lord",
           "description" : "",
           "isPrimary" : true,
           "forPlayer" : "Player1",
@@ -93,7 +105,7 @@
           "objective" : {
               "EncounterObjectGuid" : "a0b9c5b2-c594-4c5a-be1d-028a51c51519"
           },
-          "title" : "Defeat the kill team",
+          "title" : "Defeat Vance Rezak and become a Pirate Lord",
           "description" : "",
           "isPrimary" : true,
           "OnSuccessResults" : [],
@@ -136,14 +148,14 @@
           "overrideDialogueBucketId" : "",
           "dialogueContent" : [
               {
-                  "words" : "The {TEAM_TAR.FactionDef.Demonym} kill team is on the far side of these ruins. Take them down, Commander.",
+                  "words" : "Ah, Commander? Might shoulda mentioned the Pirate Code is more like guidelines than rules. Looks like Rezak brought a friend.",
                   "wordsColor" : {
                       "r" : 1,
                       "g" : 1,
                       "b" : 1,
                       "a" : 1
                   },
-                  "selectedCastDefId" : "castDef_DariusDefault",
+                  "selectedCastDefId" : "castDef_tbone_DPRoberts",
                   "emote" : "Default",
                   "audioName" : "NONE",
                   "cameraFocusGuid" : "",
@@ -161,14 +173,14 @@
           "overrideDialogueBucketId" : "",
           "dialogueContent" : [
               {
-                  "words" : "Great work. Let's catch up with our people and get out of here, Commander.",
+                  "words" : "Well, blow me down! Ye did it!",
                   "wordsColor" : {
                       "r" : 1,
                       "g" : 1,
                       "b" : 1,
                       "a" : 1
                   },
-                  "selectedCastDefId" : "castDef_DariusDefault",
+                  "selectedCastDefId" : "castDef_tbone_DPRoberts",
                   "emote" : "Default",
                   "audioName" : "NONE",
                   "cameraFocusGuid" : "",
@@ -186,7 +198,7 @@
           "overrideDialogueBucketId" : "",
           "dialogueContent" : [
               {
-                  "words" : "It was a perfect ambush, and we walked right into it.",
+                  "words" : "Too bad about Roberts, Commander. Let's get out of here.",
                   "wordsColor" : {
                       "r" : 1,
                       "g" : 1,
@@ -211,14 +223,14 @@
         "overrideDialogueBucketId" : "",
         "dialogueContent" : [
             {
-                "words" : "The {TEAM_TAR.FactionDef.Name} will make an example of your insolance, mercenary.",
+                "words" : "You cannot hope to best me, mercenary. I will gut you like a fish.",
                 "wordsColor" : {
                     "r" : 1,
                     "g" : 1,
                     "b" : 1,
                     "a" : 1
                 },
-                "selectedCastDefId" : "castDef_Contract_TagTeam_OpFor",
+                "selectedCastDefId" : "castDef_tbone_VanceRezak",
                 "emote" : "Default",
                 "audioName" : "NONE",
                 "cameraFocusGuid" : "f426f0dc-969d-477d-81a9-d02f9e1eff79",
@@ -232,17 +244,17 @@
   "extractionOverrideList" : [],
   "overwriteMissionCompleteWhenAutoComplete" : true,
   "overrideAutoCompleteDialogueId" : null,
-  "disableNegotations" : true,
+  "disableNegotations" : false,
   "disableLanceConfiguration" : false,
-  "disableCancelButton" : true,
+  "disableCancelButton" : false,
   "disableAfterAction" : false,
   "contractRewardOverride" : 1,
   "travelOnly" : false,
   "useTravelCostPenalty" : false,
-  "usesExpiration" : false,
-  "expirationTimeOverride" : -1,
+  "usesExpiration" : true,
+  "expirationTimeOverride" : 14,
   "negotiatedSalary" : 0,
-  "negotiatedSalvage" : 1,
+  "negotiatedSalvage" : 2,
   "excludedFromProceduralGeneration" : true,
   "player1Team" : {
       "encounterLayerData" : {
@@ -406,7 +418,7 @@
                   "customUnitName" : null,
                   "customHeraldryDefId" : "",
                   "unitType" : "Mech",
-                  "unitDefId" : "mechDef_InheritLance",
+                  "unitDefId" : "mechdef_corsair_COR-PL",
                   "unitTagSet" : {
                       "items" : [],
                       "tagSetSourceFile" : "tags/UnitTags"
@@ -419,7 +431,7 @@
                       "items" : [],
                       "tagSetSourceFile" : "tags/SpawnEffectTags"
                   },
-                  "pilotDefId" : "pilotDef_InheritLance",
+                  "pilotDefId" : "pilot_tbone_Rezak",
                   "pilotTagSet" : {
                       "items" : [],
                       "tagSetSourceFile" : "tags/PilotTags"
@@ -439,7 +451,7 @@
                 "customUnitName" : null,
                 "customHeraldryDefId" : "",
                 "unitType" : "Mech",
-                "unitDefId" : "mechDef_InheritLance",
+                "unitDefId" : "mechdef_banshee_BNC-6T",
                 "unitTagSet" : {
                     "items" : [],
                     "tagSetSourceFile" : "tags/UnitTags"
