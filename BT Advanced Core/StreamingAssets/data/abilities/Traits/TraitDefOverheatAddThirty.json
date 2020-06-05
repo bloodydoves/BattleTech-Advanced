@@ -1,0 +1,42 @@
+{
+	"Description" : {
+		"Id" : "TraitDefOverheatAddThirty",
+		"Name" : "Increased Heat Efficency",
+		"Details" : "PASSIVE: 'Mechs piloted by this MechWarrior can gain another 3% improved heat efficency.",
+		"Icon" : "uixSvgIcon_ability_mastertactician"
+	},
+	"Type" : "HeatGenerated",
+	"ShortDesc" : "+ 3% Heat Efficency",
+    "DisplayParams" : "ShowInPilotToolTip",
+	"ActivationTime" : "Passive",
+	"EffectData" :
+	[
+		{
+			"durationData" :
+			{
+				"duration" : -1
+			},
+			"targetingData" : 
+			{
+				"effectTriggerType" : "OnActivation",
+				"effectTargetType" : "Creator"
+			},
+			"effectType" : "StatisticEffect",
+			"Description" :
+			{
+				"Id" : "TraitDefOverheatAddTen",
+				"Name" : "Increased Heat Efficency",
+				"Details" : "Heat efficiency improved by 6%",
+				"Icon" : "uixSvgIcon_ability_mastertactician"
+			},
+			"statisticData" : 
+			{
+				"statName" : "HeatGenerated",
+				"operation" : "Float_Multiply",
+				"modValue" : "0.97",
+				"modType" : "System.Int32"
+			},
+			"nature" : "Buff"
+		}
+	]
+}
