@@ -1,8 +1,8 @@
 {
     "Description" : {
-        "Id" : "tbone_event_co_rep_ComStar",
+        "Id" : "tbone_event_co_rep_AuriganPirates",
         "Name" : "Ambushed!",
-        "Details" : "The general quarters alarm sounds as [[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]] pages you on the intercom.\r\n\r\n\r\n\"Commander. As you know, we have people down on the planet surface on a supply run, including [[TRT_MW,{TRT_MW.Callsign}]]. We've just detected a small [[DM.Factions[faction_ComStar],ComStar]] kill team on track to ambush our people before they make it back to the shuttle. We need to drop immediately and take out the kill team before they can intercept our supply run. \"\r\n\r\n\r\n\"Copy that, XO. [[DM.BaseDescriptionDefs[TooltipSimGameCharacterSUMIRE],Sumire]], get the <i>Leopard</i> prepped for launch!",
+        "Details" : "The general quarters alarm sounds as [[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]] pages you on the intercom.\r\n\r\n\r\n\"Commander. As you know, we have people down on the planet surface on a supply run, including [[TRT_MW,{TRT_MW.Callsign}]]. We've just detected a small [[DM.Factions[faction_AuriganPirates],pirate]] kill team on track to ambush our people before they make it back to the shuttle. We need to drop immediately and take out the kill team before they can intercept our supply run. \"\r\n\r\n\r\n\"Copy that, XO. [[DM.BaseDescriptionDefs[TooltipSimGameCharacterSUMIRE],Sumire]], get the <i>Leopard</i> prepped for launch!",
         "Icon" : "uixTxrSpot_ambushConvoyContract.png"
     },
     "Scope" : "Company",
@@ -16,12 +16,12 @@
         "ExclusionTags" : {
             "tagSetSourceFile" : "",
             "items" : [
-                "rep_ComStar_cooldown"
+                "rep_AuriganPirates_cooldown"
             ]
         },
         "RequirementComparisons" : [
             {
-                "obj" : "Reputation.ComStar",
+                "obj" : "Reputation.AuriganPirates",
                 "op" : "LessThanOrEqual",
                 "val" : -80,
                 "valueConstant" : "-80"
@@ -121,7 +121,7 @@
                     "Description" : {
                         "Id" : "outcome_0_0",
                         "Name" : "Proceed to Mission Brief",
-                        "Details" : "\"OK people, this is gonna get hairy. We're dropping between the [[DM.Factions[faction_ComStar],ComStar]] kill team and our people. We'll hit the kill team in some old ruins that make for a natural choke point. If the OpFor makes it past us, there's nothing to stop them from from hitting our people on the ground. Let's take out the kill team and escort our people home. We only have time to prep a couple mechs, and we're shorthanded with [[TRT_MW,{TRT_MW.Callsign}]] down on the surface.\"",
+                        "Details" : "\"OK people, this is gonna get hairy. We're dropping between the [[DM.Factions[faction_AuriganPirates],pirate]] kill team and our people. We'll hit the kill team in some old ruins that make for a natural choke point. If the OpFor makes it past us, there's nothing to stop them from from hitting our people on the ground. Let's take out the kill team and escort our people home. We only have time to prep a couple mechs, and we're shorthanded with [[TRT_MW,{TRT_MW.Callsign}]] down on the surface.\"",
                         "Icon" : null
                     },
                     "Weight" : 100,
@@ -132,7 +132,7 @@
                             "AddedTags" : {
                                 "tagSetSourceFile" : "",
                                 "items" : [
-                                    "rep_ComStar_fought"
+                                    "rep_AuriganPirates_fought"
                                 ]
                             },
                             "RemovedTags" : {
@@ -154,7 +154,7 @@
                                     "value" : "DuoDuel_RepAmbush",
                                     "valueConstant" : null,
                                     "additionalValues" : [
-                                        "ComStar",
+                                        "AuriganPirates",
                                         "SelfEmployed",
 										null,
 										null,
@@ -168,7 +168,7 @@
                             "ForceEvents" : [
                                 {
                                     "Scope" : "Company",
-                                    "EventID" : "tbone_event_co_rep_ComStar2",
+                                    "EventID" : "tbone_event_co_rep_AuriganPirates2",
                                     "MinDaysWait" : 0,
                                     "MaxDaysWait" : 0,
                                     "Probability" : 100,
@@ -184,7 +184,7 @@
                             "AddedTags" : {
                                 "tagSetSourceFile" : "",
                                 "items" : [
-                                    "rep_ComStar_cooldown"
+                                    "rep_AuriganPirates_cooldown"
                                 ]
                             },
                             "RemovedTags" : {
