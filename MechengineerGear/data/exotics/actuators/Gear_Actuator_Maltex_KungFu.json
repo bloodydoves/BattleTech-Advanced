@@ -7,7 +7,7 @@
 		],
 		"BonusDescriptions": {
             "Bonuses": [
-				"DFASelfDamage: -30"
+				"KickStabBonus: 5%"
             ]
         },
 		"LegActuator": {
@@ -18,25 +18,25 @@
     "RelativeModifier" : 0,
     "AbsoluteModifier" : 0,
     "Description" : {
-        "Cost" : 50000,
-        "Rarity" : 3,
+        "Cost" : 30000,
+        "Rarity" : 2,
         "Purchasable" : true,
-        "Manufacturer" : "Pitban",
-        "Model" : "Kangaroo",
-        "UIName" : "Lower Leg Kangaroo + +",
-        "Id" : "Gear_Actuator_Pitban_Kangaroo",
-        "Name" : "Pitban Kangaroo Leg Mod",
+        "Manufacturer" : "Maltex",
+        "Model" : "Kung Fu",
+        "UIName" : "Lower Leg Kung Fu",
+        "Id" : "Gear_Actuator_Maltex_KungFu",
+        "Name" : "Maltex Kung Fu Leg Mod",
         "Details" : "Actuators control a 'Mech\u2019s limbs and are used to perform Melee attacks at close quarters. All 'Mechs come equipped with stock Actuators, which can be upgraded for improved performance.",
         "Icon" : "uixSvgIcon_equipment_ActuatorLeg"
     },
-    "BonusValueA" : "- 30 DFA Self Dmg.",
+    "BonusValueA" : "+ 5% Kick Dmg.",
     "BonusValueB" : "Lower Leg",
     "ComponentType" : "Upgrade",
     "ComponentSubType" : "NotSet",
     "PrefabIdentifier" : "",
     "BattleValue" : 0,
     "InventorySize" : 1,
-    "Tonnage" : 2,
+    "Tonnage" : 0,
     "AllowedLocations" : "Legs",
     "DisallowedLocations" : "All",
     "CriticalComponent" : false,
@@ -65,21 +65,21 @@
             },
             "effectType" : "StatisticEffect",
             "Description" : {
-                "Id" : "StatusEffect-Attack_SelfDamageDFA-T3",
-                "Name" : "DFA SELF-INFLICTED DAMAGE DECREASED",
-                "Details" : "DFA attacks deal [AMT] less damage to the attacker.",
+                "Id" : "StatusEffect-Attack_KickStab-T1",
+                "Name" : "Kick Stab DAMAGE INCREASED",
+                "Details" : "Kick attacks deal [AMT] more stab damage.",
                 "Icon" : "uixSvgIcon_equipment_ActuatorLeg"
             },
             "nature" : "Buff",
             "statisticData" : {
                 "appliesEachTick" : false,
                 "effectsPersistAfterDestruction" : false,
-                "statName" : "CBTBE_DFA_Attacker_Damage_Mod",
-                "operation" : "Float_Subtract",
-                "modValue" : "30.0",
+                "statName" : "CBTBE_Kick_Target_Instability_Multi",
+                "operation" : "Float_Multi",
+                "modValue" : "1.05",
                 "modType" : "System.Single",
                 "additionalRules" : "NotSet",
-                "targetCollection" : "NotSet",
+                "targetCollection" : "Weapon",
                 "targetWeaponCategory" : "NotSet",
                 "targetWeaponType" : "NotSet",
                 "targetAmmoCategory" : "NotSet",
@@ -96,7 +96,7 @@
     "ComponentTags" : {
         "items" : [
             "component_type_variant",
-            "component_type_variant3"
+            "component_type_variant1"
         ],
         "tagSetSourceFile" : ""
     }

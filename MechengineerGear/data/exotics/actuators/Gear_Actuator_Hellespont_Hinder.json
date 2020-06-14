@@ -2,42 +2,42 @@
 	"Custom": {
 		"Category": [
 			{
-				"CategoryID": "ArmHandActuator"
+				"CategoryID": "ArmUpperActuator"
 			}
 		],
 		"BonusDescriptions": {
             "Bonuses": [
-				"PunchDamageBonus: +15%",
-				"IsHand"
+				"ChargeSelfDamage: 10%",
+				"ChargeSelfStab: 10%"
             ]
         },
 		"ArmActuator": {
-			"Type": "PartHand"
-		}
+			"Type": "PartUpper"
+		},
 	},
     "StatName" : null,
     "RelativeModifier" : 0,
     "AbsoluteModifier" : 0,
     "Description" : {
-        "Cost" : 60000,
-        "Rarity" : 3,
+        "Cost" : 480000,
+        "Rarity" : 99,
         "Purchasable" : true,
-        "Manufacturer" : "Coventry",
-        "Model" : "X75 Standard",
-        "UIName" : "Hand X75 +",
-        "Id" : "Gear_Actuator_Coventry_X75-Standard",
-        "Name" : "Coventry X75 Standard Arm Mod",
+        "Manufacturer" : "Hellespont",
+        "Model" : "Hinder",
+        "UIName" : "Upper Arm Hinder +",
+        "Id" : "Gear_Actuator_Hellespont_Hinder",
+        "Name" : "Hellespont Hinder Arm Mod",
         "Details" : "Actuators control a 'Mech\u2019s limbs and are used to perform Melee attacks at close quarters. All 'Mechs come equipped with stock Actuators, which can be upgraded for improved performance.",
         "Icon" : "uixSvgIcon_equipment_ActuatorArm"
     },
-    "BonusValueA" : "+15% Melee Dmg.",
-    "BonusValueB" : "Hand",
+    "BonusValueA" : "-10% Charge Self Dmg/Stab",
+    "BonusValueB" : "Upper Arm",
     "ComponentType" : "Upgrade",
     "ComponentSubType" : "NotSet",
     "PrefabIdentifier" : "",
     "BattleValue" : 0,
     "InventorySize" : 1,
-    "Tonnage" : 1,
+    "Tonnage" : 0,
     "AllowedLocations" : "Arms",
     "DisallowedLocations" : "All",
     "CriticalComponent" : false,
@@ -66,18 +66,69 @@
             },
             "effectType" : "StatisticEffect",
             "Description" : {
-                "Id" : "StatusEffect-Attack_DamageMelee-T3",
+                "Id" : "StatusEffect-Attack_ChargeSelfDamage-T1",
                 "Name" : "MELEE DAMAGE INCREASED",
-                "Details" : "Melee attacks deal 15% more damage.",
+                "Details" : "Charge attacks deal 10% less self damage.",
                 "Icon" : "uixSvgIcon_equipment_ActuatorArm"
             },
             "nature" : "Buff",
             "statisticData" : {
                 "appliesEachTick" : false,
                 "effectsPersistAfterDestruction" : false,
-                "statName" : "CBTBE_Punch_Target_Damage_Multi",
+                "statName" : "CBTBE_Charge_Attacker_Damage_Multi",
                 "operation" : "Float_Multiply",
-                "modValue" : "1.15",
+                "modValue" : "0.9",
+                "modType" : "System.Single",
+                "additionalRules" : "NotSet",
+                "targetCollection" : "Weapon",
+                "targetWeaponCategory" : "NotSet",
+                "targetWeaponType" : "NotSet",
+                "targetAmmoCategory" : "NotSet",
+                "targetWeaponSubType" : "Melee"
+            },
+            "tagData" : null,
+            "floatieData" : null,
+            "actorBurningData" : null,
+            "vfxData" : null,
+            "instantModData" : null,
+            "poorlyMaintainedEffectData" : null
+        },
+		{
+            "durationData" : {
+                "duration" : -1,
+                "ticksOnActivations" : false,
+                "useActivationsOfTarget" : false,
+                "ticksOnEndOfRound" : false,
+                "ticksOnMovements" : false,
+                "stackLimit" : -1,
+                "clearedWhenAttacked" : false
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "triggerLimit" : 0,
+                "extendDurationOnTrigger" : 0,
+                "specialRules" : "NotSet",
+                "effectTargetType" : "Creator",
+                "range" : 0,
+                "forcePathRebuild" : false,
+                "forceVisRebuild" : false,
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "StatusEffect-Attack_ChargeSelfStab-T1",
+                "Name" : "MELEE DAMAGE INCREASED",
+                "Details" : "Charge attacks deal 10% less self stab damage.",
+                "Icon" : "uixSvgIcon_equipment_ActuatorArm"
+            },
+            "nature" : "Buff",
+            "statisticData" : {
+                "appliesEachTick" : false,
+                "effectsPersistAfterDestruction" : false,
+                "statName" : "CBTBE_Charge_Attacker_Instability_Multi",
+                "operation" : "Float_Multiply",
+                "modValue" : "0.9",
                 "modType" : "System.Single",
                 "additionalRules" : "NotSet",
                 "targetCollection" : "Weapon",

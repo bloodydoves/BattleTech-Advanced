@@ -13,8 +13,11 @@
         },
 		"BonusDescriptions": {
 			"Bonuses": [
-				"HeatGenerated: +25%",
-				"Melee: +50%"
+				"HeatGenerated: +35%",
+				"PunchDamageBonus: +50%",
+				"KickDamageBonus: +50%",
+				"PhysWeapDamageBonus: +50%",
+				"Dynamic: 5"
 			]
 		},
 		"DynamicSlots": {
@@ -76,16 +79,118 @@
             },
             "effectType" : "StatisticEffect",
             "Description" : {
-                "Id" : "Proto_TSM-Melee_Damage",
-                "Name" : "MELEE DAMAGE INCREASED",
-                "Details" : "Melee attacks deal 50% more damage.",
+                "Id" : "pTSM-Kick_Damage",
+                "Name" : "pTSM Kick Damage",
+                "Details" : "Kick attacks deal 50% more damage.",
                 "Icon" : "uixSvgIcon_equipment_ActuatorArm"
             },
 			"nature" : "Buff",
             "statisticData" : {
                 "appliesEachTick" : false,
                 "effectsPersistAfterDestruction" : false,
-                "statName" : "DamagePerShot",
+                "statName" : "CBTBE_Kick_Target_Damage_Multi",
+                "operation" : "Float_Multiply",
+                "modValue" : "1.5",
+                "modType" : "System.Single",
+                "additionalRules" : "NotSet",
+                "targetCollection" : "Weapon",
+                "targetWeaponCategory" : "NotSet",
+                "targetWeaponType" : "NotSet",
+                "targetAmmoCategory" : "NotSet",
+                "targetWeaponSubType" : "Melee"
+            },
+            "tagData" : null,
+            "floatieData" : null,
+            "actorBurningData" : null,
+            "vfxData" : null,
+            "instantModData" : null,
+            "poorlyMaintainedEffectData" : null
+        },
+		{
+            "durationData" : {
+                "duration" : -1,
+                "ticksOnActivations" : false,
+                "useActivationsOfTarget" : false,
+                "ticksOnEndOfRound" : false,
+                "ticksOnMovements" : false,
+                "stackLimit" : 2,
+                "clearedWhenAttacked" : false
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "triggerLimit" : 0,
+                "extendDurationOnTrigger" : 0,
+                "specialRules" : "NotSet",
+                "effectTargetType" : "Creator",
+                "range" : 0,
+                "forcePathRebuild" : false,
+                "forceVisRebuild" : false,
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : false
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "pTSM-Punch_Damage",
+                "Name" : "pTSM Punch Damage",
+                "Details" : "Punch attacks deal 50% more damage.",
+                "Icon" : "uixSvgIcon_equipment_ActuatorArm"
+            },
+			"nature" : "Buff",
+            "statisticData" : {
+                "appliesEachTick" : false,
+                "effectsPersistAfterDestruction" : false,
+                "statName" : "CBTBE_Punch_Target_Damage_Multi",
+                "operation" : "Float_Multiply",
+                "modValue" : "1.5",
+                "modType" : "System.Single",
+                "additionalRules" : "NotSet",
+                "targetCollection" : "Weapon",
+                "targetWeaponCategory" : "NotSet",
+                "targetWeaponType" : "NotSet",
+                "targetAmmoCategory" : "NotSet",
+                "targetWeaponSubType" : "Melee"
+            },
+            "tagData" : null,
+            "floatieData" : null,
+            "actorBurningData" : null,
+            "vfxData" : null,
+            "instantModData" : null,
+            "poorlyMaintainedEffectData" : null
+        },
+		{
+            "durationData" : {
+                "duration" : -1,
+                "ticksOnActivations" : false,
+                "useActivationsOfTarget" : false,
+                "ticksOnEndOfRound" : false,
+                "ticksOnMovements" : false,
+                "stackLimit" : 2,
+                "clearedWhenAttacked" : false
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "triggerLimit" : 0,
+                "extendDurationOnTrigger" : 0,
+                "specialRules" : "NotSet",
+                "effectTargetType" : "Creator",
+                "range" : 0,
+                "forcePathRebuild" : false,
+                "forceVisRebuild" : false,
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : false
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "pTSM-PhysWeap_Damage",
+                "Name" : "pTSM Physical Weapon Damage",
+                "Details" : "Physical weapon attacks deal 50% more damage.",
+                "Icon" : "uixSvgIcon_equipment_ActuatorArm"
+            },
+			"nature" : "Buff",
+            "statisticData" : {
+                "appliesEachTick" : false,
+                "effectsPersistAfterDestruction" : false,
+                "statName" : "CBTBE_Physical_Weapon_Target_Damage_Multi",
                 "operation" : "Float_Multiply",
                 "modValue" : "1.5",
                 "modType" : "System.Single",
@@ -138,7 +243,7 @@
                 "effectsPersistAfterDestruction" : false,
                 "statName" : "HeatGenerated",
                 "operation" : "Float_Multiply",
-                "modValue" : "1.25",
+                "modValue" : "1.35",
                 "modType" : "System.Single",
                 "additionalRules" : "NotSet",
                 "targetCollection" : "Weapon",

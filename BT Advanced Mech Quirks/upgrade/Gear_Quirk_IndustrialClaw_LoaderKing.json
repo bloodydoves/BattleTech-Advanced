@@ -13,8 +13,8 @@
 		},
 		"BonusDescriptions": {
 			"Bonuses": [
-				"MeleeAcc: +1",
-				"Melee: +10%"
+				"PhysWeapDamageBonus: +10%",
+				"PhysWeapStabBonus: +10%"
 			]
 		},
 		"Flags": {
@@ -24,9 +24,6 @@
 				"no_salvage",
 				"autorepair"
 			]
-		},
-		"InventorySorter": {
-			"SortKey": "00020"
 		}
 	},
 	"StatName": null,
@@ -44,8 +41,8 @@
 		"Details": "This gear is the Loader King's industrial grasper claw, intended to move and carry heavy machinery and objects. Though never intended for combat, it has proven rather adept at rending BattleMech armor and structure.",
 		"Icon": "uixSvgIcon_equipment_ActuatorArm"
 	},
-	"BonusValueA": "+10% Melee Dmg",
-	"BonusValueB": "+1 Melee Accuracy",
+	"BonusValueA": "+10% Physical Weapon Dmg/Stab",
+	"BonusValueB": "",
 	"ComponentType": "Upgrade",
 	"ComponentSubType": "NotSet",
 	"PrefabIdentifier": "",
@@ -69,14 +66,14 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "ClawDamage",
-				"Name": "Hand Melee Damage",
-				"Details": "Melee attacks deal 10% Extra damage.",
+				"Id": "StatusEffect-ClawMelee",
+				"Name": "Claw Melee Damage",
+				"Details": "Physical weapon attacks deal 10% Extra damage.",
 				"Icon": "uixSvgIcon_equipment_ActuatorArm"
 			},
 			"nature": "Buff",
 			"statisticData": {
-				"statName": "DamagePerShot",
+				"statName": "CBTBE_Physical_Weapon_Target_Damage_Multi",
 				"operation": "Float_Multiply",
 				"modValue": "1.1",
 				"modType": "System.Single",
@@ -87,53 +84,30 @@
 		{
 			"durationData": {
 				"duration": -1,
-				"ticksOnActivations": false,
-				"useActivationsOfTarget": false,
-				"ticksOnEndOfRound": false,
-				"ticksOnMovements": false,
-				"stackLimit": -1,
-				"clearedWhenAttacked": false
+				"stackLimit": -1
 			},
 			"targetingData": {
 				"effectTriggerType": "Passive",
-				"triggerLimit": 0,
-				"extendDurationOnTrigger": 0,
-				"specialRules": "NotSet",
 				"effectTargetType": "Creator",
-				"range": 0,
-				"forcePathRebuild": false,
-				"forceVisRebuild": false,
 				"showInTargetPreview": false,
-				"showInStatusPanel": true
+				"showInStatusPanel": false
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "ArticulateActuators",
-				"Name": "Articulate Actuators",
-				"Details": "Melee attacks have +1 Accuracy.",
+				"Id": "StatusEffect-ClawMeleeStab",
+				"Name": "Claw Melee Stab",
+				"Details": "Physical weapon attacks deal 10% extra stability damage.",
 				"Icon": "uixSvgIcon_equipment_ActuatorArm"
 			},
 			"nature": "Buff",
 			"statisticData": {
-				"appliesEachTick": false,
-				"effectsPersistAfterDestruction": false,
-				"statName": "AccuracyModifier",
-				"operation": "Float_Add",
-				"modValue": "-1.0",
+				"statName": "CBTBE_Physical_Weapon_Target_Instability_Multi",
+				"operation": "Float_Multiply",
+				"modValue": "1.1",
 				"modType": "System.Single",
-				"additionalRules": "NotSet",
 				"targetCollection": "Weapon",
-				"targetWeaponCategory": "NotSet",
-				"targetWeaponType": "NotSet",
-				"targetAmmoCategory": "NotSet",
 				"targetWeaponSubType": "Melee"
-			},
-			"tagData": null,
-			"floatieData": null,
-			"actorBurningData": null,
-			"vfxData": null,
-			"instantModData": null,
-			"poorlyMaintainedEffectData": null
+			}
 		}
 	],
 	"ComponentTags": {
