@@ -14,7 +14,9 @@
         },
         "BonusDescriptions": {
             "Bonuses": [
-                "MeleeAcc: +1",
+                "KickAccuracy: +1",
+				"PunchAccuracy: +1",
+				"PhysWeapAccuracy: +1",
                 "MeleeDef: +1",
                 "GyroStab: 40"
             ]
@@ -75,8 +77,8 @@
             "effectType": "StatisticEffect",
             "Description": {
                 "Id": "GyroMeleeDef",
-                "Name": "GECM Interference",
-                "Details": "Guardian ECM making this unit harder to hit.",
+                "Name": "Gyro Defense",
+                "Details": "A highly tuned gyro makes this unit harder to hit with melee attacks.",
                 "Icon": "uixSvgIcon_equipment_Gyro"
             },
             "nature": "Buff",
@@ -120,25 +122,112 @@
             },
             "effectType": "StatisticEffect",
             "Description": {
-                "Id": "StatusEffect-Attack_ToHitMelee-T2",
+                "Id": "StatusEffect-Attack_ToHitKick-T1",
                 "Name": "MELEE HIT CHANCE IMPROVED",
-                "Details": "Melee attacks attempted have their hit improved.",
+                "Details": "Melee attacks attempted have their hit improved by +1.",
                 "Icon": "uixSvgIcon_equipment_Gyro"
             },
             "nature": "Buff",
             "statisticData": {
                 "appliesEachTick": false,
                 "effectsPersistAfterDestruction": false,
-                "statName": "AccuracyModifier",
+                "statName": "CBTBE_Kick_Attack_Mod",
                 "operation": "Float_Add",
                 "modValue": "-1.0",
-                "modType": "System.Single",
-                "additionalRules": "NotSet",
-                "targetCollection": "Weapon",
-                "targetWeaponCategory": "NotSet",
-                "targetWeaponType": "NotSet",
-                "targetAmmoCategory": "NotSet",
-                "targetWeaponSubType": "Melee"
+                "modType": "System.Int32",
+                "additionalRules": "NotSet"
+            },
+            "tagData": null,
+            "floatieData": null,
+            "actorBurningData": null,
+            "vfxData": null,
+            "instantModData": null,
+            "poorlyMaintainedEffectData": null
+        },
+		{
+            "durationData": {
+                "duration": -1,
+                "ticksOnActivations": false,
+                "useActivationsOfTarget": false,
+                "ticksOnEndOfRound": false,
+                "ticksOnMovements": false,
+                "stackLimit": -1,
+                "clearedWhenAttacked": false
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "triggerLimit": 0,
+                "extendDurationOnTrigger": 0,
+                "specialRules": "NotSet",
+                "effectTargetType": "Creator",
+                "range": 0,
+                "forcePathRebuild": false,
+                "forceVisRebuild": false,
+                "showInTargetPreview": false,
+                "showInStatusPanel": true
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "StatusEffect-Attack_ToHitPunch-T1",
+                "Name": "MELEE HIT CHANCE IMPROVED",
+                "Details": "Melee attacks attempted have their hit improved by +1.",
+                "Icon": "uixSvgIcon_equipment_Gyro"
+            },
+            "nature": "Buff",
+            "statisticData": {
+                "appliesEachTick": false,
+                "effectsPersistAfterDestruction": false,
+                "statName": "CBTBE_Punch_Attack_Mod",
+                "operation": "Float_Add",
+                "modValue": "-1.0",
+                "modType": "System.Int32",
+                "additionalRules": "NotSet"
+            },
+            "tagData": null,
+            "floatieData": null,
+            "actorBurningData": null,
+            "vfxData": null,
+            "instantModData": null,
+            "poorlyMaintainedEffectData": null
+        },
+		{
+            "durationData": {
+                "duration": -1,
+                "ticksOnActivations": false,
+                "useActivationsOfTarget": false,
+                "ticksOnEndOfRound": false,
+                "ticksOnMovements": false,
+                "stackLimit": -1,
+                "clearedWhenAttacked": false
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "triggerLimit": 0,
+                "extendDurationOnTrigger": 0,
+                "specialRules": "NotSet",
+                "effectTargetType": "Creator",
+                "range": 0,
+                "forcePathRebuild": false,
+                "forceVisRebuild": false,
+                "showInTargetPreview": false,
+                "showInStatusPanel": true
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "StatusEffect-Attack_ToHitPhysWeap-T1",
+                "Name": "MELEE HIT CHANCE IMPROVED",
+                "Details": "Melee attacks attempted have their hit improved by +1.",
+                "Icon": "uixSvgIcon_equipment_Gyro"
+            },
+            "nature": "Buff",
+            "statisticData": {
+                "appliesEachTick": false,
+                "effectsPersistAfterDestruction": false,
+                "statName": "CBTBE_Physical_Weapon_Attack_Mod",
+                "operation": "Float_Add",
+                "modValue": "-1.0",
+                "modType": "System.Int32",
+                "additionalRules": "NotSet"
             },
             "tagData": null,
             "floatieData": null,
