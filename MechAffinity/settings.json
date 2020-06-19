@@ -1,7 +1,8 @@
 {
     "debug" : true,
-    "missionsBeforeDecay" : 2,
-    "removeAffinityAfter" : 8,
+	"showDescriptionsOnChassis" : true,
+    "missionsBeforeDecay" : 1,
+    "removeAffinityAfter" : 7,
     "lowestPossibleDecay" : 0,
     "globalAffinities" : 
     [
@@ -51,7 +52,7 @@
                 {
                     "missionsRequired" : 8,
                     "levelName" : "Zippy",
-                    "decription" : "Sprint With Incredible Speed!",
+                    "decription" : "15% boost to sprint speed!",
                     "effectData" : 
                     [
                         {
@@ -98,7 +99,7 @@
                 {
                     "missionsRequired" : 8,
                     "levelName" : "Evasive",
-                    "decription" : "Shrinks The Mech's Target Even Further!",
+                    "decription" : "+2 bonus against being hit",
                     "effectData" : 
                     [
                         {
@@ -145,7 +146,7 @@
                 {
                     "missionsRequired" : 8,
                     "levelName" : "Nimble",
-                    "decription" : "Lets the Mech Jump Even Further",
+                    "decription" : "15% more jumping distance",
                     "effectData" : 
                     [
                         {
@@ -192,7 +193,7 @@
                 {
                     "missionsRequired" : 8,
                     "levelName" : "Encouraging",
-                    "decription" : "Great at Keeping Morale High!",
+                    "decription" : "+3 morale whenever morale is gained",
                     "effectData" : 
                     [
                         {
@@ -239,7 +240,7 @@
                 {
                     "missionsRequired" : 8,
                     "levelName" : "Precise Shot",
-                    "decription" : "Able to Shoot Through a Needle's Eye!",
+                    "decription" : "+1 bonus on weapon attacks",
                     "effectData" : 
                     [
                         {
@@ -286,7 +287,7 @@
                 {
                     "missionsRequired" : 8,
                     "levelName" : "Keen-Eyed",
-                    "decription" : "Improves Sensor Capability Even Further",
+                    "decription" : "15% boost to sensor and sight range",
                     "effectData" : 
                     [
                         {
@@ -366,7 +367,7 @@
                 {
                     "missionsRequired" : 8,
                     "levelName" : "Agile",
-                    "decription" : "Gains Bonus Evasion on Movement!",
+                    "decription" : "Gains 1 bonus evasion on movement",
                     "effectData" : 
                     [
                         {
@@ -413,7 +414,7 @@
                 {
                     "missionsRequired" : 8,
                     "levelName" : "Sturdy",
-                    "decription" : "Is Incredibly Resistant to Pilot Hits",
+                    "decription" : "Gains 2 extra pilot hits",
                     "effectData" : 
                     [
                         {
@@ -432,7 +433,7 @@
                             "statisticData": {
                                 "additionalRules": "NotSet",
                                 "modType": "System.Int32",
-                                "modValue": "1",
+                                "modValue": "2",
                                 "operation": "Int_Add",
                                 "statName": "BonusHealth",
                                 "targetAmmoCategory": "NotSet",
@@ -460,59 +461,12 @@
                 {
                     "missionsRequired" : 8,
                     "levelName" : "Cool-Running",
-                    "decription" : "Has Enhanced the Cooling Systems",
+                    "decription" : "Adds 6 bonus heat sinking, effectively two standard heat sinks.",
                     "effectData" : 
                     [
                         {
                             "Description": {
                                 "Details": "The pilot's incredible skill with this mech improves its heat sinking systems, increasing dissipation by 3.",
-                                "Icon": "UixSvgIcon_specialEquip_System",
-                                "Id": "StatusEffect-Affinity-Dissipation",
-                                "Name": "Mech Affinity Heat Dissipation Boost"
-                            },
-                            "durationData": {
-                                "duration": -1,
-                                "stackLimit": -1
-                            },
-                            "effectType": "StatisticEffect",
-                            "nature": "Buff",
-                            "statisticData": {
-                                "additionalRules": "NotSet",
-                                "modType": "System.Int32",
-                                "modValue": "3",
-                                "operation": "Int_Add",
-                                "statName": "HeatSinkCapacity",
-                                "targetAmmoCategory": "NotSet",
-                                "targetCollection": "NotSet",
-                                "targetWeaponCategory": "NotSet",
-                                "targetWeaponSubType": "NotSet",
-                                "targetWeaponType": "NotSet"
-                            },
-                            "targetingData": {
-                                "effectTargetType": "Creator",
-                                "effectTriggerType": "Passive",
-                                "hideApplicationFloatie": true,
-                                "showInStatusPanel": false,
-                                "showInTargetPreview": false
-                            }
-                        }
-                    ]
-                }
-            ]
-        },
-		{
-            "chassisNames" : ["chrprfmech_yeomanbase-001_60", "Axman_65", "chrprfmech_helepolisbase-001_75", "chrPrfMech_orionBase-001_75", "chrprfmech_longbowbase-001_85", "chrPrfMech_stalkerBase-001_85", "chrPrfMech_stalkerBase-001_75", "chrprfmech_marauderiibase-001_100", "chrprfmech_hellbringerbase-001_65", "chrprfmech_madcatmkiibase-001_90", "chrprfmech_banebase-001_100"],
-            "affinityLevels" : 
-            [
-                {
-                    "missionsRequired" : 8,
-                    "levelName" : "Ice Cold",
-                    "decription" : "Has Greatly Enhanced the Cooling Systems",
-                    "effectData" : 
-                    [
-                        {
-                            "Description": {
-                                "Details": "The pilot's incredible skill with this mech improves its heat sinking systems, increasing dissipation by 6.",
                                 "Icon": "UixSvgIcon_specialEquip_System",
                                 "Id": "StatusEffect-Affinity-Dissipation",
                                 "Name": "Mech Affinity Heat Dissipation Boost"
@@ -548,13 +502,60 @@
             ]
         },
 		{
+            "chassisNames" : ["chrprfmech_yeomanbase-001_60", "Axman_65", "chrprfmech_helepolisbase-001_75", "chrPrfMech_orionBase-001_75", "chrprfmech_longbowbase-001_85", "chrPrfMech_stalkerBase-001_85", "chrPrfMech_stalkerBase-001_75", "chrprfmech_marauderiibase-001_100", "chrprfmech_hellbringerbase-001_65", "chrprfmech_madcatmkiibase-001_90", "chrprfmech_banebase-001_100"],
+            "affinityLevels" : 
+            [
+                {
+                    "missionsRequired" : 8,
+                    "levelName" : "Ice Cold",
+                    "decription" : "Adds 9 bonus heat sinking, effectively three standard heat sinks.",
+                    "effectData" : 
+                    [
+                        {
+                            "Description": {
+                                "Details": "The pilot's incredible skill with this mech improves its heat sinking systems, increasing dissipation by 6.",
+                                "Icon": "UixSvgIcon_specialEquip_System",
+                                "Id": "StatusEffect-Affinity-Dissipation",
+                                "Name": "Mech Affinity Heat Dissipation Boost"
+                            },
+                            "durationData": {
+                                "duration": -1,
+                                "stackLimit": -1
+                            },
+                            "effectType": "StatisticEffect",
+                            "nature": "Buff",
+                            "statisticData": {
+                                "additionalRules": "NotSet",
+                                "modType": "System.Int32",
+                                "modValue": "9",
+                                "operation": "Int_Add",
+                                "statName": "HeatSinkCapacity",
+                                "targetAmmoCategory": "NotSet",
+                                "targetCollection": "NotSet",
+                                "targetWeaponCategory": "NotSet",
+                                "targetWeaponSubType": "NotSet",
+                                "targetWeaponType": "NotSet"
+                            },
+                            "targetingData": {
+                                "effectTargetType": "Creator",
+                                "effectTriggerType": "Passive",
+                                "hideApplicationFloatie": true,
+                                "showInStatusPanel": false,
+                                "showInTargetPreview": false
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+		{
             "chassisNames" : ["chrprfmech_striderbase-001_40", "chrPrfMech_vindicatorBase-001_45", "chrprfmech_bombardbase-001_50", "chrPrfMech_kintaroBase-001_55", "chrPrfMech_griffinBase-001_55", "chrprfmech_ostwarhotd-001_65", "chrprfmech_merlinbase-001_60", "chrprfmech_roughneckbase-001_65", "chrprfmech_rtcorsair1base-001_75", "chrprfmech_rtcorsair1base-001_95", "chrprfmech_rtcorsair2base-001_95", "chrprfmech_rtcorsair3base-001_95", "chrprfmech_rtcorsair4base-001_95", "chrprfmech_rtcorsair5base-001_95", "chrprfmech_titanbase-001_100", "chrprfmech_novacatbase-001_70"],
             "affinityLevels" : 
             [
                 {
                     "missionsRequired" : 8,
                     "levelName" : "Resistant",
-                    "decription" : "Has Improved Resistance to Critical Damage",
+                    "decription" : "50% less chance to suffer critical hits",
                     "effectData" : 
                     [
                         {
@@ -601,7 +602,7 @@
                 {
                     "missionsRequired" : 8,
                     "levelName" : "Unlimited Power",
-                    "decription" : "Has Boosted Weapon Damage",
+                    "decription" : "Energy, Ballistic, and Missile weapons deal 10% more damage.",
                     "effectData" : 
                     [
                         {
@@ -714,7 +715,7 @@
                 {
                     "missionsRequired" : 8,
                     "levelName" : "Brawler",
-                    "decription" : "Has Boosted Melee Damage",
+                    "decription" : "Kicks, punches, and physical weapon attacks deal 15% more damage.",
                     "effectData" : 
                     [
                         {
@@ -827,7 +828,7 @@
                 {
                     "missionsRequired" : 8,
                     "levelName" : "Command Unit",
-                    "decription" : "Has Boosted Initiative",
+                    "decription" : "Gains +1 initiative",
                     "effectData" : 
                     [
                         {
