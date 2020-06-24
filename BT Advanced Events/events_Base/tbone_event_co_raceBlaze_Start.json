@@ -1,0 +1,317 @@
+{
+    "Description" : {
+        "Id" : "tbone_event_co_raceBlaze_Start",
+        "Name" : "The Need For Speed",
+        "Details" : "[[SCN_MW,{SCN_MW.Callsign}]] asks to see you after mess one evening.\r\n\r\n\"Commander, I've got a proposal for you. We travel all over the Inner Sphere but spend half the time sitting in orbit doing nothing, you know?\r\n\r\n\"Yeah, and?\"\r\n\r\nWell, before I enlisted in the [[DM.BaseDescriptionDefs[LoreMAF],MAF]] I was a hell of an off-road endurance racer. I want to race again, but I need startup funding and someone to call strategy for me. That's where you come in. You call races for me, and we split the cost <i>and</i> the winnings 50-50. I even tracked down two vehicles that should work, and they both cost about the same. First is a classic for a reason, the [[DM.BaseDescriptionDefs[TBoneLoreApocalypseWR],Apocalypse World Rover]], built by [[DM.BaseDescriptionDefs[LoreGM],GM]]. The second is a newer design by [[DM.BaseDescriptionDefs[LoreEarthwerksInc],Earthwerks]], the [[DM.BaseDescriptionDefs[TBoneLoreIbexRV],Ibex RV]]. Win more than we lose, and [[DM.BaseDescriptionDefs[TBoneLoreISORES],ISORES]] will recognize us as champions! Waddya say?\"",
+        "Icon" : "uixTxrSpot_CommandersQuarters.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 10000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : [
+			"finished_Blaze",
+			"racer_apocalypse",
+			"racer_ibex"
+					]
+        },
+        "RequirementComparisons" : [
+            {
+                "obj" : "Funds",
+                "op" : "GreaterThanOrEqual",
+                "val" : 2000000,
+                "valueConstant" : "2000000"
+            }
+        ]
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [
+        {
+            "Scope" : "SecondaryMechWarrior",
+            "Requirements" : {
+                "Scope" : "SecondaryMechWarrior",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : [
+                        "name_Blaze"
+                    ]
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : [
+					"racer_apocalypse",
+					"racer_ibex"
+					]
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Apocalypse World Rover",
+                "Details" : "[-100000 c-bills]",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Apocalypse",
+                        "Details" : "\"Yeah, why not? I'm a sucker for the classics, [[SCN_MW,{SCN_MW.Callsign}]]. Let's get the Apocalypse World Rover.\"\r\n\r\n\"Awesome! The [[DM.BaseDescriptionDefs[TBoneLoreApocalypseWR],Apocalypse]] isn't the fastest or nimblest off-roader, but you can't beat it for plain durability or fuel capacity, even if they do tend to run a little hotter than I'd like. You won't regret this, Commander {Commander.LastName}. With you running strategy and me driving, I think we can makes some real money. Plus, I bet a lot of the crew will get a kick out of watching!\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Funds",
+                                    "value" : "-100000",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "racer_apocalypse"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : [
+                                    "pilot_morale_low"
+                                ]
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : [
+                                    "pilot_morale_high"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 30
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "Ibex RV",
+                "Details" : "[-100000 c-bills]",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "Ibex RV",
+                        "Details" : "\"Sure [[SCN_MW,{SCN_MW.Callsign}]], let's give it a shot. I like the look of that Ibex RV.\"\r\n\r\n\"Yes! The [[DM.BaseDescriptionDefs[TBoneLoreIbexRV],Ibex]] was made for this kind of thing. It's faster than the Apocalypse, and nimble as a cat. It was designed for the desert so it might run a little cool in arctic environments, but you can get around that with some \"spirited\" driving. The real downsides are the smaller fuel tank and the lighter armor plating. I think we've got a real chance at making some good money with this, and I bet the crew will love watching too! With me driving and you on stratcom, we'll be unbeatable.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Funds",
+                                    "value" : "-100000",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "racer_ibex"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : [
+                                    "pilot_morale_low"
+                                ]
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : [
+                                    "pilot_morale_high"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 30
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_2",
+                "Name" : "We don't race. We fight.",
+                "Details" : "pass",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_2_0",
+                        "Name" : "pass on racing",
+                        "Details" : "\"Sorry, [[SCN_MW,{SCN_MW.Callsign}]]. What happens if you're injured racing and we can't complete a contract? That hurts our [[DM.BaseDescriptionDefs[LoreMRBC],MRBC]] rating. We're a mercenary command, not a racing team.\"\r\n\r\nBlaze snaps to military attention and salutes. \"Understood sir, sorry sir.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : [
+                                    "pilot_morale_low"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}

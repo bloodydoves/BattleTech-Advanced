@@ -15,34 +15,40 @@
 		"Debug": false,
 		"Trace": false,
 		"Fixes": {
+			"AlternateMechNamingStyle": false,
+            "BraceOnMeleeWithJuggernaut" : true,
 			"BulkPurchasing": true,
 			"CombatLog": false,
 			"DisableCampaign": true,
 			"DisableCombatSaves": true,
+			"DisableMPHashCalculation" : true,
 			"ExtendedStats": false,
 			"FlexibleSensorLock": false,
+			"MechbayLayout" : true,
 			"MultiTargetStat": true,
-			"AlternateMechNamingStyle": false,
 			"PainTolerance": false,
 			"PathfinderTeamFix": true,
 			"PreventHeadShots": false,
 			"RandomStartByDifficulty": true,
 			"ReduceSaveCompression": true,
 			"ShowAllArgoUpgrades": true,
-			"SkirmishAlwaysUnlimited": false,
+			"SimGameDifficultyLabelsReplacer" : false,
+			"SkirmishAlwaysUnlimited": true,
 			"SkirmishReset": false,
 			"SkipDeleteSavePopup": true,
 			"SpawnProtection": false,
 			"StreamlinedMainMenu": true,
+			"UrbanExplosionsFix" : false
 			"WeaponTooltip": false
 		},
 		"Abilities": {
+			"FlexibleSensorLockId": "AbilityDefT5A",
+            "JuggernautId" : "AbilityDefGu8",
 			"MultiTargetId": "AbilityDefG5"
 		},
 		"Combat": {
 			"FlexibleSensorLock": {
-				"FreeActionWithAbility": false,
-				"AbilityId": "AbilityDefT8A"
+				"FreeActionWithAbility": false
 			},
 			"PainTolerance": {
 				"ResistPerGuts": 10,
@@ -66,6 +72,10 @@
 		"Store": {
 			"QuantityOnShift": 5,
 			"QuantityOnControl": 20
-		}
+		},
+        "SimGameDifficultyStrings" : {
+            "DESCRIPTION" : "Overall Difficulty",
+            "LABEL" : "Difficulty"
+        }
 	}
 }
