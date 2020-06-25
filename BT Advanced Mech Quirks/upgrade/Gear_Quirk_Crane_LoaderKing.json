@@ -137,7 +137,7 @@
             },
             "nature" : "Buff"
         },
-         {
+        {
             "durationData" : {
                 "duration": -1,
                 "stackLimit": 1
@@ -198,6 +198,70 @@
                 "modType": "System.Int32"
             },
             "nature" : "Buff"
+        },
+		{
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "triggerLimit" : 0,
+                "extendDurationOnTrigger" : 0,
+                "specialRules" : "NotSet",
+                "effectTargetType" : "Creator",
+                "range" : 0,
+                "forcePathRebuild" : false,
+                "forceVisRebuild" : false,
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "StatusEffect-CraneBaseDamage",
+                "Name" : "Hatchet Base Damage",
+                "Details" : "Hatchets do 5 damage per 5 tons of the mech.",
+                "Icon" : "uixSvgIcon_equipment_ActuatorLeg"
+            },
+            "nature" : "Buff",
+            "statisticData" : {
+                "statName" : "CBTBE_Physical_Weapon_Target_Damage_Per_Attacker_Ton",
+                "operation": "Set",
+                "modValue": "0.01",
+                "modType": "System.Single"
+            }
+        },
+		{
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "triggerLimit" : 0,
+                "extendDurationOnTrigger" : 0,
+                "specialRules" : "NotSet",
+                "effectTargetType" : "Creator",
+                "range" : 0,
+                "forcePathRebuild" : false,
+                "forceVisRebuild" : false,
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "StatusEffect-CraneBaseStabDamage",
+                "Name" : "Hatchet Base Stab Damage",
+                "Details" : "Hatchets do 5 stab damage per 10 tons of the mech.",
+                "Icon" : "uixSvgIcon_equipment_ActuatorLeg"
+            },
+            "nature" : "Buff",
+            "statisticData" : {
+                "statName" : "CBTBE_Physical_Weapon_Target_Instability_Per_Attacker_Ton",
+                "operation": "Set",
+                "modValue": "0.01",
+                "modType": "System.Single"
+            }
         }
     ],
     "ComponentTags" : {
