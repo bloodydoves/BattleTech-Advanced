@@ -16,9 +16,9 @@
 		},
 		"BonusDescriptions": {
 			"Bonuses": [
-				"MeleeAcc: +2",
-				"MeleeStab: +8%",
-				"Melee: +8%",
+				"PunchStabBonus: +8%",
+				"PunchDamageBonus: +8%",
+				"PunchAccuracy: +2",
 				"ArmAccuracy: +1"
 			]
 		},
@@ -81,12 +81,10 @@
 			},
 			"nature": "Buff",
 			"statisticData": {
-				"statName": "DamagePerShot",
+				"statName": "CBTBE_Punch_Target_Damage_Multi",
 				"operation": "Float_Multiply",
 				"modValue": "1.08",
-				"modType": "System.Single",
-				"targetCollection": "Weapon",
-				"targetWeaponSubType": "Melee"
+				"modType": "System.Single"
 			}
 		},
 		{
@@ -109,12 +107,10 @@
 			},
 			"nature": "Buff",
 			"statisticData": {
-				"statName": "Instability",
+				"statName": "CBTBE_Punch_Target_Instability_Multi",
 				"operation": "Float_Multiply",
 				"modValue": "1.08",
-				"modType": "System.Single",
-				"targetCollection": "Weapon",
-				"targetWeaponSubType": "Melee"
+				"modType": "System.Single"
 			}
 		},
 		{
@@ -167,25 +163,20 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "StatusEffect-MACCACT1",
+				"Id": "Battlefists-PunchAccuracy",
 				"Name": "Articulate Actuators",
-				"Details": "Melee attacks have +1 Accuracy.",
+				"Details": "Punch attacks have +2 Accuracy.",
 				"Icon": "uixSvgIcon_equipment_ActuatorArm"
 			},
 			"nature": "Buff",
 			"statisticData": {
 				"appliesEachTick": false,
 				"effectsPersistAfterDestruction": false,
-				"statName": "AccuracyModifier",
-				"operation": "Float_Add",
-				"modValue": "-2.0",
-				"modType": "System.Single",
-				"additionalRules": "NotSet",
-				"targetCollection": "Weapon",
-				"targetWeaponCategory": "NotSet",
-				"targetWeaponType": "NotSet",
-				"targetAmmoCategory": "NotSet",
-				"targetWeaponSubType": "Melee"
+				"statName": "CBTBE_Punch_Attack_Mod",
+				"operation": "Int_Add",
+				"modValue": "-2",
+				"modType": "System.Int32",
+				"additionalRules": "NotSet"
 			},
 			"tagData": null,
 			"floatieData": null,
