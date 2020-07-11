@@ -7,7 +7,8 @@
 		],
 		"BonusDescriptions": {
 			"Bonuses": [
-				"Defense: +3"
+				"Defense: +2",
+				"ECMRadius: 150"
 			]
 		},
 		"InventorySorter": {
@@ -29,7 +30,7 @@
 		"Details": "The Angel ECM Suite is an advanced version of the Guardian ECM Suite operating on a broader spectrum and greatly advances ECM technology on the battlefield. Development of the Angel began in the Draconis Combine shortly after the Battle of Luthien, but despite assistance from ComStar, cost overruns and internal problems within both powers kept it in its experimental stages for a long time and delayed its widespread deployment.",
 		"Icon": "uixSvgIcon_equipment_TTS"
 	},
-	"BonusValueA": "+3 Defense",
+	"BonusValueA": "+2 Defense",
 	"BonusValueB": "",
 	"ComponentType": "Upgrade",
 	"ComponentSubType": "NotSet",
@@ -40,34 +41,62 @@
 	"AllowedLocations": "All",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
-	"statusEffects": [
-		{
-			"durationData": {
-				"duration": -1,
-				"stackLimit": -1
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"effectTargetType": "Creator",
-				"showInTargetPreview": false,
-				"showInStatusPanel": false
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "GECMInterference",
-				"Name": "GECM Interference",
-				"Details": "Guardian ECM making this unit harder to hit.",
-				"Icon": "uixSvgIcon_equipment_Gyro"
-			},
-			"nature": "Buff",
-			"statisticData": {
-				"statName": "ToHitThisActor",
-				"operation": "Float_Add",
-				"modValue": "3.0",
-				"modType": "System.Single"
-			}
-		}
+	"Auras": [
+        {
+            "Id": "Gear_GECM_ECM",
+            "Name": "ECM",
+            "ReticleColor": "#ffffff",
+            "Range": 150,
+            "RemoveOnSensorLock": false,
+            "State": "Persistent",
+            "ApplySelf": true,
+            "AllyStealthAffection": "None",
+            "EnemyStealthAffection": "None",
+            "IsPositiveToAlly": true,
+            "IsNegativeToEnemy": false,
+            "ownerVFX": [],
+            "targetVFX": [],
+            "removeOwnerVFX": [],
+            "removeTargetVFX": [],
+            "ownerSFX": [],
+            "targetSFX": [],
+            "removeOwnerSFX": [],
+            "removeTargetSFX": [],
+            "statusEffects": [
+                {
+                    "durationData": {
+                        "duration": -1,
+                        "stackLimit": -1
+                    },
+                    "targetingData": {
+                        "effectTriggerType": "Passive",
+                        "specialRules": "NotSet",
+                        "effectTargetType": "AlliesWithinRange",
+                        "range": 0.0,
+                        "forcePathRebuild": false,
+                        "forceVisRebuild": false,
+                        "showInTargetPreview": false,
+                        "showInStatusPanel": true
+                    },
+                    "effectType": "StatisticEffect",
+                    "Description": {
+                        "Id": "GECMInterference",
+                        "Name": "GECM Interference",
+                        "Details": "Guardian ECM making this unit harder to hit",
+                        "Icon": "uixSvgIcon_equipment_Gyro"
+                    },
+                    "statisticData": {
+                        "statName": "ToHitThisActor",
+                        "operation": "Float_Add",
+                        "modValue": "2.0",
+                        "modType": "System.Single"
+                    },
+                    "nature": "Buff"
+                }
+            ]
+        }
 	],
+	"statusEffects": [],
 	"ComponentTags": {
 		"items": [
 			"ElectronicCounterMeasures",
