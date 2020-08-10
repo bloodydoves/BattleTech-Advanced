@@ -1,0 +1,29 @@
+{
+    "TargetID": "CareerDifficultySettings",
+    "Instructions": [
+        {
+			"JSONPath": "$.difficultyList[?(@.ID== 'diff_startingplanet')].Options",
+            "Action": "ArrayAdd",
+            "Value": 
+				{
+					"ID": "diff_EZMode",
+					"Name": "Easy Mode",
+					"TelemetryEventDesc": "",
+					"DifficultyValue": 0,
+					"CareerScoreModifier": 0.0,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "CareerMode",
+							"ConstantName": "StartingSystems",
+							"ConstantValue": "Vannes"
+						},
+						{
+							"ConstantType": "CareerMode",
+							"ConstantName": "StartingRandomMechLists",
+							"ConstantValue": "itemCollection_Mechs_Starting_Brawling_Medium,itemCollection_Mechs_Starting_Fire_Support_Medium,itemCollection_Mechs_Starting_Recon_Medium,itemCollection_Mechs_Starting_Sniper_Medium,itemCollection_Mechs_Starting_Generic_Medium"
+						}
+					]
+				}
+         }
+    ]
+}
