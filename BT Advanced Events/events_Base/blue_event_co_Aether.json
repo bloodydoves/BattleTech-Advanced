@@ -1,0 +1,168 @@
+{
+    "Description" : {
+        "Id" : "blue_event_co_Aether",
+        "Name" : "The Winds of Chance",
+        "Details" : "As you relax in a bar after a hard day's work, you feel eyes on the back of your head, and turn to see the bartender pointing your crew out to a woman. Despite her dangerous eyes, you put a hand out, restraining Darius from challenging her as she approaches. Whatever she's here for, it doesn't seem like trouble. At least not the immediate sort.\r\n\r\n\"Are you Commander {COMMANDER.Callsign}? I heard rumors that you've been taking jobs for a certain Lady.\" She watches as you all glance at each other, seeming to take that as enough confirmation to carry on. \"[[DM.BaseDescriptionDefs[Blue_Lore_Aether],Aether]], Mechwarrior, Arano Royal Guard. Well, that and 33rd planetary guard, Weldry.\" She scratches the back of her head, seeming embarrassed about that particular posting.\r\n\r\nYou vaguely recognize her, now that she mentions the royal guard - you saw her face hanging around Raju occasionally, back a few years ago. She leans in close to whisper. \"I've been laying low since the coup, waiting for a chance. If you're going to help do something about it, well, I'd like to enlist.\"",
+        "Icon" : "uixTxrSpot_BigCity"
+    },
+    "Scope" : "Company",
+    "Weight" : 10000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : [
+                "flashpoint_StoryTime3_complete"
+            ]
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "RequirementComparisons" : [
+            {
+                "obj" : "Travel",
+                "op" : "Equal",
+                "val" : 0,
+                "valueConstant" : "0"
+            }
+        ]
+    },
+    "AdditionalRequirements" : [
+        {
+            "Scope" : "Commander",
+            "RequirementTags" : {
+                "tagSetSourceFile" : "",
+                "items" : []
+            },
+            "ExclusionTags" : {
+                "tagSetSourceFile" : "",
+                "items" : []
+            },
+            "RequirementComparisons" : [
+                {
+                    "obj" : "Injuries",
+                    "op" : "Equal",
+                    "val" : 0,
+                    "valueConstant" : "0"
+                }
+            ]
+        },
+        {
+            "Scope" : "StarSystem",
+            "RequirementTags" : {
+                "tagSetSourceFile" : "",
+                "items" : []
+            },
+            "ExclusionTags" : {
+                "tagSetSourceFile" : "",
+                "items" : [
+                    "planet_other_empty"
+                ]
+            },
+            "RequirementComparisons" : []
+        }
+    ],
+    "AdditionalObjects" : [],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "We're full up.",
+                "Details" : "",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "A dejected warrior",
+                        "Details" : "You shake your head at her, remembering the scandal that got her transfered to the ass-end of nowhere. No telling what she's really here for, and you don't want to welcome aboard someone your newest employer may have problems with.\r\n\r\nAether slumps, dejected, and wanders away. Clearly she cared more about it than just another job.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : []
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "Welcome aboard.",
+                "Details" : "",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "A fresh face",
+                        "Details" : "You nod your head to the soldier: \"Welcome aboard, [[DM.BaseDescriptionDefs[Blue_Lore_Aether],Aether]]. We can always use volunteers.\"\r\n\r\nAfter you exchange pleasantries, you ponder the logistics of keeping her and Kamea apart, and whether it's even necessary. Her infatuation with the princess was a scandal, true, but you never heard that she caused any issues over it. It was a long time ago, maybe it was just a crush and has faded.\r\n\r\n\"Is it true Lady Arano is alive?\" The excited gleam in her eye as she whispers to you says otherwise.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : [
+                                {
+                                    "Type" : "MechWarrior_AddRoster",
+                                    "value" : "pilot_bw_Aether",
+                                    "valueConstant" : null,
+                                    "additionalValues" : null
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}
