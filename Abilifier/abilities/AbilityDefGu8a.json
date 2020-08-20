@@ -1,0 +1,115 @@
+{
+	"Description": {
+		"Id": "AbilityDefGu8a",
+		"Name": "BRAWLER",
+		"Details": "PASSIVE: Grants a 20% bonus to kicks, punches, and DFAs. Reduces self-damage from DFAs by 50%.",
+		"Icon": "biceps"
+	},
+	"DisplayParams": "ShowInMWTRay",
+	"ReqSkill": "Guts",
+	"ReqSkillLevel": 8,
+	"ActivationTime": "Passive",
+	"EffectData": [
+		{
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "effectTargetType" : "Creator",
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "AbilityDefGU8a_KickDamage",
+                "Name" : "Kick Damage Increased",
+                "Details" : "Kick attacks deal 20% more damage.",
+                "Icon" : "biceps"
+            },
+            "nature" : "Buff",
+            "statisticData" : {
+                "statName" : "CBTBE_Kick_Target_Damage_Multi",
+                "operation" : "Float_Multiply",
+                "modValue" : "1.2",
+                "modType" : "System.Single"
+            }
+        },
+		{
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "effectTargetType" : "Creator",
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "AbilityDefGU8a_PunchDamage",
+                "Name" : "Punch Damage Increased",
+                "Details" : "Punch attacks deal 20% more damage.",
+                "Icon" : "biceps"
+            },
+            "nature" : "Buff",
+            "statisticData" : {
+                "statName" : "CBTBE_Punch_Target_Damage_Multi",
+                "operation" : "Float_Multiply",
+                "modValue" : "1.2",
+                "modType" : "System.Single"
+            }
+        },
+		{
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "effectTargetType" : "Creator",
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "AbilityDefGU8a_DFADamage",
+                "Name" : "DFA Damage Increased",
+                "Details" : "DFA attacks deal 20% more damage.",
+                "Icon" : "biceps"
+            },
+            "nature" : "Buff",
+            "statisticData" : {
+                "statName" : "CBTBE_DFA_Target_Damage_Multi",
+                "operation" : "Float_Multiply",
+                "modValue" : "1.2",
+                "modType" : "System.Single"
+            }
+        },
+		{
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "effectTargetType" : "Creator",
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "AbilityDefGU8a_DFASelfDamage",
+                "Name" : "DFA Self-Damage Decreased",
+                "Details" : "DFA attacks deal 50% less self damage.",
+                "Icon" : "biceps"
+            },
+            "nature" : "Buff",
+            "statisticData" : {
+                "statName" : "CBTBE_DFA_Attacker_Damage_Multi",
+                "operation" : "Float_Multiply",
+                "modValue" : "0.5",
+                "modType" : "System.Single"
+            }
+        }
+	],
+	"IsPrimaryAbility": true
+}
