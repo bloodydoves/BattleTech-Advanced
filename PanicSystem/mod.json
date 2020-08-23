@@ -1,7 +1,8 @@
 {
   "Name": "PanicSystem",
   "Enabled": true,
-  "Version": "4.1.1",
+	"Hidden": true,
+	"Version": "4.2.0",
   "Description": "Simulates MechWarrior and vehicle crew panic, and automatic ejections",
   "Website": "https://github.com/BattletechModders/PanicSystem",
   "DLL": "PanicSystem.dll",
@@ -17,7 +18,7 @@
   "Settings": {
     "Debug": false,
     "CombatLog": false,
-
+	"CombatSaves": false,
     "PanicStates": [
       "CONFIDENT",
       "UNSETTLED",
@@ -112,6 +113,8 @@
 
     "CritOver": 25,
 
-    "OneChangePerTurn" : false
+    "OneChangePerTurn" : false,
+	"ObeyPilotCanEjectStat": true,
+	"ObeyPilotCannotEjectTag": false
   }
 }
