@@ -12,46 +12,20 @@
             "Requirements": [],
             "Results": [
                 {
-                    "Scope": "Flashpoint",
-                    "Requirements": null,
-                    "AddedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "RemovedTags": {
-                        "items": [
-                            "fp_choice_b",
-                            "fp_choice_a"
-                        ],
-                        "tagSetSourceFile": ""
-                    },
-                    "Stats": [],
-                    "Actions": [],
-                    "ForceEvents": [],
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                },
-                {
                     "Scope": "Company",
                     "Requirements": null,
-                    "AddedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "RemovedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
+                    "AddedTags": {},
+                    "RemovedTags": {},
                     "Stats": [],
                     "Actions": [
                         {
                             "Type" : "System_PlayVideo",
-                            "value" : "1A-prologue.bk2",
+                            "value" : "1B-betrayal.bk2",
                             "valueConstant" : null
                         },
                         {
                             "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime1_102_Mission",
+                            "value": "ms_fp_StoryTime1_002_Mission",
                             "valueConstant": null,
                             "additionalValues": null
                         }
@@ -67,7 +41,7 @@
         },
         {
             "Description": {
-                "Id": "ms_fp_StoryTime1_102_Mission",
+                "Id": "ms_fp_StoryTime1_002_Mission",
                 "Name": "A-Mission",
                 "Details": "flashpoint",
                 "Icon": null
@@ -78,14 +52,8 @@
                 {
                     "Scope": "Company",
                     "Requirements": null,
-                    "AddedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "RemovedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
+                    "AddedTags": {},
+                    "RemovedTags": {},
                     "Stats": null,
                     "Actions": [
                         {
@@ -95,16 +63,11 @@
                             "additionalValues": [
                                 null,
                                 null,
-                                "StoryTime_1B_Retreat_Default",
+                                "StoryTime_1_Retreat_Default",
                                 "AuriganRestoration",
-                                null,
+                                "AuriganDirectorate",
                                 "2",
-                                "ms_fp_StoryTime1_103_Complete",
-                                null,
-                                null,
-                                null,
-                                null,
-                                null
+                                "ms_fp_StoryTime1_003_Complete"
                             ]
                         },
                         {
@@ -127,7 +90,7 @@
         },
         {
             "Description": {
-                "Id": "ms_fp_StoryTime1_103_Complete",
+                "Id": "ms_fp_StoryTime1_003_Complete",
                 "Name": "Cancel-Complete",
                 "Details": "flashpoint",
                 "Icon": null
@@ -137,28 +100,14 @@
             "Results": [
                 {
                     "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Company",
-                        "RequirementTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "ExclusionTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "RequirementComparisons": []
-                    },
+                    "Requirements": null,
                     "AddedTags": {
                         "items": [
                             "flashpoint_StoryTime1_complete"
                         ],
-                        "tagSetSourceFile": ""
+                        "tagSetSourceFile": "Tags/CompanyTags"
                     },
-                    "RemovedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
+                    "RemovedTags": {},
                     "Stats": null,
                     "Actions": [
                         {
@@ -169,12 +118,29 @@
                         },
                         {
                             "Type": "Flashpoint_CompleteFlashpoint",
-                            "value": "ms_fp_StoryTime1_104_Reward",
+                            "value": "ms_fp_StoryTime1_004_Reward",
                             "valueConstant": null,
                             "additionalValues": null
+                        },
+                        {
+                            "Type" : "System_PauseNotification",
+                            "value" : "Punching out of your overheating mech, the last thing you remember is noise and pain and a vast open sky.",
+                            "additionalValues" : [
+                                  "Ejecting",
+                                  "castDef_None"
+                            ],
+                            "valueConstant" : null
                         }
                     ],
-                    "ForceEvents": null,
+                    "ForceEvents": [
+                        {
+                            "Scope" : "Company",
+                            "EventID" : "forcedevent_FP_StoryTime1_A",
+                            "MinDaysWait" : 0,
+                            "MaxDaysWait" : 0,
+                            "Probability" : 100
+                        }
+                    ],
                     "TemporaryResult": false,
                     "ResultDuration": 0
                 }
@@ -185,8 +151,8 @@
         },
         {
             "Description": {
-                "Id": "ms_fp_StoryTime1_104_Reward",
-                "Name": "Cancel-Reward",
+                "Id": "ms_fp_StoryTime1_004_Reward",
+                "Name": "Reward",
                 "Details": "Extra rewards, including Reputation and bonus C-Bills go here",
                 "Icon": null
             },
@@ -195,31 +161,14 @@
             "Results": [
                 {
                     "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Company",
-                        "RequirementTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "ExclusionTags": {
-                            "items": [],
-                            "tagSetSourceFile": ""
-                        },
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
-                    "RemovedTags": {
-                        "items": [],
-                        "tagSetSourceFile": ""
-                    },
+                    "Requirements": null,
+                    "AddedTags": {},
+                    "RemovedTags": {},
                     "Stats": [
                         {
                             "typeString": "System.Int32",
                             "name": "Funds",
-                            "value": "300000",
+                            "value": "180000",
                             "set": false,
                             "valueConstant": null
                         },

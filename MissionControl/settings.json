@@ -2,12 +2,14 @@
   "DebugMode": true,
   "VersionCheck": false,
   "DebugSkirmishMode": false,
-  "DisableIfFlashpointContract": true,
+  "EnableFlashpointOverrides": false,
+  "EnableAdditionalPlayerMechsForFlashpoints": false,
   "RandomSpawns": {
     "Enable": true,
     "ExcludeContractTypes": [
 			"SoloDuel",
 			"DuoDuel",
+			"DefendBase",
 			"Story_1A_Retreat",
 			"Story_1B_Retreat",
 			"Story_2_ThreeYearsLater",
@@ -28,7 +30,7 @@
 			"Tyrlon_Attack"
 		]
   },
-  "HotDrop": {
+  "HotDropProtection": {
     "Enable": true,
     "ExcludeContractTypes": ["SoloDuel", "DuoDuel"],
     "GuardOnHotDrop": false,
@@ -42,6 +44,7 @@
     "ExcludeContractTypes": [
 			"SoloDuel",
 			"DuoDuel",
+			"DefendBase",
 			"Story_1A_Retreat",
 			"Story_1B_Retreat",
 			"Story_2_ThreeYearsLater",
@@ -68,20 +71,48 @@
     "SkullValueMatters": true,
     "BasedOnVisibleSkullValue": true,
     "UseGeneralProfileForSkirmish": true,
-    "DisableIfFlashpointContract": true,
     "DisableWhenMaxTonnage": {
       "Enable": true,
       "Limited": false,
       "LimitedToUnder": 300
     },
-    "MatchAllyLanceCountToEnemy": false
+    "MatchAllyLanceCountToEnemy": false,
+	"HideObjective": true,
+	"ShowObjectiveOnLanceDetected": true,
+	"AlwaysDisplayHiddenObjectiveIfPrimary": false,
+	"MatchAllyLanceCountToEnemy": false,
+	"DropWeightInfluence": {
+		"Enable": false,
+		"GlobalEnemyChanceToSpawn": 0.05,
+		"GlobalAllyChanceToSpawn": 0.8,
+		"EnemySpawnInfluencePerHalfSkull": 0.1,
+		"AllySpawnInfluencePerHalfSkull": -0.1
+	},
+	"DisableAllies": false,
+	"DisableEnemies": false
   },
   "ExtendedLances": {
     "Enable": true,
     "Autofill": true,
+	"SkipWhenTaggedWithAny": ["lance_type_solo"],
+	"SkipWhenTaggedWithAll": [],
+	"SkipWhenExcludeTagsContain": ["no_extended_lance"],
     "ExcludeContractTypes": ["SoloDuel", "DuoDuel"],
     "LanceSizes": {
-      "5": [],
+      "5": [
+		{
+          "Faction": "ClanGhostBear",
+          "DifficultyMod": -1
+        },
+		{
+          "Faction": "ClanJadeFalcon",
+          "DifficultyMod": -1
+        },
+		{
+          "Faction": "ClanWolf",
+          "DifficultyMod": -1
+        }
+	  ],
       "6": [
 		{
 			"Faction": "ComStar",
@@ -134,7 +165,12 @@
       {
         "ContractTypeName": "FireMission",
         "IncreaseBoundarySizeByPercentage": 0.5
-      }
+      },
+	  {
+		"MapId": "mapGeneral_desertDam_aDes",
+		"ContractTypeName": "SimpleBattle",
+		"IncreaseBoundarySizeByPercentage": 0.55
+	  }
     ]
   },
   "DynamicWithdraw": {
@@ -146,10 +182,17 @@
   },
   "AI": {
     "FollowPlayer": {
-      "Target": "HeaviestMech",
+      "Target": "LanceOrder",
       "StopWhen": "OnEnemyDetected",
       "MaxDistanceFromTargetBeforeSprinting": 120,
-      "TargetZoneRadius": 120
+      "TargetZoneRadius": 120,
+	  "Pathfinding": "Alternative"
     }
+  },
+  "Spawners": {
+	"SpawnLanceAtEdgeBoundary": {
+		"MinBuffer": 100,
+		"MaxBuffer": 200
+	}
   }
 }

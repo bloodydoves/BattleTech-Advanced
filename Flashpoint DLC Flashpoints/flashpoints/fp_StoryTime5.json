@@ -1,11 +1,11 @@
 {
     "Description": {
         "Id": "fp_StoryTime5",
-        "Name": "Arano Restoration - Served Cold",
+        "Name": "Arano Restoration - Attack Smithon",
         "Details": "Short Split Template",
         "Icon": "uixTxrSpot_CampaignOutcomeOutOfFunds"
     },
-    "Weight": 1000,
+    "Weight": 10000,
     "InternalName": "StoryTime5",
     "PublishState": "PUBLISHED",
     "Difficulty": 5,
@@ -14,7 +14,7 @@
             "Scope": "Company",
             "RequirementTags": {
                 "items": [
-                    "flashpoint_StoryTime4_complete"
+                    "flashpoint_StoryTime4b_complete"
                 ],
                 "tagSetSourceFile": "Tags/CompanyTags"
             },
@@ -22,7 +22,7 @@
                 "items": [
                     "flashpoint_StoryTime5_complete"
                 ],
-                "tagSetSourceFile": ""
+                "tagSetSourceFile": "Tags/CompanyTags"
             },
             "RequirementComparisons": []
         }
@@ -31,22 +31,19 @@
         "Scope": "StarSystem",
         "RequirementTags": {
             "items": [
-				"planet_name_smithon"
-			],
+                "planet_name_smithon"
+            ],
             "tagSetSourceFile": "Tags/PlanetNameTags"
         },
-        "ExclusionTags": {
-            "items": [],
-            "tagSetSourceFile": ""
-        },
+        "ExclusionTags": {},
         "RequirementComparisons": []
     },
     "PotentialEmployers": [
-        "MercenaryReviewBoard"
+        "AuriganRestoration"
     ],
-    "TargetFaction": "NoFaction",
+    "TargetFaction": "AuriganDirectorate",
     "AllowRefitTime": true,
-    "FlashpointLength": "SHORT",
+    "FlashpointLength": "MEDIUM",
     "Repeatable": false,
     "MilestoneSetID": "ms_fp_StoryTime5",
     "UseAvailableTimeoutOverride": false,
@@ -56,6 +53,6 @@
     "RewardCollectionID": "BTA_FP_ThreeRogueItemsG",
     "UnitDropTonnageHint": "None",
     "LanceDropTonnageHint": "None",
-    "FlashpointShortDescription": "Lord Karosas challenged my authority, and he was right to do so. His daughter died in my name. We're going to do what we can to earn his help and support. That means destroying the <i>Newgrange</i>, a smuggling ship that has been running weapons to the Directorate. I'll be your voice on the comms for this drop, {COMMANDER.Callsign}\u2026 let's get this done.",
+    "FlashpointShortDescription": "The Restoration Army is engaged in a battle of attrition against Directorate forces, and our ground forces need resupply if they're going to prevail. To that end, I'm sending you to capture a Directorate munitions dump. Eliminate their defenses and prevent them from getting away with the munitions; our support staff will handle the rest.",
     "FlashpointDescriberCastDefId": "castDef_KameaDefault"
 }

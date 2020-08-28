@@ -1,0 +1,188 @@
+{
+    "StartingMilestoneID": "ms_fp_StoryTime7b_001_Start",
+    "Milestones": [
+        {
+            "Description": {
+                "Id": "ms_fp_StoryTime7b_001_Start",
+                "Name": "Start",
+                "Details": "flashpoint",
+                "Icon": null
+            },
+            "Scope": "Company",
+            "Requirements": [],
+            "Results": [
+                {
+                    "Scope": "Company",
+                    "Requirements": null,
+                    "AddedTags": {},
+                    "RemovedTags": {},
+                    "Stats": [],
+                    "Actions": [
+                        {
+                            "Type": "Flashpoint_SetNextMilestone",
+                            "value": "ms_fp_StoryTime7b_002_Mission",
+                            "valueConstant": null,
+                            "additionalValues": null
+                        }
+                    ],
+                    "ForceEvents": [],
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ],
+            "Repeatable": false,
+            "UseRandomInvocation": false,
+            "InvokeChance": 0
+        },
+        {
+            "Description": {
+                "Id": "ms_fp_StoryTime7b_002_Mission",
+                "Name": "Mission",
+                "Details": "flashpoint",
+                "Icon": null
+            },
+            "Scope": "Company",
+            "Requirements": [],
+            "Results": [
+                {
+                    "Scope": "Company",
+                    "Requirements": null,
+                    "AddedTags": {},
+                    "RemovedTags": {},
+                    "Stats": null,
+                    "Actions": [
+                        {
+                            "Type": "Flashpoint_AddContract",
+                            "value": "",
+                            "valueConstant": null,
+                            "additionalValues": [
+                                "",
+                                "",
+                                "StoryTime_7b_TyrlonAttack_Default",
+                                "AuriganRestoration",
+                                "AuriganDirectorate",
+                                "7",
+                                "ms_fp_StoryTime7b_003_Complete",
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ]
+                        },
+                        {
+                            "Type": "System_ForceDropshipRoom",
+                            "value": "Contract",
+                            "valueConstant": null,
+                            "additionalValues": [
+                                "BaseFlashpoint"
+                            ]
+                        }
+                    ],
+                    "ForceEvents": null,
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ],
+            "Repeatable": false,
+            "UseRandomInvocation": false,
+            "InvokeChance": 0
+        },
+        {
+            "Description": {
+                "Id": "ms_fp_StoryTime7b_003_Complete",
+                "Name": "Complete",
+                "Details": "flashpoint",
+                "Icon": null
+            },
+            "Scope": "Company",
+            "Requirements": [],
+            "Results": [
+                {
+                    "Scope": "Company",
+                    "Requirements": null,
+                    "AddedTags": {
+                        "items": [
+                            "flashpoint_StoryTime7b_complete"
+                        ],
+                        "tagSetSourceFile": "Tags/CompanyTags"
+                    },
+                    "RemovedTags": {},
+                    "Stats": null,
+                    "Actions": [
+                        {
+                            "Type": "Flashpoint_CompleteFlashpoint",
+                            "value": "ms_fp_StoryTime7b_004_Reward",
+                            "valueConstant": null,
+                            "additionalValues": null
+                        },
+                        {
+                            "Type" : "System_SimGameCharacterVisible",
+                            "value" : true,
+                            "additionalValues" : [
+                                "Kamea"
+                            ]
+                        },
+                        {
+                            "Type" : "System_StartConversation",
+                            "value" : "StoryTime7b-Armistice",
+                            "additionalValues" : [
+                                "ARMISTICE",
+                                "In Orbit — Tyrlon"
+                            ]
+                        }
+
+                    ],
+                    "ForceEvents": [],
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ],
+            "Repeatable": false,
+            "UseRandomInvocation": false,
+            "InvokeChance": 0
+        },
+        {
+            "Description": {
+                "Id": "ms_fp_StoryTime7b_004_Reward",
+                "Name": "Reward",
+                "Details": "Extra rewards, including Reputation and bonus C-Bills go here",
+                "Icon": null
+            },
+            "Scope": "Company",
+            "Requirements": [],
+            "Results": [
+                {
+                    "Scope": "Company",
+                    "Requirements": null,
+                    "AddedTags": {},
+                    "RemovedTags": {},
+                    "Stats": [
+                        {
+                            "typeString": "System.Int32",
+                            "name": "Funds",
+                            "value": "300000",
+                            "set": false,
+                            "valueConstant": null
+                        }
+                    ],
+                    "Actions": [
+                        {
+                            "Type" : "System_SimGameCharacterVisible",
+                            "value" : false,
+                            "additionalValues" : [
+                                "Kamea"
+                            ]
+                        }
+                    ],
+                    "ForceEvents": null,
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ],
+            "Repeatable": false,
+            "UseRandomInvocation": false,
+            "InvokeChance": 0
+        }
+    ]
+}

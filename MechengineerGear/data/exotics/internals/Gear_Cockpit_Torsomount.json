@@ -1,8 +1,16 @@
 {
 	"Custom": {
-		"Category": {
-			"CategoryID": "Cockpit"
-		},
+		"Category": [
+			{ 
+			"CategoryID": "Cockpit" 
+			},
+			{
+			"CategoryID" : "LifeSupportA"
+			},
+			{
+			"CategoryID" : "LifeSupportB"
+			}
+        ],
 		"WorkOrderCosts": {
 			"Install": {
 				"TechCost": "[[Chassis.Tonnage]]/8",
@@ -17,12 +25,20 @@
 				"IsCockpit"
 			]
 		},
-		"Sorter": {
-			"Order": 5
-		},
-		"InventorySorter": {
-			"SortKey": "00019"
-		}
+		"Linked": {
+            "Links": [
+                {
+                    "ComponentDefId": "Gear_Cockpit_LifeSupportA_Torso",
+                    "Location": "LeftTorso",
+					"ComponentDefType": "Upgrade"
+                },
+                {
+                    "ComponentDefId": "Gear_Cockpit_LifeSupportB_Torso",
+                    "Location": "RightTorso",
+					"ComponentDefType": "Upgrade"
+                }
+            ]
+        }
 	},
 	"Description": {
 		"Cost": 620000,

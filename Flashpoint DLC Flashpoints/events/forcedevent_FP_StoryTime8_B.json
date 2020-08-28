@@ -1,0 +1,103 @@
+{
+    "Description": {
+        "Id": "forcedevent_FP_StoryTime8_B",
+        "Name": "The Challenge",
+        "Details": "\"Did it work?\" Farah asks nervously as the Leopard lifts off.\r\n\n\nSumiere is too focused on shaking the pursuing aerospace fighters to pay more tha cursory attention to anything else. \"Look outside and see for yourself.\"",
+        "Icon": "uixTxrSpot_DailyBriefing.png"
+    },
+    "Scope": "Company",
+    "Weight": 0,
+    "Requirements": {
+        "Scope": "Company",
+        "RequirementTags": {},
+        "ExclusionTags": {},
+        "RequirementComparisons": []
+    },
+    "AdditionalRequirements": [],
+    "AdditionalObjects": [],
+    "Options": [
+        {
+            "Description": {
+                "Id": "outcome_0",
+                "Name": "Look out the window.",
+                "Details": "Cinamatic and debriefing",
+                "Icon": null
+            },
+            "RequirementList": [],
+            "ResultSets": [
+                {
+                    "Description": {
+                        "Id": "outcome_0_0",
+                        "Name": "The Challenge",
+                        "Details": "Back aboard the <i>Argo</i>, you find Lady Arano on the viewscreen in conference with her other commanders - from what you gather, the fight seem to be a bloody one, but grinding towards victory.",
+                        "Icon": null
+                    },
+                    "Weight": 100,
+                    "Results": [
+                        {
+                            "Scope": "Company",
+                            "Requirements": null,
+                            "AddedTags": {},
+                            "RemovedTags": {},
+                            "Stats": [],
+                            "Actions": [
+                                {
+                                    "Type": "System_PlayVideo",
+                                    "value": "8-crash.bk2",
+                                    "valueConstant": null
+                                },
+                                {
+                                    "Type": "System_StartConversation",
+                                    "value": "StoryTime8-TheChallange",
+                                    "additionalValues": [
+                                        "THE CHALLENGE",
+                                        "In Orbit — Coromodir"
+                                    ]
+                                }
+                            ],
+                            "ForceEvents": null,
+                            "TemporaryResult": false,
+                            "ResultDuration": 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements": {
+                "Scope": "Company",
+                "RequirementTags": {},
+                "ExclusionTags": {},
+                "RequirementComparisons": []
+            }
+        },
+        {
+            "Description": {
+                "Id": "outcome_1",
+                "Name": "Just get us home. (Skip cutscene and conversation)",
+                "Details": "Skip cutscene and debriefing",
+                "Icon": null
+            },
+            "RequirementList": [],
+            "ResultSets": [
+                {
+                    "Description": {
+                        "Id": "outcome_1_0",
+                        "Name": "The Challenge",
+                        "Details": "Back aboard the <i>Argo</i>, you find Lady Arano on the viewscreen in conference with her other commanders - from what you gather, the fight seem to be a bloody one, but grinding towards victory. Lord Espinoza calls in order to surrender - but his daughter won't stand down.\r\n\n\nYou're going to have to kill Victoria to end this.",
+                        "Icon": null
+                    },
+                    "Weight": 100,
+                    "Results": []
+                }
+            ],
+            "Requirements": {
+                "Scope": "Company",
+                "RequirementTags": {},
+                "ExclusionTags": {},
+                "RequirementComparisons": []
+            }
+        }
+    ],
+    "PublishState": "PUBLISHED",
+    "ValidationState": "UNTESTED",
+    "EventType": "UNSELECTABLE"
+}

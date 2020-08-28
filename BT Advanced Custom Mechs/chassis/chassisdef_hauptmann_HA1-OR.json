@@ -1,278 +1,271 @@
 {
-  "Custom": {
-    "ArmActuatorSupport": {
-      "LeftLimit": "Hand",
-      "RightLimit": "Hand"
-    }
-  },
-  "FixedEquipment": [
-    {
-      "MountedLocation": "CenterTorso",
-      "ComponentDefID": "emod_structureslots_standard",
-      "ComponentDefType": "Upgrade",
-      "HardpointSlot": -1,
-      "DamageLevel": "Functional",
-      "prefabName": "",
-      "hasPrefabName": true
-    },
-    {
-      "MountedLocation": "CenterTorso",
-      "ComponentDefID": "emod_engine_285",
-      "SimGameUID": null,
-      "ComponentDefType": "HeatSink",
-      "HardpointSlot": -1,
-      "GUID": null,
-      "DamageLevel": "Functional",
-      "prefabName": null,
-      "hasPrefabName": false
-    },
-    {
-      "MountedLocation": "CenterTorso",
-      "ComponentDefID": "Gear_Gyro_Omnimech",
-      "SimGameUID": null,
-      "ComponentDefType": "Upgrade",
-      "HardpointSlot": -1,
-      "GUID": null,
-      "DamageLevel": "Functional",
-      "prefabName": null,
-      "hasPrefabName": false
-    },
-    {
-      "MountedLocation": "CenterTorso",
-      "ComponentDefID": "emod_engineslots_std_center",
-      "SimGameUID": null,
-      "ComponentDefType": "HeatSink",
-      "HardpointSlot": -1,
-      "GUID": null,
-      "DamageLevel": "Functional",
-      "prefabName": null,
-      "hasPrefabName": false
-    }
-    
-  ],
-  "Description": {
-    "Cost": 11000000,
-    "Rarity": 2,
-    "Purchasable": true,
-    "Manufacturer": "",
-    "Model": "",
-    "UIName": "Hauptmann",
-    "Id": "chassisdef_hauptmann_HA1-OR",
-    "Name": "Hauptmann",
-    "Details": "This Hauptmann variant was designed to provide incredible extreme-range fire support for Lyran forces. It carries a seemingly paltry three weapon systems. Starting with an ER Large and ER Small Laser, it doesn't look like much. However, the third weapon, a Long Tom Artillery Piece, makes up for the other weapons shortcomings. More than capable of obliterating some lighter mechs in a single blow, the HA1-OR does not play around when it comes to fire support.",
-    "Icon": "uixTxrIcon_hauptmann"
-  },
-  "MovementCapDefID": "movedef_hauptmann",
-  "PathingCapDefID": "pathingdef_assault",
-  "HardpointDataDefID": "hardpointdatadef_hauptmann",
-  "PrefabIdentifier": "chrPrfMech_hauptmannbase-001",
-  "PrefabBase": "hauptmann",
-  "Tonnage": 95,
-  "InitialTonnage": 9.5,
-  "weightClass": "ASSAULT",
-  "BattleValue": 17159064,
-  "Heatsinks": 0,
-  "TopSpeed": 65,
-  "TurnRadius": 90,
-  "MaxJumpjets": 30,
-  "Stability": 100,
-  "StabilityDefenses": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
-  ],
-  "SpotterDistanceMultiplier": 1,
-  "VisibilityMultiplier": 1,
-  "SensorRangeMultiplier": 1,
-  "Signature": 0,
-  "Radius": 4,
-  "PunchesWithLeftArm": true,
-  "MeleeDamage": 120, 
-    "MeleeInstability": 100, 
-    "MeleeToHitModifier": 0, 
-    "DFADamage": 115, 
-    "DFAToHitModifier": 0, 
-    "DFASelfDamage": 115, 
-    "DFAInstability": 100, 
-  "Locations": [
-    {
-      "Location": "Head",
-      "Hardpoints": [
+	"Custom": {
+		"ArmActuatorSupport": {
+			"LeftLimit": "Hand",
+			"RightLimit": "Hand"
+		}
+	},
+	"FixedEquipment": [
 		{
-          "WeaponMount": "AntiPersonnel",
-          "Omni": false
-        }
-      ],
-      "Tonnage": 0,
-      "InventorySlots": 6,
-      "MaxArmor": 45,
-      "MaxRearArmor": -1,
-      "InternalStructure": 16
-    },
-    {
-      "Location": "LeftArm",
-      "Hardpoints": [
-        {
-          "WeaponMount": "Ballistic",
-          "Omni": true
-        },
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "emod_structureslots_standard",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional",
+			"prefabName": "",
+			"hasPrefabName": true
+		},
 		{
-          "WeaponMount": "Missile",
-          "Omni": true
-        },
-        {
-          "WeaponMount": "Energy",
-          "Omni": true
-        }
-      ],
-      "Tonnage": 0,
-      "InventorySlots": 12,
-      "MaxArmor": 150,
-      "MaxRearArmor": -1,
-      "InternalStructure": 75
-    },
-    {
-      "Location": "LeftTorso",
-      "Hardpoints": [
-        {
-          "WeaponMount": "Ballistic",
-          "Omni": true
-        }
-      ],
-      "Tonnage": 0,
-      "InventorySlots": 12,
-      "MaxArmor": 200,
-      "MaxRearArmor": 100,
-      "InternalStructure": 100
-    },
-    {
-      "Location": "CenterTorso",
-      "Hardpoints": [
-        
-      ],
-      "Tonnage": 0,
-      "InventorySlots": 15,
-      "MaxArmor": 290,
-      "MaxRearArmor": 145,
-      "InternalStructure": 145
-    },
-    {
-      "Location": "RightTorso",
-      "Hardpoints": [
-        {
-          "WeaponMount": "Ballistic",
-          "Omni": true
-        },
-        {
-          "WeaponMount": "Energy",
-          "Omni": true
-        }
-      ],
-      "Tonnage": 0,
-      "InventorySlots": 12,
-      "MaxArmor": 200,
-      "MaxRearArmor": 100,
-      "InternalStructure": 100
-    },
-    {
-      "Location": "RightArm",
-      "Hardpoints": [
-        {
-          "WeaponMount": "Ballistic",
-          "Omni": true
-        },
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "emod_engine_285",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
 		{
-          "WeaponMount": "Missile",
-          "Omni": true
-        },
-        {
-          "WeaponMount": "Energy",
-          "Omni": true
-        }
-      ],
-      "Tonnage": 0,
-      "InventorySlots": 12,
-      "MaxArmor": 150,
-      "MaxRearArmor": -1,
-      "InternalStructure": 75
-    },
-    {
-      "Location": "LeftLeg",
-      "Hardpoints": [
-
-      ],
-      "Tonnage": 0,
-      "InventorySlots": 6,
-      "MaxArmor": 200,
-      "MaxRearArmor": -1,
-      "InternalStructure": 100
-    },
-    {
-      "Location": "RightLeg",
-      "Hardpoints": [
-
-      ],
-      "Tonnage": 0,
-      "InventorySlots": 6,
-      "MaxArmor": 200,
-      "MaxRearArmor": -1,
-      "InternalStructure": 100
-    }
-  ],
-  "LOSSourcePositions": [
-    {
-      "x": 0,
-      "y": 12.5,
-      "z": 0.5
-    },
-    {
-      "x": -2.5,
-      "y": 11.5,
-      "z": -0.5
-    },
-    {
-      "x": 2.5,
-      "y": 11.5,
-      "z": -0.5
-    }
-  ],
-  "LOSTargetPositions": [
-    {
-      "x": 0,
-      "y": 12.5,
-      "z": 0.5
-    },
-    {
-      "x": -2.5,
-      "y": 11.5,
-      "z": -0.5
-    },
-    {
-      "x": 2.5,
-      "y": 11.5,
-      "z": -0.5
-    },
-    {
-      "x": -2,
-      "y": 3,
-      "z": 0.5
-    },
-    {
-      "x": 2,
-      "y": 3,
-      "z": 0.5
-    }
-  ],
-  "VariantName": "HA1-OR",
-  "ChassisTags": {
-    "items": [
-      "OmniMech"
-    ],
-    "tagSetSourceFile": ""
-  },
-  "StockRole": "Omnimech Artillery Support",
-  "YangsThoughts": "This Hauptmann variant was designed to provide incredible extreme-range fire support for Lyran forces. It carries a seemingly paltry three weapon systems. Starting with an ER Large and ER Small Laser, it doesn't look like much. However, the third weapon, a Long Tom Artillery Piece, makes up for the other weapons shortcomings. More than capable of obliterating some lighter mechs in a single blow, the HA1-OR does not play around when it comes to fire support."
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "Gear_Gyro_Omnimech",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "emod_engineslots_std_center",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		}
+	],
+	"Description": {
+		"Cost": 11000000,
+		"Rarity": 2,
+		"Purchasable": true,
+		"Manufacturer": "",
+		"Model": "",
+		"UIName": "Hauptmann",
+		"Id": "chassisdef_hauptmann_HA1-OR",
+		"Name": "Hauptmann",
+		"Details": "This Hauptmann variant was designed to provide incredible extreme-range fire support for Lyran forces. It carries a seemingly paltry three weapon systems. Starting with an ER Large and ER Small Laser, it doesn't look like much. However, the third weapon, a Long Tom Artillery Piece, makes up for the other weapons' shortcomings. More than capable of obliterating some lighter mechs in a single blow, the HA1-OR does not play around when it comes to fire support.",
+		"Icon": "uixTxrIcon_hauptmann"
+	},
+	"MovementCapDefID": "movedef_hauptmann",
+	"PathingCapDefID": "pathingdef_assault",
+	"HardpointDataDefID": "hardpointdatadef_hauptmann",
+	"PrefabIdentifier": "chrPrfMech_hauptmannbase-001",
+	"PrefabBase": "hauptmann",
+	"Tonnage": 95,
+	"InitialTonnage": 9.5,
+	"weightClass": "ASSAULT",
+	"BattleValue": 17159064,
+	"Heatsinks": 0,
+	"TopSpeed": 65,
+	"TurnRadius": 90,
+	"MaxJumpjets": 30,
+	"Stability": 100,
+	"StabilityDefenses": [
+		0,
+		0,
+		0,
+		0,
+		0,
+		0
+	],
+	"SpotterDistanceMultiplier": 1,
+	"VisibilityMultiplier": 1,
+	"SensorRangeMultiplier": 1,
+	"Signature": 0,
+	"Radius": 4,
+	"PunchesWithLeftArm": true,
+	"MeleeDamage": 105,
+	"MeleeInstability": 50,
+	"MeleeToHitModifier": 0,
+	"DFADamage": 105,
+	"DFAToHitModifier": 0,
+	"DFASelfDamage": 105,
+	"DFAInstability": 50,
+	"Locations": [
+		{
+			"Location": "Head",
+			"Hardpoints": [
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 6,
+			"MaxArmor": 45,
+			"MaxRearArmor": -1,
+			"InternalStructure": 16
+		},
+		{
+			"Location": "LeftArm",
+			"Hardpoints": [
+				{
+					"WeaponMount": "Ballistic",
+					"Omni": true
+				},
+				{
+					"WeaponMount": "Missile",
+					"Omni": true
+				},
+				{
+					"WeaponMount": "Energy",
+					"Omni": true
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 12,
+			"MaxArmor": 150,
+			"MaxRearArmor": -1,
+			"InternalStructure": 75
+		},
+		{
+			"Location": "LeftTorso",
+			"Hardpoints": [
+				{
+					"WeaponMount": "Ballistic",
+					"Omni": true
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 12,
+			"MaxArmor": 200,
+			"MaxRearArmor": 100,
+			"InternalStructure": 100
+		},
+		{
+			"Location": "CenterTorso",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 15,
+			"MaxArmor": 290,
+			"MaxRearArmor": 145,
+			"InternalStructure": 145
+		},
+		{
+			"Location": "RightTorso",
+			"Hardpoints": [
+				{
+					"WeaponMount": "Ballistic",
+					"Omni": true
+				},
+				{
+					"WeaponMount": "Energy",
+					"Omni": true
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 12,
+			"MaxArmor": 200,
+			"MaxRearArmor": 100,
+			"InternalStructure": 100
+		},
+		{
+			"Location": "RightArm",
+			"Hardpoints": [
+				{
+					"WeaponMount": "Ballistic",
+					"Omni": true
+				},
+				{
+					"WeaponMount": "Missile",
+					"Omni": true
+				},
+				{
+					"WeaponMount": "Energy",
+					"Omni": true
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 12,
+			"MaxArmor": 150,
+			"MaxRearArmor": -1,
+			"InternalStructure": 75
+		},
+		{
+			"Location": "LeftLeg",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 6,
+			"MaxArmor": 200,
+			"MaxRearArmor": -1,
+			"InternalStructure": 100
+		},
+		{
+			"Location": "RightLeg",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 6,
+			"MaxArmor": 200,
+			"MaxRearArmor": -1,
+			"InternalStructure": 100
+		}
+	],
+	"LOSSourcePositions": [
+		{
+			"x": 0,
+			"y": 12.5,
+			"z": 0.5
+		},
+		{
+			"x": -2.5,
+			"y": 11.5,
+			"z": -0.5
+		},
+		{
+			"x": 2.5,
+			"y": 11.5,
+			"z": -0.5
+		}
+	],
+	"LOSTargetPositions": [
+		{
+			"x": 0,
+			"y": 12.5,
+			"z": 0.5
+		},
+		{
+			"x": -2.5,
+			"y": 11.5,
+			"z": -0.5
+		},
+		{
+			"x": 2.5,
+			"y": 11.5,
+			"z": -0.5
+		},
+		{
+			"x": -2,
+			"y": 3,
+			"z": 0.5
+		},
+		{
+			"x": 2,
+			"y": 3,
+			"z": 0.5
+		}
+	],
+	"VariantName": "HA1-OR",
+	"ChassisTags": {
+		"items": [
+			"OmniMech"
+		],
+		"tagSetSourceFile": ""
+	},
+	"StockRole": "Omnimech Artillery Support",
+	"YangsThoughts": "This Hauptmann variant was designed to provide incredible extreme-range fire support for Lyran forces. It carries a seemingly paltry three weapon systems. Starting with an ER Large and ER Small Laser, it doesn't look like much. However, the third weapon, a Long Tom Artillery Piece, makes up for the other weapons' shortcomings. More than capable of obliterating some lighter mechs in a single blow, the HA1-OR does not play around when it comes to fire support."
 }

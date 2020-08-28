@@ -546,7 +546,7 @@
       "k": "Float_HeatToDamageRatio",
       "v": {
         "type": "Float",
-        "floatVal": 2.0
+        "floatVal": 2.5
       }
     },
     {
@@ -1021,7 +1021,7 @@
       "k": "Float_SprintAppetitivePreferIdealWeaponRangeToHostileFactorWeight",
       "v": {
         "type": "Float",
-        "floatVal": 0.3
+        "floatVal": 0.5
       }
     },
     {
@@ -1166,7 +1166,7 @@
       "k": "Float_EvasiveToHitFloor",
       "v": {
         "type": "Float",
-        "floatVal": 10.0
+        "floatVal": 6.0
       }
     },
     {
@@ -1177,7 +1177,7 @@
       "k": "Float_MinimumSensorLockQuality",
       "v": {
         "type": "Float",
-        "floatVal": 55
+        "floatVal": 45
       }
     },
     {
@@ -1651,7 +1651,7 @@
       }
     },
     {
-	    /* Number of active probe targets before we even try to activate 
+	    /* Number of active probe targets before we even try to activate
 	       active probe */
       "k" : "Int_MinimumActiveProbeCount",
       "v" : {
@@ -1695,7 +1695,7 @@
     },
     {
 	    /* When calculatiing expected damage, how much to lerp between the damage divided by number of weapons and the damage if every hit
-	       was in the same location. 0 is damage divided and 1 is damage concentrated. 
+	       was in the same location. 0 is damage divided and 1 is damage concentrated.
 	       Increases with Float_GhostStateHysteresisMultiplierTurnIncrease */
       "k" : "Float_WeaponDamageSpreadLerpValue",
       "v" : {
@@ -1708,7 +1708,7 @@
       "k" : "Float_StructuralDamagePercentageMultiplier",
       "v" : {
         "type" : "Float",
-        "floatVal" : 1
+        "floatVal" : 1.2
       }
     },
     {
@@ -1720,7 +1720,7 @@
         "floatVal" : 0
       }
     },
-    {	
+    {
 	    /* For every round the ai does not shoot in ghost state, it adds to a mutiplier that increases the confidence in causing higher damage */
       "k" : "Float_GhostStateHysteresisMultiplierTurnIncrease",
       "v" : {
@@ -1728,7 +1728,7 @@
         "floatVal" : 0.3
       }
     },
-    {	
+    {
 	    /* Enables more precise predictions about expected damage by counting weapons in range and damage reductions of the unit*/
       "k" : "Bool_ExpectedDamageAccuracyIncrease",
       "v" : {
@@ -1753,7 +1753,7 @@
       }
     },
     {
-            /* Weight penalty multiplier for losing the ECM counter aura when positioning. 
+            /* Weight penalty multiplier for losing the ECM counter aura when positioning.
                If set to 1, it represents -Float_PreferHostileECMFields or -Float_SprintPreferHostileECMFields*/
       "k": "Float_PreferHostileECMFieldsPenaltyMultiplier",
       "v": {
@@ -1795,7 +1795,7 @@
       "k": "Float_SprintPreferAttackFromBehindHostileFactorWeight",
       "v": {
         "type": "Float",
-        "floatVal": 0.1
+        "floatVal": 0.5
       }
     },
     {
@@ -1862,7 +1862,7 @@
       "k": "Float_PreferLOSToMostHostilesFactorWeight",
       "v": {
         "type": "Float",
-        "floatVal": 0.4
+        "floatVal": 0.3
       }
     },
     {
@@ -1907,7 +1907,7 @@
       "k": "Float_SprintPreferLowerStabilityDamageMultiplierLocationsFactorWeight",
       "v": {
         "type": "Float",
-        "floatVal": 0.3
+        "floatVal": 0.2
       }
     },
     {

@@ -1,0 +1,43 @@
+{
+	"Description" : {
+		"Id" : "AbilityDefT5Aa",
+		"Name" : "TARGET PREDICTION",
+		"Details" : "ACTION: Advanced heuristics provide your lancemates with +2 accuracy for the remainder of this turn. Does not affect this unit. 4 turn cooldown.",
+		"Icon" : "C3Systems"
+	},
+    "DisplayParams" : "ShowInMWTRay",
+	"ReqSkill" : "Tactics",
+	"ReqSkillLevel" : 5,
+	"ActivationTime" : "ConsumedByFiring",
+	"Targeting" : "ActorSelf",
+    "ActivationCooldown" : 4,
+	"EffectData": [
+		{
+			"durationData": {
+				"duration": 2,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "AllLanceMates"
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-TargetPredictionAccuracy",
+				"Name": "Target Prediction",
+				"Details": "Allies gains +2 to accuracy for this turn.",
+				"Icon": "lv_static"
+			},
+			"statisticData": {
+				"statName": "AccuracyModifier",
+				"operation": "Float_Add",
+				"modValue": "-2.0",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}	
+	],
+	"IsPrimaryAbility" : true
+}

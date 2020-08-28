@@ -1,0 +1,212 @@
+{
+    "StartingMilestoneID": "ms_fp_StoryTime4a_001_Start",
+    "Milestones": [
+        {
+            "Description": {
+                "Id": "ms_fp_StoryTime4a_001_Start",
+                "Name": "Start",
+                "Details": "flashpoint",
+                "Icon": null
+            },
+            "Scope": "Company",
+            "Requirements": [],
+            "Results": [
+                {
+                    "Scope": "Company",
+                    "Requirements": null,
+                    "AddedTags": {},
+                    "RemovedTags": {},
+                    "Stats": [],
+                    "Actions": [
+                        {
+                            "Type" : "System_StartConversation",
+                            "value" : "StoryTime4a-FirstStrike",
+                            "additionalValues" : [
+                                "FIRST STRIKE",
+                                "In Orbit — Weldry"
+                            ]
+                        },
+                        {
+                            "Type": "Flashpoint_SetNextMilestone",
+                            "value": "ms_fp_StoryTime4a_002_Mission",
+                            "valueConstant": null,
+                            "additionalValues": null
+                        }
+                    ],
+                    "ForceEvents": [],
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ],
+            "Repeatable": false,
+            "UseRandomInvocation": false,
+            "InvokeChance": 0
+        },
+        {
+            "Description": {
+                "Id": "ms_fp_StoryTime4a_002_Mission",
+                "Name": "Mission",
+                "Details": "flashpoint",
+                "Icon": null
+            },
+            "Scope": "Company",
+            "Requirements": [],
+            "Results": [
+                {
+                    "Scope": "Company",
+                    "Requirements": null,
+                    "AddedTags": {},
+                    "RemovedTags": {},
+                    "Stats": null,
+                    "Actions": [
+                        {
+                            "Type": "Flashpoint_AddContract",
+                            "value": "",
+                            "valueConstant": null,
+                            "additionalValues": [
+                                "",
+                                "",
+                                "StoryTime_4a_LiberationOfWeldry_Default",
+                                "AuriganRestoration",
+                                "AuriganDirectorate",
+                                "3",
+                                "ms_fp_StoryTime4a_003_Complete"
+                            ]
+                        },
+                        {
+                            "Type": "System_ForceDropshipRoom",
+                            "value": "Contract",
+                            "valueConstant": null,
+                            "additionalValues": [
+                                "BaseFlashpoint"
+                            ]
+                        }
+                    ],
+                    "ForceEvents": null,
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ],
+            "Repeatable": false,
+            "UseRandomInvocation": false,
+            "InvokeChance": 0
+        },
+        {
+            "Description": {
+                "Id": "ms_fp_StoryTime4a_003_Complete",
+                "Name": "Complete",
+                "Details": "flashpoint",
+                "Icon": null
+            },
+            "Scope": "Company",
+            "Requirements": [],
+            "Results": [
+                {
+                    "Scope": "Company",
+                    "Requirements": null,
+                    "AddedTags": {
+                        "items": [
+                            "flashpoint_StoryTime4a_complete"
+                        ],
+                        "tagSetSourceFile": "Tags/CompanyTags"
+                    },
+                    "RemovedTags": {},
+                    "Stats": null,
+                    "Actions": [
+                        {
+                            "Type": "System_ForceDropshipRoom",
+                            "value": "Ship",
+                            "valueConstant": null,
+                            "additionalValues": null
+                        },
+                        {
+                            "Type": "Flashpoint_CompleteFlashpoint",
+                            "value": "ms_fp_StoryTime4a_004_Reward",
+                            "valueConstant": null,
+                            "additionalValues": null
+                        },
+                        {
+                            "Type" : "System_SimGameCharacterVisible",
+                            "value" : true,
+                            "additionalValues" : [
+                                "Kamea",
+                                "Alexander"
+                            ]
+                        },
+                        {
+                            "Type" : "System_PauseNotification",
+                            "value" : "As Arano troops take control of the facility, Lady Arano dismounts from her mech to survey The Icebox in person...",
+                            "additionalValues" : [
+                                  "Familiar Victims",
+                                  "castDef_None"
+                            ],
+                            "valueConstant" : null
+                        }
+                    ],
+                    "ForceEvents": [
+                        {
+                            "Scope" : "Company",
+                            "EventID" : "forcedevent_FP_StoryTime4a_A",
+                            "MinDaysWait" : 0,
+                            "MaxDaysWait" : 0,
+                            "Probability" : 100
+                        },
+                        {
+                            "Scope" : "Company",
+                            "EventID" : "forcedevent_FP_StoryTime4a_B",
+                            "MinDaysWait" : 0,
+                            "MaxDaysWait" : 0,
+                            "Probability" : 100
+                        }
+                    ],
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ],
+            "Repeatable": false,
+            "UseRandomInvocation": false,
+            "InvokeChance": 0
+        },
+        {
+            "Description": {
+                "Id": "ms_fp_StoryTime4a_004_Reward",
+                "Name": "Complete-Reward",
+                "Details": "Extra rewards, including Reputation and bonus C-Bills go here",
+                "Icon": null
+            },
+            "Scope": "Company",
+            "Requirements": [],
+            "Results": [
+                {
+                    "Scope": "Company",
+                    "Requirements": null,
+                    "AddedTags": {},
+                    "RemovedTags": {},
+                    "Stats": [
+                        {
+                            "typeString": "System.Int32",
+                            "name": "Funds",
+                            "value": "300000",
+                            "set": false,
+                            "valueConstant": null
+                        },
+                        {
+                            "typeString": "System.Int32",
+                            "name": "Reputation.MercenaryReviewBoard",
+                            "value": "8",
+                            "set": false,
+                            "valueConstant": null
+                        }
+                    ],
+                    "Actions": null,
+                    "ForceEvents": null,
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ],
+            "Repeatable": false,
+            "UseRandomInvocation": false,
+            "InvokeChance": 0
+        }
+    ]
+}

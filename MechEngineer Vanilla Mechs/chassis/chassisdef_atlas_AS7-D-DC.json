@@ -1,44 +1,14 @@
 {
-	"Custom": {
-		"ChassisQuirks": {
-			"statusEffects": [
-				{
-					"durationData": {},
-					"targetingData": {
-						"effectTargetsCreator": true,
-						"effectTriggerType": "Passive",
-						"effectTargetType": "Creator",
-						"showInTargetPreview": true,
-						"showInStatusPanel": true
-					},
-					"effectType": "StatisticEffect",
-					"Description": {
-						"Id": "Command",
-						"Name": "Command",
-						"Details": "Command Chassis with Improved Initiative",
-						"Icon": "uixSvgIcon_roomMechBay"
-					},
-					"statisticData": {
-						"statName": "BaseInitiative",
-						"operation": "Int_Add",
-						"modValue": "-1",
-						"modType": "System.Int32"
-					},
-					"nature": "Buff"
-				}
-			]
-		}
-	},
 	"Description": {
 		"Cost": 12546580,
 		"Rarity": 5,
-		"Purchasable": false,
+		"Purchasable": true,
 		"Manufacturer": "Unknown",
 		"Model": "",
 		"UIName": "Atlas",
 		"Id": "chassisdef_atlas_AS7-D-DC",
 		"Name": "Atlas",
-		"Details": "Built in 2776, this Atlas variant is the largest 'Mech equipped with a Command Console. To free up the weight required to fit this device, the AS7-D-DC removes one ton of LRM ammunition and the paired rear firing lasers. Effective at Close and Long Range Fire Support. Recommended for use by Experienced Tactical Commanders. Extremely Rare and largely Extinct.",
+		"Details": "Built in 2776, this Atlas variant is the largest 'Mech equipped with a Command Console. To free up the weight required to fit this device, the AS7-D-DC removes one ton of LRM ammunition and the paired rear firing lasers. Effective at Close and Long Range Fire Support. Recommended for use by Experienced Tactical Commanders. Extremely rare and largely Extinct.",
 		"Icon": "uixTxrIcon_atlas"
 	},
 	"MovementCapDefID": "movedef_atlas_AS7-D",
@@ -69,13 +39,13 @@
 	"Signature": 0,
 	"Radius": 8,
 	"PunchesWithLeftArm": false,
-	"MeleeDamage": 140,
-	"MeleeInstability": 100,
+	"MeleeDamage": 110,
+	"MeleeInstability": 55,
 	"MeleeToHitModifier": 0,
-	"DFADamage": 100,
+	"DFADamage": 110,
 	"DFAToHitModifier": 0,
-	"DFASelfDamage": 100,
-	"DFAInstability": 50,
+	"DFASelfDamage": 110,
+	"DFAInstability": 55,
 	"Locations": [
 		{
 			"Location": "Head",
@@ -256,14 +226,14 @@
 			"hasPrefabName": false
 		},
 		{
-            "MountedLocation" : "CenterTorso",
-            "ComponentDefID" : "emod_structureslots_standard",
-            "ComponentDefType" : "Upgrade",
-            "HardpointSlot" : -1,
-            "DamageLevel" : "Functional",
-            "prefabName" : "",
-            "hasPrefabName" : true
-        }
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "emod_structureslots_standard",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional",
+			"prefabName": "",
+			"hasPrefabName": true
+		}
 	],
 	"VariantName": "AS7-D-DC",
 	"ChassisTags": {

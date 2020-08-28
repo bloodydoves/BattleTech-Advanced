@@ -219,7 +219,7 @@
                     "LinkedStatisticName" : "VehicleEngineCrits",
                     "PenalizedEffectIDs" : [
                         [
-							"CriticalEffect-VehicleEngineCrit1, CriticalEffect-VehicleEngineCrit2",
+							"CriticalEffect-VehicleEngineCrit1", "CriticalEffect-VehicleEngineCrit2",
 							"CriticalEffect-EngineTankCritPenalty"
 						]
                     ],
@@ -302,11 +302,14 @@
                 },
                 "CriticalEffects" : {
                     "DestroyedFloatieMessage" : "Actuator DESTROYED",
-                    "OnDestroyedEffectIDs" : ["CriticalEffect-HipDestroyed-{location}"],
+                    "OnDestroyedEffectIDs" : ["CriticalEffect-HipDestroyed-{location}", "CriticalEffect-HipDestroyed-{location}-pilot-pen"],
 					"OnDestroyedDisableEffectIds" : [
 						"CriticalEffect-LegUpperActuatorDestroyed-{location}",
 						"CriticalEffect-LegLowerActuatorDestroyed-{location}",
-						"CriticalEffect-LegFootActuatorDestroyed-{location}"
+						"CriticalEffect-LegFootActuatorDestroyed-{location}",
+						"CriticalEffect-LegUpperDestroyed-{location}-pilot-pen",
+						"CriticalEffect-LegLowerDestroyed-{location}-pilot-pen",
+						"CriticalEffect-LegFootDestroyed-{location}-pilot-pen"
 					]
                 }
             }
@@ -326,7 +329,7 @@
                 },
                 "CriticalEffects" : {
                     "DestroyedFloatieMessage" : "Actuator DESTROYED",
-                    "OnDestroyedEffectIDs" : ["CriticalEffect-LegUpperActuatorDestroyed-{location}"]
+                    "OnDestroyedEffectIDs" : ["CriticalEffect-LegUpperActuatorDestroyed-{location}", "CriticalEffect-LegUpperDestroyed-{location}-pilot-pen"]
                 }
             }
         },
@@ -345,7 +348,7 @@
                 },
                 "CriticalEffects" : {
                     "DestroyedFloatieMessage" : "Actuator DESTROYED",
-                    "OnDestroyedEffectIDs" : ["CriticalEffect-LegLowerActuatorDestroyed-{location}"]
+                    "OnDestroyedEffectIDs" : ["CriticalEffect-LegLowerActuatorDestroyed-{location}", "CriticalEffect-LegLowerDestroyed-{location}-pilot-pen"]
                 }
             }
         },
@@ -364,7 +367,7 @@
                 },
                 "CriticalEffects" : {
                     "DestroyedFloatieMessage" : "Actuator DESTROYED",
-                    "OnDestroyedEffectIDs" : ["CriticalEffect-LegFootActuatorDestroyed-{location}"]
+                    "OnDestroyedEffectIDs" : ["CriticalEffect-LegFootActuatorDestroyed-{location}", "CriticalEffect-LegFootDestroyed-{location}-pilot-pen"]
                 }
             }
         },
@@ -469,7 +472,7 @@
 			{ "Name": "HandHeld", "displayName": "Hand Held", "MaxEquiped": "1", "AutoReplace": "true" },
 			{ "Name": "BlueShield", "displayName": "Blue Shield Project", "MaxEquiped": "1", "AutoReplace": "true" },
 			{ "Name": "C3Slave", "displayName": "C3 Slave", "MaxEquiped": "1", "AutoReplace": "true" },
-			{ "Name": "C3Master", "displayName": "C3 Master", "MaxEquiped": "1", "AutoReplace": "true" },
+			{ "Name": "C3Master", "displayName": "C3 Master", "MaxEquiped": "2", "AutoReplace": "true" },
 			{ "Name": "C3i", "displayName": "C3 Improved", "MaxEquiped": "1", "AutoReplace": "true" },
 			{ "Name": "TSM", "displayName": "Triple Strength Myomer", "MaxEquiped": "1", "AutoReplace": "true", "AddMaximumReached": "Mech already has {1} of {0} installed" },
 			{ "Name": "EndoTSM", "displayName": "Triple Strength Myomer", "MaxEquiped": "1", "AutoReplace": "false", "AddMaximumReached": "Mech already has {1} of {0} installed" },
@@ -492,6 +495,8 @@
 			{ "Name": "ArtemisTTS", "displayName": "Artemis IV System", "MaxEquiped": "1", "AutoReplace": "true" },
 			{ "Name": "LRMARTIVAmmo", "displayName": "Artemis IV LRM", "AutoReplace": "true" },
 			{ "Name": "SRMARTIVAmmo", "displayName": "Artemis IV SRM", "AutoReplace": "true" },
+			{ "Name": "MRMApolloAmmo", "displayName": "Apollo MRM", "AutoReplace": "true" },
+			{ "Name": "ApolloTTS", "displayName": "Apollo FCS", "MaxEquiped": "1", "AutoReplace": "true" },
 			{ "Name": "CLANTTS", "displayName": "CLAN TTS", "MaxEquiped": "1", "AutoReplace": "true" },
 			{ "Name": "TTSComp", "displayName": "TTS Battle Computer", "MaxEquiped": "1", "AutoReplace": "true" },
 			{ "Name": "MeleeActuator", "displayName": "Melee Actuator", "MaxEquipedPerLocation": "1", "AutoReplace": "true" },

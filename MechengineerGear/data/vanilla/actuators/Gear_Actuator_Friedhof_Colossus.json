@@ -11,7 +11,7 @@
 		"BonusDescriptions": {
             "Bonuses": [
                 "ArmAccuracy: +1",
-				"MeleeStab: +60",
+				"PunchStabBonus: +60%%",
 				"IsLowerArm"
             ]
         }
@@ -31,14 +31,14 @@
         "Details" : "Actuators control a 'Mech\u2019s limbs and are used to perform Melee attacks at close quarters. All 'Mechs come equipped with stock Actuators, which can be upgraded for improved performance.",
         "Icon" : "uixSvgIcon_equipment_ActuatorArm"
     },
-    "BonusValueA" : "+ 60 Melee Stb.Dmg.",
+    "BonusValueA" : "+ 60% Punch Stb.Dmg.",
     "BonusValueB" : "Lower Arm",
     "ComponentType" : "Upgrade",
     "ComponentSubType" : "NotSet",
     "PrefabIdentifier" : "",
     "BattleValue" : 0,
     "InventorySize" : 1,
-    "Tonnage" : 3,
+    "Tonnage" : 2.5,
     "AllowedLocations" : "Arms",
     "DisallowedLocations" : "All",
     "CriticalComponent" : false,
@@ -69,23 +69,18 @@
             "Description" : {
                 "Id" : "StatusEffect-Attack_DamageStabMelee-T6",
                 "Name" : "MELEE STABILITY DAMAGE INCREASED",
-                "Details" : "Melee attacks deal [AMT] more stability damage.",
+                "Details" : "Melee attacks deal 60% more stability damage.",
                 "Icon" : "uixSvgIcon_equipment_ActuatorArm"
             },
             "nature" : "Buff",
             "statisticData" : {
                 "appliesEachTick" : false,
                 "effectsPersistAfterDestruction" : false,
-                "statName" : "Instability",
-                "operation" : "Float_Add",
-                "modValue" : "60.0",
+                "statName" : "CBTBE_Punch_Target_Instability_Multi",
+                "operation" : "Float_Multiply",
+                "modValue" : "1.6",
                 "modType" : "System.Single",
-                "additionalRules" : "NotSet",
-                "targetCollection" : "Weapon",
-                "targetWeaponCategory" : "NotSet",
-                "targetWeaponType" : "NotSet",
-                "targetAmmoCategory" : "NotSet",
-                "targetWeaponSubType" : "Melee"
+                "additionalRules" : "NotSet"
             },
             "tagData" : null,
             "floatieData" : null,

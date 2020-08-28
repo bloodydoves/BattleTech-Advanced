@@ -1,0 +1,75 @@
+{
+	"Description": {
+		"Id": "AbilityDefG8c",
+		"Name": "MISSILE MASTER",
+		"Details": "PASSIVE: Grants a 10% damage bonus and +1 accuracy to attacks with missile weapons.",
+		"Icon": "MRM"
+	},
+	"DisplayParams": "ShowInMWTRay",
+	"ReqSkill": "Gunnery",
+	"ReqSkillLevel": 8,
+	"ActivationTime": "Passive",
+	"EffectData": [
+		{
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "effectTargetType" : "Creator",
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "AbilityDefG8a_MissileDamage",
+                "Name" : "Missile Damage Increased",
+                "Details" : "Missile attacks deal [AMT] more damage.",
+                "Icon" : "MRM"
+            },
+            "nature" : "Buff",
+            "statisticData": {
+				"modType": "System.Single",
+				"modValue": "1.1",
+				"operation": "Float_Multiply",
+				"statName": "DamagePerShot",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "Missile",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "NotSet"
+			}
+        },
+		{
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "effectTargetType" : "Creator",
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "AbilityDefGU8a_EMissileAccuracy",
+                "Name" : "Missile Accuracy Increased",
+                "Details" : "Missile attacks gain +2 accuracy.",
+                "Icon" : "MRM"
+            },
+            "nature" : "Buff",
+            "statisticData": {
+				"modType": "System.Single",
+				"modValue": "-1.0",
+				"operation": "Float_Add",
+				"statName": "AccuracyModifier",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "Missile",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "NotSet"
+			}
+        }
+	],
+	"IsPrimaryAbility": true
+}

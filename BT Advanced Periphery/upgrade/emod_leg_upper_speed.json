@@ -1,0 +1,68 @@
+{
+	"Custom": {
+		"Category" : { 
+			"CategoryID" : "LegUpperActuator" 
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"RunSpeed: +2.5%",
+			]
+		}
+	},
+    "Description" : {
+        "Cost" : 30000,
+        "Rarity" : 0,
+        "Purchasable" : true,
+        "Manufacturer" : "Generic",
+        "Model" : "Standard",
+        "UIName" : "Speedy Upper Leg",
+        "Id" : "emod_leg_upper_speed",
+        "Name" : "Speedy Upper Leg Actuator",
+        "Details" : "Designed for slightly greater speed at the cost of heavier weight, this actuator allows a mech to move just that little bit faster. The effect is fairly minor however.",
+        "Icon" : "uixSvgIcon_equipment_ActuatorLeg"
+    },
+    "BonusValueA" : "+2.5% Sprint Speed",
+    "BonusValueB" : "",
+    "ComponentType" : "Upgrade",
+    "ComponentSubType" : "NotSet",
+    "PrefabIdentifier" : "",
+    "BattleValue" : 0,
+    "InventorySize" : 1,
+    "Tonnage" : 1,
+    "AllowedLocations" : "Legs",
+    "DisallowedLocations" : "All",
+    "CriticalComponent" : false,
+    "statusEffects" : [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 2
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "UpperLegSpeed",
+				"Name": "ActuatorSpeed",
+				"Details": "MORE SPEED.",
+				"Icon": "uixSvgIcon_run_n_gun"
+			},
+			"statisticData": {
+				"statName": "CBTBE_RunMultiMod",
+				"operation": "Float_Add",
+				"modValue": "0.025",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	],
+    "ComponentTags" : {
+        "items" : [
+            "component_type_stock"
+        ],
+        "tagSetSourceFile" : ""
+    }
+}

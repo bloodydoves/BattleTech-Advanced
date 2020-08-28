@@ -1,7 +1,7 @@
 {
     "ID": "StoryTime_3_Axylus_Default",
     "contractName": "Capture the Scheria",
-    "contractDisplayStyle": "BaseCampaignStory",
+    "contractDisplayStyle": "HeavyMetalFlashpointCampaign",
     "difficulty": 3,
     "difficultyUIModifier": 0,
     "weight": 1,
@@ -11,71 +11,8 @@
     "longDescription" : "This seems straightforward enough\u2026 but be careful, {COMMANDER.FirstName}. We don't know for sure what you're going to find on that moon, and we've had enough surprises already.",
     "salvagePotential": 24,
     "requirementList": [],
-    "OnContractSuccessResults": [
-        {
-            "Scope": "Company",
-            "Requirements": null,
-            "AddedTags": {
-                "items": [],
-                "tagSetSourceFile": ""
-            },
-            "RemovedTags": {
-                "items": [],
-                "tagSetSourceFile": ""
-            },
-            "Stats": [
-                {
-                    "typeString": "System.Int32",
-                    "name": "NextStoryMilestone",
-                    "value": "1",
-                    "set": false,
-                    "valueConstant": ""
-                }
-            ],
-            "Actions": [],
-            "ForceEvents": [],
-            "TemporaryResult": false,
-            "ResultDuration": 0
-        }
-    ],
-    "OnContractFailureResults": [
-        {
-            "Scope": "Company",
-            "Requirements": null,
-            "AddedTags": {
-                "items": [],
-                "tagSetSourceFile": ""
-            },
-            "RemovedTags": {
-                "items": [],
-                "tagSetSourceFile": ""
-            },
-            "Stats": [
-                {
-                    "typeString": "System.Int32",
-                    "name": "NextStoryMilestone",
-                    "value": "132",
-                    "set": true,
-                    "valueConstant": ""
-                }
-            ],
-            "Actions": [
-                {
-                    "Type": "System_AddContract",
-                    "value": "trav_story_3_axylus",
-                    "valueConstant": "",
-                    "additionalValues": [
-                        "NoFaction",
-                        "MagistracyOfCanopus",
-                        "starsystemdef_Alloway"
-                    ]
-                }
-            ],
-            "ForceEvents": [],
-            "TemporaryResult": false,
-            "ResultDuration": 0
-        }
-    ],
+    "OnContractSuccessResults": [],
+    "OnContractFailureResults": [],
     "contractTypeID": "Story_3_Axylus",
     "encounterPlayStyle": "SinglePlayer",
     "maxNumberOfPlayerUnits": 4,

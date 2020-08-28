@@ -1,0 +1,124 @@
+{
+    "Description": {
+        "Id": "forcedevent_FP_StoryTime6_B",
+        "Name": "Damage Report",
+        "Details": "Even with Lady Arano safely aboard the Leopard, this is far from over. Sumiere looks up from her controls. \"Another transmission from the Taurians, Commander.\"",
+        "Icon": "uixTxrSpot_IncomingTransimission.png"
+    },
+    "Scope": "Company",
+    "Weight": 0,
+    "Requirements": {
+        "Scope": "Company",
+        "RequirementTags": {},
+        "ExclusionTags": {},
+        "RequirementComparisons": []
+    },
+    "AdditionalRequirements": [],
+    "AdditionalObjects": [],
+    "Options": [
+        {
+            "Description": {
+                "Id": "outcome_0",
+                "Name": "Put it on screen",
+                "Details": "Cinamatic and debriefing",
+                "Icon": null
+            },
+            "RequirementList": [],
+            "ResultSets": [
+                {
+                    "Description": {
+                        "Id": "outcome_0_0",
+                        "Name": "Damage Report",
+                        "Details": "Back aboard the <i>Argo</i>, you can't help but notice the smell of smoke and the pings of hot metal. Whatever happened to her was nearly fatal. The staff gathers to discuss events.",
+                        "Icon": null
+                    },
+                    "Weight": 100,
+                    "Results": [
+                        {
+                            "Scope": "Company",
+                            "Requirements": null,
+                            "AddedTags": {},
+                            "RemovedTags": {},
+                            "Stats": [],
+                            "Actions": [
+                                {
+                                    "Type": "System_PlayVideo",
+                                    "value": "6B-armory.bk2",
+                                    "valueConstant": null
+                                },
+                                {
+                                    "Type" : "System_SimGameCharacterVisible",
+                                    "value" : true,
+                                    "additionalValues" : [
+                                        "Kamea",
+                                        "Yang",
+                                        "Farah"
+                                    ]
+                                },
+                                {
+                                    "Type" : "System_StartConversation",
+                                    "value" : "StoryTime6-DamageReport",
+                                    "additionalValues" : [
+                                        "DAMAGE REPORT",
+                                        "In Orbit — Artru"
+                                    ]
+                                }
+                            ],
+                            "ForceEvents": null,
+                            "TemporaryResult": false,
+                            "ResultDuration": 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements": {
+                "Scope": "Company",
+                "RequirementTags": {},
+                "ExclusionTags": {},
+                "RequirementComparisons": []
+            }
+        },
+        {
+            "Description": {
+                "Id": "outcome_1",
+                "Name": "Ignore them. (Skip cutscene and conversation)",
+                "Details": "Cinamatic and debriefing",
+                "Icon": null
+            },
+            "RequirementList": [],
+            "ResultSets": [
+                {
+                    "Description": {
+                        "Id": "outcome_1_0",
+                        "Name": "Damage Report",
+                        "Details": "Back aboard the <i>Argo</i>, you can't help but notice the smell of smoke and the pings of hot metal. Whatever happened to her was nearly fatal.\r\n\n\nFarah confirms that there's no more danger from the Locura, and Lady Arano returns to Restoration space on her own ship to figure out what to do about the Taurians. The immediate crisis is over, but the larger one is just beginning.",
+                        "Icon": null
+                    },
+                    "Weight": 100,
+                    "Results": [
+                        {
+                            "Scope": "Company",
+                            "Requirements": null,
+                            "AddedTags": {},
+                            "RemovedTags": {},
+                            "Stats": [],
+                            "Actions": [],
+                            "ForceEvents": null,
+                            "TemporaryResult": false,
+                            "ResultDuration": 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements": {
+                "Scope": "Company",
+                "RequirementTags": {},
+                "ExclusionTags": {},
+                "RequirementComparisons": []
+            }
+        }
+    ],
+    "PublishState": "PUBLISHED",
+    "ValidationState": "UNTESTED",
+    "EventType": "UNSELECTABLE"
+}

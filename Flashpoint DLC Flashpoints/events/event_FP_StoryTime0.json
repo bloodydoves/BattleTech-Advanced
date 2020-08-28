@@ -1,0 +1,152 @@
+{
+    "Description": {
+        "Id": "event_FP_StoryTime0",
+        "Name": "MercNews Broadcast",
+        "Details": "AURIGAN COALITION SUCCESSION: TENSION IN THE HIGH HOUSE!\r\n\n\n[[DM.BaseDescriptionDefs[LoreHighLordTamatiArano],High Lord Tamati Arano II]] is dead, leaving the [[DM.BaseDescriptionDefs[LoreAuriganCoalition],Aurigan Coalition]] leaderless. Sources report that he and his wife were killed in an accident yesterday, leaving Kamea Arano as the only heir. Sources indicate growing tension within the palace, as Lord Santiago Espinoza and Lady Kamea wrangle for power. With tensions high in this region of the periphery, MercNews is on the scene, bringing you the latest.\r\n\n\nDarius interrupts your news reading to say that your old mentor, Raju Montgomery is on the line with a job offer.",
+        "Icon": "uixTxrSpot_ComputerScreen.png"
+    },
+    "Scope": "Company",
+    "Weight": 0,
+    "Requirements": {
+        "Scope": "Company",
+        "RequirementTags": {
+            "tagSetSourceFile": "Tags/CompanyTags",
+            "items": []
+        },
+        "ExclusionTags": {
+            "tagSetSourceFile": "Tags/CompanyTags",
+            "items": [
+                "flashpoint_StoryTime0_accept",
+                "flashpoint_StoryTime0_cancel"
+            ]
+        },
+        "RequirementComparisons": []
+    },
+    "AdditionalRequirements": [],
+    "AdditionalObjects": [],
+    "Options": [
+        {
+            "Description": {
+                "Id": "outcome_0",
+                "Name": "Raju with a job? Let's go. (Add Campaign Flashpoints)",
+                "Details": "Replay the campaign as Flashpoints",
+                "Icon": null
+            },
+            "RequirementList": [],
+            "ResultSets": [
+                {
+                    "Description": {
+                        "Id": "outcome_0_0",
+                        "Name": "Troubles in the Coalition",
+                        "Details": "After reaching out to him, Darius has more details on the contract. Raju Montgomery would like you to be one of [[DM.BaseDescriptionDefs[LoreKameaArano],Lady Kamea Arano's]] honor guards on the day of her coronation, taking place on [[DM.BaseDescriptionDefs[LoreCoromodir],Coromodir]] shortly. He worries that internal politics will be a danger to his charge, and wants a trusted outsider to help ensure her safety.",
+                        "Icon": null
+                    },
+                    "Weight": 100,
+                    "Results": [
+                        {
+                            "Scope": "Company",
+                            "Requirements": null,
+                            "AddedTags": {
+                                "tagSetSourceFile": "",
+                                "items": [
+                                    "flashpoint_StoryTime0_accept"
+                                ]
+                            },
+                            "RemovedTags": {
+                                "tagSetSourceFile": "Tags/CompanyTags",
+                                "items": []
+                            },
+                            "Stats": [],
+                            "Actions": [
+                                {
+                                    "Type": "System_AddFlashpoint",
+                                    "value": "fp_StoryTime1",
+                                    "valueConstant": null,
+                                    "additionalValues": [
+                                        "starsystemdef_Coromodir"
+                                    ]
+                                },
+                                {
+                                    "Type": "System_PlayVideo",
+                                    "value": "1A-prologue.bk2",
+                                    "valueConstant": null
+                                }
+                            ],
+                            "ForceEvents": null,
+                            "TemporaryResult": false,
+                            "ResultDuration": 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements": {
+                "Scope": "Company",
+                "RequirementTags": {
+                    "tagSetSourceFile": "",
+                    "items": []
+                },
+                "ExclusionTags": {
+                    "tagSetSourceFile": "",
+                    "items": []
+                },
+                "RequirementComparisons": []
+            }
+        },
+        {
+            "Description": {
+                "Id": "outcome_1",
+                "Name": "No thank you. (Do NOT create campaign Flashpoints)",
+                "Details": "Don't replay the campaign this career",
+                "Icon": null
+            },
+            "RequirementList": [],
+            "ResultSets": [
+                {
+                    "Description": {
+                        "Id": "outcome_1_0",
+                        "Name": "MercNews Broadcast",
+                        "Details": "BREAKING NEWS: AURIGAN SUCCESSION BLOODY!\r\n\r\nSources inside the Aurigan Coalition report that, concerned with her Lord Santiago Espinoza's possible treachery and continual disrespect towards his protege, Raju Montgomery drew a laser psitol during council this morning and killed him. While Raju Montgomery awaits trial in prison, Lady Kamea Arano has ascended to the throne of the Aurigan Coalition without challenge.",
+                        "Icon": null
+                    },
+                    "Weight": 100,
+                    "Results": [
+                        {
+                            "Scope": "Company",
+                            "Requirements": null,
+                            "AddedTags": {
+                                "tagSetSourceFile": "",
+                                "items": [
+                                    "flashpoint_StoryTime0_cancel"
+                                ]
+                            },
+                            "RemovedTags": {
+                                "tagSetSourceFile": "Tags/CompanyTags",
+                                "items": []
+                            },
+                            "Stats": [],
+                            "Actions": null,
+                            "ForceEvents": null,
+                            "TemporaryResult": false,
+                            "ResultDuration": 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements": {
+                "Scope": "Company",
+                "RequirementTags": {
+                    "tagSetSourceFile": "",
+                    "items": []
+                },
+                "ExclusionTags": {
+                    "tagSetSourceFile": "",
+                    "items": []
+                },
+                "RequirementComparisons": []
+            }
+        }
+    ],
+    "PublishState": "PUBLISHED",
+    "ValidationState": "UNTESTED",
+    "EventType": "UNSELECTABLE"
+}

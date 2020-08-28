@@ -1,0 +1,289 @@
+{
+    "StartingMilestoneID": "ms_fp_StoryTime6c_001_Start",
+    "Milestones": [
+        {
+            "Description": {
+                "Id": "ms_fp_StoryTime6c_001_Start",
+                "Name": "Start",
+                "Details": "flashpoint",
+                "Icon": null
+            },
+            "Scope": "Company",
+            "Requirements": [],
+            "Results": [
+                {
+                    "Scope": "Company",
+                    "Requirements": null,
+                    "AddedTags": {},
+                    "RemovedTags": {},
+                    "Stats": [],
+                    "Actions": [
+                        {
+                            "Type": "Flashpoint_SetNextMilestone",
+                            "value": "ms_fp_StoryTime6c_002_Mission",
+                            "valueConstant": null,
+                            "additionalValues": null
+                        }
+                    ],
+                    "ForceEvents": [],
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ],
+            "Repeatable": false,
+            "UseRandomInvocation": false,
+            "InvokeChance": 0
+        },
+        {
+            "Description": {
+                "Id": "ms_fp_StoryTime6c_002_Mission",
+                "Name": "Mission",
+                "Details": "flashpoint",
+                "Icon": null
+            },
+            "Scope": "Company",
+            "Requirements": [],
+            "Results": [
+                {
+                    "Scope": "Company",
+                    "Requirements": null,
+                    "AddedTags": {},
+                    "RemovedTags": {},
+                    "Stats": null,
+                    "Actions": [
+                        {
+                            "Type": "Flashpoint_AddContract",
+                            "value": "",
+                            "valueConstant": null,
+                            "additionalValues": [
+                                "",
+                                "",
+                                "StoryTime_6c_a_ItromAttack_Default",
+                                "AuriganRestoration",
+                                "AuriganDirectorate",
+                                "6",
+                                "ms_fp_StoryTime6c_003_Talk",
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ]
+                        },
+                        {
+                            "Type": "System_ForceDropshipRoom",
+                            "value": "Contract",
+                            "valueConstant": null,
+                            "additionalValues": [
+                                "BaseFlashpoint"
+                            ]
+                        }
+                    ],
+                    "ForceEvents": null,
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ],
+            "Repeatable": false,
+            "UseRandomInvocation": false,
+            "InvokeChance": 0
+        },
+        {
+            "Description": {
+                "Id": "ms_fp_StoryTime6c_003_Talk",
+                "Name": "Complete",
+                "Details": "flashpoint",
+                "Icon": null
+            },
+            "Scope": "Company",
+            "Requirements": [],
+            "Results": [
+                {
+                    "Scope": "Company",
+                    "Requirements": null,
+                    "AddedTags": {
+                        "items": [
+                            "flashpoint_StoryTime6c_complete"
+                        ],
+                        "tagSetSourceFile": "Tags/CompanyTags"
+                    },
+                    "RemovedTags": {},
+                    "Stats": null,
+                    "Actions": [
+                        {
+                            "Type": "Flashpoint_SetNextMilestone",
+                            "value": "ms_fp_StoryTime6c_004_Mission",
+                            "valueConstant": null,
+                            "additionalValues": null
+                        }
+                        {
+                            "Type" : "System_SimGameCharacterVisible",
+                            "value" : true,
+                            "additionalValues" : [
+                                "Kamea",
+                                "Alexander"
+                            ]
+                        },
+                        {
+                            "Type" : "System_StartConversation",
+                            "value" : "StoryTime6c-Revelations",
+                            "additionalValues" : [
+                                "REVELATIONS",
+                                "In Orbit — Itrom"
+                            ]
+                        }
+                    ],
+                    "ForceEvents": [],
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ],
+            "Repeatable": false,
+            "UseRandomInvocation": false,
+            "InvokeChance": 0
+        },
+        {
+            "Description": {
+                "Id": "ms_fp_StoryTime6c_004_Mission",
+                "Name": "Mission",
+                "Details": "flashpoint",
+                "Icon": null
+            },
+            "Scope": "Company",
+            "Requirements": [],
+            "Results": [
+                {
+                    "Scope": "Company",
+                    "Requirements": null,
+                    "AddedTags": {},
+                    "RemovedTags": {},
+                    "Stats": null,
+                    "Actions": [
+                        {
+                            "Type": "Flashpoint_StartContract",
+                            "value": "",
+                            "valueConstant": null,
+                            "additionalValues": [
+                                "",
+                                "",
+                                "StoryTime_6c_b_ItromDefense_Default",
+                                "AuriganRestoration",
+                                "TaurianConcordat",
+                                "6",
+                                "ms_fp_StoryTime6c_005_Complete",
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ]
+                        },
+                        {
+                            "Type": "System_ForceDropshipRoom",
+                            "value": "Contract",
+                            "valueConstant": null,
+                            "additionalValues": [
+                                "BaseFlashpoint"
+                            ]
+                        }
+                    ],
+                    "ForceEvents": null,
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ],
+            "Repeatable": false,
+            "UseRandomInvocation": false,
+            "InvokeChance": 0
+        },
+        {
+            "Description": {
+                "Id": "ms_fp_StoryTime6c_005_Complete",
+                "Name": "Complete",
+                "Details": "flashpoint",
+                "Icon": null
+            },
+            "Scope": "Company",
+            "Requirements": [],
+            "Results": [
+                {
+                    "Scope": "Company",
+                    "Requirements": null,
+                    "AddedTags": {
+                        "items": [
+                            "flashpoint_StoryTime6c_complete"
+                        ],
+                        "tagSetSourceFile": "Tags/CompanyTags"
+                    },
+                    "RemovedTags": {},
+                    "Stats": null,
+                    "Actions": [
+                        {
+                            "Type": "Flashpoint_CompleteFlashpoint",
+                            "value": "ms_fp_StoryTime6c_006_Reward",
+                            "valueConstant": null,
+                            "additionalValues": null
+                        },
+                        {
+                            "Type" : "System_StartConversation",
+                            "value" : "StoryTime6c-Departure",
+                            "additionalValues" : [
+                                "DEPARTURE",
+                                "In Orbit — Itrom"
+                            ]
+                        }
+                    ],
+                    "ForceEvents": [],
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ],
+            "Repeatable": false,
+            "UseRandomInvocation": false,
+            "InvokeChance": 0
+        },
+        {
+            "Description": {
+                "Id": "ms_fp_StoryTime6c_006_Reward",
+                "Name": "Reward",
+                "Details": "Extra rewards, including Reputation and bonus C-Bills go here",
+                "Icon": null
+            },
+            "Scope": "Company",
+            "Requirements": [],
+            "Results": [
+                {
+                    "Scope": "Company",
+                    "Requirements": null,
+                    "AddedTags": {},
+                    "RemovedTags": {},
+                    "Stats": [
+                        {
+                            "typeString": "System.Int32",
+                            "name": "Funds",
+                            "value": "300000",
+                            "set": false,
+                            "valueConstant": null
+                        }
+                    ],
+                    "Actions": [
+                        {
+                            "Type" : "System_SimGameCharacterVisible",
+                            "value" : false,
+                            "additionalValues" : [
+                                "Kamea",
+                                "Alexander"
+                            ]
+                        }
+                    ],
+                    "ForceEvents": null,
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ],
+            "Repeatable": false,
+            "UseRandomInvocation": false,
+            "InvokeChance": 0
+        }
+    ]
+}

@@ -7,14 +7,14 @@
 		],
 		"BonusDescriptions": {
 			"Bonuses": [
-				"HeatEfficiency: 10%"
+				"EndMoveHeat: -8"
 			]
 		},
 		"InventorySorter": {
 			"SortKey": "00017"
 		}
 	},
-	"DissipationCapacity": 1,
+	"DissipationCapacity": 0,
 	"Description": {
 		"Cost": 160000,
 		"Rarity": 2,
@@ -23,11 +23,11 @@
 		"Model": "Standard Bank",
 		"UIName": "Heat Bank",
 		"Id": "Gear_HeatSink_Generic_Standard-Bank",
-		"Name": "Standard Bank Heat Bank",
-		"Details": "Heat Banks are installed to allow for more thermal energy collection, improving the efficiency of a mech's installed heat sinking mechanisms.",
+		"Name": "Standard Heat Bank",
+		"Details": "Heat Banks are installed to allow for more thermal energy venting. However, where standard heat sinks rely on coolants (which have varied effectiveness in different environments) heat banks do not. They simply collect and expel heat automatically, though only in certain increments. What this means is that, while their effect doesn't get accounted for by a mech's cooling systems, they always vent off their collected heat regardless of environments. This trait makes Heat Banks invaluable in extremely hazardous environments such as Martian or Lunar settings.",
 		"Icon": "uixSvgIcon_equipment_HeatBank"
 	},
-	"BonusValueA": "10% More Heat Sinking",
+	"BonusValueA": "Vents 8 Heat",
 	"BonusValueB": "",
 	"ComponentType": "HeatSink",
 	"ComponentSubType": "Heatsink",
@@ -40,33 +40,56 @@
 	"CriticalComponent": false,
 	"statusEffects": [
 		{
-			"durationData": {
-				"duration": -1,
-				"stackLimit": -1
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"effectTargetType": "Creator",
-				"showInTargetPreview": false,
-				"showInStatusPanel": false
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "HeatSinkEfficiency_10",
-				"Name": "HEAT DISSIPATION INCREASED",
-				"Details": "Heat dissipation amount increased by 10%.",
-				"Icon": "uixSvgIcon_equipment_HeatBank"
-			},
-			"nature": "Buff",
-			"statisticData": {
-				"appliesEachTick": false,
-				"effectsPersistAfterDestruction": false,
-				"statName": "HeatSinkCapacity",
-				"operation": "Int_Multiply_Float",
-				"modValue": "1.1",
-				"modType": "System.Single"
-			}
-		}
+            "durationData": {
+                "duration": -1,
+                "ticksOnActivations": false,
+                "useActivationsOfTarget": false,
+                "ticksOnEndOfRound": false,
+                "ticksOnMovements": false,
+                "stackLimit": -1,
+                "clearedWhenAttacked": false
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "triggerLimit": 0,
+                "extendDurationOnTrigger": 0,
+                "specialRules": "NotSet",
+                "effectTargetType": "Creator",
+                "range": 0,
+                "forcePathRebuild": false,
+                "forceVisRebuild": false,
+                "showInTargetPreview": false,
+                "showInStatusPanel": false
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "HeatBank_Venting",
+                "Name": "Standard Heat Bank",
+                "Details": "Standard Heat Bank system venting 8 heat",
+                "Icon": "uixSvgIcon_equipment_ThermalExchanger"
+            },
+            "nature": "Buff",
+            "statisticData": {
+                "appliesEachTick": false,
+                "effectsPersistAfterDestruction": false,
+                "statName": "EndMoveHeat",
+                "operation": "Int_Add",
+                "modValue": "-8",
+                "modType": "System.Int32",
+                "additionalRules": "NotSet",
+                "targetCollection": "NotSet",
+                "targetWeaponCategory": "NotSet",
+                "targetWeaponType": "NotSet",
+                "targetAmmoCategory": "NotSet",
+                "targetWeaponSubType": "NotSet"
+            },
+            "tagData": null,
+            "floatieData": null,
+            "actorBurningData": null,
+            "vfxData": null,
+            "instantModData": null,
+            "poorlyMaintainedEffectData": null
+        }
 	],
 	"ComponentTags": {
 		"items": [

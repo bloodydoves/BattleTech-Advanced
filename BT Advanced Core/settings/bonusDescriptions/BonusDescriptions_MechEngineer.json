@@ -703,10 +703,10 @@
 			"Full": "Tier {0} ECM"
 		},
 		{
-			"Bonus": "ECMBubble",
-			"Short": "Bubble",
-			"Long": "{0} ECM Bubble",
-			"Full": "{0} meter radius ECM Bubble jamming Enemys and protecting Friendlies against Sensor Checks"
+			"Bonus": "ECMRadius",
+			"Short": "Radius",
+			"Long": "{0} Meter ECM Radius",
+			"Full": "{0} meter radius ECM field that protects allied mechs."
 		},
 		{
 			"Bonus": "ECMPower",
@@ -1164,6 +1164,12 @@
 			"Full": "Chem Large Laser Ammo - {0} Shots"
 		},
 		{
+			"Bonus": "ChemLaserAmmo",
+			"Short": "ChemLaser Ammo",
+			"Long": "ChemLaser Ammo",
+			"Full": "Chem Laser Ammo - {0} Shots"
+		},
+		{
 			"Bonus": "MortarAmmo",
 			"Short": "Mortar Ammo",
 			"Long": "Mortar Ammo",
@@ -1540,6 +1546,12 @@
 			"Short": "ArtemisIV",
 			"Long": "Artemis IV TTS",
 			"Full": "This TTS allows Artemis IV Ammo to be used"
+		},
+		{
+			"Bonus": "Apollo",
+			"Short": "Apollo",
+			"Long": "Apollo TTS",
+			"Full": "This TTS allows Apollo Ammo to be used"
 		},
 		{
 			"Bonus": "Artemis",
@@ -2718,6 +2730,12 @@
 			"Full": "{0} Accuracy with Medium-Range Missiles"
 		},
 		{
+			"Bonus": "MRMEvasionIgnore",
+			"Short": "{0} MRM Evasion",
+			"Long": "{0} MRM Evasion Ignoer",
+			"Full": "{0} Evasion Ignore with Medium-Range Missiles"
+		},
+		{
 			"Bonus": "LRMAccuracy",
 			"Short": "{0} LRM Acc",
 			"Long": "{0} LRM Accuracy",
@@ -3460,6 +3478,234 @@
 			"Short": "DB/AC",
 			"Long": "Double Barrel Autocannon",
 			"Full": "Double Barrel Autocannons fire a pair of shells at once with no risk of jamming."
+		},
+		{
+			"Bonus": "IsCannon",
+			"Short": "Cannon",
+			"Long": "Cannon",
+			"Full": "Cannons are primitive ballistic weapons that expend their entire ammo reseve in a single burst, much like Rocket Launchers do."
+		},
+		{
+			"Bonus": "CannonShots",
+			"Short": "Cannon Shots",
+			"Long": "Cannon Shots",
+			"Full": "This cannon fires {0} shots when used."
+		},
+		{
+			"Bonus": "IsGrenade",
+			"Short": "Grenade",
+			"Long": "Grenade",
+			"Full": "Grenade launchers are simple weapons that fire a single grenade shell in an arc at a target. Grenades often carry various payload types."
+		},
+		{
+			"Bonus": "GrenadeAmmo",
+			"Short": "Grenade Ammo",
+			"Long": "Grenade Ammo",
+			"Full": "Grenade Ammo - {0} Shots"
+		},
+		{
+			"Bonus": "AMSDamage",
+			"Short": "AMSDamage",
+			"Long": "AMSDamage",
+			"Full": "Each shot from the AMS does {0} damage to incoming missile health."
+		},
+		{
+			"Bonus": "MissileHealth",
+			"Short": "MissileHealth",
+			"Long": "MissileHealth",
+			"Full": "Each missile in this launcher's flight has {0} health."
+		},
+		{
+			"Bonus": "MMLLRMHealth",
+			"Short": "MissileHealth",
+			"Long": "MissileHealth",
+			"Full": "Each missile in this launcher's LRM flight has {0} health."
+		},
+		{
+			"Bonus": "MMLSRMHealth",
+			"Short": "MissileHealth",
+			"Long": "MissileHealth",
+			"Full": "Each missile in this launcher's SRM flight has {0} health."
+		},
+		{
+			"Bonus": "OLAMSAttacks",
+			"Short": "OLAMSAttacks",
+			"Long": "OLAMSAttacks",
+			"Full": "On overload, the AMS will fire multiple times a turn instead of only once."
+		},
+		{
+			"Bonus": "LoanShark",
+			"Short": "C-Bill Loan",
+			"Long": "C-Bill Loan",
+			"Full": "This is a placeholder item representing a c-bill loan to the player's company. It cannot be equipped to or used by mechs in any way. To pay back the loan, sell this item in a store."
+		},
+		{
+			"Bonus": "PunchDamageBonus",
+			"Short": "Punch Damage Bonus",
+			"Long": "Punch Damage Bonus",
+			"Full": "Punches do {0} more damage."
+		},
+		{
+			"Bonus": "PunchStabBonus",
+			"Short": "Punch Stability Bonus",
+			"Long": "Punch Stability Bonus",
+			"Full": "Punches do {0} more stability damage."
+		},
+		{
+			"Bonus": "DFADamageBonus",
+			"Short": "DFA Damage Bonus",
+			"Long": "DFA Damage Bonus",
+			"Full": "DFAs do {0} more damage."
+		},
+		{
+			"Bonus": "DFASelfStabDamage",
+			"Short": "{0} DFA Self Stab Dmg",
+			"Long": "{0} DFA Self Stab Damage",
+			"Full": "{0} Less Death from Above Self Stability Damage taken"
+		},
+		{
+			"Bonus": "KickDamageBonus",
+			"Short": "Kick Damage Bonus",
+			"Long": "Kick Damage Bonus",
+			"Full": "Kicks do {0} more damage."
+		},
+		{
+			"Bonus": "KickStabBonus",
+			"Short": "Kick Stability Bonus",
+			"Long": "Kick Stability Bonus",
+			"Full": "Kicks do {0} more stability damage."
+		},
+		{
+			"Bonus": "ChargeDamageBonus",
+			"Short": "Charge Damage Bonus",
+			"Long": "Charge Damage Bonus",
+			"Full": "Charges do {0} more damage."
+		},
+		{
+			"Bonus": "ChargeStabBonus",
+			"Short": "Charge Stability Bonus",
+			"Long": "Charge Stability Bonus",
+			"Full": "Charges do {0} more stability damage."
+		},
+		{
+			"Bonus": "ChargeSelfDamage",
+			"Short": "Charge Self Damage Reduction",
+			"Long": "Charge Self Damage Reduction",
+			"Full": "Charges do {0} less self-damage."
+		},
+		{
+			"Bonus": "ChargeSelfStab",
+			"Short": "Charge Self Stability Reduction",
+			"Long": "Charge Self Stability Reduction",
+			"Full": "Charges do {0} less stability self-damage."
+		},
+		{
+			"Bonus": "IsPhysWeap",
+			"Short": "Is Physical Weapon",
+			"Long": "Is Physical Weapon",
+			"Full": "This item is a physical weapon and uses physical weapon melee mechanics."
+		},
+		{
+			"Bonus": "PhysWeapUnsteady",
+			"Short": "Physical Weapon Unsteady",
+			"Long": "Physical Weapon Unsteady",
+			"Full": "This item is a physical weapon and always makes the target unsteady on a successful hit."
+		},
+		{
+			"Bonus": "PhysWeapDamage",
+			"Short": "Physical Weapon Damage",
+			"Long": "Physical Weapon Damage",
+			"Full": "This physical weapon does {0} damage per ton of the carrying unit."
+		},
+		{
+			"Bonus": "PhysWeapStab",
+			"Short": "Physical Weapon Stab Damage",
+			"Long": "Physical Weapon Stab Damage",
+			"Full": "This physical weapon does {0} stability damage per ton of the carrying unit."
+		},
+		{
+			"Bonus": "PhysWeapDamageFlat",
+			"Short": "Physical Weapon Damage",
+			"Long": "Physical Weapon Damage",
+			"Full": "This physical weapon does {0} damage."
+		},
+		{
+			"Bonus": "PhysWeapStabFlat",
+			"Short": "Physical Weapon Stab Damage",
+			"Long": "Physical Weapon Stab Damage",
+			"Full": "This physical weapon does {0} stability damage."
+		},
+		{
+			"Bonus": "PhysWeapDamageBonus",
+			"Short": "Physical Weapon Damage Bonus",
+			"Long": "Physical Weapon Damage Bonus",
+			"Full": "Physical weapons do {0} more damage."
+		},
+		{
+			"Bonus": "PhysWeapStabBonus",
+			"Short": "Physical Weapon Stability Bonus",
+			"Long": "Physical Weapon Stability Bonus",
+			"Full": "Physical weapons do {0} more stability damage."
+		},
+		{
+			"Bonus": "KickAccuracy",
+			"Short": "Kick Accuracy Bonus",
+			"Long": "Kick Accuracy Bonus",
+			"Full": "Kick attacks have {0} accuracy."
+		},
+		{
+			"Bonus": "PunchAccuracy",
+			"Short": "Punch Accuracy Bonus",
+			"Long": "Punch Accuracy Bonus",
+			"Full": "Punch attacks have {0} accuracy."
+		},
+		{
+			"Bonus": "PhysWeapAccuracy",
+			"Short": "Physical Weapon Accuracy Bonus",
+			"Long": "Physical Weapon Accuracy Bonus",
+			"Full": "Physical weapon attacks have {0} accuracy."
+		},
+		{
+			"Bonus": "PunchHitTable",
+			"Short": "Hits On the Punch Table",
+			"Long": "Hits On the Punch Table",
+			"Full": "This physical weapon hits the target on their upper body only, like a punch."
+		},
+		{
+			"Bonus": "VSPLShortMax",
+			"Short": "VSPL Short Bracket Max Range",
+			"Long": "VSPL Short Bracket Max Range",
+			"Full": "The short range bracket max is {0}."
+		},
+		{
+			"Bonus": "VSPLMedMin",
+			"Short": "VSPL Medium Bracket Min Range",
+			"Long": "VSPL Medium Bracket Min Range",
+			"Full": "The medium range bracket minimum is {0}."
+		},
+		{
+			"Bonus": "VSPLMedMax",
+			"Short": "VSPL Medium Bracket Max Range",
+			"Long": "VSPL Medium Bracket Max Range",
+			"Full": "The medium range bracket max is {0}."
+		},
+		{
+			"Bonus": "VSPLLongMin",
+			"Short": "VSPL Long Bracket Min Range",
+			"Long": "VSPL Long Bracket Min Range",
+			"Full": "The long range bracket minimum is {0}."
+		},
+		{
+			"Bonus": "VSPLLongMax",
+			"Short": "VSPL Long Bracket Max Range",
+			"Long": "VSPL Long Bracket Max Range",
+			"Full": "The long range bracket max is {0}."
+		},
+		{
+			"Bonus": "C3Accuracy",
+			"Short": "C3 Accuracy",
+			"Long": "C3 Accuracy",
+			"Full": "{0} accuracy to enemies within the C3 radius."
 		}
 	]
 }
