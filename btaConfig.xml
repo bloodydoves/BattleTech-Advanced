@@ -1,14 +1,14 @@
 <?xml version="1.0" ?>
 <BtaConfig>
 	<RequiredBattleTechVersion>1.9.1</RequiredBattleTechVersion>
-	<RequiredLauncherVersion>1.1.0</RequiredLauncherVersion>
-	<SecureHash>FnUWRxbcFjYWUxazFuAWORbjFpwWZha2FsAW4RbiFic=</SecureHash>
+	<RequiredLauncherVersion>1.1.1</RequiredLauncherVersion>
+	<SecureHash>FpwWahbkFj4WahY/FrMWZxaFFq4WSRYXFl4WFha2Fl8=</SecureHash>
 	<showCoreItems>true</showCoreItems>
 	<Tasks>
 		<InstallTask>
 			<Id>coreInstall</Id>
 			<canSelect>false</canSelect>
-			<excludePaths>btaConfig.xml,.git,.modtek,.git,log.txt,Flashpoint DLC Flashpoints,Flashpoint Unit Module,FlashpointEnabler,Heavy Metal Equipment Module,Heavy Metal Flashpoint Module,Heavy Metal Unit Module,Urban Warfare Flashpoints,Urban Warfare Unit Module,DefaultFire,LinuxFire</excludePaths>
+			<excludePaths>btaConfig.xml,.git,.modtek,.git,log.txt,Flashpoint DLC Flashpoints,Flashpoint Unit Module,FlashpointEnabler,Heavy Metal Equipment Module,Heavy Metal Flashpoint Module,Heavy Metal Unit Module,Urban Warfare Flashpoints,Urban Warfare Unit Module,DefaultFire,LinuxFire,RogueTechPerfFix</excludePaths>
 			<isSelected>true</isSelected>
 			<jobOrder>0</jobOrder>
 			<jobType>Install</jobType>
@@ -111,10 +111,25 @@
 			<uiName>Inject ModTek</uiName>
 		</InstallTask>
 		<InstallTask>
-			<Id>defaultRender</Id>
+			<Id>perfixInstall</Id>
 			<canSelect>true</canSelect>
 			<excludePaths>log.txt</excludePaths>
 			<isSelected>true</isSelected>
+			<jobOrder>0</jobOrder>
+			<jobType>RunProcessAndInstall</jobType>
+			<optionGroupId>RtPerfOp</optionGroupId>
+			<promptConfirmation>true</promptConfirmation>
+			<promptText>This can only be uninstalled by verifying game files, continue?</promptText>
+			<sourcePath>RogueTechPerfFix</sourcePath>
+			<targetPath>QuickStart.exe</targetPath>
+			<uiDescription>Performance fixes by Drowsy Corgi</uiDescription>
+			<uiName>Corgi Perf Fixes</uiName>
+		</InstallTask>
+		<InstallTask>
+			<Id>defaultRender</Id>
+			<canSelect>true</canSelect>
+			<excludePaths>log.txt</excludePaths>
+			<isSelected>false</isSelected>
 			<jobOrder>0</jobOrder>
 			<jobType>DefaultBootConfig</jobType>
 			<optionGroupId>PerfOps</optionGroupId>
@@ -129,7 +144,7 @@
 			<Id>mThreadRender</Id>
 			<canSelect>true</canSelect>
 			<excludePaths>log.txt</excludePaths>
-			<isSelected>false</isSelected>
+			<isSelected>true</isSelected>
 			<jobOrder>0</jobOrder>
 			<jobType>MThreadBootConfig</jobType>
 			<optionGroupId>PerfOps</optionGroupId>
@@ -137,7 +152,7 @@
 			<promptText/>
 			<sourcePath/>
 			<targetPath/>
-			<uiDescription>Use multi-threaded rendering, may increase game performance - Experimental</uiDescription>
+			<uiDescription>Use multi-threaded rendering, may increase game performance</uiDescription>
 			<uiName>MultiThread Rendering</uiName>
 		</InstallTask>
 		<InstallTask>
@@ -195,6 +210,12 @@
 			<optionId>PerfOps</optionId>
 			<optionType>ExclusiveOption</optionType>
 			<optionUiName>Performance Rendering Options</optionUiName>
+		</InstallOption>
+		<InstallOption>
+			<optionDescription/>
+			<optionId>RtPerfOp</optionId>
+			<optionType>MultiSelectOption</optionType>
+			<optionUiName>Preformance Patching Options</optionUiName>
 		</InstallOption>
 		<InstallOption>
 			<optionDescription/>
