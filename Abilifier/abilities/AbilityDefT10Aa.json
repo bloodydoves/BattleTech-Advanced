@@ -1,0 +1,146 @@
+{
+	"Description" : {
+		"Id" : "AbilityDefT10Aa",
+		"Name" : "EAGLE EYE",
+		"Details" : "PASSIVE: Gain a +33% boost to sensors, sight, all weapon long and max range brackets, and a 2.5% Called Shot bonus.",
+		"Icon" : "lv_eye-target"
+	},
+    "DisplayParams" : "ShowInMWTRay",
+	"ReqSkill" : "Tactics",
+	"ReqSkillLevel" : 8,
+	"ActivationTime": "Passive",
+    "EffectData" :
+	[
+		{
+            "durationData": {
+                "duration": -1,
+                "stackLimit": 1
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "effectTargetType": "Creator",
+                "showInTargetPreview": false,
+                "showInStatusPanel": true
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "AbilityDefT10Aa_LongRange",
+                "Name": "Eagle Eye",
+                "Details": "The long/ax range brackets on this mech's weapons are increased by 33%, sensor and sight ranges are increased by 33%, and this mech gets a 2.5% boost to called shots.",
+                "Icon": "lv_eye-target"
+            },
+            "nature": "Buff",
+            "statisticData": {
+                "statName": "LongRange",
+                "operation": "Float_Multiply",
+                "modValue": "1.33",
+                "modType": "System.Single",
+				"targetCollection": "Weapon"
+            }
+        },
+		{
+            "durationData": {
+                "duration": -1,
+                "stackLimit": 1
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "effectTargetType": "Creator",
+                "showInTargetPreview": false,
+                "showInStatusPanel": false
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "AbilityDefT10Aa_MaxRange",
+                "Name": "Max Range Increase",
+                "Details": "The max range brackets on this mech's weapons are increased by 33%.",
+                "Icon": "lv_eye-target"
+            },
+            "nature": "Buff",
+            "statisticData": {
+                "statName": "MaxRange",
+                "operation": "Float_Multiply",
+                "modValue": "1.33",
+                "modType": "System.Single",
+				"targetCollection": "Weapon"
+            }
+        },
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDefT10Aa_SensorRange",
+				"Name": "Sensor Range Increased",
+				"Details": "Increases sensor range by 33%",
+				"Icon": "lv_eye-target"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "SensorDistanceAbsolute",
+				"operation": "Float_Multiply",
+				"modValue": "1.33",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDefT10Aa_VisualRange",
+				"Name": "Visual Range Increased",
+				"Details": "Increases visual distance by 33%.",
+				"Icon": "lv_eye-target"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "SpotterDistanceAbsolute",
+				"operation": "Float_Multiply",
+				"modValue": "1.33",
+				"modType": "System.Single"
+			}
+		},
+        {
+            "durationData": {
+                "duration": -1
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "AbilityDefT10Aa_CalledShot",
+                "Name": "Improved Called Shot",
+                "Details": "Called Shots twice as reliable",
+                "Icon": "uixSvgIcon_ability_mastertactician"
+            },
+            "statisticData": {
+                "statName": "CalledShotBonusMultiplier",
+                "operation": "Float_Multiply",
+                "modValue": "1.025",
+                "modType": "System.Single"
+            }
+        }
+	],
+	"IsPrimaryAbility" : true
+}

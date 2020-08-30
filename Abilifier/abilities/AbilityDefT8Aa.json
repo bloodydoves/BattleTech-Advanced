@@ -1,9 +1,9 @@
 {
 	"Description" : {
 		"Id" : "AbilityDefT8Aa",
-		"Name" : "EAGLE EYE",
-		"Details" : "PASSIVE: Gain a +33% boost to sensors, sight, and all weapon long and max range brackets.",
-		"Icon" : "lv_eye-target"
+		"Name" : "KNIFE FIGHTER",
+		"Details" : "PASSIVE: Gain a +33% boost to all support weapon short and mmedium range brackets as well as +10% damage with support weapons",
+		"Icon" : "XXX"
 	},
     "DisplayParams" : "ShowInMWTRay",
 	"ReqSkill" : "Tactics",
@@ -24,18 +24,22 @@
             },
             "effectType": "StatisticEffect",
             "Description": {
-                "Id": "AbilityDefT8Aa_LongRange",
-                "Name": "Long Range Increase",
-                "Details": "The long range brackets on this mech's weapons are increased by 33%.",
-                "Icon": "lv_eye-target"
+                "Id": "AbilityDefT8Aa_ShortRange",
+                "Name": "Short Range Increase",
+                "Details": "The Short range brackets on this mech's support weapons are increased by 33%.",
+                "Icon": "XXX"
             },
             "nature": "Buff",
             "statisticData": {
-                "statName": "LongRange",
+                "statName": "ShortRange",
                 "operation": "Float_Multiply",
                 "modValue": "1.33",
                 "modType": "System.Single",
-				"targetCollection": "Weapon"
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "AntiPersonnel",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "NotSet"
             }
         },
 		{
@@ -51,72 +55,54 @@
             },
             "effectType": "StatisticEffect",
             "Description": {
-                "Id": "AbilityDefT8Aa_MaxRange",
-                "Name": "Max Range Increase",
-                "Details": "The max range brackets on this mech's weapons are increased by 33%.",
-                "Icon": "lv_eye-target"
+                "Id": "AbilityDefT8Aa_MediumRange",
+                "Name": "Medium Range Increase",
+                "Details": "The Medium range brackets on this mech's support weapons are increased by 33%.",
+                "Icon": "XXX"
             },
             "nature": "Buff",
             "statisticData": {
-                "statName": "MaxRange",
+                "statName": "MediumRange",
                 "operation": "Float_Multiply",
                 "modValue": "1.33",
                 "modType": "System.Single",
-				"targetCollection": "Weapon"
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "AntiPersonnel",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "NotSet"
             }
         },
 		{
-			"durationData": {
-				"duration": -1,
-				"stackLimit": -1
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"effectTargetType": "Creator",
-				"showInTargetPreview": false,
-				"showInStatusPanel": true
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "AbilityDefT8Aa_SensorRange",
-				"Name": "Sensor Range Increased",
-				"Details": "Increases sensor range by 33%",
-				"Icon": "lv_eye-target"
-			},
-			"nature": "Buff",
-			"statisticData": {
-				"statName": "SensorDistanceAbsolute",
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "effectTargetType" : "Creator",
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "AbilityDefG8a_APDamage",
+                "Name" : "Support Weapon Damage Increased",
+                "Details" : "Support weapon attacks deal 10% more damage.",
+                "Icon" : "XXX"
+            },
+            "nature" : "Buff",
+            "statisticData": {
+				"modType": "System.Single",
+				"modValue": "1.1",
 				"operation": "Float_Multiply",
-				"modValue": "1.33",
-				"modType": "System.Single"
+				"statName": "DamagePerShot",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "AntiPersonnel",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "NotSet"
 			}
-		},
-		{
-			"durationData": {
-				"duration": -1,
-				"stackLimit": -1
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"effectTargetType": "Creator",
-				"showInTargetPreview": false,
-				"showInStatusPanel": true
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "AbilityDefT8Aa_VisualRange",
-				"Name": "Visual Range Increased",
-				"Details": "Increases visual distance by 33%.",
-				"Icon": "lv_eye-target"
-			},
-			"nature": "Buff",
-			"statisticData": {
-				"statName": "SpotterDistanceAbsolute",
-				"operation": "Float_Multiply",
-				"modValue": "1.33",
-				"modType": "System.Single"
-			}
-		}
+        }
 	],
 	"IsPrimaryAbility" : true
 }
