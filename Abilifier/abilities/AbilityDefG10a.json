@@ -1,0 +1,70 @@
+{
+    "Description": {
+        "Id": "AbilityDefG10a",
+        "Name": "STONE COLD",
+        "Details": "ACTION: Supercharge your cooling system for a turn, gaining +60 heat dissipation for the turn, at the cost of responsiveness in the controls. Your initiative is reduced by 2 for 2 turns. 4 turn cooldown",
+        "Icon": "XXX"
+    },
+    "DisplayParams": "ShowInMWTRay",
+    "ReqSkill": "Gunnery",
+    "ReqSkillLevel": 5,
+    "ActivationTime": "ConsumedByFiring",
+    "ActivationCooldown": 4,
+    "Targeting": "ActorSelf",
+    "EffectData": [
+        {
+            "durationData": {
+                "duration": 1,
+                "stackLimit": 1
+            },
+            "targetingData": {
+                "effectTargetsCreator": true,
+                "effectTriggerType": "OnActivation",
+                "effectTargetType": "Creator",
+				"showInStatusPanel": true
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "AbilityDefG10a_Cooling",
+                "Name": "Flush Coolant",
+                "Details": "-40 Heat",
+                "Icon": "XXX"
+            },
+            "nature": "Buff",
+            "statisticData": {
+                "statName": "HeatSinkCapacity",
+                "operation": "Int_Add",
+                "modValue": "60",
+                "modType": "System.Int32"
+            }
+        },
+		{
+			"durationData": {
+				"duration": 2,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDefG10a_Initiative",
+				"Name": "Initiative Penalty",
+				"Details": "Initiative reduced by 2 for 2 turns.",
+				"Icon": "XXX"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "BaseInitiative",
+				"operation": "Int_Add",
+				"modValue": "2",
+				"modType": "System.Int32"
+			}
+		}
+    ],
+    "IsPrimaryAbility": true
+}
