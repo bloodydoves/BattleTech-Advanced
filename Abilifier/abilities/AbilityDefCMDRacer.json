@@ -1,0 +1,38 @@
+{
+	"Description" : {
+		"Id" : "AbilityDefCMDRacer",
+		"Name" : "OFFROAD RACER",
+		"Details" : "PASSIVE: The Commander gets +30 to their unsteady threshold in any mech they pilot.",
+		"Icon" : "offroad-racer"
+	},
+    "DisplayParams" : "ShowInMWTRay",
+	"ActivationTime" : "Passive",
+	"EffectData" :
+	[
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-OffroadRacer",
+				"Name": "Unsteady Threshold Increased",
+				"Details": "Increases unsteady threshold by 30.",
+				"Icon": "offroad-racer"
+			},
+			"statisticData": {
+				"statName": "UnsteadyThreshold",
+				"operation": "Float_Add",
+				"modValue": "30.0",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	]
+}

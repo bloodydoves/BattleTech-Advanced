@@ -1,0 +1,37 @@
+{
+	"Description" : {
+		"Id" : "AbilityDefCMDHunter",
+		"Name" : "BOUNTY HUNTER",
+		"Details" : "PASSIVE: The Commander gains a very slight Called Shot bonus (roughly 1%).",
+		"Icon" : "bounty-hunter"
+	},
+    "DisplayParams" : "ShowInMWTRay",
+	"ActivationTime" : "Passive",
+	"EffectData" :
+	[
+		{
+            "durationData": {
+                "duration": -1
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "StatusEffect-BountyHunter",
+                "Name": "Improved Called Shot",
+                "Details": "Called Shots slightly more reliable",
+                "Icon": "bounty-hunter"
+            },
+            "statisticData": {
+                "statName": "CalledShotBonusMultiplier",
+                "operation": "Float_Multiply",
+                "modValue": "1.01",
+                "modType": "System.Single"
+            }
+        }
+	]
+}
