@@ -1,0 +1,38 @@
+{
+	"Description" : {
+		"Id" : "AbilityDefCMDSmuggler",
+		"Name" : "OFFWORLD SMUGGLER",
+		"Details" : "PASSIVE: The Commander gains 10% sensor range.",
+		"Icon" : "offworld-smuggler"
+	},
+    "DisplayParams" : "ShowInMWTRay",
+	"ActivationTime" : "Passive",
+	"EffectData" :
+	[
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-OffworldSmuggler",
+				"Name": "Sensor Range Increased",
+				"Details": "Increases sensor range by 10%",
+				"Icon": "offworld-smuggler"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "SensorDistanceAbsolute",
+				"operation": "Float_Multiply",
+				"modValue": "1.1",
+				"modType": "System.Single"
+			}
+		}
+	]
+}

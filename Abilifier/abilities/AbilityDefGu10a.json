@@ -1,0 +1,45 @@
+{
+	"Description" : {
+		"Id" : "AbilityDefGu10a",
+		"Name" : "DEFENSIVE FORMATION",
+		"Details" : "ACTION: Activate in order to gain a flat 20% damage reduction regardless of cover or positioning for all friendly units. The DR lasts for 2 turns. 6 turn cooldown",
+		"Icon" : "guards"
+	},
+    "DisplayParams" : "ShowInMWTRay",
+	"ReqSkill" : "Guts",
+	"ReqSkillLevel" : 10,
+	"ActivationTime" : "ConsumedByFiring",
+	"ActivationCooldown": 6,
+	"Targeting": "ActorSelf",
+	"EffectData" :
+	[
+		{
+			"durationData": {
+				"duration": 2,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "AllLanceMates",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDefGu10a_DR",
+				"Name": "Damage Reduction",
+				"Details": "All incoming damage reduced by 20% for 2 turns.",
+				"Icon": "guards"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "DamageReductionMultiplierAll",
+				"operation": "Float_Multiply",
+				"modValue": "0.8",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"IsPrimaryAbility" : true
+}

@@ -1,0 +1,96 @@
+{
+	"Description": {
+		"Id": "AbilityDeftboneHunt",
+		"Name": "KENTUCKY WINDAGE",
+		"Details": "PASSIVE: t-bone's ballistic weapons ignore 3 evasion, but his indirect fire has a +4 penalty and all his weapons have their min range increased by 60 meters.",
+		"Icon": "winchester"
+	},
+	"DisplayParams": "ShowInMWTRay",
+	"ActivationTime": "Passive",
+	"EffectData": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDeftboneHunt_Evasion",
+				"Name": "Ballistic Evasion ignore",
+				"Details": "Ballistic weapon attacks ignore 3 evasion.",
+				"Icon": "winchester"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "EvasivePipsIgnored",
+				"operation": "Float_Add",
+				"modValue": "3.0",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "Ballistic",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			}
+		},
+		{
+            "durationData": {
+                "duration": -1,
+                "stackLimit": 1
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "effectTargetType": "Creator",
+                "showInStatusPanel": true
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "AbilityDeftboneHunt_MinRange",
+                "Name": "Min Range Increase",
+                "Details": "The min range brackets on this mech's weapons are increased by 60 meters.",
+                "Icon": "winchester"
+            },
+            "nature": "Buff",
+            "statisticData": {
+                "statName": "MinRange",
+                "operation": "Float_Add",
+                "modValue": "60",
+                "modType": "System.Single",
+				"targetCollection": "Weapon"
+            }
+        },
+		{
+            "durationData": {
+                "duration": -1,
+                "stackLimit": -1
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "effectTargetType": "Creator",
+                "showInStatusPanel": true
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "AbilityDeftboneHunt_Indirect",
+                "Name": "Indirect Accuracy Reduced",
+                "Details": "Indirect weapon accuracy suffers a +4 penalty.",
+                "Icon": "winchester"
+            },
+            "nature": "Buff",
+            "statisticData": {
+                "statName": "ToHitIndirectModifier",
+                "operation": "Float_Add",
+                "modValue": "4.0",
+                "modType": "System.Single"
+            }
+        }
+	]
+}

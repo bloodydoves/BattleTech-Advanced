@@ -1,0 +1,38 @@
+{
+	"Description" : {
+		"Id" : "AbilityDefCMDPilot",
+		"Name" : "AEROSPACE PILOT",
+		"Details" : "PASSIVE: The Commander gains a 5% sprint speed bonus.",
+		"Icon" : "aerospace-pilot"
+	},
+    "DisplayParams" : "ShowInMWTRay",
+	"ActivationTime" : "Passive",
+	"EffectData" :
+	[
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-AerospacePIlot",
+				"Name": "Sprint Speed Bonus",
+				"Details": "Grants 5% increased sprint speed.",
+				"Icon": "aerospace-pilot"
+			},
+			"statisticData": {
+				"modValue": "0.05",
+                "operation": "Float_Add",
+                "statName": "CBTBE_RunMultiMod",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	]
+}

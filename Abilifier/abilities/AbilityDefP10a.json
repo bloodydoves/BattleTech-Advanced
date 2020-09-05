@@ -1,0 +1,47 @@
+{
+	"Description": {
+		"Id": "AbilityDefP10a",
+		"Name": "SPRINTER",
+		"Details": "ACTION: Superior piloting skill lets you get a little more out of your mech. Gain 60 meters of movement speed this turn. 4 turn cooldown",
+		"Icon": "sprinter"
+	},
+	"DisplayParams": "ShowInMWTRay",
+	"ReqSkill": "Piloting",
+	"ReqSkillLevel": 10,
+	"ActivationTime": "ConsumedByFiring",
+	"ActivationCooldown": 4,
+	"Targeting": "ActorSelf",
+	"EffectData": [
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-SprinterWalkSpeed",
+				"Name": "Boosted Speed",
+				"Details": "This unit moves an extra 60 meters this turn.",
+				"Icon": "sprinter"
+			},
+			"statisticData": {
+				"statName": "WalkSpeed",
+				"operation": "Float_Add",
+				"modValue": "60",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}	
+	],
+	"IsPrimaryAbility": true
+}

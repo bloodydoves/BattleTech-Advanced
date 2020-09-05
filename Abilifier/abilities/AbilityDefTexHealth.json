@@ -1,0 +1,40 @@
+{
+	"Description" : {
+		"Id" : "AbilityDefTexHealth",
+		"Name" : "HARD TO KILL",
+		"Details" : "PASSIVE: Tex gains +2 pilot health just for showing up.",
+		"Icon" : "techno_heart"
+	},
+    "DisplayParams" : "ShowInMWTRay",
+	"ActivationTime" : "Passive",
+	"EffectData" :
+	[
+		{
+			"durationData" :
+			{
+				"duration" : -1
+			},
+			"targetingData" : 
+			{
+				"effectTriggerType" : "OnActivation",
+				"effectTargetType" : "Creator"
+			},
+			"effectType" : "StatisticEffect",
+			"Description" :
+			{
+				"Id" : "AbilityDefTexHealth_HP",
+				"Name" : "Health Boost",
+				"Details" : "+2 to pilot health",
+				"Icon" : "uixSvgIcon_ability_mastertactician"
+			},
+			"statisticData" : 
+			{
+				"statName" : "BonusHealth",
+				"operation" : "Int_Add",
+				"modValue" : "2",
+				"modType" : "System.Int32"
+			},
+			"nature" : "Buff"
+		}
+	]
+}

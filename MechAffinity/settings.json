@@ -2,9 +2,18 @@
     "debug" : true,
 	"showDescriptionsOnChassis" : true,
     "missionsBeforeDecay" : 1,
-    "removeAffinityAfter" : 7,
+    "removeAffinityAfter" : 10,
     "lowestPossibleDecay" : 0,
-    "globalAffinities" : 
+    "maxAffinityPoints" : 18,
+    "decayByModulo" : false,
+    "defaultDaysBeforeSimDecay" : -1,
+    "topAffinitiesInTooltipCount" : 3,
+    "showQuirks" : false,
+    "showDescriptionsOnChassis" : true,
+    "trackSimDecayByStat" : true,
+    "trackLowestDecayByStat": false,
+    "showAllPilotAffinities" : true,
+	"globalAffinities" : 
     [
         {
             "missionsRequired" : 5,
@@ -187,7 +196,7 @@
             ]
         },
 		{
-            "chassisNames" : ["chrprfmech_valkyriehotd-001_30", "chrprfmech_hussarbase-001_30", "chrprfmech_torobase-001_35", "chrPrfMech_phoenixhawkBase-001_45", "chrPrfMech_crabBase-001_50", "chrPrfMech_wolverineBase-001_55", "chrPrfMech_quickdrawBase-001_60", "Rifleman_60", "Rifleman_50", "RiflemanII_80", "chrprfmech_mackiebase-001_100", "chrPrfMech_vaporeagleBase-001_55", "chrprfmech_nightgyrbase-001_75", "chrprfmech_warhammeriicbase-001_80", "chrprfmech_raptorbase-001_25"],
+            "chassisNames" : ["chrprfmech_valkyriehotd-001_30", "chrprfmech_hussarbase-001_30", "chrprfmech_torobase-001_35", "chrPrfMech_phoenixhawkBase-001_45", "chrPrfMech_crabBase-001_50", "chrPrfMech_wolverineBase-001_55", "chrPrfMech_quickdrawBase-001_60", "Rifleman_60", "Rifleman_50", "RiflemanII_80", "chrprfmech_mackiebase-001_100", "chrPrfMech_vaporeagleBase-001_55", "chrprfmech_nightgyrbase-001_75", "chrprfmech_warhammeriicbase-001_80", "chrprfmech_raptorbase-001_25", "chrprfmech_hazardbase-001_45"],
             "affinityLevels" : 
             [
                 {
@@ -281,7 +290,7 @@
             ]
         },
 		{
-            "chassisNames" : ["chrprfmech_osirisbase-001_30", "chrprfmech_hellspawnbase-001_45", "chrprfmech_huronwbase-001_50", "chrprfmech_ostsolhotd-001_60", "ValkyrieII_60", "chrprfmech_thanatosbase-001_75", "chrPrfMech_cyclopsBase-001_90", "chrPrfMech_annihilatorBase-001_100", "chrprfmech_arcticcheetahbase-001_30", "chrprfmech_huntsmanbase-001_50", "chrprfmech_medusabase-001_50", "chrprfmech_maddogbase-001_60", "chrprfmech_warhawkbase-001_85", "chrprfmech_septicemiabase-001_55", "chrprfmech_ioncyclopsbase-001_65", "chrprfmech_grendelbase-001_45"],
+            "chassisNames" : ["chrprfmech_osirisbase-001_30", "chrprfmech_hellspawnbase-001_45", "chrprfmech_huronwbase-001_50", "chrprfmech_ostsolhotd-001_60", "ValkyrieII_60", "chrprfmech_thanatosbase-001_75", "chrPrfMech_cyclopsBase-001_90", "chrPrfMech_annihilatorBase-001_100", "chrprfmech_arcticcheetahbase-001_30", "chrprfmech_huntsmanbase-001_50", "chrprfmech_medusabase-001_50", "chrprfmech_maddogbase-001_60", "chrprfmech_warhawkbase-001_85", "chrprfmech_septicemiabase-001_55", "chrprfmech_ioncyclopsbase-001_65", "chrprfmech_grendelbase-001_45", "chrprfmech_grandtitanbase-001_100"],
             "affinityLevels" : 
             [
                 {
@@ -408,7 +417,7 @@
             ]
         },
 		{
-            "chassisNames" : ["chrprfmech_wolfhoundbase-001_35", "chrPrfMech_shadowhawkBase-001_55", "chrprfmech_dervishbase-001_55", "chrPrfMech_dragonBase-001_60", "Perseus_75", "chrPrfMech_hatamotochiBase-001_80", "chrprfmech_emperorbase-001_90", "chrprfmech_juggernautbase-001_90", "chrprfmech_adderbase-001_35", "chrprfmech_iceferretbase-001_45", "chrprfmech_ebonjaguarbase-001_65", "chrprfmech_highlanderiicbase-001_90", "chrprfmech_kodiakbase-001_100", "chrprfmech_masonvikingbase-001_90"],
+            "chassisNames" : ["chrprfmech_wolfhoundbase-001_35", "chrPrfMech_shadowhawkBase-001_55", "chrprfmech_dervishbase-001_55", "chrPrfMech_dragonBase-001_60", "Perseus_75", "chrPrfMech_hatamotochiBase-001_80", "chrprfmech_emperorbase-001_90", "chrprfmech_juggernautbase-001_90", "chrprfmech_adderbase-001_35", "chrprfmech_iceferretbase-001_45", "chrprfmech_ebonjaguarbase-001_65", "chrprfmech_highlanderiicbase-001_90", "chrprfmech_kodiakbase-001_100", "chrprfmech_masonvikingbase-001_90", "chrprfmech_crkbase-001_85"],
             "affinityLevels" : 
             [
                 {
@@ -502,7 +511,7 @@
             ]
         },
 		{
-            "chassisNames" : ["chrprfmech_yeomanbase-001_60", "chrprfmech_helepolisbase-001_75", "chrPrfMech_orionBase-001_75", "chrprfmech_ionlongbowbase-001_85", "chrPrfMech_stalkerBase-001_85", "chrPrfMech_stalkerBase-001_75", "chrprfmech_marauderiibase-001_100", "chrprfmech_hellbringerbase-001_65", "chrprfmech_madcatmkiibase-001_90", "chrprfmech_banebase-001_100", "chrprfmech_prometheusbase-001_75", "chrprfmech_masondevbase-001_100", "chrprfmech_ionraptorbase-001_70"],
+            "chassisNames" : ["chrprfmech_yeomanbase-001_60", "chrprfmech_helepolisbase-001_75", "chrPrfMech_orionBase-001_75", "chrprfmech_ionlongbowbase-001_85", "chrPrfMech_stalkerBase-001_85", "chrPrfMech_stalkerBase-001_75", "chrprfmech_marauderiibase-001_100", "chrprfmech_hellbringerbase-001_65", "chrprfmech_madcatmkiibase-001_90", "chrprfmech_banebase-001_100", "chrprfmech_prometheusbase-001_75", "chrprfmech_masondevbase-001_100", "chrprfmech_ionraptorbase-001_70", "chrprfmech_visionquestbase-001_60"],
             "affinityLevels" : 
             [
                 {
@@ -833,7 +842,7 @@
                     [
                         {
                             "Description": {
-                                "Details": "The pilot's incredible skill with this mech improves its initiatve by 1.",
+                                "Details": "The pilot's incredible skill with this mech improves its initiative by 1.",
                                 "Icon": "UixSvgIcon_specialEquip_System",
                                 "Id": "StatusEffect-Affinity-Initiative",
                                 "Name": "Mech Affinity Initiative Boost"
@@ -868,5 +877,309 @@
                 }
             ]
         }
-    ]
+    ],
+	"quirkAffinities" : [],
+    "taggedAffinities" : [
+		{
+			"tag" : "Affinity_Wulf_Commando",
+			"chassisNames" : ["chrPrfMech_commandoBase-001_25"],
+			"affinityLevels" : [
+				 {
+                    "missionsRequired" : 10,
+                    "levelName" : "Speed King",
+                    "decription" : "Wulf gains +15 sprint speed with his Commandos.",
+                    "effectData" : 
+                    [
+                        {
+                            "Description": {
+                                "Details": "Wulf's incredible skill with this mech improves its sprinting speed by 15%.",
+                                "Icon": "UixSvgIcon_specialEquip_System",
+                                "Id": "StatusEffect-Affinity-WulfCommando",
+                                "Name": "Wulf Affinity Sprint Boost"
+                            },
+                            "durationData": {
+                                "duration": -1,
+                                "stackLimit": -1
+                            },
+                            "effectType": "StatisticEffect",
+                            "nature": "Buff",
+                            "statisticData": {
+                                "additionalRules": "NotSet",
+                                "modType": "System.Single",
+                                "modValue": "0.15",
+                                "operation": "Float_Add",
+                                "statName": "CBTBE_RunMultiMod",
+                                "targetAmmoCategory": "NotSet",
+                                "targetCollection": "NotSet",
+                                "targetWeaponCategory": "NotSet",
+                                "targetWeaponSubType": "NotSet",
+                                "targetWeaponType": "NotSet"
+                            },
+                            "targetingData": {
+                                "effectTargetType": "Creator",
+                                "effectTriggerType": "Passive",
+                                "hideApplicationFloatie": true,
+                                "showInStatusPanel": false,
+                                "showInTargetPreview": false
+                            }
+                        }
+                    ]
+                }
+			]
+		},
+		{
+			"tag" : "Affinity_Tex_Awesome",
+			"chassisNames" : ["chrPrfMech_awesomeBase-001_80"],
+			"affinityLevels" : [
+				 {
+                    "missionsRequired" : 10,
+                    "levelName" : "Too Angry to Die",
+                    "decription" : "Tex gains +10% energy damage with his Awesome.",
+                    "effectData" : 
+                    [
+                        {
+                            "Description": {
+                                "Details": "Tex's incredible skill with this mech improves its energy damage by 10%.",
+                                "Icon": "UixSvgIcon_specialEquip_System",
+                                "Id": "StatusEffect-Affinity-TexAwesome",
+                                "Name": "Tex Affinity Damage Boost"
+                            },
+                            "durationData": {
+                                "duration": -1,
+                                "stackLimit": -1
+                            },
+                            "effectType": "StatisticEffect",
+                            "nature": "Buff",
+                            "statisticData": {
+                                "additionalRules": "NotSet",
+                                "modType": "System.Single",
+                                "modValue": "1.1",
+                                "operation": "Float_Multiply",
+                                "statName": "DamagePerShot",
+                                "targetAmmoCategory": "NotSet",
+                                "targetCollection": "Weapon",
+                                "targetWeaponCategory": "Energy",
+                                "targetWeaponSubType": "NotSet",
+                                "targetWeaponType": "NotSet"
+                            },
+                            "targetingData": {
+                                "effectTargetType": "Creator",
+                                "effectTriggerType": "Passive",
+                                "hideApplicationFloatie": true,
+                                "showInStatusPanel": false,
+                                "showInTargetPreview": false
+                            }
+                        }
+                    ]
+                }
+			]
+		},
+		{
+			"tag" : "Affinity_Loki_Hatchetman",
+			"chassisNames" : ["chrPrfMech_hatchetmanBase-001_45"],
+			"affinityLevels" : [
+				 {
+                    "missionsRequired" : 10,
+                    "levelName" : "Choppy Choppy",
+                    "decription" : "Loki gains +30% physical weapon damage with his Hatchetman's hatchet.",
+                    "effectData" : 
+                    [
+                        {
+                            "Description": {
+                                "Details": "Loki's incredible skill with this mech improves its hatchet damage by 30%.",
+                                "Icon": "UixSvgIcon_specialEquip_System",
+                                "Id": "StatusEffect-Affinity-LokiHatchet",
+                                "Name": "Loki Affinity Physical Weapon Damage Boost"
+                            },
+                            "durationData": {
+                                "duration": -1,
+                                "stackLimit": -1
+                            },
+                            "effectType": "StatisticEffect",
+                            "nature": "Buff",
+                            "statisticData": {
+                                "additionalRules": "NotSet",
+                                "modType": "System.Single",
+                                "modValue": "1.3",
+                                "operation": "Float_Multiply",
+                                "statName": "CBTBE_Physical_Weapon_Target_Damage_Multi",
+                                "targetAmmoCategory": "NotSet",
+                                "targetCollection": "Weapon",
+                                "targetWeaponCategory": "NotSet",
+                                "targetWeaponSubType": "Melee",
+                                "targetWeaponType": "NotSet"
+                            },
+                            "targetingData": {
+                                "effectTargetType": "Creator",
+                                "effectTriggerType": "Passive",
+                                "hideApplicationFloatie": true,
+                                "showInStatusPanel": false,
+                                "showInTargetPreview": false
+                            }
+                        }
+                    ]
+                }
+			]
+		},
+		{
+			"tag" : "Affinity_tbone_Corsair",
+			"chassisNames" : ["chrprfmech_rtcorsair1base-001_75", "chrprfmech_rtcorsair1base-001_95", "chrprfmech_rtcorsair2base-001_95", "chrprfmech_rtcorsair3base-001_95", "chrprfmech_rtcorsair4base-001_95", "chrprfmech_rtcorsair5base-001_95"],
+			"affinityLevels" : [
+				 {
+                    "missionsRequired" : 10,
+                    "levelName" : "Warfighter",
+                    "decription" : "t-bone gains +10% ballistic damage with his Corsair.",
+                    "effectData" : 
+                    [
+                        {
+                            "Description": {
+                                "Details": "t-bone's incredible skill with this mech improves its ballistic damage by 10%.",
+                                "Icon": "UixSvgIcon_specialEquip_System",
+                                "Id": "StatusEffect-Affinity-tboneCorsair",
+                                "Name": "t-bone Affinity Damage Boost"
+                            },
+                            "durationData": {
+                                "duration": -1,
+                                "stackLimit": -1
+                            },
+                            "effectType": "StatisticEffect",
+                            "nature": "Buff",
+                            "statisticData": {
+                                "additionalRules": "NotSet",
+                                "modType": "System.Single",
+                                "modValue": "1.1",
+                                "operation": "Float_Multiply",
+                                "statName": "DamagePerShot",
+                                "targetAmmoCategory": "NotSet",
+                                "targetCollection": "Weapon",
+                                "targetWeaponCategory": "Ballistic",
+                                "targetWeaponSubType": "NotSet",
+                                "targetWeaponType": "NotSet"
+                            },
+                            "targetingData": {
+                                "effectTargetType": "Creator",
+                                "effectTriggerType": "Passive",
+                                "hideApplicationFloatie": true,
+                                "showInStatusPanel": false,
+                                "showInTargetPreview": false
+                            }
+                        }
+                    ]
+                }
+			]
+		},
+		{
+			"tag" : "Affinity_BD_KingCrab",
+			"chassisNames" : ["chrPrfMech_kingcrabBase-001_100"],
+			"affinityLevels" : [
+				 {
+                    "missionsRequired" : 10,
+                    "levelName" : "Beats By Crab",
+                    "decription" : "Bloodydoves gains +10% weapon damage with his King Crab.",
+                    "effectData" : 
+                    [
+                        {
+                            "Description": {
+                                "Details": "BD's incredible skill with this mech improves its energy weapon damage by 10%.",
+                                "Icon": "UixSvgIcon_specialEquip_System",
+                                "Id": "StatusEffect-Affinity-BDEnergyDamage",
+                                "Name": "Mech Affinity Energy Damage Boost"
+                            },
+                            "durationData": {
+                                "duration": -1,
+                                "stackLimit": -1
+                            },
+                            "effectType": "StatisticEffect",
+                            "nature": "Buff",
+                            "statisticData": {
+                                "additionalRules": "NotSet",
+                                "modType": "System.Single",
+                                "modValue": "1.1",
+                                "operation": "Float_Multiply",
+                                "statName": "DamagePerShot",
+                                "targetAmmoCategory": "NotSet",
+                                "targetCollection": "Weapon",
+                                "targetWeaponCategory": "Energy",
+                                "targetWeaponSubType": "NotSet",
+                                "targetWeaponType": "NotSet"
+                            },
+                            "targetingData": {
+                                "effectTargetType": "Creator",
+                                "effectTriggerType": "Passive",
+                                "hideApplicationFloatie": true,
+                                "showInStatusPanel": false,
+                                "showInTargetPreview": false
+                            }
+                        },
+						{
+                            "Description": {
+                                "Details": "BD's incredible skill with this mech improves its ballistic weapon damage by 10%.",
+                                "Icon": "UixSvgIcon_specialEquip_System",
+                                "Id": "StatusEffect-Affinity-BDBallisticDamage",
+                                "Name": "Mech Affinity Ballistic Damage Boost"
+                            },
+                            "durationData": {
+                                "duration": -1,
+                                "stackLimit": -1
+                            },
+                            "effectType": "StatisticEffect",
+                            "nature": "Buff",
+                            "statisticData": {
+                                "additionalRules": "NotSet",
+                                "modType": "System.Single",
+                                "modValue": "1.1",
+                                "operation": "Float_Multiply",
+                                "statName": "DamagePerShot",
+                                "targetAmmoCategory": "NotSet",
+                                "targetCollection": "Weapon",
+                                "targetWeaponCategory": "Ballistic",
+                                "targetWeaponSubType": "NotSet",
+                                "targetWeaponType": "NotSet"
+                            },
+                            "targetingData": {
+                                "effectTargetType": "Creator",
+                                "effectTriggerType": "Passive",
+                                "hideApplicationFloatie": true,
+                                "showInStatusPanel": false,
+                                "showInTargetPreview": false
+                            }
+                        },
+						{
+                            "Description": {
+                                "Details": "BD's incredible skill with this mech improves its missile weapon damage by 10%.",
+                                "Icon": "UixSvgIcon_specialEquip_System",
+                                "Id": "StatusEffect-Affinity-BDMissileDamage",
+                                "Name": "Mech Affinity Missile Damage Boost"
+                            },
+                            "durationData": {
+                                "duration": -1,
+                                "stackLimit": -1
+                            },
+                            "effectType": "StatisticEffect",
+                            "nature": "Buff",
+                            "statisticData": {
+                                "additionalRules": "NotSet",
+                                "modType": "System.Single",
+                                "modValue": "1.1",
+                                "operation": "Float_Multiply",
+                                "statName": "DamagePerShot",
+                                "targetAmmoCategory": "NotSet",
+                                "targetCollection": "Weapon",
+                                "targetWeaponCategory": "Missile",
+                                "targetWeaponSubType": "NotSet",
+                                "targetWeaponType": "NotSet"
+                            },
+                            "targetingData": {
+                                "effectTargetType": "Creator",
+                                "effectTriggerType": "Passive",
+                                "hideApplicationFloatie": true,
+                                "showInStatusPanel": false,
+                                "showInTargetPreview": false
+                            }
+                        }
+                    ]
+                }
+			]
+		}
+	]
 }
