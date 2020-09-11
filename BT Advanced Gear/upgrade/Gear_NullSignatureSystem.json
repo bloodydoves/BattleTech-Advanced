@@ -1,0 +1,186 @@
+{
+    "Custom": {
+        "WorkOrderCosts": {
+            "Install": {
+                "TechCost": "1.5 * [[Chassis.Tonnage]] / 15",
+                "CBillCost": "10000 * [[Chassis.Tonnage]] * [[Chassis.Tonnage]] / 30"
+            }
+        },
+        "Flags": {
+            "flags": [
+                "not_broken",
+				"no_salvage"
+            ]
+        },
+        "DynamicSlots": {
+			"ReservedSlots": 6,
+			"ShowIcon": false,
+			"NameText": "Null Sig System",
+			"BonusAText": "Dynamic Slot"
+		},
+        "BonusDescriptions": {
+            "Bonuses": [
+                "DamageTaken: -15%",
+				"FixedSlots: 6",
+                "HeatGenerated: +15%",
+                "Defense: +4"
+            ]
+        }
+    },
+    "StatName": null,
+    "RelativeModifier": 0,
+    "AbsoluteModifier": 0,
+    "Description": {
+        "Cost": 3000000,
+        "Rarity": 5,
+        "Purchasable": true,
+        "Manufacturer": "SLDF Skunkwerks",
+        "Model": "SLDF",
+        "UIName": "Null Signature System",
+        "Id": "Gear_NullSignatureSystem",
+        "Name": "Null Signature System",
+        "Details": "The Null Signature System was the peak of Star League technology, a suite of sensors and baffles built into a mech that, when powered by the mech's reactor, intentionally distort the mech's signature to such a degree that it became near-impossible to hit. The Null Signature System was most famously employed by the Exterminator and was believed lost when that mech finally was rendered extinct, only for ComStar to reveal they still had working NullSig on their Exterminators. It was never put back into production and remains incredibly, impossibly, rare even to the modern day.",
+        "Icon": "uixSvgIcon_equipment_TTS"
+    },
+    "BonusValueA": "SLDF Stealth",
+    "BonusValueB": "",
+    "ComponentType": "Upgrade",
+    "ComponentSubType": "NotSet",
+    "PrefabIdentifier": "",
+    "BattleValue": 0,
+    "InventorySize": 1,
+    "Tonnage": 0,
+    "AllowedLocations": "CenterTorso",
+    "DisallowedLocations": "All",
+    "CriticalComponent": false,
+    "statusEffects": [
+        {
+            "durationData": {
+                "duration": -1,
+                "stackLimit": -1
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "effectTargetType": "Creator",
+                "showInTargetPreview": false,
+                "showInStatusPanel": false
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "NullSigSystem-ECM",
+                "Name": "Severe Sensor Scrambling",
+                "Details": "Null Sig makes this mech very hard to hit.",
+                "Icon": "uixSvgIcon_equipment_Gyro"
+            },
+            "nature": "Buff",
+            "statisticData": {
+                "statName": "ToHitThisActor",
+                "operation": "Float_Add",
+                "modValue": "4.0",
+                "modType": "System.Single"
+            }
+        },
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": -1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "NullSigSystem-DamageReduction",
+				"Name": "Null Signature Damage Reduction",
+				"Details": "This mech is so hard to hit that most weapons are glancing hits, reducing incoming damage.",
+				"Icon": "uixSvgIcon_equipment_ActuatorArm"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "DamageReductionMultiplierAll",
+				"operation": "Float_Multiply",
+				"modValue": "0.85",
+				"modType": "System.Single"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "NullSigSystem-Heat",
+				"Name": "Increased Heat",
+				"Details": "Heat generation increased by 15%.",
+				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "HeatGenerated",
+				"operation": "Float_Multiply",
+				"modValue": "1.15",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
+		}
+    ],
+    "ComponentTags": {
+        "items": [
+            "component_type_stock"
+        ],
+        "tagSetSourceFile": ""
+    }
+}

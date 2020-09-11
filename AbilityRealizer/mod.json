@@ -1,0 +1,32 @@
+{
+    "Name": "AbilityRealizer",
+    "DLL": "AbilityRealizer.dll",
+	"Enabled": true,
+	"Hidden": true,
+	
+	"DependsOn" : [ "IRBTModUtils", "IRTweaks" ],
+
+    "Version": "1.0.0",
+    "Description": "Allows for ability mods to more easily exist.",
+    "Author": "mpstark",
+    "Website": "www.github.com/mpstark/AbilityRealizer",
+
+	    "Manifest": [],
+	
+    "Settings": {
+        "AddTreeAbilities": false,
+        "RemoveNonTreeAbilities": false,
+        "IgnoreAbilities": [],
+		"IgnorePilotsWithTags": ["pilot_npc_tanker"],
+        "FactionAbilities": {},
+        "TagAbilities": {
+				"commander_career_aerospace_pilot":["AbilityDefCMDPilot"],
+				"commander_career_bounty_hunter":["AbilityDefCMDHunter"],
+				"commander_career_officer_trainee":["AbilityDefCMDTrainee"],
+				"commander_career_offroad_racer":["AbilityDefCMDRacer"],
+				"commander_career_offworld_smuggler":["AbilityDefCMDSmuggler"],
+				"commander_career_special_operative":["AbilityDefCMDOperative"]
+				},
+        "SwapAIAbilities": {}
+    }
+}

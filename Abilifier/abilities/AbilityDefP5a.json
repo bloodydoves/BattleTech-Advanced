@@ -1,0 +1,76 @@
+{
+	"Description": {
+		"Id": "AbilityDefP5a",
+		"Name": "PHANTOM",
+		"Details": "ACTION: Blur your mech's sensor signature such that you gain +2 evasive charges from movement for two turns. 4 turn cooldown",
+		"Icon": "lv_static"
+	},
+	"DisplayParams": "ShowInMWTRay",
+	"ReqSkill": "Piloting",
+	"ReqSkillLevel": 5,
+	"ActivationTime": "ConsumedByFiring",
+	"ActivationCooldown": 4,
+	"Targeting": "ActorSelf",
+	"EffectData": [
+		{
+			"durationData": {
+				"duration": 2,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator"
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-PhantasmMaxEvasion",
+				"Name": "EVASIVE MOVE",
+				"Details": "This unit can have up to 2 extra evasive charges from movement.",
+				"Icon": "lv_static"
+			},
+			"statisticData": {
+				"statName": "MaxEvasivePips",
+				"operation": "Int_Add",
+				"modValue": "2",
+				"modType": "System.Int32"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": 2,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-PhantasmEvasionGained",
+				"Name": "EVASIVE MOVE",
+				"Details": "This unit generates 2 extra EVASIVE charges from movement actions.",
+				"Icon": "lv_static"
+			},
+			"statisticData": {
+				"statName": "EvasivePipsGainedAdditional",
+				"operation": "Int_Add",
+				"modValue": "2",
+				"modType": "System.Int32"
+			},
+			"nature": "Buff"
+		}		
+	],
+	"IsPrimaryAbility": true
+}

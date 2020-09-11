@@ -1,0 +1,108 @@
+{
+	"Description" : {
+		"Id" : "AbilityDefT8Aa",
+		"Name" : "KNIFE FIGHTER",
+		"Details" : "PASSIVE: Gain a +33% boost to all support weapon short and mmedium range brackets as well as +10% damage with support weapons",
+		"Icon" : "crossed-swords"
+	},
+    "DisplayParams" : "ShowInMWTRay",
+	"ReqSkill" : "Tactics",
+	"ReqSkillLevel" : 8,
+	"ActivationTime": "Passive",
+    "EffectData" :
+	[
+		{
+            "durationData": {
+                "duration": -1,
+                "stackLimit": 1
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "effectTargetType": "Creator",
+                "showInTargetPreview": false,
+                "showInStatusPanel": true
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "AbilityDefT8Aa_ShortRange",
+                "Name": "Knife Fighter",
+                "Details": "The short and medium range brackets on this mech's support weapons are increased by 33% and its support weapon damage is increased by 10%.",
+                "Icon": "crossed-swords"
+            },
+            "nature": "Buff",
+            "statisticData": {
+                "statName": "ShortRange",
+                "operation": "Float_Multiply",
+                "modValue": "1.33",
+                "modType": "System.Single",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "AntiPersonnel",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "NotSet"
+            }
+        },
+		{
+            "durationData": {
+                "duration": -1,
+                "stackLimit": 1
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "effectTargetType": "Creator",
+                "showInTargetPreview": false,
+                "showInStatusPanel": false
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "AbilityDefT8Aa_MediumRange",
+                "Name": "Medium Range Increase",
+                "Details": "The Medium range brackets on this mech's support weapons are increased by 33%.",
+                "Icon": "crossed-swords"
+            },
+            "nature": "Buff",
+            "statisticData": {
+                "statName": "MediumRange",
+                "operation": "Float_Multiply",
+                "modValue": "1.33",
+                "modType": "System.Single",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "AntiPersonnel",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "NotSet"
+            }
+        },
+		{
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "effectTargetType" : "Creator",
+                "showInStatusPanel" : false
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "AbilityDefG8a_APDamage",
+                "Name" : "Support Weapon Damage Increased",
+                "Details" : "Support weapon attacks deal 10% more damage.",
+                "Icon" : "crossed-swords"
+            },
+            "nature" : "Buff",
+            "statisticData": {
+				"modType": "System.Single",
+				"modValue": "1.1",
+				"operation": "Float_Multiply",
+				"statName": "DamagePerShot",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "AntiPersonnel",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "NotSet"
+			}
+        }
+	],
+	"IsPrimaryAbility" : true
+}

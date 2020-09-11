@@ -1,0 +1,38 @@
+{
+	"Description" : {
+		"Id" : "AbilityDefCMDOperative",
+		"Name" : "SPECIAL OPERATIVE",
+		"Details" : "PASSIVE: The Commander gains +2 better accuracy at maximum range.",
+		"Icon" : "special-operative"
+	},
+    "DisplayParams" : "ShowInMWTRay",
+	"ActivationTime" : "Passive",
+	"EffectData" :
+	[
+		{
+            "durationData": {
+                "duration": -1,
+                "stackLimit": -1
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "effectTargetType": "Creator",
+                "showInStatusPanel": true
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "StatusEffect-SpecialOperative",
+                "Name": "Max Range Accuracy Increased",
+                "Details": "+2 accuracy at maximum range",
+                "Icon": "special-operative"
+            },
+            "nature": "Buff",
+            "statisticData": {
+                "statName": "CACExtraLongRangeAccuracyMod",
+                "operation": "Float_Add",
+                "modValue": "-2.0",
+                "modType": "System.Single"
+            }
+        }
+	]
+}

@@ -1,0 +1,71 @@
+{
+	"Description": {
+		"Id": "AbilityDefBlueAP",
+		"Name": "SUPPORT MASTER",
+		"Details": "PASSIVE: Aether deals 20% more damage with support weapons but also has a -50% crit chance penalty with them.",
+		"Icon": "digital-trace"
+	},
+	"DisplayParams": "ShowInMWTRay",
+	"ActivationTime": "Passive",
+	"EffectData": [
+		{
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "effectTargetType" : "Creator",
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "AbilityDefBlueAP_APDamage",
+                "Name" : "Support Weapon Damage Increased",
+                "Details" : "Support weapons deal 20% more damage.",
+                "Icon" : "digital-trace"
+            },
+            "nature" : "Buff",
+            "statisticData": {
+				"modType": "System.Single",
+				"modValue": "1.2",
+				"operation": "Float_Multiply",
+				"statName": "DamagePerShot",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "AntiPersonnel",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "NotSet"
+			}
+        },
+		{
+            "durationData": {
+                "duration": -1,
+                "stackLimit" : -1
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "effectTargetType": "Creator",
+                "showInStatusPanel" : true
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "AbilityDefBlueAP_APCrit",
+                "Name": "Support Weapon Critical Chance Reduced",
+                "Details": "Support weapons have 50% less chance to cause critical damage.",
+                "Icon": "digital-trace"
+            },
+            "statisticData": {
+				"statName": "CriticalChanceMultipler",
+				"operation": "Float_Add",
+				"modValue": "-0.5",
+				"modType": "System.Single",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "AntiPersonnel",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "NotSet"
+            },
+            "nature": "Buff"
+        }
+	]
+}

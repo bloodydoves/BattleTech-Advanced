@@ -2,7 +2,7 @@
 	"Description" : {
 		"Id" : "AbilityDefGu8",
 		"Name" : "JUGGERNAUT",
-		"Details" : "PASSIVE: This mechwarrior can CHARGE into melee at sprint range. Successful Melee attacks knock your target back one Initiative Phase. Braces after Melee and DFA.",
+		"Details" : "PASSIVE: Successful Melee attacks knock your target back one Initiative Phase. Braces after Melee and DFA. Also grants one extra attack using physical weapons such as Hatchets, Maces, and Swords.",
 		"Icon" : "uixSvgIcon_juggernaut"
 	},
     "DisplayParams" : "ShowInMWTRay",
@@ -35,6 +35,35 @@
 				"operation" : "Int_Add",
 				"modValue" : "1",
 				"modType" : "System.Int32"
+			},
+			"nature" : "Buff"
+		},
+		{
+			"durationData" :
+			{
+				"duration" : -1
+			},
+			"targetingData" : 
+			{
+				"effectTriggerType" : "OnActivation",
+				"effectTargetType" : "Creator",
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : false
+			},
+			"effectType" : "StatisticEffect",
+			"Description" :
+			{
+				"Id" : "TraitDefTwoPhysWeap",
+				"Name" : "Two Physical Weapons",
+				"Details" : "Gain One Additional Physical Weapon Attack",
+				"Icon" : "uixSvgIcon_action_evasivemove"
+			},
+			"statisticData" : 
+			{
+				"statName" : "CBTBE_Physical_Weapon_Extra_Hits_Count",
+				"operation" : "Float_Add",
+				"modValue" : "1.0",
+				"modType" : "System.Single"
 			},
 			"nature" : "Buff"
 		}

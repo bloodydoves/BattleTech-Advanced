@@ -14,6 +14,14 @@
 		"ArmActuator": {
 			"Type": "PartHand"
 		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"IsPhysWeap",
+				"PhysWeapUnsteady",
+				"PhysWeapDamage: 1",
+				"PhysWeapStab: 0.5"
+			]
+		},
 		"Flags": {
 			"flags": [
 				"no_salvage",
@@ -36,7 +44,7 @@
 		"Details": "The Hatchet is a melee weapon equipped to the Hatchetman as a prototype to test force multiplication benefits in close combat. This Starblade prototype is affixed permanently to the 'Mech's right arm. It may be damaged and disabled, but it can be repaired.",
 		"Icon": "UixSvgIcon_specialEquip_Melee"
 	},
-	"BonusValueA": "+ 70 Melee Dmg.",
+	"BonusValueA": "",
 	"BonusValueB": "",
 	"ComponentType": "Upgrade",
 	"ComponentSubType": "NotSet",
@@ -49,56 +57,157 @@
 	"CriticalComponent": false,
 	"statusEffects": [
 		{
-			"durationData": {
-				"duration": -1,
-				"ticksOnActivations": false,
-				"useActivationsOfTarget": false,
-				"ticksOnEndOfRound": false,
-				"ticksOnMovements": false,
-				"stackLimit": -1,
-				"clearedWhenAttacked": false
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"triggerLimit": 0,
-				"extendDurationOnTrigger": 0,
-				"specialRules": "NotSet",
-				"effectTargetType": "Creator",
-				"range": 0,
-				"forcePathRebuild": false,
-				"forceVisRebuild": false,
-				"showInTargetPreview": false,
-				"showInStatusPanel": true
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "StatusEffect-Attack_DamageMelee-T6",
-				"Name": "MELEE DAMAGE INCREASED",
-				"Details": "Melee attacks deal [AMT] more damage.",
-				"Icon": "uixSvgIcon_equipment_ActuatorArm"
-			},
-			"nature": "Buff",
-			"statisticData": {
-				"appliesEachTick": false,
-				"effectsPersistAfterDestruction": false,
-				"statName": "DamagePerShot",
-				"operation": "Float_Add",
-				"modValue": "70.0",
-				"modType": "System.Single",
-				"additionalRules": "NotSet",
-				"targetCollection": "Weapon",
-				"targetWeaponCategory": "NotSet",
-				"targetWeaponType": "NotSet",
-				"targetAmmoCategory": "NotSet",
-				"targetWeaponSubType": "Melee"
-			},
-			"tagData": null,
-			"floatieData": null,
-			"actorBurningData": null,
-			"vfxData": null,
-			"instantModData": null,
-			"poorlyMaintainedEffectData": null
-		}
+            "durationData" : {
+                "duration": -1,
+                "stackLimit": 1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "effectTargetType" : "Creator",
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : false
+            },
+            "effectType" : "StatisticEffect",
+            "Description" :
+            {
+                "Id" : "PunchIsPhysical",
+                "Name" : "This is a Physical Weapon",
+                "Details" : "This is a physical weapon and uses those melee rules."
+            },
+            "statisticData" : 
+            {
+                "statName" : "CBTBE_Punch_Is_Physical_Weapon",
+                "operation": "Set",
+                "modValue": "true",
+                "modType": "System.Boolean"
+            }
+        },
+                  {
+            "durationData" : {
+                "duration": -1,
+                "stackLimit": 1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "specialRules" : "NotSet",
+                "effectTargetType" : "Creator",
+                "range" : 0.0,
+                "forcePathRebuild" : false,
+                "forceVisRebuild" : false,
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : false
+            },
+            "effectType" : "StatisticEffect",
+            "Description" :
+            {
+                "Id" : "CBTBE_PHYSICAL_WEAPON_APPLY_UNSTEADY",
+                "Name" : "Target will be Unsteady",
+                "Details" : "Foo"
+            },
+            "statisticData" : 
+            {
+                "statName" : "CBTBE_Physical_Weapon_Applies_Unsteady_To_Target",
+                "operation": "Set",
+                "modValue": "true",
+                "modType": "System.Boolean"
+            },
+            "nature" : "Buff"
+        },
+        {
+            "durationData" : {
+                "duration": -1,
+                "stackLimit": 1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "specialRules" : "NotSet",
+                "effectTargetType" : "Creator",
+                "range" : 0.0,
+                "forcePathRebuild" : false,
+                "forceVisRebuild" : false,
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : false
+            },
+            "effectType" : "StatisticEffect",
+            "Description" :
+            {
+                "Id" : "CBTBE_PHYSICAL_WEAPON_LOCATION_TABLE",
+                "Name" : "Location table to use",
+                "Details" : "Foo"
+            },
+            "statisticData" : 
+            {
+                "statName" : "CBTBE_Physical_Weapon_Location_Table",
+                "operation": "Set",
+                "modValue": "STANDARD",
+                "modType": "System.String"
+            },
+            "nature" : "Buff"
+        },
+		{
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "triggerLimit" : 0,
+                "extendDurationOnTrigger" : 0,
+                "specialRules" : "NotSet",
+                "effectTargetType" : "Creator",
+                "range" : 0,
+                "forcePathRebuild" : false,
+                "forceVisRebuild" : false,
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "StatusEffect-HatchetBaseDamage",
+                "Name" : "Hatchet Base Damage",
+                "Details" : "Hatchets do 5 damage per 5 tons of the mech.",
+                "Icon" : "uixSvgIcon_equipment_ActuatorLeg"
+            },
+            "nature" : "Buff",
+            "statisticData" : {
+                "statName" : "CBTBE_Physical_Weapon_Target_Damage_Per_Attacker_Ton",
+                "operation": "Set",
+                "modValue": "1.0",
+                "modType": "System.Single"
+            }
+        },
+		{
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "triggerLimit" : 0,
+                "extendDurationOnTrigger" : 0,
+                "specialRules" : "NotSet",
+                "effectTargetType" : "Creator",
+                "range" : 0,
+                "forcePathRebuild" : false,
+                "forceVisRebuild" : false,
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "StatusEffect-HatchetBaseStabDamage",
+                "Name" : "Hatchet Base Stab Damage",
+                "Details" : "Hatchets do 5 stab damage per 10 tons of the mech.",
+                "Icon" : "uixSvgIcon_equipment_ActuatorLeg"
+            },
+            "nature" : "Buff",
+            "statisticData" : {
+                "statName" : "CBTBE_Physical_Weapon_Target_Instability_Per_Attacker_Ton",
+                "operation": "Set",
+                "modValue": "0.5",
+                "modType": "System.Single"
+            }
+        }
 	],
 	"ComponentTags": {
 		"items": [

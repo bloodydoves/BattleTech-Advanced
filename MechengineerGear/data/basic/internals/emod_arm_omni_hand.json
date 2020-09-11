@@ -3,17 +3,17 @@
         "ArmActuator" : {
 			"Type" : "PartHand"
 		},
-		"BonusDescriptions": {
-            "Bonuses": [
-                "MeleeAcc: +1"
-            ]
-        },
 		"CriticalEffects" : {
                     "OnDestroyedEffectIDs" : ["CriticalEffect-ArmHandActuatorDestroyed-{location}"]
                 },
 				"InventorySorter" : {
                     "SortKey" : "ActuatorArm3"
                 },
+		"BonusDescriptions": {
+            "Bonuses": [
+				"PunchAccuracy: +1"
+            ]
+        },
 		"Category" : [{ "CategoryID" : "OmniHandActuator" }],
 		"Flags" : { "flags" : [ "not_broken" ] }
 	},
@@ -41,33 +41,53 @@
     "DisallowedLocations" : "All",
     "CriticalComponent" : false,
     "statusEffects" : [
-        {
-            "durationData" : {
+		{
+            "durationData": {
+                "duration": -1,
+                "ticksOnActivations": false,
+                "useActivationsOfTarget": false,
+                "ticksOnEndOfRound": false,
+                "ticksOnMovements": false,
+                "stackLimit": -1,
+                "clearedWhenAttacked": false
             },
-            "targetingData" : {
-                "effectTriggerType" : "Passive",
-                "effectTargetType" : "Creator",
-                "showInTargetPreview" : false,
-                "showInStatusPanel" : true
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "triggerLimit": 0,
+                "extendDurationOnTrigger": 0,
+                "specialRules": "NotSet",
+                "effectTargetType": "Creator",
+                "range": 0,
+                "forcePathRebuild": false,
+                "forceVisRebuild": false,
+                "showInTargetPreview": false,
+                "showInStatusPanel": true
             },
-            "effectType" : "StatisticEffect",
-            "Description" : {
-                "Id" : "StatusEffect-ArmHandActuator",
-                "Name" : "Hand Actuator",
-                "Details" : "Melee attacks attempted have their hit improved by 1.",
-                "Icon" : "uixSvgIcon_equipment_ActuatorArm"
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "StatusEffect-Hand_ToHitPunch",
+                "Name": "Punch Hit Chance Bonus",
+                "Details": "Punch attacks gain a +1 to hit.",
+                "Icon": "uixSvgIcon_equipment_Gyro"
             },
-            "statisticData" : {
-                "statName" : "AccuracyModifier",
-                "operation" : "Float_Add",
-                "modValue" : "-1.0",
-                "modType" : "System.Single",
-                "targetCollection" : "Weapon",
-                "targetWeaponSubType" : "Melee"
+            "nature": "Buff",
+            "statisticData": {
+                "appliesEachTick": false,
+                "effectsPersistAfterDestruction": false,
+                "statName": "CBTBE_Punch_Attack_Mod",
+                "operation": "Int_Add",
+                "modValue": "-1",
+                "modType": "System.Int32",
+                "additionalRules": "NotSet"
             },
-            "nature" : "Buff"
-        }		
-    ],
+            "tagData": null,
+            "floatieData": null,
+            "actorBurningData": null,
+            "vfxData": null,
+            "instantModData": null,
+            "poorlyMaintainedEffectData": null
+        }
+	],
     "ComponentTags" : {
         "items" : [
 			"OmniActuator.{location}",

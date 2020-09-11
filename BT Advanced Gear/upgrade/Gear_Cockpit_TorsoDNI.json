@@ -1,0 +1,256 @@
+{
+	"Custom": {
+		"Category": [
+			{ 
+			"CategoryID": "Cockpit" 
+			},
+			{
+			"CategoryID" : "LifeSupportA"
+			},
+			{
+			"CategoryID" : "LifeSupportB"
+			}
+        ],
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "[[Chassis.Tonnage]]/8",
+				"CBillCost": "[[Chassis.Tonnage]] * 1.3"
+			}
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"TorsoMount",
+				"Initiative: +1",
+				"Health: +6",
+				"DamageTaken: -10%",
+				"StabDamageTaken: -10%",
+				"IsCockpit"
+			]
+		},
+		"Linked": {
+            "Links": [
+                {
+                    "ComponentDefId": "Gear_Cockpit_LifeSupportA_Torso",
+                    "Location": "LeftTorso",
+					"ComponentDefType": "Upgrade"
+                },
+                {
+                    "ComponentDefId": "Gear_Cockpit_LifeSupportB_Torso",
+                    "Location": "RightTorso",
+					"ComponentDefType": "Upgrade"
+                }
+            ]
+        }
+	},
+	"Description": {
+		"Cost": 6200000,
+		"Rarity": 4,
+		"Purchasable": false,
+		"Manufacturer": "Dark Mirage",
+		"Model": "Torso DNI Cockpit",
+		"UIName": "Torso Direct Neural Interface Cockpit",
+		"Id": "Gear_Cockpit_TorsoDNI",
+		"Name": "Torso DNI Cockpit",
+		"Details": "This is a highly experimental Torso Mount and Direct Neural Interface Cockpit combination. It is hard-welded into the Prometheus 'Prime' prototype and cannot be removed. It provides the initiative bonus and pilot health bonus of a Torso Mounted Cockpit as well as the damage and stability damage reduction of a Direct Neural Interface, making it extremely powerful.",
+		"Icon": "uixSvgIcon_equipment_Cockpit"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 2,
+	"Tonnage": 4,
+	"AllowedLocations": "CenterTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": -1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "CockpitInitativeEffect",
+				"Name": "CockpitTechBonus",
+				"Details": "Provides + 1 Initiative.",
+				"Icon": "uixSvgIcon_equipment_Cockpit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "BaseInitiative",
+				"operation": "Int_Add",
+				"modValue": "-1",
+				"modType": "System.Int32",
+				"additionalRules": "NotSet",
+				"targetCollection": "NotSet",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-Torso_Cockpit",
+				"Name": "Torso Mounted Cockpit",
+				"Details": "+6 Health.",
+				"Icon": "uixSvgIcon_equipment_Cockpit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "BonusHealth",
+				"operation": "Int_Add",
+				"modValue": "6",
+				"modType": "System.Int32",
+				"additionalRules": "NotSet",
+				"targetCollection": "Pilot",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": -1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-DNIReduction",
+				"Name": "DNI Cockpit Damage Reduction",
+				"Details": "All incoming damage reduced by 10%.",
+				"Icon": "uixSvgIcon_equipment_ActuatorArm"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "DamageReductionMultiplierAll",
+				"operation": "Float_Multiply",
+				"modValue": "0.9",
+				"modType": "System.Single"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": -1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-DNI-StabDefense",
+				"Name": "INCOMING STABILITY DAMAGE DECREASED",
+				"Details": "Incoming stability damage reduced by 10%.",
+				"Icon": "uixSvgIcon_equipment_Gyro"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "ReceivedInstabilityMultiplier",
+				"operation": "Float_Multiply",
+				"modValue": "0.9",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "NotSet",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}

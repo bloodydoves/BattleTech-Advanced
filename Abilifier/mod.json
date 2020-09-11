@@ -1,0 +1,37 @@
+{
+    "Name": "Abilifier",
+    "DLL": "Abilifier.dll",
+
+	"Hidden": true,
+    "Version": "1.0.9",
+    "Description": "Allows for choices between abilities when leveling pilots.",
+    "Author": "gnivler, T-Bone",
+    "Website": "",
+
+    "ConflictsWith": [],
+    "CustomResourceTypes": [],
+
+    "Settings": {
+		"enableTrace": false,
+		"enableLog": false,
+		"usePopUpsForAbilityDesc": false,
+		"debugXP": false,
+		"extraFirstTierAbilities": 0,
+		"extraAbilities": 1,
+		"extraAbilitiesAllowedPerSkill": 1,
+		"nonTreeAbilities": 3,
+		"cleanUpCombatUI": true,
+		"skillLockThreshold":8,
+		"usingCACabilitySelector":true,
+		"abilityReqs":
+			{
+				"potato":["potahto"]
+			}
+	},
+
+    "Manifest": [
+		{ "Type": "AbilityDef", "Path": "abilities" },
+		{ "Type": "BaseDescriptionDef", "Path": "AbilityDescs" }
+
+    ]
+}

@@ -1,0 +1,66 @@
+{
+	"Description": {
+		"Id": "AbilityDefLokiGhost",
+		"Name": "SENSOR GHOST",
+		"Details": "PASSIVE: Loki's evasive charges are immune to being removed by sensor lock effects. However, he gets a -2 to weapon accuracy at all times.",
+		"Icon": "specter"
+	},
+	"DisplayParams": "ShowInMWTRay",
+	"ActivationTime": "Passive",
+	"EffectData": [
+		{
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "effectTargetType" : "Creator",
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "AbilityDefLokiGhost_WeaponAccuracy",
+                "Name" : "Weapon Accuracy Decreased",
+                "Details" : "Weapon attacks suffer -2 accuracy.",
+                "Icon" : "specter"
+            },
+            "nature" : "Buff",
+            "statisticData": {
+				"modType": "System.Single",
+				"modValue": "2.0",
+				"operation": "Float_Add",
+				"statName": "AccuracyModifier",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "NotSet"
+			}
+        },
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+                "showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDefLokiGhost_SafeEvasive",
+				"Name": "Sensor Ghost",
+				"Details": "This unit is immune to sensor lock.",
+				"Icon": "specter"
+			},
+			"statisticData": {
+				"statName": "EvasiveSafeFromSensorLock",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			},
+			"nature": "Buff"
+		}
+	]
+}

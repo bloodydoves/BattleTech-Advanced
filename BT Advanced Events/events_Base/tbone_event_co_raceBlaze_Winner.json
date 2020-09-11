@@ -1,0 +1,479 @@
+{
+    "Description" : {
+        "Id" : "tbone_event_co_raceBlaze_Winner",
+        "Name" : "Need For Speed: Results",
+        "Details" : "[[SCN_MW,{SCN_MW.Callsign}]] asks to speak to the crew after the morning briefing.\r\n\r\n\"Everyone! I got a message from [[DM.BaseDescriptionDefs[TBoneLoreISORES],ISORES]] last night with the results of our race season, but I wanted to wait to open it until you were all around. Before I do though, I wanted to thank you both. Commander, I had a blast racing again and I couldn't have done it without your advice, or the financial support of the company. Yang, I can't thank you enough for agreeing to maintain and repair the racer after every race. We made a pretty good team didn't we? Now, let's see how we did.\"",
+        "Icon" : "uixTxrSpot_DailyBriefing.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 10000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : [
+                "finished_Blaze"
+            ]
+        },
+        "RequirementComparisons" : []
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [
+        {
+            "Scope" : "SecondaryMechWarrior",
+            "Requirements" : {
+                "Scope" : "SecondaryMechWarrior",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : [
+                        "name_Blaze",
+                        "race_arctic",
+                        "race_desert",
+                        "race_jungle",
+                        "race_lowland",
+                        "race_highland"
+                    ]
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Read the message from ISORES.",
+                "Details" : "[RaceWins==5]",
+                "Icon" : null
+            },
+            "RequirementList" : [
+                {
+                    "Scope" : "Company",
+                    "RequirementTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "ExclusionTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "RequirementComparisons" : [
+                        {
+                            "obj" : "RaceWins",
+                            "op" : "Equal",
+                            "val" : 5,
+                            "valueConstant" : "5"
+                        }
+                    ]
+                }
+            ],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Read the message from ISORES.",
+                        "Details" : "<i><b>Dear [[SCN_MW,{SCN_MW.Callsign}]],\r\n\t\r\nWe at [[DM.BaseDescriptionDefs[TBoneLoreISORES],ISORES]] are proud to announce your confirmation as one of this years' Champions. Please extend our congratulations to your race team, and we wish you all the best. In recognition of your achievement, we have announced your status as Champion to every nation in which we operate.\r\n\t\r\nSincerely,\r\n\r\nBenjamin Klock\r\n\nPresident, ISORES</i></b>\r\n\r\n[[SCN_MW,{SCN_MW.Callsign}]] is ecstatic, spending a portion of her winnings on a case of [[DM.BaseDescriptionDefs[TBoneLoreGlengarryBlack],Glengarry Black]] to share with the crew. Although everyone had a blast celebrating, [[DM.BaseDescriptionDefs[TooltipSimGameCharacterYANG],Yang]] and [[DM.BaseDescriptionDefs[TBoneLoreDoc],Doc Cobble]] both report that their respective crews' efficiency will be somewhat <i>impaired</i> for a while. Still, you've already received messages of congratulations from most of your [[DM.BaseDescriptionDefs[LoreMRBC],MRBC]] liaisons. Seems almost everyone likes a winner, and [[SCN_MW,{SCN_MW.Callsign}]] has noticebly improved her piloting.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "race_arctic",
+                                    "race_desert",
+                                    "race_jungle",
+                                    "race_lowland",
+                                    "race_highland",
+                                    "racer_apocalypse",
+                                    "racer_ibex"
+                                ]
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Piloting",
+                                    "value" : "1",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "MedTechSkill",
+                                    "value" : "-1",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "MechTechSkill",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 7
+                        },
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "finished_Blaze"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Funds",
+                                    "value" : "100000",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.Liao",
+                                    "value" : "3",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.MagistracyOfCanopus",
+                                    "value" : "3",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.Marik",
+                                    "value" : "3",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.Steiner",
+                                    "value" : "3",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.TaurianConcordat",
+                                    "value" : "3",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.AuriganRestoration",
+                                    "value" : "3",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.Davion",
+                                    "value" : "3",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.Kurita",
+                                    "value" : "3",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "Read the message from ISORES.",
+                "Details" : "[RaceWins=1-4]",
+                "Icon" : null
+            },
+            "RequirementList" : [
+                {
+                    "Scope" : "Company",
+                    "RequirementTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "ExclusionTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "RequirementComparisons" : [
+                        {
+                            "obj" : "RaceWins",
+                            "op" : "LessThan",
+                            "val" : 5,
+                            "valueConstant" : "5"
+                        },
+                        {
+                            "obj" : "RaceWins",
+                            "op" : "GreaterThanOrEqual",
+                            "val" : 1,
+                            "valueConstant" : "1"
+                        }
+                    ]
+                }
+            ],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "Read the message from ISORES.",
+                        "Details" : "<i><b>Dear [[SCN_MW,{SCN_MW.Callsign}]],\r\n\t\r\nWe at [[DM.BaseDescriptionDefs[TBoneLoreISORES],ISORES]] are proud to congratulate you on your winning season. Please accept this payment in recognition of your achievements and extend our congratulations to your race team. We wish you all the best and look forward to seeing you compete in the future.\r\n\t\r\nSincerely,\r\n\r\nBenjamin Klock\r\n\nPresident, ISORES</i></b>\r\n\r\n[[SCN_MW,{SCN_MW.Callsign}]] is pretty happy about the winning season, especially since it meant you made more money than you lost, and she's certainly become a better pilot as a result.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "race_arctic",
+                                    "race_desert",
+                                    "race_jungle",
+                                    "race_lowland",
+                                    "race_highland",
+                                    "racer_apocalypse",
+                                    "racer_ibex"
+                                ]
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Piloting",
+                                    "value" : "1",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "finished_Blaze"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Funds",
+                                    "value" : "50000",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_2",
+                "Name" : "Read the message from ISORES.",
+                "Details" : "[RaceWins<1]",
+                "Icon" : null
+            },
+            "RequirementList" : [
+                {
+                    "Scope" : "Company",
+                    "RequirementTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "ExclusionTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "RequirementComparisons" : [
+                        {
+                            "obj" : "RaceWins",
+                            "op" : "LessThan",
+                            "val" : 1,
+                            "valueConstant" : "1"
+                        }
+                    ]
+                }
+            ],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_2_0",
+                        "Name" : "Read the message from ISORES.",
+                        "Details" : "<i><b>Dear [[SCN_MW,{SCN_MW.Callsign}]],\r\n\t\r\n[[DM.BaseDescriptionDefs[TBoneLoreISORES],ISORES]] would like to thank you for your participation in this years' off-road racing competition. It is the racers like you that make our competitions possible, and you should be proud to have taken part. We wish you all the best and look forward to seeing you compete in the future.\r\n\t\r\nSincerely,\r\n\r\nBenjamin Klock\r\n\nPresident, ISORES</i></b>\r\n\r\n[[SCN_MW,{SCN_MW.Callsign}]] is a happy to have been able race at all, albeit a little disappointed at a losing season. For his part [[DM.BaseDescriptionDefs[TooltipSimGameCharacterYANG],Yang]] is just happy to not have to tune carburetors anymore.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "race_arctic",
+                                    "race_desert",
+                                    "race_jungle",
+                                    "race_lowland",
+                                    "race_highland",
+                                    "racer_apocalypse",
+                                    "racer_ibex"
+                                ]
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "finished_Blaze"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}

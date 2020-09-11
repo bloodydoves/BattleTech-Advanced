@@ -1,0 +1,67 @@
+{
+	"Description" : {
+		"Id" : "AbilityDefBDInit",
+		"Name" : "DESIGNERS INSIGHT",
+		"Details" : "PASSIVE: Bloodydoves gains +1 Initiative and removes one bar of stability damage when reserving.",
+		"Icon" : "rosa-shield"
+	},
+    "DisplayParams" : "ShowInMWTRay",
+	"ActivationTime" : "Passive",
+	"EffectData" :
+	[
+		{
+			"durationData" :
+			{
+				"duration" : -1
+			},
+			"targetingData" : 
+			{
+				"effectTriggerType" : "OnActivation",
+				"effectTargetType" : "Creator"
+			},
+			"effectType" : "StatisticEffect",
+			"Description" :
+			{
+				"Id" : "AbilityDefBDInit_Init",
+				"Name" : "Initiative Boost",
+				"Details" : "+1 to base Initiative",
+				"Icon" : "uixSvgIcon_ability_mastertactician"
+			},
+			"statisticData" : 
+			{
+				"statName" : "BaseInitiative",
+				"operation" : "Int_Add",
+				"modValue" : "-1",
+				"modType" : "System.Int32"
+			},
+			"nature" : "Buff"
+		},
+		{
+			"durationData" :
+			{
+				"duration" : -1
+			},
+			"targetingData" : 
+			{
+				"effectTriggerType" : "OnActivation",
+				"effectTargetType" : "Creator"
+			},
+			"effectType" : "StatisticEffect",
+			"Description" :
+			{
+				"Id" : "AbilityDefBDInit_Reserve",
+				"Name" : "Reserve Stab Removal",
+				"Details" : "DEFER ACTION CLEARS UNSTEADY",
+				"Icon" : "uixSvgIcon_ability_mastertactician"
+			},
+			"statisticData" : 
+			{
+				"statName" : "DeferResetsInstability",
+				"operation" : "Set",
+				"modValue" : "true",
+				"modType" : "System.Boolean"
+			},
+			"nature" : "Buff"
+		}
+	]
+}

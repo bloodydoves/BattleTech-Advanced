@@ -1,0 +1,52 @@
+{
+	"Description" : {
+		"Id" : "AbilityDefCMDTrainee",
+		"Name" : "OFFICER TRAINEE",
+		"Details" : "PASSIVE: The Commander gains +2 resolve whenever resolve is gained.",
+		"Icon" : "officer-trainee"
+	},
+    "DisplayParams" : "ShowInMWTRay",
+	"ActivationTime" : "Passive",
+	"EffectData" :
+	[
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-OfficerTrainee",
+				"Name": "Rsolve Generation Increased",
+				"Details": "Provides a 2 bonus to actions that generate Resolve.",
+				"Icon": "officer-trainee"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "MoraleBonusGain",
+				"operation": "Int_Add",
+				"modValue": "2",
+				"modType": "System.Int32",
+				"additionalRules": "NotSet",
+				"targetCollection": "NotSet",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
+		}
+	]
+}
