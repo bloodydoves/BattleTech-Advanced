@@ -8,13 +8,45 @@
     "decayByModulo" : false,
     "defaultDaysBeforeSimDecay" : -1,
     "topAffinitiesInTooltipCount" : 3,
-    "showQuirks" : false,
-	"enablePilotQuirks": false,
+    "showQuirks" : true,
+	"enablePilotQuirks": true,
     "showDescriptionsOnChassis" : true,
     "trackSimDecayByStat" : true,
     "trackLowestDecayByStat": false,
     "showAllPilotAffinities" : true,
-    "pilotQuirks": [],
+    "pilotQuirks": [
+			{
+			"tag" : "Tutorial_PlotArmor",
+			"quirkName" : "Plot Armor",
+			"description" : "The OpFor weapons have been depowered for this training exercise, effectively giving you a 10% damage reduction.",
+			"effectData" : [
+				{
+					"durationData": {
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "TutorialPlotArmor",
+						"Name": "Training Exercise: Damage Reduction",
+						"Details": "All incoming damage reduced by 10%.",
+						"Icon": "layeredarmor"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamageReductionMultiplierAll",
+						"operation": "Float_Multiply",
+						"modValue": "0.9",
+						"modType": "System.Single"
+					}
+				}
+			],
+			"quirkEffects" : []
+			}
+	],
 	"globalAffinities" : 
     [
         {

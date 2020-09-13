@@ -1,0 +1,74 @@
+{
+   "Description": {
+      "Id": "Ammunition_GAUSS_PR",
+      "Name": "Gauss (Practice Rounds) Ammo",
+      "UIName": "PR",
+      "Details": "GAUSS (Practice Rounds) Ammo",
+      "Icon": null,
+      "Cost": 0,
+      "Rarity": 0,
+      "Purchasable": false
+   },
+   "Type": "Normal",
+   "Category": "GAUSS",
+   "HeatGenerated": 0,
+   "HeatGeneratedModifier": 1,
+   "ArmorDamageModifier": 1,
+   "ISDamageModifier": 1,
+   "CriticalDamageModifier": 1,
+   "DamagePerShot": -55.0,
+   "statusEffects": [
+        {
+            "durationData": {
+                "duration": 1,
+                "ticksOnActivations": true,
+                "useActivationsOfTarget": true,
+                "ticksOnEndOfRound": false,
+                "ticksOnMovements": false,
+                "stackLimit": 6,
+                "clearedWhenAttacked": false
+            },
+            "targetingData": {
+                "effectTriggerType": "OnHit",
+                "triggerLimit": 0,
+                "extendDurationOnTrigger": 0,
+                "specialRules": "NotSet",
+                "effectTargetType": "NotSet",
+                "range": 0,
+                "forcePathRebuild": false,
+                "forceVisRebuild": false,
+                "showInTargetPreview": false,
+                "showInStatusPanel": false
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "BEES-Effect",
+                "Name": "Practice Gauss Rounds Hit.",
+                "Details": "This mech has been hit by an EWAR payload, the pilot can't aim anymore.",
+                "Icon": "uixSvgIcon_shipUpgrade_power2"
+            },
+            "nature": "Debuff",
+            "statisticData": {
+                "appliesEachTick": false,
+                "effectsPersistAfterDestruction": false,
+                "statName": "AccuracyModifier",
+                "operation": "Float_Add",
+                "modValue": "1.0",
+                "modType": "System.Single",
+                "additionalRules": "NotSet",
+                "targetCollection": "NotSet",
+                "targetWeaponCategory": "NotSet",
+                "targetWeaponType": "NotSet",
+                "targetAmmoCategory": "NotSet",
+                "targetWeaponSubType": "NotSet"
+            },
+            "tagData": null,
+            "floatieData": null,
+            "actorBurningData": null,
+            "vfxData": null,
+            "instantModData": null,
+            "poorlyMaintainedEffectData": null
+        }
+    ]
+   
+}
