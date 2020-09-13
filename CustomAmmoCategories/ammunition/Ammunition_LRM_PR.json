@@ -1,0 +1,80 @@
+{
+   "Description": {
+      "Id": "Ammunition_LRM_PR",
+      "Name": "LRM Practice Rounds Ammo",
+      "UIName": "PR",
+      "Details": "Long Range Missiles (Practice Rounds) have had their payload replaced by a 'mostly harmless' concussive charge and EWAR package.",
+      "Icon": null,
+      "Cost": 0,
+      "Rarity": 0,
+      "Purchasable": false
+   },
+   "Type": "Normal",
+   "Category": "LRM",
+   "HeatGenerated": 0,
+   "AIBattleValue": 70,
+   "HeatGeneratedModifier": 1,
+   "ArmorDamageModifier": 1,
+   "ISDamageModifier": 1,
+   "Instability": 4,
+   "CriticalDamageModifier": 1,
+   "DamagePerShot": -2.0,
+   "MinRange": 90.0,
+   "MaxRange": 200.0,
+   "ShortRange": 90.0,
+   "MiddleRange": 130.0,
+   "LongRange": 190.0,
+   "statusEffects": [
+        {
+            "durationData": {
+                "duration": 2,
+                "ticksOnActivations": true,
+                "useActivationsOfTarget": true,
+                "ticksOnEndOfRound": false,
+                "ticksOnMovements": false,
+                "stackLimit": 6,
+                "clearedWhenAttacked": false
+            },
+            "targetingData": {
+                "effectTriggerType": "OnHit",
+                "triggerLimit": 0,
+                "extendDurationOnTrigger": 0,
+                "specialRules": "NotSet",
+                "effectTargetType": "NotSet",
+                "range": 0,
+                "forcePathRebuild": false,
+                "forceVisRebuild": false,
+                "showInTargetPreview": false,
+                "showInStatusPanel": true
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "BEES-Effect",
+                "Name": "Practice LRM Rounds Hit",
+                "Details": "This mech has been hit by an EWAR payload, the pilot can't aim anymore.",
+                "Icon": "uixSvgIcon_shipUpgrade_power2"
+            },
+            "nature": "Debuff",
+            "statisticData": {
+                "appliesEachTick": false,
+                "effectsPersistAfterDestruction": false,
+                "statName": "AccuracyModifier",
+                "operation": "Float_Add",
+                "modValue": "1.0",
+                "modType": "System.Single",
+                "additionalRules": "NotSet",
+                "targetCollection": "NotSet",
+                "targetWeaponCategory": "NotSet",
+                "targetWeaponType": "NotSet",
+                "targetAmmoCategory": "NotSet",
+                "targetWeaponSubType": "NotSet"
+            },
+            "tagData": null,
+            "floatieData": null,
+            "actorBurningData": null,
+            "vfxData": null,
+            "instantModData": null,
+            "poorlyMaintainedEffectData": null
+        }
+    ]
+}
