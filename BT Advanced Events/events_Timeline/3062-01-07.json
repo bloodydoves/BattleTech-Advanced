@@ -2,7 +2,7 @@
     "Description": {
         "Id": "3062-01-07",
         "Name": "MercNews Broadcast",
-        "Details": "FOCHT RESIGNS; KURITA ELECTED FIRST LORD!\r\n\n\nTharkad, [[DM.BaseDescriptionDefs[LoreLyranAlliance],Lyran Alliance]]: According to the recently amended [[DM.BaseDescriptionDefs[LoreStarLeague2],Star League]] Constitution, the [[DM.Factions[faction_ComStar],ComStar]] representative is charged with casting the deciding vote in the event of a tie. With the vote for new First Lord hopelessly deadlocked on 5 November, it was anyone's guess who [[DM.Factions[faction_ComStar],ComStar]] Precentor Martial Anastasius Focht would favor.\r\n\n\nWould you like to know more?",
+        "Details": "FOCHT RESIGNS; KURITA ELECTED FIRST LORD!\r\n\n\nTharkad, [[DM.BaseDescriptionDefs[LoreLyranAlliance],Lyran Alliance]]: According to the recently amended [[DM.BaseDescriptionDefs[LoreStarLeague2],Star League]] Constitution, the [[DM.Factions[faction_ComStar],ComStar]] representative is charged with casting the deciding vote in the event of a tie. In a dramatic twist of the deadlocked 2nd [[DM.BaseDescriptionDefs[LoreWhittingCon],Whitting Conference]], Precentor Martial Anastasius Focht resigned, naming [[DM.BaseDescriptionDefs[LoreVictorSD],Victor Steiner-Davion]] as his successor and new Precentor Martial. Steiner-Davion quickly cast the deciding vote in favor of [[DM.BaseDescriptionDefs[LoreTedKurita],Theodore Kurita]]. As the new First Lord of the [[DM.BaseDescriptionDefs[LoreStarLeague2],Star League]], it falls on Kurita to maintain the uneasy peace between the [[DM.BaseDescriptionDefs[LoreGreatHouses],Great Houses]] and protect the Inner Sphere from the dormant Clan threat.\r\n\n\n<b>MercNews Subscription Renewal Request\r\n\n\n\nMercNews is a free news service provided to all mercenary companies registered and in good standing with the MRBC. The goal of MercNews is to provide factual, bias-free reporting of breaking news stories across known space. By confirming your MercNews subscription, you authorize MercNews LLC., the MRBC, and 3rd party sponsors to transmit and receive data using your onboard communications equipment.</b>",
         "Icon": "uixTxrSpot_ComputerScreen.png"
     },
     "Scope": "Company",
@@ -10,7 +10,7 @@
     "Requirements": {
         "Scope": "Company",
         "RequirementTags": {
-            "items": "mercnews_subscription",
+            "items": null,
             "tagSetSourceFile": ""
         },
         "ExclusionTags": {
@@ -24,18 +24,18 @@
     "Options": [
         {
             "Description": {
-                "Id": "continue",
-                "Name": "Yes.",
-                "Details": "Broadcast continues.",
+                "Id": "Subscribe",
+                "Name": "Subscribe.",
+                "Details": "Confirm MercNews subscription renewal.",
                 "Icon": ""
             },
             "RequirementList": [],
             "ResultSets": [
                 {
                     "Description": {
-                        "Id": "continue1",
-                        "Name": "MercNews Broadcast",
-                        "Details": "In a dramatic twist of the deadlocked 2nd [[DM.BaseDescriptionDefs[LoreWhittingCon],Whitting Conference]], Anastasius Focht resigned, naming [[DM.BaseDescriptionDefs[LoreVictorSD],Victor Steiner-Davion]] as his successor and new Precentor Martial. Steiner-Davion quickly cast the deciding vote in favor of [[DM.BaseDescriptionDefs[LoreTedKurita],Theodore Kurita]]. As the new First Lord of the [[DM.BaseDescriptionDefs[LoreStarLeague2],Star League]], it falls on Kurita to maintain the uneasy peace between the [[DM.BaseDescriptionDefs[LoreGreatHouses],Great Houses]] and protect the Inner Sphere from the dormant Clan threat.",
+                        "Id": "Subscribe1",
+                        "Name": "Subscribed",
+                        "Details": "Thank you for renewing your subscription to MercNews.",
                         "Icon": ""
                     },
                     "Weight": 100,
@@ -45,6 +45,7 @@
                             "Requirements": null,
                             "AddedTags": {
                                 "items" : [
+								"mercnews_subscription"
                                 ],
                                 "tagSetSourceFile" : ""
                             
@@ -77,18 +78,18 @@
         },
 		        {
             "Description": {
-                "Id": "end",
-                "Name": "No.",
-                "Details": "Broadcast ends.",
+                "Id": "Unsubscribe",
+                "Name": "Unsubscribe.",
+                "Details": "Are you sure you want to unsubscribe from this free service?",
                 "Icon": ""
             },
             "RequirementList": [],
             "ResultSets": [
                 {
                     "Description": {
-                        "Id": "end1",
-                        "Name": "MercNews Broadcast",
-                        "Details": "Transmission terminated.",
+                        "Id": "Unsubscribe1",
+                        "Name": "Unsubscribed",
+                        "Details": "You have been unsubscribed from all MercNews broadcasts.",
                         "Icon": ""
                     },
                     "Weight": 100,
@@ -103,7 +104,7 @@
                             
                             },
                             "RemovedTags": {
-                                "items": null,
+                                "items": "mercnews_subscription",
                                 "tagSetSourceFile": ""
                             },
                             "Stats": null,
