@@ -8,11 +8,45 @@
     "decayByModulo" : false,
     "defaultDaysBeforeSimDecay" : -1,
     "topAffinitiesInTooltipCount" : 3,
-    "showQuirks" : false,
+    "showQuirks" : true,
+	"enablePilotQuirks": true,
     "showDescriptionsOnChassis" : true,
     "trackSimDecayByStat" : true,
     "trackLowestDecayByStat": false,
     "showAllPilotAffinities" : true,
+    "pilotQuirks": [
+			{
+			"tag" : "Tutorial_PlotArmor",
+			"quirkName" : "Plot Armor",
+			"description" : "The OpFor weapons have been depowered for this training exercise, effectively giving you a 10% damage reduction.",
+			"effectData" : [
+				{
+					"durationData": {
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "TutorialPlotArmor",
+						"Name": "Training Exercise: Damage Reduction",
+						"Details": "All incoming damage reduced by 10%.",
+						"Icon": "layeredarmor"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamageReductionMultiplierAll",
+						"operation": "Float_Multiply",
+						"modValue": "0.9",
+						"modType": "System.Single"
+					}
+				}
+			],
+			"quirkEffects" : []
+			}
+	],
 	"globalAffinities" : 
     [
         {
@@ -290,7 +324,7 @@
             ]
         },
 		{
-            "chassisNames" : ["chrprfmech_osirisbase-001_30", "chrprfmech_hellspawnbase-001_45", "chrprfmech_huronwarriorbase-001_50", "chrprfmech_ostsolhotd-001_60", "ValkyrieII_60", "chrprfmech_thanatosbase-001_75", "chrPrfMech_cyclopsBase-001_90", "chrPrfMech_annihilatorBase-001_100", "chrprfmech_arcticcheetahbase-001_30", "chrprfmech_huntsmanbase-001_50", "chrprfmech_medusabase-001_50", "chrprfmech_maddogbase-001_60", "chrprfmech_warhawkbase-001_85", "chrprfmech_septicemiabase-001_55", "chrprfmech_ioncyclopsbase-001_65", "chrprfmech_grendelbase-001_45", "chrprfmech_grandtitanbase-001_100"],
+            "chassisNames" : ["chrprfmech_osirisbase-001_30", "chrprfmech_hellspawnbase-001_45", "chrprfmech_huronwarriorbase-001_50", "chrprfmech_ostsolhotd-001_60", "ValkyrieII_60", "chrprfmech_thanatosbase-001_75", "chrPrfMech_cyclopsBase-001_90", "chrPrfMech_annihilatorBase-001_100", "chrprfmech_arcticcheetahbase-001_30", "chrprfmech_huntsmanbase-001_50", "chrprfmech_medusabase-001_50", "chrprfmech_maddogbase-001_60", "chrprfmech_warhawkbase-001_85", "chrprfmech_septicemiabase-001_55", "chrprfmech_ioncyclopsbase-001_65", "chrprfmech_grendelbase-001_45", "chrprfmech_grandtitanbase-001_100", "chrprfmech_gspiderbase-001_60"],
             "affinityLevels" : 
             [
                 {
@@ -718,7 +752,7 @@
             ]
         },
 		{
-            "chassisNames" : ["chrprfmech_roughneckcrane-001_65", "Axman_65",  "chrPrfMech_archerBase-001_70", "chrPrfMech_awesomeBase-001_80", "chrPrfMech_thugBase-001_80", "chrPrfMech_bansheeBase-001_95", "chrPrfMech_atlasBase-001_100", "chrprfmech_crosscutbase-001_30"],
+            "chassisNames" : ["chrprfmech_roughneckcrane-001_65", "Axman_65",  "chrPrfMech_archerBase-001_70", "chrPrfMech_awesomeBase-001_80", "chrPrfMech_thugBase-001_80", "chrPrfMech_bansheeBase-001_95", "chrPrfMech_atlasBase-001_100", "chrprfmech_crosscutbase-001_30", "chrprfmech_sorcererbase-001_95"],
             "affinityLevels" : 
             [
                 {
