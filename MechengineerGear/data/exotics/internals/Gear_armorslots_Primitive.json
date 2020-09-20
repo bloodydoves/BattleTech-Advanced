@@ -5,8 +5,8 @@
 		},
 		"WorkOrderCosts": {
 			"Install": {
-				"TechCost": "1",
-				"CBillCost": "[[Chassis.Tonnage]]/100"
+				"TechCost": "3",
+				"CBillCost": "1000 * [[Chassis.Tonnage]]"
 			}
 		},
 		"ArmorStructureChanges": { "ArmorFactor": 0.67 },
@@ -21,18 +21,13 @@
 				"ArmorCBCost: -50%",
                 "ArmorProtection: -33%"				
             ]
-        },
-            "InventorySorter" : {
-                "SortKey" : "00009"
-            }		
+        }	
 	},
-
-  
     "StatName" : null,
     "RelativeModifier" : 0,
     "AbsoluteModifier" : 0,
     "Description" : {
-        "Cost" : 9000,
+        "Cost" : 25000,
         "Rarity" : 1,
         "Purchasable" : true,
         "Manufacturer" : "Earthwerks",
@@ -43,8 +38,8 @@
         "Details" : "Developed during the Age of War, Primitive Armor was introduced on the Mackie, the original BattleMech. This armor was less capable than the armor used in Star League and Succession War designs.",
         "Icon" : "uixSvgIcon_action_end"
     },
-    "BonusValueA" : "X0.67 Armor Protection|",
-    "BonusValueB" : "X0.5 Armor Costs",
+    "BonusValueA" : "67% Armor Protection",
+    "BonusValueB" : "50% Armor Costs",
     "ComponentType" : "Upgrade",
     "ComponentSubType" : "NotSet",
     "PrefabIdentifier" : "",
@@ -54,10 +49,7 @@
     "AllowedLocations" : "CenterTorso",
     "DisallowedLocations" : "All",
     "CriticalComponent" : false,
-    "statusEffects" : [
-		
-
-    ],
+    "statusEffects" : [],
     "ComponentTags" : {
         "items" : [
             "component_type_stock",
