@@ -547,6 +547,76 @@
 			]
 		},
 		{
+			"ID": "diff_pilotRonin",
+			"Name": "Ronin Prevalence",
+			"TelemetryEventName": "",
+			"UIOrder": 11,
+			"Tooltip": "This setting controls the prevalence of Ronin in the hiring halls. 100% Ronin stops the generation of random MechWarriors. Common makes nearly all hiring halls have a few Ronin. Vanilla is the regular setting, and Never means there are only randomly generated pilots. <color=#F79B26>This setting is intended for people who want to see more or less of the same pilots through multiple playthroughs.</color>",
+			"Enabled": true,
+			"Visible": true,
+			"Toggle": false,
+			"StartOnly": false,
+			"DefaultIndex": 5,
+			"Options": [
+				{
+					"ID": "diff_Ronin_only",
+					"Name": "100% Ronin",
+					"TelemetryEventDesc": "",
+					"DifficultyValue": 0.2,
+					"CareerScoreModifier": 0.2,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "Story",
+							"ConstantName": "DefaultRoninHiringChance",
+							"ConstantValue": "1.0"
+						}
+					]
+				},
+				{
+					"ID": "diff_Ronin_50",
+					"Name": "50% Common",
+					"TelemetryEventDesc": "",
+					"DifficultyValue": 0,
+					"CareerScoreModifier": 0,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "Story",
+							"ConstantName": "DefaultRoninHiringChance",
+							"ConstantValue": "0.5"
+						}
+					]
+				},
+				{
+					"ID": "diff_Ronin_20",
+					"Name": "20% Vanilla",
+					"TelemetryEventDesc": "",
+					"DifficultyValue": 0,
+					"CareerScoreModifier": 0,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "Story",
+							"ConstantName": "DefaultRoninHiringChance",
+							"ConstantValue": "0.2"
+						}
+					]
+				},
+				{
+					"ID": "diff_Ronin_never",
+					"Name": "0% Never",
+					"TelemetryEventDesc": "",
+					"DifficultyValue": 0.2,
+					"CareerScoreModifier": 0.2,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "Story",
+							"ConstantName": "DefaultRoninHiringChance",
+							"ConstantValue": "0.0"
+						}
+					]
+				}
+			]
+		},
+		{
 			"ID": "diff_advancedPilots",
 			"Name": "Advanced MechWarriors",
 			"TelemetryEventDesc": "advanced_mech_warriors",
