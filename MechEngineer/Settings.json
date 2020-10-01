@@ -80,7 +80,15 @@
 			"emod_leg_upper",
 			"emod_leg_lower",
 			"emod_leg_foot",
-			"Gear_Spikes"
+			"Gear_Spikes",
+			"Quad_Front_leg_hip",
+			"Quad_Front_leg_upper",
+			"Quad_Front_leg_lower",
+			"Quad_Front_leg_foot",
+			"Quad_Hind_leg_hip",
+			"Quad_Hind_leg_upper",
+			"Quad_Hind_leg_lower",
+			"Quad_Hind_leg_foot"
 		],
 		"GyroCategorizer": {
 			"Prefix": "Gear_Gyro_",
@@ -228,6 +236,33 @@
 					"FromIsMin": false
 				}
 			}
+		],
+		"MechLocationNamingTemplates" : [
+			{
+                "Tags" : [
+                    "QuadMech"
+                ],
+                "Template" : {
+                    "Names" : [
+                        {
+                            "location" : "LeftArm",
+                            "text" : "Front Left Leg"
+                        },
+                        {
+                            "location" : "RightArm",
+                            "text" : "Front Right Leg"
+                        },
+                        {
+                            "location" : "LeftLeg",
+                            "text" : "Hind Left Leg"
+                        },
+                        {
+                            "location" : "RightLeg",
+                            "text" : "Hind Right Leg"
+                        }
+                    ]
+                }
+            }
 		],
 		"ChassisDefInitialTonnage": true,
 		"ChassisDefInitialToTotalTonnageFactor": 0.1,
