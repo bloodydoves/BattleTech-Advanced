@@ -17,6 +17,9 @@
 	"Website": "https://www.nexusmods.com/battletech/mods/XXX",
 	"Settings": {
 		"debugLog": false,
+		"DeployManual": false,
+		"DeployMaxDistanceFromOriginal": 30,
+		"DeployMinDistanceFromEnemy": 300,
 		"fixWaterHeight": true,
 		"maxWaterSteppiness": 29,
 		"deepWaterSteepness": 41,
@@ -282,16 +285,22 @@
 		"MechBaySwitchIconVehicle": "vehicle",
 		"MechBaySwitchIconUp": "weapon_up",
 		"MechBaySwitchIconDown": "weapon_down",
+		"CanPilotVehicleTag": "pilot_vehicle_crew",
+		"CannotPilotMechTag": "pilot_nomech_crew",
 		"CountContractMaxUnits4AsUnlimited": true,
 		"ArgoBaysFix": 0,
 		"BaysCountExternalControl": false,
-		"CanPilotVehicleProbability": 0.5,
-		"CanPilotAlsoMechProbability": 0.5,
+		"CanPilotVehicleProbability": 0,
+		"CanPilotAlsoMechProbability": 0,
 		"LancesIcons": [ "one", "two", "three" ],
 		"ShowActiveAbilitiesIcon": "joystick",
 		"ShowPassiveAbilitiesIcon": "passive-ab",
 		"HideActiveAbilitiesIcon": "joystick",
 		"HidePassiveAbilitiesIcon": "passive-ab",
+	"PlayerControlConvoyTag": "convoy_player_control",
+		"ConvoyMaxDistFromOther": 200,
+		"ConvoyMaxDistFromPlayer": 400,
+		"ConvoyMaxDistFromRoute": 30,
 		"overallDeploySize": 6,
 		"Lances": [ 
 			{"size":6,"allow":5,"is_vehicle":false},
@@ -299,10 +308,16 @@
 		]
 	},
 	"Manifest": [
-		{ "Type": "DesignMaskDef", "Path": "designMasks" },
 		{ "Type": "AssetBundle", "Path": "assetbundles" },
+		{ "Type": "DesignMaskDef", "Path": "designMasks" },
 		{ "Type": "SVGAsset", "Path": "icons" },
-		{ "Id": "battletechstandartshader", "Type": "Prefab", "Path": "assets/shaderscarriers/battletechstandartshader.prefab", "AssetBundleName": "standart_shader" },
-		{ "Id": "fake_weapon_prefab", "Type": "Prefab", "Path": "assets/character/vehicle/prefabs/fake_weapon_prefab.prefab", "AssetBundleName": "fake_weapon_prefab" }
+		{ "Type": "MechDef", "Path": "mech" },
+		{ "Type": "ChassisDef", "Path": "chassis" },
+		{ "Type": "MovementCapabilitiesDef", "Path": "movedef" },
+		{ "Type": "PathingCapabilitiesDef", "Path": "pathingdef" },
+		{ "Type": "PilotDef", "Path": "pilot" },
+		{ "Type": "AbilityDef", "Path": "ability" },
+		{ "Id": "fake_weapon_prefab", "Type": "Prefab", "Path": "assets/character/vehicle/prefabs/fake_weapon_prefab.prefab", "AssetBundleName": "fake_weapon_prefab" },
+		{ "Id": "battletechstandartshader", "Type": "Prefab", "Path": "assets/shaderscarriers/battletechstandartshader.prefab", "AssetBundleName": "standart_shader" }
 	]
 }
