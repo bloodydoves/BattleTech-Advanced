@@ -1,12 +1,30 @@
 {
   "behaviorVariables": [
     {
-	    /* Minimum number of stealth pips to allow for an ECM
-		   ghosted mech to fire weapons */
-      "k" : "Int_MinimumECMGhostedPipsToFire",
-      "v" : {
-        "type" : "Int",
-        "intVal" : "2"
+      /* Percentage (0-100) of time to move towards priority
+         targets. */
+      "k": "Float_PriorityMovePercentage",
+      "v": {
+        "type": "Float",
+        "floatVal": 100
+      }
+    },
+    {
+      /* How fast (percentage of full speed, 0% = 0, 100% = 100.0) to
+         follow patrol routes. */
+      "k": "Float_PatrolRouteThrottlePercentage",
+      "v": {
+        "type": "Float",
+        "floatVal": 80
+      }
+    },
+    {
+      /* Minimum number of stealth pips to allow for an ECM
+         ghosted mech to fire weapons */
+      "k": "Int_MinimumECMGhostedPipsToFire",
+      "v": {
+        "type": "Int",
+        "IntVal": "2"
       }
     }
   ]

@@ -1,91 +1,92 @@
 {
   "behaviorVariables": [
     {
-	    /* Influence Factor Weight for preferring moving less. */
-      "k": "Float_PreferLowerMovementFactorWeight",
+      /* Influence Factor Weight for preferring higher
+         elevations. */
+      "k": "Float_PreferHigherPositionFactorWeight",
       "v": {
         "type": "Float",
-        "floatVal": -1.0
+        "floatVal": 0
       }
     },
     {
-	    /* Influence Factor Weight for preferring moving less WHEN
-	       SPRINTING. */
-      "k": "Float_SprintPreferLowerMovementFactorWeight",
-      "v": {
-        "type": "Float",
-        "floatVal": -1.0
-      }
-    },
-    {
-	    /* Influence Factor Weight to maximize expected damage to
-	       hostiles.
-	       Hostile Factor: 1.0 / 0.5 / 0.25 based on threat */
+      /* Influence Factor Weight to maximize expected damage to
+         hostiles.
+         Hostile Factor: 1.0 / 0.5 / 0.25 based on threat */
       "k": "Float_PreferHigherExpectedDamageToHostileFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.25
+      }
+    },
+    {
+      /* Influence Factor Weight to maximize expected damage to
+         hostiles WHEN SPRINTING.
+         Hostile Factor: 1.0 / 0.5 / 0.25 based on threat */
+      "k": "Float_SprintPreferHigherExpectedDamageToHostileFactorWeight",
       "v": {
         "type": "Float",
         "floatVal": 0.1
       }
     },
     {
-	    /* Influence Factor Weight to minimize expected damage
-	       from hostiles. */
+      /* Influence Factor Weight to minimize expected damage
+         from hostiles. */
       "k": "Float_PreferLowerExpectedDamageFromHostileFactorWeight",
       "v": {
         "type": "Float",
-        "floatVal": 0.8
+        "floatVal": 0.5
       }
     },
     {
-	    /* Optimal distance to nearest ally. (See
-	       PreferOptimalDistanceToAllyFactor.) */
-      "k": "Float_OptimalAllyDistance",
+      /* Influence Factor Weight to minimize expected damage
+         from hostiles WHEN SPRINTING. */
+      "k": "Float_SprintPreferLowerExpectedDamageFromHostileFactorWeight",
       "v": {
         "type": "Float",
-        "floatVal": 80
+        "floatVal": 0.4
       }
     },
     {
-            /* Optimal distance to nearest hostile. (See
-               Float_PreferOptimalDistanceToHostileFactorWeight.) */
+      /* Optimal distance to nearest hostile. (See
+         Float_PreferOptimalDistanceToHostileFactorWeight.) */
       "k": "Float_OptimalHostileDistance",
       "v": {
         "type": "Float",
-       "floatVal": 300
+        "floatVal": 300
       }
     },
     {
-	    /* Influence Factor Weight to prefer locations close to
-	       optimal distance to other allies. */
+      /* Influence Factor Weight to prefer locations close to
+         optimal distance to other allies. */
       "k": "Float_PreferOptimalDistanceToAllyFactorWeight",
       "v": {
         "type": "Float",
-        "floatVal": 2.0
+        "floatVal": 2
       }
     },
     {
-            /* Influence Factor Weight to prefer locations close to
-               optimal distance to other hostiles. */
+      /* Influence Factor Weight to prefer locations close to
+         optimal distance to other hostiles. */
       "k": "Float_PreferOptimalDistanceToHostileFactorWeight",
       "v": {
         "type": "Float",
-        "floatVal": 1.75
+        "floatVal": 1.5
       }
     },
     {
-	    /* When considering different kinds of attacks, multiply
-	       the shooting damage by this value to decide which
-	       attack to use. */
-      "k": "Float_ShootingDamageMultiplier",
+      /* Influence Factor Weight to prefer locations close to
+         optimal distance to other allies WHEN SPRINTING. */
+      "k": "Float_SprintPreferOptimalDistanceToAllyFactorWeight",
       "v": {
         "type": "Float",
-        "floatVal": 2.0
+        "floatVal": 0.3
       }
     },
     {
-	    /* When considering different kinds of attacks, multiply
-	       the melee damage by this value to decide which attack
-	       to use. */
+      /* When considering different kinds of attacks, multiply
+         the melee damage by this value to decide which attack
+         to use. */
       "k": "Float_MeleeDamageMultiplier",
       "v": {
         "type": "Float",
@@ -93,19 +94,64 @@
       }
     },
     {
-	    /* Influence Factor Weight to control the desire to be
-	       inside e.g. forests. */
+      /* Influence Factor Weight to control the desire to be
+         inside e.g. forests. */
       "k": "Float_PreferLessTargetableLocationFactorWeight",
       "v": {
         "type": "Float",
-        "floatVal": 0.5
+        "floatVal": 0.4
       }
     },
     {
-	    /* If a target is a melee revenge target, what additional
-	       damage multiplier to apply. The total multiplier is
-	       Float_MeleeDamageMultiplier +
-	       FloatMeleeRevengeBonus. */
+      /* Influence Factor Weight to control the desire to be
+         inside e.g. forests WHEN SPRINTING. */
+      "k": "Float_SprintPreferLessTargetableLocationFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.35
+      }
+    },
+    {
+      /* Influence Factor Weight to control the desire to be
+         inside water. */
+      "k": "Float_PreferHigherHeatSinkLocationsFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0
+      }
+    },
+    {
+      /* Influence Factor Weight to control the desire to be
+         inside water WHEN SPRINTING. */
+      "k": "Float_SprintPreferHigherHeatSinkLocationsFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0
+      }
+    },
+    {
+      /* Influence Factor Weight to control the desire to be in
+         locations with movement bonus. */
+      "k": "Float_PreferHigherMovementBonusLocationsFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.2
+      }
+    },
+    {
+      /* Influence Factor Weight to control the desire to be in
+         locations with movement bonus WHEN SPRINTING. */
+      "k": "Float_SprintPreferHigherMovementBonusLocationsFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.15
+      }
+    },
+    {
+      /* If a target is a melee revenge target, what additional
+         damage multiplier to apply. The total multiplier is
+         Float_MeleeDamageMultiplier +
+         FloatMeleeRevengeBonus. */
       "k": "Float_MeleeRevengeBonus",
       "v": {
         "type": "Float",
@@ -113,62 +159,81 @@
       }
     },
     {
-	    /* A weight for an influence factor to prefer to get
-	       inside melee range. Negative values will encourage
-	       units to get out of melee range. */
+      /* A weight for an influence factor to prefer to get
+         inside melee range. Negative values will encourage
+         units to get out of melee range. */
       "k": "Float_PreferInsideMeleeRangeFactorWeight",
       "v": {
         "type": "Float",
-        "floatVal": -1.0
+        "floatVal": -0.6
       }
     },
     {
-	    /* Influence Factor Weight to control the desire to be
-	       inside forests or other locations that grant guard. */
+      /* Influence Factor Weight to control the desire to be
+         inside forests or other locations that grant guard. */
       "k": "Float_PreferLocationsThatGrantGuardFactorWeight",
       "v": {
         "type": "Float",
-        "floatVal": 1.5
+        "floatVal": 0.8
       }
     },
     {
-	    /* Appetitive Influence Factor Weight to approach
-	       hostile's rear arc. */
+      /* Influence Factor Weight to control the desire to be
+         inside forests or other locations that grant guard WHEN
+         SPRINTING. */
+      "k": "Float_SprintPreferLocationsThatGrantGuardFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.55
+      }
+    },
+    {
+      /* Appetitive Influence Factor Weight to approach
+         hostile's rear arc. */
       "k": "Float_AppetitivePreferApproachingRearArcOfHostileFactorWeight",
       "v": {
         "type": "Float",
-        "floatVal": 0.1
+        "floatVal": 0.15
       }
     },
     {
-	    /* Appetitive Influence Factor Weight to approach
-	       hostile's rear arc WHEN SPRINTING. */
+      /* Appetitive Influence Factor Weight to approach
+         hostile's rear arc WHEN SPRINTING. */
       "k": "Float_SprintAppetitivePreferApproachingRearArcOfHostileFactorWeight",
       "v": {
         "type": "Float",
-        "floatVal": 0.0
+        "floatVal": 0.1
       }
     },
     {
-	    /* Appetitive Influence Factor Weight to approach ideal
-	       weapon range to hostile. */
+      /* Appetitive Influence Factor Weight to approach ideal
+         weapon range to hostile. */
       "k": "Float_AppetitivePreferIdealWeaponRangeToHostileFactorWeight",
       "v": {
         "type": "Float",
-        "floatVal": 0.1
+        "floatVal": 0.15
       }
     },
     {
-	    /* Influence Factor to prefer this lance to surround hostile units.*/
-      "k": "Float_PreferSurroundingHostileUnitsFactorWeight",
+      /* Appetitive Influence Factor Weight to approach ideal
+         weapon range to hostile WHEN SPRINTING. */
+      "k": "Float_SprintAppetitivePreferIdealWeaponRangeToHostileFactorWeight",
       "v": {
         "type": "Float",
         "floatVal": 0.1
       }
     },
     {
-	    /* Influence Factor to prefer this lance to surround
-	       hostile units WHEN SPRINTING.*/
+      /* Influence Factor to prefer this lance to surround hostile units.*/
+      "k": "Float_PreferSurroundingHostileUnitsFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.15
+      }
+    },
+    {
+      /* Influence Factor to prefer this lance to surround
+         hostile units WHEN SPRINTING.*/
       "k": "Float_SprintPreferSurroundingHostileUnitsFactorWeight",
       "v": {
         "type": "Float",
@@ -176,8 +241,33 @@
       }
     },
     {
-	    /* Fence radius (in meters) for
-	     * PreferStayInsideFenceFactor. */
+      /* Weight for an influence factor that seeks to stay
+         within a circular fence from the centerpoint of the
+         lance. Note - negative logic; this should use negative
+         numbers, as it's designed to discourage being outside
+         the radius and have no effect inside the fence. */
+      "k": "Float_PreferStayInsideFenceNegativeLogicFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": -4.5
+      }
+    },
+    {
+      /* Weight for an influence factor that seeks to stay
+         within a circular fence from the centerpoint of the
+         lance WHEN SPRINTING. Note - negative logic; this
+         should use negative numbers, as it's designed to
+         discourage being outside the radius and have no effect
+         inside the fence. */
+      "k": "Float_SprintPreferStayInsideFenceNegativeLogicFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": -3
+      }
+    },
+    {
+      /* Fence radius (in meters) for
+         PreferStayInsideFenceFactor. */
       "k": "Float_FenceRadius",
       "v": {
         "type": "Float",
@@ -185,66 +275,153 @@
       }
     },
     {
-	    /* Weight for an influence factor that seeks to stay
-	       within ECM range of friendlies */
-      "k": "Float_PreferFriendlyECMFields",
+      /* Description: Number of points of damage that a sensor
+         locking turn needs to do over a straight up shooting
+         turn before deciding to sensor lock. Positive is a
+         shooting bias, negative is a sensor lock bias.*/
+      "k": "Float_MinimumSensorLockQuality",
       "v": {
         "type": "Float",
-        "floatVal": 1.5
+        "floatVal": 35
       }
     },
     {
-	    /* Weight for an influence factor that seeks to stay
-	       within ECM range of friendlies WHEN SPRINTING */
-      "k": "Float_SprintPreferFriendlyECMFields",
+      /* Weight for an influence factor that seeks to maximize
+         ranged defense bonus (e.g. mineral fields). */
+      "k": "Float_PreferHigherRangedDefenseBonusLocationsFactorWeight",
       "v": {
         "type": "Float",
-        "floatVal": 0.5
+        "floatVal": 0.25
       }
     },
     {
-	    /* Weight for an influence factor that seeks to stay
-	       within range of hostile ECM fields */
-      "k": "Float_PreferHostileECMFields",
+      /* Weight for an influence factor that seeks to maximize
+	     ranged defense bonus (e.g. mineral fields) WHEN SPRINTING. */
+      "k": "Float_SprintPreferHigherRangedDefenseBonusLocationsFactorWeight",
       "v": {
         "type": "Float",
-        "floatVal": -0.5
+        "floatVal": 0.2
       }
     },
     {
-	    /* Weight for an influence factor that seeks to stay
-	       within range of hostile ECM fields WHEN SPRINTING */
-      "k": "Float_SprintPreferHostileECMFields",
-      "v": {
-        "type": "Float",
-        "floatVal": -0.1
-      }
-    },
-    {
-	    /* Minimum number of stealth pips to allow for an ECM
-		   ghosted mech to fire weapons */
-      "k" : "Int_MinimumECMGhostedPipsToFire",
-      "v" : {
-        "type" : "Int",
-        "intVal" : "2"
-      }
-    },
-    {
-	    /* Influence Factor Weight to prefer having LOS to
-	       fewest hostiles. Useful for defensive moves. */
-      "k": "Float_PreferLOSToFewestHostileFactorWeight",
+      /* Multiplier applied when considering the value of a
+         downed mech when calculating the centerpoint of the
+         lance fence. 1.0 would be no special consideration, 2.0
+         would make a downed mech as important as two other
+         units. Values less than one would give the lance a
+         tendency to abandon their wounded. */
+      "k": "Float_DownedMechFenceContributionMultiplier",
       "v": {
         "type": "Float",
         "floatVal": 1.75
       }
     },
     {
-	    /* Influence Factor Weight to prefer having LOS to fewest
-	       hostiles WHEN SPRINTING. Useful for defensive moves. */
-      "k": "Float_SprintPreferLOSToFewestHostileFactorWeight",
+      /* Weight for how much to prefer to be exposed to enemy
+         fire alone. Probably negative. */
+      "k": "Float_AlonePreferenceWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": -1.5
+      }
+    },
+    {
+      /* Weight for an influence factor that seeks to stay
+         within ECM range of friendlies */
+      "k": "Float_PreferFriendlyECMFields",
+      "v": {
+        "type": "Float",
+        "floatVal": 1
+      }
+    },
+    {
+      /* Weight for an influence factor that seeks to stay
+         within range of hostile ECM fields */
+      "k": "Float_PreferHostileECMFields",
+      "v": {
+        "type": "Float",
+        "floatVal": -1
+      }
+    },
+    {
+      /* Weight for an influence factor that seeks to stay
+         within range of hostile ECM fields WHEN SPRINTING */
+      "k": "Float_SprintPreferHostileECMFields",
+      "v": {
+        "type": "Float",
+        "floatVal": -1
+      }
+    },
+    {
+      /* Whether when enemy is ghosted, to use sprint or walk distance as marker
+         to calculate influence map positional factors.
+         Lerp is 0 - 1, Walking to Sprinting*/
+      "k": "Float_SignalInWeapRngWhenEnemyGhostedWithinMoveDistance",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.5
+      }
+    },
+    {
+      /* Influence Factor Weight for standing still when hostiles are in melee range. */
+      "k": "Float_PreferStationaryWhenHostilesInMeleeRangeFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": -1.5
+      }
+    },
+    {
+      /* Influence Factor Weight to prefer being far away from
+         closest hostile. Useful for defensive moves. */
+      "k" : "Float_PreferHigherDistanceFromClosestHostileFactorWeight",
+      "v" : {
+        "type" : "Float",
+        "floatVal" : 0.3
+      }
+    },
+    {
+      /* Influence Factor Weight to prefer being far away WHEN
+         SPRINTING from closest hostile. Useful for defensive moves. */
+      "k" : "Float_SprintPreferHigherDistanceFromClosestHostileFactorWeight",
+      "v" : {
+        "type" : "Float",
+        "floatVal" : 0.2
+      }
+    },
+    {
+      /* Influence Factor Weight to prefer having LOS to
+         fewest hostiles. Useful for defensive moves. */
+      "k": "Float_PreferLOSToFewestHostileFactorWeight",
       "v": {
         "type": "Float",
         "floatVal": 0.2
+      }
+    },
+    {
+      /* Influence Factor Weight to prefer having LOS to fewest
+         hostiles WHEN SPRINTING. Useful for defensive moves. */
+      "k": "Float_SprintPreferLOSToFewestHostileFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0.1
+      }
+    },
+    {
+      /* Influence Factor Weight to prefer having LOS to most
+         hostiles. */
+      "k": "Float_PreferLOSToMostHostilesFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0
+      }
+    },
+    {
+      /* Influence Factor Weight to prefer having LOS to most
+         hostiles WHEN SPRINTING. */
+      "k": "Float_SprintPreferLOSToMostHostilesFactorWeight",
+      "v": {
+        "type": "Float",
+        "floatVal": 0
       }
     }
   ]

@@ -2,7 +2,7 @@
     "Name": "CBTBehaviorsEnhanced",
     "Enabled": true,
 	"Hidden": true,
-    "Version": "0.5.13",
+    "Version": "0.5.26",
     "Description": "Provides TableTop like behaviors for heat, movement, and more",
     "Author": "FrostRaptor",
     "Website": "https://github.com/IceRaptor/CBTBehaviorsEnhanced/",
@@ -52,7 +52,7 @@
 			"AI" : {
                 "EvasionPipRemovedUtility" : 10.0,
                 "EvasionPipLostUtility" : 40.0,
-                "PilotInjuryMultiUtility" : 2.0,
+                "PilotInjuryMultiUtility" : 2.0
             },
 		
             "Charge" : {
@@ -110,9 +110,18 @@
                 "UnsteadyAttackerOnMiss" : false,
                 "UnsteadyTargetOnHit" : false
             },
+			
+			"Turrets" : {
+                "DefaultTonnage" : 100.0,
+                "LightTonnage" : 25.0,
+                "MediumTonnage" : 50.0,
+                "HeavyTonnage" : 75.0
+            },
 
             "AllowMeleeFromSprint" : true,
-            "ProneTargetAttackModifier" : -2
+            "ProneTargetAttackModifier" : -2,
+            "FilterCanUseInMeleeWeaponsByAttack" : true,
+            "WalkAttackAdditionalRange" : 18.0
         },
         
         "Move" : {

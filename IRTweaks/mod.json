@@ -2,7 +2,7 @@
 	"Name": "IRTweaks",
 	"Enabled": true,
 	"Hidden": true,
-	"Version": "0.7.3",
+	"Version": "0.7.6",
 	"Description": "Miscellaneous Tweaks and Fixes",
 	"Author": "IceRaptor",
 	"Website": "https://github.com/IceRaptor/IRTweaks",
@@ -28,7 +28,7 @@
 			"FlexibleSensorLock": false,
 			"MechbayLayout" : true,
 			"MultiTargetStat": true,
-			"PainTolerance": false,
+			"PainTolerance": true,
 			"PathfinderTeamFix": true,
 			"PreventHeadShots": false,
 			"RandomStartByDifficulty": true,
@@ -53,14 +53,13 @@
 				"FreeActionWithAbility": false
 			},
 			"PainTolerance": {
-				"ResistPerGuts": 10,
-				"PenaltyPerHeadDamage": 5,
-				"PenaltyPerAmmoExplosionRatio": 1,
-				"PenaltyPerHeatDamageInjuryRatio": 1,
-				"KnockdownDamage": 6,
-				"ShutdownDamage": 12,
-				"TorsoDestroyedDamage": 10,
-				"HeadHitArmorOnlyMulti": 0.5
+				"ResistPerGuts": 15,
+				"HeadDamageResistPenaltyPerArmorPoint": 3,
+				"HeadHitArmorOnlyResistPenaltyMulti": 0.35,
+				"AmmoExplosionResistPenaltyPerCapacityPercentile": 1,
+				"OverheatResistPenaltyPerHeatPercentile": 1,
+				"KnockdownResistPenalty": 6,
+				"SideLocationDestroyedResistPenalty": 10
 			},
 			"SpawnProtection": {
 				"ApplyGuard": true,

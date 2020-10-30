@@ -1,0 +1,42 @@
+{
+	"Description" : {
+		"Id" : "TraitDefMinRangeReduce90",
+		"Name" : "Reduced Min. Range",
+		"Details" : "PASSIVE: 'Mechs piloted by this MechWarrior have their minimum range accuracy penalty reduced by 6.",
+		"Icon" : "uixSvgIcon_ability_mastertactician"
+	},
+	"Type" : "MinimumRange",
+	"ShortDesc" : "+6 Accuracy In Min Range",
+    "DisplayParams" : "ShowInPilotToolTip",
+	"ActivationTime" : "Passive",
+	"EffectData" :
+	[
+		{
+			"durationData" :
+			{
+				"duration" : -1
+			},
+			"targetingData" : 
+			{
+				"effectTriggerType" : "OnActivation",
+				"effectTargetType" : "Creator"
+			},
+			"effectType" : "StatisticEffect",
+			"Description" :
+			{
+				"Id" : "TraitDefMinRangeAcc90",
+				"Name" : "Reduced Min. Range Penalty",
+				"Details" : "Minimum weapon ranges reduced by 45m",
+				"Icon" : "uixSvgIcon_ability_mastertactician"
+			},
+			"statisticData" : 
+			{
+				"targetCollection" : "Weapon",
+				"statName" : "CACMinRangeAccuracyMod",
+				"operation" : "Float_Add",
+				"modValue" : "-3.0",
+				"modType" : "System.Single"
+			}
+		}
+	]
+}

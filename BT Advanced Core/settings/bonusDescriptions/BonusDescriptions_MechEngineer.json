@@ -250,7 +250,7 @@
 			"Bonus": "Activatable",
 			"Short": "Activatable",
 			"Long": "Activatable",
-			"Full": "CTRL+Click on move button in mech HUD to activate this item"
+			"Full": "Click on the labeled button in the weapon panel to activate this equipment."
 		},
 		{
 			"Bonus": "ActivatableUses",
@@ -1581,7 +1581,7 @@
 			"Bonus": "InternalAmmo",
 			"Short": "Int.Ammo.",
 			"Long": "Internal Ammo",
-			"Full": "Weapon carries internal Ammo that will explode for {0} Damage per remaining Shot"
+			"Full": "Weapon carries {0} rounds of internal ammo."
 		},
 		{
 			"Bonus": "DakkaBoom",
@@ -1959,7 +1959,7 @@
 			"Bonus": "VSPL",
 			"Short": "VSPL",
 			"Long": "Variable Pulse Laser",
-			"Full": "Variable Speed Pulse Lasers have multiple Firing modes, lower Fire rates have Increased Damage and Accuracy"
+			"Full": "Variable Speed Pulse Lasers have multiple Firing ranges, closer ranges have increased damage and accuracy."
 		},
 		{
 			"Bonus": "Streak",
@@ -3103,9 +3103,9 @@
 		},
 		{
 			"Bonus": "RunSpeed",
-			"Short": "{0} SprintDist.",
-			"Long": "{0} Sprint Distance",
-			"Full": "{0} Sprinting Distance"
+			"Short": "{0} SprintMulti",
+			"Long": "{0} Sprint Multiplier",
+			"Full": "{0} Sprinting Multiplier"
 		},
 		{
 			"Bonus": "PPCACC",
@@ -3252,6 +3252,24 @@
 			"Full": "Scattergun Ammo - {0} Shots"
 		},
 		{
+			"Bonus": "GatlingAmmo",
+			"Short": "Gatling Ammo",
+			"Long": "Gatling Ammo",
+			"Full": "Gatling Gun Ammo- {0} Shots"
+		},
+		{
+			"Bonus": "TornadoAmmo",
+			"Short": "Tornado Ammo",
+			"Long": "Tornado Ammo",
+			"Full": "Tornado Ammo- {0} Shots"
+		},
+		{
+			"Bonus": "BombardAmmo",
+			"Short": "Bombard Ammo",
+			"Long": "Bombard Ammo",
+			"Full": "Bombard Cannon Ammo- {0} Shots"
+		},
+		{
 			"Bonus": "Scattergun",
 			"Short": "{0} Cluster",
 			"Long": "{0} Scattergun Cluster",
@@ -3268,6 +3286,18 @@
 			"Short": "Accurate {0}",
 			"Long": "Accurate {0}",
 			"Full": "The target is {0} easier to hit."
+		},
+		{
+			"Bonus": "EvasiveExponentOC",
+			"Short": "{0} E.Multiplier Overcharged",
+			"Long": "{0} Evasion Multiplier Overcharged",
+			"Full": "Damage increased based on your evasion on Overcharge mode. Base damage multiplied by: Number of Evasion Pips to the power of {0}"
+		},
+		{
+			"Bonus": "HeatPerChargeOC",
+			"Short": "{0} HeatPerCharge Overcharged",
+			"Long": "{0} HeatPerCharge Overcharged",
+			"Full": "Heat Change based on your evasion on Overcharge mode. Base Heat multiplied by: Number of Evasion Pips to the power of {0}"
 		},
 		{
 			"Bonus": "EvasiveExponent",
@@ -3339,13 +3369,13 @@
 			"Bonus": "SabotDmg",
 			"Short": "Sabot Damage",
 			"Long": "Sabot Damage",
-			"Full": "Sabot ammo does {0}% more damage per shot"
+			"Full": "Sabot ammo does {0} more damage per shot"
 		},
 		{
 			"Bonus": "SabotPercent",
 			"Short": "Sabot Modifier",
 			"Long": "Sabot Modifier",
-			"Full": "Sabot ammo does {0}% more damage to armor and less damage to structure"
+			"Full": "Sabot ammo does {0} more damage to armor and less damage to structure"
 		},
 		{
 			"Bonus": "JamExplode",
@@ -3526,6 +3556,12 @@
 			"Short": "MissileHealth",
 			"Long": "MissileHealth",
 			"Full": "Each missile in this launcher's SRM flight has {0} health."
+		},
+		{
+			"Bonus": "MMLATMHealth",
+			"Short": "MissileHealth",
+			"Long": "MissileHealth",
+			"Full": "Each missile in this launcher's ATM flight has {0} health."
 		},
 		{
 			"Bonus": "OLAMSAttacks",
@@ -3724,6 +3760,96 @@
 			"Short": "{0} Burst Variance",
 			"Long": "{0} Burst Variance",
 			"Full": "This weapon can fire between 1 and {0} bursts per attack, mode selectable."
+		},
+		{
+			"Bonus": "LocationAccuracy",
+			"Short": "{0} Acc",
+			"Long": "{0} Accuracy",
+			"Full": "{0} Accuracy with ranged weapons in this location"
+		},
+		{
+			"Bonus": "NoFireInMelee",
+			"Short": "No Fire In Melee",
+			"Long": "No Fire In Melee",
+			"Full": "This weapon does not fire in melee, due to either minumum range or AoE damage."
+		},
+		{
+			"Bonus": "CostPerShot",
+			"Short": "{0} Cost Per Ammo",
+			"Long": "{0} Cost Per Ammo",
+			"Full": "This ammo costs {0} c-bills per ammunition round used in a mission."
+		},
+		{
+			"Bonus": "ECMStacking",
+			"Short": "ECM Stacks",
+			"Long": "ECM Stacks",
+			"Full": "This ECM stacks with other sources instead of overriding them."
+		},
+		{
+			"Bonus": "SensorLockImmune",
+			"Short": "Sensor Lock Immunity",
+			"Long": "Sensor Lock Immunity",
+			"Full": "This equipment provides the carrying unit with immunity to sensor locks."
+		},
+		{
+			"Bonus": "DEPRECIATED",
+			"Short": "DEPRECIATED",
+			"Long": "DEPRECIATED",
+			"Full": "This equipment is depreciated and will not function. Remove it from your mechs and sell it at first opportunity."
+		},
+		{
+			"Bonus": "vMRM",
+			"Short": "Variable MRM",
+			"Long": "Variable MRM",
+			"Full": "Variable MRMs have 4 fire modes and let the user dial between them as desired."
+		},
+		{
+			"Bonus": "vMRMBase",
+			"Short": "Variable MRM Base Mode",
+			"Long": "Variable MRM Base Mode",
+			"Full": "Variable MRM's base mode is the same as a standard MRM: a balance between accuracy, heat, and damage. The base mode has the same accuracy penalty as normal MRMs."
+		},
+		{
+			"Bonus": "vMRMDmg",
+			"Short": "Variable MRM Damage Mode",
+			"Long": "Variable MRM Base Mode",
+			"Full": "Variable MRM's damage mode increases the damage per missile at the cost of generating much more heat and being even less accurate."
+		},
+		{
+			"Bonus": "vMRMAcc",
+			"Short": "Variable MRM Accuracy Mode",
+			"Long": "Variable MRM Accuracy Mode",
+			"Full": "Variable MRM's accuracy mode increases the weapon's accuracy significantly but reduces the damage per missile and increases the heat generated."
+		},
+		{
+			"Bonus": "vMRMHeat",
+			"Short": "Variable MRM Heat Mode",
+			"Long": "Variable MRM Heat Mode",
+			"Full": "Variable MRM's heat mode decreases the heat generated by firing the system but also decreases the accuracy and damage dealt."
+		},
+		{
+			"Bonus": "ATSTargeting",
+			"Short": "ATS Targeting Buff",
+			"Long": "ATS Targeting Buff",
+			"Full": "The ATS provides allies in a 150 meter radius with {0} on their attacks."
+		},
+		{
+			"Bonus": "ATSSelf",
+			"Short": "ATS Self Targeting Penalty",
+			"Long": "ATS Self Targeting Penalty",
+			"Full": "The ATS provides the carrying unit with a {0} on its attacks."
+		},
+		{
+			"Bonus": "StealthRadius",
+			"Short": "Stealth Field Radius",
+			"Long": "Stealth Field Radius",
+			"Full": "The Stealth Field has a radius of {0} meters around the carrying unit."
+		},
+		{
+			"Bonus": "StealthEffect",
+			"Short": "Stealth Field Effect",
+			"Long": "Stealth Field Effect",
+			"Full": "The Stealth Field makes it {0} harder for enemies to spot this unit either on sensor or directly."
 		}
 	]
 }
