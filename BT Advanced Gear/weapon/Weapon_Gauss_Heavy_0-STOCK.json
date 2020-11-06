@@ -14,7 +14,7 @@
 		},
 		"BonusDescriptions": {
 			"Bonuses": [
-				"DmgFallOff: 40%",
+				"DmgFallOff: 50%",
 				"WpnRecoil: 3",
 				"NoFireInMelee",
 				"IsHeavyGauss",
@@ -26,7 +26,7 @@
 	"Category": "Ballistic",
 	"Type": "Gauss",
 	"WeaponSubType": "Gauss",
-	"MinRange": 60,
+	"MinRange": 120,
 	"MaxRange": 780,
 	"RangeSplit": [
 		180,
@@ -51,6 +51,11 @@
 	"ProjectilesPerShot": 1,
 	"AttackRecoil": 4,
 	"Instability": 40,
+	"DistantVariance": 0.5,
+	"DamageFalloffStartDistance": 200,
+	"DamageFalloffEndDistance": 600,
+	"DistantVarianceReversed": false,
+	"RangedDmgFalloffType": "Linear",
 	"WeaponEffectID": "WeaponEffect-Weapon_GaussRifle",
 	"Description": {
 		"Cost": 1250000,
@@ -64,7 +69,7 @@
 		"Details": "A Massively oversized variant of the Gauss Rifle, this weapon trades its immense weight and slightly shorter range for significantly increased damage. \n\n <b><color=#ffcc00>Uses Heavy Gauss Ammo.</color></b> \n\n <b><color=#099ff2>VOLATILE!</color></b>",
 		"Icon": "uixSvgIcon_weapon_Ballistic"
 	},
-	"BonusValueA": "Damage Falloff",
+	"BonusValueA": "",
 	"BonusValueB": "",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",
@@ -79,7 +84,6 @@
 	"ComponentTags": {
 		"items": [
 			"component_type_stock",
-			"WR-variance_by_distance-40",
 			"range_standard"
 		],
 		"tagSetSourceFile": ""
