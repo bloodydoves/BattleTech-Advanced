@@ -11,10 +11,10 @@
     "Purchasable": true,
     "Manufacturer": "",
     "Model": "",
-    "UIName": "Primitive Toro",
-    "Id": "chassisdef_toro_TR-A-1",
-    "Name": "Primitive Toro",
-    "Details": "The original prototype was closer to a variant of the primitive Firebee, developed in 2481. It had two SRM-2s which shared a ton of ammunition and a Large Laser. Though it could only manage 64 km/h, the A-1 had more armor protection than the Firebee, ten and a half tons of Primitive Armor.",
+    "UIName": "Toro",
+    "Id": "chassisdef_toro_TR-A-8",
+    "Name": "Toro",
+    "Details": "In the 3060s, as technology proliferated throughout the Inner Sphere once again, the Taurian Concordat went back to its first battlemech, the Toro, and decided to upgrade it for the times. Using the best tech available to the Concordat the Toro was brought up to modern spec. Armed with a more focused direct-fire loadout, the Toro TR-A-8 carries an ER PPC and twin MRM-10s. An XL Engine provides the free tonnage for the heavier MRMs while 11 double heat sinks keep it all frosty. Two tons of CASE protected ammo fuels the guns.",
     "Icon": "uixTxrIcon_toro"
   },
   "MovementCapDefID": "movedef_toro_TR-A-6",
@@ -70,6 +70,10 @@
         {
           "WeaponMount": "Energy",
           "Omni": false
+        },
+		{
+          "WeaponMount": "Energy",
+          "Omni": false
         }
       ],
       "Tonnage": 0,
@@ -95,7 +99,10 @@
     {
       "Location": "CenterTorso",
       "Hardpoints": [
-        
+        {
+          "WeaponMount": "Energy",
+          "Omni": false
+        }
       ],
       "Tonnage": 0,
       "InventorySlots": 16,
@@ -106,7 +113,10 @@
     {
       "Location": "RightTorso",
       "Hardpoints": [
-		
+		{
+          "WeaponMount": "Missile",
+          "Omni": false
+        }
       ],
       "Tonnage": 0,
       "InventorySlots": 12,
@@ -117,10 +127,7 @@
     {
       "Location": "RightArm",
       "Hardpoints": [
-		{
-          "WeaponMount": "Missile",
-          "Omni": false
-        }
+        
       ],
       "Tonnage": 0,
       "InventorySlots": 12,
@@ -195,7 +202,7 @@
       "z": 0.5
     }
   ],
-  "VariantName": "TR-A-1",
+  "VariantName": "TR-A-8",
   "ChassisTags": {
     "items": [
 
@@ -203,13 +210,13 @@
     "tagSetSourceFile": ""
   },
   "StockRole": "Light Fire Support",
-  "YangsThoughts": "The original prototype was closer to a variant of the primitive Firebee, developed in 2481. It had two SRM-2s which shared a ton of ammunition and a Large Laser. Though it could only manage 64 km/h, the A-1 had more armor protection than the Firebee, ten and a half tons of Primitive Armor.",
+  "YangsThoughts": "In the 3060s, as technology proliferated throughout the Inner Sphere once again, the Taurian Concordat went back to its first battlemech, the Toro, and decided to upgrade it for the times. Using the best tech available to the Concordat the Toro was brought up to modern spec. Armed with a more focused direct-fire loadout, the Toro TR-A-8 carries an ER PPC and twin MRM-10s. An XL Engine provides the free tonnage for the heavier MRMs while 11 double heat sinks keep it all frosty. Two tons of CASE protected ammo fuels the guns.",
   "FixedEquipment" : [
         {
-            "MountedLocation" : "CenterTorso",
-            "ComponentDefID" : "emod_engineslots_Primitive_center",
+            "MountedLocation" : "Head",
+            "ComponentDefID" : "Gear_Quirk_MultiTrac_Toro",
             "SimGameUID" : "",
-            "ComponentDefType" : "HeatSink",
+            "ComponentDefType" : "Upgrade",
             "HardpointSlot" : -1,
             "IsFixed" : true,
             "GUID" : null,
@@ -219,7 +226,7 @@
         },
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "Gear_Quirk_PrimitiveRugged_Toro",
+			"ComponentDefID": "emod_structureslots_standard",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
@@ -228,18 +235,6 @@
 			"DamageLevel": "Functional",
 			"prefabName": null,
 			"hasPrefabName": false
-		},
-		{
-            "MountedLocation" : "Head",
-            "ComponentDefID" : "Gear_Cockpit_Primitive",
-            "SimGameUID" : "",
-            "ComponentDefType" : "Upgrade",
-            "HardpointSlot" : -1,
-            "IsFixed" : true,
-            "GUID" : null,
-            "DamageLevel" : "Functional",
-            "prefabName" : null,
-            "hasPrefabName" : false
-        }
+		}
     ]
 }
