@@ -1,0 +1,97 @@
+{
+	"Description" : {
+		"Id" : "AbilityDefFireAndSteel",
+		"Name" : "Fire & Steel",
+		"Details" : "PASSIVE: Victoria Espinosa's laser attacks deal structure damage and all attacks impair enemy accuracy.",
+		"Icon" : "uixSvgIcon_statusOnFire"
+	},
+	"Type" : "Command",
+	"ShortDesc" : "Hits Ruin Aim",
+    "DisplayParams" : "NeverShow",
+	"ActivationTime" : "Passive",
+	"EffectData" :
+	[
+		{
+            "Description" : {
+                "Id" : "StatusEffect-Victoria-Floatie",
+                "Name" : "FIRE & STEEL!",
+                "Details" : "FIRE & STEEL!",
+                "Icon" : "uixSvgIcon_statusOnFire"
+            },
+            "effectType" : "FloatieEffect",
+            "nature" : "Buff",
+            "durationData" : {
+                "duration" : 1,
+                "stackLimit" : 0,
+                "triggerLimit" : 1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "OnWeaponFire",
+                "effectTargetType" : "Creator",
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : false,
+                "hideApplicationFloatie" : true
+            },
+            "floatieData" : {
+                "targetCollection" : "NotSet"
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "StatusEffect-Laser-StructureDamage",
+                "Name" : "STRUCTURE DAMAGE",
+                "Details" : "Lasers pierce armor and damage structure directly.",
+                "Icon" : "UixSvgIcon_specialEquip_System"
+            },
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "effectTargetType" : "Creator",
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : false
+            },
+            "effectType" : "StatisticEffect",
+            "nature" : "Buff",
+            "statisticData" : {
+                "statName" : "StructureDamagePerShot",
+                "operation" : "Float_Add",
+                "modValue" : "3.0",
+                "modType" : "System.Single",
+                "targetCollection" : "Weapon",
+                "targetWeaponCategory" : "Energy",
+                "targetWeaponType" : "Laser"
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "StatusEffect-Weapon-AimReduction",
+                "Name" : "AIM REDUCTION",
+                "Details" : "Weapon attacks impair enemy targeting after being hit.",
+                "Icon" : "UixSvgIcon_specialEquip_System"
+            },
+            "durationData" : {
+                "duration" : 2,
+                "stackLimit" : 2,
+				"ticksOnActivations": true,
+                "useActivationsOfTarget": true
+            },
+            "targetingData" : {
+                "effectTriggerType" : "OnHit",
+                "effectTargetType" : "NotSet",
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : false
+            },
+            "effectType" : "StatisticEffect",
+            "nature" : "Buff",
+            "statisticData" : {
+                "statName": "AccuracyModifier",
+                "operation": "Float_Add",
+                "modValue": "3.0",
+                "modType": "System.Single"
+            }
+        }
+	]
+}

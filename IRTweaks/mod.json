@@ -2,7 +2,7 @@
 	"Name": "IRTweaks",
 	"Enabled": true,
 	"Hidden": true,
-	"Version": "0.7.6",
+	"Version": "0.8.0",
 	"Description": "Miscellaneous Tweaks and Fixes",
 	"Author": "IceRaptor",
 	"Website": "https://github.com/IceRaptor/IRTweaks",
@@ -23,6 +23,7 @@
 			"CombatLog": false,
 			"DisableCampaign": true,
 			"DisableCombatSaves": true,
+			"DisableCombatRestarts": false,
 			"DisableMPHashCalculation" : true,
 			"ExtendedStats": false,
 			"FlexibleSensorLock": false,
@@ -49,13 +50,20 @@
 			"MultiTargetId": "AbilityDefG5"
 		},
 		"Combat": {
+			"CalledShot": {
+				"DisableAllLocations": true,
+				"DisableHeadshots": true,
+				"EnableTacticsModifier": true,
+				"BaseModifier": -4,
+				"PilotTags": {}
+			},
 			"FlexibleSensorLock": {
 				"FreeActionWithAbility": false
 			},
 			"PainTolerance": {
 				"ResistPerGuts": 15,
-				"HeadDamageResistPenaltyPerArmorPoint": 3,
-				"HeadHitArmorOnlyResistPenaltyMulti": 0.35,
+				"HeadDamageResistPenaltyPerArmorPoint": 2,
+				"HeadHitArmorOnlyResistPenaltyMulti": 0.3,
 				"AmmoExplosionResistPenaltyPerCapacityPercentile": 1,
 				"OverheatResistPenaltyPerHeatPercentile": 1,
 				"KnockdownResistPenalty": 6,
