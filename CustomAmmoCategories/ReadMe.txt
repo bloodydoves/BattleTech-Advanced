@@ -37,6 +37,7 @@ CACIncomingStabilityMult - float - multipicator for all incoming stability (weap
 
 {
 "debugLog":true, - enable debug log 
+"ShowEvasiveAsNumber": true, - if true near evasive pips bar its amount will be showed as number
 "ResetHeatSinkMessageTemplate":"USED HEAT SINKS:{0}=>{1}", - template for reset used heatsinks message
 "ApplyHeatSinkMessageTemplate":"APPLY HEAT SINKS:{0}=>{1} HCAP:{1} USED:{2}=>{3}", - template for allied heatsinks message
 "ApplyHeatSinkActorStat":"CACOverrallHeatSinked", - actor's stat name for overall heat sinked during battle
@@ -517,9 +518,9 @@ new fields
   "AOECapable" : false, - if true weapon will included in AOE damage calculations. If true set in weapon definition 
                             all shoots will have AoE effect (even for energy weapon). If true, it can't be overridden by ammo.
   "AOERange": 100, - Area of effect range. If AOECapable in weapon is set to true this value will be used. If AOECapable is true, it can't be overridden by ammo.
-  "AOEDamage": 0 - AoE damage. 
-  "AOEHeatDamage": 0 - AoE heat. 
-  "AOEInstability": 0 - instability AoE damage 
+  "AOEDamage": 0 - AoE damage. Same rules as for AOERange
+  "AOEHeatDamage": 0 - AoE heat. Same rules as for AOERange 
+  "AOEInstability": 0 - instability AoE damage. Same rules as for AOERange 
   "SpreadRange": 0, - Area of projectiles spread effect. If > 0 projectiles will include in spread calculations. Per weapon, ammo, mode values are additive.
                          if used for missiles, and target have AMS it will fire no matter if it is not advanced and target is not primary.
   "IFFDef" : "IFFComponentDefId", if not empty and target have component with such defId it will exclude form AoE and spread targets list. 
@@ -1144,6 +1145,12 @@ Ammo definition
         }
     ]
 }
+
+Note:
+ MinMissRadius,MaxMissRadius,AMSDamage,MissileHealth have special processing
+ For this values weapon have statistic values "CAC_<name>" and "CAC_<name>_Mod" (eg CAC_MinMissRadius and CAC_MinMissRadius_Mod etc)
+ Effective value formula value = (<value from ammo> + <value from mode> + <CAC_<name> statistic value>) * (<CAC_MinMissRadius_Mod statistic value>)
+ For CAC_<name> default value is from definition, for CAC_<name>_Mod is 1.0
 
 Note on damage modifiers
 you can register your own modifier via API
