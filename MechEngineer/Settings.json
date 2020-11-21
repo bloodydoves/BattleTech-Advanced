@@ -1,36 +1,12 @@
 {
-	"MechLabGeneralSlots": 0,
-	"EngineMissingFallbackHeatSinkCapacity": 0,
-	"MechLabScale": 0.85,
-	"MechLabPositionY": 40,
-	"AutoFixChassisDefMaxJumpjets": false,
-	"AutoFixUpgradeDefSkip": [
-		"Gear_Cockpit_SLDF_Custom",
-		"Gear_Cockpit_Generic_Small",
-		"Gear_Gyro_Generic_Standard",
-		"emod_arm_part_shoulder",
-		"emod_arm_part_upper",
-		"emod_arm_part_lower",
-		"emod_arm_part_hand",
-		"emod_leg_hip",
-		"emod_leg_upper",
-		"emod_leg_lower",
-		"emod_leg_foot"
-	],
+	"GeneratedSettingsFilesReadonlyDescription": "If true, generated last and default settings files are set to readonly, to indicate that those are not intended to be edited.",
+	"GeneratedSettingsFilesReadonly": false,
 	"ArmActuator": {
 		"DescriptionTemplate": "<color=#53ff1a><b>Arm Actuator Limit</b>: <b>{0}</b> on left and <b>{1}</b> on right</color>\r\n",
 		"CustomDescriptionTemplate": "<color=#00cc44><b>Arm Actuator Limit</b>: <b>{0}</b></color>\r\n"
 	},
 	"ArmorStructureRatio": {
-		"SkipMechDefs": [],
 		"Enabled": false
-	},
-	"AutoFixMechDefSkip": [
-		"mechdef_urbanmech_UM-R50"
-	],
-	"OverrideTonnage": {
-		"FractionalAccountingPrecision": 0.5,
-		"Enabled": true
 	},
 	"ChassisDefInitialToTotalTonnageFactor": 0,
 	"AutoFixGyroCategorizer": null,
@@ -52,17 +28,79 @@
 	"AutoFixChassisDefSlotsChanges": null,
 	"ArmorStructureRatioEnforcement": false,
 	"AutoFixer": {
+		"Enabled": true,
+		"MechTagsAutoFixEnabled": [],
 		"MechDefSkip": [
-			"mechdef_urbanmech_UM-R50"
+			"mechdef_urbanmech_UM-R50",
+			"mechdef_panther_TARGETDUMMY",
+			"mechdef_centurion_TARGETDUMMY"
 		],
 		"ChassisDefSkip": [
-			"chassisdef_urbanmech_UM-R50"
+			"chassisdef_urbanmech_UM-R50",
+			"chassisdef_panther_TARGETDUMMY",
+			"chassisdef_centurion_TARGETDUMMY",
+			"chassisdef_urbanmech_TARGETDUMMY"
 		],
 		"MechDefAutoFixAgainstMaxFreeTonnage": [],
 		"MechDefEngine": true,
-		"MechDefCoolingDef": "emod_kit_shs",
 		"MechDefHeatBlockDef": "emod_engine_cooling",
 		"MechDefCoreDummy": "emod_engine_dummy",
+		"MechLocationNamingTemplates": [
+			{
+				"Tags": [
+					"fake_vehicle_chassis"
+				],
+				"Template": {
+					"Names": [
+						{
+							"location": "LeftArm",
+							"text": "FRONT"
+						},
+						{
+							"location": "RightArm",
+							"text": "REAR"
+						},
+						{
+							"location": "LeftLeg",
+							"text": "LEFT SIDE"
+						},
+						{
+							"location": "RightLeg",
+							"text": "RIGHT SIDE"
+						},
+						{
+							"location": "Head",
+							"text": "TURRET"
+						}
+					]
+				}
+			},
+			{
+				"Tags": [
+					"QuadMech"
+				],
+				"Template": {
+					"Names": [
+						{
+							"location": "LeftArm",
+							"text": "Front Left Leg"
+						},
+						{
+							"location": "RightArm",
+							"text": "Front Right Leg"
+						},
+						{
+							"location": "LeftLeg",
+							"text": "Hind Left Leg"
+						},
+						{
+							"location": "RightLeg",
+							"text": "Hind Right Leg"
+						}
+					]
+				}
+			}
+		],
 		"UpgradeDefSkip": [
 			"Gear_Cockpit_SLDF_Custom",
 			"Gear_Cockpit_Generic_Small",
@@ -237,38 +275,24 @@
 				}
 			}
 		],
-		"MechLocationNamingTemplates" : [
-			{
-                "Tags" : [
-                    "QuadMech"
-                ],
-                "Template" : {
-                    "Names" : [
-                        {
-                            "location" : "LeftArm",
-                            "text" : "Front Left Leg"
-                        },
-                        {
-                            "location" : "RightArm",
-                            "text" : "Front Right Leg"
-                        },
-                        {
-                            "location" : "LeftLeg",
-                            "text" : "Hind Left Leg"
-                        },
-                        {
-                            "location" : "RightLeg",
-                            "text" : "Hind Right Leg"
-                        }
-                    ]
-                }
-            }
-		],
 		"ChassisDefInitialTonnage": true,
 		"ChassisDefInitialToTotalTonnageFactor": 0.1,
 		"ChassisDefMaxJumpjets": false,
 		"ChassisDefMaxJumpjetsCount": 12,
 		"ChassisDefMaxJumpjetsRating": 400,
+		"AutoFixWeaponDefSplitting": true,
+		"AutoFixWeaponDefSplittingLargerThan": 7,
+		"AutoFixWeaponDefSplittingFixedSize": 7,
+		"AutoFixWeaponDefSplittingDynamicSlotTemplate": {
+			"ReservedSlots": 0,
+			"InnerAdjacentOnly": true,
+			"ShowIcon": false,
+			"ShowFixedEquipmentOverlay": true,
+			"NameText": "",
+			"BonusAText": "",
+			"BonusBText": "",
+			"BackgroundColor": null
+		},
 		"AutoFixWeaponDefSlotsChanges": [
 			{
 				"Type": "AC5",
@@ -318,16 +342,21 @@
 					"FromIsMin": false
 				}
 			}
-		],
-		"Enabled": true
+		]
+	},
+	"CriticalEffects": {
+		"Enabled": true,
+		"DefaultMaxCritsComponentTypes": [
+			"Weapon",
+			"JumpJet",
+			"Upgrade"
+		]
 	},
 	"Engine": {
 		"Enabled": true,
 		"EnabledDescription": "Provides engines that can be installed on mechs similar to how CBT works.",
 		"MovementPointDistanceMultiplierDescription": "The distance of a TT movement point, 24 is vanilla CombatGameConstants.ExperimentalGridDistance .",
-		"JumpJetMovementPointDistanceMultiplierDescription": "The distance of a TT movement point when calculating jump distances, if undefined falls back to MovementPointDistanceMultiplier.",
 		"MinimJumpHeatDescription": "Minimum heat when doing a jump, even if only one jump jet exists and only when jumping one hex.",
-		"AutoConvertJumpCapacityInDefToStatDescription": "All JumpCapacity values in JumpJetDefs will be auto-converted to the JumpCapacity statistic.",
 		"JumpJetDefaultJumpHeatDescription": "The heat the jump jet produces when fully* used (* jumping below max distance reduces produced heat). Can be adjusted using the JumpHeat statistic.",
 		"RunMultiplierDescription": "How much faster running is than walking.",
 		"EngineRatingForChassisMovementStatDescription": "The engine rating to use when evaluating the movement stat of a mech.",
@@ -339,19 +368,21 @@
 		"EnforceRulesForAdditionalInternalHeatSinksDescription": "Can't have those juicy ++ cooling systems with smaller fusion cores than the rules allow it.",
 		"AllowMixingHeatSinkTypes": false,
 		"AllowMixingHeatSinkTypesDescription": "Allow heat sinks patchwork.",
-		"DefaultEngineHeatSinkId": "Gear_HeatSink_Generic_Standard",
-		"DefaultEngineHeatSinkIdDescription": "Default heat sink type for engines without a kit.",
-		"EngineMissingFallbackHeatSinkCapacity": 30,
+		"EngineMissingFallbackHeatSinkCapacity": 0,
 		"EngineMissingFallbackHeatSinkCapacityDescription": "Heat sink capacity if no engine is detected.",
+		"AdditionalWalkSpeed": 24,
+		"AdditionalRunSpeed": 60,
 		"MovementPointDistanceMultiplier": 28,
-		"JumpJetMovementPointDistanceMultiplier": null,
 		"MinimJumpHeat": 9,
-		"AutoConvertJumpCapacityInDefToStat": true,
 		"JumpJetDefaultJumpHeat": 3,
 		"RunMultiplier": 1.5,
 		"EngineRatingForChassisMovementStat": 250,
 		"LimitEngineCoresToTonnage": true,
 		"IgnoreLimitEngineChassisTag": "IgnoreEngineLimit"
+	},
+	"Globals": {
+		"Enabled": true,
+		"EnabledDescription": "Allows tooltips and other features to access the current mech from context."
 	},
 	"HardpointFix": {
 		"Enabled": true,
@@ -847,12 +878,77 @@
 			}
 		]
 	},
+	"HeatSinkCapacityStat": {
+		"Enabled": true,
+		"EnabledDescription": "Required by the engine feature to work. Disabled the mech.GetHeatSinkDissipation method."
+	},
 	"MechLabSlots": {
+		"MechLabArmTopPadding": 120,
+		"MechLabViewMechAnchorY": -20,
+		"MechLabGeneralSlots": 3,
+		"MechLabGeneralWidgetLabel": "General",
+		"Enabled": true,
 		"HideHelpButton": true,
 		"HideECMButton": true
 	},
 	"OrderedStatusEffects": {
-		"Enabled": false
+		"Enabled": true,
+		"OtherStatisticsRequired": null,
+		"FilterStatistics": [
+			"HeatSinkCapacity",
+			"CBTBE_Charge_Attack_Mod",
+			"CBTBE_Charge_Attacker_Damage_Mod",
+			"CBTBE_Charge_Attacker_Damage_Multi",
+			"CBTBE_Charge_Attacker_Instability_Mod",
+			"CBTBE_Charge_Attacker_Instability_Multi",
+			"CBTBE_Charge_Target_Damage_Mod",
+			"CBTBE_Charge_Target_Damage_Multi",
+			"CBTBE_Charge_Target_Instability_Mod",
+			"CBTBE_Charge_Target_Instability_Multi",
+			"CBTBE_DFA_Attack_Mod",
+			"CBTBE_DFA_Attacker_Damage_Mod",
+			"CBTBE_DFA_Attacker_Damage_Multi",
+			"CBTBE_DFA_Attacker_Instability_Mod",
+			"CBTBE_DFA_Attacker_Instability_Multi",
+			"CBTBE_DFA_Target_Damage_Mod",
+			"CBTBE_DFA_Target_Damage_Multi",
+			"CBTBE_DFA_Target_Instability_Mod",
+			"CBTBE_DFA_Target_Instability_Multi",
+			"CBTBE_Kick_Attack_Mod",
+			"CBTBE_Kick_Extra_Hits_Count",
+			"CBTBE_Kick_Target_Damage_Mod",
+			"CBTBE_Kick_Target_Damage_Multi",
+			"CBTBE_Kick_Target_Instability_Mod",
+			"CBTBE_Kick_Target_Instability_Multi",
+			"CBTBE_Punch_Attack_Mod",
+			"CBTBE_Punch_Extra_Hits_Count",
+			"CBTBE_Punch_Target_Damage_Per_Attacker_Ton",
+			"CBTBE_Punch_Target_Instability_Per_Attacker_Ton",
+			"CBTBE_Punch_Target_Damage_Mod",
+			"CBTBE_Punch_Target_Damage_Multi",
+			"CBTBE_Punch_Target_Instability_Mod",
+			"CBTBE_Punch_Target_Instability_Multi",
+			"CBTBE_Punch_Is_Physical_Weapon",
+			"CBTBE_Physical_Weapon_Location_Table",
+			"CBTBE_Physical_Weapon_Attack_Mod",
+			"CBTBE_Physical_Weapon_Extra_Hits_Count",
+			"CBTBE_Physical_Weapon_Unsteady_Attacker_On_Hit",
+			"CBTBE_Physical_Weapon_Unsteady_Attacker_On_Miss",
+			"CBTBE_Physical_Weapon_Unsteady_Target_On_Hit",
+			"CBTBE_Physical_Weapon_Target_Damage_Per_Attacker_Ton",
+			"CBTBE_Physical_Weapon_Target_Damage_Mod",
+			"CBTBE_Physical_Weapon_Target_Damage_Multi",
+			"CBTBE_Physical_Weapon_Target_Instability_Per_Attacker_Ton",
+			"CBTBE_Physical_Weapon_Target_Instability_Mod",
+			"CBTBE_Physical_Weapon_Target_Instability_Multi"
+		]
+	},
+	"OverrideDescriptions": {
+		"Enabled": true,
+		"EnabledDescription": "Allows other features to override tooltips and descriptions, also provides bonus description management.",
+		"DescriptionIdentifier": "Bonuses",
+		"BonusDescriptionsDescriptionTemplate": "Traits:<b><color=#F79B26FF>\r\n{{elements}}</color></b>\r\n",
+		"BonusDescriptionsElementTemplate": " <indent=10%><line-indent=-5%><line-height=65%>{{element}}</line-height></line-indent></indent>\r\n"
 	},
 	"OverrideStatTooltips": {
 		"Enabled": true,
