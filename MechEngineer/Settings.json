@@ -161,7 +161,7 @@
 			"AllowedLocations": "Legs",
 			"ComponentType": "Upgrade",
 			"CategoryId": "LegFootActuator",
-			"AutoAddCategoryIdIfMissing": true
+			"AutoAddCategoryIdIfMissing": false
 		},
 		"LegUpgradesSlotChange": {
 			"From": 3,
@@ -280,9 +280,9 @@
 		"ChassisDefMaxJumpjets": false,
 		"ChassisDefMaxJumpjetsCount": 12,
 		"ChassisDefMaxJumpjetsRating": 400,
-		"AutoFixWeaponDefSplitting": true,
-		"AutoFixWeaponDefSplittingLargerThan": 7,
-		"AutoFixWeaponDefSplittingFixedSize": 7,
+		"AutoFixWeaponDefSplitting": false,
+		"AutoFixWeaponDefSplittingLargerThan": 13,
+		"AutoFixWeaponDefSplittingFixedSize": 13,
 		"AutoFixWeaponDefSplittingDynamicSlotTemplate": {
 			"ReservedSlots": 0,
 			"InnerAdjacentOnly": true,
@@ -346,6 +346,7 @@
 	},
 	"CriticalEffects": {
 		"Enabled": true,
+		"DefaultMaxCritsPerSlots" : 0,
 		"DefaultMaxCritsComponentTypes": [
 			"Weapon",
 			"JumpJet",
@@ -370,8 +371,8 @@
 		"AllowMixingHeatSinkTypesDescription": "Allow heat sinks patchwork.",
 		"EngineMissingFallbackHeatSinkCapacity": 0,
 		"EngineMissingFallbackHeatSinkCapacityDescription": "Heat sink capacity if no engine is detected.",
-		"AdditionalWalkSpeed": 24,
-		"AdditionalRunSpeed": 60,
+		"AdditionalWalkSpeed": 0,
+		"AdditionalRunSpeed": 0,
 		"MovementPointDistanceMultiplier": 28,
 		"MinimJumpHeat": 9,
 		"JumpJetDefaultJumpHeat": 3,
