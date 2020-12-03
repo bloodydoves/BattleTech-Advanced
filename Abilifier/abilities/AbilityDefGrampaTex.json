@@ -1,0 +1,71 @@
+{
+	"Description" : {
+		"Id" : "AbilityDefGrampaTex",
+		"Name" : "OLD MAN OF THE MECHS",
+		"Details" : "PASSIVE: Grampa gets a flat damage boost against all targets but also has a reduced stability threshold at all times.",
+		"Icon" : "old-man"
+	},
+    "DisplayParams" : "ShowInMWTRay",
+	"ActivationTime" : "Passive",
+	"EffectData" :
+	[
+		{
+			"durationData" :
+			{
+				"duration" : -1
+			},
+			"targetingData" : 
+			{
+				"effectTriggerType" : "OnActivation",
+				"effectTargetType" : "Creator"
+			},
+			"effectType" : "StatisticEffect",
+			"Description" :
+			{
+				"Id" : "AbilityDefGrampaTexStability",
+				"Name" : "Reduced Stability Threshold",
+				"Details" : "Grampa's stability threshold is massively reduced.",
+				"Icon" : "old-man"
+			},
+			"statisticData" : 
+			{
+				"statName": "UnsteadyThreshold",
+				"operation": "Float_Add",
+				"modValue": "-50.0",
+				"modType": "System.Single"
+			},
+			"nature" : "Buff"
+		},
+		{
+            "durationData": {
+                "duration": 1,
+                "stackLimit": 1
+            },
+            "targetingData": {
+                "effectTriggerType": "OnActivation",
+                "effectTargetType": "Creator",
+                "showInStatusPanel": true
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "AbilityDefGrampaTexDamage",
+                "Name": "Grampa's Experience",
+                "Details": "+10% Weapon Damage",
+                "Icon": "old-man"
+            },
+            "nature": "Buff",
+            "statisticData": {
+                "statName": "DamagePerShot",
+                "operation": "Float_Multiply",
+                "modValue": "1.1",
+                "modType": "System.Single",
+                "additionalRules": "NotSet",
+                "targetCollection": "Weapon",
+                "targetWeaponCategory": "NotSet",
+                "targetWeaponType": "NotSet",
+                "targetAmmoCategory": "NotSet",
+                "targetWeaponSubType": "NotSet"
+            }
+        }
+	]
+}
