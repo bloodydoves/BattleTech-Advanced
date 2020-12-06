@@ -163,6 +163,8 @@ VehicleChassis/Chassis
 	Squad will get less AoE damage if some troopers dead
 	Squad will get less damage from landmines if some troopers dead.
 
+
+
     "MeleeWeaponOverride":{    - override melee weapon for chassis. If you'll set weapon with non-melee weapon category or weapon than needs ammo, it will be only your fucken problem.
       "DefaultWeapon": "Weapon_MeleeAttackBattleClaw"
     }
@@ -190,6 +192,17 @@ VehicleChassis/Chassis
     }, 
 	"NoIdleAnimations": false - restrict idle animation for chassis. Can be altered runtime using CUNoMoveAnimation statistic value, boolean
 	"NoMoveAnimations": false - restrict move animation for chassis. Can be altered runtime using CUNoRandomIdleAnimations statistic value, boolean
+    "quadVisualInfo":{            - settings for quad visuals 
+      "UseQuadVisuals": true,     - if false quad visuals will not be used
+      "FLegsPrefab": "chrPrfMech_kingcrabBase-001",  - prefab for forward legs. 
+	                                                   for rear legs chassis PrefabIdentifier value is used
+      "BodyLength":7.0,                              - length of the body in meters
+      "FLegsPrefabBase": "kingcrab",                 - used for jumpjets and headlight spawning if model has one
+      "RLegsPrefabBase": "kingcrab",
+      "NotSuppressRenderers":["_left_leg_","_right_leg_"]  - list of front and rear legs model parts which should not be suppressed 
+    },
+	Please read "AnimationType": "QuadBody" custom part section to get info on quad body setup
+
 	"ArmsCountedAsLegs": false - setting this flag true will cause next consequences
 									 1. Side torso crush not lead to attached arm destroy
 									 2. Mech will not die if both legs destroyed. It will be destroyed on destruction head, center torso or all four limbs
@@ -359,6 +372,22 @@ VehicleChassis/Chassis
             {"Location":"RightTorso","AttachTo":"WeaponAttachR","Animator":"WeaponMountR"}
           ]
         },
+
+        "AnimationType": "QuadBody",
+        "AnimationData": { 
+          "VerticalRotate":"rotate",              - name of quad body model part which is used as vertical rotation axis
+          "TurretAttach": "turret_attach",        - attach point for mech turret
+          "FrontLegsAttach":"front_legs_attach",  - attach point for front legs model
+          "ShowFrontLegsAxis": false,             - show axis (for position purposes)
+          "DamageAnimator":"barg_CT_LT_RT_plus_damage_models", - name of object containing body damage animator
+          "RTVFXTransform":"RT_vfx_transform",                 - vfx attach point for right torso 
+          "LTVFXTransform":"LT_vfx_transform",                 - vfx attach point for left torso 
+          "CTVFXTransform":"CT_vfx_transform",                 - vfx attach point for center torso
+          "HEADVFXTransform":"HEAD_vfx_transform",             - vfx attach point for head
+          "JumpJetsSpawnPoints": ["jumpjet_rear","jumpjet_front","jumpjet_left","jumpjet_right"], - list jump jets spawn points
+          "HeadLightSpawnPoints": ["headlight_left","headlight_right"]                            - list of headlight spawn point
+        }
+
 	]
 }, 
 
