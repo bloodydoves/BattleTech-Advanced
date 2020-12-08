@@ -16,9 +16,11 @@
 		},
 		"BonusDescriptions": {
 			"Bonuses": [
-				"Painter: +1",
+				"Painter: +2",
 				"PainterSensors: 35%",
 				"PainterVisibility: 35%",
+				"MaxRange: +330",
+				"MissileDamage: +20%",
 				"CostPerShot: 750",
 				"NARCAmmo: 5"
 			]
@@ -34,10 +36,10 @@
 		"Rarity": 1,
 		"Purchasable": true,
 		"Manufacturer": "Doering",
-		"Model": "Narc iBeacon",
-		"UIName": "Ammo Narc iBeacon",
+		"Model": "Narc Improved Beacon",
+		"UIName": "Ammo Narc Improved Beacon",
 		"Id": "Ammo_AmmunitionBox_Narc_Beacon_Improved",
-		"Name": "Narc iBeacon Ammo",
+		"Name": "Narc Improved Beacon Ammo",
 		"Details": "Ammo Bins contain the rounds needed for projectile-based weaponry, with at least one bin required per weapon type.Upon receiving a Critical Hit, any remaining ammunition stored inside an Ammo Bin will explode dealing damage to the install location. Risk can be mitigated with the use of C.A.S.E. Has 5 shots.",
 		"Icon": "uixSvgIcon_ammoBox_Missile"
 	},
@@ -60,7 +62,7 @@
 				"useActivationsOfTarget": false,
 				"ticksOnEndOfRound": false,
 				"ticksOnMovements": false,
-				"stackLimit": 0,
+				"stackLimit": 1,
 				"clearedWhenAttacked": false
 			},
 			"targetingData": {
@@ -87,7 +89,7 @@
 				"appliesEachTick": false,
 				"statName": "DamageReductionMultiplierMissile",
 				"operation": "Float_Multiply",
-				"modValue": "1.25",
+				"modValue": "1.2",
 				"modType": "System.Single"
 			},
 			"tagData": null,
@@ -104,7 +106,7 @@
 				"useActivationsOfTarget": false,
 				"ticksOnEndOfRound": false,
 				"ticksOnMovements": false,
-				"stackLimit": 0,
+				"stackLimit": 1,
 				"clearedWhenAttacked": false
 			},
 			"targetingData": {
@@ -135,7 +137,7 @@
 				"isAttached": true,
 				"facesAttacker": false,
 				"isOneShot": false,
-				"duration": -1.0
+				"duration": 2
 			}
 		}
 	],
