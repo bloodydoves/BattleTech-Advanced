@@ -7,10 +7,24 @@
 	"DLL": "CustomUnits.dll",
 	"DLLEntryPoint": "CustomUnits.Core.Init",
 	"DependsOn": [
-		"Custom Ammo Categories"
+		"Custom Ammo Categories",
+		"MechEngineer"
 	],
 	"ConflictsWith": [
 		"MechResizer"
+	],
+	"Manifest": [
+		{ "Type": "AssetBundle", "Path": "assetbundles" },
+		{ "Type": "DesignMaskDef", "Path": "designMasks" },
+		{ "Type": "SVGAsset", "Path": "icons" },
+		{ "Type": "MechDef", "Path": "mech" },
+		{ "Type": "ChassisDef", "Path": "chassis" },
+		{ "Type": "MovementCapabilitiesDef", "Path": "movedef" },
+		{ "Type": "PathingCapabilitiesDef", "Path": "pathingdef" },
+		{ "Type": "PilotDef", "Path": "pilot" },
+		{ "Type": "AbilityDef", "Path": "ability" },
+		{ "Id": "fake_weapon_prefab", "Type": "Prefab", "Path": "assets/character/vehicle/prefabs/fake_weapon_prefab.prefab", "AssetBundleName": "fake_weapon_prefab" },
+		{ "Id": "battletechstandartshader", "Type": "Prefab", "Path": "assets/shaderscarriers/battletechstandartshader.prefab", "AssetBundleName": "standart_shader" }
 	],
 	"Description": "CustomUnits",
 	"Author": "KMiSSioN",
@@ -21,7 +35,7 @@
 		"ConvoyRouteBeaconVFXScale": { "x": 1, "y": 1, "z": 1 },
 		"DeployManual": false,
 		"DeployMaxDistanceFromOriginal": 30,
-		"DeployMinDistanceFromEnemy": 400,
+		"DeployMinDistanceFromEnemy": 300,
 		"fixWaterHeight": true,
 		"maxWaterSteppiness": 29,
 		"deepWaterSteepness": 41,
@@ -36,6 +50,48 @@
 		"vehicleSizePrefabMultipliers": {},
 		"turretSizePrefabMultipliers": {},
 		"projectileSizePrefabMultipliers": {},
+		"mechSizeMultiplierVectors": {
+			"chassisdef_centurion_CN9-S": { "x": -1, "y": 1, "z": 1 }
+		},
+		"projectileSizeMultipliers": {
+			"Weapon_LRM_Thunderbolt5": 2.25,
+			"Weapon_LRM_Thunderbolt10": 2.5,
+			"Weapon_LRM_Thunderbolt15": 2.75,
+			"Weapon_LRM_Thunderbolt20": 3.0,
+			"Weapon_ArrowIV": 3.5
+		},
+		"MaxVehicleRandomPilots": 0,
+		"ShowVehicleBays": true,
+		"AllowVehiclesEdit": false,
+		"MechBaySwitchIconMech": "mech",
+		"MechBaySwitchIconVehicle": "vehicle",
+		"MechBaySwitchIconUp": "weapon_up",
+		"MechBaySwitchIconDown": "weapon_down",
+		"CanPilotVehicleTag": "pilot_vehicle_crew",
+		"CannotPilotMechTag": "pilot_nomech_crew",
+		"CountContractMaxUnits4AsUnlimited": true,
+		"ArgoBaysFix": 0,
+		"BaysCountExternalControl": false,
+		"CanPilotVehicleProbability": 0,
+		"CanPilotAlsoMechProbability": 0,
+		"SquadStructureIcon": "ba_structure",
+		"SquadArmorOutlineIcon": "ba_armor_outline",
+		"SquadArmorIcon": "ba_armor",
+		"LancesIcons": [ "one", "two", "three" ],
+		"ShowActiveAbilitiesIcon": "joystick",
+		"ShowPassiveAbilitiesIcon": "passive-ab",
+		"HideActiveAbilitiesIcon": "joystick",
+		"HidePassiveAbilitiesIcon": "passive-ab",
+		"PlayerControlConvoyTag": "convoy_player_control",
+		"ManualDeployForbidContractTypes": ["Blackout", "SoloDuel", "DuoDuel"],
+		"ConvoyMaxDistFromOther": 200,
+		"ConvoyMaxDistFromPlayer": 400,
+		"ConvoyMaxDistFromRoute": 90,
+		"overallDeploySize": 6,
+		"Lances": [ 
+			{"size":6,"allow":5,"is_vehicle":false},
+			{"size":4,"allow":3,"is_vehicle":true}
+		],
 		"mechSizeMultipliers": {
 			"chassisdef_griffin_GRF-2N-X": 1.15,
 			"chassisdef_wasp_WSP-2A-X": 1.1,
@@ -283,63 +339,13 @@
 			"chassisdef_valiant_V4-LNT-L7": 0.85,
 			"chassisdef_shayu_SYU-2B": 0.8,
 			"chassisdef_shayu_SYU-4B": 0.8,
+			"chassisdef_templar_TLR1-O": 0.9,
+			"chassisdef_templar_TLR1-OA": 0.9,
+			"chassisdef_templar_TLR1-OB": 0.9,
+			"chassisdef_templar_TLR1-OC": 0.9,
+			"chassisdef_templar_TLR1-OS": 0.9,
 			"vehiclechassisdef_PUMA_005": 0.7,
 			"vehiclechassisdef_PUMA_005b": 0.7
-		},
-		"mechSizeMultiplierVectors": {
-			"chassisdef_centurion_CN9-S": { "x": -1, "y": 1, "z": 1 }
-		},
-		"projectileSizeMultipliers": {
-			"Weapon_LRM_Thunderbolt5": 2.25,
-			"Weapon_LRM_Thunderbolt10": 2.5,
-			"Weapon_LRM_Thunderbolt15": 2.75,
-			"Weapon_LRM_Thunderbolt20": 3.0,
-			"Weapon_ArrowIV": 3.5
-		},
-		"MaxVehicleRandomPilots": 0,
-		"ShowVehicleBays": true,
-		"AllowVehiclesEdit": false,
-		"MechBaySwitchIconMech": "mech",
-		"MechBaySwitchIconVehicle": "vehicle",
-		"MechBaySwitchIconUp": "weapon_up",
-		"MechBaySwitchIconDown": "weapon_down",
-		"CanPilotVehicleTag": "pilot_vehicle_crew",
-		"CannotPilotMechTag": "pilot_nomech_crew",
-		"CountContractMaxUnits4AsUnlimited": true,
-		"ArgoBaysFix": 0,
-		"BaysCountExternalControl": false,
-		"CanPilotVehicleProbability": 0,
-		"CanPilotAlsoMechProbability": 0,
-		"SquadStructureIcon": "ba_structure",
-		"SquadArmorOutlineIcon": "ba_armor_outline",
-		"SquadArmorIcon": "ba_armor",
-		"LancesIcons": [ "one", "two", "three" ],
-		"ShowActiveAbilitiesIcon": "joystick",
-		"ShowPassiveAbilitiesIcon": "passive-ab",
-		"HideActiveAbilitiesIcon": "joystick",
-		"HidePassiveAbilitiesIcon": "passive-ab",
-		"PlayerControlConvoyTag": "convoy_player_control",
-		"ManualDeployForbidContractTypes": ["Blackout", "SoloDuel", "DuoDuel"],
-		"ConvoyMaxDistFromOther": 200,
-		"ConvoyMaxDistFromPlayer": 400,
-		"ConvoyMaxDistFromRoute": 90,
-		"overallDeploySize": 6,
-		"Lances": [ 
-			{ "size": 6, "allow": 5, "is_vehicle": false },
-			{ "size": 4, "allow": 3, "is_vehicle": true }
-		]
-	},
-	"Manifest": [
-		{ "Type": "AssetBundle", "Path": "assetbundles" },
-		{ "Type": "DesignMaskDef", "Path": "designMasks" },
-		{ "Type": "SVGAsset", "Path": "icons" },
-		{ "Type": "MechDef", "Path": "mech" },
-		{ "Type": "ChassisDef", "Path": "chassis" },
-		{ "Type": "MovementCapabilitiesDef", "Path": "movedef" },
-		{ "Type": "PathingCapabilitiesDef", "Path": "pathingdef" },
-		{ "Type": "PilotDef", "Path": "pilot" },
-		{ "Type": "AbilityDef", "Path": "ability" },
-		{ "Id": "fake_weapon_prefab", "Type": "Prefab", "Path": "assets/character/vehicle/prefabs/fake_weapon_prefab.prefab", "AssetBundleName": "fake_weapon_prefab" },
-		{ "Id": "battletechstandartshader", "Type": "Prefab", "Path": "assets/shaderscarriers/battletechstandartshader.prefab", "AssetBundleName": "standart_shader" }
-	]
+		}
+	}
 }
