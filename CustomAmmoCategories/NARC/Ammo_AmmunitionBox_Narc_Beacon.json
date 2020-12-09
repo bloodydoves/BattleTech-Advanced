@@ -16,7 +16,7 @@
 		},
 		"BonusDescriptions": {
 			"Bonuses": [
-				"Painter: +2",
+				"Painter: +1",
 				"PainterSensors: 25%",
 				"PainterVisibility: 25%",
 				"CostPerShot: 500",
@@ -60,7 +60,51 @@
 				"useActivationsOfTarget": false,
 				"ticksOnEndOfRound": false,
 				"ticksOnMovements": false,
-				"stackLimit": 1,
+				"stackLimit": 0,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "NotSet",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": true,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-NARC-MissileDmgBonus25",
+				"Name": "NARC ATTACHED",
+				"Details": "This unit will take [AMT] more damage from Missile attacks.",
+				"Icon": "uixSvgIcon_statusMarked"
+			},
+			"nature": "Debuff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"statName": "DamageReductionMultiplierMissile",
+				"operation": "Float_Multiply",
+				"modValue": "1.25",
+				"modType": "System.Single"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
+		},
+		{
+			"durationData": {
+				"duration": 2,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 0,
 				"clearedWhenAttacked": false
 			},
 			"targetingData": {
@@ -91,7 +135,7 @@
 				"isAttached": true,
 				"facesAttacker": false,
 				"isOneShot": false,
-				"duration": 2
+				"duration": -1.0
 			}
 		}
 	],
