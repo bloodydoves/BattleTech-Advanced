@@ -19,6 +19,9 @@
 	"Settings": {
 		"LogLevel": "Debug",
 		"DebugInfo": "NONE",
+		"DontUseFilter": false,
+		"BaseECMValidation": false,
+		"AllowDropBlackListed": false,
 		"ColorTags": [],
 		"FixDeletedComponents": true,
 		"FixSaveGameMech": false,
@@ -67,7 +70,8 @@
 		"CheckWeaponCount": true,
 		"MaxWeaponCount": 15,
 		"WrongWeaponCountMessage": "Cannot equip more then {0} weapons",
-		"IgnoreAutofixTags": ["fake_vehicle_chassis", "noautofix"]
+		"IgnoreAutofixTags": ["fake_vehicle_chassis", "noautofix", "ProtoMech"],
+		"IgnoreValidationTags": ["fake_vehicle_chassis", "ProtoMech"]
 
 	}
 }

@@ -7,8 +7,9 @@
 		],
 		"BonusDescriptions": {
 			"Bonuses": [
+				"WpnCrits: -90%",
 				"ProjectileBurst: 3",
-				"VariableBurstCount: 6"
+				"VariableBurstCount: 3"
 			]
 		}
 	},
@@ -25,14 +26,14 @@
 	"AmmoCategory": "MG",
 	"StartingAmmoCapacity": 0,
 	"HeatGenerated": 3,
-	"Damage": 3,
+	"Damage": 4,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
 	"EvasivePipsIgnored": 0,
 	"DamageVariance": 0,
 	"HeatDamage": 0,
 	"AccuracyModifier": 0,
-	"CriticalChanceMultiplier": 1,
+	"CriticalChanceMultiplier": 0.1,
 	"AOECapable": false,
 	"IndirectFireCapable": false,
 	"RefireModifier": 0,
@@ -50,7 +51,7 @@
 		"UIName": "MG Array",
 		"Id": "Weapon_MachineGun_Array_0-STOCK",
 		"Name": "MG Array",
-		"Details": "Machine Gun Arrays are multiple Machine Guns linked together to fire simultaneously, this consists of 3 standard Machine Guns. \n\n <b><color=#ffcc00>Uses MG Ammo.</color></b> \n\n <b><color=#00ffff>Left Click on Chance to hit during battle to switch firing mode</color> </b>",
+		"Details": "Machine Gun Arrays are multiple Machine Guns linked together to fire simultaneously, this consists of 3 standard Machine Guns. \n\n <b>Has increasing jam chance and decreasing crit chance as fire speed increases!</b> \n\n <b><color=#ffcc00>Uses MG Ammo.</color></b> \n\n <b><color=#00ffff>Left Click on Mode value during battle to switch firing mode</color></b>",
 		"Icon": "uixSvgIcon_weapon_Support"
 	},
 	"BonusValueA": "",
@@ -69,7 +70,7 @@
 		{
 			"Id": "x1",
 			"UIName": "x1",
-			"isBaseMode": false,
+			"isBaseMode": true,
 			"ShotsWhenFired": 0
 		},
 		{
@@ -77,42 +78,18 @@
 			"UIName": "x2",
 			"isBaseMode": false,
 			"ShotsWhenFired": 3,
-			"HeatGenerated": 3
+			"RefireModifier": 1,
+			"HeatGenerated": 3,
+			"FlatJammingChance": 0.15
 		},
 		{
 			"Id": "x3",
 			"UIName": "x3",
 			"isBaseMode": false,
 			"ShotsWhenFired": 6,
-			"RefireModifier": 1,
-			"HeatGenerated": 4
-		},
-		{
-			"Id": "x4",
-			"UIName": "x4",
-			"isBaseMode": true,
-			"RefireModifier": 1,
-			"FlatJammingChance": 0.1,
-			"ShotsWhenFired": 9,
-			"HeatGenerated": 9
-		},
-		{
-			"Id": "x5",
-			"UIName": "x5",
-			"isBaseMode": false,
-			"ShotsWhenFired": 12,
 			"RefireModifier": 2,
-			"FlatJammingChance": 0.2,
-			"HeatGenerated": 12
-		},
-		{
-			"Id": "x6",
-			"UIName": "x6",
-			"isBaseMode": false,
-			"ShotsWhenFired": 15,
-			"RefireModifier": 3,
-			"FlatJammingChance": 0.3,
-			"HeatGenerated": 15
+			"HeatGenerated": 3,
+			"FlatJammingChance": 0.3
 		}
 	],
 	"statusEffects": [],

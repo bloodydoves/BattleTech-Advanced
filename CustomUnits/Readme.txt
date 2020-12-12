@@ -5,6 +5,8 @@ this mod allows you next things
 4. Add custom animated hardpoints
 
 main settings in mod.json
+	"ConvoyRouteBeaconVFX":"vfxPrfPrtl_artillerySmokeSignal_loop", - VFX for convoy route points
+	"ConvoyRouteBeaconVFXScale":{"x":1,"y":1,"z":1}, - VFX scale for convoy route points
 	"DeployManual": true, - allowing manual deploy in random contract.
 	"ManualDeployForbidContractTypes": [] - list of contract types names, for listed contract types manual deploy will be forbidden
 	"DeployMaxDistanceFromOriginal": 30 - max distance from original deploy position
@@ -140,6 +142,32 @@ new section
 
 VehicleChassis/Chassis
 "CustomParts":{
+    "SquadInfo": {            - ONLY for mech's chassis 
+      "Troopers":5,           - units count in trooper squad, up to 8. If set as 1 no logic changing performed 
+      "UnitSize": 0.2,        - unit scale
+      "DeadUnitToHitMod": 9,  - to-hit mod when last trooper squad remain. Example squad - 4 units, DeadUnitToHitMod - 9. When all 4 units operational modifier = 0
+	                            one unit dead modifier = 3, two units dead, modifier = 6, three units dead, modifier = 9. Formula: modifier = <DeadUnitToHitMod> * <dead units> / (<Troopers> - 1)
+      "Hardpoints":{          - visual hardpoints mapping. Internally squad it is one mech, each trooper is its location. MechDef reflects this fact.
+	                            Visually each trooper is shrinked mech representation. To properly align weapons representation in this sub mechs models this mad is needed.
+								In example all energy weapons goes to left arms of troopers etc. Should be made corresponded to base chassis hardpoints definition.
+        "Energy": "LeftArm",
+        "Missile": "LeftTorso",
+        "AntiPersonnel": "RightArm"
+      }
+    },
+	NOTE: squad can have no more than one jumpjet. This means no matter amount of actual jumpjets components you install. 
+	If each operational location (squad trooper) have working jumpjet it will be counted as whole squad have one jupmjet in jump distance calculation.
+	Squad can't have stability nor heat. 
+	Squad can't be legged cause it have no legs internally.
+	Squad can be destroyed only all units destroyed.
+	Squad will get less AoE damage if some troopers dead
+	Squad will get less damage from landmines if some troopers dead.
+
+
+
+    "MeleeWeaponOverride":{    - override melee weapon for chassis. If you'll set weapon with non-melee weapon category or weapon than needs ammo, it will be only your fucken problem.
+      "DefaultWeapon": "Weapon_MeleeAttackBattleClaw"
+    }
     "AOEHeight": 55,  - this value will be added to y-coordinate of current position in AoE damage calculations (weapon/landmines/component's explosions). 
                         Can be altered runtime via CUAOEHeight actor's statistic value (float)
     "FiringArc":60, - if set and > 10 means vehicle firing arc in degrees and vehicle have to rotate toward target to fire. 
@@ -164,6 +192,17 @@ VehicleChassis/Chassis
     }, 
 	"NoIdleAnimations": false - restrict idle animation for chassis. Can be altered runtime using CUNoMoveAnimation statistic value, boolean
 	"NoMoveAnimations": false - restrict move animation for chassis. Can be altered runtime using CUNoRandomIdleAnimations statistic value, boolean
+    "quadVisualInfo":{            - settings for quad visuals 
+      "UseQuadVisuals": true,     - if false quad visuals will not be used
+      "FLegsPrefab": "chrPrfMech_kingcrabBase-001",  - prefab for forward legs. 
+	                                                   for rear legs chassis PrefabIdentifier value is used
+      "BodyLength":7.0,                              - length of the body in meters
+      "FLegsPrefabBase": "kingcrab",                 - used for jumpjets and headlight spawning if model has one
+      "RLegsPrefabBase": "kingcrab",
+      "NotSuppressRenderers":["_left_leg_","_right_leg_"]  - list of front and rear legs model parts which should not be suppressed 
+    },
+	Please read "AnimationType": "QuadBody" custom part section to get info on quad body setup
+
 	"ArmsCountedAsLegs": false - setting this flag true will cause next consequences
 									 1. Side torso crush not lead to attached arm destroy
 									 2. Mech will not die if both legs destroyed. It will be destroyed on destruction head, center torso or all four limbs
@@ -333,6 +372,22 @@ VehicleChassis/Chassis
             {"Location":"RightTorso","AttachTo":"WeaponAttachR","Animator":"WeaponMountR"}
           ]
         },
+
+        "AnimationType": "QuadBody",
+        "AnimationData": { 
+          "VerticalRotate":"rotate",              - name of quad body model part which is used as vertical rotation axis
+          "TurretAttach": "turret_attach",        - attach point for mech turret
+          "FrontLegsAttach":"front_legs_attach",  - attach point for front legs model
+          "ShowFrontLegsAxis": false,             - show axis (for position purposes)
+          "DamageAnimator":"barg_CT_LT_RT_plus_damage_models", - name of object containing body damage animator
+          "RTVFXTransform":"RT_vfx_transform",                 - vfx attach point for right torso 
+          "LTVFXTransform":"LT_vfx_transform",                 - vfx attach point for left torso 
+          "CTVFXTransform":"CT_vfx_transform",                 - vfx attach point for center torso
+          "HEADVFXTransform":"HEAD_vfx_transform",             - vfx attach point for head
+          "JumpJetsSpawnPoints": ["jumpjet_rear","jumpjet_front","jumpjet_left","jumpjet_right"], - list jump jets spawn points
+          "HeadLightSpawnPoints": ["headlight_left","headlight_right"]                            - list of headlight spawn point
+        }
+
 	]
 }, 
 

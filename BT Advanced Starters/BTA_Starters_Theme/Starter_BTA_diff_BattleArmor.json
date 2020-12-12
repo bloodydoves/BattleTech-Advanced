@@ -1,0 +1,29 @@
+{
+    "TargetID": "CareerDifficultySettings",
+    "Instructions": [
+        {
+			"JSONPath": "$.difficultyList[?(@.ID== 'diff_startingplanet')].Options",
+            "Action": "ArrayAdd",
+            "Value":
+				{
+					"ID": "diff_start_bmf",
+					"Name": "BA (V. Hard)",
+					"TelemetryEventDesc": "",
+					"DifficultyValue": 4,
+					"CareerScoreModifier": 1,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "CareerMode",
+							"ConstantName": "StartingSystems",
+							"ConstantValue": "Lyreton"
+						},
+						{
+							"ConstantType": "CareerMode",
+							"ConstantName": "StartingRandomMechLists",
+							"ConstantValue": "itemCollection_Mechs_Generic_Bug,itemCollection_Mechs_Generic_Bug,itemCollection_Mechs_Generic_BattleArmor,itemCollection_Mechs_Generic_BattleArmor,itemCollection_Mechs_Generic_BattleArmor"
+						}
+					]
+				}
+         }
+    ]
+}

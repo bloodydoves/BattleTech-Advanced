@@ -7,10 +7,10 @@
 		],
 		"BonusDescriptions": {
 			"Bonuses": [
-				"WpnCrits: 25%",
+				"WpnCrits: -50%",
 				"WpnAccuracy: +1",
 				"IsMG",
-				"VariableBurstCount: 6"
+				"VariableBurstCount: 3"
 			]
 		}
 	},
@@ -26,7 +26,7 @@
 	],
 	"AmmoCategory": "MG",
 	"StartingAmmoCapacity": 0,
-	"HeatGenerated": 0,
+	"HeatGenerated": 1,
 	"Damage": 1,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
@@ -34,7 +34,7 @@
 	"DamageVariance": 0,
 	"HeatDamage": 0,
 	"AccuracyModifier": -1,
-	"CriticalChanceMultiplier": 1.25,
+	"CriticalChanceMultiplier": 0.5,
 	"AOECapable": false,
 	"IndirectFireCapable": false,
 	"RefireModifier": 0,
@@ -52,7 +52,7 @@
 		"UIName": "LMG",
 		"Id": "Weapon_MachineGun_LightMG_0-STOCK",
 		"Name": "LMG",
-		"Details": "Light machine guns sacrifice damage for increased range. In all other respects, it is like its standard Machine Gun progenitor. \n\n <b><color=#ffcc00>Uses MG Ammo.</color></b>",
+		"Details": "Light machine guns sacrifice damage for increased range. In all other respects, it is like its standard Machine Gun progenitor. \n\n <b>Has increasing jam chance and decreasing crit chance as fire speed increases!</b> \n\n <b><color=#ffcc00>Uses MG Ammo.</color></b> \n\n <b><color=#00ffff>Left Click on Mode value during battle to switch firing mode</color></b>",
 		"Icon": "uixSvgIcon_weapon_Support"
 	},
 	"BonusValueA": "",
@@ -70,41 +70,26 @@
 		{
 			"Id": "x1",
 			"UIName": "x1",
-			"isBaseMode": false,
+			"isBaseMode": true,
 			"ShotsWhenFired": 0
 		},
 		{
 			"Id": "x2",
 			"UIName": "x2",
 			"isBaseMode": false,
-			"ShotsWhenFired": 1
+			"ShotsWhenFired": 1,
+			"HeatGenerated": 1,
+			"FlatJammingChance": 0.1,
+			"CriticalChanceMultiplier": -0.2
 		},
 		{
 			"Id": "x3",
 			"UIName": "x3",
 			"isBaseMode": false,
-			"ShotsWhenFired": 2
-		},
-		{
-			"Id": "x4",
-			"UIName": "x4",
-			"isBaseMode": true,
-			"ShotsWhenFired": 3,
-			"HeatGenerated": 1
-		},
-		{
-			"Id": "x5",
-			"UIName": "x5",
-			"isBaseMode": false,
-			"ShotsWhenFired": 4,
-			"HeatGenerated": 2
-		},
-		{
-			"Id": "x6",
-			"UIName": "x6",
-			"isBaseMode": false,
-			"ShotsWhenFired": 5,
-			"HeatGenerated": 3
+			"ShotsWhenFired": 2,
+			"HeatGenerated": 2,
+			"FlatJammingChance": 0.1,
+			"CriticalChanceMultiplier": -0.4
 		}
 	],
 	"statusEffects": [],
