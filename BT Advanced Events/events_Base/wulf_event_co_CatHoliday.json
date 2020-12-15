@@ -1,0 +1,286 @@
+{
+    "Description" : {
+        "Id" : "wulf_event_co_CatHoliday",
+        "Name" : "Ho Ho Ho",
+        "Details" : "You get up in the morning stumbling over your misplaced boot, knocking it over. As you regain your balance, to your incredulity, you see small cookies and sweets rolling out of your footwear. As you empty out your shoes to investigate you faintly hear a belly laugh from elsewhere in the ship. You find a little paper note crumpled up:\r\n\r\n\r\n\"<i>Zinterklaas is sorry, his horze not fit atop Argo.\r\n\r\nAlso sorry rhyme vould be better if name was Margot.\r\n\r\nStill, Zint was very happy when he hear:\r\n\r\n{Commander.FirstName} was good leader this year.</i>\"",
+        "Icon" : "uixTxrSpot_wulf_CatHoliday.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 5000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "RequirementComparisons" : []
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [
+        {
+            "Scope" : "SecondaryMechWarrior",
+            "Requirements" : {
+                "Scope" : "SecondaryMechWarrior",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : [
+                        "name_wulfbanes"
+                    ]
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : [
+                    {
+                        "obj" : "Injuries",
+                        "op" : "Equal",
+                        "val" : 0,
+                        "valueConstant" : "0"
+                    }
+                ]
+            }
+        }
+    ],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Yang might know how anyone would have gotten in.",
+                "Details" : "Yang might know how anyone would have gotten in.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Yang Route",
+                        "Details" : "[[DM.BaseDescriptionDefs[Wulf_Lore_Yang,Yang]] explains the situation to you: \"A few weeks ago we had a pilot in here asking about chimneys and how air was supposed to get around so he could clean the vents in his quarters. I sent a rookie with him to make sure it was all safe, how to disconnect the fans and so.\r\n\r\n\r\nI didn't think much more of it, until this morning, when I woke up to a white-bearded man. Didn't have my glasses, so I couldn't see who it was before he crawled back in the vent. He did stuff my boot with cookies and a note from Zinterklaas.\r\n\r\n\r\nEither way, I call the rookie in this morning, and he tells me all the MechTechs had gifts in their bunks this morning. Too much work for one person, if you ask me. It's gotta be a conspiracy, albeit a tasty one.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Morale",
+                                    "value" : "2",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "MechTechSkill",
+                                    "value" : "-6",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 2
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "The Doc might have something to dispel this fever dream.",
+                "Details" : "The Doc might have something to dispel this fever dream.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "Doc Route",
+                        "Details" : "You find [[DM.BaseDescriptionDefs[TBoneLoreDoc],Doc]] at his desk with half a bottle of liquor. He gestures you over: \"I woke last night to some clanging from the hall. I stepped out to find [[SCN_MW,{SCN_MW.Callsign}]] wearing a sheet as a cape, a bin as a hat, and his beard covered in flour. At least I hope it was flour.\"\r\n\r\n\r\nYou suggest that Wulfbanes might need another psych eval. \"That's not the worst of it.\" Doc pauses to take another swig, then puts on his best Wulfbanes accent: \r\n\r\n\r\n\"I'm zorry mein magic vand doesn't fit through zee chimney. Mein name is Zinterklaas, if only for today. For the sake of zee children, it is zecret.\" Dropping the accent: \"Then he smiled, handed me a broken pipe and a handful of cookies. Then he shushed me, and proceeded to climb into the air vent.\"\r\n\r\n\r\nYou shake your head and prescribe both of you another drink.", 
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Morale",
+                                    "value" : "2",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "MedTechSkill",
+                                    "value" : "-6",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 2
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_2",
+                "Name" : "Sumire might just know who this Zinterklaas is.",
+                "Details" : "Sumire might just know who this Zinterklaas is.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_2_0",
+                        "Name" : "Sumire Route",
+                        "Details" : "[[DM.BaseDescriptionDefs[TooltipSimGameCharacterSUMIRE,Sumire]] explains to you: \"As you might know Commander, I've got old-earth Dutch ancestry, and we have a yearly tradition celebrating the birthday of Saint Nicholas, patron saint of sailors, thieves and children. It is a children's holiday with songs, snacks, gifts and rhymes. \r\n\r\n\r\nHe'd come by all the houses of all the children, putting presents and rhymes in their shoes. As you grow up, you learn that your parents and siblings prepare the gifts. Teaches you the joy of giving and all that. Here, if you got a moment, sit down, I've got this old vid called Miracle on 34th Street. They even do a Dutch song.\"\r\n\r\n\r\nAs you watch together, you see a short message pop up on Sumire's screen from [[SCN_MW,{SCN_MW.Callsign}]]: \"Mission Complete.\" She swipes it away and gestures you to keep silent: \"There's magic in this, Commander. Let it be.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Morale",
+                                    "value" : "2",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}
