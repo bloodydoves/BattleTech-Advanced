@@ -1213,6 +1213,47 @@
                     ]
                 }
 			]
+		},
+		{
+			"tag" : "Affinity_Shade_ValkyrieII",
+			"chassisNames" : ["ValkyrieII_60"],
+			"affinityLevels" : [
+				 {
+                    "missionsRequired" : 10,
+                    "levelName" : "Shield of Faith",
+                    "decription" : "Shade gains +10% damage reduction in his Valkyrie II.",
+                    "effectData" : 
+                    [
+                        {
+                            "Description": {
+                                "Details": "Shade's incredible skill with this mech improves its damage reduction by 10%.",
+                                "Icon": "layeredarmor",
+                                "Id": "StatusEffect-Affinity-ShadeValkII",
+                                "Name": "Shade Affinity Damage Reduction Boost"
+                            },
+                            "durationData": {
+                                "duration": -1,
+                                "stackLimit": -1
+                            },
+                            "effectType": "StatisticEffect",
+                            "nature": "Buff",
+                            "statisticData": {
+                                "statName": "DamageReductionMultiplierAll",
+								"operation": "Float_Multiply",
+								"modValue": "0.9",
+								"modType": "System.Single"
+                            },
+                            "targetingData": {
+                                "effectTargetType": "Creator",
+                                "effectTriggerType": "Passive",
+                                "hideApplicationFloatie": true,
+                                "showInStatusPanel": false,
+                                "showInTargetPreview": false
+                            }
+                        }
+                    ]
+                }
+			]
 		}
 	]
 }
