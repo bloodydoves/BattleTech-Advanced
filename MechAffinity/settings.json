@@ -1254,6 +1254,47 @@
                     ]
                 }
 			]
+		},
+		{
+			"tag" : "Affinity_Turtrus_Crab",
+			"chassisNames" : ["chrPrfMech_crabBase-001_50"],
+			"affinityLevels" : [
+				 {
+                    "missionsRequired" : 10,
+                    "levelName" : "Radar Jammer",
+                    "decription" : "Turtrus gains a unique +2 hit defense in his Crab due to his electronics expertise. Stacks with ECM.",
+                    "effectData" : 
+                    [
+                        {
+                            "Description": {
+                                "Details": "Turtrus' incredible skill with this mech grants him +2 hit defense at all times.",
+                                "Icon": "layeredarmor",
+                                "Id": "StatusEffect-Affinity-TurtrusCrab",
+                                "Name": "Turtrus Affinity Hit Defense Boost"
+                            },
+                            "durationData": {
+                                "duration": -1,
+                                "stackLimit": -1
+                            },
+                            "effectType": "StatisticEffect",
+                            "nature": "Buff",
+                            "statisticData": {
+                                "statName": "ToHitThisActor",
+								"operation": "Float_Add",
+								"modValue": "2.0",
+								"modType": "System.Single"
+                            },
+                            "targetingData": {
+                                "effectTargetType": "Creator",
+                                "effectTriggerType": "Passive",
+                                "hideApplicationFloatie": true,
+                                "showInStatusPanel": false,
+                                "showInTargetPreview": false
+                            }
+                        }
+                    ]
+                }
+			]
 		}
 	]
 }
