@@ -1,0 +1,42 @@
+{
+	"Description": {
+		"Id": "AbilityDefTurtrusEnergy",
+		"Name": "LASER INSULATOR",
+		"Details": "PASSIVE: Turtrus's energy weapons generate 10% less heat when fired.",
+		"Icon": "laser-blast"
+	},
+	"DisplayParams": "ShowInMWTRay",
+	"ActivationTime": "Passive",
+	"EffectData": [
+		{
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "effectTargetType" : "Creator",
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "AbilityDefTurtrusEnergy_Heat",
+                "Name" : "Energy Heat Decreased",
+                "Details" : "Energy weapons generate 10% less heat.",
+                "Icon" : "laser-blast"
+            },
+            "nature" : "Buff",
+            "statisticData": {
+				"statName": "HeatGenerated",
+				"operation": "Float_Multiply",
+				"modValue": "0.9",
+				"modType": "System.Single",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "Energy",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "NotSet"
+			}
+        }
+	]
+}
