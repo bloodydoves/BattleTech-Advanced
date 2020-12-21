@@ -1,0 +1,133 @@
+{
+    "Description" : {
+        "Id" : "bta_event_xpulsemas",
+        "Name" : "Merry X-Pulse-Mas!",
+        "Details" : "Twas the night before Christmas, when all through the ship\r\n\r\nNot a thing on the sensors, not even a blip.\r\n\r\nThe ammo was hung in their CASEs with care,\r\n\r\nIn hopes that  no crits soon would be rolled there.\r\n\r\n\r\nThe warriors were nestled all snug in their beds,\r\n\r\nWhile visions of large lasers danced in their heads.\r\n\r\nAnd [[DM.BaseDescriptionDefs[TooltipSimGameCharacterSumire,Sumire]] with her coffee, and [[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]]  in his Inner Sphere map,\r\n\r\nHad just settled their brains for a long winter\u2019s nap.\r\n\r\n\r\nWhen down in the mechbay there arose such a clatter,\r\n\r\nThe Commander sprang from {Commander.Det} bed to see what's the matter.\r\n\r\nAway to the comscreen {Commander.Subj} flew like a flash,\r\n\r\nTyped in her password and opened the dash.",
+        "Icon" : "urbiemascard.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 10000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "Tags/CompanyTags",
+            "items" : []
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "RequirementComparisons" : []
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [
+        {
+            "Scope" : "SecondaryMechWarrior",
+            "Requirements" : {
+                "Scope" : "SecondaryMechWarrior",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "Tags/PilotTags",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Continue",
+                "Details" : "Continue",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Continue",
+                        "Details" : "The lights on the floor of the freshly scrubbed mech bays\r\n\r\nGave the lustre of mid-day to mech techs in a daze.\r\n\r\nAnd what to the Commander's eyes should appear,\r\n\r\nBut an out of place trash can, tucked in at the rear.\r\n\r\n\r\nAnd then, in a twinkling, {Commander.Subj} saw on the screen,\r\n\r\nAt the docking collar a pirate's shuttle in green.\r\n\r\nMad about urbies, Doctor Horvath ranted,\r\n\r\nWhile his hacks from the Argo, Dr. Farah unplanted.\r\n\r\n\r\nHorvath sprang on his console, to his pilot gave a whistle,\r\n\r\nAnd away the shuttle flew like the down of a thistle.\r\n\r\nBut I heard him exclaim, \u2018ere his image winked out of sight,\r\n\r\n\"Merry Christmas to all, and to all urbie night!\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+						{
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Morale",
+                                    "value" : "1",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : [
+                                {
+                                    "Type" : "Mech_AddRoster",
+                                    "value" : "mechdef_urbanmech_UM-XMAS",
+                                    "valueConstant" : null,
+                                    "additionalValues" : null
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}
