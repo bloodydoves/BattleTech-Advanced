@@ -1,0 +1,166 @@
+{
+	"Custom": {
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "[[Chassis.Tonnage]]/10",
+				"CBillCost": "250 * [[Chassis.Tonnage]] * [[Chassis.Tonnage]] / 50"
+			}
+		},
+		"Category": [
+			{
+				"CategoryID": "Armor"
+			},
+			{
+				"CategoryID": "StealthArmor"
+			}
+		],
+		"ArmorRepair": {
+			"ArmorTPCost": 1.25,
+			"ArmorCBCost": 1.35
+		},
+		"Flags": {
+			"flags": [
+				"not_broken",
+				"no_salvage"
+			]
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"EvaMax: +1",
+				"EvaPips: +1",
+				"Visibility: -30%"
+			]
+		}
+	},
+	"Description": {
+		"Cost": 300000,
+		"Rarity": 5,
+		"Purchasable": true,
+		"Manufacturer": "Shengli Arms",
+		"Model": "Armor",
+		"UIName": "Stealth ",
+		"Id": "emod_armorslots_stealth_battlearmor",
+		"Name": "Stealth Armor",
+		"Details": "Developed by the Capellan Confederation, Stealth Armor is a modern day equivalent of the Star League era Null Signature System. Reserves 12 slots and requires an ECM.",
+		"Icon": "uixSvgIcon_action_end"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator"
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "MaxEvasion",
+				"Name": "EVASIVE MOVE",
+				"Details": "This unit generates an extra EVASIVE charge from movement actions (up to its maximum).",
+				"Icon": "uixSvgIcon_action_evasivemove"
+			},
+			"statisticData": {
+				"statName": "MaxEvasivePips",
+				"operation": "Int_Add",
+				"modValue": "1",
+				"modType": "System.Int32"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "GainEvasion",
+				"Name": "EVASIVE MOVE",
+				"Details": "This unit generates an extra EVASIVE charge from movement actions (up to its maximum).",
+				"Icon": "uixSvgIcon_action_evasivemove"
+			},
+			"statisticData": {
+				"statName": "EvasivePipsGainedAdditional",
+				"operation": "Int_Add",
+				"modValue": "1",
+				"modType": "System.Int32"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StealthArmor-visi",
+				"Name": "Active Stealth Armor",
+				"Details": "Provides increased Evasive bonus and reduced Visibility.",
+				"Icon": "uixSvgIcon_action_end"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "SpottingVisibilityMultiplier",
+				"operation": "Float_Multiply",
+				"modValue": "0.7",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "NotSet",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}

@@ -19,7 +19,8 @@
 				"IsPhysWeap",
 				"PhysWeapUnsteady",
 				"PhysWeapDamage: 1",
-				"PhysWeapStab: 0.5"
+				"PhysWeapStab: 0.5",
+				"PhysWeapAccuracy: +1"
 			]
 		},
 		"Flags": {
@@ -40,8 +41,8 @@
 		"Model": "Starblade",
 		"UIName": "Hatchet",
 		"Id": "Gear_Actuator_Prototype_Hatchet",
-		"Name": "Prototype Coventry StarBlade",
-		"Details": "The Hatchet is a melee weapon equipped to the Hatchetman as a prototype to test force multiplication benefits in close combat. This Starblade prototype is affixed permanently to the 'Mech's right arm. It may be damaged and disabled, but it can be repaired.",
+		"Name": "Coventry StarBlade",
+		"Details": "The Hatchet is a melee weapon equipped to the Hatchetman to test force multiplication benefits in close combat. This Starblade is affixed permanently to the 'Mech's right arm. It may be damaged and disabled, but it can be repaired.",
 		"Icon": "UixSvgIcon_specialEquip_Melee"
 	},
 	"BonusValueA": "",
@@ -206,6 +207,38 @@
                 "operation": "Set",
                 "modValue": "0.5",
                 "modType": "System.Single"
+            }
+        },
+		{
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "triggerLimit" : 0,
+                "extendDurationOnTrigger" : 0,
+                "specialRules" : "NotSet",
+                "effectTargetType" : "Creator",
+                "range" : 0,
+                "forcePathRebuild" : false,
+                "forceVisRebuild" : false,
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "StatusEffect-HatchetBaseAcc",
+                "Name" : "Hatchet Base Accuracy",
+                "Details" : "Hatchets gain +1 accuracy on their attacks.",
+                "Icon" : "uixSvgIcon_equipment_ActuatorLeg"
+            },
+            "nature" : "Buff",
+            "statisticData" : {
+                "statName" : "CBTBE_Physical_Weapon_Attack_Mod",
+                "operation": "Int_Add",
+                "modValue": "-1",
+                "modType": "System.Int32"
             }
         }
 	],

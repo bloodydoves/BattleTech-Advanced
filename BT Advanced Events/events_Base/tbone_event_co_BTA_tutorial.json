@@ -1,0 +1,197 @@
+{
+    "Description" : {
+        "Id" : "tbone_event_co_BTA_tutorial",
+        "Name" : "BT-A Live Fire Exercises",
+        "Details" : "[[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]] brings an item to your attention as you look over the latest company readiness assessment.\r\n\r\n\r\n\"Commander, the local militia has invited us to participate in their annual wargames, codenamed Battlefield Training - Advanced. Normally I'd decline an offer like this without bothering you, but they're actually willing to pay us a decent wage to participate on top of covering all repairs and refits out of their own stocks. Seems they don't have the personnel to play the parts of both Aggressor and Defender. What they do have is a surplus of training-spec [[DM.MechDefs[mechdef_urbanmech_UM-TD],UrbanMechs]] and Demolishers so they're willing to let us drop in as the Aggressor force. No salvage allowed, but I'm not sure we'd want a bunch of old Urbies anyway.\"\r\n\r\n\r\n\"We have a number of green pilots in the barracks, so this could be a good chance to let them get a feel for combat, as well as for you to see how they perform. We'd be deploying immediately, however. What do you think?\"",
+        "Icon" : "uixTxrSpot_DailyBriefing.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 0,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "items" : [
+                "DONOTFIRE"
+            ],
+            "tagSetSourceFile" : ""
+        },
+        "ExclusionTags" : {
+            "items" : [],
+            "tagSetSourceFile" : ""
+        },
+        "RequirementComparisons" : []
+    },
+    "AdditionalRequirements" : [
+        {
+            "Scope" : "Commander",
+            "RequirementTags" : {
+                "items" : [],
+                "tagSetSourceFile" : ""
+            },
+            "ExclusionTags" : {
+                "items" : [],
+                "tagSetSourceFile" : ""
+            },
+            "RequirementComparisons" : []
+        }
+    ],
+    "AdditionalObjects" : [],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Accept the invitation.",
+                "Details" : "Accept the invitation.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Accept the invitation.",
+                        "Details" : "\"You're telling me they're going to pay us <i>and</i> cover any repairs needed? We'd be fools not to. Let the militia know we'd be honored to take part in their wargames, XO.\"\n\r\n\r\n<b>A contract named 'BT-A Live Fire Exercises' has been added in the Command Center.</b>",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "items" : [],
+                                "tagSetSourceFile" : ""
+                            },
+                            "RemovedTags" : {
+                                "items" : [],
+                                "tagSetSourceFile" : ""
+                            },
+                            "Stats" : null,
+                            "Actions" : [
+                                {
+                                    "Type" : "System_AddContract",
+                                    "value" : "CaptureEscort_BTA_Training",
+                                    "valueConstant" : null,
+                                    "additionalValues" : [
+                                        "Locals",
+                                        "Locals"
+                                    ]
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+						{
+                            "Scope" : "Commander",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : ["Tutorial_PlotArmor"]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : [],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 1
+                        },
+                        {
+                            "Scope" : "AllMechWarriors",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "items" : [
+                                    "Tutorial_PlotArmor"
+                                ],
+                                "tagSetSourceFile" : ""
+                            },
+                            "RemovedTags" : {
+                                "items" : [],
+                                "tagSetSourceFile" : ""
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 1
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "items" : [],
+                    "tagSetSourceFile" : ""
+                },
+                "ExclusionTags" : {
+                    "items" : [],
+                    "tagSetSourceFile" : ""
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "Decline the invitation.",
+                "Details" : "Decline the invitation.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "Decline the invitation.",
+                        "Details" : "\"Tell the planetary militia we're sorry, but we won't be able to join them in their exercises. If we're going to build our skills, we'll need to sharpen our teeth against someone a little tougher. Besides, I don't relish the thought of taking a contract with no possibility of salvage.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "items" : [],
+                                "tagSetSourceFile" : ""
+                            },
+                            "RemovedTags" : {
+                                "items" : [],
+                                "tagSetSourceFile" : ""
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "items" : [],
+                    "tagSetSourceFile" : ""
+                },
+                "ExclusionTags" : {
+                    "items" : [],
+                    "tagSetSourceFile" : ""
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "items" : [],
+        "tagSetSourceFile" : "tags/EventTags"
+    }
+}

@@ -1,0 +1,127 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/e/p/erppc"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"PPCDEBUFF: 2"
+			]
+		}
+	},
+	"Category": "Energy",
+	"Type": "PPC",
+	"WeaponSubType": "PPC",
+	"MinRange": 0,
+	"MaxRange": 840,
+	"RangeSplit": [
+		210,
+		420,
+		690
+	],
+	"AmmoCategory": "NotSet",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 40,
+	"Damage": 68,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 0,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": 0,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 3,
+	"Instability": 20,
+	"WeaponEffectID": "WeaponEffect-Weapon_PPC",
+	"Description": {
+		"Cost": 350000,
+		"Rarity": 20,
+		"Purchasable": false,
+		"Manufacturer": "Kong Interstellar",
+		"Model": "Extended-Range PPC",
+		"UIName": "Enhanced ER PPC",
+		"Id": "Weapon_PPC_PPCER_Enhanced",
+		"Name": "Enhanced ER PPC",
+		"Details": "A rare and transitory technology, the Enhanced ER PPC dates to the Clan's Golden Century and served as a bridging design between the Star League ER PPC and the later full Clantech ER PPC. The weapon would be largely lost to history, until Clan Snow Raven dug the plans back up alongside the Pulverizer BattleMech and sold some to the Outworlds Alliance as part of their burgeoning alliance in the 3060s.",
+		"Icon": "uixSvgIcon_weapon_Energy"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "PPC",
+	"BattleValue": 0,
+	"InventorySize": 3,
+	"Tonnage": 7,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "NotSet",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDefPPC",
+				"Name": "SENSORS IMPAIRED",
+				"Details": "[AMT] Difficulty to all of this unit's attacks until its next activation.",
+				"Icon": "uixSvgIcon_status_sensorsImpaired"
+			},
+			"nature": "Debuff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "AccuracyModifier",
+				"operation": "Float_Add",
+				"modValue": "2.0",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "NotSet",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"component_type_lostech",
+			"range_extreme"
+		],
+		"tagSetSourceFile": ""
+	}
+}

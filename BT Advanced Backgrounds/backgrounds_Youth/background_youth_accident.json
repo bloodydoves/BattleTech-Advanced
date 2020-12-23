@@ -12,12 +12,20 @@
         "Scope" : "Company",
         "Requirements" : null,
         "AddedTags" : {
-            "items" : ["company_cat"],
+            "items" : [	"company_cat", 
+						"BTA_Team"
+						],
             "tagSetSourceFile" : ""
         },
         "RemovedTags" : null,
         "Stats" : [],
         "Actions" : [
+			{
+				"Type" : "MechWarrior_Fire",
+				"value" : "pilot_tbone_t-bone",
+				"valueConstant" : null,
+				"additionalValues" : null
+			},
 			{
 				"Type" : "MechWarrior_Fire",
 				"value" : "pilot_wb_Wulfbanes",
@@ -44,6 +52,18 @@
 			},
 			{
 				"Type" : "MechWarrior_Fire",
+				"value" : "pilot_lts_Shade",
+				"valueConstant" : null,
+				"additionalValues" : null
+			},
+			{
+				"Type" : "MechWarrior_Fire",
+				"value" : "pilot_tr_Turtrus",
+				"valueConstant" : null,
+				"additionalValues" : null
+			},			
+			{
+				"Type" : "MechWarrior_AddRoster",
 				"value" : "pilot_tbone_t-bone",
 				"valueConstant" : null,
 				"additionalValues" : null
@@ -74,12 +94,32 @@
 			},
 			{
 				"Type" : "MechWarrior_AddRoster",
-				"value" : "pilot_tbone_t-bone",
+				"value" : "pilot_lts_Shade",
 				"valueConstant" : null,
 				"additionalValues" : null
 			},
+			{
+				"Type" : "MechWarrior_AddRoster",
+				"value" : "pilot_tr_Turtrus",
+				"valueConstant" : null,
+				"additionalValues" : null
+			},
+			{
+				"Type": "System_ShowRewards",
+				"value": "itemCollection_loot_SpareParts",
+				"valueConstant": null,
+				"additionalValues": null
+			}
 		],
-        "ForceEvents" : null,
+        "ForceEvents" : [
+								{
+									"Scope" : "Company",
+									"EventID" : "tbone_event_co_BTA_tutorial",
+									"MinDaysWait" : 1,
+									"MaxDaysWait" : 1,
+									"Probability" : 100
+								}
+							],
         "TemporaryResult" : false,
         "ResultDuration" : 0
     },
@@ -87,6 +127,6 @@
     "UIOrdering" : 3,
     "OptionName" : "Pioneering Comrades",
 	"OptionMusicTrigger" : "",
-    "OptionDescription" : "The rest of your family died in a freak [[DM.BaseDescriptionDefs[LoreJumpShip],JumpShip]] accident, after which you discovered they had left nothing behind but piles of debt.\r\n\r\nAfter selling everything to settle the debt, you set off on your own, with only your family's ancestral [[DM.BaseDescriptionDefs[LoreAncestralBlackjack],Blackjack]] left to your name.\r\n\r\n+1 [[DM.BaseDescriptionDefs[StatMechWarriorPiloting],Piloting]], +1 [[DM.BaseDescriptionDefs[StatMechWarriorGuts],Guts]]",
-	"BioDescription" : "The rest of your family died in a freak JumpShip accident, after which you discovered they had left nothing behind but piles of debt. After selling everything to settle the debt, you set off on your own, with only your family's ancestral Blackjack left to your name.\r\n"
+    "OptionDescription" : "When deploying in the field, you have the best MechWarriors watching your back. You made friends with familiar faces early in your career.",
+	"BioDescription" : "When deploying in the field, you have the best MechWarriors watching your back. You made friends with familiar faces early in your career.\r\n"
 }

@@ -7,6 +7,8 @@
 		],
 		"BonusDescriptions": {
 			"Bonuses": [
+				"WpnCrits: +20%",
+				"WpnAccuracy: +1",
 				"MoveSpeed: 20"
 			]
 		}
@@ -52,7 +54,7 @@
 		"Details": "An improvement upon standard Medium Lasers, Extended-Range Medium Lasers extend their effective range at the cost of considerable heat generation. This particular laser has been specially calibrated to apply a debilitating electrical charge to the target on contact that interferes with the movement functions of the target, slowing them somewhat.",
 		"Icon": "uixSvgIcon_weapon_Energy"
 	},
-	"BonusValueA": "Speed Debuff",
+	"BonusValueA": "",
 	"BonusValueB": "",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",
@@ -148,9 +150,9 @@
       "statisticData": {
         "appliesEachTick": false,
         "effectsPersistAfterDestruction": false,
-        "statName": "RunSpeed",
-        "operation": "Float_Multiply",
-        "modValue": "0.8",
+        "statName": "CBTBE_RunMultiMod",
+		"operation": "Float_Add",
+        "modValue": "-0.2",
         "modType": "System.Single",
         "additionalRules": "NotSet",
         "targetCollection": "NotSet",

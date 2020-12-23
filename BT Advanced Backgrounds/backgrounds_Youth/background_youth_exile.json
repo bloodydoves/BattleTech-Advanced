@@ -34,7 +34,9 @@
 					"value" : "2",
 					"set" : false,
 					"valueConstant" : null
-				},
+				}
+			],
+			"Actions" : [
 				{
 					"Type" : "MechWarrior_Fire",
 					"value" : "pilot_at_Slapdash",
@@ -46,10 +48,23 @@
 					"value" : "pilot_at_Slapdash",
 					"valueConstant" : null,
 					"additionalValues" : null
-				}			
+				},
+				{
+					"Type": "System_ShowRewards",
+					"value": "itemCollection_loot_SpareParts",
+					"valueConstant": null,
+					"additionalValues": null
+				}
 			],
-			"Actions" : null,
-			"ForceEvents" : null,
+			"ForceEvents" : [
+								{
+									"Scope" : "Company",
+									"EventID" : "tbone_event_co_BTA_tutorial",
+									"MinDaysWait" : 1,
+									"MaxDaysWait" : 1,
+									"Probability" : 100
+								}
+							],
 			"TemporaryResult" : false,
 			"ResultDuration" : 0
 		},

@@ -2,7 +2,7 @@
     "Name": "FieldRepairs",
     "Enabled": true,
 	"Hidden": true,
-    "Version": "0.2.0",
+    "Version": "0.2.1.1",
     "Description": "Replaces armor damage with random criticals and structure damage representing real damage.",
     "Author": "IceRaptor",
     "Website": "https://github.com/IceRaptor/FieldRepairs",
@@ -11,6 +11,7 @@
     "DLLEntryPoint": "FieldRepairs.Mod.Init",
     "DependsOn" : [ "IRBTModUtils", "MechEngineer", "CustomComponents" ],
     "Settings": {
+		"EnableTBAS_Injuries" : false,
         "Debug" : true,
         "Trace" : false,
         "Skirmish" : {
@@ -71,7 +72,7 @@
         "CustomComponentCategories" : {
             "Gyros" : "Gyro",
             "EngineParts" : "EnginePart",
-            "Blacklisted" : [ "Armor", "Structure", "CASE", "PositiveQuirk", "Cockpit" ] 
+            "Blacklisted" : [ "Armor", "Structure", "CASE", "Quirk", "Cockpit" ] 
         },
         "HitPenalties" : {
             "MinArmorLossPerHit" : 0.2,
@@ -84,6 +85,8 @@
             "MaxAmmoRemaining" : 0.25
         },
         "LocalizedText" : {
+			"ARMOR_DAMAGE": "<color=#FF0000>ARMOR DAMAGE</color>\n",
+			"STRUCT_DAMAGE": "<color=#FF0000>STRUCTURE DAMAGE</color>\n",
             "COMP_DAMAGE" : "<color=#FF0000>COMPONENT DAMAGE</color>\n",
             "PILOT_DAMAGE" :  "<color=#FF0000>HEALTH DAMAGE</color>\n",
             "SKILL_DAMAGE" : "<color=#FF0000>SKILL PENALTY</color>\n",

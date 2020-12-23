@@ -1,198 +1,150 @@
 {
-  "DebugMode": true,
-  "VersionCheck": false,
-  "DebugSkirmishMode": false,
-  "EnableFlashpointOverrides": false,
-  "EnableAdditionalPlayerMechsForFlashpoints": false,
-  "RandomSpawns": {
-    "Enable": true,
-    "ExcludeContractTypes": [
+	"DebugMode": true,
+	"VersionCheck": false,
+	"DebugSkirmishMode": true,
+	"EnableFlashpointOverrides": false,
+	"EnableAdditionalPlayerMechsForFlashpoints": false,
+	"RandomSpawns": {
+		"Enable": true,
+		"EnableForFlashpoints": true,
+		"ExcludeContractTypes": [
 			"SoloDuel",
-			"DuoDuel",
-			"DefendBase",
-			"Story_1A_Retreat",
-			"Story_1B_Retreat",
-			"Story_2_ThreeYearsLater",
-			"Story_3_Axylus",
-			"Story_4_LiberationOfWeldry",
-			"Story_5_ServedCold",
-			"Story_6A_TreasureTrove",
-			"Story_6B_TreasureTrove",
-			"Story_7_GunboatDiplomacy",
-			"Story_8_Locura",
-			"Story_9_Downfall",
-			"Smithon_Attack",
-			"Smithon_Defense",
-			"Panzyr_Attack",
-			"Panzyr_Defense",
-			"Itrom_Attack",
-			"Itrom_Defense",
-			"Tyrlon_Attack"
+			"DuoDuel"
 		]
-  },
-  "HotDropProtection": {
-    "Enable": true,
-    "ExcludeContractTypes": ["SoloDuel", "DuoDuel"],
-    "GuardOnHotDrop": false,
-    "EvasionPipsOnHotDrop": 6,
-    "IncludeEnemies": true,
-    "IncludeAllyTurrets": false,
-    "IncludeEnemyTurrets": false
-  },
-  "AdditionalLances": {
-    "Enable": true,
-    "ExcludeContractTypes": [
-			"SoloDuel",
-			"DuoDuel",
-			"DefendBase",
-			"Story_1A_Retreat",
-			"Story_1B_Retreat",
-			"Story_2_ThreeYearsLater",
-			"Story_3_Axylus",
-			"Story_4_LiberationOfWeldry",
-			"Story_5_ServedCold",
-			"Story_6A_TreasureTrove",
-			"Story_6B_TreasureTrove",
-			"Story_7_GunboatDiplomacy",
-			"Story_8_Locura",
-			"Story_9_Downfall",
-			"Smithon_Attack",
-			"Smithon_Defense",
-			"Panzyr_Attack",
-			"Panzyr_Defense",
-			"Itrom_Attack",
-			"Itrom_Defense",
-			"Tyrlon_Attack",
-			"AttackDefend"
-		],
-    "IsPrimaryObjectiveIn": ["SimpleBattle", "ThreeWayBattle", "Rescue"],
-    "UseElites": false,
-    "UseDialogue": true,
-    "SkullValueMatters": true,
-    "BasedOnVisibleSkullValue": true,
-    "UseGeneralProfileForSkirmish": true,
-    "DisableWhenMaxTonnage": {
-      "Enable": true,
-      "Limited": false,
-      "LimitedToUnder": 300
-    },
-    "MatchAllyLanceCountToEnemy": false,
-	"HideObjective": true,
-	"ShowObjectiveOnLanceDetected": true,
-	"AlwaysDisplayHiddenObjectiveIfPrimary": false,
-	"MatchAllyLanceCountToEnemy": false,
-	"DropWeightInfluence": {
-		"Enable": false,
-		"GlobalEnemyChanceToSpawn": 0.05,
-		"GlobalAllyChanceToSpawn": 0.8,
-		"EnemySpawnInfluencePerHalfSkull": 0.1,
-		"AllySpawnInfluencePerHalfSkull": -0.1
 	},
-	"DisableAllies": false,
-	"DisableEnemies": false
-  },
-  "ExtendedLances": {
-    "Enable": true,
-    "Autofill": true,
-	"SkipWhenTaggedWithAny": ["lance_type_solo"],
-	"SkipWhenTaggedWithAll": [],
-	"SkipWhenExcludeTagsContain": ["no_extended_lance"],
-    "ExcludeContractTypes": ["SoloDuel", "DuoDuel"],
-    "LanceSizes": {
-      "5": [
-		{
-          "Faction": "ClanGhostBear",
-          "DifficultyMod": -1
-        },
-		{
-          "Faction": "ClanJadeFalcon",
-          "DifficultyMod": -1
-        },
-		{
-          "Faction": "ClanWolf",
-          "DifficultyMod": -1
-        }
-	  ],
-      "6": [
-		{
-			"Faction": "ComStar",
-			"DifficultyMod": -2
-		}
-	  ]
-    }
-  },
-  "ExtendedBoundaries": {
-    "Enable": true,
-    "ExcludeContractTypes": [
+	"HotDropProtection": {
+		"Enable": true,
+		"EnableForFlashpoints": true,
+		"ExcludeContractTypes": [
 			"SoloDuel",
-			"DuoDuel",
-			"Story_1A_Retreat",
-			"Story_1B_Retreat",
-			"Story_2_ThreeYearsLater",
-			"Story_3_Axylus",
-			"Story_4_LiberationOfWeldry",
-			"Story_5_ServedCold",
-			"Story_6A_TreasureTrove",
-			"Story_6B_TreasureTrove",
-			"Story_7_GunboatDiplomacy",
-			"Story_8_Locura",
-			"Story_9_Downfall",
-			"Smithon_Attack",
-			"Smithon_Defense",
-			"Panzyr_Attack",
-			"Panzyr_Defense",
-			"Itrom_Attack",
-			"Itrom_Defense",
-			"Tyrlon_Attack"
+			"DuoDuel"
 		],
-    "IncreaseBoundarySizeByPercentage": 0.5,
-    "Overrides": [
-      {
-        "MapId": "mapGeneral_frigidSteppes_iTnd",
-        "ContractTypeName": "CaptureBase",
-        "IncreaseBoundarySizeByPercentage": 0.75
-      },
-      {
-        "MapId": "mapGeneral_icyOutpost_iGlc",
-        "ContractTypeName": "CaptureBase",
-        "IncreaseBoundarySizeByPercentage": 0.75
-      },
-      {
-        "MapId": "mapGeneral_highPeak_iGlc",
-        "ContractTypeName": "SimpleBattle",
-        "IncreaseBoundarySizeByPercentage": 0.75
-      },
-      {
-        "ContractTypeName": "FireMission",
-        "IncreaseBoundarySizeByPercentage": 0.5
-      },
-	  {
-		"MapId": "mapGeneral_desertDam_aDes",
-		"ContractTypeName": "SimpleBattle",
-		"IncreaseBoundarySizeByPercentage": 0.55
-	  }
-    ]
-  },
-  "DynamicWithdraw": {
-    "Enable": false,
-    "ExcludeContractTypes": ["SoloDuel", "DuoDuel"],
-    "MinDistanceForZone": 50,
-    "MaxDistanceForZone": 400,
-    "DisorderlyWithdrawalCompatibility": false
-  },
-  "AI": {
-    "FollowPlayer": {
-      "Target": "LanceOrder",
-      "StopWhen": "OnEnemyDetected",
-      "MaxDistanceFromTargetBeforeSprinting": 120,
-      "TargetZoneRadius": 120,
-	  "Pathfinding": "Alternative"
-    }
-  },
-  "Spawners": {
-	"SpawnLanceAtEdgeBoundary": {
-		"MinBuffer": 100,
-		"MaxBuffer": 200
+		"GuardOnHotDrop": false,
+		"EvasionPipsOnHotDrop": 6,
+		"IncludeEnemies": true,
+		"IncludeAllyTurrets": false,
+		"IncludeEnemyTurrets": false
+	},
+	"AdditionalLances": {
+		"Enable": true,
+		"EnableForFlashpoints": true,
+		"ExcludeContractTypes": [
+			"SoloDuel",
+			"DuoDuel"
+		],
+		"IsPrimaryObjectiveIn": [
+			"SimpleBattle",
+			"CaptureBase"
+		],
+		"ExcludeFromAutocomplete": [
+			"DefendBase",
+			"FireMission"
+		],
+		"HideObjective": true,
+		"ShowObjectiveOnLanceDetected": true,
+		"AlwaysDisplayHiddenObjectiveIfPrimary": false,
+		"UseElites": true,
+		"UseDialogue": true,
+		"SkullValueMatters": true,
+		"BasedOnVisibleSkullValue": true,
+		"UseGeneralProfileForSkirmish": true,
+		"DisableWhenMaxTonnage": {
+			"Enable": true,
+			"Limited": false,
+			"LimitedToUnder": 300
+		},
+		"MatchAllyLanceCountToEnemy": false,
+		"DropWeightInfluence": {
+			"Enable": false,
+			"EnemySpawnInfluencePerHalfSkullAbove": 0.1,
+			"AllySpawnInfluencePerHalfSkullAbove": -0.1,
+			"EnemySpawnInfluencePerHalfSkullBelow": -0.1,
+			"AllySpawnInfluencePerHalfSkullBelow": 0.1
+		},
+		"DisableAllies": false,
+		"DisableEnemies": false
+	},
+	"ExtendedLances": {
+		"Enable": true,
+		"EnableForFlashpoints": true,
+		"Autofill": true,
+		"ExcludeContractTypes": [
+			"SoloDuel",
+			"DuoDuel"
+		],
+		"SkipWhenTaggedWithAny": [
+			"lance_type_solo"
+		],
+		"SkipWhenTaggedWithAll": [],
+		"SkipWhenExcludeTagsContain": [
+			"no_extended_lance"
+		],
+		"LanceSizes": {
+			"5": [],
+			"6": []
+		}
+	},
+	"ExtendedBoundaries": {
+		"Enable": true,
+		"EnableForFlashpoints": true,
+		"ExcludeContractTypes": [
+			"SoloDuel",
+			"DuoDuel"
+		],
+		"IncreaseBoundarySizeByPercentage": 0.3,
+		"Overrides": [
+			{
+				"MapId": "mapGeneral_frigidSteppes_iTnd",
+				"ContractTypeName": "CaptureBase",
+				"IncreaseBoundarySizeByPercentage": 0.75
+			},
+			{
+				"MapId": "mapGeneral_icyOutpost_iGlc",
+				"ContractTypeName": "CaptureBase",
+				"IncreaseBoundarySizeByPercentage": 0.75
+			},
+			{
+				"MapId": "mapGeneral_highPeak_iGlc",
+				"ContractTypeName": "SimpleBattle",
+				"IncreaseBoundarySizeByPercentage": 0.75
+			},
+			{
+				"ContractTypeName": "FireMission",
+				"IncreaseBoundarySizeByPercentage": 0.5
+			},
+			{
+				"MapId": "mapGeneral_desertDam_aDes",
+				"ContractTypeName": "SimpleBattle",
+				"IncreaseBoundarySizeByPercentage": 0.55
+			}
+		]
+	},
+	"DynamicWithdraw": {
+		"Enable": true,
+		"EnableForFlashpoints": true,
+		"ExcludeContractTypes": [
+			"SoloDuel",
+			"DuoDuel"
+		],
+		"MinDistanceForZone": 50,
+		"MaxDistanceForZone": 288,
+		"DisorderlyWithdrawalCompatibility": false
+	},
+	"AI": {
+		"FollowPlayer": {
+			"Pathfinding": "Alternative",
+			"Target": "LanceOrder",
+			"StopWhen": "OnEnemyDetected",
+			"MaxDistanceFromTargetBeforeSprinting": 120,
+			"TargetZoneRadius": 120,
+			"TimeToWaitForPathfinding": 60,
+			"TicksToWaitForPathfinding": 20
+		}
+	},
+	"Spawners": {
+		"SpawnLanceAtEdgeBoundary": {
+			"MinBuffer": 100,
+			"MaxBuffer": 200
+		}
 	}
-  }
 }

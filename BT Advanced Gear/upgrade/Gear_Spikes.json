@@ -1,0 +1,74 @@
+{
+	"Custom": {
+		"Flags": {
+            "flags": [
+				"not_broken",
+				"no_salvage",
+				"autorepair"
+            ]
+        },
+		"BonusDescriptions": {
+			"Bonuses": [
+				"KickDamageBonus: +10"
+			]
+		}
+    },
+    "StatName" : null,
+    "RelativeModifier" : 0,
+    "AbsoluteModifier" : 0,
+    "Description" : {
+        "Cost" : 1000000,
+        "Rarity" : 100,
+        "Purchasable" : false,
+        "Manufacturer" : "Bergan Industries",
+        "Model" : "Production",
+        "UIName" : "Spikes",
+        "Id" : "Gear_Spikes",
+        "Name" : "Leg Spikes",
+        "Details" : "Spikes are about as basic as mech weapon technology gets: take a big sharp wedge of metal, weld it to a mech's leg, kick people. Doesn't get any easier than that.",
+        "Icon" : "uixSvgIcon_equipment_ActuatorLeg"
+    },
+    "BonusValueA" : "+10 Melee Damage",
+    "BonusValueB" : "",
+    "ComponentType" : "Upgrade",
+    "ComponentSubType" : "NotSet",
+    "PrefabIdentifier" : "",
+    "BattleValue" : 0,
+    "InventorySize" : 1,
+    "Tonnage" : 0,
+    "AllowedLocations" : "LeftLeg,RightLeg",
+    "DisallowedLocations" : "All",
+    "CriticalComponent" : false,
+    "statusEffects" : [
+	    {
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : 2
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "effectTargetType" : "Creator"
+			},
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "Spikes-Kick_Damage",
+                "Name" : "Spikes Kick Damage",
+                "Details" : "Kick attacks deal 10 more damage.",
+                "Icon" : "uixSvgIcon_equipment_ActuatorArm"
+            },
+			"nature" : "Buff",
+            "statisticData" : {
+                "statName" : "CBTBE_Kick_Target_Damage_Mod",
+                "operation" : "Int_Add",
+                "modValue" : "10",
+                "modType" : "System.Int32"
+            }
+        }
+    ],
+    "ComponentTags" : {
+        "items" : [
+			"component_type_stock"
+		],
+        "tagSetSourceFile" : ""
+    }
+}

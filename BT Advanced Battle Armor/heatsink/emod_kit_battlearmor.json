@@ -1,0 +1,60 @@
+{
+    "Custom": {
+        "Cooling": {
+            "HeatSinkDefId": "Gear_HeatSink_Generic_Standard"
+        },
+        "WorkOrderCosts": {
+            "Default": {
+                "TechCost": "[[Chassis.Tonnage]] / 5",
+                "CBillCost": "10 * [[Chassis.Tonnage]] * [[Chassis.Tonnage]] / 10"
+            },
+            "Install": {
+                "TechCost": "[[Chassis.Tonnage]] / 5",
+                "CBillCost": "10 * [[Chassis.Tonnage]] * [[Chassis.Tonnage]] / 10"
+            }
+        },
+        "Category" : [
+          {"CategoryID": "Cooling"},
+          {"CategoryID": "EnginePart"}
+        ],
+		"Flags": {
+            "flags": [
+                "not_broken",
+                "no_salvage",
+                "autorepair"
+            ]
+        }
+    },
+    "DissipationCapacity": 200,
+    "Description": {
+        "Cost": 0,
+        "Rarity": 0,
+        "Purchasable": true,
+        "Manufacturer": "Clan",
+        "Model": "Engine Kit",
+        "UIName": "Battle Armor Heat Sink Kit",
+        "Id": "emod_kit_battlearmor",
+        "Name": "Engine Kit Battle Armor",
+        "Details": "Lets BA function.",
+        "Icon": "thermometer-cold"
+    },
+    "BonusValueA": "",
+    "BonusValueB": "",
+    "ComponentType": "HeatSink",
+    "ComponentSubType": "Heatsink",
+    "PrefabIdentifier": "",
+    "BattleValue": 0,
+    "InventorySize": 1,
+    "Tonnage": 0,
+    "AllowedLocations": "All",
+    "DisallowedLocations": "All",
+    "CriticalComponent": false,
+    "statusEffects": null,
+    "ComponentTags": {
+        "items": [
+            "component_type_stock",
+            "BLACKLISTED"
+        ],
+        "tagSetSourceFile": ""
+    }
+}
