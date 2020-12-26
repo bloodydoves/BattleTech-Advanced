@@ -1,0 +1,103 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/s/m/melee"
+			},
+			{
+				"CategoryID": "ArmHandActuator"
+			}
+		],
+		"ArmActuator": {
+			"Type": "PartHand"
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"PhysWeapDamageBonus: 50%"
+			]
+		},
+		"Flags": {
+			"flags": [
+				"no_salvage"
+			]
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 10000,
+		"Rarity": 1,
+		"Purchasable": false,
+		"Manufacturer": "Hollis",
+		"Model": "Digger Claw",
+		"UIName": "Digger Claw",
+		"Id": "Gear_Actuator_DiggerClaw",
+		"Name": "Industrial Digger Claw",
+		"Details": "Used for digging and clearing rubble during excavations, this claw serves a decent purpose in melee between mechs. It has proven effective, if crude, at holding enemies in place while other tools tear into them, enhancing damage from melee weapons.",
+		"Icon": "uixSvgIcon_equipment_ActuatorArm"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 2,
+	"Tonnage": 1,
+	"AllowedLocations": "Arms",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+            "durationData" : {
+                "duration" : -1,
+                "ticksOnActivations" : false,
+                "useActivationsOfTarget" : false,
+                "ticksOnEndOfRound" : false,
+                "ticksOnMovements" : false,
+                "stackLimit" : -1,
+                "clearedWhenAttacked" : false
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "triggerLimit" : 0,
+                "extendDurationOnTrigger" : 0,
+                "specialRules" : "NotSet",
+                "effectTargetType" : "Creator",
+                "range" : 0,
+                "forcePathRebuild" : false,
+                "forceVisRebuild" : false,
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "StatusEffect-DiggerClawMelee",
+                "Name" : "MELEE DAMAGE INCREASED",
+                "Details" : "Melee attacks deal 50% more damage.",
+                "Icon" : "uixSvgIcon_equipment_ActuatorArm"
+            },
+            "nature" : "Buff",
+            "statisticData" : {
+                "appliesEachTick" : false,
+                "effectsPersistAfterDestruction" : false,
+                "statName" : "CBTBE_Physical_Weapon_Target_Damage_Multi",
+                "operation" : "Float_Multiply",
+                "modValue" : "1.5",
+                "modType" : "System.Single",
+                "additionalRules" : "NotSet"
+            },
+            "tagData" : null,
+            "floatieData" : null,
+            "actorBurningData" : null,
+            "vfxData" : null,
+            "instantModData" : null,
+            "poorlyMaintainedEffectData" : null
+        }
+	],
+	"ComponentTags": {
+		"items": [],
+		"tagSetSourceFile": ""
+	}
+}
