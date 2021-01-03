@@ -1,0 +1,97 @@
+{
+    "Custom": {
+        "Category": [
+			{"CategoryID": "Cockpit"}
+        ],
+        "BonusDescriptions": {
+            "Bonuses": [
+                "CalledShot",
+				"PenaltyCalledShot: 25%",
+				"IsCockpit"
+            ]
+        }
+    },
+    "StatName": null,
+    "RelativeModifier": 0,
+    "AbsoluteModifier": 0,
+    "Description": {
+        "Cost": 750000,
+        "Rarity": 7,
+        "Purchasable": true,
+        "Manufacturer": "Mendham Electronics",
+        "Model": "Called Shot",
+        "UIName": "Location Designator FCS",
+        "Id": "Gear_TargetingTrackingSystem_CalledShot",
+        "Name": "Location Designator",
+        "Details": "A specific piece of equipment, the Location Designator FCS permits a mech pilot to single out a location on an enemy unit and attempt to place heavy fire into that specific location. This ability is extremely coveted by pilots but comes with a cost. Because of the finely-tuned precision scanners, the Location Designator FCS does not track targets well. In practical terms, this means that the FCS merely permits general targeting of the location, not accurate targeting of that location. Still, the trade-off is generally acceptable to pilots and the Location Designator FCS was an instant hit among mechwarriors.",
+        "Icon": "uixSvgIcon_equipment_TTS"
+    },
+    "BonusValueA": "",
+    "BonusValueB": "",
+    "ComponentType": "Upgrade",
+    "ComponentSubType": "NotSet",
+    "PrefabIdentifier": "",
+    "BattleValue": 0,
+    "InventorySize": 1,
+    "Tonnage": 1,
+    "AllowedLocations": "Head",
+    "DisallowedLocations": "All",
+    "CriticalComponent": false,
+    "statusEffects": [
+		{
+            "durationData": {
+                "duration": -1
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "effectTargetType": "Creator"
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "LocDes-CalledShotAllow",
+                "Name": "True Called Shot",
+                "Details": "PASSIVE: Making a Precision Strike gives the Called Shot interface.",
+                "Icon": "uixSvgIcon_ability_precisionstrike"
+            },
+            "statisticData": {
+                "statName": "IRTCalledShotAlwaysAllow",
+                "operation": "Set",
+                "modValue": "true",
+                "modType": "System.Boolean"
+            },
+            "nature": "Buff"
+        },
+		{
+			"durationData" :
+			{
+				"duration" : -1
+			},
+			"targetingData" : 
+			{
+				"effectTriggerType" : "OnActivation",
+				"effectTargetType" : "Creator"
+			},
+			"effectType" : "StatisticEffect",
+			"Description" :
+			{
+				"Id" : "LocDes-CalledShotWeaken",
+				"Name" : "Weakened Called Shot",
+				"Details" : "Called Shots less reliable",
+				"Icon" : "uixSvgIcon_ability_mastertactician"
+			},
+			"statisticData" : 
+			{
+				"statName" : "CalledShotBonusMultiplier",
+				"operation" : "Float_Multiply",
+				"modValue" : "0.75",
+				"modType" : "System.Single"
+			}
+		}
+    ],
+    "ComponentTags": {
+        "items": [
+            "component_type_stock"
+        ],
+        "tagSetSourceFile": ""
+    }
+}
