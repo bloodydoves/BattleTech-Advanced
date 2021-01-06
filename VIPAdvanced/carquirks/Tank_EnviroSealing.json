@@ -1,10 +1,5 @@
 {
 	"Custom": {
-		"Category": [
-			{
-				"CategoryID": "MotiveSystemRight"
-			}
-		],
 		"Flags": {
 			"flags": [
 				"not_broken",
@@ -12,47 +7,44 @@
 				"autorepair"
 			]
 		},
-		"BonusDescriptions": {
-			"Bonuses": [
-				"WheeledMotive",
-				"MotiveSystemCrit",
-				"ArmoredMotive",
-				"DamageTaken: -5%",
-				"CritRes: 20%"
-			]
+		"Weights": {
+			"StructureFactor": 2
 		},
-		"VehicleCriticalEffects": {
-			"LinkedStatisticName": "VehicleMotiveWheeledCrits",
-			"PenalizedEffectIDs": [
-				[
-					"CriticalEffect-VehicleMotiveArmored"
-				],
-				[
-					"CriticalEffect-VehicleMotiveArmored2"
-				],
-				[
-					"CriticalEffect-VehicleMotiveCruiseWheeledCrit1",
-					"CriticalEffect-VehicleMotiveFlankWheeledCrit1",
-					"CriticalEffect-MotiveTankCritPenalty2"
-				]
-			],
-			"OnDestroyedEffectIDs": [
-				"CriticalEffect-VehicleMotiveCruiseWheeledCrit2",
-				"CriticalEffect-VehicleMotiveFlankWheeledCrit2",
-				"CriticalEffect-MotiveTankCritPenalty3"
-			]
-		}
+		"StructureRepair": {
+			"StructureTPCost": 1.25,
+			"StructureCBCost": 1.25
+		},
+		"Category": [
+			{
+				"CategoryID": "Structure"
+			}
+		]
+	},
+	"BonusDescriptions": {
+		"Bonuses": [
+			"FullyAmphibious",
+			"CASE",
+			"BreachImmunity",
+			"DamageTaken: -5%",
+			"CritRes: 20%",
+			"StructureTPCost: +25%",
+			"StructureCBCost: +25%"
+		]
+	},
+	"CASE": {
+		"MaximumDamage": 0,
+		"AllLocations": true
 	},
 	"Description": {
-		"Cost": 0,
+		"Cost": 150000,
 		"Rarity": 99,
 		"Purchasable": true,
 		"Manufacturer": "Generic",
-		"Model": "Wheeled Propulsion",
-		"UIName": "Wheeled Propulsion",
-		"Id": "Gear_Armored_Wheeled_Right",
-		"Name": "Wheeled Propulsion",
-		"Details": "Wheeled Propulsion",
+		"Model": "Environmental Sealing",
+		"UIName": "Environmental Sealing",
+		"Id": "Tank_EnviroSealing",
+		"Name": "Environmental Sealing",
+		"Details": "Environmental Sealing is a series of filters, air tanks, hermetic seals, and scrubbers that allow a unit to operate in hostile environments like the vacuum of space, under water, or toxic waste dumps. All BattleMechs, AeroSpace and Conventional Fighters, DropShips, and submarine vehicles include environmental sealing as part of their construction. This sealing takes up no additional weight or space as it's built into the unit. Other units, like IndustrialMechs and combat vehicles, can be equipped with environmental sealing at a cost of 10% of the unit's weight.",
 		"Icon": "uixSvgIcon_equipment_HeatBank"
 	},
 	"BonusValueA": "",
@@ -106,6 +98,29 @@
 		},
 		{
 			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator"
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "BreachImmunity",
+				"Name": "BreachImmunity",
+				"Details": "Immune to Hull Breach",
+				"Icon": "uixSvgIcon_ability_precisionstrike"
+			},
+			"statisticData": {
+				"statName": "CBTBE_HullBreachImmunity",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
 				"duration": -1,
 				"stackLimit": -1
 			},
@@ -116,7 +131,7 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "TankCritPenalizedMotiveR",
+				"Id": "TankCritPenalizedCrew",
 				"Name": "ChargerSprint",
 				"Details": "MORE SPEED.",
 				"Icon": "uixSvgIcon_run_n_gun"

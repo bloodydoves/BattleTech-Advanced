@@ -1,43 +1,28 @@
 {
 	"Custom": {
-		"Category": [
-			{
-				"CategoryID": "MotiveSystemLeft"
-			}
-		],
 		"Flags": {
 			"flags": [
 				"not_broken",
 				"no_salvage",
 				"autorepair"
 			]
-		},
-		"BonusDescriptions": {
-			"Bonuses": [
-				"HoverMotive",
-				"MotiveSystemCrit",
-				"CritRes: -10%"
-			]
-		},
-		"VehicleCriticalEffects": {
-			"LinkedStatisticName": "VehicleMotiveHoverCrits",
-			"OnDestroyedEffectIDs": [
-				"CriticalEffect-VehicleMotiveCruiseHoverCrit1",
-				"CriticalEffect-VehicleMotiveFlankHoverCrit1",
-				"CriticalEffect-MotiveTankCritPenalty3"
-			]
 		}
 	},
+	"BonusDescriptions": {
+		"Bonuses": [
+			"CritRes: 20%"
+		]
+	},
 	"Description": {
-		"Cost": 0,
+		"Cost": 1,
 		"Rarity": 99,
 		"Purchasable": true,
 		"Manufacturer": "Generic",
-		"Model": "Hover Propulsion",
-		"UIName": "Hover Propulsion",
-		"Id": "Gear_Hover_Left",
-		"Name": "Hover Propulsion",
-		"Details": "Hover Propulsion",
+		"Model": "Infantry Compartment",
+		"UIName": "Infantry Compartment",
+		"Id": "Tank_InfantryCompartment",
+		"Name": "Infantry Compartment",
+		"Details": "This is where infantry goes, if and when we get infantry. It reduces crit chance to represent the dead space in the vehicle where there's nothing vital to hit.",
 		"Icon": "uixSvgIcon_equipment_HeatBank"
 	},
 	"BonusValueA": "",
@@ -64,7 +49,7 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "TankCritPenalizedMotiveL",
+				"Id": "TankCritPenalizedCrew",
 				"Name": "ChargerSprint",
 				"Details": "MORE SPEED.",
 				"Icon": "uixSvgIcon_run_n_gun"
@@ -72,7 +57,7 @@
 			"statisticData": {
 				"statName": "CriticalHitChanceReceivedMultiplier",
 				"operation": "Float_Multiply",
-				"modValue": "1.1",
+				"modValue": "0.8",
 				"modType": "System.Single"
 			},
 			"nature": "Buff"
