@@ -8,6 +8,116 @@
 	"CustomParts": {
 		"FiringArc": 360
 	},
+	"CustomParts": {
+		"AlternateRepresentations": [
+			{
+				"PrefabIdentifier": "chrprfmech_urbielordbase-001",
+				"AdditionalPrefabs": [],
+				"PrefabBase": "urbielord",
+				"HardpointDataDef":"hardpointdatadef_urbielord",
+				"Type": "AirMech",
+				"FlyHeight": 8.0,
+				"AirMechVerticalJets":[]
+			}
+		]
+	},
+	"FixedEquipment": [
+		{
+			"MountedLocation": "Head",
+			"ComponentDefID": "Gear_Avionics_UM",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional",
+			"prefabName": "",
+			"hasPrefabName": true
+		},
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "emod_Engine_LAM",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "emod_structureslots_standard",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional",
+			"prefabName": "",
+			"hasPrefabName": true
+		},
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "emod_engine_090",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "emod_avionics_size1",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "emod_avionics_size1",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "Gear_JumpJet_Generic_LAM",
+			"SimGameUID": "",
+			"ComponentDefType": "JumpJet",
+			"HardpointSlot": -1,
+			"IsFixed": false,
+			"DamageLevel": "Functional",
+			"prefabName": "",
+			"hasPrefabName": true
+		},
+		{
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "Gear_JumpJet_Generic_LAM",
+			"SimGameUID": null,
+			"ComponentDefType": "JumpJet",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "Gear_JumpJet_Generic_LAM",
+			"SimGameUID": null,
+			"ComponentDefType": "JumpJet",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		}
+	],
 	"Description": {
 		"Cost": 1900000,
 		"Rarity": 0,
@@ -22,9 +132,9 @@
 	},
 	"MovementCapDefID": "movedef_urbanmech_UM-R60",
 	"PathingCapDefID": "pathingdef_light",
-	"HardpointDataDefID": "hardpointdatadef_urbielord",
-	"PrefabIdentifier": "chrprfmech_urbielordbase-001",
-	"PrefabBase": "urbielord",
+	"HardpointDataDefID": "hardpointdatadef_urbie",
+	"PrefabIdentifier": "chrprfmech_urbiebase-001",
+	"PrefabBase": "urbie",
 	"Tonnage": 30,
 	"InitialTonnage": 3,
 	"weightClass": "LIGHT",
@@ -69,6 +179,10 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
 					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				},
@@ -88,6 +202,10 @@
 			"Hardpoints": [
 				{
 					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				},
 				{
@@ -198,82 +316,6 @@
 			"x": 1.5,
 			"y": 3,
 			"z": 0.5
-		}
-	],
-	"FixedEquipment": [
-		{
-			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "Gear_Quirk_NarrowProfile_Urbanmech",
-			"SimGameUID": "",
-			"ComponentDefType": "Upgrade",
-			"HardpointSlot": -1,
-			"IsFixed": true,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_Engine_LAM",
-			"SimGameUID": null,
-			"ComponentDefType": "HeatSink",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "emod_engineslots_size2",
-			"SimGameUID": null,
-			"ComponentDefType": "HeatSink",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "RightTorso",
-			"ComponentDefID": "emod_engineslots_size2",
-			"SimGameUID": null,
-			"ComponentDefType": "HeatSink",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_armorslots_LAM",
-			"ComponentDefType": "Upgrade",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional",
-			"prefabName": "",
-			"hasPrefabName": true
-		},
-		{
-			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_structureslots_LAM",
-			"ComponentDefType": "Upgrade",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional",
-			"prefabName": "",
-			"hasPrefabName": true
-		},
-		{
-			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "Gear_PartialWing_Generic_Standard30",
-			"SimGameUID": "",
-			"ComponentDefType": "JumpJet",
-			"HardpointSlot": -1,
-			"IsFixed": false,
-			"DamageLevel": "Functional",
-			"prefabName": "",
-			"hasPrefabName": true
 		}
 	],
 	"VariantName": "UM-LAM",
