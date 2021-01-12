@@ -177,6 +177,33 @@
 				"effectTriggerType": "Passive",
 				"effectTargetType": "Creator",
 				"forcePathRebuild": true,
+				"showInStatusPanel": false
+			  },
+			  "effectType": "StatisticEffect",
+			  "Description": {
+				"Id": "StatusEffect-LAM-AirMech-TerrainIgnore",
+				"Name": "AirMech mode",
+				"Details": "AirMech mode",
+				"Icon": "uixSvgIcon_equipment_Gyro"
+			  },
+			  "nature": "Buff",
+			  "statisticData": {
+				"effectsPersistAfterDestruction": false,
+				"statName": "CUDesignMasksUnaffected",
+				"operation": "Set",
+				"modValue": "True",
+				"modType": "System.Boolean"
+			  }
+			},
+			{
+			  "durationData": {
+				"duration": -1,
+				"stackLimit": -1,
+			  },
+			  "targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"forcePathRebuild": true,
 				"showInStatusPanel": true
 			  },
 			  "effectType": "StatisticEffect",
@@ -239,7 +266,7 @@
 				"statisticData": {
 					"statName": "DamageReductionMultiplierAll",
 					"operation": "Float_Multiply",
-					"modValue": "1.15",
+					"modValue": "1.1",
 					"modType": "System.Single"
 				}
 			}
@@ -269,7 +296,7 @@
         "BonusDescriptions": {
             "Bonuses": [
                 "Avionics",
-				"LAMDamageTaken: 15%",
+				"LAMDamageTaken: 10%",
 				"LAMStabTaken: 15",
 				"LAMWalkSpeed: 100%",
 				"LAMSprintSpeed: +0.2"
