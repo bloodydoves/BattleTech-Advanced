@@ -1,0 +1,136 @@
+{
+	"Custom": {
+		"Category": [
+			{
+            "CategoryID": "StandardJJ"
+			}
+		],
+		"Flags": {
+            "flags": [
+                "not_broken",
+                "no_salvage"
+            ]
+        },
+        "BonusDescriptions": {
+            "Bonuses": [
+				"HeatPerTurn: -3",
+                "JumpCapacity: 1",
+				"JumpHeat: 3",
+				"MinWeightJJ: 10",
+				"MaxWeightJJ: 55",
+				"MaxCountJJ: 1"
+            ]
+        }
+    },
+    "JumpCapacity" : 1,
+    "MinTonnage" : 10,
+    "MaxTonnage" : 55,
+    "Description" : {
+        "Cost" : 30000,
+        "Rarity" : 0,
+        "Purchasable" : true,
+        "Manufacturer" : "Generic",
+        "Model" : "Standard",
+        "UIName" : "Jump Turbine (S)",
+        "Id" : "Gear_JumpJet_Generic_LAM",
+        "Name" : "LAM Jump Turbine",
+        "Details" : "LAM Jump Turbines are a specialized kind of jump jet, only compatible with Land-Air Mech systems and engines. In addition to being standard jump jets when in BattleMech mode, they provide increased thrust and lift in AirMech mode, assisting the LAM in its high speed maneuvering.",
+        "Icon" : "uixSvgIcon_action_jump"
+    },
+    "BonusValueA" : null,
+    "BonusValueB" : null,
+    "ComponentType" : "JumpJet",
+    "ComponentSubType" : "Functionality",
+    "PrefabIdentifier" : "JumpJet",
+    "BattleValue" : 0,
+    "InventorySize" : 1,
+    "Tonnage" : 0.5,
+    "AllowedLocations" : "Torso, Legs",
+    "DisallowedLocations" : "Head, Arms",
+    "CriticalComponent" : false,
+    "statusEffects": [
+		 {
+            "durationData": {
+                "duration": -1,
+                "stackLimit": -1
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "effectTargetType": "Creator",
+                "showInStatusPanel": false
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "StatusEffect-LAMTurbineHeat",
+                "Name": "PARTIAL WING SYSTEM",
+                "Details": "The partial wing system's large surface area efficiently radiates excess heat.",
+                "Icon": "uixSvgIcon_designMask_mineral"
+            },
+            "statisticData": {
+                "statName": "HeatSinkCapacity",
+                "operation": "Int_Add",
+                "modValue": "3",
+                "modType": "System.Int32"
+            },
+            "nature": "Buff"
+        },
+		{
+            "durationData": {
+                "duration": -1,
+                "stackLimit": -1
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "effectTargetType": "Creator",
+                "showInTargetPreview": false,
+                "showInStatusPanel": false
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "StatusEffect-JumpHeat",
+                "Name": "Jump Jet Heat",
+                "Details": "This Jump Jets Heat Generation per Hex",
+                "Icon": "uixSvgIcon_equipment_ThermalExchanger"
+            },
+            "nature": "Buff",
+            "statisticData": {
+                "statName": "JumpHeat",
+                "operation": "Float_Add",
+                "modValue": "3",
+                "modType": "System.Single"
+            }
+        },
+		{
+            "durationData": {
+                "duration": -1,
+                "stackLimit": -1
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "effectTargetType": "Creator",
+                "showInTargetPreview": false,
+                "showInStatusPanel": false
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "StatusEffect-JumpAmount",
+                "Name": "Jump Jet Amount",
+                "Details": "Max Jump Jet Amount per Walk MP",
+                "Icon": "uixSvgIcon_equipment_ThermalExchanger"
+            },
+            "nature": "Buff",
+            "statisticData": {
+                "statName": "JumpJetCountMultiplier",
+                "operation": "Set",
+                "modValue": "1",
+                "modType": "System.Single"
+            }
+        }
+	],
+    "ComponentTags" : {
+        "items" : [
+            "component_type_stock"
+        ],
+        "tagSetSourceFile" : ""
+    }
+}

@@ -1295,6 +1295,47 @@
                     ]
                 }
 			]
+		},
+		{
+			"tag" : "Affinity_LA_Bushie",
+			"chassisNames" : ["chrprfmech_bushwackerbase-001_55"],
+			"affinityLevels" : [
+				 {
+                    "missionsRequired" : 10,
+                    "levelName" : "Little Purple Tank",
+                    "decription" : "Hellion gains 20% damage reduction in her Bushwacker at all times.",
+                    "effectData" : 
+                    [
+                        {
+                            "Description": {
+                                "Details": "Hellion gains 20% damage reduction in her Bushwacker at all times.",
+                                "Icon": "layeredarmor",
+                                "Id": "StatusEffect-Affinity-LABushie",
+                                "Name": "Hellion Affinity Damage Reduction Boost"
+                            },
+                            "durationData": {
+                                "duration": -1,
+                                "stackLimit": -1
+                            },
+                            "effectType": "StatisticEffect",
+                            "nature": "Buff",
+                            "statisticData": {
+                                "statName": "DamageReductionMultiplierAll",
+								"operation": "Float_Multiply",
+								"modValue": "0.8",
+								"modType": "System.Single"
+                            },
+                            "targetingData": {
+                                "effectTargetType": "Creator",
+                                "effectTriggerType": "Passive",
+                                "hideApplicationFloatie": true,
+                                "showInStatusPanel": false,
+                                "showInTargetPreview": true
+                            }
+                        }
+                    ]
+                }
+			]
 		}
 	]
 }
