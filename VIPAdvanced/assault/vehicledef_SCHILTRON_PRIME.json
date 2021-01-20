@@ -1,19 +1,9 @@
 {
-	"Version": 1,
-	"Description": {
-		"Id": "vehicledef_SCHILTRON_PRIME",
-		"Name": "Schiltron Prime",
-		"Details": "",
-		"Icon": "Schiltron",
-		"Cost": 3593,
-		"Rarity": 0,
-		"Purchasable": false
-	},
-	"ChassisID": "vehiclechassisdef_SCHILTRON_PRIME",
 	"VehicleTags": {
 		"items": [
 			"mr-resize-1.50",
 			"unit_vehicle",
+			"unit_release",
 			"unit_assault",
 			"unit_wheeled",
 			"unit_lance_support",
@@ -55,26 +45,38 @@
 		],
 		"tagSetSourceFile": ""
 	},
+	"ChassisID": "vehiclechassisdef_SCHILTRON_PRIME",
+	"Description": {
+		"Cost": 20958198,
+		"Rarity": 0,
+		"Purchasable": false,
+		"UIName": "Schiltron Prime",
+		"Id": "vehicledef_SCHILTRON_PRIME",
+		"Name": "Schiltron Prime",
+		"Details": "Designed as an Omni vehicle, the Schiltron uses modular weapon ports similar to those used on OmniMechs allowing it to be quickly reconfigured for a variety of mission parameters.  Carrying only 10 tons of armor, the Schiltron is forced to stay well out of the line of fire, something that a top speed of 54 km/h does not always make possible. The base chassis carries a C3 Computer t, as well as a Guardian ECM Suite. The primary configuration of the Schiltron is intended for artillery support with an Arrow IV launcher fed by eight tons of ammunition. In case enemies get close, the Schiltron has a pair of Medium Lasers and four Small Lasers in a turret mount.\n\n <b><color=#ffcc00>Wheeled: Fast in open ground, slow in rough terrain.</color></b>\n\n <b><color=#ffcc00>Fusion: Expensive engine that works in a Vacuum.</color></b>\n\n <b><color=#ffcc00>Movement: 3/5 Hex: 90/150 Meters.</color></b>\n\n<b>Armor:</b> Ferro-Fibrous\n<b>Structure:</b> Structure\n<b>Values       A        S  </b>\n<b>Front</b>       391     40\n<b>Left</b>         210     40\n<b>Right</b>       210     40\n<b>Rear</b>        125     40\n<b>Turret</b>      280     40\n\n<b>Total</b>      1216    200\n",
+		"Icon": "Schiltron"
+	},
+	"Version": 1,
 	"Locations": [
 		{
 			"Location": "Front",
-			"CurrentArmor": 230,
+			"CurrentArmor": 391,
 			"CurrentInternalStructure": 40,
-			"AssignedArmor": 230,
+			"AssignedArmor": 391,
 			"DamageLevel": "Functional"
 		},
 		{
 			"Location": "Left",
-			"CurrentArmor": 170,
+			"CurrentArmor": 210,
 			"CurrentInternalStructure": 40,
-			"AssignedArmor": 170,
+			"AssignedArmor": 210,
 			"DamageLevel": "Functional"
 		},
 		{
 			"Location": "Right",
-			"CurrentArmor": 170,
+			"CurrentArmor": 210,
 			"CurrentInternalStructure": 40,
-			"AssignedArmor": 170,
+			"AssignedArmor": 210,
 			"DamageLevel": "Functional"
 		},
 		{
@@ -86,142 +88,217 @@
 		},
 		{
 			"Location": "Turret",
-			"CurrentArmor": 200,
+			"CurrentArmor": 280,
 			"CurrentInternalStructure": 40,
-			"AssignedArmor": 200,
+			"AssignedArmor": 280,
 			"DamageLevel": "Functional"
 		}
 	],
 	"inventory": [
 		{
+			"MountedLocation": "Front",
 			"ComponentDefID": "Weapon_ArrowIV",
 			"ComponentDefType": "Weapon",
-			"MountedLocation": "Front",
 			"HardpointSlot": 0,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Front",
 			"ComponentDefID": "Weapon_ArrowIV",
 			"ComponentDefType": "Weapon",
-			"MountedLocation": "Front",
-			"HardpointSlot": 1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Weapon_Laser_MediumLaser_0-STOCK",
-			"ComponentDefType": "Weapon",
-			"MountedLocation": "Turret",
 			"HardpointSlot": 0,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Turret",
 			"ComponentDefID": "Weapon_Laser_MediumLaser_0-STOCK",
 			"ComponentDefType": "Weapon",
-			"MountedLocation": "Turret",
-			"HardpointSlot": 1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Weapon_Laser_SmallLaser_0-STOCK",
-			"ComponentDefType": "Weapon",
-			"MountedLocation": "Turret",
 			"HardpointSlot": 2,
 			"DamageLevel": "Functional"
 		},
 		{
-			"ComponentDefID": "Weapon_Laser_SmallLaser_0-STOCK",
-			"ComponentDefType": "Weapon",
 			"MountedLocation": "Turret",
-			"HardpointSlot": 3,
+			"ComponentDefID": "Weapon_Laser_MediumLaser_0-STOCK",
+			"ComponentDefType": "Weapon",
+			"HardpointSlot": 2,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Turret",
 			"ComponentDefID": "Weapon_Laser_SmallLaser_0-STOCK",
 			"ComponentDefType": "Weapon",
-			"MountedLocation": "Turret",
 			"HardpointSlot": 4,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Turret",
 			"ComponentDefID": "Weapon_Laser_SmallLaser_0-STOCK",
 			"ComponentDefType": "Weapon",
-			"MountedLocation": "Turret",
-			"HardpointSlot": 5,
+			"HardpointSlot": 4,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Turret",
+			"ComponentDefID": "Weapon_Laser_SmallLaser_0-STOCK",
+			"ComponentDefType": "Weapon",
+			"HardpointSlot": 4,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Turret",
+			"ComponentDefID": "Weapon_Laser_SmallLaser_0-STOCK",
+			"ComponentDefType": "Weapon",
+			"HardpointSlot": 4,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Left",
+			"ComponentDefID": "Ammo_AmmunitionBox_Generic_ArrowIV",
+			"ComponentDefType": "AmmunitionBox",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Left",
+			"ComponentDefID": "Ammo_AmmunitionBox_Generic_ArrowIV",
+			"ComponentDefType": "AmmunitionBox",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Left",
+			"ComponentDefID": "Ammo_AmmunitionBox_Generic_ArrowIV",
+			"ComponentDefType": "AmmunitionBox",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Left",
+			"ComponentDefID": "Ammo_AmmunitionBox_Generic_ArrowIV",
+			"ComponentDefType": "AmmunitionBox",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Right",
+			"ComponentDefID": "Ammo_AmmunitionBox_Generic_ArrowIV",
+			"ComponentDefType": "AmmunitionBox",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Right",
+			"ComponentDefID": "Ammo_AmmunitionBox_Generic_ArrowIV",
+			"ComponentDefType": "AmmunitionBox",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Right",
+			"ComponentDefID": "Ammo_AmmunitionBox_Inferno_ArrowIV",
+			"ComponentDefType": "AmmunitionBox",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Right",
+			"ComponentDefID": "Ammo_AmmunitionBox_Inferno_ArrowIV",
+			"ComponentDefType": "AmmunitionBox",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
 			"ComponentDefID": "Weapon_C3_Master",
 			"ComponentDefType": "Weapon",
-			"MountedLocation": "Turret",
-			"HardpointSlot": 6,
+			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "Tank_FCS_Generic",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
 			"ComponentDefID": "Gear_Guardian_ECM",
 			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "Tank_Sensors_Generic",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "Gear_TargetingTrackingSystem_ARTEMISIV",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "Tank_CrewCompartment",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "emod_structureslots_standard",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1
+		},
+		{
+			"MountedLocation": "Left",
+			"ComponentDefID": "Gear_Wheeled_Left",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Right",
+			"ComponentDefID": "Gear_Wheeled_Right",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
 			"MountedLocation": "Rear",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
+			"ComponentDefID": "emod_armorslots_ferrosfibrous",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1
 		},
 		{
-			"ComponentDefID": "Ammo_AmmunitionBox_Inferno_ArrowIV",
-			"ComponentDefType": "AmmunitionBox",
-			"MountedLocation": "Right",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Ammo_AmmunitionBox_Inferno_ArrowIV",
-			"ComponentDefType": "AmmunitionBox",
-			"MountedLocation": "Right",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Ammo_AmmunitionBox_Generic_ArrowIV",
-			"ComponentDefType": "AmmunitionBox",
-			"MountedLocation": "Right",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Ammo_AmmunitionBox_Generic_ArrowIV",
-			"ComponentDefType": "AmmunitionBox",
-			"MountedLocation": "Right",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Ammo_AmmunitionBox_Generic_ArrowIV",
-			"ComponentDefType": "AmmunitionBox",
-			"MountedLocation": "Left",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Ammo_AmmunitionBox_Generic_ArrowIV",
-			"ComponentDefType": "AmmunitionBox",
-			"MountedLocation": "Left",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Ammo_AmmunitionBox_Generic_ArrowIV",
-			"ComponentDefType": "AmmunitionBox",
-			"MountedLocation": "Left",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Ammo_AmmunitionBox_Generic_ArrowIV",
-			"ComponentDefType": "AmmunitionBox",
-			"MountedLocation": "Left",
+			"MountedLocation": "Turret",
+			"ComponentDefID": "Tank_Turret",
+			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		},
 		{
 			"MountedLocation": "Rear",
 			"ComponentDefID": "emod_engine_220",
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Left",
+			"ComponentDefID": "emod_engineslots_size3",
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Right",
+			"ComponentDefID": "emod_engineslots_size3",
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
@@ -234,20 +311,6 @@
 			"DamageLevel": "Functional"
 		},
 		{
-			"MountedLocation": "Left",
-			"ComponentDefID": "emod_engineslots_size3",
-			"ComponentDefType": "HeatSink",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"MountedLocation": "Right",
-			"ComponentDefID": "emod_engineslots_size3",
-			"ComponentDefType": "HeatSink",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
-		},
-		{
 			"MountedLocation": "Rear",
 			"ComponentDefID": "Gear_HeatSink_Generic_Standard",
 			"ComponentDefType": "HeatSink",
@@ -262,31 +325,10 @@
 			"DamageLevel": "Functional"
 		},
 		{
-			"ComponentDefID": "Tank_Turret",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Turret",
-			"HardpointSlot": 1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Tank_CrewCompartment",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Front",
-			"HardpointSlot": 1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Gear_Tracked_Right",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Right",
-			"HardpointSlot": 1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Gear_Tracked_Left",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Left",
-			"HardpointSlot": 1,
+			"MountedLocation": "Rear",
+			"ComponentDefID": "Tank_Coolant_System",
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		}
 	]
