@@ -1,19 +1,9 @@
 {
-	"Version": 1,
-	"Description": {
-		"Id": "vehicledef_ROTTWEILER",
-		"Name": "Rotweiler",
-		"Details": "",
-		"Icon": "Rottweiler",
-		"Cost": 1793,
-		"Rarity": 3,
-		"Purchasable": false
-	},
-	"ChassisID": "vehiclechassisdef_ROTTWEILER",
 	"VehicleTags": {
 		"items": [
 			"mr-resize-1.50",
 			"unit_vehicle",
+			"unit_release",
 			"unit_heavy",
 			"unit_tracks",
 			"unit_lance_assassin",
@@ -22,29 +12,29 @@
 			"NoBiome_lunarVacuum",
 			"NoBiome_martianVacuum",
 			"unit_predator",
-			"magistracyofcanopus",
-			"marian",
-			"taurianconcordat",
-			"rasalhague",
-			"outworld",
-			"ives",
-			"elysia",
-			"oberon",
-			"valkyrate",
-			"circinus",
-			"illyrian",
-			"lothian",
-			"aurigandirectorate",
-			"auriganrestoration",
-			"hanse",
-			"castile",
-			"tortuga",
-			"auriganpirates",
-			"locals",
-			"auriganmercenaries",
-			"nofaction",
+			"MagistracyOfCanopus",
+			"Marian",
+			"TaurianConcordat",
+			"Rasalhague",
+			"Outworld",
+			"Ives",
+			"Elysia",
+			"Oberon",
+			"Valkyrate",
+			"Circinus",
+			"Illyrian",
+			"Lothian",
+			"AuriganDirectorate",
+			"AuriganRestoration",
+			"Hanse",
+			"Castile",
+			"Tortuga",
+			"AuriganPirates",
+			"Locals",
+			"AuriganMercenaries",
+			"NoFaction",
 			"MercenaryReviewBoard",
-			"betrayers",
+			"Betrayers",
 			"FlakJackals",
 			"LocalsBrockwayRefugees",
 			"SelfEmployed",
@@ -68,7 +58,6 @@
 			"PaladinProtectionLLC",
 			"HouseKhulan",
 			"INVALID_UNSET",
-			"NoFaction",
 			"Player1sMercUnit",
 			"Owner",
 			"Player2sMercUnit",
@@ -81,12 +70,24 @@
 		],
 		"tagSetSourceFile": ""
 	},
+	"ChassisID": "vehiclechassisdef_ROTTWEILER",
+	"Description": {
+		"Cost": 4077600,
+		"Rarity": 3,
+		"Purchasable": false,
+		"UIName": "Rottweiler",
+		"Id": "vehicledef_ROTTWEILER",
+		"Name": "Rottweiler",
+		"Details": "Slower than the Medium Tank, but possessing heavier armor and fire power, the Heavy Tank is a fearsome combatant. Packing a potent array of heavy weapons, the Heavy Tank is a serious threat to any Tank or Mech that encounters it.\n\n <b><color=#ffcc00>Tracked: High traction, agile turning.</color></b>\n\n <b><color=#ffcc00>ICE: Air breathing Combustion Engine. This unit can not deploy in thin atmosphere.</color></b>\n\n <b><color=#ffcc00>Movement: 4/6 Hex: 120/180 Meters.</color></b>\n\n<b>Armor:</b> Armor\n<b>Structure:</b> Structure\n<b>Values       A        S  </b>\n<b>Front</b>       170     30\n<b>Left</b>         140     30\n<b>Right</b>       140     30\n<b>Rear</b>        100     30\n<b>Turret</b>      154     30\n\n<b>Total</b>      704    150\n",
+		"Icon": "Rottweiler"
+	},
+	"Version": 1,
 	"Locations": [
 		{
 			"Location": "Front",
-			"CurrentArmor": 150,
+			"CurrentArmor": 170,
 			"CurrentInternalStructure": 30,
-			"AssignedArmor": 150,
+			"AssignedArmor": 170,
 			"DamageLevel": "Functional"
 		},
 		{
@@ -112,73 +113,120 @@
 		},
 		{
 			"Location": "Turret",
-			"CurrentArmor": 150,
+			"CurrentArmor": 154,
 			"CurrentInternalStructure": 30,
-			"AssignedArmor": 150,
+			"AssignedArmor": 154,
 			"DamageLevel": "Functional"
 		}
 	],
 	"inventory": [
 		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "Weapon_RocketLauncher_RL10_0_STOCK",
+			"ComponentDefType": "Weapon",
+			"HardpointSlot": 1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "Weapon_RocketLauncher_RL10_0_STOCK",
+			"ComponentDefType": "Weapon",
+			"HardpointSlot": 2,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
 			"ComponentDefID": "Weapon_Laser_TAG",
 			"ComponentDefType": "Weapon",
-			"MountedLocation": "Front",
 			"HardpointSlot": 0,
 			"DamageLevel": "Functional"
 		},
 		{
-			"ComponentDefID": "Weapon_RocketLauncher_RL10_0_STOCK",
-			"ComponentDefType": "Weapon",
-			"MountedLocation": "Front",
-			"HardpointSlot": 1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Weapon_RocketLauncher_RL10_0_STOCK",
-			"ComponentDefType": "Weapon",
-			"MountedLocation": "Front",
-			"HardpointSlot": 2,
-			"DamageLevel": "Functional"
-		},
-		{
+			"MountedLocation": "Turret",
 			"ComponentDefID": "Weapon_PPC_Light_0-STOCK",
 			"ComponentDefType": "Weapon",
-			"MountedLocation": "Turret",
 			"HardpointSlot": 0,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Turret",
 			"ComponentDefID": "Weapon_SRM_SSRM4_0-STOCK",
 			"ComponentDefType": "Weapon",
-			"MountedLocation": "Turret",
 			"HardpointSlot": 1,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Turret",
 			"ComponentDefID": "Weapon_SRM_SSRM4_0-STOCK",
 			"ComponentDefType": "Weapon",
+			"HardpointSlot": 1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Rear",
+			"ComponentDefID": "Ammo_AmmunitionBox_Streak_SRM",
+			"ComponentDefType": "AmmunitionBox",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Rear",
+			"ComponentDefID": "Ammo_AmmunitionBox_Streak_SRM",
+			"ComponentDefType": "AmmunitionBox",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "Tank_CrewCompartment",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "Tank_FCS_Generic",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "Tank_Sensors_Generic",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "emod_structureslots_standard",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1
+		},
+		{
+			"MountedLocation": "Left",
+			"ComponentDefID": "Gear_Tracked_Left",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Right",
+			"ComponentDefID": "Gear_Tracked_Right",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Rear",
+			"ComponentDefID": "emod_armorslots_standard",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1
+		},
+		{
 			"MountedLocation": "Turret",
-			"HardpointSlot": 2,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Ammo_AmmunitionBox_Streak_SRM",
-			"ComponentDefType": "AmmunitionBox",
-			"MountedLocation": "Rear",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Ammo_AmmunitionBox_Streak_SRM",
-			"ComponentDefType": "AmmunitionBox",
-			"MountedLocation": "Rear",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"MountedLocation": "Rear",
-			"ComponentDefID": "emod_engineslots_ICE_center",
-			"ComponentDefType": "HeatSink",
+			"ComponentDefID": "Tank_Turret",
+			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		},
@@ -191,37 +239,51 @@
 		},
 		{
 			"MountedLocation": "Rear",
-			"ComponentDefID": "Tank_Coolant_System",
+			"ComponentDefID": "emod_engineslots_ICE_center",
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		},
 		{
-			"ComponentDefID": "Tank_Turret",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Turret",
-			"HardpointSlot": 1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Tank_CrewCompartment",
-			"ComponentDefType": "Upgrade",
 			"MountedLocation": "Front",
-			"HardpointSlot": 1,
+			"ComponentDefID": "Gear_HeatSink_Generic_Standard",
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		},
 		{
-			"ComponentDefID": "Gear_Tracked_Right",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Right",
-			"HardpointSlot": 1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Gear_Tracked_Left",
-			"ComponentDefType": "Upgrade",
 			"MountedLocation": "Left",
-			"HardpointSlot": 1,
+			"ComponentDefID": "Gear_HeatSink_Generic_Standard",
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Left",
+			"ComponentDefID": "Gear_HeatSink_Generic_Standard",
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Right",
+			"ComponentDefID": "Gear_HeatSink_Generic_Standard",
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Right",
+			"ComponentDefID": "Gear_HeatSink_Generic_Standard",
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Rear",
+			"ComponentDefID": "Tank_Coolant_System",
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		}
 	]
