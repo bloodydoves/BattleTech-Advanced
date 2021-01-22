@@ -1,18 +1,35 @@
 {
+	"Custom": {
+		"VAssemblyVariant": {
+			"PrefabID": "Maxim",
+			"Exclude": false,
+			"Include": true
+		},
+		"CustomWeights": [
+			{
+				"ComponentDefID": "Tank_InfantryCompartment",
+				"Tonnage": 3
+			}
+		]
+	},
 	"CustomParts": {
-		"MoveCost": "Hover"
+		"MoveCost": "Hover",
+		"MoveClamp": 0.5
 	},
 	"Description": {
-		"Id": "vehiclechassisdef_APC_MAXIM",
-		"Name": "Maxim Hover Transport",
-		"Details": "",
-		"Icon": "Maxim",
-		"Cost": 993,
+		"Cost": 1876502,
 		"Rarity": 0,
-		"Purchasable": false
+		"Purchasable": false,
+		"UIName": "Maxim H-APC",
+		"Id": "vehiclechassisdef_APC_MAXIM",
+		"Name": "Maxim",
+		"Details": "APCs are not fighting vehicles, their main function is to transport infantry squads from one battle to another. However, many APC variants sacrifice troop capacity to mount significant weaponry.\n\n <b><color=#ffcc00>Hover: Fast on open ground and water, slow in rough terrain, not very agile.</color></b>\n\n <b><color=#ffcc00>ICE: Air breathing Combustion Engine. This unit can not deploy in thin atmosphere.</color></b>\n\n <b><color=#ffcc00>Movement: 8/12 Hex: 240/360 Meters.</color></b>\n\n<b>Armor:</b> Armor\n<b>Structure:</b> Structure\n<b>Values       A        S  </b>\n<b>Front</b>       104     25\n<b>Left</b>         100     25\n<b>Right</b>       100     25\n<b>Rear</b>         60     25\n<b>Turret</b>       80     25\n\n<b>Total</b>      444    125\n",
+		"Icon": "Maxim"
 	},
+	"YangsThoughts": "It's a tank, Boss, they all look the same to me.",
 	"MovementCapDefID": "movedef_8-12cv",
-	"PathingCapDefID": "pathingdef_medium_hover",
+	"movementType": "Wheeled",
+	"PathingCapDefID": "pathingdef_medium_wheeled",
 	"HardpointDataDefID": "hardpointdatadef_maxim",
 	"PrefabIdentifier": "chrprfvhcl_maxim",
 	"PrefabBase": "maxim",
@@ -21,7 +38,6 @@
 	"BattleValue": 993,
 	"TopSpeed": 85,
 	"TurnRadius": 90,
-	"movementType": "Wheeled",
 	"SpotterDistanceMultiplier": 1,
 	"VisibilityMultiplier": 0.85,
 	"SensorRangeMultiplier": 1,
@@ -81,7 +97,7 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 0,
-			"MaxArmor": 120,
+			"MaxArmor": 104,
 			"InternalStructure": 25
 		},
 		{
@@ -94,7 +110,7 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 0,
-			"MaxArmor": 120,
+			"MaxArmor": 100,
 			"InternalStructure": 25
 		},
 		{
@@ -107,7 +123,7 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 0,
-			"MaxArmor": 120,
+			"MaxArmor": 100,
 			"InternalStructure": 25
 		},
 		{
@@ -120,32 +136,32 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 0,
-			"MaxArmor": 100,
+			"MaxArmor": 60,
 			"InternalStructure": 25
 		},
 		{
 			"Location": "Turret",
 			"Hardpoints": [
 				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				},
+				{
 					"WeaponMount": "Missile",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "AntiPersonnel",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "AntiPersonnel",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 0,
-			"MaxArmor": 100,
+			"MaxArmor": 80,
 			"InternalStructure": 25
 		}
 	]
