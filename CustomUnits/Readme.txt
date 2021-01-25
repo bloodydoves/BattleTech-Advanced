@@ -142,7 +142,44 @@ new section
 
 VehicleChassis/Chassis
 "CustomParts":{
-    "SquadInfo": {            - ONLY for mech's chassis 
+    "AlternateRepresentations": [                                       - section where you can define alternate representation for your mech
+      {                                                                 
+        "PrefabIdentifier": "chrprfmech_vf11lambase-001",               - prefab identifier for alternate representation
+        "AdditionalPrefabs": [],                                        - list of additional prefabs for this representation (mostly needed for custom hardpoints)
+        "PrefabBase": "vf11lam",                                        - prefab base
+        "HardpointDataDef":"hardpointdatadef_vf11lam",                  - hardpoint definition
+        "Type": "AirMech",                                              - type (available values: Normal, AirMech)
+        "HoveringSoundStart": "jet_start",                              - hover sound start event. Default jet_start
+        "HoveringSoundEnd": "jet_end",									- hover sound start event. Default jet_end
+		"additionalEncounterTags": [ "unit_vtol" ],                     - encounter tags list will be applied to actor. Note: you should be careful with this option, 
+																		  tags in this list should not be equal to tags in contracts definitions otherwise you can break 
+																		  objectives logic. 
+        "FlyHeight": 15.0,                                              - Flying height
+        "AirMechVerticalJets":[                                         - list of jump jets
+          {
+            "Prefab":"vf11lam_vjets_left_leg",                          - prefab name
+            "Attach":"j_LHeel",                                         - attach bone
+            "JetsAttachPoints":["jetAttachPoint"]                       - name of transform where jet stream should be spawned
+          },
+          {
+            "Prefab":"vf11lam_vjets_right_leg",
+            "Attach":"j_RHeel",
+            "JetsAttachPoints":["jetAttachPoint"]
+          },
+          {
+            "Prefab":"vf11lam_vjets_torso",
+            "Attach":"j_Spine2",
+            "JetsAttachPoints":["jetAttachPoint"]
+          }
+        ]
+      }
+	  NOTE: to switch mech representation to alternate in battle you should create activatable component setting CUAlternateRepresentation statistic value
+	  example is in vf11lam/upgrades/Gear_LAMSwitcher
+	  CUAlternateRepresentation's value is zero based index of representation from AlternateRepresentations array where 0 is default representation defined in chassis
+	  Eg. if you want to show first alternate representation you should set value = 1 to it
+	  Unity project is in LAMExample.unitypackage
+    ] 
+	"SquadInfo": {            - ONLY for mech's chassis 
       "Troopers":5,           - units count in trooper squad, up to 8. If set as 1 no logic changing performed 
       "UnitSize": 0.2,        - unit scale
       "DeadUnitToHitMod": 9,  - to-hit mod when last trooper squad remain. Example squad - 4 units, DeadUnitToHitMod - 9. When all 4 units operational modifier = 0
