@@ -1,0 +1,1764 @@
+{
+	"enableLogging": true,
+	"useMissionXPforBonus": true,
+	"bonusXP_MissionMechKills": 0.05,
+	"bonusXP_MissionOtherKills": 0.025,
+	"bonusXP_MechKills": 50,
+	"bonusXP_OtherKills": 25,
+	"bonusXP_StrDamageMult": 0.0,
+	"bonusXP_ArmDamageMult": 0.0,
+	"bonusXP_CAP": -1,
+	"activeProbeXP_PerTarget": true,
+	"activeProbeXP": 25,
+	"sensorLockXP": 20,
+	"missionXPEffects": 0.025,
+	"missionXPeffectBonusDivisor": 20,
+	"reUseRestrictedbonusEffects_XP": {
+		"C3M-Effect": 25,
+		"TAG-Effect": 20,
+		"PLASMA-Effect": 20,
+		"AbilityDefPPC": 25,
+		"PainterEffect": 50,
+		"HAYWIRE-Effect": 50
+	},
+	"degradingbonusEffects_XP": {},
+	"bonusEffects_XP": {
+		"C3-TargetInfo": 1,
+		"C3i-TargetInfo": 1,
+		"ERLaser-WalkSlow": 10,
+		"Effect_DebuffLaserSensor": 10,
+		"Effect_AcidDMG": 1,
+		"BEES-Effect": 5,
+		"Tracer-Effect": 5,
+		"Flare-Effect": 2,
+		"Suppressant-Effect": 2
+	},
+	"MaxOpForSpecializations": 2,
+	"OpForTiersCountTowardMax": false,
+	"MaxMissionSpecializations": 2,
+	"MissionTiersCountTowardMax": false,
+	"TaggedOpforSpecsCountTowardMax": false,
+	"TaggedMissionSpecsCountTowardMax": false,
+	"WhiteListOpFor": [
+		"Davion",
+		"Liao",
+		"Kurita",
+		"Marik",
+		"Steiner",
+		"TaurianConcordat",
+		"MagistracyOfCanopus",
+		"AuriganDirectorate",
+		"AuriganRestoration",
+		"ComStar",
+		"AuriganPirates",
+		"Locals",
+		"Axumite",
+		"Castile",
+		"Chainelane",
+		"Circinus",
+		"ClanGhostBear",
+		"ClanJadeFalcon",
+		"ClanWolf",
+		"ClanNovaCat",
+		"Delphi",
+		"Hanse",
+		"Illyrian",
+		"JarnFolk",
+		"Lothian",
+		"Marian",
+		"Oberon",
+		"Outworld",
+		"Rasalhague",
+		"Tortuga",
+		"Valkyrate",
+		"WordOfBlake",
+		"Rim"
+	],
+	"WhiteListMissions": [
+		"SimpleBattle",
+		"DestroyBase",
+		"CaptureBase",
+		"DefendBase",
+		"CaptureEscort",
+		"Rescue",
+		"Assassinate",
+		"AmbushConvoy",
+		"FireMission",
+		"ThreeWayBattle",
+		"SoloDuel",
+		"DuoDuel",
+		"Blackout",
+		"AttackDefend"
+	],
+	"OpForSpecList": [
+		{
+			"OpForSpecID": "FS_Favor",
+			"OpForSpecName": "Federated Suns: Katherine's Favor",
+			"killsRequired": 12,
+			"factionID": "Davion",
+			"applyToFaction": [
+				"Davion"
+			],
+			"description": "The Archon has recognized this pilot as a famed killer of FedRats. Gain reputation with the Lyrans from contracts against the Federated Suns, and recieve 10% off in Lyran stores.",
+			"repMult": {
+				"Steiner": 0.8
+			},
+			"storeDiscount": {
+				"Steiner": -0.1
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "LA_Favor",
+			"OpForSpecName": "Lyran Alliance: Victor's Favor",
+			"killsRequired": 12,
+			"factionID": "Steiner",
+			"applyToFaction": [
+				"Steiner"
+			],
+			"description": "The First Prince has recognized this pilot as a famed killer of Lyran scum. Gain reputation with the FedSuns from contracts against the Lyran Alliance, and recieve 10% off in Davion stores.",
+			"repMult": {
+				"Davion": 0.8
+			},
+			"storeDiscount": {
+				"Davion": -0.1
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "FWL_Unsafe",
+			"OpForSpecName": "Free Worlds League: SAFEty Isn't Guaranteed",
+			"killsRequired": 12,
+			"factionID": "Marik",
+			"applyToFaction": [
+				"Marik"
+			],
+			"description": "This pilot has made a name for themself against the self-righteous FWL and Knights of the Inner Sphere. Gain reputation with the Marian Hegemony and the Circinus Federation from contracts against the Free Worlds League.",
+			"repMult": {
+				"Marian": 0.8,
+				"Circinus": 0.8
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "DC_Bushido",
+			"OpForSpecName": "Draconis Combine: The Way of Bushido",
+			"killsRequired": 12,
+			"factionID": "Kurita",
+			"applyToFaction": [
+				"Kurita"
+			],
+			"description": "The Coordinator himself has begrudgingly recognized this pilot's martial prowess. Lose less reputation when taking contracts against the Draconis Combine and get 10% better selling prices in their stores.",
+			"repMult": {
+				"Kurita": 0.25
+			},
+			"storeBonus": {
+				"Kurita": 0.1
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "CC_Moustache",
+			"OpForSpecName": "Capellan Confederation: Twirl That Moustache",
+			"killsRequired": 12,
+			"factionID": "Liao",
+			"applyToFaction": [
+				"Liao"
+			],
+			"description": "Nobody likes Capellans. Gain reputation with the other four Great Houses when taking contracts against the Capellan Confederation",
+			"repMult": {
+				"Kurita": 0.5,
+				"Davion": 0.5,
+				"Steiner": 0.5,
+				"Marik": 0.5
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "CS_Bills",
+			"OpForSpecName": "ComStar: Nobody Likes Their ISP",
+			"killsRequired": 12,
+			"factionID": "ComStar",
+			"applyToFaction": [
+				"ComStar"
+			],
+			"description": "Nobody likes paying their HPG bills. Gain reputation with all five Great Houses when taking contracts against ComStar",
+			"repMult": {
+				"Kurita": 0.5,
+				"Davion": 0.5,
+				"Steiner": 0.5,
+				"Marik": 0.5,
+				"Liao": 0.5
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "MC_Trinity",
+			"OpForSpecName": "Magistracy Of Canopus: Breaking the Trinity",
+			"killsRequired": 12,
+			"factionID": "MagistracyOfCanopus",
+			"applyToFaction": [
+				"MagistracyOfCanopus"
+			],
+			"description": "Some very interesting 'toys' tend to fall off the back of Canopian trucks. Take a 10% discount when buying and get 10% better prices when selling at the black market.",
+			"storeDiscount": {
+				"AuriganPirates": -0.1
+			},
+			"storeBonus": {
+				"ComStar": 0.1
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "TC_Oppressor",
+			"OpForSpecName": "Taurian Concordat: Oppressor of Freedom",
+			"killsRequired": 12,
+			"factionID": "TaurianConcordat",
+			"applyToFaction": [
+				"TaurianConcordat"
+			],
+			"description": "This pilot has made some connections with factions that are sick of hearing Taurians harp on about 'freedom'. Get a ¢10000 cash bounty for every Taurian unit the company destroys.",
+			"killBounty": {
+				"{EMPLOYER}": 10000
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "MH_Chainbreaker",
+			"OpForSpecName": "Marian Hegemony: Breaker of Chains",
+			"killsRequired": 12,
+			"factionID": "Marian",
+			"applyToFaction": [
+				"Marian"
+			],
+			"description": "The only thing worse than slavers are slavers wearing leather skirts pretending to be the salvation of civilization. Get bonus reputation with ComStar and your employer when taking contracts against the Marian Hegemony.",
+			"repMult": {
+				"ComStar": 0.5,
+				"{EMPLOYER}": 0.5
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "OA_Chainbringer",
+			"OpForSpecName": "Outworlds Alliance: Bringer of Chains",
+			"killsRequired": 12,
+			"factionID": "Outworld",
+			"applyToFaction": [
+				"Outworld"
+			],
+			"description": "Some folks are just born to be in chains. Get bonus reputation with the Tortuga Dominions when taking contracts against the Outworlds Alliance and get 12% better prices when selling in Tortugan stores.",
+			"repMult": {
+				"Tortuga": 0.5
+			},
+			"storeBonus": {
+				"Tortuga": 0.12
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "FRR_Upstarts",
+			"OpForSpecName": "Free Rasalhague Republic: Give Us Back Our Worlds",
+			"killsRequired": 12,
+			"factionID": "Rasalhague",
+			"applyToFaction": [
+				"Rasalhague"
+			],
+			"description": "About the only thing the Lyrans and the Kuritans agree on is that the Free Rasalhague Republic shouldn't exist. Gain reputation with the Combine and the Lyran Alliance when taking contracts against the FRR.",
+			"repMult": {
+				"Kurita": 0.8,
+				"Steiner": 0.8
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "AR_FreeReach",
+			"OpForSpecName": "Aurigan Restoration: Free the Reach!",
+			"killsRequired": 12,
+			"factionID": "AuriganRestoration",
+			"applyToFaction": [
+				"AuriganRestoration"
+			],
+			"description": "Kamea is nothing but an entitled brat throwing a temper tantrum because she lost her palace. The local governments of the Reach will pay you a cash bonus for contracts against the Aurigan Restoration.",
+			"cashMult": {
+				"Locals": 0.25
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "AD_TyrantBreaker",
+			"OpForSpecName": "Aurigan Directorate: Tyrant Breaker",
+			"killsRequired": 12,
+			"factionID": "AuriganDirectorate",
+			"applyToFaction": [
+				"AuriganDirectorate"
+			],
+			"description": "Kamea is a beacon of hope for the oppressed peoples of the Reach. Gain bonus reputation with the Restoration when taking contracts against the Directorate.",
+			"repMult": {
+				"AuriganRestoration": 1.0
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "RC_AmarisGoHome",
+			"OpForSpecName": "Rim Collection: Amaris or Am I Wrong",
+			"killsRequired": 12,
+			"factionID": "Rim",
+			"applyToFaction": [
+				"Rim"
+			],
+			"description": "The remnants of the Rim Worlds Republic are not to be trusted, even 300 years later. Gain reputation with Comstar when taking contracts against the Rim Collection and a 10% discount from ComStar stores.",
+			"repMult": {
+				"ComStar": 0.5
+			},
+			"storeDiscount": {
+				"ComStar": -0.1
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "CF_OrderChaos",
+			"OpForSpecName": "Circinus Federation: Order To the Chaos",
+			"killsRequired": 12,
+			"factionID": "Circinus",
+			"applyToFaction": [
+				"Circinus"
+			],
+			"description": "This pilot has taken to bringing some order to the chaos of the anti-spinward Periphery. Gain reputation with the FWL when taking contracts against the Circinus Federation. Also get a 10% discount in stores belonging to the Marian Hegemony.",
+			"repMult": {
+				"Marik": 0.5
+			},
+			"storeDiscount": {
+				"Marian": -0.1
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "TD_PiracyDontPay",
+			"OpForSpecName": "Tortuga Dominions: Piracy Doesn't Pay",
+			"killsRequired": 12,
+			"factionID": "Tortuga",
+			"applyToFaction": [
+				"Tortuga"
+			],
+			"description": "Someone clever once said piracy doesn't pay. Piracy might not, but bounties sure do. Gain bonus cash when taking contracts against the Tortuga Dominions.",
+			"cashMult": {
+				"{EMPLOYER}": 0.25
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "AP_PiracyDontPay",
+			"OpForSpecName": "Aurigan Pirates: Piracy Doesn't Pay",
+			"killsRequired": 12,
+			"factionID": "AuriganPirates",
+			"applyToFaction": [
+				"AuriganPirates"
+			],
+			"description": "Someone clever once said piracy doesn't pay. Piracy might not, but bounties sure do. Gain bonus cash when taking contracts against the Aurigan Pirates and a ¢2500 cash bounty for every pirate killed.",
+			"cashMult": {
+				"{EMPLOYER}": 0.1
+			},
+			"killBounty": {
+				"{EMPLOYER}": 2500
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "JF_KillCompetition",
+			"OpForSpecName": "JarnFolk: Killing the Competition",
+			"killsRequired": 12,
+			"factionID": "JarnFolk",
+			"applyToFaction": [
+				"JarnFolk"
+			],
+			"description": "Rule 125: You can't make a deal if you're dead. Get a 25% discount when buying from the Hanseatic League.",
+			"storeDiscount": {
+				"Hanse": -0.2
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "HL_KillCompetition",
+			"OpForSpecName": "Hanseatic League: Killing the Competition",
+			"killsRequired": 12,
+			"factionID": "Hanse",
+			"applyToFaction": [
+				"Hanse"
+			],
+			"description": "Rule 125: You can't make a deal if you're dead. Get a 20% discount when buying from the JarnFolk and a 10% discount from the Lyrans.",
+			"storeDiscount": {
+				"Steiner": -0.1,
+				"JarnFolk": -0.2
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "CI_InternalChaos",
+			"OpForSpecName": "Chainelane Isles: Internal Chaos",
+			"killsRequired": 12,
+			"factionID": "Chainelane",
+			"applyToFaction": [
+				"Chainelane"
+			],
+			"description": "The awful thing about the Chainelane Isles is the constant chaos and infighting. The great thing about the Chainelane Isles is the constant chaos and infighting. Get a 10% better prices when buying and selling in the Chainelane Isles. Also get bonus reputation from the Chainelane Isles when fighting the Chainelane Isles.",
+			"repMult": {
+				"Chainelane": 0.5,
+				"{TARGET}": 0.5
+			},
+			"storeDiscount": {
+				"Chainelane": -0.1
+			},
+			"storeBonus": {
+				"Chainelane": 0.1
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "LG_Centralized",
+			"OpForSpecName": "Locals: Centralized Government",
+			"killsRequired": 12,
+			"factionID": "Locals",
+			"applyToFaction": [
+				"Locals"
+			],
+			"description": "Local governments are shortsighted, greedy, and frequently need to be reigned in. Gain extra reputation with your employer when taking contracts against the Locals if your employer is also the system owner.",
+			"repMult": {
+				"{OWNER}": 2.0
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "CWF_DogCatcher",
+			"OpForSpecName": "Clan Wolf: Dog Catcher",
+			"killsRequired": 12,
+			"factionID": "ClanWolf",
+			"applyToFaction": [
+				"ClanWolf",
+				"ClanJadeFalcon",
+				"ClanGhostBear",
+				"ClanNovaCat"
+			],
+			"description": "This pilot is an expert at fighting Clan Wolf, and does 5% increased damage to all Clan forces.",
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "CWF_DogCatcherDmgPassive",
+						"Name": "Dog Catcher",
+						"Details": "This pilot is an expert at fighting Clan Wolf, and does 5% increased damage to all Clan forces.",
+						"Icon": "allied-star"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "dummyOpForStat",
+						"operation": "Set",
+						"modValue": "true",
+						"modType": "System.Boolean"
+					}
+				},
+				{
+					"durationData": {
+						"duration": 1,
+						"ticksOnEndOfRound": true,
+						"useActivationsOfTarget": true,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "OnWeaponFire",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "CWF_DogCatcherDmg",
+						"Name": "Dog Catcher Damage",
+						"Details": "This pilot is an expert at fighting Clan Wolf, and does 5% increased damage to all Clan forces.",
+						"Icon": "allied-star"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamagePerShot",
+						"operation": "Float_Multiply",
+						"modValue": "1.05",
+						"modType": "System.Single",
+						"additionalRules": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponType": "NotSet",
+						"targetAmmoCategory": "NotSet",
+						"targetWeaponSubType": "NotSet"
+					}
+				}
+			]
+		},
+		{
+			"OpForSpecID": "CJF_TurkeySeason",
+			"OpForSpecName": "Clan Jade Falcon: Turkey Season",
+			"killsRequired": 12,
+			"factionID": "ClanJadeFalcon",
+			"applyToFaction": [
+				"ClanWolf",
+				"ClanJadeFalcon",
+				"ClanGhostBear",
+				"ClanNovaCat"
+			],
+			"description": "This pilot is an expert at fighting Clan Jade Falcon, and does 5% increased damage to all Clan forces.",
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "CJF_TurkeySeasonDmgPassive",
+						"Name": "Turkey Season",
+						"Details": "This pilot is an expert at fighting Clan Jade Falcon, and does 5% increased damage to all Clan forces.",
+						"Icon": "allied-star"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "dummyOpForStat",
+						"operation": "Set",
+						"modValue": "true",
+						"modType": "System.Boolean"
+					}
+				},
+				{
+					"durationData": {
+						"duration": 1,
+						"ticksOnEndOfRound": true,
+						"useActivationsOfTarget": true,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "OnWeaponFire",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "CJF_TurkeySeasonDmg",
+						"Name": "Turkey Season Damage",
+						"Details": "This pilot is an expert at fighting Clan Jade Falcon, and does 5% increased damage to all Clan forces.",
+						"Icon": "allied-star"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamagePerShot",
+						"operation": "Float_Multiply",
+						"modValue": "1.05",
+						"modType": "System.Single",
+						"additionalRules": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponType": "NotSet",
+						"targetAmmoCategory": "NotSet",
+						"targetWeaponSubType": "NotSet"
+					}
+				}
+			]
+		},
+		{
+			"OpForSpecID": "CGB_LoadedForBear",
+			"OpForSpecName": "Clan Ghost Bear: Loaded For Bear",
+			"killsRequired": 12,
+			"factionID": "ClanGhostBear",
+			"applyToFaction": [
+				"ClanWolf",
+				"ClanJadeFalcon",
+				"ClanGhostBear",
+				"ClanNovaCat"
+			],
+			"description": "This pilot is an expert at fighting Clan Ghost Bear, and does 5% increased damage to all Clan forces.",
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "CGB_LoadedForBearDmgPassive",
+						"Name": "Loaded For Bear",
+						"Details": "This pilot is an expert at fighting Clan Ghost Bear, and does 5% increased damage to all Clan forces.",
+						"Icon": "allied-star"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "dummyOpForStat",
+						"operation": "Set",
+						"modValue": "true",
+						"modType": "System.Boolean"
+					}
+				},
+				{
+					"durationData": {
+						"duration": 1,
+						"ticksOnEndOfRound": true,
+						"useActivationsOfTarget": true,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "OnWeaponFire",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "CGB_LoadedForBearDmg",
+						"Name": "Loaded For Bear Damage",
+						"Details": "This pilot is an expert at fighting Clan Ghost Bear, and does 5% increased damage to all Clan forces.",
+						"Icon": "allied-star"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamagePerShot",
+						"operation": "Float_Multiply",
+						"modValue": "1.05",
+						"modType": "System.Single",
+						"additionalRules": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponType": "NotSet",
+						"targetAmmoCategory": "NotSet",
+						"targetWeaponSubType": "NotSet"
+					}
+				}
+			]
+		},
+		{
+			"OpForSpecID": "CNC_BadTrip",
+			"OpForSpecName": "Clan Nova Cat: Bad Trip",
+			"killsRequired": 12,
+			"factionID": "ClanNovaCat",
+			"applyToFaction": [
+				"ClanWolf",
+				"ClanJadeFalcon",
+				"ClanGhostBear",
+				"ClanNovaCat"
+			],
+			"description": "This pilot is an expert at fighting Clan Nova Cat, and does 5% increased damage to all Clan forces.",
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "CNC_BadTripDmgPassive",
+						"Name": "Loaded For Bear",
+						"Details": "This pilot is an expert at fighting Clan Nova Cat, and does 5% increased damage to all Clan forces.",
+						"Icon": "allied-star"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "dummyOpForStat",
+						"operation": "Set",
+						"modValue": "true",
+						"modType": "System.Boolean"
+					}
+				},
+				{
+					"durationData": {
+						"duration": 1,
+						"ticksOnEndOfRound": true,
+						"useActivationsOfTarget": true,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "OnWeaponFire",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "CNC_BadTripBearDmg",
+						"Name": "Loaded For Bear Damage",
+						"Details": "This pilot is an expert at fighting Clan Nova Cat, and does 5% increased damage to all Clan forces.",
+						"Icon": "allied-star"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamagePerShot",
+						"operation": "Float_Multiply",
+						"modValue": "1.05",
+						"modType": "System.Single",
+						"additionalRules": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponType": "NotSet",
+						"targetAmmoCategory": "NotSet",
+						"targetWeaponSubType": "NotSet"
+					}
+				}
+			]
+		}
+	],
+	"MissionSpecList": [
+		{
+			"MissionSpecID": "SimpleBattle_RightAtMe",
+			"MissionSpecName": "Simple Battle: They Were Coming Right At Me!",
+			"missionsRequired": 12,
+			"contractTypeID": "SimpleBattle",
+			"description": "This pilot enjoys a straight-up fight and has +3 accuracy during Simple Battle contracts.",
+			"AdvTargetInfoUnits": [],
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "SB_ACC",
+						"Name": "Accuracy Increased",
+						"Details": "This pilot enjoys a straight-up fight and has +3 accuracy during Simple Battle contracts.",
+						"Icon": "lv_eye-target"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"modType": "System.Single",
+						"modValue": "-3.0",
+						"operation": "Float_Add",
+						"statName": "AccuracyModifier",
+						"targetAmmoCategory": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "Missile",
+						"targetWeaponSubType": "NotSet",
+						"targetWeaponType": "NotSet"
+					}
+				}
+			]
+		},
+		{
+			"MissionSpecID": "Threeway_OC",
+			"MissionSpecName": "Three-Way Battle: Institutional Chaos",
+			"missionsRequired": 12,
+			"contractTypeID": "ThreeWayBattle",
+			"description": "Other forces in Three-Way Battles deal 10% increased damage to eachother.",
+			"AdvTargetInfoUnits": [
+				"NotPlayer"
+			],
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "3W_DMG_Passive",
+						"Name": "Three-Way Damage",
+						"Details": "Other forces in Three-Way Battles deal 10% increased damage to eachother.",
+						"Icon": "chaos"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "dummyOpForStat",
+						"operation": "Set",
+						"modValue": "true",
+						"modType": "System.Boolean"
+					}
+				},
+				{
+					"durationData": {
+						"duration": 1,
+						"ticksOnEndOfRound": true,
+						"useActivationsOfTarget": true,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "OnWeaponFire",
+						"effectTargetType": "AllEnemies",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "3W_DMG",
+						"Name": "Damage Increased",
+						"Details": "Other forces in Three-Way Battles deal 10% increased damage to eachother.",
+						"Icon": "chaos"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamagePerShot",
+						"operation": "Float_Multiply",
+						"modValue": "1.1",
+						"modType": "System.Single",
+						"additionalRules": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponType": "NotSet",
+						"targetAmmoCategory": "NotSet",
+						"targetWeaponSubType": "NotSet"
+					}
+				}
+			]
+		},
+		{
+			"MissionSpecID": "Assassinate_HH",
+			"MissionSpecName": "Assassinate: Headhunter",
+			"missionsRequired": 12,
+			"contractTypeID": "Assassinate",
+			"description": "This pilot deals 20% extra damage to the primary Assassinate target.",
+			"AdvTargetInfoUnits": [
+				"Primary"
+			],
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "AS_DMG_Passive",
+						"Name": "Assassin Damage",
+						"Details": "This pilot deals 20% extra damage to the primary Assassinate target.",
+						"Icon": "hooded-assassin"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "dummyOpForStat",
+						"operation": "Set",
+						"modValue": "true",
+						"modType": "System.Boolean"
+					}
+				},
+				{
+					"durationData": {
+						"duration": 1,
+						"ticksOnEndOfRound": true,
+						"useActivationsOfTarget": true,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "OnWeaponFire",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "AS_DMG",
+						"Name": "Damage Increased",
+						"Details": "This pilot deals 20% extra damage to the primary Assassinate target.",
+						"Icon": "hooded-assassin"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamagePerShot",
+						"operation": "Float_Multiply",
+						"modValue": "1.2",
+						"modType": "System.Single",
+						"additionalRules": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponType": "NotSet",
+						"targetAmmoCategory": "NotSet",
+						"targetWeaponSubType": "NotSet"
+					}
+				}
+			]
+		},
+		{
+			"MissionSpecID": "SD_MasterDuelist",
+			"MissionSpecName": "Solo Duel: Master Duelist",
+			"missionsRequired": 12,
+			"contractTypeID": "SoloDuel",
+			"description": "This pilot is a Master Duelist, and gains +3 accuracy during Solo Duels.",
+			"AdvTargetInfoUnits": [],
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "SD_ACC",
+						"Name": "Accuracy Increased",
+						"Details": "This pilot is a Master Duelist, and gains +3 accuracy during Solo Duels.",
+						"Icon": "lv_eye-target"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"modType": "System.Single",
+						"modValue": "-3.0",
+						"operation": "Float_Add",
+						"statName": "AccuracyModifier",
+						"targetAmmoCategory": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "Missile",
+						"targetWeaponSubType": "NotSet",
+						"targetWeaponType": "NotSet"
+					}
+				}
+			]
+		},
+		{
+			"MissionSpecID": "DD_MasterDuelist",
+			"MissionSpecName": "Duo Duel: Master Duelist",
+			"missionsRequired": 12,
+			"contractTypeID": "DuoDuel",
+			"description": "This pilot is a Master Duelist, and gains +3 accuracy during Duo Duels.",
+			"AdvTargetInfoUnits": [],
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "DD_ACC",
+						"Name": "Accuracy Increased",
+						"Details": "This pilot is a Master Duelist, and gains +3 accuracy during Duo Duels.",
+						"Icon": "lv_eye-target"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"modType": "System.Single",
+						"modValue": "-3.0",
+						"operation": "Float_Add",
+						"statName": "AccuracyModifier",
+						"targetAmmoCategory": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "Missile",
+						"targetWeaponSubType": "NotSet",
+						"targetWeaponType": "NotSet"
+					}
+				}
+			]
+		},
+		{
+			"MissionSpecID": "CaptureBase_TurretsSyndrome",
+			"MissionSpecName": "Capture Base: Turrets Syndrome",
+			"missionsRequired": 12,
+			"contractTypeID": "CaptureBase",
+			"description": "This pilot deals 10% extra damage to turrets.",
+			"AdvTargetInfoUnits": [
+				"Turret"
+			],
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "CB_TS_DMG_Passive",
+						"Name": "Turret Damage Increased",
+						"Details": "This pilot deals 10% extra damage to turrets.",
+						"Icon": "turret"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "dummyOpForStat",
+						"operation": "Set",
+						"modValue": "true",
+						"modType": "System.Boolean"
+					}
+				},
+				{
+					"durationData": {
+						"duration": 1,
+						"ticksOnEndOfRound": true,
+						"useActivationsOfTarget": true,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "OnWeaponFire",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "CB_TS_DMG",
+						"Name": "Turret Damage Increased",
+						"Details": "This pilot deals 10% extra damage to turrets.",
+						"Icon": "turret"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamagePerShot",
+						"operation": "Float_Multiply",
+						"modValue": "1.1",
+						"modType": "System.Single",
+						"additionalRules": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponType": "NotSet",
+						"targetAmmoCategory": "NotSet",
+						"targetWeaponSubType": "NotSet"
+					}
+				}
+			]
+		},
+		{
+			"MissionSpecID": "DestroyBase_Demo",
+			"MissionSpecName": "Destroy Base: Demolition Expert",
+			"missionsRequired": 12,
+			"contractTypeID": "DestroyBase",
+			"description": "This pilot deals 20% extra damage to buildings.",
+			"AdvTargetInfoUnits": [
+				"Building"
+			],
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "DD_BLD_DMG_Passive",
+						"Name": "Building Damage Increased",
+						"Details": "This pilot deals 20% extra damage to buildings.",
+						"Icon": "tower"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "dummyOpForStat",
+						"operation": "Set",
+						"modValue": "true",
+						"modType": "System.Boolean"
+					}
+				},
+				{
+					"durationData": {
+						"duration": 1,
+						"ticksOnEndOfRound": true,
+						"useActivationsOfTarget": true,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "OnWeaponFire",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "DD_BLD_DMG",
+						"Name": "Damage Increased",
+						"Details": "This pilot deals 20% extra damage to buildings",
+						"Icon": "tower"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamagePerShot",
+						"operation": "Float_Multiply",
+						"modValue": "1.2",
+						"modType": "System.Single",
+						"additionalRules": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponType": "NotSet",
+						"targetAmmoCategory": "NotSet",
+						"targetWeaponSubType": "NotSet"
+					}
+				}
+			]
+		},
+		{
+			"MissionSpecID": "DefendBase_Bulwark",
+			"MissionSpecName": "Defend Base: Bulwark Writ Large",
+			"missionsRequired": 12,
+			"contractTypeID": "DefendBase",
+			"description": "Friendly building damage reduced by 20%.",
+			"AdvTargetInfoUnits": [
+				"Building"
+			],
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "DB_DR_Passive",
+						"Name": "Building Damage Increased",
+						"Details": "Friendly building damage reduced by 20%.",
+						"Icon": "thick-wall"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "dummyOpForStat",
+						"operation": "Set",
+						"modValue": "true",
+						"modType": "System.Boolean"
+					}
+				},
+				{
+					"durationData": {
+						"duration": 1,
+						"ticksOnEndOfRound": true,
+						"useActivationsOfTarget": true,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "OnWeaponFire",
+						"effectTargetType": "AllEnemies",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "DB_DR",
+						"Name": "Damage Decreased",
+						"Details": "Friendly building damage reduced by 20%.",
+						"Icon": "thick-wall"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamagePerShot",
+						"operation": "Float_Multiply",
+						"modValue": "0.8",
+						"modType": "System.Single",
+						"additionalRules": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponType": "NotSet",
+						"targetAmmoCategory": "NotSet",
+						"targetWeaponSubType": "NotSet"
+					}
+				}
+			]
+		},
+		{
+			"MissionSpecID": "AD_CombinedTactics",
+			"MissionSpecName": "Attack and Defend: Combined Tactics",
+			"missionsRequired": 12,
+			"contractTypeID": "AttackDefend",
+			"description": "Friendly building damage reduced by 10% and damage dealt to enemy buildings increased by 10%.",
+			"AdvTargetInfoUnits": [
+				"Building"
+			],
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "AD_DR_Passive",
+						"Name": "Building Damage Increased",
+						"Details": "Friendly building damage reduced by 10%.",
+						"Icon": "thick-wall"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "dummyOpForStat",
+						"operation": "Set",
+						"modValue": "true",
+						"modType": "System.Boolean"
+					}
+				},
+				{
+					"durationData": {
+						"duration": 1,
+						"ticksOnEndOfRound": true,
+						"useActivationsOfTarget": true,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "OnWeaponFire",
+						"effectTargetType": "AllEnemies",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "AD_DR",
+						"Name": "Damage Decreased",
+						"Details": "Friendly building damage reduced by 10%.",
+						"Icon": "thick-wall"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamagePerShot",
+						"operation": "Float_Multiply",
+						"modValue": "0.9",
+						"modType": "System.Single",
+						"additionalRules": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponType": "NotSet",
+						"targetAmmoCategory": "NotSet",
+						"targetWeaponSubType": "NotSet"
+					}
+				},
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "AD_BLD_DMG_Passive",
+						"Name": "Building Damage Increased",
+						"Details": "This pilot deals 10% extra damage to buildings.",
+						"Icon": "tower"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "dummyOpForStat",
+						"operation": "Set",
+						"modValue": "true",
+						"modType": "System.Boolean"
+					}
+				},
+				{
+					"durationData": {
+						"duration": 1,
+						"ticksOnEndOfRound": true,
+						"useActivationsOfTarget": true,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "OnWeaponFire",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "AD_BLD_DMG",
+						"Name": "Damage Increased",
+						"Details": "This pilot deals 10% extra damage to buildings",
+						"Icon": "tower"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamagePerShot",
+						"operation": "Float_Multiply",
+						"modValue": "1.1",
+						"modType": "System.Single",
+						"additionalRules": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponType": "NotSet",
+						"targetAmmoCategory": "NotSet",
+						"targetWeaponSubType": "NotSet"
+					}
+				}
+			]
+		},
+		{
+			"MissionSpecID": "CaptureEscort_DamageResistance",
+			"MissionSpecName": "Capture-Escort: Shield of Faith",
+			"missionsRequired": 12,
+			"contractTypeID": "CaptureEscort",
+			"description": "This pilot is an expert as escorting other units and keeping them out of harms way. Allies take 15% less damage.",
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "AllAllies",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "CE_Ally_DmgResist",
+						"Name": "Damage Resistance",
+						"Details": "This pilot is an expert as escorting other units and keeping them out of harms way. Allies take 15% less damage.",
+						"Icon": "flag-objective"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamageReductionMultiplierAll",
+						"operation": "Float_Multiply",
+						"modValue": "0.85",
+						"modType": "System.Single"
+					}
+				}
+			]
+		},
+		{
+			"MissionSpecID": "AC_Tankssassin",
+			"MissionSpecName": "Ambush Convoy: Tankssassin",
+			"missionsRequired": 12,
+			"contractTypeID": "AmbushConvoy",
+			"description": "This pilot deals 25% extra damage to vehicles during Ambush Convoy missions.",
+			"AdvTargetInfoUnits": [
+				"Vehicle"
+			],
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "AC_DMG_Passive",
+						"Name": "Convoy Ambush Damage",
+						"Details": "This pilot deals 25% extra damage to vehicles during Ambush Convoy missions.",
+						"Icon": "land-mine"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "dummyOpForStat",
+						"operation": "Set",
+						"modValue": "true",
+						"modType": "System.Boolean"
+					}
+				},
+				{
+					"durationData": {
+						"duration": 1,
+						"ticksOnEndOfRound": true,
+						"useActivationsOfTarget": true,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "OnWeaponFire",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "AC_DMG",
+						"Name": "Convoy Ambush Damage",
+						"Details": "This pilot deals 25% extra damage to vehicles during Ambush Convoy missions.",
+						"Icon": "land-mine"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamagePerShot",
+						"operation": "Float_Multiply",
+						"modValue": "1.25",
+						"modType": "System.Single",
+						"additionalRules": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponType": "NotSet",
+						"targetAmmoCategory": "NotSet",
+						"targetWeaponSubType": "NotSet"
+					}
+				}
+			]
+		},
+		{
+			"MissionSpecID": "TA_Racetrack",
+			"MissionSpecName": "Target Acquisition: Welcome to the Race Track",
+			"missionsRequired": 12,
+			"contractTypeID": "FireMission",
+			"description": "This pilot is extra speedy when it counts. 60 meters added to walk/run/jump distance during Target Acquisition contracts.",
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true,
+						"forcePathRebuild": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "TA_Racetrack_Speed",
+						"Name": "Boosted Speed",
+						"Details": "This pilot is extra speedy when it counts. 60 meters added to walk/run distance during Target Acquisition contracts.",
+						"Icon": "sprinter"
+					},
+					"statisticData": {
+						"statName": "WalkSpeed",
+						"operation": "Float_Add",
+						"modValue": "60",
+						"modType": "System.Single"
+					},
+					"nature": "Buff"
+				},
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true,
+						"forcePathRebuild": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "TA_Racetrack_Jump",
+						"Name": "Boosted Jump",
+						"Details": "This pilot is extra speedy when it counts. 60 meters added to jump distance during Target Acquisition contracts.",
+						"Icon": "sprinter"
+					},
+					"statisticData": {
+						"statName": "JumpDistance",
+						"operation": "Float_Add",
+						"modValue": "60",
+						"modType": "System.Single"
+					},
+					"nature": "Buff"
+				}
+			]
+		},
+		{
+			"MissionSpecID": "RR_Racetrack",
+			"MissionSpecName": "Rescue/Recovery: Need For Speed",
+			"missionsRequired": 12,
+			"contractTypeID": "Rescue",
+			"description": "This pilot is extra speedy when it counts. 60 meters added to walk/run/jump distance during Rescue/Recovery contracts.",
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true,
+						"forcePathRebuild": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "RR_Racetrack_Speed",
+						"Name": "Boosted Speed",
+						"Details": "This pilot is extra speedy when it counts. 60 meters added to walk/run distance during Rescue/Recovery contracts.",
+						"Icon": "sprinter"
+					},
+					"statisticData": {
+						"statName": "WalkSpeed",
+						"operation": "Float_Add",
+						"modValue": "60",
+						"modType": "System.Single"
+					},
+					"nature": "Buff"
+				},
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true,
+						"forcePathRebuild": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "RR_Racetrack_Jump",
+						"Name": "Boosted Jump",
+						"Details": "This pilot is extra speedy when it counts. 60 meters added to jump distance during Rescue/Recovery contracts.",
+						"Icon": "sprinter"
+					},
+					"statisticData": {
+						"statName": "JumpDistance",
+						"operation": "Float_Add",
+						"modValue": "60",
+						"modType": "System.Single"
+					},
+					"nature": "Buff"
+				}
+			]
+		},
+		{
+			"MissionSpecID": "BO_HazardPay",
+			"MissionSpecName": "Blackout: Hazard Pay",
+			"missionsRequired": 12,
+			"contractTypeID": "Blackout",
+			"description": "They didn't use to pay us enough for this. Well...now they do.",
+			"cashMult": 0.75,
+			"effectDataJO": []
+		}
+	],
+	"OpForDefaultList": [
+		{
+			"OpForSpecID": "IncreasedDamage",
+			"OpForSpecName": "Increased Damage",
+			"killsRequired": 4,
+			"factionID": "UNIVERSAL",
+			"applyToFaction": [
+				"UNIVERSAL"
+			],
+			"description": "This pilot inflicts increased damage against {faction}.",
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "IncreasedDamagePassive",
+						"Name": "Increased Damage",
+						"Details": "This pilot is an expert at killing the target faction, and deals 20% increased damage to them.",
+						"Icon": "cannon-shot"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "dummyOpForStat",
+						"operation": "Set",
+						"modValue": "true",
+						"modType": "System.Boolean"
+					}
+				},
+				{
+					"durationData": {
+						"duration": 1,
+						"ticksOnEndOfRound": true,
+						"useActivationsOfTarget": true,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "OnWeaponFire",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "IncreasedDamage",
+						"Name": "Increased Damage",
+						"Details": "This pilot inflicts 20% damage against the target faction.",
+						"Icon": "cannon-shot"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamagePerShot",
+						"operation": "Float_Multiply",
+						"modValue": "1.2",
+						"modType": "System.Single",
+						"additionalRules": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponType": "NotSet",
+						"targetAmmoCategory": "NotSet",
+						"targetWeaponSubType": "NotSet"
+					}
+				}
+			]
+		},
+		{
+			"OpForSpecID": "DecreasedDamage",
+			"OpForSpecName": "Damage Resistance",
+			"killsRequired": 8,
+			"factionID": "UNIVERSAL",
+			"applyToFaction": [
+				"UNIVERSAL"
+			],
+			"description": "This pilot is an expert at fighting {faction}, and takes decreased damage from them.",
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "IncreasedDamagePassive",
+						"Name": "Increased Damage",
+						"Details": "This pilot is an expert at fighting the target faction, and takes 10% decreased damage from them.",
+						"Icon": "armor-upgrade"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "dummyOpForStat",
+						"operation": "Set",
+						"modValue": "true",
+						"modType": "System.Boolean"
+					}
+				},
+				{
+					"durationData": {
+						"duration": 1,
+						"ticksOnEndOfRound": true,
+						"useActivationsOfTarget": true,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "OnWeaponFire",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "DecreasedDamage",
+						"Name": "Damage Resist",
+						"Details": "This pilot is an expert at fighting the target faction, and takes 10% decreased damage from them.",
+						"Icon": "armor-upgrade"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamageReductionMultiplierAll",
+						"operation": "Float_Multiply",
+						"modValue": "0.8",
+						"modType": "System.Single"
+					}
+				}
+			]
+		}
+	],
+	"MissionDefaultList": [
+		{
+			"MissionSpecID": "DamageResistance",
+			"MissionSpecName": "Damage Resistance",
+			"missionsRequired": 4,
+			"contractTypeID": "UNIVERSAL",
+			"description": "This pilot takes less damage during {contract} contracts.",
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "SB_DmgResist",
+						"Name": "Damage Resistance",
+						"Details": "This pilot takes 20% less damage during certain contracts.",
+						"Icon": "armor-upgrade"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamageReductionMultiplierAll",
+						"operation": "Float_Multiply",
+						"modValue": "0.8",
+						"modType": "System.Single"
+					}
+				}
+			]
+		},
+		{
+			"MissionSpecID": "DamageBuff",
+			"MissionSpecName": "Increased Damage",
+			"missionsRequired": 8,
+			"contractTypeID": "UNIVERSAL",
+			"description": "This pilot deals 10% increased damage during {contract} contracts.",
+			"effectDataJO": [
+				{
+					"durationData": {
+						"duration": 1,
+						"ticksOnEndOfRound": true,
+						"useActivationsOfTarget": true,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "IncreasedDamage2",
+						"Name": "Increased Damage",
+						"Details": "This pilot deals increased damage during certain contracts.",
+						"Icon": "cannon-shot"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamagePerShot",
+						"operation": "Float_Multiply",
+						"modValue": "1.1",
+						"modType": "System.Single",
+						"additionalRules": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponType": "NotSet",
+						"targetAmmoCategory": "NotSet",
+						"targetWeaponSubType": "NotSet"
+					}
+				}
+			]
+		}
+	],
+	"StratComs": [
+		{
+			"StratComID": "StrategicCommand",
+			"StratComName": "Strategic Command",
+			"description": "The commander is sitting this contract out, providing strategic command over the battle. Resolve generation is increased.",
+			"effectDataJO": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect-OfficerTrainee",
+						"Name": "Resolve Generation Increased",
+						"Details": "The commander is sitting this contract out, providing strategic command over the battle. Resolve generation is increased.",
+						"Icon": "officer-trainee"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"appliesEachTick": false,
+						"effectsPersistAfterDestruction": false,
+						"statName": "MoraleBonusGain",
+						"operation": "Int_Add",
+						"modValue": "2",
+						"modType": "System.Int32",
+						"additionalRules": "NotSet",
+						"targetCollection": "NotSet",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponType": "NotSet",
+						"targetAmmoCategory": "NotSet",
+						"targetWeaponSubType": "NotSet"
+					},
+					"tagData": null,
+					"floatieData": null,
+					"actorBurningData": null,
+					"vfxData": null,
+					"instantModData": null,
+					"poorlyMaintainedEffectData": null
+				}
+			]
+		}
+	],
+	"taggedOpForSpecs": {
+		"name_t-bone": [
+			"AP_PiracyDontPay",
+			"AR_FreeReach"
+		]
+	},
+	"taggedMissionSpecs": {
+		"name_t-bone": [],
+		"name_Blaze": []
+	},
+	"dummyOpForStat": "dummyOpForStat",
+	"removeDeprecated": true,
+	"DebugCleaning": false
+}
