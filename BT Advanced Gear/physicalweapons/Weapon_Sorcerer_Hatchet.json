@@ -1,0 +1,271 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/s/m/melee"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"IsPhysWeap",
+				"PhysWeapUnsteady",
+				"PhysWeapDamage: 1",
+				"PhysWeapStab: 0.5",
+				"PhysWeapAccuracy: +1"
+			]
+		},
+		"Flags": {
+			"flags": [
+				"default",
+				"not_broken",
+				"autorepair"
+			]
+		}
+	},
+	"Category": "AntiPersonnel",
+	"Type": "MachineGun",
+	"WeaponSubType": "MachineGun",
+	"MinRange": 0,
+	"MaxRange": 30,
+	"RangeSplit": [
+		30,
+		30,
+		30
+	],
+	"AmmoCategory": "NotSet",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 0,
+	"Damage": 0,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 4,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": 0,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 0,
+	"Instability": 0,
+	"NotUseInMelee": true,
+	"WeaponEffectID": "WeaponEffect-Weapon_MachineGun",
+	"Description": {
+		"Cost": 12000,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "Sorcerer",
+		"Model": "Hatchet",
+		"UIName": "Hatchet",
+		"Id": "Weapon_Sorcerer_Hatchet",
+		"Name": "Hatchet",
+		"Details": "This is a unique hatchet, designed for the Sorcerer BattleMech. It cannot be removed or used elsewhere.",
+		"Icon": "uixSvgIcon_weapon_Support"
+	},
+	"BonusValueA": "Hatchet",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "hatchet",
+	"BattleValue": 0,
+	"InventorySize": 7,
+	"Tonnage": 7,
+	"AllowedLocations": "LeftArm",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+            "durationData" : {
+                "duration": -1,
+                "stackLimit": 1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "effectTargetType" : "Creator",
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : false
+            },
+            "effectType" : "StatisticEffect",
+            "Description" :
+            {
+                "Id" : "PunchIsPhysical",
+                "Name" : "This is a Physical Weapon",
+                "Details" : "This is a physical weapon and uses those melee rules."
+            },
+            "statisticData" : 
+            {
+                "statName" : "CBTBE_Punch_Is_Physical_Weapon",
+                "operation": "Set",
+                "modValue": "true",
+                "modType": "System.Boolean"
+            }
+        },
+                  {
+            "durationData" : {
+                "duration": -1,
+                "stackLimit": 1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "specialRules" : "NotSet",
+                "effectTargetType" : "Creator",
+                "range" : 0.0,
+                "forcePathRebuild" : false,
+                "forceVisRebuild" : false,
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : false
+            },
+            "effectType" : "StatisticEffect",
+            "Description" :
+            {
+                "Id" : "CBTBE_PHYSICAL_WEAPON_APPLY_UNSTEADY",
+                "Name" : "Target will be Unsteady",
+                "Details" : "Foo"
+            },
+            "statisticData" : 
+            {
+                "statName" : "CBTBE_Physical_Weapon_Unsteady_Target_On_Hit",
+                "operation": "Set",
+                "modValue": "true",
+                "modType": "System.Boolean"
+            },
+            "nature" : "Buff"
+        },
+        {
+            "durationData" : {
+                "duration": -1,
+                "stackLimit": 1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "specialRules" : "NotSet",
+                "effectTargetType" : "Creator",
+                "range" : 0.0,
+                "forcePathRebuild" : false,
+                "forceVisRebuild" : false,
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : false
+            },
+            "effectType" : "StatisticEffect",
+            "Description" :
+            {
+                "Id" : "CBTBE_PHYSICAL_WEAPON_LOCATION_TABLE",
+                "Name" : "Location table to use",
+                "Details" : "Foo"
+            },
+            "statisticData" : 
+            {
+                "statName" : "CBTBE_Physical_Weapon_Location_Table",
+                "operation": "Set",
+                "modValue": "STANDARD",
+                "modType": "System.String"
+            },
+            "nature" : "Buff"
+        },
+		{
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "triggerLimit" : 0,
+                "extendDurationOnTrigger" : 0,
+                "specialRules" : "NotSet",
+                "effectTargetType" : "Creator",
+                "range" : 0,
+                "forcePathRebuild" : false,
+                "forceVisRebuild" : false,
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "StatusEffect-HatchetBaseDamage",
+                "Name" : "Hatchet Base Damage",
+                "Details" : "Hatchets do 5 damage per 5 tons of the mech.",
+                "Icon" : "uixSvgIcon_equipment_ActuatorLeg"
+            },
+            "nature" : "Buff",
+            "statisticData" : {
+                "statName" : "CBTBE_Physical_Weapon_Target_Damage_Per_Attacker_Ton",
+                "operation": "Set",
+                "modValue": "1.0",
+                "modType": "System.Single"
+            }
+        },
+		{
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "triggerLimit" : 0,
+                "extendDurationOnTrigger" : 0,
+                "specialRules" : "NotSet",
+                "effectTargetType" : "Creator",
+                "range" : 0,
+                "forcePathRebuild" : false,
+                "forceVisRebuild" : false,
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "StatusEffect-HatchetBaseStabDamage",
+                "Name" : "Hatchet Base Stab Damage",
+                "Details" : "Hatchets do 5 stab damage per 10 tons of the mech.",
+                "Icon" : "uixSvgIcon_equipment_ActuatorLeg"
+            },
+            "nature" : "Buff",
+            "statisticData" : {
+                "statName" : "CBTBE_Physical_Weapon_Target_Instability_Per_Attacker_Ton",
+                "operation": "Set",
+                "modValue": "0.5",
+                "modType": "System.Single"
+            }
+        },
+		{
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "triggerLimit" : 0,
+                "extendDurationOnTrigger" : 0,
+                "specialRules" : "NotSet",
+                "effectTargetType" : "Creator",
+                "range" : 0,
+                "forcePathRebuild" : false,
+                "forceVisRebuild" : false,
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "StatusEffect-HatchetBaseAcc",
+                "Name" : "Hatchet Base Accuracy",
+                "Details" : "Hatchets gain +1 accuracy on their attacks.",
+                "Icon" : "uixSvgIcon_equipment_ActuatorLeg"
+            },
+            "nature" : "Buff",
+            "statisticData" : {
+                "statName" : "CBTBE_Physical_Weapon_Attack_Mod",
+                "operation": "Int_Add",
+                "modValue": "-1",
+                "modType": "System.Int32"
+            }
+        }
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_close"
+		],
+		"tagSetSourceFile": ""
+	}
+}
