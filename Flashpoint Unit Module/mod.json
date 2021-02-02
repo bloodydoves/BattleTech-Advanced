@@ -6,9 +6,12 @@
 	"Version": "1.0",
     "Description": "Contains Flashpoint-related content for compatibility reasons.",
 	
-    "DependsOn": [ "Flashpoint DLC New Flashpoints", "BT Advanced Core" ],
+    "DependsOn": [ "Flashpoint DLC New Flashpoints", "BT Advanced Core", "BTA Difficulty Settings" ],
+	"OptionallyDependsOn": [ "BT Advanced Starters" ],
 	"Manifest": [
 		{ "Type": "ChassisDef", "Path": "chassis", "AddToDB": true },
-		{ "Type": "MechDef", "Path": "mech", "AddToDB": true }
+		{ "Type": "MechDef", "Path": "mech", "AddToDB": true },
+		{ "Path": "FP_DLC_itemCollections",		"Type": "ItemCollectionDef" },
+		{ "Path": "FP_DLC_Starters",				"Type": "AdvancedJSONMerge" }
     ]
 }
