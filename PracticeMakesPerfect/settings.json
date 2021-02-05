@@ -1702,8 +1702,8 @@
 	],
 	"StratComs": [
 		{
-			"StratComID": "StrategicCommand",
-			"StratComName": "Strategic Command",
+			"StratComID": "StrategicResolve",
+			"StratComName": "Strategic Resolve",
 			"description": "The commander is sitting this contract out, providing strategic command over the battle. Resolve generation is increased.",
 			"effectDataJO": [
 				{
@@ -1744,6 +1744,43 @@
 					"vfxData": null,
 					"instantModData": null,
 					"poorlyMaintainedEffectData": null
+				}
+			]
+		},
+		{
+			"StratComID": "StrategicAccuracy",
+			"StratComName": "Strategic Accuracy",
+			"description": "The commander is sitting this contract out, providing strategic command over the battle. Lance accuracy is increased..",
+			"effectDataJO": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect-OfficerTrainee",
+						"Name": "Accuracy Increased",
+						"Details": "The commander is sitting this contract out, providing strategic command over the battle. Lance accuracy is increased.",
+						"Icon": "officer-trainee"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"modType": "System.Single",
+						"modValue": "-3.0",
+						"operation": "Float_Add",
+						"statName": "AccuracyModifier",
+						"targetAmmoCategory": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "Missile",
+						"targetWeaponSubType": "NotSet",
+						"targetWeaponType": "NotSet"
+					}
 				}
 			]
 		}
