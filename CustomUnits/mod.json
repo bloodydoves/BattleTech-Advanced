@@ -49,7 +49,9 @@
 		"defaultTurretSizeMultiplier": 1,
 		"defaultProjectileSizeMultiplier": 1,
 		"mechSizePrefabMultipliers": {},
-		"vehicleSizePrefabMultipliers": {},
+		"vehicleSizePrefabMultipliers": {
+			 "rakirov": { "x": 0.7, "y": 0.7, "z": 0.7 }
+		},
 		"turretSizePrefabMultipliers": {},
 		"projectileSizePrefabMultipliers": {},
 		"mechSizeMultiplierVectors": {
@@ -62,7 +64,7 @@
 			"Weapon_LRM_Thunderbolt20": 3.0,
 			"Weapon_ArrowIV": 3.5
 		},
-		"MaxVehicleRandomPilots": 0,
+		"MaxVehicleRandomPilots": 3,
 		"ShowVehicleBays": true,
 		"AllowVehiclesEdit": false,
 		"MechBaySwitchIconMech": "mech",
@@ -74,8 +76,8 @@
 		"CountContractMaxUnits4AsUnlimited": true,
 		"ArgoBaysFix": 0,
 		"BaysCountExternalControl": false,
-		"CanPilotVehicleProbability": 0,
-		"CanPilotAlsoMechProbability": 0,
+		"CanPilotVehicleProbability": 0.5,
+		"CanPilotAlsoMechProbability": 1.0,
 		"SquadStructureIcon": "ba_structure",
 		"SquadArmorOutlineIcon": "ba_armor_outline",
 		"SquadArmorIcon": "ba_armor",
@@ -90,10 +92,6 @@
 		"ConvoyMaxDistFromPlayer": 400,
 		"ConvoyMaxDistFromRoute": 90,
 		"overallDeploySize": 6,
-		"Lances": [ 
-			{"size":6,"allow":5,"is_vehicle":false},
-			{"size":4,"allow":3,"is_vehicle":true}
-		],
 		"mechSizeMultipliers": {
 			"chassisdef_griffin_GRF-2N-X": 1.15,
 			"chassisdef_wasp_WSP-2A-X": 1.1,
@@ -399,11 +397,14 @@
 			"chassisdef_phoenixhawk_PHX-HK2M": 0.95,
 			"chassisdef_phoenixhawk_PHX-HK3": 0.95,
 			"chassisdef_screamer_SCR-1X-LAM": 0.95,
-			"chassisdef_pallas_PLS-1X": 0.55,
+			"chassisdef_pallas_PLS-1X": 0.55
+		},
+		"vehicleSizeMultipliers": {
 			"vehiclechassisdef_PUMA_005": 0.7,
 			"vehiclechassisdef_PUMA_005b": 0.7,
 			"vehiclechassisdef_PUMA_CLAN": 0.7,
-			"vehiclechassisdef_PUMA_CLAN-2": 0.7
+			"vehiclechassisdef_PUMA_CLAN-2": 0.7,
+			"vehiclechassisdef_KIROV": 0.35
 		}
 	}
 }
