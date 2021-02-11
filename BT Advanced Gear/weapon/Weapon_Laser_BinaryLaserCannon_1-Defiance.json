@@ -7,8 +7,13 @@
 		],
 		"BonusDescriptions": {
 			"Bonuses": [
-				"WpnCrits: 40%",
-				"WpnAccuracy: +1"
+				"WpnCrits: 20%",
+				"WpnAccuracy: +1",
+				"ModalWeapon: Linked Cores"
+				"ModalWeapon1: Split Cores"
+				"DmgFallOffMode: 30%",
+				"DmgFallOffStartMode: 155",
+				"DmgFallOffEndMode: 450"
 			]
 		}
 	},
@@ -25,19 +30,19 @@
 	"AmmoCategory": "NotSet",
 	"StartingAmmoCapacity": 0,
 	"HeatGenerated": 40,
-	"Damage": 35,
+	"Damage": 80,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
 	"EvasivePipsIgnored": 0,
 	"DamageVariance": 0,
 	"HeatDamage": 0,
 	"AccuracyModifier": -1,
-	"CriticalChanceMultiplier": 1.4,
+	"CriticalChanceMultiplier": 1.2,
 	"AOECapable": false,
 	"IndirectFireCapable": false,
 	"DisableClustering": false,
 	"RefireModifier": 0,
-	"ShotsWhenFired": 2,
+	"ShotsWhenFired": 1,
 	"ProjectilesPerShot": 1,
 	"AttackRecoil": 1,
 	"Instability": 0,
@@ -54,11 +59,11 @@
 		"UIName": "Improved Binary Laser",
 		"Id": "Weapon_Laser_BinaryLaserCannon_1-Defiance",
 		"Name": "Improved Blazer",
-		"Details": "Binary Laser (nicknamed 'Blazers') fused two Large Laser cores together, allowing them to be fired together.  While this increased penetration, the damage was still lower than firing two Large Lasers separately. This variant adds a cooling jacket to reduce heat and can fire the cores seperately. \n\n <b><color=#00ffff>Left Click on Chance to hit during battle to switch firing mode</color> </b>",
+		"Details": "Binary Laser (nicknamed 'Blazers') fused two Large Laser cores together, allowing them to be fired together.  While this increased penetration, the damage was still lower than firing two Large Lasers separately. This variant adds a cooling jacket to reduce heat and can fire the cores seperately. \n\n <b><color=#00ffff>Can change fire mode between Split Cores and Linked Cores. Linked is default mode, Split does two shots at less damage per shot with damage falloff on each shot.</color> </b>",
 		"Icon": "uixSvgIcon_weapon_Energy"
 	},
-	"BonusValueA": "+25% Crit",
-	"BonusValueB": "Twin Cores",
+	"BonusValueA": "",
+	"BonusValueB": "",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",
 	"PrefabIdentifier": "Laser",
@@ -70,15 +75,20 @@
 	"CriticalComponent": false,
 	"Modes": [
 		{
-			"Id": "One Core",
-			"UIName": "One Core",
+			"Id": "Split Cores",
+			"UIName": "Split Cores",
 			"isBaseMode": false,
-			"DamagePerShot": 25,
-			"ShotsWhenFired": -1
+			"DamagePerShot": -25,
+			"ShotsWhenFired": 1,
+			"DistantVariance": 0.3,
+			"DamageFalloffStartDistance": 155,
+			"DamageFalloffEndDistance": 450,
+			"DistantVarianceReversed": false,
+			"RangedDmgFalloffType": "Linear"
 		},
 		{
-			"Id": "Twin Core",
-			"UIName": "Twin Core",
+			"Id": "Linked Cores",
+			"UIName": "Linked Cores",
 			"isBaseMode": true
 		}
 	],
