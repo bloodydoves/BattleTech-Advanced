@@ -1,7 +1,7 @@
 {
 	"Custom": {
 		"VAssemblyVariant": {
-			"PrefabID": "Kirov",
+			"PrefabID": "Dixon",
 			"Exclude": false,
 			"Include": true
 		}
@@ -50,7 +50,7 @@
 		"thisTransform": { "offset": { "x": 0, "y": 52, "z": 0 } },
 		"CustomParts": [
 			{
-				"prefab": "rakirov_body",
+				"prefab": "dixon_body",
 				"MaterialInfo": {},
 				"prefabTransform": {
 					"offset": {
@@ -138,27 +138,27 @@
 		]
 	},
 	"Description": {
-		"Cost": 850000,
+		"Cost": 550000,
 		"Rarity": 0,
 		"Purchasable": false,
-		"UIName": "Kirov LRM Zeppelin",
-		"Id": "vehiclechassisdef_KIROV_LRM",
-		"Name": "Kirov",
-		"Details": "It's a zeppelin. With guns. It's a battle zeppelin. The cyrillic on the side says something about an Omnissiah? No one's really sure who that is but here we go. Well, on its own merits the Kirov Attack Zeppelin has proven oddly adept in combat operations on Periphery worlds, leading to the Kirov seeing deployment with various Periphery powers as an inexpensive force multiplier. They're semi-fragile though, as befits a large bag of flammable gas, but the Kirov packs a punch. The LRM Kirov carries both a battery of LRM launchers as well as a few Medium Chemical Lasers. For close-range defense, 330 Rocket Launcher tubes are provided.",
-		"Icon": "Kirov"
+		"UIName": "Dixon Peacekeeping Zeppelin",
+		"Id": "vehiclechassisdef_DIXON",
+		"Name": "Dixon Peacekeeping Zeppelin",
+		"Details": "The Dixon was originally intended for police work and later for firefighting. Armed with various sprayers and liquid storage tanks, the Dixon was relatively successful at its jobs and can still be found among various planetary emergency reponse forces. However, this variant of the Dixon was repurposed for military applications. Armed with a variety of mortars, machine guns, flamers, and some military-grade armor, the Dixon Peacekeeper proved moderately effective but generally could only be found among the poorer periphery forces that couldn't afford better equipment.",
+		"Icon": "Dixon"
 	},
-	"MovementCapDefID": "movedef_3-5cv",
-	"PathingCapDefID": "pathingdef_assault_tracked",
-	"HardpointDataDefID": "hardpointdatadef_rakirov",
-	"PrefabIdentifier": "rakirov_body",
-	"PrefabBase": "rakirov",
 	"YangsThoughts": "It's a zeppelin, Boss. Why the hell are we fielding this thing?",
-	"Tonnage": 95,
+	"MovementCapDefID": "movedef_4-6cv",
+	"movementType": "Tracked",
+	"PathingCapDefID": "pathingdef_assault_tracked",
+	"HardpointDataDefID": "hardpointdatadef_dixon",
+	"PrefabIdentifier": "chrPrfVhcl_apc",
+	"PrefabBase": "dixon",
+	"Tonnage": 65,
 	"weightClass": "ASSAULT",
 	"BattleValue": 993,
 	"TopSpeed": 85,
 	"TurnRadius": 90,
-	"movementType": "Tracked",
 	"SpotterDistanceMultiplier": 1,
 	"VisibilityMultiplier": 1,
 	"SensorRangeMultiplier": 1,
@@ -208,95 +208,76 @@
 			"Location": "Front",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Ballistic",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Ballistic",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "Missile",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "Missile",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "Missile",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "Missile",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 0,
-			"MaxArmor": 250,
-			"InternalStructure": 50
+			"MaxArmor": 170,
+			"InternalStructure": 35
 		},
 		{
 			"Location": "Left",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 0,
-			"MaxArmor": 200,
-			"InternalStructure": 50
+			"MaxArmor": 170,
+			"InternalStructure": 35
 		},
 		{
 			"Location": "Right",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 0,
-			"MaxArmor": 200,
-			"InternalStructure": 50
+			"MaxArmor": 170,
+			"InternalStructure": 35
 		},
 		{
 			"Location": "Rear",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 0,
-			"MaxArmor": 140,
+			"MaxArmor": 120,
 			"InternalStructure": 50
 		},
 		{
@@ -304,8 +285,8 @@
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 0,
-			"MaxArmor": 250,
-			"InternalStructure": 50
+			"MaxArmor": 170,
+			"InternalStructure": 35
 		}
 	]
 }
