@@ -1517,7 +1517,7 @@
 					"Description": {
 						"Id": "IncreasedDamagePassive",
 						"Name": "Increased Damage",
-						"Details": "This pilot is an expert at killing the target faction, and deals 20% increased damage to them.",
+						"Details": "This pilot is an expert at killing the target faction, and deals 10% increased damage to them.",
 						"Icon": "cannon-shot"
 					},
 					"nature": "Buff",
@@ -1544,14 +1544,14 @@
 					"Description": {
 						"Id": "IncreasedDamage",
 						"Name": "Increased Damage",
-						"Details": "This pilot inflicts 20% damage against the target faction.",
+						"Details": "This pilot inflicts 10% damage against the target faction.",
 						"Icon": "cannon-shot"
 					},
 					"nature": "Buff",
 					"statisticData": {
 						"statName": "DamagePerShot",
 						"operation": "Float_Multiply",
-						"modValue": "1.2",
+						"modValue": "1.1",
 						"modType": "System.Single",
 						"additionalRules": "NotSet",
 						"targetCollection": "Weapon",
@@ -1618,7 +1618,7 @@
 					"statisticData": {
 						"statName": "DamageReductionMultiplierAll",
 						"operation": "Float_Multiply",
-						"modValue": "0.8",
+						"modValue": "0.9",
 						"modType": "System.Single"
 					}
 				}
@@ -1627,40 +1627,9 @@
 	],
 	"MissionDefaultList": [
 		{
-			"MissionSpecID": "DamageResistance",
-			"MissionSpecName": "Damage Resistance",
-			"missionsRequired": 4,
-			"contractTypeID": "UNIVERSAL",
-			"description": "This pilot takes less damage during {contract} contracts.",
-			"effectDataJO": [
-				{
-					"durationData": {},
-					"targetingData": {
-						"effectTriggerType": "Passive",
-						"effectTargetType": "Creator",
-						"showInStatusPanel": true
-					},
-					"effectType": "StatisticEffect",
-					"Description": {
-						"Id": "SB_DmgResist",
-						"Name": "Damage Resistance",
-						"Details": "This pilot takes 20% less damage during certain contracts.",
-						"Icon": "armor-upgrade"
-					},
-					"nature": "Buff",
-					"statisticData": {
-						"statName": "DamageReductionMultiplierAll",
-						"operation": "Float_Multiply",
-						"modValue": "0.8",
-						"modType": "System.Single"
-					}
-				}
-			]
-		},
-		{
 			"MissionSpecID": "DamageBuff",
 			"MissionSpecName": "Increased Damage",
-			"missionsRequired": 8,
+			"missionsRequired": 4,
 			"contractTypeID": "UNIVERSAL",
 			"description": "This pilot deals 10% increased damage during {contract} contracts.",
 			"effectDataJO": [
@@ -1681,7 +1650,7 @@
 						"Id": "IncreasedDamage2",
 						"Name": "Increased Damage",
 						"Details": "This pilot deals increased damage during certain contracts.",
-						"Icon": "cannon-shot"
+						"Icon": "cannon-ball"
 					},
 					"nature": "Buff",
 					"statisticData": {
@@ -1695,6 +1664,37 @@
 						"targetWeaponType": "NotSet",
 						"targetAmmoCategory": "NotSet",
 						"targetWeaponSubType": "NotSet"
+					}
+				}
+			]
+		},
+		{
+			"MissionSpecID": "DamageResistance",
+			"MissionSpecName": "Damage Resistance",
+			"missionsRequired": 8,
+			"contractTypeID": "UNIVERSAL",
+			"description": "This pilot takes less damage during {contract} contracts.",
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "SB_DmgResist",
+						"Name": "Damage Resistance",
+						"Details": "This pilot takes 10% less damage during certain contracts.",
+						"Icon": "dragon-shield"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamageReductionMultiplierAll",
+						"operation": "Float_Multiply",
+						"modValue": "0.9",
+						"modType": "System.Single"
 					}
 				}
 			]
@@ -1729,7 +1729,7 @@
 						"effectsPersistAfterDestruction": false,
 						"statName": "MoraleBonusGain",
 						"operation": "Int_Add",
-						"modValue": "2",
+						"modValue": "4",
 						"modType": "System.Int32",
 						"additionalRules": "NotSet",
 						"targetCollection": "NotSet",
