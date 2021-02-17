@@ -88,7 +88,7 @@
     "chassisAffinities" :
     [
         {
-            "chassisNames" : ["chrPrfMech_fleaBase-001_15", "chrPrfMech_fleaBase-001_20", "chrPrfMech_locustBase-001_20", "chrprfmech_mongoosebase-001_25", "chrPrfMech_cicadaBase-001_40", "chrPrfMech_trebuchetBase-001_50", "chrprfmech_talosbase-001_50", "chrprfmech_championbase-001_60", "chrPrfMech_thunderboltBase-001_65", "chrPrfMech_zeusBase-001_80", "chrprfmech_zeusxbase-001_80", "chrPrfMech_bullsharkBase-001_95", "chrprfmech_dasherbase-001_20", "chrPrfMech_viperbase-001_40", "chrprfmech_blacklannerbase-001_55", "chrprfmech_gargoylebase-001_80", "chrprfmech_cephalusbase-001_25", "chrprfmech_starslayerbase-001_50", "chrprfmech_lancelotbase-001_60", "chrprfmech_talonbase-001_35", "chrprfmech_fireballbase-001_20", "chrprfmech_omegabase-001_30",],
+            "chassisNames" : ["chrPrfMech_fleaBase-001_15", "chrPrfMech_fleaBase-001_20", "chrPrfMech_locustBase-001_20", "chrprfmech_mongoosebase-001_25", "chrPrfMech_cicadaBase-001_40", "chrPrfMech_trebuchetBase-001_50", "chrprfmech_talosbase-001_50", "chrprfmech_championbase-001_60", "chrPrfMech_thunderboltBase-001_65", "chrPrfMech_zeusBase-001_80", "chrprfmech_zeusxbase-001_80", "chrPrfMech_bullsharkBase-001_95", "chrprfmech_dasherbase-001_20", "chrPrfMech_viperbase-001_40", "chrprfmech_blacklannerbase-001_55", "chrprfmech_gargoylebase-001_80", "chrprfmech_cephalusbase-001_25", "chrprfmech_starslayerbase-001_50", "chrprfmech_lancelotbase-001_60", "chrprfmech_talonbase-001_35", "chrprfmech_fireballbase-001_20", "chrprfmech_omegabase-001_30"],
             "affinityLevels" : 
             [
                 {
@@ -638,7 +638,7 @@
             ]
         },
 		{
-            "chassisNames" : ["chrprfmech_argusbase-001_60", "chrprfmech_novabase-001_60", "Avatar_70", "Rakshasa_75", "chrprfmech_templarbase-001_85", "chrprfmech_maulerbase-001_90", "chrPrfMech_hauptmannbase-001_95", "chrprfmech_stonerhinobase-001_110", "chrPrfMech_hunchbackiicHotD-001_50", "chrprfmech_summonerbase-001_70", "chrprfmech_orioniicbase-001_75", "DireWolf_100", "chrprfmech_hyperionbase-001_125", "chrprfmech_razorbackbase-001_30", "chrprfmech_ionsunderbase-001_90", "chrprfmech_scyllabase-001_100"],
+            "chassisNames" : ["chrprfmech_argusbase-001_60", "chrprfmech_novabase-001_60", "Avatar_70", "Rakshasa_75", "chrprfmech_templarbase-001_85", "chrprfmech_maulerbase-001_90", "chrPrfMech_hauptmannbase-001_95", "chrprfmech_stonerhinobase-001_110", "chrPrfMech_hunchbackiicHotD-001_50", "chrprfmech_summonerbase-001_70", "chrprfmech_orioniicbase-001_75", "chrprfmech_direwolfbase-001_100", "chrprfmech_hyperionbase-001_125", "chrprfmech_razorbackbase-001_30", "chrprfmech_ionsunderbase-001_90", "chrprfmech_scyllabase-001_100"],
             "affinityLevels" : 
             [
                 {
@@ -897,6 +897,48 @@
                                 "targetWeaponCategory": "NotSet",
                                 "targetWeaponSubType": "NotSet",
                                 "targetWeaponType": "NotSet"
+                            },
+                            "targetingData": {
+                                "effectTargetType": "Creator",
+                                "effectTriggerType": "Passive",
+                                "hideApplicationFloatie": true,
+                                "showInStatusPanel": false,
+                                "showInTargetPreview": false
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+		{
+            "chassisNames" : ["Barghest_70", "Goliath_80"],
+            "affinityLevels" : 
+            [
+                {
+                    "missionsRequired" : 15,
+                    "levelName" : "Stabilized",
+                    "decription" : "Reduces stability damage taken by 50%.",
+                    "effectData" : 
+                    [
+                        {
+                            "Description": {
+                                "Details": "The pilot's incredible skill with this mech reduces stability damage taken by 50%.",
+                                "Icon": "UixSvgIcon_specialEquip_System",
+                                "Id": "StatusEffect-Affinity-StabDmgReduction",
+                                "Name": "Mech Affinity Stab Damage Reduction"
+                            },
+                            "durationData": {
+                                "duration": -1,
+                                "stackLimit": -1
+                            },
+                            "effectType": "StatisticEffect",
+                            "nature": "Buff",
+                            "statisticData": {
+                                "additionalRules": "NotSet",
+                                "statName" : "ReceivedInstabilityMultiplier",
+								"operation" : "Float_Multiply",
+								"modValue" : "0.5",
+								"modType" : "System.Single"
                             },
                             "targetingData": {
                                 "effectTargetType": "Creator",
