@@ -1532,6 +1532,47 @@
                     ]
                 }
 			]
+		},
+		{
+			"tag" : "Affinity_Pharaoh_Berserker",
+			"chassisNames" : ["chrprfmech_berserkerbase-001_100"],
+			"affinityLevels" : [
+				 {
+                    "missionsRequired" : 10,
+                    "levelName" : "Zoom Zoom, Motherfucker",
+                    "decription" : "Pharoah's skill with his Berserker grants him a little extra speed in it, increasing his sprint speed somewhat.",
+                    "effectData" : 
+                    [
+                        {
+                            "Description": {
+                                "Details": "Pharoah gains +0.2 sprint modifier in his Berserker.",
+                                "Icon": "layeredarmor",
+                                "Id": "StatusEffect-Affinity-PharoahBerserker",
+                                "Name": "Pharoah Affinity Berserker Speed"
+                            },
+                            "durationData": {
+                                "duration": -1,
+                                "stackLimit": -1
+                            },
+                            "effectType": "StatisticEffect",
+                            "nature": "Buff",
+                            "statisticData": {
+                                "statName": "CBTBE_RunMultiMod",
+								"operation": "Float_Add",
+								"modValue": "0.2",
+								"modType": "System.Single"
+                            },
+                            "targetingData": {
+                                "effectTargetType": "Creator",
+                                "effectTriggerType": "Passive",
+                                "hideApplicationFloatie": true,
+                                "showInStatusPanel": false,
+                                "showInTargetPreview": false
+                            }
+                        }
+                    ]
+                }
+			]
 		}
 	]
 }
