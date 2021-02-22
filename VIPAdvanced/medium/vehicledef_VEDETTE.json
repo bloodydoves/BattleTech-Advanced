@@ -1,17 +1,7 @@
 {
-	"Version": 1,
-	"Description": {
-		"Id": "vehicledef_VEDETTE",
-		"Name": "Vedette Medium Tank",
-		"Details": "",
-		"Icon": "Vedette",
-		"Cost": 993,
-		"Rarity": 0,
-		"Purchasable": false
-	},
-	"ChassisID": "vehiclechassisdef_VEDETTE",
 	"VehicleTags": {
 		"items": [
+			"unit_controllableTank",
 			"mr-resize-1.50",
 			"unit_vehicle",
 			"unit_medium",
@@ -85,12 +75,24 @@
 		],
 		"tagSetSourceFile": ""
 	},
+	"ChassisID": "vehiclechassisdef_VEDETTE",
+	"Description": {
+		"Cost": 786125,
+		"Rarity": 0,
+		"Purchasable": false,
+		"UIName": "Vedette Medium Tank",
+		"Id": "vehicledef_VEDETTE",
+		"Name": "Vedette Medium Tank",
+		"Details": "The yardstick against which all other tanks are judged, the Vedette Medium Tank is one of the most popular and common combat vehicles in the Inner Sphere. Carrying only one main and one secondary weapon, the selling point of the Vedette is its speed, fast even for a medium tank. The Vedette's armament consists of a turret mounted  AC/5, with a Machine Gun mounted on the bow of the tank in a mini-ball turret. \n\n <b><color=#ffcc00>Tracked: High traction, agile turning.</color></b>\n\n <b><color=#ffcc00>ICE: Air breathing Combustion Engine. This unit can not deploy in thin atmosphere.</color></b>\n\n <b><color=#ffcc00>Movement: 5/8 Hex: 150/240 Meters.</color></b>\n\n<b>Armor:</b> Armor\n<b>Structure:</b> Structure\n<b>Values       A        S  </b>\n<b>Front</b>       112     25\n<b>Left</b>          90     25\n<b>Right</b>        90     25\n<b>Rear</b>        100     25\n<b>Turret</b>      100     25\n\n<b>Total</b>      492    125\n",
+		"Icon": "Vedette"
+	},
+	"Version": 1,
 	"Locations": [
 		{
 			"Location": "Front",
-			"CurrentArmor": 100,
+			"CurrentArmor": 112,
 			"CurrentInternalStructure": 25,
-			"AssignedArmor": 100,
+			"AssignedArmor": 112,
 			"DamageLevel": "Functional"
 		},
 		{
@@ -124,30 +126,91 @@
 	],
 	"inventory": [
 		{
+			"MountedLocation": "Turret",
 			"ComponentDefID": "Weapon_Autocannon_AC5_0-STOCK",
 			"ComponentDefType": "Weapon",
-			"MountedLocation": "Turret",
 			"HardpointSlot": 0,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Turret",
 			"ComponentDefID": "Weapon_MachineGun_MachineGun_0-STOCK",
 			"ComponentDefType": "Weapon",
-			"MountedLocation": "Turret",
 			"HardpointSlot": 1,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Front",
 			"ComponentDefID": "Ammo_AmmunitionBox_Generic_MG",
 			"ComponentDefType": "AmmunitionBox",
-			"MountedLocation": "Front",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Rear",
 			"ComponentDefID": "Ammo_AmmunitionBox_Generic_AC5",
 			"ComponentDefType": "AmmunitionBox",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "Tank_CrewCompartment",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "Tank_FCS_Generic",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "Tank_Sensors_Generic",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "emod_structureslots_standard",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1
+		},
+		{
+			"MountedLocation": "Left",
+			"ComponentDefID": "Gear_Tracked_Left",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Right",
+			"ComponentDefID": "Gear_Tracked_Right",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
 			"MountedLocation": "Rear",
+			"ComponentDefID": "emod_armorslots_standard",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1
+		},
+		{
+			"MountedLocation": "Turret",
+			"ComponentDefID": "Tank_Turret",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Rear",
+			"ComponentDefID": "emod_engine_250",
+			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		},
@@ -159,31 +222,10 @@
 			"DamageLevel": "Functional"
 		},
 		{
-			"ComponentDefID": "Tank_Turret",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Turret",
-			"HardpointSlot": 1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Tank_CrewCompartment",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Front",
-			"HardpointSlot": 1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Gear_Tracked_Right",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Right",
-			"HardpointSlot": 1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Gear_Tracked_Left",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Left",
-			"HardpointSlot": 1,
+			"MountedLocation": "Rear",
+			"ComponentDefID": "Tank_Coolant_System",
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		}
 	]

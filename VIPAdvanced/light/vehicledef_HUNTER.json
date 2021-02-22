@@ -1,17 +1,7 @@
 {
-	"Version": 1,
-	"Description": {
-		"Id": "vehicledef_HUNTER",
-		"Name": "Hunter HNT-3R",
-		"Details": "",
-		"Icon": "Hunter",
-		"Cost": 564,
-		"Rarity": 0,
-		"Purchasable": false
-	},
-	"ChassisID": "vehiclechassisdef_HUNTER",
 	"VehicleTags": {
 		"items": [
+			"unit_controllableTank",
 			"mr-resize-1.50",
 			"unit_vehicle",
 			"unit_light",
@@ -84,12 +74,24 @@
 		],
 		"tagSetSourceFile": ""
 	},
+	"ChassisID": "vehiclechassisdef_HUNTER",
+	"Description": {
+		"Cost": 1230300,
+		"Rarity": 0,
+		"Purchasable": false,
+		"UIName": "Hunter HNT-3R",
+		"Id": "vehicledef_HUNTER",
+		"Name": "Hunter HNT-3R",
+		"Details": "Fast and versatile, the Light Tank is poorly suited to direct combat but has a variety of other uses. Carrying an array of ranged weapons, the Light Tank is designed to support allied units from range.\n\n <b><color=#ffcc00>Tracked: High traction, agile turning.</color></b>\n\n <b><color=#ffcc00>Fusion: Expensive engine that works in a Vacuum.</color></b>\n\n <b><color=#ffcc00>Movement: 5/8 Hex: 150/240 Meters.</color></b>\n\n<b>Armor:</b> Armor\n<b>Structure:</b> Structure\n<b>Values       A        S  </b>\n<b>Front</b>       180     20\n<b>Left</b>         120     20\n<b>Right</b>       120     20\n<b>Rear</b>         80     20\n\n<b>Total</b>      500     80\n",
+		"Icon": "Hunter"
+	},
+	"Version": 1,
 	"Locations": [
 		{
 			"Location": "Front",
-			"CurrentArmor": 160,
+			"CurrentArmor": 180,
 			"CurrentInternalStructure": 20,
-			"AssignedArmor": 160,
+			"AssignedArmor": 180,
 			"DamageLevel": "Functional"
 		},
 		{
@@ -112,43 +114,83 @@
 			"CurrentInternalStructure": 20,
 			"AssignedArmor": 80,
 			"DamageLevel": "Functional"
-		},
-		{
-			"Location": "Turret",
-			"CurrentArmor": 100,
-			"CurrentInternalStructure": 20,
-			"AssignedArmor": 100,
-			"DamageLevel": "Functional"
 		}
 	],
 	"inventory": [
 		{
-			"ComponentDefID": "Weapon_Flamer_Flamer_0-STOCK",
-			"ComponentDefType": "Weapon",
-			"MountedLocation": "Rear",
-			"HardpointSlot": 0,
-			"DamageLevel": "Functional"
-		},
-		{
+			"MountedLocation": "Front",
 			"ComponentDefID": "Weapon_LRM_LRM20_0-STOCK",
 			"ComponentDefType": "Weapon",
-			"MountedLocation": "Front",
 			"HardpointSlot": 0,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Rear",
+			"ComponentDefID": "Weapon_Flamer_Flamer_0-STOCK",
+			"ComponentDefType": "Weapon",
+			"HardpointSlot": 0,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Left",
 			"ComponentDefID": "Ammo_AmmunitionBox_Generic_LRM",
 			"ComponentDefType": "AmmunitionBox",
-			"MountedLocation": "Left",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Left",
 			"ComponentDefID": "Ammo_AmmunitionBox_Generic_LRM",
 			"ComponentDefType": "AmmunitionBox",
-			"MountedLocation": "Right",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "Tank_CrewCompartment",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "Tank_FCS_Generic",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "Tank_Sensors_Generic",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "emod_structureslots_standard",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1
+		},
+		{
+			"MountedLocation": "Left",
+			"ComponentDefID": "Gear_Tracked_Left",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Right",
+			"ComponentDefID": "Gear_Tracked_Right",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Rear",
+			"ComponentDefID": "emod_armorslots_standard",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1
 		},
 		{
 			"MountedLocation": "Rear",
@@ -158,14 +200,21 @@
 			"DamageLevel": "Functional"
 		},
 		{
-			"MountedLocation": "Right",
-			"ComponentDefID": "Gear_HeatSink_Generic_Standard",
+			"MountedLocation": "Rear",
+			"ComponentDefID": "emod_engineslots_std_center",
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		},
 		{
 			"MountedLocation": "Left",
+			"ComponentDefID": "Gear_HeatSink_Generic_Standard",
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Right",
 			"ComponentDefID": "Gear_HeatSink_Generic_Standard",
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -179,31 +228,10 @@
 			"DamageLevel": "Functional"
 		},
 		{
-			"ComponentDefID": "Tank_Turret",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Turret",
-			"HardpointSlot": 1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Tank_CrewCompartment",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Front",
-			"HardpointSlot": 1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Gear_Tracked_Right",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Right",
-			"HardpointSlot": 1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Gear_Tracked_Left",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Left",
-			"HardpointSlot": 1,
+			"MountedLocation": "Rear",
+			"ComponentDefID": "Tank_Coolant_System",
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		}
 	]

@@ -1,17 +1,7 @@
 {
-	"Version": 1,
-	"Description": {
-		"Id": "vehicledef_DRILLSON",
-		"Name": "Drillson Hover Tank",
-		"Details": "",
-		"Icon": "Drillson",
-		"Cost": 993,
-		"Rarity": 0,
-		"Purchasable": false
-	},
-	"ChassisID": "vehiclechassisdef_DRILLSON",
 	"VehicleTags": {
 		"items": [
+			"unit_controllableTank",
 			"mr-resize-1.68",
 			"unit_vehicle",
 			"unit_medium",
@@ -42,9 +32,9 @@
 			"Tortuga",
 			"AuriganDirectorate",
 			"AuriganRestoration",
-			"nofaction",
+			"NoFaction",
 			"MercenaryReviewBoard",
-			"betrayers",
+			"Betrayers",
 			"FlakJackals",
 			"Tortuga",
 			"LocalsBrockwayRefugees",
@@ -82,26 +72,38 @@
 		],
 		"tagSetSourceFile": ""
 	},
+	"ChassisID": "vehiclechassisdef_DRILLSON",
+	"Description": {
+		"Cost": 2831332,
+		"Rarity": 0,
+		"Purchasable": false,
+		"UIName": "Drillson Hover Tank",
+		"Id": "vehicledef_DRILLSON",
+		"Name": "Drillson Hover Tank",
+		"Details": "A jack of all trades tank, the Medium tank is the generic stereotype of a tank. Intended as a scout or vanguard unit, the Medium Tank is constantly on the move, probing ahead of the rest of the troops.\n\n <b><color=#ffcc00>Hover: Fast on open ground and water, slow in rough terrain, not very agile.</color></b>\n\n <b><color=#ffcc00>Fusion: Expensive engine that works in a Vacuum.</color></b>\n\n <b><color=#ffcc00>Movement: 9/14 Hex: 270/420 Meters.</color></b>\n\n<b>Armor:</b> Armor\n<b>Structure:</b> Structure\n<b>Values       A        S  </b>\n<b>Front</b>       144     25\n<b>Left</b>         100     25\n<b>Right</b>       100     25\n<b>Rear</b>         90     25\n<b>Turret</b>      130     25\n\n<b>Total</b>      564    125\n",
+		"Icon": "Drillson"
+	},
+	"Version": 1,
 	"Locations": [
 		{
 			"Location": "Front",
-			"CurrentArmor": 120,
+			"CurrentArmor": 144,
 			"CurrentInternalStructure": 25,
-			"AssignedArmor": 120,
+			"AssignedArmor": 144,
 			"DamageLevel": "Functional"
 		},
 		{
 			"Location": "Left",
-			"CurrentArmor": 95,
+			"CurrentArmor": 100,
 			"CurrentInternalStructure": 25,
-			"AssignedArmor": 95,
+			"AssignedArmor": 100,
 			"DamageLevel": "Functional"
 		},
 		{
 			"Location": "Right",
-			"CurrentArmor": 95,
+			"CurrentArmor": 100,
 			"CurrentInternalStructure": 25,
-			"AssignedArmor": 95,
+			"AssignedArmor": 100,
 			"DamageLevel": "Functional"
 		},
 		{
@@ -113,73 +115,127 @@
 		},
 		{
 			"Location": "Turret",
-			"CurrentArmor": 120,
+			"CurrentArmor": 130,
 			"CurrentInternalStructure": 25,
-			"AssignedArmor": 120,
+			"AssignedArmor": 130,
 			"DamageLevel": "Functional"
 		}
 	],
 	"inventory": [
 		{
-			"ComponentDefID": "Weapon_Laser_LargeLaser_0-STOCK",
-			"ComponentDefType": "Weapon",
-			"MountedLocation": "Turret",
-			"HardpointSlot": 0,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Weapon_SRM_SRM2_0-STOCK",
-			"ComponentDefType": "Weapon",
-			"MountedLocation": "Turret",
-			"HardpointSlot": 1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Weapon_SRM_SRM2_0-STOCK",
-			"ComponentDefType": "Weapon",
-			"MountedLocation": "Turret",
-			"HardpointSlot": 2,
-			"DamageLevel": "Functional"
-		},
-		{
+			"MountedLocation": "Front",
 			"ComponentDefID": "Weapon_LRM_LRM10_0-STOCK",
 			"ComponentDefType": "Weapon",
-			"MountedLocation": "Front",
 			"HardpointSlot": 0,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Front",
 			"ComponentDefID": "Weapon_MachineGun_MachineGun_0-STOCK",
 			"ComponentDefType": "Weapon",
-			"MountedLocation": "Front",
 			"HardpointSlot": 1,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Front",
 			"ComponentDefID": "Weapon_MachineGun_MachineGun_0-STOCK",
 			"ComponentDefType": "Weapon",
-			"MountedLocation": "Front",
-			"HardpointSlot": 2,
+			"HardpointSlot": 1,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Turret",
+			"ComponentDefID": "Weapon_Laser_LargeLaser_0-STOCK",
+			"ComponentDefType": "Weapon",
+			"HardpointSlot": 0,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Turret",
+			"ComponentDefID": "Weapon_SRM_SRM2_0-STOCK",
+			"ComponentDefType": "Weapon",
+			"HardpointSlot": 1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Turret",
+			"ComponentDefID": "Weapon_SRM_SRM2_0-STOCK",
+			"ComponentDefType": "Weapon",
+			"HardpointSlot": 1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
 			"ComponentDefID": "Ammo_AmmunitionBox_Generic_LRM",
 			"ComponentDefType": "AmmunitionBox",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
 			"MountedLocation": "Front",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Ammo_AmmunitionBox_Generic_SRM",
-			"ComponentDefType": "AmmunitionBox",
-			"MountedLocation": "Turret",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
-		},
-		{
 			"ComponentDefID": "Ammo_AmmunitionBox_Generic_MG_half",
 			"ComponentDefType": "AmmunitionBox",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Rear",
+			"ComponentDefID": "Ammo_AmmunitionBox_Generic_SRM",
+			"ComponentDefType": "AmmunitionBox",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
 			"MountedLocation": "Front",
+			"ComponentDefID": "Tank_CrewCompartment",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "Tank_FCS_Generic",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "Tank_Sensors_Generic",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "emod_structureslots_standard",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1
+		},
+		{
+			"MountedLocation": "Left",
+			"ComponentDefID": "Gear_Hover_Left",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": 1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Right",
+			"ComponentDefID": "Gear_Hover_Right",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": 1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Rear",
+			"ComponentDefID": "emod_armorslots_standard",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1
+		},
+		{
+			"MountedLocation": "Turret",
+			"ComponentDefID": "Tank_Turret",
+			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		},
@@ -191,31 +247,17 @@
 			"DamageLevel": "Functional"
 		},
 		{
-			"ComponentDefID": "Tank_Turret",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Turret",
-			"HardpointSlot": 1,
+			"MountedLocation": "Rear",
+			"ComponentDefID": "emod_engineslots_std_center",
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		},
 		{
-			"ComponentDefID": "Tank_CrewCompartment",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Front",
-			"HardpointSlot": 1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Gear_Hover_Right",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Right",
-			"HardpointSlot": 1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Gear_Hover_Left",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Left",
-			"HardpointSlot": 1,
+			"MountedLocation": "Rear",
+			"ComponentDefID": "Tank_Coolant_System",
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		}
 	]

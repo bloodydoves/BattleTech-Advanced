@@ -1,17 +1,7 @@
 {
-	"Version": 1,
-	"Description": {
-		"Id": "vehicledef_CARRIER_LIGHT_MORTAR",
-		"Name": "Light Mortar Carrier",
-		"Details": "",
-		"Icon": "MortarCarrier",
-		"Cost": 564,
-		"Rarity": 0,
-		"Purchasable": false
-	},
-	"ChassisID": "vehiclechassisdef_CARRIER_LIGHT_MORTAR",
 	"VehicleTags": {
 		"items": [
+			"unit_controllableTank",
 			"mr-resize-1.50",
 			"unit_vehicle",
 			"unit_medium",
@@ -63,6 +53,18 @@
 		],
 		"tagSetSourceFile": ""
 	},
+	"ChassisID": "vehiclechassisdef_CARRIER_LIGHT_MORTAR",
+	"Description": {
+		"Cost": 1543328,
+		"Rarity": 0,
+		"Purchasable": false,
+		"UIName": "Light Mortar Carrier",
+		"Id": "vehicledef_CARRIER_LIGHT_MORTAR",
+		"Name": "Light Mortar Carrier",
+		"Details": "Not designed for traditional combat, the Carrier is a force multiplier. Designed to support allies from range, the Carrier can hang back behind friendly lines where it's lack of armor isn't a concern.\n\n <b><color=#ffcc00>Wheeled: Fast in open ground, slow in rough terrain.</color></b>\n\n <b><color=#ffcc00>ICE: Air breathing Combustion Engine. This unit can not deploy in thin atmosphere.</color></b>\n\n <b><color=#ffcc00>Movement: 4/6 Hex: 120/180 Meters.</color></b>\n\n<b>Armor:</b> Armor\n<b>Structure:</b> Structure\n<b>Values       A        S  </b>\n<b>Front</b>        80     20\n<b>Left</b>          70     20\n<b>Right</b>        70     20\n<b>Rear</b>         60     20\n<b>Turret</b>       80     20\n\n<b>Total</b>      360    100\n",
+		"Icon": "MortarCarrier"
+	},
+	"Version": 1,
 	"Locations": [
 		{
 			"Location": "Front",
@@ -102,86 +104,140 @@
 	],
 	"inventory": [
 		{
+			"MountedLocation": "Turret",
 			"ComponentDefID": "Weapon_MECHMORTAR_4",
 			"ComponentDefType": "Weapon",
-			"MountedLocation": "Turret",
 			"HardpointSlot": 0,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Turret",
 			"ComponentDefID": "Weapon_MECHMORTAR_4",
 			"ComponentDefType": "Weapon",
-			"MountedLocation": "Turret",
-			"HardpointSlot": 1,
+			"HardpointSlot": 0,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Turret",
 			"ComponentDefID": "Weapon_MECHMORTAR_4",
 			"ComponentDefType": "Weapon",
-			"MountedLocation": "Turret",
-			"HardpointSlot": 2,
+			"HardpointSlot": 0,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Turret",
 			"ComponentDefID": "Weapon_Laser_TAG",
 			"ComponentDefType": "Weapon",
-			"MountedLocation": "Turret",
-			"HardpointSlot": 3,
+			"HardpointSlot": 0,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Turret",
 			"ComponentDefID": "Weapon_RocketLauncher_RL10_0_STOCK",
 			"ComponentDefType": "Weapon",
-			"MountedLocation": "Turret",
-			"HardpointSlot": 5,
+			"HardpointSlot": 0,
 			"DamageLevel": "Functional"
 		},
 		{
-			"ComponentDefID": "Gear_TargetingTrackingSystem_I3F1",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Front",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Ammo_AmmunitionBox_Generic_Mortar",
-			"ComponentDefType": "AmmunitionBox",
 			"MountedLocation": "Rear",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Ammo_AmmunitionBox_Generic_Mortar",
-			"ComponentDefType": "AmmunitionBox",
-			"MountedLocation": "Rear",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
-		},
-		{
 			"ComponentDefID": "Ammo_AmmunitionBox_Airburst_Mortar_half",
 			"ComponentDefType": "AmmunitionBox",
-			"MountedLocation": "Rear",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Rear",
+			"ComponentDefID": "Ammo_AmmunitionBox_Airburst_Mortar_half",
+			"ComponentDefType": "AmmunitionBox",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Rear",
+			"ComponentDefID": "Ammo_AmmunitionBox_Generic_Mortar",
+			"ComponentDefType": "AmmunitionBox",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Rear",
+			"ComponentDefID": "Ammo_AmmunitionBox_Generic_Mortar",
+			"ComponentDefType": "AmmunitionBox",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Rear",
 			"ComponentDefID": "Ammo_AmmunitionBox_Smoke_Mortar_half",
 			"ComponentDefType": "AmmunitionBox",
-			"MountedLocation": "Rear",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Rear",
 			"ComponentDefID": "Ammo_AmmunitionBox_Guided_Mortar_half",
 			"ComponentDefType": "AmmunitionBox",
-			"MountedLocation": "Rear",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Rear",
 			"ComponentDefID": "Ammo_AmmunitionBox_Acid_Mortar_half",
 			"ComponentDefType": "AmmunitionBox",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "Gear_TargetingTrackingSystem_I3F1",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "Tank_CrewCompartment",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "Tank_Sensors_Generic",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "emod_structureslots_standard",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1
+		},
+		{
+			"MountedLocation": "Left",
+			"ComponentDefID": "Gear_Wheeled_Left",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Right",
+			"ComponentDefID": "Gear_Wheeled_Right",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
 			"MountedLocation": "Rear",
+			"ComponentDefID": "emod_armorslots_standard",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1
+		},
+		{
+			"MountedLocation": "Turret",
+			"ComponentDefID": "Tank_Turret",
+			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		},
@@ -194,37 +250,16 @@
 		},
 		{
 			"MountedLocation": "Rear",
-			"ComponentDefID": "emod_engineslots_FuelCell",
+			"ComponentDefID": "emod_engineslots_ICE_center",
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		},
 		{
-			"ComponentDefID": "Tank_Turret",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Turret",
-			"HardpointSlot": 1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Tank_CrewCompartment",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Front",
-			"HardpointSlot": 1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Gear_Wheeled_Right",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Right",
-			"HardpointSlot": 1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Gear_Wheeled_Left",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Left",
-			"HardpointSlot": 1,
+			"MountedLocation": "Rear",
+			"ComponentDefID": "Tank_Coolant_System",
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		}
 	]
