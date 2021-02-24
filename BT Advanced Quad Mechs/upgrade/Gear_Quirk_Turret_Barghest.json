@@ -1,0 +1,90 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "Quirk"
+			}
+		],
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "[[Chassis.Tonnage]]/10",
+				"CBillCost": "[[Chassis.Tonnage]] * 1.15"
+			}
+		},
+		"Flags": {
+			"flags": [
+				"default",
+				"not_broken",
+				"no_salvage",
+				"autorepair"
+			]
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"LocationAccuracy: +2"
+			]
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 500000,
+		"Rarity": 99,
+		"Purchasable": false,
+		"Manufacturer": "Quirk",
+		"Model": "Barghest",
+		"UIName": "Barghest Torso Turret",
+		"Id": "Gear_Quirk_Turret_Barghest",
+		"Name": "Barghest Torso Turret",
+		"Details": "This piece of gear represents the Barghest's inherent Torso Turret quirk. This gives the Barghest bonus weapon accuracy for weapons mounted in this location.",
+		"Icon": "uixSvgIcon_equipment_Cockpit"
+	},
+	"BonusValueA": "+2 Location Accuracy",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0,
+	"AllowedLocations": "LeftTorso,RightTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+            "durationData": {
+                "duration": -1,
+                "stackLimit": -1
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "effectTargetType": "Creator",
+                "showInTargetPreview": false,
+                "showInStatusPanel": false
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id" : "Status-TorsoAccuracy-{location}",
+                "Name": "Torso Accuracy",
+                "Details": "+2 Torso mounted accuracy.",
+                "Icon": "uixSvgIcon_equipment_ActuatorArm"
+            },
+            "nature": "Buff",
+            "statisticData": {
+                "statName" : "{location}.Accuracy",
+                "operation" : "Float_Add",
+                "modValue" : "-2",
+                "modType" : "System.Single"
+            }
+        }
+	],
+	"ComponentTags": {
+		"items": [
+			"BLACKLISTED",
+			"component_type_stock",
+			"lv-shares-sensors"
+		],
+		"tagSetSourceFile": ""
+	}
+}

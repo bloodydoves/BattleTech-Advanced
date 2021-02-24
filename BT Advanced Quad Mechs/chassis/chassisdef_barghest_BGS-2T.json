@@ -1,0 +1,462 @@
+{
+	"Custom": {
+		"AssemblyVariant": {
+			"PrefabID": "Barghest",
+			"Exclude": false,
+			"Include": true
+		},
+        "ArmActuatorSupport": {
+			  "LeftLimit": "Hand",
+			  "RightLimit": "Hand",
+			  "LeftDefaultShoulder": "Quad_Front_leg_hip",
+			  "RightDefaultShoulder": "Quad_Front_leg_hip",
+			  "LeftDefaultUpper": "Quad_Front_leg_upper",
+			  "RightDefaultUpper": "Quad_Front_leg_upper",
+			  "LeftDefaultLower": "Quad_Front_leg_lower",
+			  "RightDefaultLower": "Quad_Front_leg_lower",
+			  "LeftDefaultHand": "Quad_Front_leg_foot",
+			  "RightDefaultHand": "Quad_Front_leg_foot"
+		},
+		"ChassisDefaults": [
+			  {
+				"Location": "LeftLeg",
+				"CategoryID": "LegHip",
+				"DefID": "Quad_Hind_leg_hip",
+				"Type": "Upgrade"
+			  },
+			  {
+				"Location": "LeftLeg",
+				"CategoryID": "LegUpperActuator",
+				"DefID": "Quad_Hind_leg_upper",
+				"Type": "Upgrade"
+			  },
+			  {
+				"Location": "LeftLeg",
+				"CategoryID": "LegLowerActuator",
+				"DefID": "Quad_Hind_leg_lower",
+				"Type": "Upgrade"
+			  },
+			  {
+				"Location": "LeftLeg",
+				"CategoryID": "LegFootActuator",
+				"DefID": "Quad_Hind_leg_foot",
+				"Type": "Upgrade"
+			  },
+			  {
+				"Location": "RightLeg",
+				"CategoryID": "LegHip",
+				"DefID": "Quad_Hind_leg_hip",
+				"Type": "Upgrade"
+			  },
+			  {
+				"Location": "RightLeg",
+				"CategoryID": "LegUpperActuator",
+				"DefID": "Quad_Hind_leg_upper",
+				"Type": "Upgrade"
+			  },
+			  {
+				"Location": "RightLeg",
+				"CategoryID": "LegLowerActuator",
+				"DefID": "Quad_Hind_leg_lower",
+				"Type": "Upgrade"
+			  },
+			  {
+				"Location": "RightLeg",
+				"CategoryID": "LegFootActuator",
+				"DefID": "Quad_Hind_leg_foot",
+				"Type": "Upgrade"
+			  }
+		]
+	},
+	"CustomParts": {
+		"quadVisualInfo":{
+		  "UseQuadVisuals": true,
+		  "FLegsPrefab": "chrPrfMech_kingcrabBase-001",
+		  "BodyLength":7.0,
+		  "FLegsPrefabBase": "kingcrab",
+		  "RLegsPrefabBase": "kingcrab",
+		  "NotSuppressRenderers":["_left_leg_","_right_leg_"]
+		},
+		"MeleeWeaponOverride":{
+		  "DefaultWeapon": "Weapon_MeleeAttackEx"
+		},
+		"FiringArc": 360,
+		"Unaffected": {
+		  "DesignMasks": "false",
+		  "Pathing": "false",
+		  "Fire": "false",
+		  "Landmines": "false"
+		},
+		"ArmsCountedAsLegs":true,
+		"MoveCostModPerBiome": {
+		  "DesignMaskBiomeMartianVacuum": 1.0,
+		  "DesignMaskBiomeLunarVacuum": 1.0
+		},
+		"CustomParts": [
+		  {
+			"prefab": "bargbody",
+			"MaterialInfo": {
+			  "bargbody": {
+				"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
+				"shaderKeyWords": [
+				  "_DETAIL_OVERLAY",
+				  "_EMISSION",
+				  "_METALLICGLOSSMAP",
+				  "_NORMALMAP"
+				]
+			  }
+			},
+			"prefabTransform": {
+			  "offset": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			  },
+			  "scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			  },
+			  "rotate": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			  }
+			},
+			"MechChassisLocation": "CenterTorso",
+			"RequiredUpgrades": [],
+			"RequiredComponents": [],
+			"AnimationType": "QuadBody",
+			"AnimationData": { 
+			  "VerticalRotate":"rotate", 
+			  "TurretAttach": "turret_attach", 
+			  "FrontLegsAttach":"front_legs_attach",
+			  "ShowFrontLegsAxis": false,
+			  "DamageAnimator":"barg_CT_LT_RT_plus_damage_models",
+			  "RTVFXTransform":"RT_vfx_transform",
+			  "LTVFXTransform":"LT_vfx_transform",
+			  "CTVFXTransform":"CT_vfx_transform",
+			  "HEADVFXTransform":"HEAD_vfx_transform",
+			  "JumpJetsSpawnPoints": ["jumpjet_rear","jumpjet_front","jumpjet_left","jumpjet_right"],
+			  "HeadLightSpawnPoints": ["headlight_left","headlight_right"]
+			}
+		  },
+		  {
+			"prefab": "bargest_turret",
+			"MaterialInfo": {
+			  "bargest_turret_material": {
+				"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
+				"shaderKeyWords": [
+				  "_DETAIL_OVERLAY",
+				  "_EMISSION",
+				  "_METALLICGLOSSMAP",
+				  "_NORMALMAP"
+				]
+			  },
+			  "ModularSci-FiWeapons_Camouflage03": {
+				"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
+				"shaderKeyWords": [
+				  "_DETAIL_OVERLAY",
+				  "_EMISSION",
+				  "_METALLICGLOSSMAP",
+				  "_NORMALMAP"
+				]
+			  },
+			  "ModularSci-FiWeapons_White": {
+				"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
+				"shaderKeyWords": [
+				  "_DETAIL_OVERLAY",
+				  "_EMISSION",
+				  "_METALLICGLOSSMAP",
+				  "_NORMALMAP"
+				]
+			  }
+			},
+			"prefabTransform": {
+			  "offset": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			  },
+			  "scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			  },
+			  "rotate": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			  }
+			},
+			"MechChassisLocation": "CenterTorso",
+			"RequiredUpgrades": [],
+			"RequiredComponents": [],
+			"AnimationType": "MechTurret",
+			"AnimationData": {
+			  "TurnAnimator":"base",
+			  "AttachPoints":[
+				{"Location":"LeftTorso","AttachTo":"WeaponAttachL","Animator":"WeaponMountL"},
+				{"Location":"RightTorso","AttachTo":"WeaponAttachR","Animator":"WeaponMountR"}
+			  ]
+			}
+		  }
+		]
+	  },
+	"Description": {
+		"Cost": 7536120,
+		"Rarity": 3,
+		"Purchasable": true,
+		"Manufacturer": "",
+		"Model": "",
+		"UIName": "Barghest",
+		"Id": "chassisdef_barghest_BGS-2T",
+		"Name": "Barghest",
+		"Details": "Katherine Steiner-Davion decided during her reign over the Lyran Alliance that she wanted a four legged BattleMech that would evoke fear in its enemies in a similar vein to the classic Atlas and Banshee designs. To do this, the Barghest is built on an Earthwerk GRF Quad chassis that supports a Magna 350 XL engine that saves weight and allows the 'Mech to carry a heavy weapons payload. The 2T removes the weapons of the 1T model and replaces them with a single ER PPC and an Ultra Autocannon/20. The ultra autocannon is capable of firing at twice the rate as a standard autocannon, giving the 2T an incredible amount of short range firepower.",
+		"Icon": "uixTxrIcon_barghest"
+	},
+	"MovementCapDefID": "movedef_warhammer_WHM-6R",
+	"PathingCapDefID": "pathingdef_heavy",
+	"HardpointDataDefID": "hardpointdatadef_quad",
+	"PrefabIdentifier": "chrPrfMech_kingcrabBase-001",
+	"PrefabBase": "quad",
+	"Tonnage": 70,
+	"InitialTonnage": 7,
+	"weightClass": "HEAVY",
+	"BattleValue": 6577000,
+	"Heatsinks": 0,
+	"TopSpeed": 120,
+	"TurnRadius": 90,
+	"MaxJumpjets": 30,
+	"Stability": 160,
+	"StabilityDefenses": [
+		0,
+		0,
+		0,
+		0,
+		0,
+		0
+	],
+	"SpotterDistanceMultiplier": 1,
+	"VisibilityMultiplier": 1,
+	"SensorRangeMultiplier": 1,
+	"Signature": 0,
+	"Radius": 8,
+	"PunchesWithLeftArm": false,
+	"MeleeDamage": 75,
+	"MeleeInstability": 35,
+	"MeleeToHitModifier": 0,
+	"DFADamage": 75,
+	"DFAToHitModifier": 0,
+	"DFASelfDamage": 75,
+	"DFAInstability": 35,
+	"Locations": [
+		{
+			"Location": "Head",
+			"Hardpoints": [
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 6,
+			"MaxArmor": 45,
+			"MaxRearArmor": -1,
+			"InternalStructure": 16
+		},
+		{
+			"Location": "LeftArm",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 6,
+			"MaxArmor": 150,
+			"MaxRearArmor": -1,
+			"InternalStructure": 75
+		},
+		{
+			"Location": "LeftTorso",
+			"Hardpoints": [
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 13,
+			"MaxArmor": 150,
+			"MaxRearArmor": 75,
+			"InternalStructure": 75
+		},
+		{
+			"Location": "CenterTorso",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 16,
+			"MaxArmor": 220,
+			"MaxRearArmor": 110,
+			"InternalStructure": 110
+		},
+		{
+			"Location": "RightTorso",
+			"Hardpoints": [
+				{
+					"WeaponMount": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Ballistic",
+					"Omni": false
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 13,
+			"MaxArmor": 150,
+			"MaxRearArmor": 75,
+			"InternalStructure": 75
+		},
+		{
+			"Location": "RightArm",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 6,
+			"MaxArmor": 150,
+			"MaxRearArmor": -1,
+			"InternalStructure": 75
+		},
+		{
+			"Location": "LeftLeg",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 6,
+			"MaxArmor": 150,
+			"MaxRearArmor": -1,
+			"InternalStructure": 75
+		},
+		{
+			"Location": "RightLeg",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 6,
+			"MaxArmor": 150,
+			"MaxRearArmor": -1,
+			"InternalStructure": 75
+		}
+	],
+	"LOSSourcePositions": [
+		{
+			"x": 0,
+			"y": 15,
+			"z": 1
+		},
+		{
+			"x": 4,
+			"y": 14,
+			"z": 0
+		},
+		{
+			"x": -4,
+			"y": 14,
+			"z": 0
+		}
+	],
+	"LOSTargetPositions": [
+		{
+			"x": 0,
+			"y": 15,
+			"z": 1
+		},
+		{
+			"x": 4,
+			"y": 14,
+			"z": 0
+		},
+		{
+			"x": -4,
+			"y": 14,
+			"z": 0
+		},
+		{
+			"x": 2.5,
+			"y": 5,
+			"z": 1
+		},
+		{
+			"x": -2.5,
+			"y": 5,
+			"z": 1
+		}
+	],
+	"VariantName": "BGS-2T",
+	"ChassisTags": {
+		"items": [
+			"QuadMech",
+			"mr-resize-0.85"
+		],
+		"tagSetSourceFile": ""
+	},
+	"StockRole": "Heavy Assault",
+	"YangsThoughts": "Katherine Steiner-Davion decided during her reign over the Lyran Alliance that she wanted a four legged BattleMech that would evoke fear in its enemies in a similar vein to the classic Atlas and Banshee designs. To do this, the Barghest is built on an Earthwerk GRF Quad chassis that supports a Magna 350 XL engine that saves weight and allows the 'Mech to carry a heavy weapons payload. The 2T removes the weapons of the 1T model and replaces them with a single ER PPC and an Ultra Autocannon/20. The ultra autocannon is capable of firing at twice the rate as a standard autocannon, giving the 2T an incredible amount of short range firepower.",
+	"FixedEquipment": [
+		{
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "Gear_Quirk_Turret_Barghest",
+			"SimGameUID": "",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"IsFixed": true,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "Gear_Quirk_Turret_Barghest",
+			"SimGameUID": "",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"IsFixed": true,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "Gear_Quirk_360Twist_Barghest",
+			"SimGameUID": "",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"IsFixed": true,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": "",
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "emod_structureslots_standard",
+			"SimGameUID": "",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"IsFixed": true,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": "",
+			"hasPrefabName": false
+		}
+	]
+}
