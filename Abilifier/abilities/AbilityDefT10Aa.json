@@ -2,7 +2,7 @@
 	"Description" : {
 		"Id" : "AbilityDefT10Aa",
 		"Name" : "EAGLE EYE",
-		"Details" : "PASSIVE: Gain a +33% boost to sensors, sight, all weapon long and max range brackets, and a 2.5% Called Shot bonus.",
+		"Details" : "PASSIVE: Gain a +25% boost to sensors, sight, all weapon long and max range brackets, and a 2.5% Called Shot bonus.",
 		"Icon" : "lv_eye-target"
 	},
     "DisplayParams" : "ShowInMWTRay",
@@ -68,7 +68,7 @@
 		{
 			"durationData": {
 				"duration": -1,
-				"stackLimit": -1
+				"stackLimit": 1
 			},
 			"targetingData": {
 				"effectTriggerType": "Passive",
@@ -78,7 +78,7 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "AbilityDefT10Aa_SensorRange",
+				"Id": "SensorRange",
 				"Name": "Sensor Range Increased",
 				"Details": "Increases sensor range by 33%",
 				"Icon": "lv_eye-target"
@@ -87,14 +87,14 @@
 			"statisticData": {
 				"statName": "SensorDistanceMultiplier",
 				"operation": "Float_Multiply",
-				"modValue": "1.33",
+				"modValue": "1.25",
 				"modType": "System.Single"
 			}
 		},
 		{
 			"durationData": {
 				"duration": -1,
-				"stackLimit": -1
+				"stackLimit": 1
 			},
 			"targetingData": {
 				"effectTriggerType": "Passive",
@@ -104,7 +104,7 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "AbilityDefT10Aa_VisualRange",
+				"Id": "SpottingRange",
 				"Name": "Visual Range Increased",
 				"Details": "Increases visual distance by 33%.",
 				"Icon": "lv_eye-target"
@@ -113,7 +113,7 @@
 			"statisticData": {
 				"statName": "SpotterDistanceMultiplier",
 				"operation": "Float_Multiply",
-				"modValue": "1.33",
+				"modValue": "1.25",
 				"modType": "System.Single"
 			}
 		},

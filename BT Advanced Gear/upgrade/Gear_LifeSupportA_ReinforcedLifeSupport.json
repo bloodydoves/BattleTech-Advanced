@@ -1,0 +1,74 @@
+{
+	"Custom": {
+		"Category" : { 
+			"CategoryID" : "LifeSupportA" 
+		},
+		"Flags": {
+			"Flags": [
+				"not_broken",
+				"default"
+			]
+		},
+		"BonusDescriptions": {
+            "Bonuses": [
+                "NoBleedout"
+            ]
+        }
+	},
+    "Description" : {
+        "Cost" : 0,
+        "Rarity" : 0,
+        "Purchasable" : false,
+        "Manufacturer" : "Generic",
+        "Model" : "Standard",
+        "UIName" : "Reinforced Life Support",
+        "Id" : "Gear_LifeSupportA_ReinforcedLifeSupport",
+        "Name" : "Reinforced Life Support",
+        "Details" : "Designed to buffer the pilot against injuries in a unique way, this reinforced life support system negates the chance of a pilot bleeding to death in their cockpit. ",
+        "Icon" : "uixSvgIcon_equipment_Cockpit"
+    },
+    "BonusValueA" : "",
+    "BonusValueB" : "",
+    "ComponentType" : "Upgrade",
+    "ComponentSubType" : "NotSet",
+    "PrefabIdentifier" : "",
+    "BattleValue" : 0,
+    "InventorySize" : 1,
+    "Tonnage" : 1.5,
+    "AllowedLocations" : "Head",
+    "DisallowedLocations" : "All",
+    "CriticalComponent" : false,
+    "statusEffects" : [
+        {
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : 1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "effectTargetType" : "Creator",
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "statName": "DisablesBleeding",
+                "operation": "Set",
+                "modValue": "true",
+                "modType": "System.Boolean"
+            },
+            "nature" : "Buff",
+            "statisticData" : {
+                "statName" : "DamagePerShot",
+                "operation" : "Float_Multiply",
+                "modValue" : "1.15",
+                "modType" : "System.Single",
+            }
+        }		
+    ],
+    "ComponentTags" : {
+        "items" : [
+            "component_type_stock"
+        ],
+        "tagSetSourceFile" : ""
+    }
+}

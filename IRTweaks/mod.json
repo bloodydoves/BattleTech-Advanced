@@ -2,7 +2,7 @@
 	"Name": "IRTweaks",
 	"Enabled": true,
 	"Hidden": true,
-	"Version": "0.8.7.1",
+	"Version": "0.9.0.0",
 	"Description": "Miscellaneous Tweaks and Fixes",
 	"Author": "IceRaptor",
 	"Website": "https://github.com/IceRaptor/IRTweaks",
@@ -20,7 +20,7 @@
 			"BuildingDamageColorChange": false,
             "BraceOnMeleeWithJuggernaut" : true,
 			"BulkPurchasing": false,
-			"BulkScrapping" : false,
+			"BulkScrapping": false,
 			"CombatLog": false,
 			"DisableCampaign": true,
 			"DisableCombatSaves": true,
@@ -31,6 +31,7 @@
 			"FlexibleSensorLock": false,
 			"MaxArmorMaxesArmor": true,
 			"MechbayLayout" : true,
+			"MechbayLayoutDisableStore": true,
 			"MultiTargetStat": true,
 			"PainTolerance": true,
 			"PathfinderTeamFix": true,
@@ -43,7 +44,7 @@
 			"SkirmishAlwaysUnlimited": true,
 			"SkirmishReset": false,
 			"SkipDeleteSavePopup": true,
-			"SpawnProtection": false,
+			"SpawnProtection": true,
 			"StreamlinedMainMenu": true,
 			"UrbanExplosionsFix" : false,
 			"WeaponTooltip": true
@@ -62,7 +63,10 @@
 				"PilotTags": {}
 			},
 			"FlexibleSensorLock": {
-				"FreeActionWithAbility": false
+				"FreeActionWithAbility": false,
+				"FreeActionWithStat" : false,
+				"FreeActionStatName" : "IR_FreeSensorLock",
+				"AlsoAppliesToActiveProbe" : false,
 			},
 			"PainTolerance": {
 				"ResistPerGuts": 15,
@@ -117,6 +121,10 @@
 					"unit_vehicle": 0.5,
 					"unit_quad": 0.25
 				}
+			},
+			"TurretArmorAndStructure": {
+				"StructureMultiplierTurret": 0,
+				"ArmorMultiplierTurret": 0
 			}
 		},
 		"Store": {
