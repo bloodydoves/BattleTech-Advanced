@@ -1,36 +1,41 @@
 {
-    "enableLogging" : true,
-	"enableLethalTorsoHead" : false,
-	"debilIncapacitates" : true,
-	"BleedingOutLethal" : true,
-	"BleedingOutSuffix" : "_bleedout",
-	"BleedingOutTimerString" : "activations",
-	"enableInternalDmgInjuries" : true,
-	"internalDmgStatName" : "InjureOnStructDmg",
-	"internalDmgInjuryLimit" : 1,
-	"internalDmgLvlReq" : 20,
-	"timeHealsAllWounds" : true,
-	"missionKillSeverityThreshold" : 6,
-	"reInjureWeightAppliesCurrentContract" : false,
-	"reInjureLocWeight" : 11,
-	"debilSeverityThreshold" : 4,
-	"severityCost" : 50,
-	"debilitatedCost" : 2000,
-	"medtechDebilMultiplier" : 0.5,
-	"injuryHealTimeMultiplier" : 1.0,	
-	"internalDmgInjuryLocs" : ["Head", "CenterTorso"],
-    "InjuryEffectsList": [
+	"enableLogging": true,
+	"enableLethalTorsoHead": false,
+	"debilIncapacitates": true,
+	"BleedingOutLethal": true,
+	"BleedingOutSuffix": "_bleedout",
+	"BleedingOutTimerString": "activations",
+	"enableInternalDmgInjuries": true,
+	"internalDmgStatName": "InjureOnStructDmg",
+	"internalDmgInjuryLimit": 1,
+	"internalDmgLvlReq": 20,
+	"timeHealsAllWounds": true,
+	"missionKillSeverityThreshold": 6,
+	"reInjureWeightAppliesCurrentContract": false,
+	"reInjureLocWeight": 11,
+	"debilSeverityThreshold": 4,
+	"severityCost": 50,
+	"debilitatedCost": 2000,
+	"medtechDebilMultiplier": 0.5,
+	"injuryHealTimeMultiplier": 1.0,
+	"crewOrCockpitCustomID": [
+		"CrewCompartment"
+	],
+	"internalDmgInjuryLocs": [
+		"Head",
+		"CenterTorso"
+	],
+	"InjuryEffectsList": [
 		{
-			"injuryID" : "HeadConcussion",
-			"injuryName" : "Concussion",
-			"injuryLoc" : "Head",
-			"couldBeThermal" : false,
-			"severity" : 1,
-			"description" : "This pilot is concussed. Things are spinny.",
-			"effectDataJO" : [
+			"injuryID": "HeadConcussion",
+			"injuryName": "Concussion",
+			"injuryLoc": "Head",
+			"couldBeThermal": false,
+			"severity": 1,
+			"description": "This pilot is concussed. Things are spinny.",
+			"effectDataJO": [
 				{
-					"durationData": {
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -54,16 +59,15 @@
 			]
 		},
 		{
-			"injuryID" : "HeadJaw",
-			"injuryName" : "Broken Jaw",
-			"injuryLoc" : "Head",
-			"couldBeThermal" : false,
-			"severity" : 1,
-			"description" : "This pilot has a broken jaw, and generates less resolve due to hampered communications.",
-			"effectDataJO" : [
+			"injuryID": "HeadJaw",
+			"injuryName": "Broken Jaw",
+			"injuryLoc": "Head",
+			"couldBeThermal": false,
+			"severity": 1,
+			"description": "This pilot has a broken jaw, and generates less resolve due to hampered communications.",
+			"effectDataJO": [
 				{
-					"durationData": {
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -95,16 +99,15 @@
 			]
 		},
 		{
-			"injuryID" : "HeadBurns",
-			"injuryName" : "Severe Burns - Head",
-			"injuryLoc" : "Head",
-			"couldBeThermal" : true,
-			"severity" : 1,
-			"description" : "This pilot has severe burns to the head. Sight distance is impaired.",
-			"effectDataJO" : [
+			"injuryID": "HeadBurns",
+			"injuryName": "Severe Burns - Head",
+			"injuryLoc": "Head",
+			"couldBeThermal": true,
+			"severity": 1,
+			"description": "This pilot has severe burns to the head. Sight distance is impaired.",
+			"effectDataJO": [
 				{
-					"durationData": {
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -128,16 +131,15 @@
 			]
 		},
 		{
-			"injuryID" : "HeadBarotrauma",
-			"injuryName" : "Barotrauma - Head",
-			"injuryLoc" : "Head",
-			"couldBeThermal" : false,
-			"severity" : 2,
-			"description" : "This pilot has suffered barotrauma to the head. Unsteady threshold decreased.",
-			"effectDataJO" : [
+			"injuryID": "HeadBarotrauma",
+			"injuryName": "Barotrauma - Head",
+			"injuryLoc": "Head",
+			"couldBeThermal": false,
+			"severity": 2,
+			"description": "This pilot has suffered barotrauma to the head. Unsteady threshold decreased.",
+			"effectDataJO": [
 				{
-					"durationData": {
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -161,16 +163,15 @@
 			]
 		},
 		{
-			"injuryID" : "ArmLBurns",
-			"injuryName" : "Severe Burns - Left Arm",
-			"injuryLoc" : "ArmL",
-			"couldBeThermal" : true,
-			"severity" : 1,
-			"description" : "This pilot has been severely burned, and is suffering an accuracy penalty.",
-			"effectDataJO" : [
+			"injuryID": "ArmLBurns",
+			"injuryName": "Severe Burns - Left Arm",
+			"injuryLoc": "ArmL",
+			"couldBeThermal": true,
+			"severity": 1,
+			"description": "This pilot has been severely burned, and is suffering an accuracy penalty.",
+			"effectDataJO": [
 				{
-					"durationData": {
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -199,16 +200,15 @@
 			]
 		},
 		{
-			"injuryID" : "ArmRBurns",
-			"injuryName" : "Severe Burns - Right Arm",
-			"injuryLoc" : "ArmR",
-			"couldBeThermal" : true,
-			"severity" : 1,
-			"description" : "This pilot has been severely burned, and is suffering an accuracy penalty.",
-			"effectDataJO" : [
+			"injuryID": "ArmRBurns",
+			"injuryName": "Severe Burns - Right Arm",
+			"injuryLoc": "ArmR",
+			"couldBeThermal": true,
+			"severity": 1,
+			"description": "This pilot has been severely burned, and is suffering an accuracy penalty.",
+			"effectDataJO": [
 				{
-					"durationData": {
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -237,16 +237,15 @@
 			]
 		},
 		{
-			"injuryID" : "ArmLBroken",
-			"injuryName" : "Simple Fracture - Left Arm",
-			"injuryLoc" : "ArmL",
-			"couldBeThermal" : false,
-			"severity" : 1,
-			"description" : "This pilot has a broken arm, and is suffering an accuracy penalty.",
-			"effectDataJO" : [
+			"injuryID": "ArmLBroken",
+			"injuryName": "Simple Fracture - Left Arm",
+			"injuryLoc": "ArmL",
+			"couldBeThermal": false,
+			"severity": 1,
+			"description": "This pilot has a broken arm, and is suffering an accuracy penalty.",
+			"effectDataJO": [
 				{
-					"durationData": {
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -275,16 +274,15 @@
 			]
 		},
 		{
-			"injuryID" : "ArmRBroken",
-			"injuryName" : "Simple Fracture - Right Arm",
-			"injuryLoc" : "ArmR",
-			"couldBeThermal" : false,
-			"severity" : 1,
-			"description" : "This pilot has a broken arm, and is suffering an accuracy penalty.",
-			"effectDataJO" : [
+			"injuryID": "ArmRBroken",
+			"injuryName": "Simple Fracture - Right Arm",
+			"injuryLoc": "ArmR",
+			"couldBeThermal": false,
+			"severity": 1,
+			"description": "This pilot has a broken arm, and is suffering an accuracy penalty.",
+			"effectDataJO": [
 				{
-					"durationData": {
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -312,16 +310,15 @@
 				}
 			]
 		},
-		
 		{
-			"injuryID" : "ArmLBrokenCompound",
-			"injuryID_Post" : "ArmLBroken",
-			"injuryName" : "Compound Fracture - Left Arm",
-			"injuryLoc" : "ArmL",
-			"couldBeThermal" : false,
-			"severity" : 1,
-			"description" : "This pilot has a compound fracture in their arm, and is suffering an accuracy penalty.",
-			"effectDataJO" : [
+			"injuryID": "ArmLBrokenCompound",
+			"injuryID_Post": "ArmLBroken",
+			"injuryName": "Compound Fracture - Left Arm",
+			"injuryLoc": "ArmL",
+			"couldBeThermal": false,
+			"severity": 1,
+			"description": "This pilot has a compound fracture in their arm, and is suffering an accuracy penalty.",
+			"effectDataJO": [
 				{
 					"durationData": {
 						"duration": 8,
@@ -357,14 +354,14 @@
 			]
 		},
 		{
-			"injuryID" : "ArmRBrokenCompound",
-			"injuryID_Post" : "ArmRBroken",
-			"injuryName" : "Compound Fracture - Right Arm",
-			"injuryLoc" : "ArmR",
-			"couldBeThermal" : false,
-			"severity" : 1,
-			"description" : "This pilot has a compound fracture in their arm, and is suffering an accuracy penalty.",
-			"effectDataJO" : [
+			"injuryID": "ArmRBrokenCompound",
+			"injuryID_Post": "ArmRBroken",
+			"injuryName": "Compound Fracture - Right Arm",
+			"injuryLoc": "ArmR",
+			"couldBeThermal": false,
+			"severity": 1,
+			"description": "This pilot has a compound fracture in their arm, and is suffering an accuracy penalty.",
+			"effectDataJO": [
 				{
 					"durationData": {
 						"duration": 8,
@@ -400,16 +397,15 @@
 			]
 		},
 		{
-			"injuryID" : "LegLBurns",
-			"injuryName" : "Severe Burns - Left Leg",
-			"injuryLoc" : "LegL",
-			"couldBeThermal" : true,
-			"severity" : 1,
-			"description" : "This pilot has been severely burned and is suffering a movement penalty.",
-			"effectDataJO" : [
+			"injuryID": "LegLBurns",
+			"injuryName": "Severe Burns - Left Leg",
+			"injuryLoc": "LegL",
+			"couldBeThermal": true,
+			"severity": 1,
+			"description": "This pilot has been severely burned and is suffering a movement penalty.",
+			"effectDataJO": [
 				{
-					"durationData": {
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -424,15 +420,14 @@
 					},
 					"nature": "Buff",
 					"statisticData": {
-					"statName": "WalkSpeed",
-					"operation": "Float_Multiply",
-					"modValue": "0.75",
-					"modType": "System.Single"
+						"statName": "WalkSpeed",
+						"operation": "Float_Multiply",
+						"modValue": "0.75",
+						"modType": "System.Single"
 					}
 				},
 				{
-					"durationData": {
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -447,25 +442,24 @@
 					},
 					"nature": "Buff",
 					"statisticData": {
-					"statName": "JumpDistance",
-					"operation": "Float_Multiply",
-					"modValue": "0.75",
-					"modType": "System.Single"
+						"statName": "JumpDistance",
+						"operation": "Float_Multiply",
+						"modValue": "0.75",
+						"modType": "System.Single"
 					}
 				}
 			]
 		},
 		{
-			"injuryID" : "LegRBurns",
-			"injuryName" : "Severe Burns - Right Leg",
-			"injuryLoc" : "LegR",
-			"couldBeThermal" : true,
-			"severity" : 1,
-			"description" : "This pilot has been severely burned and is suffering a movement penalty.",
-			"effectDataJO" : [
+			"injuryID": "LegRBurns",
+			"injuryName": "Severe Burns - Right Leg",
+			"injuryLoc": "LegR",
+			"couldBeThermal": true,
+			"severity": 1,
+			"description": "This pilot has been severely burned and is suffering a movement penalty.",
+			"effectDataJO": [
 				{
-					"durationData": {
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -480,15 +474,14 @@
 					},
 					"nature": "Buff",
 					"statisticData": {
-					"statName": "WalkSpeed",
-					"operation": "Float_Multiply",
-					"modValue": "0.75",
-					"modType": "System.Single"
+						"statName": "WalkSpeed",
+						"operation": "Float_Multiply",
+						"modValue": "0.75",
+						"modType": "System.Single"
 					}
 				},
 				{
-					"durationData": {
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -503,25 +496,24 @@
 					},
 					"nature": "Buff",
 					"statisticData": {
-					"statName": "JumpDistance",
-					"operation": "Float_Multiply",
-					"modValue": "0.75",
-					"modType": "System.Single"
+						"statName": "JumpDistance",
+						"operation": "Float_Multiply",
+						"modValue": "0.75",
+						"modType": "System.Single"
 					}
 				}
 			]
 		},
 		{
-			"injuryID" : "LegLBroken",
-			"injuryName" : "Simple Fracture - Left Leg",
-			"injuryLoc" : "LegL",
-			"couldBeThermal" : false,
-			"severity" : 1,
-			"description" : "This pilot has a broken leg and is suffering a movement penalty.",
-			"effectDataJO" : [
+			"injuryID": "LegLBroken",
+			"injuryName": "Simple Fracture - Left Leg",
+			"injuryLoc": "LegL",
+			"couldBeThermal": false,
+			"severity": 1,
+			"description": "This pilot has a broken leg and is suffering a movement penalty.",
+			"effectDataJO": [
 				{
-					"durationData": {
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -536,15 +528,14 @@
 					},
 					"nature": "Buff",
 					"statisticData": {
-					"statName": "WalkSpeed",
-					"operation": "Float_Multiply",
-					"modValue": "0.75",
-					"modType": "System.Single"
+						"statName": "WalkSpeed",
+						"operation": "Float_Multiply",
+						"modValue": "0.75",
+						"modType": "System.Single"
 					}
 				},
 				{
-					"durationData": {
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -559,23 +550,23 @@
 					},
 					"nature": "Buff",
 					"statisticData": {
-					"statName": "JumpDistance",
-					"operation": "Float_Multiply",
-					"modValue": "0.75",
-					"modType": "System.Single"
+						"statName": "JumpDistance",
+						"operation": "Float_Multiply",
+						"modValue": "0.75",
+						"modType": "System.Single"
 					}
 				}
 			]
 		},
 		{
-			"injuryID" : "LegLBrokenCompound",
-			"injuryID_Post" : "LegLBroken",
-			"injuryName" : "Compound Fracture - Left Leg",
-			"injuryLoc" : "LegL",
-			"couldBeThermal" : false,
-			"severity" : 1,
-			"description" : "This pilot has a compound fracture to their leg and is suffering a severe movement penalty.",
-			"effectDataJO" : [
+			"injuryID": "LegLBrokenCompound",
+			"injuryID_Post": "LegLBroken",
+			"injuryName": "Compound Fracture - Left Leg",
+			"injuryLoc": "LegL",
+			"couldBeThermal": false,
+			"severity": 1,
+			"description": "This pilot has a compound fracture to their leg and is suffering a severe movement penalty.",
+			"effectDataJO": [
 				{
 					"durationData": {
 						"duration": 8,
@@ -597,10 +588,10 @@
 					},
 					"nature": "Buff",
 					"statisticData": {
-					"statName": "WalkSpeed",
-					"operation": "Float_Multiply",
-					"modValue": "0.5",
-					"modType": "System.Single"
+						"statName": "WalkSpeed",
+						"operation": "Float_Multiply",
+						"modValue": "0.5",
+						"modType": "System.Single"
 					}
 				},
 				{
@@ -624,25 +615,24 @@
 					},
 					"nature": "Buff",
 					"statisticData": {
-					"statName": "JumpDistance",
-					"operation": "Float_Multiply",
-					"modValue": "0.5",
-					"modType": "System.Single"
+						"statName": "JumpDistance",
+						"operation": "Float_Multiply",
+						"modValue": "0.5",
+						"modType": "System.Single"
 					}
 				}
 			]
 		},
 		{
-			"injuryID" : "LegRBroken",
-			"injuryName" : "Simple Fracture - Right Leg",
-			"injuryLoc" : "LegR",
-			"couldBeThermal" : false,
-			"severity" : 1,
-			"description" : "This pilot has a broken leg and is suffering a movement penalty.",
-			"effectDataJO" : [
+			"injuryID": "LegRBroken",
+			"injuryName": "Simple Fracture - Right Leg",
+			"injuryLoc": "LegR",
+			"couldBeThermal": false,
+			"severity": 1,
+			"description": "This pilot has a broken leg and is suffering a movement penalty.",
+			"effectDataJO": [
 				{
-					"durationData": {
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -657,15 +647,14 @@
 					},
 					"nature": "Buff",
 					"statisticData": {
-					"statName": "WalkSpeed",
-					"operation": "Float_Multiply",
-					"modValue": "0.75",
-					"modType": "System.Single"
+						"statName": "WalkSpeed",
+						"operation": "Float_Multiply",
+						"modValue": "0.75",
+						"modType": "System.Single"
 					}
 				},
 				{
-					"durationData": {
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -680,23 +669,23 @@
 					},
 					"nature": "Buff",
 					"statisticData": {
-					"statName": "JumpDistance",
-					"operation": "Float_Multiply",
-					"modValue": "0.75",
-					"modType": "System.Single"
+						"statName": "JumpDistance",
+						"operation": "Float_Multiply",
+						"modValue": "0.75",
+						"modType": "System.Single"
 					}
 				}
 			]
 		},
 		{
-			"injuryID" : "LegRBrokenCompound",
-			"injuryID_Post" : "LegRBroken",
-			"injuryName" : "Compound Fracture - Right Leg",
-			"injuryLoc" : "LegR",
-			"couldBeThermal" : false,
-			"severity" : 1,
-			"description" : "This pilot has a compound fracture to their leg and is suffering a severe movement penalty.",
-			"effectDataJO" : [
+			"injuryID": "LegRBrokenCompound",
+			"injuryID_Post": "LegRBroken",
+			"injuryName": "Compound Fracture - Right Leg",
+			"injuryLoc": "LegR",
+			"couldBeThermal": false,
+			"severity": 1,
+			"description": "This pilot has a compound fracture to their leg and is suffering a severe movement penalty.",
+			"effectDataJO": [
 				{
 					"durationData": {
 						"duration": 8,
@@ -718,10 +707,10 @@
 					},
 					"nature": "Buff",
 					"statisticData": {
-					"statName": "WalkSpeed",
-					"operation": "Float_Multiply",
-					"modValue": "0.5",
-					"modType": "System.Single"
+						"statName": "WalkSpeed",
+						"operation": "Float_Multiply",
+						"modValue": "0.5",
+						"modType": "System.Single"
 					}
 				},
 				{
@@ -745,24 +734,23 @@
 					},
 					"nature": "Buff",
 					"statisticData": {
-					"statName": "JumpDistance",
-					"operation": "Float_Multiply",
-					"modValue": "0.5",
-					"modType": "System.Single"
+						"statName": "JumpDistance",
+						"operation": "Float_Multiply",
+						"modValue": "0.5",
+						"modType": "System.Single"
 					}
 				}
 			]
 		},
-		
 		{
-			"injuryID" : "TorsoInternalBleeding",
-			"injuryID_Post" : "TorsoRibs",
-			"injuryName" : "Internal Bleeding - Torso",
-			"injuryLoc" : "Torso",
-			"couldBeThermal" : false,
-			"severity" : 2,
-			"description" : "This pilot is suffering from internal bleeding and receives a debuff to Evasion.",
-			"effectDataJO" : [
+			"injuryID": "TorsoInternalBleeding",
+			"injuryID_Post": "TorsoRibs",
+			"injuryName": "Internal Bleeding - Torso",
+			"injuryLoc": "Torso",
+			"couldBeThermal": false,
+			"severity": 2,
+			"description": "This pilot is suffering from internal bleeding and receives a debuff to Evasion.",
+			"effectDataJO": [
 				{
 					"durationData": {
 						"duration": 8,
@@ -792,18 +780,16 @@
 				}
 			]
 		},
-		
 		{
-			"injuryID" : "TorsoRibs",
-			"injuryName" : "Broken Ribs",
-			"injuryLoc" : "Torso",
-			"couldBeThermal" : false,
-			"severity" : 1,
-			"description" : "This pilot has broken ribs and receives a debuff to Evasion.",
-			"effectDataJO" : [
+			"injuryID": "TorsoRibs",
+			"injuryName": "Broken Ribs",
+			"injuryLoc": "Torso",
+			"couldBeThermal": false,
+			"severity": 1,
+			"description": "This pilot has broken ribs and receives a debuff to Evasion.",
+			"effectDataJO": [
 				{
-					"durationData": {
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -826,18 +812,16 @@
 				}
 			]
 		},
-		
 		{
-			"injuryID" : "TorsoLungs",
-			"injuryName" : "Punctured Lung",
-			"injuryLoc" : "Torso",
-			"couldBeThermal" : false,
-			"severity" : 1,
-			"description" : "This pilot has a punctured lung and has a penalty to Guts.",
-			"effectDataJO" : [
+			"injuryID": "TorsoLungs",
+			"injuryName": "Punctured Lung",
+			"injuryLoc": "Torso",
+			"couldBeThermal": false,
+			"severity": 1,
+			"description": "This pilot has a punctured lung and has a penalty to Guts.",
+			"effectDataJO": [
 				{
-					"durationData": {
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -861,16 +845,15 @@
 				}
 			]
 		},
-		
 		{
-			"injuryID" : "TorsoLungsBleedout",
-			"injuryID_Post" : "TorsoLungs",
-			"injuryName" : "Collapsed Lung",
-			"injuryLoc" : "Torso",
-			"couldBeThermal" : false,
-			"severity" : 1,
-			"description" : "This pilot has a collapsed lung and has a penalty to Guts.",
-			"effectDataJO" : [
+			"injuryID": "TorsoLungsBleedout",
+			"injuryID_Post": "TorsoLungs",
+			"injuryName": "Collapsed Lung",
+			"injuryLoc": "Torso",
+			"couldBeThermal": false,
+			"severity": 1,
+			"description": "This pilot has a collapsed lung and has a penalty to Guts.",
+			"effectDataJO": [
 				{
 					"durationData": {
 						"duration": 8,
@@ -901,18 +884,16 @@
 				}
 			]
 		},
-		
 		{
-			"injuryID" : "TorsoBurned",
-			"injuryName" : "Severe Burns - Torso",
-			"injuryLoc" : "Torso",
-			"couldBeThermal" : true,
-			"severity" : 2,
-			"description" : "This pilot has been severely burned and receives a debuff to Evasion.",
-			"effectDataJO" : [
+			"injuryID": "TorsoBurned",
+			"injuryName": "Severe Burns - Torso",
+			"injuryLoc": "Torso",
+			"couldBeThermal": true,
+			"severity": 2,
+			"description": "This pilot has been severely burned and receives a debuff to Evasion.",
+			"effectDataJO": [
 				{
-					"durationData": {
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -936,19 +917,17 @@
 			]
 		}
 	],
-	
 	"InternalDmgInjuries": [
 		{
-			"injuryID" : "HeadNeuralFeedback",
-			"injuryName" : "Neural Feedback",
-			"injuryLoc" : "Head",
-			"couldBeThermal" : false,
-			"severity" : 2,
-			"description" : "This pilot has suffered from neural feedback from a DNI or EI interface, and has drastically reduced accuracy.",
-			"effectDataJO" : [
+			"injuryID": "HeadNeuralFeedback",
+			"injuryName": "Neural Feedback",
+			"injuryLoc": "Head",
+			"couldBeThermal": false,
+			"severity": 2,
+			"description": "This pilot has suffered from neural feedback from a DNI or EI interface, and has drastically reduced accuracy.",
+			"effectDataJO": [
 				{
-					"durationData": {
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
