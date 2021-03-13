@@ -1,111 +1,114 @@
 {
-    "Custom": {
-        "Category": [
-            {
-                "CategoryID": "BAWeapon"
-            }
-        ],
-        "BonusDescriptions": {
-            "Bonuses": [
-                "Defense: +1",
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "BAWeapon"
+			},
+			{
+				"CategoryID": "BAGear"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"Defense: +1",
 				"ECMRadius: 30"
-            ]
-        },
+			]
+		},
 		"Flags": {
 			"flags": [
 				"no_salvage",
 				"not_broken"
 			]
 		}
-    },
-    "StatName": null,
-    "RelativeModifier": 0,
-    "AbsoluteModifier": 0,
-    "Description": {
-        "Cost": 0,
-        "Rarity": 3,
-        "Purchasable": true,
-        "Manufacturer": "Johnston",
-        "Model": "BA ECM",
-        "UIName": "BA ECM",
-        "Id": "Gear_ECM_BA",
-        "Name": "BA ECM",
-        "Details": "Essentially just a stripped down ECM unit for use by battle armor, the BA ECM provides the same defensive bonus as a standard ECM, but at significantly reduced range.",
-        "Icon": "uixSvgIcon_equipment_TTS"
-    },
-    "BonusValueA": "",
-    "BonusValueB": "",
-    "ComponentType": "Upgrade",
-    "ComponentSubType": "NotSet",
-    "PrefabIdentifier": "",
-    "BattleValue": 0,
-    "InventorySize": 1,
-    "Tonnage": 0.2,
-    "AllowedLocations": "All",
-    "DisallowedLocations": "All",
-    "CriticalComponent": false,
-    "Auras": [
-        {
-            "Id": "Gear_GECM_ECM",
-            "Name": "ECM",
-            "ReticleColor": "#ffffff",
-            "Range": 30,
-            "RemoveOnSensorLock": false,
-            "State": "Persistent",
-            "ApplySelf": true,
-            "AllyStealthAffection": "None",
-            "EnemyStealthAffection": "None",
-            "IsPositiveToAlly": true,
-            "IsNegativeToEnemy": false,
-            "ownerVFX": [],
-            "targetVFX": [],
-            "removeOwnerVFX": [],
-            "removeTargetVFX": [],
-            "ownerSFX": [],
-            "targetSFX": [],
-            "removeOwnerSFX": [],
-            "removeTargetSFX": [],
-            "statusEffects": [
-                {
-                    "durationData": {
-                        "duration": -1,
-                        "stackLimit": 1
-                    },
-                    "targetingData": {
-                        "effectTriggerType": "Passive",
-                        "specialRules": "NotSet",
-                        "effectTargetType": "AlliesWithinRange",
-                        "range": 0.0,
-                        "forcePathRebuild": false,
-                        "forceVisRebuild": false,
-                        "showInTargetPreview": false,
-                        "showInStatusPanel": true
-                    },
-                    "effectType": "StatisticEffect",
-                    "Description": {
-                        "Id": "GECMInterference",
-                        "Name": "BA ECM Interference",
-                        "Details": "BA ECM making this unit harder to hit, +1 penalty to enemy attacks.",
-                        "Icon": "uixSvgIcon_equipment_Gyro"
-                    },
-                    "statisticData": {
-                        "statName": "ToHitThisActor",
-                        "operation": "Float_Add",
-                        "modValue": "1.0",
-                        "modType": "System.Single"
-                    },
-                    "nature": "Buff"
-                }
-            ]
-        }
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 0,
+		"Rarity": 3,
+		"Purchasable": true,
+		"Manufacturer": "Johnston",
+		"Model": "BA ECM",
+		"UIName": "BA ECM",
+		"Id": "Gear_ECM_BA",
+		"Name": "BA ECM",
+		"Details": "Essentially just a stripped down ECM unit for use by battle armor, the BA ECM provides the same defensive bonus as a standard ECM, but at significantly reduced range.",
+		"Icon": "uixSvgIcon_equipment_TTS"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0.2,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"Auras": [
+		{
+			"Id": "Gear_GECM_ECM",
+			"Name": "ECM",
+			"ReticleColor": "#ffffff",
+			"Range": 30,
+			"RemoveOnSensorLock": false,
+			"State": "Persistent",
+			"ApplySelf": true,
+			"AllyStealthAffection": "None",
+			"EnemyStealthAffection": "None",
+			"IsPositiveToAlly": true,
+			"IsNegativeToEnemy": false,
+			"ownerVFX": [],
+			"targetVFX": [],
+			"removeOwnerVFX": [],
+			"removeTargetVFX": [],
+			"ownerSFX": [],
+			"targetSFX": [],
+			"removeOwnerSFX": [],
+			"removeTargetSFX": [],
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"specialRules": "NotSet",
+						"effectTargetType": "AlliesWithinRange",
+						"range": 0.0,
+						"forcePathRebuild": false,
+						"forceVisRebuild": false,
+						"showInTargetPreview": false,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "GECMInterference",
+						"Name": "BA ECM Interference",
+						"Details": "BA ECM making this unit harder to hit, +1 penalty to enemy attacks.",
+						"Icon": "uixSvgIcon_equipment_Gyro"
+					},
+					"statisticData": {
+						"statName": "ToHitThisActor",
+						"operation": "Float_Add",
+						"modValue": "1.0",
+						"modType": "System.Single"
+					},
+					"nature": "Buff"
+				}
+			]
+		}
 	],
 	"statusEffects": [],
-    "ComponentTags": {
-        "items": [
-            "component_type_stock",
-            "ElectronicCounterMeasures",
-            "lv-jammer_m2_r6"
-        ],
-        "tagSetSourceFile": ""
-    }
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"ElectronicCounterMeasures",
+			"lv-jammer_m2_r6"
+		],
+		"tagSetSourceFile": ""
+	}
 }
