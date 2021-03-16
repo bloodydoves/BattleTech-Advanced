@@ -1,14 +1,14 @@
 <?xml version="1.0" ?>
 <BtaConfig>
 	<RequiredBattleTechVersion>1.9.1</RequiredBattleTechVersion>
-	<RequiredLauncherVersion>1.1.1</RequiredLauncherVersion>
-	<SecureHash>FtYWkBZoFhQWdhYcFr4WRBbUFoYWBhZwFgEWXxYiFrs=</SecureHash>
+	<RequiredLauncherVersion>1.0.0</RequiredLauncherVersion>
+	<SecureHash>FloWJBawFkcWoRaVFiEWxBbXFnoWiRYSFhUWtRZzFmI=</SecureHash>
 	<showCoreItems>true</showCoreItems>
 	<Tasks>
 		<InstallTask>
 			<Id>coreInstall</Id>
 			<canSelect>false</canSelect>
-			<excludePaths>btaConfig.xml,.git,.modtek,.git,log.txt,Flashpoint DLC Flashpoints,Flashpoint Unit Module,FlashpointEnabler,Heavy Metal Equipment Module,Heavy Metal Flashpoint Module,Heavy Metal Unit Module,Urban Warfare Flashpoints,Urban Warfare Unit Module,DefaultFire,LinuxFire,RogueTechPerfFix</excludePaths>
+			<excludePaths>BtaConfig.xml,.git,.modtek,.git,log.txt,Flashpoint DLC Flashpoints,Flashpoint Unit Module,Heavy Metal Equipment Module,Heavy Metal Flashpoint Module,Heavy Metal Unit Module,Urban Warfare Flashpoints,Urban Warfare Unit Module</excludePaths>
 			<isSelected>true</isSelected>
 			<jobOrder>0</jobOrder>
 			<jobType>Install</jobType>
@@ -30,8 +30,8 @@
 			<optionGroupId>DLC</optionGroupId>
 			<promptConfirmation>false</promptConfirmation>
 			<promptText/>
-			<sourcePath>Flashpoint DLC Flashpoints, Flashpoint Unit Module, FlashpointEnabler</sourcePath>
-			<targetPath>Flashpoint DLC Flashpoints, Flashpoint Unit Module, FlashpointEnabler</targetPath>
+			<sourcePath>Flashpoint DLC Flashpoints, Flashpoint Unit Module</sourcePath>
+			<targetPath>Flashpoint DLC Flashpoints, Flashpoint Unit Module</targetPath>
 			<uiDescription>Adds additional Flashpoints and units based on the FlashPoints DLC</uiDescription>
 			<uiName>Flashpoints</uiName>
 		</InstallTask>
@@ -45,8 +45,8 @@
 			<optionGroupId>DLC</optionGroupId>
 			<promptConfirmation>false</promptConfirmation>
 			<promptText/>
-			<sourcePath>Urban Warfare Flashpoints, Urban Warfare Unit Module, FlashpointEnabler</sourcePath>
-			<targetPath>Urban Warfare Flashpoints, Urban Warfare Unit Module, FlashpointEnabler</targetPath>
+			<sourcePath>Urban Warfare Flashpoints, Urban Warfare Unit Module</sourcePath>
+			<targetPath>Urban Warfare Flashpoints, Urban Warfare Unit Module</targetPath>
 			<uiDescription>Adds additional Flashpoints and units based on the Urban Warfare DLC</uiDescription>
 			<uiName>Urban Warfare</uiName>
 		</InstallTask>
@@ -60,15 +60,15 @@
 			<optionGroupId>DLC</optionGroupId>
 			<promptConfirmation>false</promptConfirmation>
 			<promptText/>
-			<sourcePath>Heavy Metal Equipment Module, Heavy Metal Flashpoint Module, Heavy Metal Unit Module, FlashpointEnabler</sourcePath>
-			<targetPath>Heavy Metal Equipment Module, Heavy Metal Flashpoint Module, Heavy Metal Unit Module, FlashpointEnabler</targetPath>
+			<sourcePath>Heavy Metal Equipment Module, Heavy Metal Flashpoint Module, Heavy Metal Unit Module</sourcePath>
+			<targetPath>Heavy Metal Equipment Module, Heavy Metal Flashpoint Module, Heavy Metal Unit Module</targetPath>
 			<uiDescription>Adds additional Flashpoints, units and equipment based on the Heavy Metal DLC</uiDescription>
 			<uiName>Heavy Metal</uiName>
 		</InstallTask>
 		<InstallTask>
 			<Id>ClanCore</Id>
 			<canSelect>true</canSelect>
-			<excludePaths>btaConfig.xml,.git,.modtek,.git,log.txt,Heavy Metal Unit Module</excludePaths>
+			<excludePaths>BtaConfig.xml,.git,.modtek,.git,log.txt,Heavy Metal Unit Module,Community Content</excludePaths>
 			<isSelected>false</isSelected>
 			<jobOrder>1</jobOrder>
 			<jobType>Install</jobType>
@@ -96,6 +96,21 @@
 			<uiName>Clans Expansion - Heavy Metal Module</uiName>
 		</InstallTask>
 		<InstallTask>
+			<Id>CommunityContent</Id>
+			<canSelect>true</canSelect>
+			<excludePaths>log.txt</excludePaths>
+			<isSelected>false</isSelected>
+			<jobOrder>1</jobOrder>
+			<jobType>Install</jobType>
+			<optionGroupId>ClanExpansionOptions</optionGroupId>
+			<promptConfirmation>false</promptConfirmation>
+			<promptText/>
+			<sourcePath>Community Content</sourcePath>
+			<targetPath>Community Content</targetPath>
+			<uiDescription>BattleTech Advanced 3062 Community Content, not guaranteed to be lore-friendly or balanced in any way at all, purely optional, requires Clan Expansion and the DLC Modules to also be installed.</uiDescription>
+			<uiName>BTA Community Content - Optional</uiName>
+		</InstallTask>
+		<InstallTask>
 			<Id>modtekInstall</Id>
 			<canSelect>true</canSelect>
 			<excludePaths>log.txt</excludePaths>
@@ -109,81 +124,6 @@
 			<targetPath>ModTekInjector.exe /nokeypress</targetPath>
 			<uiDescription/>
 			<uiName>Inject ModTek</uiName>
-		</InstallTask>
-		<InstallTask>
-			<Id>perfixInstall</Id>
-			<canSelect>true</canSelect>
-			<excludePaths>log.txt</excludePaths>
-			<isSelected>true</isSelected>
-			<jobOrder>0</jobOrder>
-			<jobType>RunProcessAndInstall</jobType>
-			<optionGroupId>RtPerfOp</optionGroupId>
-			<promptConfirmation>true</promptConfirmation>
-			<promptText>This can only be uninstalled by verifying game files, continue?</promptText>
-			<sourcePath>RogueTechPerfFix</sourcePath>
-			<targetPath>QuickStart.exe</targetPath>
-			<uiDescription>Performance fixes by Drowsy Corgi</uiDescription>
-			<uiName>Corgi Perf Fixes</uiName>
-		</InstallTask>
-		<InstallTask>
-			<Id>defaultRender</Id>
-			<canSelect>true</canSelect>
-			<excludePaths>log.txt</excludePaths>
-			<isSelected>false</isSelected>
-			<jobOrder>0</jobOrder>
-			<jobType>DefaultBootConfig</jobType>
-			<optionGroupId>PerfOps</optionGroupId>
-			<promptConfirmation>false</promptConfirmation>
-			<promptText/>
-			<sourcePath/>
-			<targetPath/>
-			<uiDescription>Use the default rendering style for BattleTech</uiDescription>
-			<uiName>Default Rendering</uiName>
-		</InstallTask>
-		<InstallTask>
-			<Id>mThreadRender</Id>
-			<canSelect>true</canSelect>
-			<excludePaths>log.txt</excludePaths>
-			<isSelected>true</isSelected>
-			<jobOrder>0</jobOrder>
-			<jobType>MThreadBootConfig</jobType>
-			<optionGroupId>PerfOps</optionGroupId>
-			<promptConfirmation>false</promptConfirmation>
-			<promptText/>
-			<sourcePath/>
-			<targetPath/>
-			<uiDescription>Use multi-threaded rendering, may increase game performance</uiDescription>
-			<uiName>MultiThread Rendering</uiName>
-		</InstallTask>
-		<InstallTask>
-			<Id>DefaultFire</Id>
-			<canSelect>true</canSelect>
-			<excludePaths>log.txt</excludePaths>
-			<isSelected>true</isSelected>
-			<jobOrder>0</jobOrder>
-			<jobType>Install</jobType>
-			<optionGroupId>FireSelection</optionGroupId>
-			<promptConfirmation>false</promptConfirmation>
-			<promptText/>
-			<sourcePath>DefaultFire</sourcePath>
-			<targetPath>CustomAmmoCategories</targetPath>
-			<uiDescription>Use BTA's updated new fire animation, intended for all non-Linux users</uiDescription>
-			<uiName>Updated BTA Fire</uiName>
-		</InstallTask>
-		<InstallTask>
-			<Id>LinuxFire</Id>
-			<canSelect>true</canSelect>
-			<excludePaths>log.txt</excludePaths>
-			<isSelected>false</isSelected>
-			<jobOrder>0</jobOrder>
-			<jobType>Install</jobType>
-			<optionGroupId>FireSelection</optionGroupId>
-			<promptConfirmation>false</promptConfirmation>
-			<promptText/>
-			<sourcePath>LinuxFire</sourcePath>
-			<targetPath>CustomAmmoCategories</targetPath>
-			<uiDescription>Old fire animation, for Linux only.</uiDescription>
-			<uiName>Old Fire for Linux Users</uiName>
 		</InstallTask>
 	</Tasks>
 	<Options>
@@ -204,24 +144,6 @@
 			<optionId>modtekSetup</optionId>
 			<optionType>ExclusiveOption</optionType>
 			<optionUiName>ModTek</optionUiName>
-		</InstallOption>
-		<InstallOption>
-			<optionDescription/>
-			<optionId>PerfOps</optionId>
-			<optionType>ExclusiveOption</optionType>
-			<optionUiName>Performance Rendering Options</optionUiName>
-		</InstallOption>
-		<InstallOption>
-			<optionDescription/>
-			<optionId>RtPerfOp</optionId>
-			<optionType>MultiSelectOption</optionType>
-			<optionUiName>Preformance Patching Options</optionUiName>
-		</InstallOption>
-		<InstallOption>
-			<optionDescription/>
-			<optionId>FireSelection</optionId>
-			<optionType>ExclusiveOption</optionType>
-			<optionUiName>Fire Option for Linux Users</optionUiName>
 		</InstallOption>
 	</Options>
 </BtaConfig>
