@@ -2,7 +2,7 @@
 <BtaConfig>
 	<RequiredBattleTechVersion>1.9.1</RequiredBattleTechVersion>
 	<RequiredLauncherVersion>1.1.1</RequiredLauncherVersion>
-	<SecureHash>FtYWkBZoFhQWdhYcFr4WRBbUFoYWBhZwFgEWXxYiFrs=</SecureHash>
+	<SecureHash>FiYWmxY/Fi8WGBYMFnQWdxZ6FisWZRb8FuMWcBbaFrg=</SecureHash>
 	<showCoreItems>true</showCoreItems>
 	<Tasks>
 		<InstallTask>
@@ -68,7 +68,7 @@
 		<InstallTask>
 			<Id>ClanCore</Id>
 			<canSelect>true</canSelect>
-			<excludePaths>btaConfig.xml,.git,.modtek,.git,log.txt,Heavy Metal Unit Module</excludePaths>
+			<excludePaths>btaConfig.xml,.git,.modtek,.git,log.txt,Heavy Metal Unit Module,Community Content</excludePaths>
 			<isSelected>false</isSelected>
 			<jobOrder>1</jobOrder>
 			<jobType>Install</jobType>
@@ -94,6 +94,21 @@
 			<targetPath>Heavy Metal Unit Module</targetPath>
 			<uiDescription>Heavy Metal Module for Clan Expansion, requires Clan Expansion and Heavy Metal DLC modules to also be installed</uiDescription>
 			<uiName>Clans Expansion - Heavy Metal Module</uiName>
+		</InstallTask>
+		<InstallTask>
+			<Id>CommunityContent</Id>
+			<canSelect>true</canSelect>
+			<excludePaths>log.txt</excludePaths>
+			<isSelected>false</isSelected>
+			<jobOrder>1</jobOrder>
+			<jobType>Install</jobType>
+			<optionGroupId>ClanExpansionOptions</optionGroupId>
+			<promptConfirmation>false</promptConfirmation>
+			<promptText/>
+			<sourcePath>Community Content</sourcePath>
+			<targetPath>Community Content</targetPath>
+			<uiDescription>BattleTech Advanced 3062 Community Content, not guaranteed to be lore-friendly or balanced in any way at all, purely optional, requires Clan Expansion and the DLC Modules to also be installed.</uiDescription>
+			<uiName>BTA Community Content - Optional</uiName>
 		</InstallTask>
 		<InstallTask>
 			<Id>modtekInstall</Id>
