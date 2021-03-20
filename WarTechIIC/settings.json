@@ -45,7 +45,8 @@
 	"ComStar"
   ],
 
-  "dailyFlareupChance": 0.15,
+  "dailyAttackChance": 0.15,
+  "dailyRaidChance": 0.15,
 
   "aggression": {
     "NoFaction": 0.0
@@ -68,10 +69,13 @@
 	"Delphi",
     "ClanDiamondShark"
   ],
+  "cantBeAttackedTags": [
+	"i_dont_exist"
+  ],
 
   "limitTargetsToFactionEnemies": true,
 
-  "flareupMarker": {
+  "attackMarker": {
       "useHmAnimation": true,
       "flashpointPrefix": "",
       "swapColour": true,
@@ -81,6 +85,18 @@
       "useContractColourOverride": false,
       "innerCircle": {
           "Colour": "#8904B1"
+      }
+  },
+  "raidMarker": {
+      "useHmAnimation": true,
+      "flashpointPrefix": "",
+      "swapColour": true,
+      "keepAlpha": true,
+      "useOnlyInner": true,
+      "autoDetectContracts": false,
+      "useContractColourOverride": false,
+      "innerCircle": {
+          "Colour": "#1904B1"
       }
   },
 
@@ -108,6 +124,7 @@
 	"Rim": 16,
 	"Outworld": 19
   },
+  "raidStrengthMultiplier": 0.75,
 
   "minReputationToHelp": "DISLIKED",
   "wontHirePlayer": [
@@ -120,14 +137,31 @@
   "daysBetweenMissions": 3,
   "combatForceLossMin": 2,
   "combatForceLossMax": 5,
-  "flareupMissionBonusPerHalfSkull": 50000,
+  "attackBonusPerHalfSkull": 30000,
+  "attackBonusSalvage": 0,
+  "raidBonusPerHalfSkull": 5000,
+  "raidBonusSalvage": 1,
+  "raidResultDuration": 360,
 
-  "pirateTags": [
-    "planet_other_pirate",
-    "planet_pirate_lord",
-    "planet_other_prison",
-    "planet_other_blackmarket"
-  ],
+  "factionActivityTags": {
+      "AuriganPirates": [
+          "planet_other_pirate",
+          "planet_pirate_lord",
+          "planet_other_prison",
+          "planet_other_blackmarket"
+      ],
+      "ComStar": [
+          "planet_other_comstar"
+      ],
+      "Tortuga": [
+          "planet_tortugan_raids"
+      ]
+  },
+  "factionInvasionTags": {
+      "ClanJadeFalcon": [
+          "falcon_invasion_corridor"
+      ]
+  },
   "customContractEnums": [
     10000,
     10001,
