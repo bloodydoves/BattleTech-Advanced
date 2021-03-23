@@ -1,0 +1,45 @@
+{
+	"Description" : {
+		"Id" : "TraitDefJamReduceTwo",
+		"Name" : "Jam Reduction Two",
+		"Details" : "PASSIVE: 'Mechs piloted by this MechWarrior get two attacks instead of one when making a punch or a kick attack.",
+		"Icon" : "uixSvgIcon_action_evasivemove"
+	},
+	"Type" : "MeleeHit",
+	"ShortDesc" : "-10% Jam Chance",
+    "DisplayParams" : "ShowInPilotToolTip",
+	"ActivationTime" : "Passive",
+	"EffectData" :
+	[
+		{
+			"durationData" :
+			{
+				"duration" : -1
+			},
+			"targetingData" : 
+			{
+				"effectTriggerType" : "OnActivation",
+				"effectTargetType" : "Creator",
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : false
+			},
+			"effectType" : "StatisticEffect",
+			"Description" :
+			{
+				"Id" : "TraitDefJamReduceTwo",
+				"Name" : "Jam Reduce Two",
+				"Details" : "Reduce Jam Chance by 10%",
+				"Icon" : "uixSvgIcon_action_evasivemove"
+			},
+			"statisticData" : 
+			{
+				"statName": "CACModJammingChance",
+				"operation": "Float_Multiply",
+				"modValue": "0.9",
+				"modType": "System.Single",
+				"targetCollection": "Weapon"
+			},
+			"nature" : "Buff"
+		}
+	]
+}
