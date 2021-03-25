@@ -5,47 +5,48 @@
   "ignoreFactions": [
     "SolarisVII",
     "NoFaction",
-	"AuriganPirates",
-	"SelfEmployed",
-	"MasonsMarauders",
-	"LocalsBrockwayRefugees",
-	"MercenaryReviewBoard",
-	"betrayers",
+    "AuriganPirates",
+    "SelfEmployed",
+    "MasonsMarauders",
+    "LocalsBrockwayRefugees",
+    "MercenaryReviewBoard",
+    "betrayers",
     "FlakJackals",
-	"SteelBeast",
-	"KellHounds",
-	"RazorbackMercs",
-	"HostileMercenaries",
-	"EmeraldDawn",
-	"SianTriumphant",
-	"ProfHorvat",
-	"RedHareRegiment",
-	"EdCorbu",
-	"DuchyOfAndurien",
-	"BlackCalderaDefense",
-	"HouseNakano",
-	"GrayDeathLegion",
-	"BlackCalderaDefense_Hidden",
-	"SelfEmployed_Farah",
-	"SelfEmployed_Yang",
-	"SecuritySolutionsInc",
-	"PaladinProtectionLLC",
-	"HouseKhulan",
-	"Wolfs_Dragoons",
-	"LoneStarRegiment",
-	"KnightsOfCaerbannog",
-	"GraysGhosts",
-	"BroadswordLegion",
-	"Moderbjorn",
-	"BountyHunterAssociates",
-	"BaumannGroup",
-	"BlackWidowCompany",
+    "SteelBeast",
+    "KellHounds",
+    "RazorbackMercs",
+    "HostileMercenaries",
+    "EmeraldDawn",
+    "SianTriumphant",
+    "ProfHorvat",
+    "RedHareRegiment",
+    "EdCorbu",
+    "DuchyOfAndurien",
+    "BlackCalderaDefense",
+    "HouseNakano",
+    "GrayDeathLegion",
+    "BlackCalderaDefense_Hidden",
+    "SelfEmployed_Farah",
+    "SelfEmployed_Yang",
+    "SecuritySolutionsInc",
+    "PaladinProtectionLLC",
+    "HouseKhulan",
+    "Wolfs_Dragoons",
+    "LoneStarRegiment",
+    "KnightsOfCaerbannog",
+    "GraysGhosts",
+    "BroadswordLegion",
+    "Moderbjorn",
+    "BountyHunterAssociates",
+    "BaumannGroup",
+    "BlackWidowCompany",
     "ClanDiamondShark",
-	"Delphi",
-	"ComStar"
+    "Delphi",
+    "ComStar"
   ],
 
-  "dailyFlareupChance": 0.15,
+  "dailyAttackChance": 0.15,
+  "dailyRaidChance": 0.15,
 
   "aggression": {
     "NoFaction": 0.0
@@ -65,13 +66,16 @@
   },
   "cantBeAttacked": [
     "ComStar",
-	"Delphi",
+    "Delphi",
     "ClanDiamondShark"
+  ],
+  "cantBeAttackedTags": [
+    "i_dont_exist"
   ],
 
   "limitTargetsToFactionEnemies": true,
 
-  "flareupMarker": {
+  "attackMarker": {
       "useHmAnimation": true,
       "flashpointPrefix": "",
       "swapColour": true,
@@ -83,6 +87,18 @@
           "Colour": "#8904B1"
       }
   },
+  "raidMarker": {
+      "useHmAnimation": true,
+      "flashpointPrefix": "",
+      "swapColour": true,
+      "keepAlpha": true,
+      "useOnlyInner": true,
+      "autoDetectContracts": false,
+      "useContractColourOverride": false,
+      "innerCircle": {
+          "Colour": "#1904B1"
+      }
+  },
 
   "minCountdown": 30,
   "maxCountdown": 45,
@@ -92,24 +108,26 @@
   "strengthVariation": 10,
   "attackStrength": {
     "ClanWolf": 22,
-	"ClanJadeFalcon": 23,
-	"ClanGhostBear": 22,
-	"ClanNovaCat": 21,
-	"Marian": 22,
-	"Circinus": 21
+    "ClanJadeFalcon": 23,
+    "ClanGhostBear": 22,
+    "ClanNovaCat": 21,
+    "Marian": 22,
+    "Circinus": 21
   },
   "defenseStrength": {
-	"JarnFolk": 20,
-	"Rasalhague": 20,
-	"Locals": 17,
-	"Marian": 13,
-	"Circinus": 12,
-	"TaurianConcordat": 17,
-	"Rim": 16,
-	"Outworld": 19
+    "JarnFolk": 20,
+    "Rasalhague": 20,
+    "Locals": 17,
+    "Marian": 13,
+    "Circinus": 12,
+    "TaurianConcordat": 17,
+    "Rim": 16,
+    "Outworld": 19
   },
+  "raidStrengthMultiplier": 0.75,
 
-  "minReputationToHelp": "DISLIKED",
+  "minReputationToHelpAttack": "DISLIKED",
+  "minReputationToHelpRaid": "DISLIKED",
   "wontHirePlayer": [
     "ClanWolf",
     "ClanJadeFalcon",
@@ -120,17 +138,38 @@
   "daysBetweenMissions": 3,
   "combatForceLossMin": 2,
   "combatForceLossMax": 5,
-  "flareupMissionBonusPerHalfSkull": 50000,
+  "attackBonusPerHalfSkull": 30000,
+  "attackBonusSalvage": 0,
+  "raidBonusPerHalfSkull": 5000,
+  "raidBonusSalvage": 1,
+  "raidResultDuration": 360,
 
-  "pirateTags": [
-    "planet_other_pirate",
-    "planet_pirate_lord",
-    "planet_other_prison",
-    "planet_other_blackmarket"
-  ],
+  "factionActivityTags": {
+      "AuriganPirates": [
+          "planet_other_pirate",
+          "planet_pirate_lord",
+          "planet_other_prison",
+          "planet_other_blackmarket"
+      ],
+      "ComStar": [
+          "planet_other_comstar"
+      ],
+      "Tortuga": [
+          "planet_tortugan_raids"
+      ],
+	  "Hanse": [
+          "planet_hanseatic_raids"
+      ],
+	  "Davion": [
+          "planet_davion_raids"
+      ]
+  },
+  "factionInvasionTags": {
+      "ClanJadeFalcon": [
+          "falcon_invasion_corridor"
+      ]
+  },
   "customContractEnums": [
-    10000,
-    10001,
     10002
   ],
   "saveFolder": "../../BTASaves"
