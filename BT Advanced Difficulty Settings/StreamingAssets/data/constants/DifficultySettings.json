@@ -89,7 +89,7 @@
 			"Name": "Friendly Fire",
 			"TelemetryEventName": "",
 			"UIOrder": 0,
-			"Tooltip": "Select what Stray Shot behavior you want - No Stray Shots, Enemies/Neutral, Friendly Fire",
+			"Tooltip": "Select what Stray Shot behavior you want - Completely Disabled, Buildings Only, Enemies/Neutral, Friendly Fire",
 			"Enabled": true,
 			"Visible": true,
 			"Toggle": false,
@@ -97,8 +97,36 @@
 			"DefaultIndex": 2,
 			"Options": [
 				{
+					"ID": "diff_FF_Disabled",
+					"Name": "Disabled",
+					"TelemetryEventDesc": "",
+					"DifficultyValue": 0,
+					"CareerScoreModifier": -1,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "string",
+							"ConstantName": "StrayShotsEnabled",
+							"ConstantValue": "False"
+						}
+					]
+				},
+				{
+					"ID": "diff_FF_Buildings",
+					"Name": "Buildings Only",
+					"TelemetryEventDesc": "",
+					"DifficultyValue": 0,
+					"CareerScoreModifier": -1,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "string",
+							"ConstantName": "StrayShotsHitUnits",
+							"ConstantValue": "False"
+						}
+					]
+				},
+				{
 					"ID": "diff_FF_Off",
-					"Name": "None",
+					"Name": "Enemies Only",
 					"TelemetryEventDesc": "",
 					"DifficultyValue": 0,
 					"CareerScoreModifier": -1,
@@ -112,7 +140,7 @@
 				},
 				{
 					"ID": "diff_FF_Neutral",
-					"Name": "Enemies",
+					"Name": "Enemies/Ntrl",
 					"TelemetryEventDesc": "",
 					"DifficultyValue": 0,
 					"CareerScoreModifier": 0,
