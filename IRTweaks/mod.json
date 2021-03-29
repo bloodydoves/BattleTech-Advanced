@@ -2,7 +2,7 @@
 	"Name": "IRTweaks",
 	"Enabled": true,
 	"Hidden": true,
-	"Version": "0.9.1.2",
+	"Version": "0.9.1.3",
 	"Description": "Miscellaneous Tweaks and Fixes",
 	"Author": "IceRaptor",
 	"Website": "https://github.com/IceRaptor/IRTweaks",
@@ -13,12 +13,12 @@
 		"Custom Ammo Categories"
 	],
 	"Settings": {
-		"Debug": false,
-		"Trace": false,
+		"Debug": true,
+		"Trace": true,
 		"Fixes": {
 			"AlternateMechNamingStyle": false,
 			"BuildingDamageColorChange": false,
-            "BraceOnMeleeWithJuggernaut" : true,
+			"BraceOnMeleeWithJuggernaut": true,
 			"BulkPurchasing": false,
 			"BulkScrapping": false,
 			"CombatLog": false,
@@ -26,11 +26,11 @@
 			"DisableCombatSaves": true,
 			"DisableCombatRestarts": true,
 			"DisableLowFundsNotification": true,
-			"DisableMPHashCalculation" : true,
+			"DisableMPHashCalculation": true,
 			"ExtendedStats": false,
 			"FlexibleSensorLock": false,
 			"MaxArmorMaxesArmor": true,
-			"MechbayLayout" : true,
+			"MechbayLayout": true,
 			"MechbayLayoutDisableStore": true,
 			"MechbayAdvancedStripping": true,
 			"MultiTargetStat": true,
@@ -39,20 +39,20 @@
 			"PreventHeadShots": false,
 			"RandomStartByDifficulty": true,
 			"ReduceSaveCompression": true,
-			"ScaleObjectiveBuildingStructure" : true,
+			"ScaleObjectiveBuildingStructure": true,
 			"ShowAllArgoUpgrades": true,
-			"SimGameDifficultyLabelsReplacer" : false,
+			"SimGameDifficultyLabelsReplacer": false,
 			"SkirmishAlwaysUnlimited": true,
 			"SkirmishReset": false,
 			"SkipDeleteSavePopup": true,
 			"SpawnProtection": true,
 			"StreamlinedMainMenu": true,
-			"UrbanExplosionsFix" : false,
+			"UrbanExplosionsFix": false,
 			"WeaponTooltip": true
 		},
 		"Abilities": {
 			"FlexibleSensorLockId": "AbilityDefT5A",
-            "JuggernautId" : "AbilityDefGu8",
+			"JuggernautId": "AbilityDefGu8",
 			"MultiTargetId": "AbilityDefG5"
 		},
 		"Combat": {
@@ -63,11 +63,39 @@
 				"BaseModifier": -1,
 				"PilotTags": {}
 			},
+			"DamageModsBySkill": {
+				"StabilityMods": [
+					{
+						"StatName": "stabMod1",
+						"Probability": 0.9,
+						"Multiplier": 25.0
+					},
+					{
+						"StatName": "stabMod2",
+						"Probability": 0.2,
+						"Multiplier": 0.1
+					}
+				],
+				"HeatMods": [
+					{
+						"StatName": "heatMod1",
+						"Probability": 0.9,
+						"Multiplier": 5.0
+					},
+					{
+						"StatName": "heatMod2",
+						"Probability": 0.2,
+						"Multiplier": 0.1
+					}
+				],
+				"APDmgMods": [],
+				"StdDmgMods": []
+			},
 			"FlexibleSensorLock": {
 				"FreeActionWithAbility": false,
-				"FreeActionWithStat" : false,
-				"FreeActionStatName" : "IR_FreeSensorLock",
-				"AlsoAppliesToActiveProbe" : false,
+				"FreeActionWithStat": false,
+				"FreeActionStatName": "IR_FreeSensorLock",
+				"AlsoAppliesToActiveProbe": false
 			},
 			"PainTolerance": {
 				"ResistPerGuts": 15,
@@ -78,26 +106,65 @@
 				"KnockdownResistPenalty": 6,
 				"SideLocationDestroyedResistPenalty": 10
 			},
-			"ScaledStructure" : {
-                "DefaultScale" : { "Mod" : 0, "Multi" : 1.0 },
-                "DifficultyScaling" : {
-					"1" : { "Mod" : 5, "Multi" : 1.0 },
-					"2" : { "Mod" : 10, "Multi" : 1.25 },
-					"3" : { "Mod" : 15, "Multi" : 1.5 },
-					"4" : { "Mod" : 20, "Multi" : 2.0 },
-					"5" : { "Mod" : 25, "Multi" : 2.5 },
-					"6" : { "Mod" : 30, "Multi" : 3.0 },
-					"7" : { "Mod" : 35, "Multi" : 3.5 },
-					"8" : { "Mod" : 40, "Multi" : 4.0 },
-					"9" : { "Mod" : 45, "Multi" : 4.5 },
-					"10" : { "Mod" : 50, "Multi" : 5.0 },
-					"11" : { "Mod" : 55, "Multi" : 5.5 },
-					"12" : { "Mod" : 60, "Multi" : 6.0 }
+			"ScaledStructure": {
+				"DefaultScale": {
+					"Mod": 0,
+					"Multi": 1.0
+				},
+				"DifficultyScaling": {
+					"1": {
+						"Mod": 5,
+						"Multi": 1.0
+					},
+					"2": {
+						"Mod": 10,
+						"Multi": 1.25
+					},
+					"3": {
+						"Mod": 15,
+						"Multi": 1.5
+					},
+					"4": {
+						"Mod": 20,
+						"Multi": 2.0
+					},
+					"5": {
+						"Mod": 25,
+						"Multi": 2.5
+					},
+					"6": {
+						"Mod": 30,
+						"Multi": 3.0
+					},
+					"7": {
+						"Mod": 35,
+						"Multi": 3.5
+					},
+					"8": {
+						"Mod": 40,
+						"Multi": 4.0
+					},
+					"9": {
+						"Mod": 45,
+						"Multi": 4.5
+					},
+					"10": {
+						"Mod": 50,
+						"Multi": 5.0
+					},
+					"11": {
+						"Mod": 55,
+						"Multi": 5.5
+					},
+					"12": {
+						"Mod": 60,
+						"Multi": 6.0
+					}
 				}
-            },
+			},
 			"SpawnProtection": {
 				"ApplyGuard": true,
-				"EvasionPips": 8,
+				"EvasionPips": 6,
 				"ApplyToEnemies": true,
 				"ApplyToAllies": true,
 				"ApplyToNeutrals": true,
