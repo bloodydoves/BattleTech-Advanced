@@ -1,0 +1,44 @@
+{
+	"Description" : {
+		"Id" : "TraitDefGunneryDmgBonus1",
+		"Name" : "Gunnery Dmg Boost",
+		"Details" : "PASSIVE: This mechwarrior has a 15% chance to do 15% more damage!",
+		"Icon" : "uixSvgIcon_action_evasivemove"
+	},
+	"Type" : "WeaponHit",
+	"ShortDesc" : "15% Chance for +15% Stab Dmg",
+    "DisplayParams" : "ShowInPilotToolTip",
+	"ActivationTime" : "Passive",
+	"EffectData" :
+	[
+		{
+			"durationData" :
+				{
+					"duration" : -1
+				},
+			"targetingData" : 
+				{
+					"effectTriggerType" : "OnActivation",
+					"effectTargetType" : "Creator",
+					"showInTargetPreview" : false,
+					"showInStatusPanel" : false
+				},
+			"effectType" : "StatisticEffect",
+			"Description" :
+				{
+					"Id" : "TraitDefGunneryDmgBonus1",
+					"Name" : "Damage Boost",
+					"Details" : "Boost Dmg by 15%",
+					"Icon" : "uixSvgIcon_action_evasivemove"
+				},
+			"statisticData" : 
+				{
+					"statName" : "GunnderyDmgBonus1",
+					"operation": "Set",
+					"modValue": "true",
+					"modType": "System.Boolean"
+				},
+			"nature" : "Buff"
+		}
+	]
+}
