@@ -66,30 +66,26 @@
 			"DamageModsBySkill": {
 				"StabilityMods": [
 					{
-						"StatName": "stabMod1",
-						"Probability": 0.9,
-						"Multiplier": 25.0
-					},
-					{
-						"StatName": "stabMod2",
-						"Probability": 0.2,
-						"Multiplier": 0.1
+						"StatName": "GunneryStabBonus1",
+						"Probability": 0.15,
+						"Multiplier": 1.15
 					}
 				],
 				"HeatMods": [
 					{
-						"StatName": "heatMod1",
-						"Probability": 0.9,
-						"Multiplier": 5.0
-					},
-					{
-						"StatName": "heatMod2",
-						"Probability": 0.2,
-						"Multiplier": 0.1
+						"StatName": "GunneryHeatBonus1",
+						"Probability": 0.15,
+						"Multiplier": 1.15
 					}
 				],
 				"APDmgMods": [],
-				"StdDmgMods": []
+				"StdDmgMods": [
+					{
+						"StatName": "GunnderyDmgBonus1",
+						"Probability": 0.15,
+						"Multiplier": 1.15
+					}
+				]
 			},
 			"FlexibleSensorLock": {
 				"FreeActionWithAbility": false,
@@ -106,65 +102,26 @@
 				"KnockdownResistPenalty": 6,
 				"SideLocationDestroyedResistPenalty": 10
 			},
-			"ScaledStructure": {
-				"DefaultScale": {
-					"Mod": 0,
-					"Multi": 1.0
-				},
-				"DifficultyScaling": {
-					"1": {
-						"Mod": 5,
-						"Multi": 1.0
-					},
-					"2": {
-						"Mod": 10,
-						"Multi": 1.25
-					},
-					"3": {
-						"Mod": 15,
-						"Multi": 1.5
-					},
-					"4": {
-						"Mod": 20,
-						"Multi": 2.0
-					},
-					"5": {
-						"Mod": 25,
-						"Multi": 2.5
-					},
-					"6": {
-						"Mod": 30,
-						"Multi": 3.0
-					},
-					"7": {
-						"Mod": 35,
-						"Multi": 3.5
-					},
-					"8": {
-						"Mod": 40,
-						"Multi": 4.0
-					},
-					"9": {
-						"Mod": 45,
-						"Multi": 4.5
-					},
-					"10": {
-						"Mod": 50,
-						"Multi": 5.0
-					},
-					"11": {
-						"Mod": 55,
-						"Multi": 5.5
-					},
-					"12": {
-						"Mod": 60,
-						"Multi": 6.0
-					}
+			"ScaledStructure" : {
+                "DefaultScale" : { "Mod" : 0, "Multi" : 1.0 },
+                "DifficultyScaling" : {
+					"1" : { "Mod" : 5, "Multi" : 1.0 },
+					"2" : { "Mod" : 10, "Multi" : 1.25 },
+					"3" : { "Mod" : 15, "Multi" : 1.5 },
+					"4" : { "Mod" : 20, "Multi" : 2.0 },
+					"5" : { "Mod" : 25, "Multi" : 2.5 },
+					"6" : { "Mod" : 30, "Multi" : 3.0 },
+					"7" : { "Mod" : 35, "Multi" : 3.5 },
+					"8" : { "Mod" : 40, "Multi" : 4.0 },
+					"9" : { "Mod" : 45, "Multi" : 4.5 },
+					"10" : { "Mod" : 50, "Multi" : 5.0 },
+					"11" : { "Mod" : 55, "Multi" : 5.5 },
+					"12" : { "Mod" : 60, "Multi" : 6.0 }
 				}
 			},
 			"SpawnProtection": {
 				"ApplyGuard": true,
-				"EvasionPips": 6,
+				"EvasionPips": 8,
 				"ApplyToEnemies": true,
 				"ApplyToAllies": true,
 				"ApplyToNeutrals": true,
