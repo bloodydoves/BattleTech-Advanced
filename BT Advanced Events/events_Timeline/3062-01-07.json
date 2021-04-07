@@ -1,167 +1,136 @@
 {
-	"Description": {
-		"Id": "3062-01-07",
-		"Name": "MercNews Broadcast",
-		"Details": "<b>MercNews Subscription Renewal Request</b>\r\n\n\n\nMercNews is a free news service provided to all mercenary companies registered and in good standing with the MRBC. The goal of MercNews is to provide factual, bias-free reporting of breaking news stories across known space. By confirming your MercNews subscription, you authorize MercNews LLC., the MRBC, and 3rd party sponsors to transmit and receive data using your onboard communications equipment.\r\n\n\n<b>In addition, your MercNews subscription will enable you to take part when border skirmishes between the great powers <i>flare-up</i>.",
-		"Icon": "uixTxrSpot_ComputerScreen.png"
-	},
-	"Scope": "Company",
-	"Weight": 0,
-	"Requirements": {
-		"Scope": "Company",
-		"RequirementTags": {
-			"items": null,
-			"tagSetSourceFile": ""
-		},
-		"ExclusionTags": {
-			"items": null,
-			"tagSetSourceFile": ""
-		},
-		"RequirementComparisons": []
-	},
-	"AdditionalRequirements": [],
-	"AdditionalObjects": [],
-	"Options": [
-		{
-			"Description": {
-				"Id": "Subscribe",
-				"Name": "Confirm MercNews Subscription <color=#FFA500>(Adds galactic map events)</color>.",
-				"Details": "Confirm MercNews Subscription <color=#FFA500>(Adds galactic map events)</color>.",
-				"Icon": ""
-			},
-			"RequirementList": [],
-			"ResultSets": [
-				{
-					"Description": {
-						"Id": "Subscribe1",
-						"Name": "Subscribed",
-						"Details": "Thank you for renewing your subscription to MercNews.\r\n\n\nFOCHT RESIGNS; KURITA ELECTED FIRST LORD!\r\n\n\nTharkad, [[DM.BaseDescriptionDefs[LoreLyranAlliance],Lyran Alliance]]: According to the recently amended [[DM.BaseDescriptionDefs[LoreStarLeague2],Star League]] Constitution, the [[DM.Factions[faction_ComStar],ComStar]] representative is charged with casting the deciding vote in the event of a tie. In a dramatic twist of the deadlocked 2nd [[DM.BaseDescriptionDefs[LoreWhittingCon],Whitting Conference]], Precentor Martial Anastasius Focht resigned, naming [[DM.BaseDescriptionDefs[LoreVictorSD],Victor Steiner-Davion]] as his successor and new Precentor Martial. Steiner-Davion quickly cast the deciding vote in favor of [[DM.BaseDescriptionDefs[LoreTedKurita],Theodore Kurita]]. As the new First Lord of the [[DM.BaseDescriptionDefs[LoreStarLeague2],Star League]], it falls on Kurita to maintain the uneasy peace between the [[DM.BaseDescriptionDefs[LoreGreatHouses],Great Houses]] and protect the Inner Sphere from the dormant Clan threat.",
-						"Icon": ""
-					},
-					"Weight": 100,
-					"Results": [
-						{
-							"Scope": "Company",
-							"Requirements": null,
-							"AddedTags": {
-								"items": [
-									"mercnews_subscription"
-								],
-								"tagSetSourceFile": ""
-							},
-							"RemovedTags": {
-								"items": null,
-								"tagSetSourceFile": ""
-							},
-							"Stats": [
-								{
-									"typeString": "System.Int32",
-									"name": "Reputation.SelfEmployed",
-									"value": "100",
-									"set": true,
-									"valueConstant": null
-								}
-							],
-							"Actions": [
-								{
-									"Type": "System_SetFactionAlly",
-									"value": "true",
-									"valueConstant": null,
-									"additionalValues": [
-										"SelfEmployed"
-									]
-								}
-							],
-							"ForceEvents": null,
-							"TemporaryResult": false,
-							"ResultDuration": 0
-						}
-					]
-				}
-			],
-			"Requirements": {
-				"Scope": "Company",
-				"RequirementTags": {
-					"items": null,
-					"tagSetSourceFile": ""
-				},
-				"ExclusionTags": {
-					"items": null,
-					"tagSetSourceFile": ""
-				},
-				"RequirementComparisons": []
-			}
-		},
-		{
-			"Description": {
-				"Id": "Unsubscribe",
-				"Name": "Unsubscribe from MercNews <color=#FFA500>(Only normal flareups will occur)</color>.",
-				"Details": "Unsubscribe from MercNews <color=#FFA500>(Only normal flareups will occur)</color>.",
-				"Icon": ""
-			},
-			"RequirementList": [],
-			"ResultSets": [
-				{
-					"Description": {
-						"Id": "Unsubscribe1",
-						"Name": "Unsubscribed",
-						"Details": "You have been unsubscribed from all MercNews broadcasts.",
-						"Icon": ""
-					},
-					"Weight": 100,
-					"Results": [
-						{
-							"Scope": "Company",
-							"Requirements": null,
-							"AddedTags": {
-								"items": [],
-								"tagSetSourceFile": ""
-							},
-							"RemovedTags": {
-								"items": "mercnews_subscription",
-								"tagSetSourceFile": ""
-							},
-							"Stats": [
-								{
-									"typeString": "System.Int32",
-									"name": "Reputation.SelfEmployed",
-									"value": "100",
-									"set": true,
-									"valueConstant": null
-								}
-							],
-							"Actions": [
-								{
-									"Type": "System_SetFactionAlly",
-									"value": "true",
-									"valueConstant": null,
-									"additionalValues": [
-										"SelfEmployed"
-									]
-								}
-							],
-							"ForceEvents": null,
-							"TemporaryResult": false,
-							"ResultDuration": 0
-						}
-					]
-				}
-			],
-			"Requirements": {
-				"Scope": "Company",
-				"RequirementTags": {
-					"items": null,
-					"tagSetSourceFile": ""
-				},
-				"ExclusionTags": {
-					"items": null,
-					"tagSetSourceFile": ""
-				},
-				"RequirementComparisons": []
-			}
-		}
-	],
-	"PublishState": "PUBLISHED",
-	"ValidationState": "UNTESTED",
-	"EventType": "UNSELECTABLE"
+    "Description": {
+        "Id": "3062-01-07",
+        "Name": "MercNews Broadcast",
+        "Details": "<b>MercNews Subscription Renewal Request</b>\r\n\n\n\nMercNews is a free news service provided to all mercenary companies registered and in good standing with the MRBC. The goal of MercNews is to provide factual, bias-free reporting of breaking news stories across known space. By confirming your MercNews subscription, you authorize MercNews LLC., the MRBC, and 3rd party sponsors to transmit and receive data using your onboard communications equipment.\r\n\n\n<b>In addition, your MercNews subscription will enable you to take part when border skirmishes between the great powers <i>flare-up</i>.",
+        "Icon": "uixTxrSpot_ComputerScreen.png"
+    },
+    "Scope": "Company",
+    "Weight": 0,
+    "Requirements": {
+        "Scope": "Company",
+        "RequirementTags": {
+            "items": null,
+            "tagSetSourceFile": ""
+        },
+        "ExclusionTags": {
+            "items": null,
+            "tagSetSourceFile": ""
+        },
+        "RequirementComparisons": []
+    },
+    "AdditionalRequirements": [],
+    "AdditionalObjects": [],
+    "Options": [
+        {
+            "Description": {
+                "Id": "Subscribe",
+                "Name": "Confirm MercNews Subscription <color=#FFA500>(Adds galactic map events)</color>.",
+                "Details": "Confirm MercNews Subscription <color=#FFA500>(Adds galactic map events)</color>.",
+                "Icon": ""
+            },
+            "RequirementList": [],
+            "ResultSets": [
+                {
+                    "Description": {
+                        "Id": "Subscribe1",
+                        "Name": "Subscribed",
+                        "Details": "Thank you for renewing your subscription to MercNews.\r\n\n\nFOCHT RESIGNS; KURITA ELECTED FIRST LORD!\r\n\n\nTharkad, [[DM.BaseDescriptionDefs[LoreLyranAlliance],Lyran Alliance]]: According to the recently amended [[DM.BaseDescriptionDefs[LoreStarLeague2],Star League]] Constitution, the [[DM.Factions[faction_ComStar],ComStar]] representative is charged with casting the deciding vote in the event of a tie. In a dramatic twist of the deadlocked 2nd [[DM.BaseDescriptionDefs[LoreWhittingCon],Whitting Conference]], Precentor Martial Anastasius Focht resigned, naming [[DM.BaseDescriptionDefs[LoreVictorSD],Victor Steiner-Davion]] as his successor and new Precentor Martial. Steiner-Davion quickly cast the deciding vote in favor of [[DM.BaseDescriptionDefs[LoreTedKurita],Theodore Kurita]]. As the new First Lord of the [[DM.BaseDescriptionDefs[LoreStarLeague2],Star League]], it falls on Kurita to maintain the uneasy peace between the [[DM.BaseDescriptionDefs[LoreGreatHouses],Great Houses]] and protect the Inner Sphere from the dormant Clan threat.",
+                        "Icon": ""
+                    },
+                    "Weight": 100,
+                    "Results": [
+                        {
+                            "Scope": "",
+                            "Requirements": null,
+                            "AddedTags": {
+                                "items" : [
+								"mercnews_subscription"
+                                ],
+                                "tagSetSourceFile" : ""
+                            
+                            },
+                            "RemovedTags": {
+                                "items": null,
+                                "tagSetSourceFile": ""
+                            },
+                            "Stats": null,
+                            "Actions": null,
+                            "ForceEvents": null,
+                            "TemporaryResult": false,
+                            "ResultDuration": 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements": {
+                "Scope": "Company",
+                "RequirementTags": {
+                    "items": null,
+                    "tagSetSourceFile": ""
+                },
+                "ExclusionTags": {
+                    "items": null,
+                    "tagSetSourceFile": ""
+                },
+                "RequirementComparisons": []
+            }
+        },
+		        {
+            "Description": {
+                "Id": "Unsubscribe",
+                "Name": "Unsubscribe from MercNews <color=#FFA500>(Only normal flareups will occur)</color>.",
+                "Details": "Unsubscribe from MercNews <color=#FFA500>(Only normal flareups will occur)</color>.",
+                "Icon": ""
+            },
+            "RequirementList": [],
+            "ResultSets": [
+                {
+                    "Description": {
+                        "Id": "Unsubscribe1",
+                        "Name": "Unsubscribed",
+                        "Details": "You have been unsubscribed from all MercNews broadcasts.",
+                        "Icon": ""
+                    },
+                    "Weight": 100,
+                    "Results": [
+                        {
+                            "Scope": "",
+                            "Requirements": null,
+                            "AddedTags": {
+                                "items" : [
+                                ],
+                                "tagSetSourceFile" : ""
+                            
+                            },
+                            "RemovedTags": {
+                                "items": "mercnews_subscription",
+                                "tagSetSourceFile": ""
+                            },
+                            "Stats": null,
+                            "Actions": null,
+                            "ForceEvents": null,
+                            "TemporaryResult": false,
+                            "ResultDuration": 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements": {
+                "Scope": "Company",
+                "RequirementTags": {
+                    "items": null,
+                    "tagSetSourceFile": ""
+                },
+                "ExclusionTags": {
+                    "items": null,
+                    "tagSetSourceFile": ""
+                },
+                "RequirementComparisons": []
+            }
+        }
+    ],
+    "PublishState": "PUBLISHED",
+    "ValidationState": "UNTESTED",
+    "EventType": "UNSELECTABLE"
 }
