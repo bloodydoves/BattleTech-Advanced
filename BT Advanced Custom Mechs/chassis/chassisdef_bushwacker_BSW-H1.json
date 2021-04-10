@@ -12,9 +12,9 @@
 		"Manufacturer": "",
 		"Model": "",
 		"UIName": "Bushwacker",
-		"Id": "chassisdef_bushwacker_BWS-W1",
+		"Id": "chassisdef_bushwacker_BSW-H1",
 		"Name": "Bushwacker",
-		"Details": "Designed as a close-range brawler variant of the Bushwacker, the -W1 carries a strong close-range payload, anchored by a LB-10X Autocannon and a Large Pulse Laser. 10 SRM tubes back up the larger weapons and three tons of ammo total keep the weapons firing regularly. The one significant innovation on the mech is its Light Ferro-Fibrous armor, which was still new at the time of the mech's creation.",
+		"Details": "Designed as a platform for the newly developed Large X-Pulse Laser, the Bushwacker-H1 is an unusual and little-loved design. The -H1 has a standard movement and armor profile for a Bushwacker and carries a varied loadout that specializes in little beyond causing critical damage. For primary armaments, the -H1 carres a Large X-Pulse Laser and a LB-5X Autocannon with two tons of ammo. For backup weapons, the -H1 carries the traditional Bushwacker LRM 5s and Machine Guns. The -H1 saw little acceptance and was deemed a failure of a design.",
 		"Icon": "bushwacker"
 	},
 	"MovementCapDefID": "movedef_bushwacker",
@@ -88,7 +88,7 @@
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -118,7 +118,16 @@
 		},
 		{
 			"Location": "RightTorso",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
 			"MaxArmor": 140,
@@ -206,13 +215,13 @@
 			"z": 2.5
 		}
 	],
-	"VariantName": "BSW-W1",
+	"VariantName": "BSW-H1",
 	"ChassisTags": {
 		"items": [],
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Guerrilla Prototype",
-	"YangsThoughts": "Designed as a close-range brawler variant of the Bushwacker, the -W1 carries a strong close-range payload, anchored by a LB-10X Autocannon and a Large Pulse Laser. 10 SRM tubes back up the larger weapons and three tons of ammo total keep the weapons firing regularly. The one significant innovation on the mech is its Light Ferro-Fibrous armor, which was still new at the time of the mech's creation.",
+	"YangsThoughts": "Designed as a platform for the newly developed Large X-Pulse Laser, the Bushwacker-H1 is an unusual and little-loved design. The -H1 has a standard movement and armor profile for a Bushwacker and carries a varied loadout that specializes in little beyond causing critical damage. For primary armaments, the -H1 carres a Large X-Pulse Laser and a LB-5X Autocannon with two tons of ammo. For backup weapons, the -H1 carries the traditional Bushwacker LRM 5s and Machine Guns. The -H1 saw little acceptance and was deemed a failure of a design.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",
@@ -227,16 +236,13 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_structureslots_endosteel",
-			"SimGameUID": "",
-			"ComponentDefType": "Upgrade",
-			"HardpointSlot": -1,
-			"IsFixed": true,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": "",
-			"hasPrefabName": false
-		}
+            "MountedLocation" : "CenterTorso",
+            "ComponentDefID" : "emod_structureslots_standard",
+            "ComponentDefType" : "Upgrade",
+            "HardpointSlot" : -1,
+            "DamageLevel" : "Functional",
+            "prefabName" : "",
+            "hasPrefabName" : true
+        }
 	]
 }

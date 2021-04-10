@@ -2,7 +2,7 @@
 	"Custom": {
 		"ArmActuatorSupport": {
 			"LeftLimit": "Lower",
-			"RightLimit": "Hand"
+			"RightLimit": "Lower"
 		}
 	},
 	"Description": {
@@ -12,9 +12,9 @@
 		"Manufacturer": "",
 		"Model": "",
 		"UIName": "Bushwacker",
-		"Id": "chassisdef_bushwacker_BWS-H1",
+		"Id": "chassisdef_bushwacker_BSW-S2",
 		"Name": "Bushwacker",
-		"Details": "Designed as a platform for the newly developed Large X-Pulse Laser, the Bushwacker-H1 is an unusual and little-loved design. The -H1 has a standard movement and armor profile for a Bushwacker and carries a varied loadout that specializes in little beyond causing critical damage. For primary armaments, the -H1 carres a Large X-Pulse Laser and a LB-5X Autocannon with two tons of ammo. For backup weapons, the -H1 carries the traditional Bushwacker LRM 5s and Machine Guns. The -H1 saw little acceptance and was deemed a failure of a design.",
+		"Details": "The S2 is a variant of the Bushwacker that makes the 'Mech more effective at short to medium ranges. The 'Mech carries an ER Large Laser to allow the 'Mech to engage an enemy at long ranges as it closes. The 'Mech carries an LB-X Autocannon/10, which can fire both standard and cluster ammunition for long to medium range engagement capabilities. For close combat, the 'Mech has two SRM-4 launchers, making it a powerful unit at any range. For added defense, the S2 carries an Anti-Missile System.",
 		"Icon": "bushwacker"
 	},
 	"MovementCapDefID": "movedef_bushwacker",
@@ -90,6 +90,10 @@
 				{
 					"WeaponMount": "AntiPersonnel",
 					"Omni": false
+				},
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
 				}
 			],
 			"Tonnage": 0,
@@ -119,6 +123,14 @@
 		{
 			"Location": "RightTorso",
 			"Hardpoints": [
+				{
+					"WeaponMount": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
 				{
 					"WeaponMount": "AntiPersonnel",
 					"Omni": false
@@ -215,13 +227,13 @@
 			"z": 2.5
 		}
 	],
-	"VariantName": "BSW-H1",
+	"VariantName": "BSW-S2",
 	"ChassisTags": {
 		"items": [],
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Guerrilla Prototype",
-	"YangsThoughts": "Designed as a platform for the newly developed Large X-Pulse Laser, the Bushwacker-H1 is an unusual and little-loved design. The -H1 has a standard movement and armor profile for a Bushwacker and carries a varied loadout that specializes in little beyond causing critical damage. For primary armaments, the -H1 carres a Large X-Pulse Laser and a LB-5X Autocannon with two tons of ammo. For backup weapons, the -H1 carries the traditional Bushwacker LRM 5s and Machine Guns. The -H1 saw little acceptance and was deemed a failure of a design.",
+	"YangsThoughts": "The S2 is a variant of the Bushwacker that makes the 'Mech more effective at short to medium ranges. The 'Mech carries an ER Large Laser to allow the 'Mech to engage an enemy at long ranges as it closes. The 'Mech carries an LB-X Autocannon/10, which can fire both standard and cluster ammunition for long to medium range engagement capabilities. For close combat, the 'Mech has two SRM-4 launchers, making it a powerful unit at any range. For added defense, the S2 carries an Anti-Missile System.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",
@@ -236,13 +248,16 @@
 			"hasPrefabName": false
 		},
 		{
-            "MountedLocation" : "CenterTorso",
-            "ComponentDefID" : "emod_structureslots_standard",
-            "ComponentDefType" : "Upgrade",
-            "HardpointSlot" : -1,
-            "DamageLevel" : "Functional",
-            "prefabName" : "",
-            "hasPrefabName" : true
-        }
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "emod_structureslots_standard",
+			"SimGameUID": "",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"IsFixed": true,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": "",
+			"hasPrefabName": false
+		}
 	]
 }
