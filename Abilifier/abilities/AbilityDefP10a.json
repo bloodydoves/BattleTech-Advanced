@@ -26,7 +26,7 @@
 				"effectTriggerType": "OnActivation",
 				"effectTargetType": "Creator",
 				"showInStatusPanel": true,
-				"forcePathRebuild":true
+				"forcePathRebuild": true
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
@@ -42,8 +42,70 @@
 				"modType": "System.Single"
 			},
 			"nature": "Buff"
-		}	
+		},
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false,
+				"forcePathRebuild": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-SprinterWalkSpeed",
+				"Name": "Boosted Speed",
+				"Details": "This unit moves an extra 60 meters this turn.",
+				"Icon": "sprinter"
+			},
+			"statisticData": {
+				"statName": "CruiseSpeed",
+				"operation": "Float_Add",
+				"modValue": "60",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false,
+				"forcePathRebuild": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-SprinterWalkSpeed",
+				"Name": "Boosted Speed",
+				"Details": "This unit moves an extra 60 meters this turn.",
+				"Icon": "sprinter"
+			},
+			"statisticData": {
+				"statName": "FlankSpeed",
+				"operation": "Float_Add",
+				"modValue": "100",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
 	],
 	"IsPrimaryAbility": true,
-    "Priority": 2
+	"Priority": 2
 }
