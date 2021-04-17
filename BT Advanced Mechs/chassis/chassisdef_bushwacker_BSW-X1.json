@@ -6,18 +6,18 @@
 		}
 	},
 	"Description": {
-		"Cost": 5200000,
-		"Rarity": 5,
+		"Cost": 7155170,
+		"Rarity": 2,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
 		"UIName": "Bushwacker",
-		"Id": "chassisdef_bushwacker_BWS-X0",
+		"Id": "chassisdef_bushwacker_BSW-X1",
 		"Name": "Bushwacker",
-		"Details": "Designed first and foremost to be as difficult a target as possible, the Bushwacker prototype, sometimes called a Jawhawker for unclear reasons, features an unusually low profile and exceptionally small silhouette for a 55-ton war machine. Carrying one LRM-5 high on its left torso and another in its left arm, the BWS-X0 can provide indirect support while the Autocannon/10 and Large Laser provide respectable suppressive fire. A pair of Machine Guns also give the Bushwacker excellent anti-infantry capabilities.",
+		"Details": "The Bushwacker was originally a failed BattleMech designed to have a smaller forward profile to make the 'Mech a harder target to hit. The Bushwacker's unique design caused problems with the engine shielding, the side-effects of which manifested themselves as various gremlins in the 'Mech's on board electronics on the prototypes fielded.",
 		"Icon": "bushwacker"
 	},
-	"MovementCapDefID": "movedef_jayhawker",
+	"MovementCapDefID": "movedef_bushwacker",
 	"PathingCapDefID": "pathingdef_medium",
 	"HardpointDataDefID": "hardpointdatadef_bushwacker",
 	"PrefabIdentifier": "chrprfmech_bushwackerbase-001",
@@ -66,7 +66,7 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
 					"Omni": false
 				},
 				{
@@ -76,7 +76,7 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 90,
+			"MaxArmor": 100,
 			"MaxRearArmor": -1,
 			"InternalStructure": 45
 		},
@@ -90,15 +90,11 @@
 				{
 					"WeaponMount": "AntiPersonnel",
 					"Omni": false
-				},
-				{
-					"WeaponMount": "AntiPersonnel",
-					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 130,
+			"MaxArmor": 140,
 			"MaxRearArmor": 65,
 			"InternalStructure": 65
 		},
@@ -108,11 +104,15 @@
 				{
 					"WeaponMount": "Energy",
 					"Omni": false
+				},
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
 				}
 			],
 			"Tonnage": 0,
-			"InventorySlots": 16,
-			"MaxArmor": 180,
+			"InventorySlots": 15,
+			"MaxArmor": 190,
 			"MaxRearArmor": 90,
 			"InternalStructure": 90
 		},
@@ -120,7 +120,15 @@
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMount": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Energy",
 					"Omni": false
 				},
 				{
@@ -130,7 +138,7 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 130,
+			"MaxArmor": 140,
 			"MaxRearArmor": 65,
 			"InternalStructure": 65
 		},
@@ -142,13 +150,17 @@
 					"Omni": false
 				},
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Energy",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 90,
+			"MaxArmor": 100,
 			"MaxRearArmor": -1,
 			"InternalStructure": 45
 		},
@@ -157,7 +169,7 @@
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 130,
+			"MaxArmor": 140,
 			"MaxRearArmor": -1,
 			"InternalStructure": 65
 		},
@@ -166,7 +178,7 @@
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 130,
+			"MaxArmor": 140,
 			"MaxRearArmor": -1,
 			"InternalStructure": 65
 		}
@@ -215,13 +227,13 @@
 			"z": 2.5
 		}
 	],
-	"VariantName": "BSW-X0",
+	"VariantName": "BSW-X1",
 	"ChassisTags": {
 		"items": [],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "Skirmisher & Cavalry",
-	"YangsThoughts": "I heard about this, some sort of Lyran backed experiment from TharHes-based on a Griffin chassis. Can't say it looks comfortable to ride in, and I expect the heat to be a major issue for most pilots.  Great idea, but it may have done better back in the SLDF days with an XL engine.",
+	"StockRole": "Guerrilla Prototype",
+	"YangsThoughts": "The Bushwacker was originally a failed BattleMech designed to have a smaller forward profile to make the 'Mech a harder target to hit. The Bushwacker's unique design caused problems with the engine shielding, the side-effects of which manifested themselves as various gremlins in the 'Mech's on board electronics on the prototypes fielded.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",
@@ -236,13 +248,16 @@
 			"hasPrefabName": false
 		},
 		{
-            "MountedLocation" : "CenterTorso",
-            "ComponentDefID" : "emod_structureslots_standard",
-            "ComponentDefType" : "Upgrade",
-            "HardpointSlot" : -1,
-            "DamageLevel" : "Functional",
-            "prefabName" : "",
-            "hasPrefabName" : true
-        }
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "emod_structureslots_standard",
+			"SimGameUID": "",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"IsFixed": true,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": "",
+			"hasPrefabName": false
+		}
 	]
 }
