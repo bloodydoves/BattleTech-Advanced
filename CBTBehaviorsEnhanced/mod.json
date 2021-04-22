@@ -2,14 +2,14 @@
     "Name": "CBTBehaviorsEnhanced",
     "Enabled": true,
 	"Hidden": true,
-    "Version": "0.6.2",
+    "Version": "0.8",
     "Description": "Provides TableTop like behaviors for heat, movement, and more",
     "Author": "FrostRaptor",
     "Website": "https://github.com/IceRaptor/CBTBehaviorsEnhanced/",
     "Contact": "",
     "DLL": "CBTBehaviorsEnhanced.dll",
-    "DependsOn" : [ "IRBTModUtils", "MechEngineer", "CustomComponents", "Custom Ammo Categories" ],
-   	"OptionallyDependsOn": [ "BetterAI" ],
+    "DependsOn" : [ "IRBTModUtils", "MechEngineer", "CustomComponents", "Custom Ammo Categories", "CustomUnits" ],
+   	"OptionallyDependsOn": [ "Better AI" ],
 	"ConflictsWith" : [ "CharlesB" ],
     "Settings": {
         "Debug" : false,
@@ -71,7 +71,8 @@
                 "UnsteadyAttackerOnHit" : false,
                 "UnsteadyAttackerOnMiss" : true,
                 "UnsteadyTargetOnHit" : false,
-				"UsePilotingDelta" : false
+				"UsePilotingDelta" : false,
+				"TargetVehicleEvasionPipsRemoved" : 3
             },
 
             "DFA" : {
@@ -83,7 +84,8 @@
                 "UnsteadyAttackerOnHit" : true,
                 "UnsteadyAttackerOnMiss" : false,
                 "UnsteadyTargetOnHit" : true,
-				"UsePilotingDelta" : false
+				"UsePilotingDelta" : false,
+				"TargetVehicleEvasionPipsRemoved" : 3
             },
 
             "Kick" : {
@@ -95,7 +97,8 @@
                 "LegActuatorDamageReduction" : 0.5,
                 "UnsteadyAttackerOnHit" : false,
                 "UnsteadyAttackerOnMiss" : true,
-                "UnsteadyTargetOnHit" : true
+                "UnsteadyTargetOnHit" : true,
+				"TargetVehicleEvasionPipsRemoved" : 2
             },
 
             "PhysicalWeapon" : {
@@ -104,7 +107,8 @@
                 "DefaultInstabilityPerAttackerTon" : 1,
                 "DefaultUnsteadyAttackerOnHit" : false,
                 "DefaultUnsteadyAttackerOnMiss" : false,
-                "DefaultUnsteadyTargetOnHit" : false
+                "DefaultUnsteadyTargetOnHit" : false,
+				"TargetVehicleEvasionPipsRemoved" : 2
             },
 
             "Punch" : {
@@ -115,7 +119,8 @@
                 "ArmActuatorDamageReduction" : 0.5,
                 "UnsteadyAttackerOnHit" : false,
                 "UnsteadyAttackerOnMiss" : false,
-                "UnsteadyTargetOnHit" : false
+                "UnsteadyTargetOnHit" : false,
+				"TargetVehicleEvasionPipsRemoved" : 1
             },
 			
 			"Turrets" : {
@@ -124,11 +129,28 @@
                 "MediumTonnage" : 50.0,
                 "HeavyTonnage" : 75.0
             },
+			
+			"Swarm" : {
+				"MechWeights" : {
+					"Head" : 8,
+					"CenterTorso" : 16,
+					"CenterTorsoRear" : 16,
+					"LeftTorso" : 16,
+					"LeftTorsoRear" : 16,
+					"RightTorso" : 16,
+					"RightTorsoRear" : 16
+				},
+				"VehicleWeights" : {
+					"Turret" : 40,
+					"Left" : 16,
+					"Right" : 16,
+					"Rear" : 40
+				}
+			},
 
             "AllowMeleeFromSprint" : true,
             "ProneTargetAttackModifier" : -2,
-            "FilterCanUseInMeleeWeaponsByAttack" : true,
-            "WalkAttackAdditionalRange" : 24.0
+            "FilterCanUseInMeleeWeaponsByAttack" : true
         },
         
         "Move" : {
@@ -136,7 +158,7 @@
             "RunMulti" : 1.5,
             "FallAfterRunChance" : 0.30,
             "FallAfterJumpChance" : 0.30,
-            "MPMetersPerHex": 28.0
+			"MPMetersPerHex": 28.0
         },
         
         "Piloting" : {

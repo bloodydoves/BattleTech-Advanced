@@ -1,0 +1,29 @@
+{
+    "TargetID": "CareerDifficultySettings",
+    "Instructions": [
+        {
+			"JSONPath": "$.difficultyList[?(@.ID== 'diff_startingplanet')].Options",
+            "Action": "ArrayAdd",
+            "Value":
+				{
+					"ID": "diff_Tanks",
+					"Name": "Tanks (Hard)",
+					"TelemetryEventDesc": "",
+					"DifficultyValue": 0,
+					"CareerScoreModifier": 0.4,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "CareerMode",
+							"ConstantName": "StartingSystems",
+							"ConstantValue": "Arn"
+						},
+						{
+							"ConstantType": "CareerMode",
+							"ConstantName": "StartingRandomMechLists",
+							"ConstantValue": "itemCollection_Mechs_Generic_Bug,itemCollection_Mechs_Generic_Bug,itemCollection_Mechs_Starting_Tank_Light,itemCollection_Mechs_Starting_Tank_Light,itemCollection_Mechs_Starting_Tank_Medium,itemCollection_Mechs_Starting_Tank_Medium"
+						}
+					]
+				}
+         }
+    ]
+}
