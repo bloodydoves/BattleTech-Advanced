@@ -1,0 +1,72 @@
+{
+	"Description": {
+		"Id": "AbilityDefRevostaeMissile",
+		"Name": "HOLD LOCKS PLEASE",
+		"Details": "PASSIVE: Revostae's indirect accuracy with missile weapons is increased by 4 but his direct accuracy with missile weapons is decreased by 2.",
+		"Icon": "on-target"
+	},
+	"DisplayParams": "ShowInMWTRay",
+	"ActivationTime": "Passive",
+	"EffectData": [
+		{
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "effectTargetType" : "Creator",
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "AbilityDefRevostaeMissile_DirectAccuracy",
+                "Name" : "Direct Missile Accuracy Decreased",
+                "Details" : "Direct fire missile attacks gain -2 accuracy.",
+                "Icon" : "on-target"
+            },
+            "nature" : "Buff",
+            "statisticData": {
+				"modType": "System.Single",
+				"modValue": "2.0",
+				"operation": "Float_Add",
+				"statName": "AccuracyModifier",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "Missile",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "NotSet"
+			}
+        }
+		{
+            "durationData": {
+                "duration": -1,
+                "stackLimit": -1
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "effectTargetType": "Creator",
+                "showInStatusPanel": true
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "AbilityDefRevostaeMissile_IndirectAccuracy",
+                "Name": "Indirect Missile Accuracy Increased",
+                "Details": "Indirect missile accuracy gains a +4 bonus.",
+                "Icon": "on-target"
+            },
+            "nature": "Buff",
+            "statisticData": {
+                "statName": "ToHitIndirectModifier",
+                "operation": "Float_Add",
+                "modValue": "-6.0",
+                "modType": "System.Single",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "Missile",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "NotSet"
+            }
+        }
+	]
+}
