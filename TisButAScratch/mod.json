@@ -1,17 +1,27 @@
 {
-    "Name": "TisButAScratch",
-    "DLL": "TisButAScratch.dll",
-
+	"Name": "TisButAScratch",
+	"DLL": "TisButAScratch.dll",
 	"Hidden": true,
-    "Version": "1.0.1.3",
-    "Description": "More interesting pilot injuries.",
-    "Author": "T-Bone, special thanks to Jamie Wolf for inspiration and assistance",
-    "Website": "https://github.com/ajkroeg/TisButAScratch",
-	"DependsOn" :  [ ] ,
-    "ConflictsWith": [],
-    "CustomResourceTypes": [],
-    "Manifest": [
-		{ "Type": "SVGAsset", "Path": "icons", "ShouldMergeJSON" : false },
-		{ "Type": "SimGameEventDef",	"Path": "events",		"AddToDB": true }
+	"Version": "1.0.1.3",
+	"Description": "More interesting pilot injuries.",
+	"Author": "T-Bone, special thanks to Jamie Wolf for inspiration and assistance",
+	"Website": "https://github.com/ajkroeg/TisButAScratch",
+	"DependsOn": [],
+	"OptionallyDependsOn": [
+		"TrainingMissions"
+	],
+	"ConflictsWith": [],
+	"CustomResourceTypes": [],
+	"Manifest": [
+		{
+			"Type": "SVGAsset",
+			"Path": "icons",
+			"ShouldMergeJSON": false
+		},
+		{
+			"Type": "SimGameEventDef",
+			"Path": "events",
+			"AddToDB": true
+		}
 	]
 }
