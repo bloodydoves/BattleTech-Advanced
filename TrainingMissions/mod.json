@@ -1,22 +1,25 @@
 {
-    "Name": "TrainingMissions",
-    "DLL": "TrainingMissions.dll",
-
+	"Name": "TrainingMissions",
+	"DLL": "TrainingMissions.dll",
 	"Hidden": true,
-    "Version": "1.0.0.0",
-    "Description": "",
-    "Author": "T-Bone",
-    "Website": "https://github.com/ajkroeg/TrainingMissions",
-    "ConflictsWith": [],
-    "CustomResourceTypes": [],
-
+	"Version": "1.0.0.1",
+	"Description": "",
+	"Author": "T-Bone",
+	"Website": "https://github.com/ajkroeg/TrainingMissions",
+	"ConflictsWith": [],
+	"CustomResourceTypes": [],
 	"Settings": {
-			"enableLogging": true,
-			"showRestoreNotification": true,
-			"TrainingContractIDs":
-			{
-				"CaptureEscort_BTA_Training": 0
-			}
+		"enableLogging": true,
+		"showRestoreNotification": true,
+		"enableSimulationHotKey": true,
+		"TrainingContractIDs": {
+			"CaptureEscort_BTA_Training": "ALWAYS"
 		},
-    "Manifest": []
+		"SwapUnitsWithAIContractIDs": {},
+		"DoppelgangerContractIDs": {},
+		"DisallowedRecoveryTags": [
+			"unit_noncontrollableTank"
+		]
+	},
+	"Manifest": []
 }
