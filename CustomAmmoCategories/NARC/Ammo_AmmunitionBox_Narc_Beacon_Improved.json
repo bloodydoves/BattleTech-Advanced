@@ -16,15 +16,16 @@
 		},
 		"BonusDescriptions": {
 			"Bonuses": [
-				"Painter: +1",
+				"Painter: +2",
 				"PainterSensors: 35%",
 				"PainterVisibility: 35%",
+				"BoostedMissileDamage: 20%",
 				"CostPerShot: 750",
 				"NARCAmmo: 5"
 			]
 		},
 		"AmmoCost" : {
-		  "PerUnitCost" : 750
+		  "PerUnitCost" : 1000
 		}
 	},
 	"AmmoID": "Ammunition_Narc_Beacon_Improved",
@@ -34,10 +35,10 @@
 		"Rarity": 1,
 		"Purchasable": true,
 		"Manufacturer": "Doering",
-		"Model": "Narc iBeacon",
-		"UIName": "Ammo Narc iBeacon",
+		"Model": "Narc Improved Beacon",
+		"UIName": "Ammo Narc Improved Beacon",
 		"Id": "Ammo_AmmunitionBox_Narc_Beacon_Improved",
-		"Name": "Narc iBeacon Ammo",
+		"Name": "Narc Improved Beacon Ammo",
 		"Details": "Ammo Bins contain the rounds needed for projectile-based weaponry, with at least one bin required per weapon type.Upon receiving a Critical Hit, any remaining ammunition stored inside an Ammo Bin will explode dealing damage to the install location. Risk can be mitigated with the use of C.A.S.E. Has 5 shots.",
 		"Icon": "uixSvgIcon_ammoBox_Missile"
 	},
@@ -53,50 +54,6 @@
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
 	"statusEffects": [
-		{
-			"durationData": {
-				"duration": 2,
-				"ticksOnActivations": true,
-				"useActivationsOfTarget": false,
-				"ticksOnEndOfRound": false,
-				"ticksOnMovements": false,
-				"stackLimit": 0,
-				"clearedWhenAttacked": false
-			},
-			"targetingData": {
-				"effectTriggerType": "OnHit",
-				"triggerLimit": 0,
-				"extendDurationOnTrigger": 0,
-				"specialRules": "NotSet",
-				"effectTargetType": "NotSet",
-				"range": 0,
-				"forcePathRebuild": false,
-				"forceVisRebuild": false,
-				"showInTargetPreview": true,
-				"showInStatusPanel": true
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "StatusEffect-NARC-MissileDmgBonus25",
-				"Name": "NARC ATTACHED",
-				"Details": "This unit will take [AMT] more damage from Missile attacks.",
-				"Icon": "uixSvgIcon_statusMarked"
-			},
-			"nature": "Debuff",
-			"statisticData": {
-				"appliesEachTick": false,
-				"statName": "DamageReductionMultiplierMissile",
-				"operation": "Float_Multiply",
-				"modValue": "1.25",
-				"modType": "System.Single"
-			},
-			"tagData": null,
-			"floatieData": null,
-			"actorBurningData": null,
-			"vfxData": null,
-			"instantModData": null,
-			"poorlyMaintainedEffectData": null
-		},
 		{
 			"durationData": {
 				"duration": 3,
