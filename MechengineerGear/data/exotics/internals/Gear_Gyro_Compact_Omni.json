@@ -1,0 +1,88 @@
+{
+	"Custom": {
+		"ComponentExplosion": {
+			"StabilityDamage": 100
+		},
+		"Category": [{
+			"CategoryID": "Gyro"
+		}],
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "[[Chassis.Tonnage]] / 10",
+				"CBillCost": "[[Chassis.Tonnage]] * 1.05"
+			}
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"Omni",
+                "StructureTPCost: -50%",
+                "StructureCBCost: +25%",
+				"GyroStab: 50",
+				"GyroWeight: +40%"
+			]
+		},
+		"Weights": {
+			"StructureFactor": 1.4
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 900000,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "Gabriel",
+		"Model": "Lucifer",
+		"UIName": "Gyro Compact Omni",
+		"Id": "Gear_Gyro_Compact_Omni",
+		"Name": "Compact Omni Gyro",
+		"Details": "This is a combination Compact and Omnimech gyro, intended for use by specific, rare, omnimech designs. It combines the denseness and durability of the Compact Gyro with the various benefits of the Omnimech Gyro.",
+		"Icon": "uixSvgIcon_equipment_Gyro"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 500,
+	"InventorySize": 2,
+	"Tonnage": 0,
+	"AllowedLocations": "CenterTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "CompactGyro",
+				"Name": "Steadier 'Mech",
+				"Details": "UNSTEADY threshold increased to 60",
+				"Icon": "uixSvgIcon_action_evasivemove"
+			},
+			"statisticData": {
+				"statName": "UnsteadyThreshold",
+				"operation": "Float_Add",
+				"modValue": "50.0",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}
