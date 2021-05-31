@@ -9,36 +9,36 @@
     "Contact": "",
     "DLL": "CBTBehaviorsEnhanced.dll",
     "DependsOn" : [ "IRBTModUtils", "MechEngineer", "CustomComponents", "Custom Ammo Categories", "CustomUnits" ],
-   	"OptionallyDependsOn": [ "Better AI" ],
-	"ConflictsWith" : [ "CharlesB" ],
+	"OptionallyDependsOn": [ "Better AI" ],
+    "ConflictsWith" : [ "CharlesB" ],
     "Settings": {
         "Debug" : false,
         "Trace" : false,
 
-		"Developer": {
+        "Developer" : {
             "ForceFallAfterJump" : false,
             "ForceInvalidateAllMeleeAttacks" : false,
             "DebugHeatToAdd" : 150
         },
-		
+
         "Features" : {
             "BiomeBreaches" : false,
-			"PermanentEvasion" : true,
+            "PermanentEvasion" : true,
             "StartupChecks" : false
         },
 
         "ToHitSelfJumped": 2,
 
-		"CustomCategories" : {
-           "HipActuatorCategoryId" :  [ "LegHip" ],
-           "UpperLegActuatorCategoryId" :  [ "LegUpperActuator" ],
-           "LowerLegActuatorCategoryId" :  [ "LegLowerActuator" ],
-           "FootActuatorCategoryId" :  [ "LegFootActuator" ],
+        "CustomCategories" : {
+           "HipActuatorCategoryId" : [ "LegHip" ],
+           "UpperLegActuatorCategoryId" : [ "LegUpperActuator" ],
+           "LowerLegActuatorCategoryId" : [ "LegLowerActuator" ],
+           "FootActuatorCategoryId" : [ "LegFootActuator" ],
 
            "ShoulderActuatorCategoryId" : [ "ArmShoulder" ],
-           "UpperArmActuatorCategoryId" :  [ "ArmUpperActuator" ],
-           "LowerArmActuatorCategoryId" :  [ "ArmLowerActuator", "OmniLowerActuator"],
-           "HandActuatorCategoryId" :  [ "ArmHandActuator", "OmniHandActuator" ]
+           "UpperArmActuatorCategoryId" : [ "ArmUpperActuator" ],
+           "LowerArmActuatorCategoryId" : [ "ArmLowerActuator", "OmniLowerActuator" ],
+           "HandActuatorCategoryId" : [ "ArmHandActuator", "OmniHandActuator" ]
         },
 
         "Heat" : {
@@ -56,12 +56,12 @@
         },
 
         "Melee" : {
-			"AI" : {
+            "AI" : {
                 "EvasionPipRemovedUtility" : 10.0,
                 "EvasionPipLostUtility" : 40.0,
                 "PilotInjuryMultiUtility" : 2.0
             },
-		
+
             "Charge" : {
                 "AttackerDamagePerTargetTon" : 2,
                 "TargetDamagePerAttackerTon" : 0.5,
@@ -71,7 +71,7 @@
                 "UnsteadyAttackerOnHit" : false,
                 "UnsteadyAttackerOnMiss" : true,
                 "UnsteadyTargetOnHit" : false,
-				"UsePilotingDelta" : false,
+                "UsePilotingDelta" : false,
 				"TargetVehicleEvasionPipsRemoved" : 3
             },
 
@@ -84,7 +84,7 @@
                 "UnsteadyAttackerOnHit" : true,
                 "UnsteadyAttackerOnMiss" : false,
                 "UnsteadyTargetOnHit" : true,
-				"UsePilotingDelta" : false,
+                "UsePilotingDelta" : false,
 				"TargetVehicleEvasionPipsRemoved" : 3
             },
 
@@ -122,14 +122,14 @@
                 "UnsteadyTargetOnHit" : false,
 				"TargetVehicleEvasionPipsRemoved" : 1
             },
-			
-			"Turrets" : {
+
+            "Turrets" : {
                 "DefaultTonnage" : 100.0,
                 "LightTonnage" : 25.0,
                 "MediumTonnage" : 50.0,
                 "HeavyTonnage" : 75.0
             },
-			
+
 			"Swarm" : {
 				"MechWeights" : {
 					"Head" : 8,
@@ -177,7 +177,7 @@
 		"SkillChecks" : {
 			"ModPerPointOfPiloting" : 0.05,
 			"ModPerPointOfGuts" : 0.05
-		}
+        }
 
     }
 }
