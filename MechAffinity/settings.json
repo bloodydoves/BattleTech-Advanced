@@ -1619,6 +1619,45 @@
                     ]
                 }
 			]
+		},
+		{
+			"tag" : "Affinity_FR_Cataphract",
+			"chassisNames" : ["chrPrfMech_cataphractBase-001_70"],
+			"affinityLevels" : [
+				 {
+                    "missionsRequired" : 10,
+                    "levelName" : "Can't Break Me",
+                    "decription" : "Scorch's skill with his Cataphract grants him increased critical damage resistance, making crits 35% less likely against him.",
+                    "effectData" : 
+                    [
+                        {
+                            "Description": {
+                                "Details": "Scorch takes 35% less crits against him when he's in his Cataphract.",
+                                "Icon": "dragon-shield",
+                                "Id": "StatusEffect-Affinity-ScorchCataphract",
+                                "Name": "Scorch Affinity Cataphract Crit Resist"
+                            },
+                            "durationData": {
+                                "duration": -1,
+                                "stackLimit": -1
+                            },
+                            "effectType": "StatisticEffect",
+                            "nature": "Buff",
+                            "statisticData": {
+                                "modType": "System.Single",
+                                "modValue": "0.65",
+                                "operation": "Float_Multiply",
+                                "statName": "CriticalHitChanceReceivedMultiplier",
+                            },
+                            "targetingData": {
+                                "effectTargetType": "Creator",
+                                "effectTriggerType": "Passive",
+                                "showInStatusPanel": true
+                            }
+                        }
+                    ]
+                }
+			]
 		}
 	]
 }
