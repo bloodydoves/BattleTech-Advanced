@@ -1,0 +1,37 @@
+{
+	"Description": {
+		"Id": "AbilityDefFrostDR",
+		"Name": "INDESTRUCTIBLE",
+		"Details": "PASSIVE: Scorch takes 10% less damage from all sources at all times.",
+		"Icon": "chest-armor"
+	},
+	"DisplayParams": "ShowInMWTRay",
+	"ActivationTime": "Passive",
+	"EffectData": [
+		{
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "effectTargetType" : "Creator",
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "AbilityDefFrostDR_DamageReduction",
+                "Name" : "Damage Reduction Increased",
+                "Details" : "Incoming attacks deal 10% less damage to Scorch.",
+                "Icon" : "chest-armor"
+            },
+            "nature" : "Buff",
+            "statisticData": {
+				"statName": "DamageReductionMultiplierAll",
+				"operation": "Float_Multiply",
+				"modValue": "0.9",
+				"modType": "System.Single"
+			}
+        }
+	]
+}
