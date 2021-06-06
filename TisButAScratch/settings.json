@@ -13,7 +13,6 @@
 	"missionKillSeverityThreshold": 6,
 	"reInjureWeightAppliesCurrentContract": false,
 	"reInjureLocWeight": 11,
-	"additiveBleedingFactor": 0.75,
 	"debilSeverityThreshold": 4,
 	"severityCost": 50,
 	"debilitatedCost": 2000,
@@ -321,12 +320,7 @@
 			"description": "This pilot has a compound fracture in their arm, and is suffering an accuracy penalty.",
 			"effectDataJO": [
 				{
-					"durationData": {
-						"duration": 8,
-						"ticksOnActivations": true,
-						"useActivationsOfTarget": true,
-						"stackLimit": 1
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -364,12 +358,7 @@
 			"description": "This pilot has a compound fracture in their arm, and is suffering an accuracy penalty.",
 			"effectDataJO": [
 				{
-					"durationData": {
-						"duration": 8,
-						"ticksOnActivations": true,
-						"useActivationsOfTarget": true,
-						"stackLimit": 1
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -569,12 +558,7 @@
 			"description": "This pilot has a compound fracture to their leg and is suffering a severe movement penalty.",
 			"effectDataJO": [
 				{
-					"durationData": {
-						"duration": 8,
-						"ticksOnActivations": true,
-						"useActivationsOfTarget": true,
-						"stackLimit": 1
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -596,12 +580,7 @@
 					}
 				},
 				{
-					"durationData": {
-						"duration": 12,
-						"ticksOnActivations": true,
-						"useActivationsOfTarget": true,
-						"stackLimit": 1
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -688,12 +667,7 @@
 			"description": "This pilot has a compound fracture to their leg and is suffering a severe movement penalty.",
 			"effectDataJO": [
 				{
-					"durationData": {
-						"duration": 8,
-						"ticksOnActivations": true,
-						"useActivationsOfTarget": true,
-						"stackLimit": 1
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -715,12 +689,7 @@
 					}
 				},
 				{
-					"durationData": {
-						"duration": 12,
-						"ticksOnActivations": true,
-						"useActivationsOfTarget": true,
-						"stackLimit": 1
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -753,12 +722,7 @@
 			"description": "This pilot is suffering from internal bleeding and receives a debuff to Evasion.",
 			"effectDataJO": [
 				{
-					"durationData": {
-						"duration": 8,
-						"ticksOnActivations": true,
-						"useActivationsOfTarget": true,
-						"stackLimit": 1
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -856,12 +820,7 @@
 			"description": "This pilot has a collapsed lung and has a penalty to Guts.",
 			"effectDataJO": [
 				{
-					"durationData": {
-						"duration": 8,
-						"ticksOnActivations": true,
-						"useActivationsOfTarget": true,
-						"stackLimit": 1
-					},
+					"durationData": {},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
@@ -953,6 +912,209 @@
 						"targetWeaponSubType": "NotSet",
 						"targetWeaponType": "NotSet"
 					}
+				}
+			]
+		}
+	],
+	"additiveBleedingFactor": 0.75,
+	"minBloodBank": 2,
+	"baseBloodBankAdd": 0,
+	"UseGutsForBloodBank": true,
+	"factorBloodBankMult": 1,
+	"UseBleedingEffects": true,
+	"BleedingEffects": [
+		{
+			"bleedingEffectID": "BleedingShock",
+			"bleedingName": "Shock",
+			"bleedingEffectLvl": 1,
+			"description": "This pilot has suffered minor blood loss and has reduced accuracy.",
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "BleedShock",
+						"Name": "Blood Loss: Shock",
+						"Details": "This pilot has suffered minor blood loss and has gone into minor shock, reducing accuracy.",
+						"Icon": "crackedskull"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"modType": "System.Single",
+						"modValue": "5.0",
+						"operation": "Float_Add",
+						"statName": "AccuracyModifier",
+						"targetAmmoCategory": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponSubType": "NotSet",
+						"targetWeaponType": "NotSet"
+					}
+				}
+			]
+		},
+		{
+			"bleedingEffectID": "BleedingDizzy",
+			"bleedingName": "Dizzy",
+			"bleedingEffectLvl": 2,
+			"description": "This pilot has suffered significant blood loss and has reduced stability.",
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "BleedDizzy",
+						"Name": "Blood Loss: Dizzy",
+						"Details": "This pilot has lost a lot of blood. Things are spinny.",
+						"Icon": "seeingstars"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "UnsteadyThreshold",
+						"operation": "Float_Multiply",
+						"modValue": "0.75",
+						"modType": "System.Single"
+					}
+				}
+			]
+		},
+		{
+			"bleedingEffectID": "BleedingRun",
+			"bleedingName": "Groggy",
+			"bleedingEffectLvl": 3,
+			"description": "This pilot has suffered major blood loss and has a movement penalty.",
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "BleedingRun_Walk",
+						"Name": "Blood Loss: Movement Penalty",
+						"Details": "This pilot has a broken leg and is suffering a movement penalty.",
+						"Icon": "footcast"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "WalkSpeed",
+						"operation": "Float_Multiply",
+						"modValue": "0.5",
+						"modType": "System.Single"
+					}
+				},
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "BleedingRun_Run",
+						"Name": "Blood Loss: Jump Distance Penalty",
+						"Details": "This pilot has a broken leg and is suffering a jump distance penalty.",
+						"Icon": "footcast"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "JumpDistance",
+						"operation": "Float_Multiply",
+						"modValue": "0.5",
+						"modType": "System.Single"
+					}
+				}
+			]
+		}
+	],
+	"UseSimBleedingEffects": true,
+	"SimBleedingEffects": [
+		{
+			"simBleedingEffectID": "BleedGutsLvl1",
+			"bleedingEffectLvl": 1,
+			"simResultJO": [
+				{
+					"Scope": "MechWarrior",
+					"Requirements": null,
+					"AddedTags": {
+						"tagSetSourceFile": "",
+						"items": [
+							"TBAS_SimBleed__Guts__-1"
+						]
+					},
+					"RemovedTags": {
+						"tagSetSourceFile": "",
+						"items": []
+					},
+					"Stats": [],
+					"Actions": [],
+					"ForceEvents": null,
+					"TemporaryResult": true,
+					"ResultDuration": 10
+				}
+			]
+		},
+		{
+			"simBleedingEffectID": "BleedGutsLvl2",
+			"bleedingEffectLvl": 2,
+			"simResultJO": [
+				{
+					"Scope": "MechWarrior",
+					"Requirements": null,
+					"AddedTags": {
+						"tagSetSourceFile": "",
+						"items": [
+							"TBAS_SimBleed__Guts__-3"
+						]
+					},
+					"RemovedTags": {
+						"tagSetSourceFile": "",
+						"items": []
+					},
+					"Stats": [],
+					"Actions": [],
+					"ForceEvents": null,
+					"TemporaryResult": true,
+					"ResultDuration": 20
+				}
+			]
+		},
+		{
+			"simBleedingEffectID": "BleedGutsLvl3",
+			"bleedingEffectLvl": 3,
+			"simResultJO": [
+				{
+					"Scope": "MechWarrior",
+					"Requirements": null,
+					"AddedTags": {
+						"tagSetSourceFile": "",
+						"items": [
+							"TBAS_SimBleed__Guts__-5"
+						]
+					},
+					"RemovedTags": {
+						"tagSetSourceFile": "",
+						"items": []
+					},
+					"Stats": [],
+					"Actions": [],
+					"ForceEvents": null,
+					"TemporaryResult": true,
+					"ResultDuration": 30
 				}
 			]
 		}
