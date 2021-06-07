@@ -918,7 +918,7 @@
 	],
 	"additiveBleedingFactor": 0.75,
 	"minBloodBank": 2,
-	"baseBloodBankAdd": 0,
+	"baseBloodBankAdd": 1,
 	"UseGutsForBloodBank": true,
 	"factorBloodBankMult": 1,
 	"UseBleedingEffects": true,
@@ -941,12 +941,12 @@
 						"Id": "BleedShock",
 						"Name": "Blood Loss: Shock",
 						"Details": "This pilot has suffered minor blood loss and has gone into minor shock, reducing accuracy.",
-						"Icon": "crackedskull"
+						"Icon": "blood"
 					},
 					"nature": "Buff",
 					"statisticData": {
 						"modType": "System.Single",
-						"modValue": "5.0",
+						"modValue": "1.0",
 						"operation": "Float_Add",
 						"statName": "AccuracyModifier",
 						"targetAmmoCategory": "NotSet",
@@ -975,14 +975,14 @@
 					"Description": {
 						"Id": "BleedDizzy",
 						"Name": "Blood Loss: Dizzy",
-						"Details": "This pilot has lost a lot of blood. Things are spinny.",
+						"Details": "This pilot has lost a lot of blood. Things are spinny and unstable.",
 						"Icon": "seeingstars"
 					},
 					"nature": "Buff",
 					"statisticData": {
 						"statName": "UnsteadyThreshold",
 						"operation": "Float_Multiply",
-						"modValue": "0.75",
+						"modValue": "0.85",
 						"modType": "System.Single"
 					}
 				}
@@ -1005,14 +1005,14 @@
 					"Description": {
 						"Id": "BleedingRun_Walk",
 						"Name": "Blood Loss: Movement Penalty",
-						"Details": "This pilot has a broken leg and is suffering a movement penalty.",
+						"Details": "This pilot has a broken leg and is suffering a walking, running, and jumping penalty.",
 						"Icon": "footcast"
 					},
 					"nature": "Buff",
 					"statisticData": {
 						"statName": "WalkSpeed",
 						"operation": "Float_Multiply",
-						"modValue": "0.5",
+						"modValue": "0.75",
 						"modType": "System.Single"
 					}
 				},
@@ -1021,7 +1021,7 @@
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "Creator",
-						"showInStatusPanel": true
+						"showInStatusPanel": false
 					},
 					"effectType": "StatisticEffect",
 					"Description": {
@@ -1034,14 +1034,14 @@
 					"statisticData": {
 						"statName": "JumpDistance",
 						"operation": "Float_Multiply",
-						"modValue": "0.5",
+						"modValue": "0.75",
 						"modType": "System.Single"
 					}
 				}
 			]
 		}
 	],
-	"UseSimBleedingEffects": true,
+	"UseSimBleedingEffects": false,
 	"SimBleedingEffects": [
 		{
 			"simBleedingEffectID": "BleedGutsLvl1",
