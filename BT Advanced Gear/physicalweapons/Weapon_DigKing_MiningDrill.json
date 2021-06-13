@@ -1,0 +1,111 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/s/m/melee"
+			},
+			{
+				"CategoryID": "ArmHandActuator"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"PhysWeapDamageBonus: 15%"
+			]
+		},
+		"Flags": {
+			"flags": [
+				"not_broken",
+				"no_salvage",
+				"autorepair"
+			]
+		}
+	},
+	"Category": "AntiPersonnel",
+	"Type": "MachineGun",
+	"WeaponSubType": "MachineGun",
+	"MinRange": 0,
+	"MaxRange": 30,
+	"RangeSplit": [
+		30,
+		30,
+		30
+	],
+	"AmmoCategory": "NotSet",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 0,
+	"Damage": 0,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 4,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": 0,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 0,
+	"Instability": 0,
+	"NotUseInMelee": true,
+	"WeaponEffectID": "WeaponEffect-Weapon_MachineGun",
+	"Description": {
+		"Cost": 12000,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "Dig King",
+		"Model": "Mining Drill",
+		"UIName": "Mining Drill",
+		"Id": "Weapon_DigKing_MiningDrill",
+		"Name": "Mining Drill",
+		"Details": "This is a mining tool, a Mining Drill, designed for the Dig King MiningMech. Mining Drills are essentially Mech-scale drills, equipped with diamond-tipped drillbits for chewing through stone wth precision. It makes an unwieldy tool but helps support the more raw damage of the Rock Cutter on the Dig King. It cannot be removed or used elsewhere.",
+		"Icon": "uixSvgIcon_weapon_Support"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "grinder",
+	"BattleValue": 0,
+	"InventorySize": 4,
+	"Tonnage": 3,
+	"AllowedLocations": "LeftArm",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "effectTargetType" : "Creator",
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "StatusEffect-MiningDrillMelee",
+                "Name" : "Physical Weapon Damage Increased",
+                "Details" : "Mining Drills improve the performance of Rock Cutters and increase their melee damage by 15%.",
+                "Icon" : "uixSvgIcon_equipment_ActuatorArm"
+            },
+            "nature" : "Buff",
+            "statisticData" : {
+                "statName" : "CBTBE_Physical_Weapon_Target_Damage_Multi",
+                "operation" : "Float_Multiply",
+                "modValue" : "1.15",
+                "modType" : "System.Single"
+            }
+        }
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_close"
+		],
+		"tagSetSourceFile": ""
+	}
+}
