@@ -21,13 +21,13 @@
                 "vital",
 				"engine_part",
 				"no_salvage"
-
             ]
         },
         "BonusDescriptions": {
             "Bonuses": [
+				"FuelCellSHS",
                 "EngineWeight: X1.6",
-                "HeatGenerated: -20%"
+                "HeatGenerated: -30%"
 			]
         }
     },
@@ -40,10 +40,10 @@
         "UIName": "Engine Fuel Cell",
         "Id": "emod_engineslots_FuelCell",
         "Name": "Fuel Cell Engine",
-        "Details": "Fuel Cell engines are primarily used in civilian applications like rail systems, personal transport, and IndustrialMechs. Fuel Cell engines generate electrical power that is then used by the vehicle to operate its propulsion system. A Fuel Cell engine has several advantages over the typical Internal Combustion Engine. While they require an oxidizer to operate, they are readily able to accept a stored oxidizer along with their fuel, making it a good choice for submarines, satellites, and naval applications. As most fuel cells run on hydrogen and oxygen, they have no exhaust other than water vapor so Fuel Cells are also used as generators for buildings and other large structures. Cannot use Additional Cooling Kits, Exchanger or Banks.",
+        "Details": "Fuel Cell engines are primarily used in civilian applications like rail systems, personal transport, and IndustrialMechs. Fuel Cell engines generate electrical power that is then used by the vehicle to operate its propulsion system. A Fuel Cell engine has several advantages over the typical Internal Combustion Engine. While they require an oxidizer to operate, they are readily able to accept a stored oxidizer along with their fuel, making it a good choice for submarines, satellites, and naval applications. As most fuel cells run on hydrogen and oxygen, they have no exhaust other than water vapor so Fuel Cells are also used as generators for buildings and other large structures.",
         "Icon": "uixSvgIcon_equipment_Heatsink"
     },
-    "BonusValueA": "+60% Weight",
+    "BonusValueA": "",
     "BonusValueB": "",
     "ComponentType": "HeatSink",
     "ComponentSubType": "Heatsink",
@@ -79,9 +79,9 @@
             },
             "effectType": "StatisticEffect",
             "Description": {
-                "Id": "StatusEffect-Heat_ICE",
-                "Name": "Increased Heat",
-                "Details": "Heat generation decreased by 20%%.",
+                "Id": "StatusEffect-FuelCellHeatReduction",
+                "Name": "Reduced Heat",
+                "Details": "Heat generation decreased by 20%.",
                 "Icon": "uixSvgIcon_equipment_ThermalExchanger"
             },
             "nature": "Buff",
@@ -90,7 +90,7 @@
                 "effectsPersistAfterDestruction": false,
                 "statName": "HeatGenerated",
                 "operation": "Float_Multiply",
-                "modValue": "0.8",
+                "modValue": "0.7",
                 "modType": "System.Single",
                 "additionalRules": "NotSet",
                 "targetCollection": "Weapon",

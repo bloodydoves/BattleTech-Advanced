@@ -14,20 +14,13 @@
 			{"CategoryID": "EnginePart"}
 		],
 		"Flags" : { "flags" : [ "engine_part", "vital", "no_salvage" ] },
-		"ArmorRepair" : { "ArmorTPCost" : 0.8, "ArmorCBCost" : 0.7 },
         "BonusDescriptions": {
             "Bonuses": [
 				"EngineWeight: X2",
-                "WalkSpeed: -20%",				
-                "RunSpeed: -30%",
-                "HeatGenerated: -40%",				
-				"ArmorTPCost: -20%",
-				"ArmorCBCost: -30%"		
+                "ICESpeed: 20%",
+                "HeatGenerated: +15%"
             ]
-        },		
-            "InventorySorter" : {
-                "SortKey" : "00013"
-            }		
+        }	
 	},
     "Description" : {
         "Cost" : 250000,
@@ -41,7 +34,7 @@
         "Details" : "For all intents and purposes identical to a modern internal combustion engine, the I.C.E. in BattleTech is used mainly for conventional vehicles and IndustrialMechs. Its power output is less than a fusion engine of similar mass, meaning an I.C.E. needs to be heavier in order to have the same engine rating of a fusion engine.",
         "Icon" : "uixSvgIcon_equipment_Heatsink"
     },
-    "BonusValueA" : "X2 Weight",
+    "BonusValueA" : "",
     "BonusValueB" : "",
     "ComponentType" : "HeatSink",
     "ComponentSubType" : "Heatsink",
@@ -56,23 +49,12 @@
 	         {
             "durationData" : {
                 "duration" : -1,
-                "ticksOnActivations" : false,
-                "useActivationsOfTarget" : false,
-                "ticksOnEndOfRound" : false,
-                "ticksOnMovements" : false,
-                "stackLimit" : 1,
-                "clearedWhenAttacked" : false
+                "stackLimit" : 1
             },
             "targetingData" : {
                 "effectTriggerType" : "Passive",
-                "triggerLimit" : 0,
-                "extendDurationOnTrigger" : 0,
-                "specialRules" : "NotSet",
                 "effectTargetType" : "Creator",
-                "range" : 0,
-                "forcePathRebuild" : false,
-                "forceVisRebuild" : false,
-                "showInTargetPreview" : true,
+                "showInTargetPreview" : false,
                 "showInStatusPanel" : true
             },
 			"effectType" : "StatisticEffect",
@@ -80,7 +62,7 @@
 			{
 				"Id" : "ICE Walk",
 				"Name" : "Internal Combustion Engine",
-				"Details" : "ICE has reduced speed but grants reduced Heat Generated",
+				"Details" : "Internal combustion engines are both slow and hot, reducing the unit's movement speed and also generating extra heat.",
 				"Icon" : "uixSvgIcon_action_evasivemove"
 			},
 			"statisticData" : 
@@ -91,36 +73,7 @@
 				"modType" : "System.Single"
 			},
 			"nature" : "Buff"
-		},
-			{
-			"durationData" :
-			{
-				"duration" : -1,
-                "stackLimit" : 1				
-			},
-			"targetingData" : 
-			{
-				"effectTriggerType" : "Passive",
-				"effectTargetType" : "Creator",
-                "showInStatusPanel" : false				
-			},
-			"effectType" : "StatisticEffect",
-			"Description" :
-			{
-				"Id" : "ICERUN",
-				"Name" : "ChargerSprint",
-				"Details" : "MORE SPEED.",
-				"Icon" : "uixSvgIcon_run_n_gun"
-			},
-			"statisticData" : 
-			{
-				"statName" : "RunSpeed",
-				"operation" : "Float_Multiply",
-				"modValue" : "0.7",
-				"modType" : "System.Single"
-			},
-			"nature" : "Buff"
-		},			
+		},		
         {
             "durationData" : {
                 "duration" : -1,
@@ -156,7 +109,7 @@
                 "effectsPersistAfterDestruction" : false,
                 "statName" : "HeatGenerated",
                 "operation" : "Float_Multiply",
-                "modValue" : "0.8",
+                "modValue" : "1.15",
                 "modType" : "System.Single",
                 "additionalRules" : "NotSet",
                 "targetCollection" : "Weapon",

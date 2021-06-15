@@ -26,7 +26,6 @@
 		"BonusDescriptions": {
 			"Bonuses": [
 				"WalkSpeed: +20%",
-				"RunSpeed: +0.1",
 				"IsGyro"
 			]
 		}
@@ -47,7 +46,7 @@
 		"Icon": "uixSvgIcon_equipment_Cockpit"
 	},
 	"BonusValueA": "+20% Walk Speed",
-	"BonusValueB": "+0.1 Sprint Multiplier",
+	"BonusValueB": "",
 	"ComponentType": "Upgrade",
 	"ComponentSubType": "NotSet",
 	"PrefabIdentifier": "",
@@ -91,31 +90,6 @@
 				"statName": "WalkSpeed",
 				"operation": "Float_Multiply",
 				"modValue": "1.2",
-				"modType": "System.Single"
-			},
-			"nature": "Buff"
-		},
-		{
-			"durationData": {
-				"duration": -1,
-				"stackLimit": 1
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"effectTargetType": "Creator",
-				"showInStatusPanel": false
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "EtPSprint",
-				"Name": "ChargerSprint",
-				"Details": "Increased sprint speed.",
-				"Icon": "uixSvgIcon_run_n_gun"
-			},
-			"statisticData": {
-				"modValue": "0.1",
-                "operation": "Float_Add",
-                "statName": "CBTBE_RunMultiMod",
 				"modType": "System.Single"
 			},
 			"nature": "Buff"
