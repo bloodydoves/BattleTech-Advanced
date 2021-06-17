@@ -25,6 +25,7 @@
 		"BonusDescriptions": {
 			"Bonuses": [
 				"Health: +1",
+				"NoBleedout",
 				"IsLifeSupportA"
 			]
 		},
@@ -109,7 +110,32 @@
 			"vfxData": null,
 			"instantModData": null,
 			"poorlyMaintainedEffectData": null
-		}
+		},
+		{
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : 1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "effectTargetType" : "Creator",
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id": "ReinforcedLifeSupport-NoBleed",
+				"Name": "No Bleedout",
+				"Details": "This unit cannot bleed out from injuries.",
+				"Icon": "layeredarmor"
+            },
+            "nature" : "Buff",
+            "statisticData" : {
+                "statName": "DisablesBleeding",
+                "operation": "Set",
+                "modValue": "true",
+                "modType": "System.Boolean"
+            }
+        }
 	],
 	"ComponentTags": {
 		"items": [
