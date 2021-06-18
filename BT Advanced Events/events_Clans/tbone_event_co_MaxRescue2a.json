@@ -1,0 +1,127 @@
+{
+    "Description" : {
+        "Id" : "tbone_event_co_MaxRescue2a",
+        "Name" : "A Dish Served Cold - Rescue Failure",
+        "Details" : "As you return to your quarters one evening, [[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]] catches you in the hallway.\r\n\r\n\r\n\"Commander...has  [[DM.BaseDescriptionDefs[TooltipSimGameCharacterFARAH],Farah]] spoken to you already? Then...you should check your messages. She forwarded you some news about Max.\"",
+        "Icon" : "uixTxrSpot_ConferenceRoom.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 10000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : [
+                "max_rescue_cooldown"
+            ]
+        },
+        "RequirementComparisons" : [
+            {
+                "obj" : "max_rescue",
+                "op" : "Equal",
+                "val" : 1,
+                "valueConstant" : "1"
+            }
+        ]
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [
+        {
+            "Scope" : "SecondaryMechWarrior",
+            "Requirements" : {
+                "Scope" : "SecondaryMechWarrior",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Check your messages.",
+                "Details" : "Check your messages.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Check your messages.",
+                        "Details" : "You have a sinking feeling as you read the intercepted [[DM.Factions[faction_ClanWolf],Clan Wolf]] message:\r\n\r\nCommander, I'm 99% confident that the following message refers to Max. I'm sorry.\r\n \u2013 Farah\r\n\r\n<i><b>FROM: WOLF AGAX RASSEC 5BC INTWATCH (New Bergen)\r\n\r\nTO: WOLF AGAX GEN\r\n\r\nCLASSIFICATON: SENSITIVE\r\n\r\nWarriors of Clan Wolf Alpha Galaxy,\r\n\r\nBe advised, the execution of prisoner #4d415441554954415f434c4159544f4e proceeded as scheduled at 2200ZULU. Message ends.</i></b>",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Morale",
+                                    "value" : "-6",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : [
+                                {
+                                    "Type" : "MechWarrior_Kill",
+                                    "value" : "pilot_at_Max",
+                                    "valueConstant" : null,
+                                    "additionalValues" : [
+                                        "The price of vengeance."
+                                    ]
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}

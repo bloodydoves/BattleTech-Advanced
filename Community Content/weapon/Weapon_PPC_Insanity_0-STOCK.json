@@ -1,0 +1,134 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/e/p/hppc"
+			}
+		],
+		"ComponentExplosion": {
+			"ExplosionDamage": 150,
+			"StabilityDamage": 60
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"InsanityPPC",
+				"Streak",
+				"WeaponBoom: 150",
+				"InsanityDebuff: 3",
+				"AreaOfEffect: 30",
+				"AreaOfEffectDmg: 25",
+				"AreaOfEffectSTABDmg: 2",
+				"AreaOfEffectHeatDmg: 6",
+			]
+		},
+		"AmmoCost" : {
+		  "PerUnitCost" : 1000
+		}
+	},
+	"Category": "Energy",
+	"Type": "PPC",
+	"WeaponSubType": "PPC",
+	"MinRange": 0,
+	"MaxRange": 900,
+	"RangeSplit": [
+		210,
+		450,
+		660
+	],
+	"AmmoCategory": "Flamer",
+	"StartingAmmoCapacity": 6,
+	"HeatGenerated": 80,
+	"Damage": 50,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 0,
+	"DamageVariance": 0,
+	"HeatDamage": 20,
+	"AccuracyModifier": 0,
+	"CriticalChanceMultiplier": 1,
+	"IndirectFireCapable": false,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 3,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 1,
+	"Instability": 20,
+	"AOECapable": true,
+	"AOERange": 30,
+	"AOEDamage": 25,
+	"AOEHeatDamage": 6,
+	"AOEInstability": 2,
+	"Streak": true,
+	"HitGenerator": "Streak",
+	"ImprovedBallistic": true,
+	"FireDelayMultiplier": 0.12,
+	"WeaponEffectID": "WeaponEffect-Weapon_PPC",
+	"Description": {
+		"Cost": 2500000,
+		"Rarity": 0,
+		"Purchasable": true,
+		"Manufacturer": "Bolt of Madness Industries",
+		"Model": "cCiHBERHvM-B-PST-S-E-M-PELROSX-PARe-EHV-S-P-RPLB-S-XPAC",
+		"UIName": "Insanity PPC",
+		"Id": "Weapon_PPC_Insanity_0-STOCK",
+		"Name": "Insanity PPC",
+		"Details": "This PPC is truly something beyond. The short name is the Insanity PPC, but the real name given by the designer is as follows: 'Clan Chemical Improved Heavy Bombast Extended Range Hypervelocity Multi-Binary-Pulse Streak Tight-Stream-Electro-Magnetic-Pulse Enhanced Light Reloading One Shot X-Pulse Assault Re-Engineered Hyper Variable-Speed-Pulse-Rotary Plasma LB-Snub-X PPC Array + Capacitor' or the cCiHBERHvM-B-PST-S-E-M-PELROSX-PARe-EHV-S-P-RPLB-S-XPAC for short. It truly fits its description as well.",
+		"Icon": "particle"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "PPC",
+	"BattleValue": 0,
+	"InventorySize": 12,
+	"Tonnage": 12,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 2
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDef-InsanityPPC",
+				"Name": "SENSORS IMPAIRED",
+				"Details": "[AMT] Difficulty to all of this unit's attacks until its next activation. Stacks up to twice on the target.",
+				"Icon": "uixSvgIcon_status_sensorsImpaired"
+			},
+			"nature": "Debuff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "AccuracyModifier",
+				"operation": "Float_Add",
+				"modValue": "3.0",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "NotSet",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_very-long"
+		],
+		"tagSetSourceFile": ""
+	}
+}

@@ -1,0 +1,240 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/s/m/melee"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"IsPhysWeap",
+				"PhysWeapUnsteady",
+				"PunchHitTable",
+				"PhysWeapDamage: 0.75",
+				"PhysWeapStab: 0.75"
+			]
+		},
+		"Flags": {
+			"flags": [
+				"default",
+				"not_broken",
+				"no_salvage",
+				"autorepair"
+			]
+		}
+	},
+	"Category": "AntiPersonnel",
+	"Type": "MachineGun",
+	"WeaponSubType": "MachineGun",
+	"MinRange": 0,
+	"MaxRange": 30,
+	"RangeSplit": [
+		30,
+		30,
+		30
+	],
+	"AmmoCategory": "NotSet",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 0,
+	"Damage": 0,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 0,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": 0,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 0,
+	"Instability": 0,
+	"NotUseInMelee": true,
+	"WeaponEffectID": "WeaponEffect-Weapon_MachineGun",
+	"Description": {
+		"Cost": 12000,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "Battlemaster",
+		"Model": "Sword",
+		"UIName": "Sword",
+		"Id": "Weapon_Gashadokuro_Sword",
+		"Name": "Sword",
+		"Details": "This is a unique sword, designed for the Gashadokuro Battlemaster. It cannot be removed or used elsewhere.",
+		"Icon": "uixSvgIcon_weapon_Support"
+	},
+	"BonusValueA": "Sword",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "sword",
+	"BattleValue": 0,
+	"InventorySize": 3,
+	"Tonnage": 4.5,
+	"AllowedLocations": "LeftArm,RightArm",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+            "durationData" : {
+                "duration": -1,
+                "stackLimit": 1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "effectTargetType" : "Creator",
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : false
+            },
+            "effectType" : "StatisticEffect",
+            "Description" :
+            {
+                "Id" : "PunchIsPhysical",
+                "Name" : "This is a Physical Weapon",
+                "Details" : "This is a physical weapon and uses those melee rules."
+            },
+            "statisticData" : 
+            {
+                "statName" : "CBTBE_Punch_Is_Physical_Weapon",
+                "operation": "Set",
+                "modValue": "true",
+                "modType": "System.Boolean"
+            }
+        },
+        {
+            "durationData" : {
+                "duration": -1,
+                "stackLimit": 1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "specialRules" : "NotSet",
+                "effectTargetType" : "Creator",
+                "range" : 0.0,
+                "forcePathRebuild" : false,
+                "forceVisRebuild" : false,
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : false
+            },
+            "effectType" : "StatisticEffect",
+            "Description" :
+            {
+                "Id" : "CBTBE_PHYSICAL_WEAPON_APPLY_UNSTEADY",
+                "Name" : "Target will be Unsteady",
+                "Details" : "Foo"
+            },
+            "statisticData" : 
+            {
+                "statName" : "CBTBE_Physical_Weapon_Unsteady_Target_On_Hit",
+                "operation": "Set",
+                "modValue": "true",
+                "modType": "System.Boolean"
+            },
+            "nature" : "Buff"
+        },
+        {
+            "durationData" : {
+                "duration": -1,
+                "stackLimit": 1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "specialRules" : "NotSet",
+                "effectTargetType" : "Creator",
+                "range" : 0.0,
+                "forcePathRebuild" : false,
+                "forceVisRebuild" : false,
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : false
+            },
+            "effectType" : "StatisticEffect",
+            "Description" :
+            {
+                "Id" : "CBTBE_PHYSICAL_WEAPON_LOCATION_TABLE",
+                "Name" : "Location table to use",
+                "Details" : "Foo"
+            },
+            "statisticData" : 
+            {
+                "statName" : "CBTBE_Physical_Weapon_Location_Table",
+                "operation": "Set",
+                "modValue": "PUNCH",
+                "modType": "System.String"
+            },
+            "nature" : "Buff"
+        },
+		{
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "triggerLimit" : 0,
+                "extendDurationOnTrigger" : 0,
+                "specialRules" : "NotSet",
+                "effectTargetType" : "Creator",
+                "range" : 0,
+                "forcePathRebuild" : false,
+                "forceVisRebuild" : false,
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "StatusEffect-SwordBaseDamage",
+                "Name" : "Sword Base Damage",
+                "Details" : "Swords do 7.5 damage per 10 tons of the mech.",
+                "Icon" : "uixSvgIcon_equipment_ActuatorLeg"
+            },
+            "nature" : "Buff",
+            "statisticData" : {
+                "statName" : "CBTBE_Physical_Weapon_Target_Damage_Per_Attacker_Ton",
+                "operation": "Set",
+                "modValue": "0.75",
+                "modType": "System.Single"
+            }
+        },
+		{
+            "durationData" : {
+                "duration" : -1,
+                "stackLimit" : -1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "Passive",
+                "triggerLimit" : 0,
+                "extendDurationOnTrigger" : 0,
+                "specialRules" : "NotSet",
+                "effectTargetType" : "Creator",
+                "range" : 0,
+                "forcePathRebuild" : false,
+                "forceVisRebuild" : false,
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "StatusEffect-SwordBaseStabDamage",
+                "Name" : "Swords Base Stab Damage",
+                "Details" : "Swords do 7.5 stab damage per 10 tons of the mech.",
+                "Icon" : "uixSvgIcon_equipment_ActuatorLeg"
+            },
+            "nature" : "Buff",
+            "statisticData" : {
+                "statName" : "CBTBE_Physical_Weapon_Target_Instability_Per_Attacker_Ton",
+                "operation": "Set",
+                "modValue": "0.75",
+                "modType": "System.Single"
+            }
+        }
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_close"
+		],
+		"tagSetSourceFile": ""
+	}
+}

@@ -1,0 +1,107 @@
+{
+    "Custom": {
+        "Category": [
+            {
+                "CategoryID": "ECM"
+            }
+        ],
+        "BonusDescriptions": {
+            "Bonuses": [
+                "Defense: +1",
+				"ECMRadius: 150"
+            ]
+        },
+        "InventorySorter": {
+            "SortKey": "00024"
+        }
+    },
+    "StatName": null,
+    "RelativeModifier": 0,
+    "AbsoluteModifier": 0,
+    "Description": {
+        "Cost": 441000,
+        "Rarity": 3,
+        "Purchasable": true,
+        "Manufacturer": "Johnston",
+        "Model": "Guardian ECM",
+        "UIName": "Guardian ECM (C)",
+        "Id": "Gear_Guardian_ECM_CLAN",
+        "Name": "Guardian ECM (C)",
+        "Details": "The Guardian ECM Suite was introduced in 2597 by Johnston Industries of the Terran Hegemony. Designed to interfere with guided weaponry, targeting computers, and communication systems, the Guardian was typically used to shield allied units from such equipment by emitting a broad-band signal meant to confuse radar, infrared, ultraviolet, magscan and sonar sensors.",
+        "Icon": "uixSvgIcon_equipment_TTS"
+    },
+    "BonusValueA": "+2 Defense.",
+    "BonusValueB": "",
+    "ComponentType": "Upgrade",
+    "ComponentSubType" : "Prototype_ElectronicWarfare",
+    "PrefabIdentifier": "",
+    "BattleValue": 0,
+    "InventorySize": 1,
+    "Tonnage": 1,
+    "AllowedLocations": "All",
+    "DisallowedLocations": "All",
+    "CriticalComponent": false,
+    "Auras": [
+        {
+            "Id": "Gear_GECM_ECM",
+            "Name": "ECM",
+            "ReticleColor": "#ffffff",
+            "Range": 150,
+            "RemoveOnSensorLock": false,
+            "State": "Persistent",
+            "ApplySelf": true,
+            "AllyStealthAffection": "None",
+            "EnemyStealthAffection": "None",
+            "IsPositiveToAlly": true,
+            "IsNegativeToEnemy": false,
+            "ownerVFX": [],
+            "targetVFX": [],
+            "removeOwnerVFX": [],
+            "removeTargetVFX": [],
+            "ownerSFX": [],
+            "targetSFX": [],
+            "removeOwnerSFX": [],
+            "removeTargetSFX": [],
+            "statusEffects": [
+                {
+                    "durationData": {
+                        "duration": -1,
+                        "stackLimit": -1
+                    },
+                    "targetingData": {
+                        "effectTriggerType": "Passive",
+                        "specialRules": "NotSet",
+                        "effectTargetType": "AlliesWithinRange",
+                        "range": 0.0,
+                        "forcePathRebuild": false,
+                        "forceVisRebuild": false,
+                        "showInTargetPreview": false,
+                        "showInStatusPanel": true
+                    },
+                    "effectType": "StatisticEffect",
+                    "Description": {
+                        "Id": "GECMInterference",
+                        "Name": "GECM Interference",
+                        "Details": "Guardian ECM making this unit harder to hit",
+                        "Icon": "uixSvgIcon_equipment_Gyro"
+                    },
+                    "statisticData": {
+                        "statName": "ToHitThisActor",
+                        "operation": "Float_Add",
+                        "modValue": "1.0",
+                        "modType": "System.Single"
+                    },
+                    "nature": "Buff"
+                }
+            ]
+        }
+	],
+	"statusEffects": [],
+    "ComponentTags": {
+        "items": [
+            "component_type_stock",
+            "ElectronicCounterMeasures"
+        ],
+        "tagSetSourceFile": ""
+    }
+}

@@ -1,0 +1,342 @@
+{
+    "Description" : {
+        "Id" : "tbone_event_co_spotlightVirago",
+        "Name" : "Breaking Ties",
+        "Details" : "[[SCN_MW,{SCN_MW.Callsign}]] stands before you, the big [[DM.BaseDescriptionDefs[LoreElementals],Elemental]] fidgeting. It would almost be comical if she weren't so dangerous.\r\n\r\n\"{SCN_MW.Callsign}, [[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]] tells me you've been involved in a string of \"incidents\" since we headed for the [[DM.Factions[faction_ClanJadeFalcon],Jade Falcon]] Occupation Zone. You've slugged several of the crew for insulting your honor. I need to know I can trust you. I have to ask: Will you be able to face your former comrades in battle if we take contracts here? The company has invested a considerable amount of time and money into you, and I'll see it paid off, one way or another.\"\r\n\r\n\"I must admit that given the opportunity, I would rejoin the Falcon [[DM.BaseDescriptionDefs[TBoneLoreTouman],<i>touman</i>]] rather than face them in combat. However, for me to betray your trust would render me <i>dezgra</i> I would not do so. Bid me fight them, and I will fight them. Bid me leave, and I will go with nothing but the clothes on my back. I will not stay and have my honor questioned.\"",
+        "Icon" : "uixTxrSpot_CommandersQuarters.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 10000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "RequirementComparisons" : []
+    },
+    "AdditionalRequirements" : [
+        {
+            "Scope" : "StarSystem",
+            "RequirementTags" : {
+                "tagSetSourceFile" : "",
+                "items" : [
+                    "planet_faction_clanjadefalcon"
+                ]
+            },
+            "ExclusionTags" : {
+                "tagSetSourceFile" : "",
+                "items" : []
+            },
+            "RequirementComparisons" : []
+        }
+    ],
+    "AdditionalObjects" : [
+        {
+            "Scope" : "SecondaryMechWarrior",
+            "Requirements" : {
+                "Scope" : "SecondaryMechWarrior",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : [
+                        "name_Virago"
+                    ]
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Fire her.",
+                "Details" : "Virago is fired.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Virago fired.",
+                        "Details" : "\"I don't trust you. And I won't drop with someone I don't trust. You miss your former Clanmates so much, go. Run along and see if they'll take you back. Maybe they'll let you redeem your pathetic honor in a [[DM.BaseDescriptionDefs[TBoneLoreTouman],<i>solahma</i>]] unit.\"\r\n\r\n[[SCN_MW,{SCN_MW.Callsign}]]'s expression is stony. She turns and leaves without a word, taking the first shuttle off the <i>Argo</i>. As promised, she left without taking a thing, including a small fortune and a cache of Clan tech. Most of the crew breathes a little easier with her off the ship.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Morale",
+                                    "value" : "2",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Funds",
+                                    "value" : "250000",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Item.WeaponDef.Weapon_Laser_HeavyLargeLaser_CLAN",
+                                    "value" : "2",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Item.WeaponDef.Weapon_Laser_HeavyMediumLaser_CLAN",
+                                    "value" : "2",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Item.WeaponDef.Weapon_Laser_HeavySmallLaser_CLAN",
+                                    "value" : "2",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "Let her skip contracts in the Falcon OZ for now.",
+                "Details" : "Let her skip contracts in the Falcon OZ for now.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "Let her skip contracts in the Falcon OZ for now.",
+                        "Details" : "\"I understand not wanting to face your former Clanmates in battle just yet. If you want to stay in this business, you need to learn to forget old loyalties and bonds...but the time for you to do so is not now. When I deploy you in battle, I need you at 100%. For now you're benched until we leave this region. The next time we arrive in the Occupation Zones, I want you ready. Understood?\"\r\n\t\r\n\"Yes, Commander. You have my [[DM.BaseDescriptionDefs[TBoneLoreRede],<i>rede</i>]].\"\r\n\r\n[[SCN_MW,{SCN_MW.Callsign}]] will be unavailable until some time after leaving the Falcon OZ. While {SCN_MW.Subj} wrestles with her demons, the rest of the pilots grumble about \"special treatment,\" and [[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]] tells you of at least a few crewmembers that think you were simply cowed by the big Clanner. Hopefully her loyalty is worth the hit to morale.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "virago_trigger"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Morale",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : [
+                                {
+                                    "Type" : "MechWarrior_SetTimeout",
+                                    "value" : "9999",
+                                    "valueConstant" : null,
+                                    "additionalValues" : null
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 1000
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_2",
+                "Name" : "Make her fight.",
+                "Details" : "Force Virago to fight clanners.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_2_0",
+                        "Name" : "Make her fight.",
+                        "Details" : "\"They're not your friends, they're not your family, and they're not your former comrades. They're either targets and you destroy them, or they're immaterial to the mission and you ignore them. You're a mercenary warrior now. Warriors don't get sentimental, and mercenaries can't afford regrets. When we drop, I expect you to fight at 100%, no matter who is on the other side of the battlefield.\r\n\t\r\n\"Understood, Commander. I will not fail you.\"\r\n\t\r\nTrue to her word, [[SCN_MW,{SCN_MW.Callsign}]] is ready to go at the start of the next op, although you can tell she still had some reservations about facing her former Clanmates. Still, seeing her go to battle against [[DM.Factions[faction_ClanJadeFalcon],Jade Falcon]] forces seems to have quelled most of the grumbling from the other pilots and crew, and {SCN_MW.Callsign} herself seems to have gained more confidence at the stick.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Morale",
+                                    "value" : "2",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : [
+                                    "pilot_morale_low"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 30
+                        },
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Piloting",
+                                    "value" : "1",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}
