@@ -1,0 +1,148 @@
+{
+    "Description" : {
+        "Id" : "tbone_event_co_honorVirago",
+        "Name" : "Making Ties",
+        "Details" : "Some time after leaving the [[DM.Factions[faction_ClanJadeFalcon],Jade Falcon]] Occupation Zone, Virago calls you to the navigation center and calmly enters a set of coordinates into the system.\r\n\r\n\"What's this?\" you ask.\r\n\r\n\"Loyalty is not bought or sold, Commander. It is earned and shown through deeds. You respected my wishes, gave me the time to face the reality of my new life. To honor our bond, I transfer to the company my- what would you Inners call it? A stormy day fund? It is not much, a cache of hardware forgotten during the failed [[DM.BaseDescriptionDefs[TBoneLoreJFIncursion58],Incursion]] and an [[DM.BaseDescriptionDefs[TBoneLoreIncubus],Incubus]] I won during one of the many Trials between [[DM.BaseDescriptionDefs[LoreElementals],Elementals]] and <i>stravag</i> MechWarriors.\"",
+        "Icon" : "uixTxrSpot_Navigation.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 10000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : [
+                "virago_trigger"
+            ]
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "RequirementComparisons" : []
+    },
+    "AdditionalRequirements" : [
+        {
+            "Scope" : "StarSystem",
+            "RequirementTags" : {
+                "tagSetSourceFile" : "",
+                "items" : []
+            },
+            "ExclusionTags" : {
+                "tagSetSourceFile" : "",
+                "items" : []
+            },
+            "RequirementComparisons" : [
+                {
+                    "obj" : "Owner.ClanJadeFalcon",
+                    "op" : "NotEqual",
+                    "val" : 1,
+                    "valueConstant" : "1"
+                }
+            ]
+        }
+    ],
+    "AdditionalObjects" : [],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Retrieve the cache.",
+                "Details" : "Retrieve the cache.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Retrieve the cache.",
+                        "Details" : "You send a shuttle to the coordinates Virago provided. Sure enough, they return with an impressive array of equipment, including a fully functional [[DM.BaseDescriptionDefs[TBoneLoreIncubus],Incubus]]. [[DM.BaseDescriptionDefs[TooltipSimGameCharacterYANG],Yang]] is ecstatic about having more Clan-tech to play with, and Virago seems to be at peace with the clean break from her Clan past.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "virago_trigger"
+                                ]
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Item.WeaponDef.Weapon_Laser_MediumLaserER_CLAN",
+                                    "value" : "2",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : [
+                                {
+                                    "Type" : "Mech_AddRoster",
+                                    "value" : "mechdef_incubus_1",
+                                    "valueConstant" : null,
+                                    "additionalValues" : null
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "AllMechWarriors",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : [
+                                {
+                                    "Type" : "MechWarrior_SetTimeout",
+                                    "value" : "-9999",
+                                    "valueConstant" : null,
+                                    "additionalValues" : null
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}

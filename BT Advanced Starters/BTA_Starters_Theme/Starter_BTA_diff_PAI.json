@@ -1,0 +1,29 @@
+{
+    "TargetID": "CareerDifficultySettings",
+    "Instructions": [
+        {
+			"JSONPath": "$.difficultyList[?(@.ID== 'diff_startingplanet')].Options",
+            "Action": "ArrayAdd",
+            "Value":
+				{
+					"ID": "diff_PAI",
+					"Name": "Periphery Armory",
+					"TelemetryEventDesc": "",
+					"DifficultyValue": 0,
+					"CareerScoreModifier": 0.3,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "CareerMode",
+							"ConstantName": "StartingSystems",
+							"ConstantValue": "Mantharaka"
+						},
+						{
+							"ConstantType": "CareerMode",
+							"ConstantName": "StartingRandomMechLists",
+							"ConstantValue": "itemCollection_Mechs_Starting_PAI_Medium,itemCollection_Mechs_Starting_PAI_Light,itemCollection_Mechs_Generic_Bug,itemCollection_Mechs_Starting_Periphery_General_Light,itemCollection_Mechs_Starting_Periphery_General_Medium"
+						}
+					]
+				}
+         }
+    ]
+}

@@ -1,0 +1,122 @@
+{
+    "Description" : {
+        "Id" : "tbone_event_co_aPiratesLife3",
+        "Name" : "A Pirate's Life",
+        "Details" : "[[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]] once again calls you to the conference room. Apparently [[DM.BaseDescriptionDefs[TBoneLoreRoberts],Roberts]] has contacted you with an update.",
+        "Icon" : "uixTxrSpot_IncomingTransimission.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 10000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : [
+                "aPiratesLife_1"
+            ]
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "RequirementComparisons" : [
+            {
+                "obj" : "Pirate_Wins",
+                "op" : "GreaterThanOrEqual",
+                "val" : 4,
+                "valueConstant" : "4"
+            }
+        ]
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "[Open communications]",
+                "Details" : "Proceed to the conference room.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "[Open communications]",
+                        "Details" : "The rest of the senior staff comes to attention as you walk in.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "aPiratesLife_1"
+                                ]
+                            },
+                            "Stats" : null,
+                            "Actions" : [
+                                {
+                                    "Type" : "System_StartConversation",
+                                    "value" : "tbone_aPiratesLifeConvo2",
+                                    "valueConstant" : null,
+                                    "additionalValues" : [
+                                        "A Pirate's Life For Me II",
+                                        "Undisclosed Location",
+                                        "Argo",
+                                        null
+                                    ]
+                                },
+                                {
+                                    "Type" : "System_AddContract",
+                                    "value" : "DuoDuel_aPiratesLife",
+                                    "valueConstant" : null,
+                                    "additionalValues" : [
+                                        "AuriganPirates",
+                                        "AuriganPirates",
+                                        "starsystemdef_Antallos(PortKrin)",
+                                        null,
+                                        null,
+                                        null,
+                                        "8"
+                                    ]
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}

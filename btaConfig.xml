@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <BtaConfig>
 	<RequiredBattleTechVersion>1.9.1</RequiredBattleTechVersion>
-	<RequiredLauncherVersion>1.1.5</RequiredLauncherVersion>
-	<SecureHash>FqoWdxZ4FngWSBb3Fr8W4xb4FgMWABZSFjIWbxbYFj8=</SecureHash>
+	<RequiredLauncherVersion>1.1.6</RequiredLauncherVersion>
+	<SecureHash>Fp0W+RaBFoEWZhYZFpEW2RZDFvwWUxa5Fu8WeRavFnY=</SecureHash>
 	<showCoreItems>true</showCoreItems>
 	<Tasks>
 		<InstallTask>
@@ -66,48 +66,18 @@
 			<uiName>Heavy Metal</uiName>
 		</InstallTask>
 		<InstallTask>
-			<Id>ClanCore</Id>
-			<canSelect>true</canSelect>
-			<excludePaths>btaConfig.xml,.git,.modtek,.git,log.txt,Heavy Metal Unit Module,Community Content</excludePaths>
-			<isSelected>false</isSelected>
-			<jobOrder>1</jobOrder>
-			<jobType>Install</jobType>
-			<optionGroupId>ClanExpansionOptions</optionGroupId>
-			<promptConfirmation>false</promptConfirmation>
-			<promptText/>
-			<sourcePath/>
-			<targetPath/>
-			<uiDescription>Adds the full Innersphere map and the invading clans</uiDescription>
-			<uiName>Clans Expansion</uiName>
-		</InstallTask>
-		<InstallTask>
-			<Id>ClanHm</Id>
-			<canSelect>true</canSelect>
-			<excludePaths>log.txt</excludePaths>
-			<isSelected>false</isSelected>
-			<jobOrder>1</jobOrder>
-			<jobType>Install</jobType>
-			<optionGroupId>ClanExpansionOptions</optionGroupId>
-			<promptConfirmation>false</promptConfirmation>
-			<promptText/>
-			<sourcePath>Heavy Metal Unit Module</sourcePath>
-			<targetPath>Heavy Metal Unit Module</targetPath>
-			<uiDescription>Heavy Metal Module for Clan Expansion, requires Clan Expansion and Heavy Metal DLC modules to also be installed</uiDescription>
-			<uiName>Clans Expansion - Heavy Metal Module</uiName>
-		</InstallTask>
-		<InstallTask>
 			<Id>CommunityContent</Id>
 			<canSelect>true</canSelect>
 			<excludePaths>log.txt</excludePaths>
 			<isSelected>false</isSelected>
-			<jobOrder>1</jobOrder>
+			<jobOrder>0</jobOrder>
 			<jobType>Install</jobType>
-			<optionGroupId>ClanExpansionOptions</optionGroupId>
+			<optionGroupId>AdditionalOptions</optionGroupId>
 			<promptConfirmation>false</promptConfirmation>
 			<promptText/>
 			<sourcePath>Community Content</sourcePath>
 			<targetPath>Community Content</targetPath>
-			<uiDescription>BattleTech Advanced 3062 Community Content, not guaranteed to be lore-friendly or balanced in any way at all, purely optional, requires Clan Expansion and the DLC Modules to also be installed.</uiDescription>
+			<uiDescription>BattleTech Advanced 3062 Community Content, not guaranteed to be lore-friendly or balanced in any way at all, purely optional, the DLC Modules to be installed.</uiDescription>
 			<uiName>BTA Community Content - Optional</uiName>
 		</InstallTask>
 		<InstallTask>
@@ -210,9 +180,9 @@
 		</InstallOption>
 		<InstallOption>
 			<optionDescription/>
-			<optionId>ClanExpansionOptions</optionId>
+			<optionId>AdditionalOptions</optionId>
 			<optionType>MultiSelectOption</optionType>
-			<optionUiName>Clan Expansion Options</optionUiName>
+			<optionUiName>Additional Options</optionUiName>
 		</InstallOption>
 		<InstallOption>
 			<optionDescription/>

@@ -1,0 +1,201 @@
+{
+    "Description" : {
+        "Id" : "tbone_event_co_MaxRescue1",
+        "Name" : "A Dish Served Cold - Rescue",
+        "Details" : "Some time after Max's disappearance, [[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]] and [[DM.BaseDescriptionDefs[TooltipSimGameCharacterSUMIRE],Sumire]] bring you a summary of intercepted [[DM.Factions[faction_ClanWolf],Clan Wolf]] communications. Apparently a MechWarrior matching Max's description was captured trying to sneak into a Forward Operating Base with a bomb, and is currently being held in a secure facility in New Bergen before his scheduled execution. Predictably, Darius wants to mount a rescue op and Sumire is arguing against it.\r\n\r\n\r\n\"Commander. I know Max made a mistake, but I don't like the idea of leaving him to the Clanners-\" Darius begins.\r\n\r\n\r\n\"But actions have consequences. Max knew the risks, and I don't think we should have to pay for his stupidity-\" Sumire interrupts.\r\n\r\n\r\n\"Enough, both of you! Let me think it over. Dismissed.\"",
+        "Icon" : "uixTxrSpot_DailyBriefing.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 0,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : [
+                "do_not_fire"
+            ]
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "RequirementComparisons" : []
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [
+        {
+            "Scope" : "SecondaryMechWarrior",
+            "Requirements" : {
+                "Scope" : "SecondaryMechWarrior",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Mount the rescue op.",
+                "Details" : "Mount the rescue op.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Mount the rescue op.",
+                        "Details" : "You make the announcement to ready the <i>Argo</i> for jump transit to New Bergen. You've invested too much time and money in Max to leave him behind.\r\n\r\n\r\n<b>A travel contract name <i>\"A Dish Served Cold - Rescue\"</i> has been added to the Command Center. Max will die if you do not complete the contract.</b>",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "max_rescue",
+                                    "value" : "1",
+                                    "set" : true,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : [
+                                {
+                                    "Type" : "System_AddContract",
+                                    "value" : "Rescue_MaxRevenge",
+                                    "valueConstant" : null,
+                                    "additionalValues" : [
+                                        "ClanWolf",
+                                        "SelfEmployed",
+                                        "starsystemdef_NewBergen"
+                                    ]
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "max_rescue_cooldown"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 45
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "Leave Max to his fate.",
+                "Details" : "Leave Max to his fate.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "Leave Max to his fate.",
+                        "Details" : "You quietly inform [[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]], [[DM.BaseDescriptionDefs[TooltipSimGameCharacterSUMIRE],Sumire]] and the rest of the senior staff that the company will not be mounting a rescue op for Max. You made it abundantly clear to him before he left that his revenge fantasy was his alone, and you wouldn't be risking company assets for his pride. Better to lose one fool than risk the whole company.\r\n\r\n\r\nNot long after [[DM.BaseDescriptionDefs[TooltipSimGameCharacterFARAH],Farah]] forwards the following intercepted [[DM.Factions[faction_ClanWolf],Clan Wolf]] message:\r\n\r\nCommander, I'm 99% confident that the following message refers to Max. I'm sorry.\r\n \u2013 Farah\r\n\r\n<i><b>FROM: WOLF AGAX RASSEC 5BC INTWATCH (New Bergen)\r\n\r\nTO: WOLF AGAX GEN\r\n\r\nCLASSIFICATON: SENSITIVE\r\n\r\nWarriors of Clan Wolf Alpha Galaxy,\r\n\r\nBe advised, the execution of prisoner #4d415441554954415f434c4159544f4e proceeded as scheduled at 2200ZULU. Message ends.</i></b>",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : [
+                                {
+                                    "Type" : "MechWarrior_Kill",
+                                    "value" : "pilot_at_Max",
+                                    "valueConstant" : null,
+                                    "additionalValues" : [
+                                        "The price of vengeance."
+                                    ]
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}

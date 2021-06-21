@@ -1,0 +1,29 @@
+{
+    "TargetID": "CareerDifficultySettings",
+    "Instructions": [
+        {
+			"JSONPath": "$.difficultyList[?(@.ID== 'diff_startingplanet')].Options",
+            "Action": "ArrayAdd",
+            "Value":
+				{
+					"ID": "diff_Clan",
+					"Name": "Clan (Hard)",
+					"TelemetryEventDesc": "",
+					"DifficultyValue": 2,
+					"CareerScoreModifier": 0.8,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "CareerMode",
+							"ConstantName": "StartingSystems",
+							"ConstantValue": "Diosd"
+						},
+						{
+							"ConstantType": "CareerMode",
+							"ConstantName": "StartingRandomMechLists",
+							"ConstantValue": "itemCollection_Mechs_Starting_Generic_Light,itemCollection_Mechs_Starting_Generic_Light,itemCollection_Mechs_Generic_Bug,itemCollection_Mechs_Starting_Clan_One,itemCollection_Mechs_Starting_Clan_Two"
+						}
+					]
+				}
+         }
+    ]
+}

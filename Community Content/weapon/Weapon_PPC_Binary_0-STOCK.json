@@ -1,0 +1,131 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/e/p/hppc"
+			},
+			{
+				"CategoryID": "NeverMelee"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"NoFireInMelee",
+				"PPCDEBUFF: 2",
+				"ModalWeapon: Paired Projectors",
+				"ModalWeapon2: Split Projectors",
+				"DmgFallOffMode: 40%",
+				"DmgFallOffStartMode: 185",
+				"DmgFallOffEndMode: 540"
+			]
+		}
+	},
+	"Category": "Energy",
+	"Type": "PPC",
+	"WeaponSubType": "PPC",
+	"MinRange": 90,
+	"MaxRange": 720,
+	"RangeSplit": [
+		180,
+		360,
+		540
+	],
+	"AmmoCategory": "NotSet",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 55,
+	"Damage": 110,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 0,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": 0,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 1,
+	"Instability": 20,
+	"WeaponEffectID": "WeaponEffect-Weapon_PPC",
+	"Description": {
+		"Cost": 280000,
+		"Rarity": 0,
+		"Purchasable": true,
+		"Manufacturer": "Jimbo's Crabshack",
+		"Model": "Particle Projector Cannon",
+		"UIName": "Binary PPC",
+		"Id": "Weapon_PPC_Binary_0-STOCK",
+		"Name": "Binary PPC",
+		"Details": "Modeled after the rare and mostly forgotten Binary Laser Cannon, the Binary Particle Projector Cannon is a pair of PPC projectors fused together into a single weapon. Able to fire either in concert or in sequence, the Bleeper, as it is affectionately known to its creators, has proven effective if unusual.",
+		"Icon": "uixSvgIcon_weapon_Energy"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "PPC",
+	"BattleValue": 0,
+	"InventorySize": 6,
+	"Tonnage": 10,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"FireDelayMultiplier": 0.12,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDefPPC",
+				"Name": "SENSORS IMPAIRED",
+				"Details": "[AMT] Difficulty to all of this unit's attacks until its next activation.",
+				"Icon": "uixSvgIcon_status_sensorsImpaired"
+			},
+			"nature": "Debuff",
+			"statisticData": {
+				"statName": "AccuracyModifier",
+				"operation": "Float_Add",
+				"modValue": "2.0",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"Modes": [
+		{
+			"Id": "Split_Cores",
+			"UIName": "Split",
+			"isBaseMode": false,
+			"DamagePerShot": -50,
+			"ShotsWhenFired": 1,
+			"DistantVariance": 0.4,
+			"DamageFalloffStartDistance": 185,
+			"DamageFalloffEndDistance": 540,
+			"DistantVarianceReversed": false,
+			"RangedDmgFalloffType": "Linear"
+		},
+		{
+			"Id": "Linked_Cores",
+			"UIName": "Paired",
+			"isBaseMode": true
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_very-long"
+		],
+		"tagSetSourceFile": ""
+	}
+}

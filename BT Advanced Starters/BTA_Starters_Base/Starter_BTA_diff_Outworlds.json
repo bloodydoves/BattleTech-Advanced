@@ -1,0 +1,29 @@
+{
+    "TargetID": "CareerDifficultySettings",
+    "Instructions": [
+        {
+			"JSONPath": "$.difficultyList[?(@.ID== 'diff_startingplanet')].Options",
+            "Action": "ArrayAdd",
+            "Value":
+				{
+					"ID": "diff_Outworlds",
+					"Name": "Outworlds",
+					"TelemetryEventDesc": "",
+					"DifficultyValue": 1,
+					"CareerScoreModifier": 0.4,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "CareerMode",
+							"ConstantName": "StartingSystems",
+							"ConstantValue": "Mishkadrill"
+						},
+						{
+							"ConstantType": "CareerMode",
+							"ConstantName": "StartingRandomMechLists",
+							"ConstantValue": "itemCollection_Mechs_Starting_Periphery_General_Medium,itemCollection_Mechs_Starting_Periphery_General_Light,itemCollection_Mechs_Generic_Bug,itemCollection_Mechs_Starting_Outworlds_Light,itemCollection_Mechs_Starting_Outworlds_Medium"
+						}
+					]
+				}
+         }
+    ]
+}

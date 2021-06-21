@@ -1,0 +1,108 @@
+{
+    "Custom": {
+        "Category": [{
+            "CategoryID": "Structure"
+        }],
+        "Color": {
+            "UIColor": "Orange"
+        },
+        "DynamicSlots": {
+            "ReservedSlots": 7,
+            "BackgroundColor": "OrangeHalf",
+            "ShowIcon": false,
+            "NameText": "Cobbled Endo-Steel (C)",
+            "BonusAText": "Dynamic Slot",
+            "BonusBText": " "
+        },
+		"StructureRepair": {
+            "StructureTPCost": 1.3,
+            "StructureCBCost": 1.5
+        },
+        "Weights": {
+            "StructureFactor": 0.5
+        },
+        "WorkOrderCosts": {
+            "Install": {
+                "TechCost": "2.3 * [[Chassis.Tonnage]] / 10",
+                "CBillCost": "2000 * [[Chassis.Tonnage]] * [[Chassis.Tonnage]] / 50"
+            }
+        },
+        "Flags": {
+            "flags": [
+                "default",
+                "ignore_damage",
+                "autorepair",
+                "not_broken",
+                "no_salvage"
+            ]
+        },
+        "BonusDescriptions": {
+            "Bonuses": [
+                "StructureFactor: -50%",
+				"StructureTPCost: 30%",
+                "StructureCBCost: 50%",
+				"CritRes: -25%",
+                "Reserved: 7"
+            ]
+        },
+        "InventorySorter": {
+            "SortKey": "00010"
+        }
+    },
+    "Description": {
+        "Cost": 1750000,
+        "Rarity": 10,
+        "Purchasable": true,
+        "Manufacturer": "Clan",
+        "Model": "Structure Critical Slot",
+        "UIName": "Cobbled Endo-Steel (C)",
+        "Id": "emod_structureslots_clanendorigged",
+        "Name": "Cobbled-Together Endo-Steel Structure (C)",
+        "Details": "This is the same in most respects as standard Clan Endo-Steel, except that due to its cobbled-together nature and generally coming from multiple doner mechs, this structure has a 25% increased vulnerability to suffering critical hits.\r\n\r\nReserves <b>7</b> Endo-Steel slots to <b>halve</b> your internal structure weight.",
+        "Icon": "uixSvgIcon_quantity"
+    },
+    "BonusValueA": "50% Structure Weight",
+    "BonusValueB": "Reserves 7 Slots",
+    "ComponentType": "Upgrade",
+    "ComponentSubType": "NotSet",
+    "PrefabIdentifier": "",
+    "BattleValue": 0,
+    "InventorySize": 1,
+    "Tonnage": 0,
+    "AllowedLocations": "CenterTorso",
+    "DisallowedLocations": "All",
+    "CriticalComponent": false,
+    "statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "CobbledEndoCritVulnerability",
+				"Name": "Cobbled Together Endo-Steel Structure",
+				"Details": "Cobbled Endo-Steel is 25% more likely to take critical damage.",
+				"Icon": "uixSvgIcon_action_end"
+			},
+			"statisticData": {
+				"statName": "CriticalHitChanceReceivedMultiplier",
+				"operation": "Float_Multiply",
+				"modValue": "1.25",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	],
+    "ComponentTags": {
+        "items": [
+            "component_type_stock"
+        ],
+        "tagSetSourceFile": ""
+    }
+}

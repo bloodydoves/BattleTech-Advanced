@@ -1,0 +1,342 @@
+{
+    "Description" : {
+        "Id" : "tbone_event_co_spotlightOptio",
+        "Name" : "Mercenaries, Spies, and Private Eyes",
+        "Details" : "<i><b>Ave legatus. Meas litteras \"in quantum oratorem\" adicitur. Mea missio sit pergit.</i></b>\r\n\r\nThe decoded message displays on your wall-screen, bright and accusing. [[SCN_MW,{SCN_MW.Callsign}]] holds your gaze, doesn't even glance at it. Steady, unreadable. [[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]] and [[TRT_MW,{TRT_MW.Callsign}]] wait just outside the door.\r\n\r\n\"{SCN_MW.Callsign}. Something you need to tell me?\"\r\n\r\nHe glances down at the deck, then returns your stare. \"Commander. I will not mince words. I am, as you suspect, [[DM.BaseDescriptionDefs[TBoneLoreOrdoVigilis],Ordo Vigilis]]. I am to gather intelligence on the goals of [[DM.Factions[faction_ComStar],ComStar]] in the Periphery. Although they no longer control communications in the [[DM.Factions[faction_Marian],Hegemony]], there are certain elements within the Ordo that insist they are still a threat. As you now know my purpose here, perhaps we can come to an arrangement of sorts? ComStar might have a bounty on spies, but I can make this a lot more lucrative.\"",
+        "Icon" : "uixTxrSpot_CommandersQuarters.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 10000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "RequirementComparisons" : []
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [
+        {
+            "Scope" : "SecondaryMechWarrior",
+            "Requirements" : {
+                "Scope" : "SecondaryMechWarrior",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "Tags/PilotTags",
+                    "items" : [
+                        "name_Optio"
+                    ]
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : [
+                    {
+                        "obj" : "Gunnery",
+                        "op" : "GreaterThanOrEqual",
+                        "val" : 6,
+                        "valueConstant" : "6"
+                    }
+                ]
+            }
+        },
+        {
+            "Scope" : "TertiaryMechWarrior",
+            "Requirements" : {
+                "Scope" : "TertiaryMechWarrior",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : [
+                        "name_Optio"
+                    ]
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Distance yourself from the spy. Fire him.",
+                "Details" : "Fire him.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Fire him.",
+                        "Details" : "\"Sorry, {SCN_MW.FirstName}, but split loyalties get people killed in this business, and I can't have a spy working for me. We'll drop you in the next system, but in the meantime you're confined to quarters.\"\r\n\r\nYou stand and knock once on the door. [[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]] and [[TRT_MW,{TRT_MW.Callsign}]] step inside, and lead [[SCN_MW,{SCN_MW.Callsign}]] away.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Morale",
+                                    "value" : "2",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.ComStar",
+                                    "value" : "15",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : [
+                                {
+                                    "Type" : "MechWarrior_Fire",
+                                    "value" : null,
+                                    "valueConstant" : null,
+                                    "additionalValues" : null
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "Take him up on his offer.",
+                "Details" : "Accept his contract.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "Accept contract.",
+                        "Details" : "\"I'm listening, {SCN_MW.FirstName}. Tell me what you had in mind.\"\r\n\r\n\"Simple, Commander. You take me, and my mission, as a long-term contract and I will pay you a tidy sum. Half now, half on completion. The [[DM.Factions[faction_Marian],Hegemony]] is not without resources. Let's just say that I have a <i>discretionary</i> budget for these types of situations. In return, I will remain a pilot in your employ. However, I must warn you that if you intend to take contracts against the interests of my mission, I will leave you.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Funds",
+                                    "value" : "400000",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.Marian",
+                                    "value" : "15",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : [
+                                    "Optio_mission_accepted",
+                                    "pilot_dishonest"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_2",
+                "Name" : "Turn him over to ComStar.",
+                "Details" : "Turn him over to ComStar.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_2_0",
+                        "Name" : "Turn Optio over to ComStar",
+                        "Details" : "\"Sorry {TGT_MW.Callsign}. I can't trust you, but I <i>can</i> turn you over to [[DM.Factions[faction_ComStar],ComStar]] for a nice shiny BattleMech. They have a standing offer for confirmed spies, you know.\"\r\n\r\nYou stand and knock once on the door. [[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]] and [[TRT_MW,{SCN_MW.Callsign}]] step inside, and lead [[SCN_MW,{SCN_MW.Callsign}]] away.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.ComStar",
+                                    "value" : "15",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : [
+                                {
+                                    "Type" : "Mech_AddRoster",
+                                    "value" : "mechdef_blackknight_BL-9-KNT",
+                                    "valueConstant" : null,
+                                    "additionalValues" : null
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : [
+                                {
+                                    "Type" : "MechWarrior_Fire",
+                                    "value" : null,
+                                    "valueConstant" : null,
+                                    "additionalValues" : null
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}

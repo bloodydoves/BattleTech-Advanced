@@ -1,0 +1,127 @@
+{
+    "Description" : {
+        "Id" : "tbone_event_co_MaxRevenge2a",
+        "Name" : "A Dish Served Cold - Failure",
+        "Details" : "As you return to your quarters one evening, [[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]] catches you in the hallway.\r\n\r\n\r\n\"Commander, have you seen [[SCN_MW,{SCN_MW.Callsign}]] recently?\"\r\n\r\n\r\n\"No. Why, Darius?\"\r\n\r\n\r\n\"You should check your messages. No one has seen him since our last supply run.\"",
+        "Icon" : "uixTxrSpot_ConferenceRoom.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 10000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : []
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : [
+                "max_revenge_cooldown"
+            ]
+        },
+        "RequirementComparisons" : [
+            {
+                "obj" : "max_revenge",
+                "op" : "GreaterThan",
+                "val" : 0,
+                "valueConstant" : "0"
+            },
+			{
+                "obj" : "max_revenge",
+                "op" : "LessThan",
+                "val" : 3,
+                "valueConstant" : "3"
+            }
+        ]
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [
+        {
+            "Scope" : "SecondaryMechWarrior",
+            "Requirements" : {
+                "Scope" : "SecondaryMechWarrior",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : [
+                        "name_Max"
+                    ]
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Check your messages.",
+                "Details" : "Check your messages.",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Check your messages.",
+                        "Details" : "You have a sinking feeling as you read the message from [[SCN_MW,{SCN_MW.Callsign}]]:\r\n\r\n\r\n<i><b>Commander. I can't believe you'd go back on your word to me. I just heard from my sources that the Star Commander has returned to Strana Mechty, and I'll probably never get another chance. If you're reading this, I've already left. I doubt you'll see me again. Thanks for everything. Thanks for nothing.</i></b>\r\n\r\n\r\nSome time later, you hear rumors of an Inner Sphere MechWarrior killed while attempting to sneak a battered Commando into a [[DM.Factions[faction_ClanWolf],Clan Wolf]] Forward Operating Base.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "SecondaryMechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : [
+                                {
+                                    "Type" : "MechWarrior_Kill",
+                                    "value" : null,
+                                    "valueConstant" : null,
+                                    "additionalValues" : [
+                                        "The price of vengeance."
+                                    ]
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}
