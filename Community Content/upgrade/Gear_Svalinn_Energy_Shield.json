@@ -1,0 +1,130 @@
+{
+	"Custom": {
+        "Flags": {
+            "flags": [
+				"ignore_damage",
+                "no_salvage"
+            ]
+        },
+		"BonusDescriptions": {
+            "Bonuses": [
+				"Activatable",
+				"FailChance: 10%",
+				"FailChanceTurn: 40%",
+				"FailCritLoc",
+                "ActiveAccuracy: -8",
+				"ActiveDamageReduction: 90%"
+            ]
+        },
+		"ActivatableComponent": {
+            "ButtonName": "Activate Shield",
+            "CanNotBeActivatedManualy": false,
+            "NoUniqueCheck": false,
+            "ActiveByDefault": false,
+            "ActivationMessage": "Shield Enabled",
+            "DeactivationMessage": "Shield Disabled",
+			"FailFlatChance": 0.1,
+			"FailRoundsStart": 1,
+			"FailChancePerTurn": 0.4,
+			"FailCrit": true,
+			"FailDamageLocations": ["CenterTorso"],
+            "Linkage": {
+                "OnActivate": {
+                    "Activate": [],
+                    "Deactivate": []
+                },
+                "OnDeactivate": {
+                    "Activate": [],
+                    "Deactivate": []
+                }
+            },
+            "statusEffects": [
+                {
+                    "durationData": {
+                        "duration": -1,
+                        "stackLimit": -1
+                    },
+                    "targetingData": {
+                        "effectTriggerType": "Passive",
+                        "effectTargetType": "Creator",
+                        "showInStatusPanel": true
+                    },
+                    "effectType": "StatisticEffect",
+                    "Description": {
+                        "Id": "Svalinn-AccuracyDebuff",
+                        "Name": "Energy Shield Accuracy Debuff",
+                        "Details": "The Svalinn has been activated, heavily reducing weapon accuracy.",
+                        "Icon": "laser-blast"
+                    },
+                    "nature": "Buff",
+                    "statisticData": {
+                        "statName": "AccuracyModifier",
+						"operation": "Float_Add",
+						"modValue": "8.0",
+						"modType": "System.Single",
+						"targetCollection": "Weapon"
+					}
+                },
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "Svalinn-DamageReduction",
+						"Name": "Energy Shield Damage Reduction",
+						"Details": "The Svalinn has been activated, massively reducing incoming damage.",
+						"Icon": "power-generator"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamageReductionMultiplierAll",
+						"operation": "Float_Multiply",
+						"modValue": "0.1",
+						"modType": "System.Single"
+					}
+				}
+            ],
+            "offlineStatusEffects": []
+        }
+    },
+    "StatName" : null,
+    "RelativeModifier" : 0,
+    "AbsoluteModifier" : 0,
+    "Description" : {
+        "Cost" : 4000000,
+        "Rarity" : 99,
+        "Purchasable" : false,
+        "Manufacturer" : "Herakleon",
+        "Model" : "Svalinn",
+        "UIName" : "Svalinn Energy Shield",
+        "Id" : "Gear_Svalinn_Energy_Shield",
+        "Name" : "Svalinn Energy Shield",
+        "Details" : "The Svalinn Energy Shield, named for a mythological Norse shield that guarded the heavens, is a prototype energy shield system pioneered by the Word of Blake. When activated, the Svalinn Energy Shield reduces all incoming damage to the carrying unit by a massive amount, making the carrying unit nearly indestructible by normal damage. However, it comes with a cost. The system is fragile, prone to failure, and damages the carrying unit's internal structure when it fails. Additionally, the power drain of the Svalinn negatively affects weapon targeting systems, making weapons fire extremely inaccurate while the system is engaged. Still, the defensive benefits are hard to beat.",
+        "Icon" : "dragon-shield"
+    },
+    "BonusValueA" : "",
+    "BonusValueB" : "",
+    "ComponentType" : "Upgrade",
+    "ComponentSubType" : "NotSet",
+    "PrefabIdentifier" : "",
+    "BattleValue" : 0,
+    "InventorySize" : 2,
+    "Tonnage" : 2.5,
+    "AllowedLocations" : "CenterTorso",
+    "DisallowedLocations" : "All",
+    "CriticalComponent" : false,
+    "statusEffects" : [],
+    "ComponentTags" : {
+        "items" : [
+			"BLACKLISTED"
+        ],
+        "tagSetSourceFile" : ""
+    }
+}
