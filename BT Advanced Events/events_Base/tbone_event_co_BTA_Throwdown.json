@@ -1,0 +1,141 @@
+{
+	"Description": {
+		"Id": "tbone_event_co_BTA_Throwdown",
+		"Name": "BTA Calling",
+		"Details": "You can't help but feel a little nervous seeing the ancient [[DM.BaseDescriptionDefs[LoreComStar],Comstar]] Vincent Mk. 42 floating just beyond the shuttle bay doors. [[DM.BaseDescriptionDefs[TooltipSimGameCharacterFARAH],Farah]] notices you fidgeting and tries to reassure you.\r\n\r\n\"Commander, we're just lucky the communications grid was still under warranty. These Level II repair/recovery teams take their jobs very seriously; they don't care if you get along with their bosses or not, as long as you pay your bills on time.\"\r\n\r\nThe Comstar Acolyte waves you over, \"Greetings Commander, I am Acolyte Coles commanding RepRec Bravo-Tango-Alpha. Please show us to the communications grid.\"\r\n\r\n\r\nAfter some time inspecting the faulty unit, Acolyte Coles gives you the bad news; you may need to wait some time for the replacement parts to come in by courier.\r\n\r\n\"In the meantime Commander, we would certainly relish the chance to test our skill in battle against a hardened mercenary outfit such as your own. The reputation of the ComGuards is such that the mere threat of battle brings our delinquent clients to heel more often than not. We will of course reimburse you for any damages incurred to your own units.\"\r\n\r\n\r\n\"By the way, if any of us bear a resemblence to any of your crew, I trust you know enough about ComStar not to ask too many queestions, hmm?\"",
+		"Icon": "ComstarWizardIsComing.png"
+	},
+	"Scope": "Company",
+	"Weight": 10000,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"tagSetSourceFile": "",
+			"items": []
+		},
+		"ExclusionTags": {
+			"tagSetSourceFile": "",
+			"items": []
+		},
+		"RequirementComparisons": [
+			{
+				"obj": "Travel",
+				"op": "Equal",
+				"val": 0,
+				"valueConstant": "0"
+			}
+		]
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "outcome_0",
+				"Name": "Pass on the contract",
+				"Details": "Pass on the contract.",
+				"Icon": null
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "outcome_0_0",
+						"Name": "Pass on the contract.",
+						"Details": "\"Apologies, Acolyte Coles. I don't think we can handle the BTA team. Your power is over 9000, and I don't want to risk any of my pilots being injured.\"\r\n\r\n\"A pity\", replies the Acolyte, \"but I do understand. A machine may be repaired or replaced forever, but the only certainty of flesh is death.\"",
+						"Icon": null
+					},
+					"Weight": 100,
+					"Results": []
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"ExclusionTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"RequirementComparisons": []
+			}
+		},
+		{
+			"Description": {
+				"Id": "outcome_1",
+				"Name": "Accept the contract.",
+				"Details": "Accept the contract.",
+				"Icon": null
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "outcome_1_0",
+						"Name": "Accept the contract.",
+						"Details": "\"We would be honored to do battle against the best that ComStar has to offer, Acolyte.\"\r\n\r\n\"Excellent news Commander! We shall see eachother on the battlefield! Should you be victorious, we will leave you with one of our BattleMechs. We <i>do</i> so love the process of acquiring and customizing a new chassis, and this would be a perfect excuse.\"\r\n\r\n\r\n<b>A unique contract named BTA's Challenge has been added to the Command Center.</b>",
+						"Icon": null
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"tagSetSourceFile": "Tags/PilotTags",
+								"items": []
+							},
+							"RemovedTags": {
+								"tagSetSourceFile": "",
+								"items": []
+							},
+							"Stats": null,
+							"Actions": [
+								{
+									"Type": "System_AddContract",
+									"value": "SimpleBattle_BTAThrowdown",
+									"valueConstant": null,
+									"additionalValues": [
+										"Locals",
+										"SelfEmployed",
+										null,
+										null,
+										null,
+										null,
+										"8",
+										null
+									]
+								}
+							],
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"ExclusionTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "NORMAL",
+	"OneTimeEvent": true,
+	"Tags": {
+		"tagSetSourceFile": "tags/EventTags",
+		"items": []
+	}
+}
