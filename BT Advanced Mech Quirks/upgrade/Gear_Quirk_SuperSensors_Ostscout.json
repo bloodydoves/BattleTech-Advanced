@@ -1,0 +1,179 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "SensorsA"
+			},
+			{
+				"CategoryID": "Quirk"
+			}
+		],
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "[[Chassis.Tonnage]]/10",
+				"CBillCost": "[[Chassis.Tonnage]] * 1.15"
+			}
+		},
+		"Flags": {
+			"flags": [
+				"default",
+				"not_broken",
+				"no_salvage",
+				"autorepair"
+			]
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"IsSensorsA",
+				"Sensors: +30%",
+				"Sight: +30%",
+				"OstscoutTargeting: +1"
+			]
+		},
+		"InventorySorter": {
+			"SortKey": "00019"
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 500000,
+		"Rarity": 99,
+		"Purchasable": false,
+		"Manufacturer": "Quirk",
+		"Model": "Ostscout",
+		"UIName": "Ostscout Super Sensors",
+		"Id": "Gear_Quirk_SuperSensors_Ostscout",
+		"Name": "Ostscout Super Sensors",
+		"Details": "This piece of gear represents the Ostscout's inherent Super Sensors quirk. This gives the Ostscout increased sight and sensor ranges as well as granting allies bonus accuracy against enemies within 150 meters of the Ostscout.",
+		"Icon": "uixSvgIcon_equipment_Cockpit"
+	},
+	"BonusValueA": "+30% Sensors Range",
+	"BonusValueB": "+30% Sight Range",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"Auras": [
+        {
+            "Id": "Ostscout_Quirk",
+            "Name": "OstscoutSensors",
+            "ReticleColor": "#ea7600",
+            "Range": 150,
+            "RemoveOnSensorLock": false,
+            "State": "Persistent",
+            "ApplySelf": false,
+            "AllyStealthAffection": "None",
+            "EnemyStealthAffection": "None",
+            "IsPositiveToAlly": false,
+            "IsNegativeToEnemy": true,
+            "ownerVFX": [],
+            "targetVFX": [],
+            "removeOwnerVFX": [],
+            "removeTargetVFX": [],
+            "ownerSFX": [],
+            "targetSFX": [],
+            "removeOwnerSFX": [],
+            "removeTargetSFX": [],
+            "statusEffects": [
+                {
+                    "durationData": {
+                        "duration": -1,
+                        "stackLimit": 1
+                    },
+                    "targetingData": {
+                        "effectTriggerType": "Passive",
+                        "specialRules": "NotSet",
+                        "effectTargetType": "EnemiesWithinRange",
+                        "range": 0.0,
+                        "showInTargetPreview": true,
+                        "showInStatusPanel": false
+                    },
+                    "effectType": "StatisticEffect",
+                    "Description": {
+                        "Id": "Ostscout-TargetInfo",
+                        "Name": "Ostscout Targeting Information",
+                        "Details": "Shares targeting information on nearby enemies, +1 to hit enemies in radius",
+                        "Icon": "AdvancedTC"
+                    },
+                    "nature": "Buff",
+                    "statisticData": {
+                        "statName": "AccuracyModifier",
+                        "operation": "Float_Add",
+                        "modValue": "-1.0",
+                        "modType": "System.Single",
+						"targetCollection": "Weapon"
+                    }
+                }
+            ]
+        }
+    ],
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "SensorRange",
+				"Name": "Beagle Probe",
+				"Details": "Increases sensor range by 30%",
+				"Icon": "uixSvgIcon_equipment_Cockpit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "SensorDistanceMultiplier",
+				"operation": "Float_Multiply",
+				"modValue": "1.3",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "SpottingRange",
+				"Name": "SPOTTING DISTANCE INCREASED",
+				"Details": "Increases spotting distance by 30%.",
+				"Icon": "uixSvgIcon_equipment_Cockpit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "SpotterDistanceMultiplier",
+				"operation": "Float_Multiply",
+				"modValue": "1.3",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"BLACKLISTED",
+			"component_type_stock",
+			"lv-shares-sensors"
+		],
+		"tagSetSourceFile": ""
+	}
+}
