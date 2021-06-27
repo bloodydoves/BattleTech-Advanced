@@ -15,7 +15,7 @@
 		},
 		"ExclusionTags": {
 			"tagSetSourceFile": "",
-			"items": []
+			"items": ["fought_BTA"]
 		},
 		"RequirementComparisons": [
 			{
@@ -27,7 +27,30 @@
 		]
 	},
 	"AdditionalRequirements": [],
-	"AdditionalObjects": [],
+	"AdditionalObjects": [
+        {
+            "Scope" : "Commander",
+            "Requirements" : {
+                "Scope" : "Commander",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : [
+                    {
+                        "obj" : "ExperienceSpent",
+                        "op" : "GreaterThanOrEqual",
+                        "val" : 30000,
+                        "valueConstant" : "30000"
+                    }
+                ]
+            }
+        }
+    ],
 	"Options": [
 		{
 			"Description": {
@@ -85,7 +108,7 @@
 							"Requirements": null,
 							"AddedTags": {
 								"tagSetSourceFile": "Tags/PilotTags",
-								"items": []
+								"items": ["fought_BTA"]
 							},
 							"RemovedTags": {
 								"tagSetSourceFile": "",
@@ -133,7 +156,7 @@
 	"PublishState": "PUBLISHED",
 	"ValidationState": "UNTESTED",
 	"EventType": "NORMAL",
-	"OneTimeEvent": true,
+	"OneTimeEvent": false,
 	"Tags": {
 		"tagSetSourceFile": "tags/EventTags",
 		"items": []
