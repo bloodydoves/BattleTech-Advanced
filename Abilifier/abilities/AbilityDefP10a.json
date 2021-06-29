@@ -1,9 +1,9 @@
 {
 	"Description": {
 		"Id": "AbilityDefP10a",
-		"Name": "SPRINTER",
+		"Name": "MECH CHECKED",
 		"Details": "ACTION: Superior piloting skill lets you get a little more out of your mech. Gain 60 meters of movement speed this turn. 4 turn cooldown",
-		"Icon": "sprinter"
+		"Icon": "punch-blast"
 	},
 	"DisplayParams": "ShowInMWTRay",
 	"ReqSkill": "Piloting",
@@ -30,16 +30,16 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "StatusEffect-SprinterWalkSpeed",
-				"Name": "Boosted Speed",
-				"Details": "This unit moves an extra 60 meters this turn.",
-				"Icon": "sprinter"
+				"Id": "StatusEffect-MechCheckCharge",
+				"Name": "Boosted Melee Stability Damage",
+				"Details": "This unit deals 50% more stability damage with melee this turn.",
+				"Icon": "punch-blast"
 			},
 			"statisticData": {
-				"statName": "WalkSpeed",
-				"operation": "Float_Add",
-				"modValue": "60",
-				"modType": "System.Single"
+				"statName" : "CBTBE_Charge_Target_Instability_Multi",
+                "operation" : "Float_Multiply",
+                "modValue" : "1.5",
+                "modType" : "System.Single"
 			},
 			"nature": "Buff"
 		},
@@ -57,20 +57,20 @@
 				"effectTriggerType": "OnActivation",
 				"effectTargetType": "Creator",
 				"showInStatusPanel": false,
-				"forcePathRebuild": true
+				"forcePathRebuild": false
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "StatusEffect-SprinterWalkSpeed",
-				"Name": "Boosted Speed",
-				"Details": "This unit moves an extra 60 meters this turn.",
-				"Icon": "sprinter"
+				"Id": "StatusEffect-MechCheckDFA",
+				"Name": "Boosted Melee Stability Damage",
+				"Details": "This unit deals 50% more stability damage with melee this turn.",
+				"Icon": "punch-blast"
 			},
 			"statisticData": {
-				"statName": "CruiseSpeed",
-				"operation": "Float_Add",
-				"modValue": "60",
-				"modType": "System.Single"
+				"statName" : "CBTBE_DFA_Target_Instability_Multi",
+                "operation" : "Float_Multiply",
+                "modValue" : "1.5",
+                "modType" : "System.Single"
 			},
 			"nature": "Buff"
 		},
@@ -88,20 +88,82 @@
 				"effectTriggerType": "OnActivation",
 				"effectTargetType": "Creator",
 				"showInStatusPanel": false,
-				"forcePathRebuild": true
+				"forcePathRebuild": false
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "StatusEffect-SprinterWalkSpeed",
-				"Name": "Boosted Speed",
-				"Details": "This unit moves an extra 60 meters this turn.",
-				"Icon": "sprinter"
+				"Id": "StatusEffect-MechCheckKick",
+				"Name": "Boosted Melee Stability Damage",
+				"Details": "This unit deals 50% more stability damage with melee this turn.",
+				"Icon": "punch-blast"
 			},
 			"statisticData": {
-				"statName": "FlankSpeed",
-				"operation": "Float_Add",
-				"modValue": "100",
-				"modType": "System.Single"
+				"statName" : "CBTBE_Kick_Target_Instability_Multi",
+                "operation" : "Float_Multiply",
+                "modValue" : "1.5",
+                "modType" : "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false,
+				"forcePathRebuild": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-MechCheckPunch",
+				"Name": "Boosted Melee Stability Damage",
+				"Details": "This unit deals 50% more stability damage with melee this turn.",
+				"Icon": "punch-blast"
+			},
+			"statisticData": {
+				"statName" : "CBTBE_Punch_Target_Instability_Multi",
+                "operation" : "Float_Multiply",
+                "modValue" : "1.5",
+                "modType" : "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false,
+				"forcePathRebuild": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-MechCheckPhysWeap",
+				"Name": "Boosted Melee Stability Damage",
+				"Details": "This unit deals 50% more stability damage with melee this turn.",
+				"Icon": "punch-blast"
+			},
+			"statisticData": {
+				"statName" : "CBTBE_Physical_Weapon_Target_Instability_Multi",
+                "operation" : "Float_Multiply",
+                "modValue" : "1.5",
+                "modType" : "System.Single"
 			},
 			"nature": "Buff"
 		}
