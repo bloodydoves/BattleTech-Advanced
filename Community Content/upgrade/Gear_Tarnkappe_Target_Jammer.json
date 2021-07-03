@@ -1,0 +1,157 @@
+{
+	"Custom": {
+        "Flags": {
+            "flags": [
+				"ignore_damage",
+                "no_salvage"
+            ]
+        },
+		"BonusDescriptions": {
+            "Bonuses": [
+				"Activatable",
+				"FailChance: 10%",
+				"FailChanceTurn: 40%",
+				"FailCritLoc",
+                "ActiveAccuracy: -5",
+				"ActiveMoveSpeed: -80%",
+				"ActiveHitDefense: +10"
+            ]
+        },
+		"ActivatableComponent": {
+            "ButtonName": "Activate Target Jammer",
+            "CanNotBeActivatedManualy": false,
+            "NoUniqueCheck": false,
+            "ActiveByDefault": false,
+            "ActivationMessage": "Jammer Enabled",
+            "DeactivationMessage": "Jammer Disabled",
+			"FailFlatChance": 0.1,
+			"FailRoundsStart": 1,
+			"FailChancePerTurn": 0.4,
+			"FailCrit": true,
+			"FailDamageLocations": ["CenterTorso"],
+            "Linkage": {
+                "OnActivate": {
+                    "Activate": [],
+                    "Deactivate": []
+                },
+                "OnDeactivate": {
+                    "Activate": [],
+                    "Deactivate": []
+                }
+            },
+            "statusEffects": [
+                {
+                    "durationData": {
+                        "duration": -1,
+                        "stackLimit": -1
+                    },
+                    "targetingData": {
+                        "effectTriggerType": "Passive",
+                        "effectTargetType": "Creator",
+                        "showInStatusPanel": true
+                    },
+                    "effectType": "StatisticEffect",
+                    "Description": {
+                        "Id": "Tarnkappe-AccuracyDebuff",
+                        "Name": "Target Jammer Activated",
+                        "Details": "The Tarnkappe has been activated, heavily reducing weapon accuracy and movement speed but making the Mad Cat significantly harder to hit with weapon and melee attacks.",
+                        "Icon": "power-generator"
+                    },
+                    "nature": "Buff",
+                    "statisticData": {
+                        "statName": "AccuracyModifier",
+						"operation": "Float_Add",
+						"modValue": "5.0",
+						"modType": "System.Single",
+						"targetCollection": "Weapon"
+					}
+                },
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "Tarnkappe-MovementSpeed",
+						"Name": "Tarnkappe Movement Speed Debuff",
+						"Details": "The Tarnkappe has been activated, reducing the mech's movement speed.",
+						"Icon": "power-generator"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "WalkSpeed",
+						"operation": "Float_Multiply",
+						"modValue": "0.2",
+						"modType": "System.Single"
+					}
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInTargetPreview": false,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "Tarnkappe-Jamming",
+						"Name": "Tarnkappe Target Jamming",
+						"Details": "The Tarnkappe has been activated, making the mech significantly harder to hit with weapons or melee attacks.",
+						"Icon": "uixSvgIcon_equipment_Gyro"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "ToHitThisActor",
+						"operation": "Float_Add",
+						"modValue": "10.0",
+						"modType": "System.Single"
+					}
+				}
+            ],
+            "offlineStatusEffects": []
+        }
+    },
+    "StatName" : null,
+    "RelativeModifier" : 0,
+    "AbsoluteModifier" : 0,
+    "Description" : {
+        "Cost" : 4000000,
+        "Rarity" : 99,
+        "Purchasable" : false,
+        "Manufacturer" : "Herakleon",
+        "Model" : "Tarnkappe",
+        "UIName" : "Tarnkappe Target Jammer",
+        "Id" : "Gear_Tarnkappe_Target_Jammer",
+        "Name" : "Tarnkappe Target Jammer",
+        "Details" : "The Tarnkappe Target Jammer, named for a mythological Norse cloak, is a prototype defensive system that essentially creates ghost duplicates for enemy targeting, reducing their ability to effectively target the carrier. However, the Tarnkappe is extremely energy intensive, draining the mech's fusion core of power, preventing it from using weapons effectively or even from moving much. Still, the target jamming effect is powerful enough to be worth using.",
+        "Icon" : "dragon-shield"
+    },
+    "BonusValueA" : "",
+    "BonusValueB" : "",
+    "ComponentType" : "Upgrade",
+    "ComponentSubType" : "NotSet",
+    "PrefabIdentifier" : "",
+    "BattleValue" : 0,
+    "InventorySize" : 2,
+    "Tonnage" : 2.5,
+    "AllowedLocations" : "CenterTorso",
+    "DisallowedLocations" : "All",
+    "CriticalComponent" : false,
+    "statusEffects" : [],
+    "ComponentTags" : {
+        "items" : [
+			"BLACKLISTED"
+        ],
+        "tagSetSourceFile" : ""
+    }
+}
