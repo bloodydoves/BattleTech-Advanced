@@ -1,37 +1,33 @@
 {
 	"Custom": {
 		"ArmActuatorSupport": {
+			"LeftLimit": "Lower",
 			"RightLimit": "Lower"
-		},
-		"AssemblyVariant": {
-			"PrefabID": "Highlander",
-			"Exclude": false,
-			"Include": true
 		}
 	},
 	"Description": {
-		"Cost": 14000000,
-		"Rarity": 4,
+		"Cost": 11330000,
+		"Rarity": 5,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Highlander",
-		"Id": "chassisdef_highlander_HGN-734",
-		"Name": "Highlander",
-		"Details": "The 734 Highlander emphasizes its role as an urban combat 'Mech, produced by the Lyran Alliance in the wake of the civil war. The Gauss Rifle has been replaced with a massive LB-X Autocannon/20, the medium lasers have been upgraded to ER Medium Lasers, the SRM-6 was upgraded to a streak version with another Streak SRM-6 launcher added, as well as an ER Large Laser. Upgrading the standard fusion engine to a new Light Engine and removing the LRM-20 launcher allowed these changes.",
-		"Icon": "uixTxrIcon_highlander"
+		"UIName": "Gunslinger",
+		"Id": "chassisdef_gunslinger_GUN-1ERD",
+		"Name": "Gunslinger",
+		"Details": "The Gunslinger is a product of the Clan Invasion and would not exist if not for that violent conflict. The 'Mech was jointly designed by engineers from both the Draconis Combine and the Federated Commonwealth who were in the process of assisting the Free Rasalhague Republic. Powered by a 255-rated XL engine and augmented by a pair of assault-class jump jets, the Gunslinger can easily bring its twin Gauss Rifles and battery of Medium and Medium Pulse Lasers to bear in a fight. 15.5 tons of armor clad the mech and both a Guardian ECM and Beagle Active Probe provide e-war support.",
+		"Icon": "uixTxrIcon_gunslinger"
 	},
-	"MovementCapDefID": "movedef_highlander_HGN-733",
+	"MovementCapDefID": "movedef_battlemaster_BLR-1G",
 	"PathingCapDefID": "pathingdef_assault",
-	"HardpointDataDefID": "hardpointdatadef_highlander",
-	"PrefabIdentifier": "chrPrfMech_highlanderBase-001",
-	"PrefabBase": "highlander",
-	"Tonnage": 90,
-	"InitialTonnage": 9,
+	"HardpointDataDefID": "hardpointdatadef_gunslinger",
+	"PrefabIdentifier": "chrprfmech_gunslingerbase-001",
+	"PrefabBase": "gunslinger",
+	"Tonnage": 85,
+	"InitialTonnage": 8.5,
 	"weightClass": "ASSAULT",
-	"BattleValue": 9642000,
+	"BattleValue": 8742000,
 	"Heatsinks": 0,
-	"TopSpeed": 105,
+	"TopSpeed": 60,
 	"TurnRadius": 90,
 	"MaxJumpjets": 30,
 	"Stability": 200,
@@ -48,7 +44,7 @@
 	"SensorRangeMultiplier": 1,
 	"Signature": 0,
 	"Radius": 8,
-	"PunchesWithLeftArm": false,
+	"PunchesWithLeftArm": true,
 	"MeleeDamage": 95,
 	"MeleeInstability": 45,
 	"MeleeToHitModifier": 0,
@@ -59,7 +55,12 @@
 	"Locations": [
 		{
 			"Location": "Head",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 6,
 			"MaxArmor": 45,
@@ -70,51 +71,46 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Ballistic",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 150,
+			"MaxArmor": 140,
 			"MaxRearArmor": -1,
-			"InternalStructure": 75
+			"InternalStructure": 70
 		},
 		{
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
 					"Omni": false
 				},
-				{
-					"WeaponMount": "Missile",
-					"Omni": false
-				}
-			],
-			"Tonnage": 0,
-			"InventorySlots": 12,
-			"MaxArmor": 190,
-			"MaxRearArmor": 95,
-			"InternalStructure": 95
-		},
-		{
-			"Location": "CenterTorso",
-			"Hardpoints": [
 				{
 					"WeaponMount": "Energy",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
-			"InventorySlots": 15,
-			"MaxArmor": 290,
-			"MaxRearArmor": 145,
-			"InternalStructure": 145
+			"InventorySlots": 12,
+			"MaxArmor": 180,
+			"MaxRearArmor": 90,
+			"InternalStructure": 90
+		},
+		{
+			"Location": "CenterTorso",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 16,
+			"MaxArmor": 270,
+			"MaxRearArmor": 135,
+			"InternalStructure": 135
 		},
 		{
 			"Location": "RightTorso",
@@ -130,9 +126,9 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 190,
-			"MaxRearArmor": 95,
-			"InternalStructure": 95
+			"MaxArmor": 180,
+			"MaxRearArmor": 90,
+			"InternalStructure": 90
 		},
 		{
 			"Location": "RightArm",
@@ -142,39 +138,49 @@
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 150,
+			"MaxArmor": 140,
 			"MaxRearArmor": -1,
-			"InternalStructure": 75
+			"InternalStructure": 70
 		},
 		{
 			"Location": "LeftLeg",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 190,
+			"MaxArmor": 180,
 			"MaxRearArmor": -1,
-			"InternalStructure": 95
+			"InternalStructure": 90
 		},
 		{
 			"Location": "RightLeg",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 190,
+			"MaxArmor": 180,
 			"MaxRearArmor": -1,
-			"InternalStructure": 95
+			"InternalStructure": 90
 		}
 	],
 	"LOSSourcePositions": [
 		{
 			"x": 0,
-			"y": 17,
+			"y": 16,
 			"z": 0
 		},
 		{
@@ -191,7 +197,7 @@
 	"LOSTargetPositions": [
 		{
 			"x": 0,
-			"y": 17,
+			"y": 16,
 			"z": 0
 		},
 		{
@@ -215,17 +221,10 @@
 			"z": 1
 		}
 	],
-	"VariantName": "HGN-734",
-	"ChassisTags": {
-		"items": [],
-		"tagSetSourceFile": ""
-	},
-	"StockRole": "Ranged Assault & Heavy Cavalry",
-	"YangsThoughts": "The 734 Highlander emphasizes its role as an urban combat 'Mech, produced by the Lyran Alliance in the wake of the civil war. The Gauss Rifle has been replaced with a massive LB-X Autocannon/20, the medium lasers have been upgraded to ER Medium Lasers, the SRM-6 was upgraded to a streak version with another Streak SRM-6 launcher added, as well as an ER Large Laser. Upgrading the standard fusion engine to a new Light Engine and removing the LRM-20 launcher allowed these changes.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "Head",
-			"ComponentDefID": "Gear_Quirk_Cowl_Highlander",
+			"ComponentDefID": "Gear_Quirk_Cowl_Gunslinger",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
@@ -247,5 +246,12 @@
 			"prefabName": "",
 			"hasPrefabName": false
 		}
-	]
+	],
+	"VariantName": "GUN-1ERD",
+	"ChassisTags": {
+		"items": [],
+		"tagSetSourceFile": ""
+	},
+	"StockRole": "Heavy Sniper",
+	"YangsThoughts": "The Gunslinger is a product of the Clan Invasion and would not exist if not for that violent conflict. The 'Mech was jointly designed by engineers from both the Draconis Combine and the Federated Commonwealth who were in the process of assisting the Free Rasalhague Republic. Powered by a 255-rated XL engine and augmented by a pair of assault-class jump jets, the Gunslinger can easily bring its twin Gauss Rifles and battery of Medium and Medium Pulse Lasers to bear in a fight. 15.5 tons of armor clad the mech and both a Guardian ECM and Beagle Active Probe provide e-war support."
 }
