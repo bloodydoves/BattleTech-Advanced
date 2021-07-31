@@ -1,0 +1,72 @@
+{
+    "Custom": {
+        "Category": [
+            {
+                "CategoryID": "Airdrop"
+            }
+        ],
+        "BonusDescriptions": {
+            "Bonuses": [
+                "Airdrop",
+				"AirdropMech",
+				"AbilityResolveCost: 50",
+				"AbilityCBillCost: 100000",
+				"AirdropCount: 1",
+				"AirdropRange: 250"
+            ]
+        }
+    },
+    "StatName": null,
+    "RelativeModifier": 0,
+    "AbsoluteModifier": 0,
+    "Description": {
+        "Cost": 1000000,
+        "Rarity": 5,
+        "Purchasable": true,
+        "Manufacturer": "Gravity Industries",
+        "Model": "Beacon",
+        "UIName": "BattleMech Airdrop Beacon",
+        "Id": "Gear_Airdrop_Beacon_Mech",
+        "Name": "BattleMech Airdrop Beacon",
+        "Details": "This bulky and heavy communication equipment grants the carrying mech's pilot the ability to coordinate with the Argo and call in an airdropped BattleMech, either one of Yang's project Urbies or a mech provided by an ally faction. Mechs other than Yang's pet Urbie can be called in after buying their contract from the relevant faction.",
+        "Icon": "missile-mech"
+    },
+    "BonusValueA": "",
+    "BonusValueB": "",
+    "ComponentType": "Upgrade",
+    "ComponentSubType": "NotSet",
+    "PrefabIdentifier": "",
+    "BattleValue": 0,
+    "InventorySize": 3,
+    "Tonnage": 3,
+    "AllowedLocations": "All",
+    "DisallowedLocations": "All",
+    "CriticalComponent": false,
+    "statusEffects": [
+        {
+            "targetingData": {
+                "effectTriggerType": "OnActivation",
+                "effectTargetType": "Creator",
+                "showInStatusPanel": true
+            },
+			"effectType" : "ActiveAbility",
+			"Description" :
+			{
+				"Id" : "Airdrop_Beacon_Mech",
+				"Name" : "BattleMech Airdrop Beacon",
+				"Details" : "Activated ability (uses Firing action). Calls in a BattleMech Airdrop.",
+				"Icon" : "uixSvgIcon_action_sensorlock"
+			},
+			"activeAbilityEffectData" : 
+			{
+				"abilityName" : "AbilityDefCMD_UrbDrop"
+			}
+		}
+    ],
+    "ComponentTags": {
+        "items": [
+            "component_type_stock"
+        ],
+        "tagSetSourceFile": ""
+    }
+}
