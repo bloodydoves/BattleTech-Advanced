@@ -2,7 +2,7 @@
 	"Description": {
 		"Id": "AbilityDefP10a",
 		"Name": "LIGHTFOOT",
-		"Details": "PASSIVE: Superior piloting skill lets you use waypoint movement to plot a perfect path during a sprint.",
+		"Details": "PASSIVE: Superior piloting skill lets you use waypoint movement to plot a perfect path during a sprint as well as ignore land mines.",
 		"Icon": "run"
 	},
 	"DisplayParams": "ShowInMWTRay",
@@ -22,7 +22,7 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "StatusEffect-Lightfoot",
+				"Id": "StatusEffect-LightfootWaypoint",
 				"Name": "Superior Waypointing",
 				"Details": "This unit can use waypoint movement even while sprinting.",
 				"Icon": "run"
@@ -33,6 +33,31 @@
 				"modValue" : "true",
 				"modType" : "System.Boolean"
 			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-LightfootMines",
+				"Name": "Land Mine Ignore",
+				"Details": "This unit can ignore land mines.",
+				"Icon": "land-mine"
+			},
+			"statisticData": {
+                "statName": "MinefieldIFF",
+                "operation": "Set",
+                "modValue": "2.0",
+                "modType": "System.Single"
+            }
 			"nature": "Buff"
 		}
 	],
