@@ -2,20 +2,24 @@
 	"Name": "StrategicOperations",
 	"DLL": "StrategicOperations.dll",
 	"Hidden": true,
-	"Version": "1.0.0.903",
+	"Version": "1.0.0.91",
 	"Description": "",
 	"Author": "T-Bone",
 	"Website": "https://github.com/ajkroeg/StrategicOperations",
 	"ConflictsWith": [],
-	"DependsOn": ["Abilifier"],
+	"DependsOn": [
+		"Abilifier"
+	],
 	"CustomResourceTypes": [],
 	"Settings": {
 		"enableLogging": true,
+		"enableTrace": false,
 		"showStrafeCamera": false,
-		"strafeTargetsFriendlies": true,
 		"strafeEndsActivation": true,
 		"spawnTurretEndsActivation": true,
 		"deployProtection": 8,
+		"strafeTargetsFriendliesChance": 1.0,
+		"strafeNeutralBuildingsChance": 0.2,
 		"strafeSensorFactor": 4.0,
 		"strafeVelocityDefault": 150.0,
 		"timeBetweenAttacks": 0.1,
@@ -25,10 +29,10 @@
 		"strafeMinDistanceToEnd": 10.0,
 		"commandUseCostsMulti": 0,
 		"customSpawnReticleColor": {
-            "r": 0,
-            "g": 204,
-            "b": 0
-        },
+			"r": 0,
+			"g": 204,
+			"b": 0
+		},
 		"customSpawnReticleAsset": "select_spawn_reticle",
 		"deploymentBeaconEquipment": [
 			"Item.UpgradeDef.Gear_Contract_BattleArmor_FaShih_Liao",
@@ -121,9 +125,9 @@
 			"Path": "contracts"
 		},
 		{
-            "Type": "PilotDef",
-            "Path": "pilot"
-        },
+			"Type": "PilotDef",
+			"Path": "pilot"
+		},
 		{
 			"Type": "Texture2D",
 			"Path": "texture"
