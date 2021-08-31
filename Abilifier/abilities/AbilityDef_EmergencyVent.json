@@ -1,0 +1,41 @@
+{
+	"Description": {
+		"Id": "AbilityDef_EmergencyVent",
+		"Name": "EMERGENCY VENT",
+		"Details": "ACTION: Performs an emergency coolant dump, venting a massive amount of heat in a single action. Must be used before movement and consumes the unit's entire turn.",
+		"Icon": "uixSvgIcon_ability_coolantVent"
+	},
+	"ActivationTime": "ConsumedByMovement",
+	"Resource": "ConsumesActivation",
+	"ActivationCooldown": 0,
+	"Targeting": "ActorSelf",
+	"ResolveCost": 15,
+	"EffectData": [
+		{
+            "durationData": {
+                "duration": 1,
+                "stackLimit": 1
+            },
+            "targetingData": {
+                "effectTargetsCreator": true,
+                "effectTriggerType": "OnActivation",
+                "effectTargetType": "Creator",
+				"showInStatusPanel": true
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "AbilityDef_EmergencyVent",
+                "Name": "Emergency Venting",
+                "Details": "Dissipate 100 more heat this turn.",
+                "Icon": "uixSvgIcon_ability_coolantVent"
+            },
+            "nature": "Buff",
+            "statisticData": {
+                "statName": "HeatSinkCapacity",
+                "operation": "Int_Add",
+                "modValue": "100",
+                "modType": "System.Int32"
+            }
+        }
+	]
+}
