@@ -1,0 +1,44 @@
+{
+	"Description": {
+		"Id": "AbilityDefT10T",
+		"Name": "COMMAND AND CONTROL",
+		"Details": "ACTION: Using special on-board command and control electronics, this unit serves as a lance coordinator, improving all allied unit initiatives for 2 turns. 6 turn cooldown. <b><color=#099ff2>Costs 60 Resolve to use!</color></b>",
+		"Icon": "corporal"
+	},
+	"DisplayParams": "ShowInMWTRay",
+	"ReqSkill": "Tactics",
+	"ReqSkillLevel": 10,
+	"ActivationTime": "ConsumedByMovement",
+	"ActivationCooldown": 6,
+	"Targeting": "ActorSelf",
+	"ResolveCost": 60,
+	"EffectData": [
+		{
+            "durationData" : {
+                "duration" : 2,
+                "stackLimit" : 1
+            },
+            "targetingData" : {
+                "effectTriggerType" : "OnActivation",
+                "effectTargetType" : "AllLanceMates",
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "StatusEffect-CNCInitGain",
+                "Name" : "Command and Control Initiative Boosted",
+                "Details" : "All units in the lance gain 1 initiative for 2 turns.",
+                "Icon" : "corporal"
+            },
+            "nature" : "Buff",
+            "statisticData" : {
+                "statName" : "BaseInitiative",
+                "operation" : "Int_Add",
+                "modValue" : "-1",
+                "modType" : "System.Int32"
+            }
+        }
+	],
+	"IsPrimaryAbility": true,
+    "Priority": 6
+}

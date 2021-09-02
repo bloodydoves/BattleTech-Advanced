@@ -1,0 +1,47 @@
+{
+	"Description" : {
+		"Id" : "AbilityDefG10T",
+		"Name" : "OVERWHELMING AGGRESSION",
+		"Details" : "PASSIVE: This tank crew is such masters of their tank that they can squeeze extra firepower out of the guns, gaining a +20% flat bonus to damage with every attack.",
+		"Icon" : "crowned-explosion"
+	},
+    "DisplayParams" : "ShowInMWTRay",
+	"ReqSkill": "Gunnery",
+	"ReqSkillLevel": 10,
+	"ActivationTime": "Passive",
+	"EffectData" :
+	[
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-OverwhelmDmgBoost",
+				"Name": "Overwhelming Aggression",
+				"Details": "All damage dealt is increased by 20%.",
+				"Icon": "crowned-explosion"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "DamagePerShot",
+                "operation": "Float_Multiply",
+                "modValue": "1.2",
+                "modType": "System.Single",
+                "additionalRules": "NotSet",
+                "targetCollection": "Weapon",
+                "targetWeaponCategory": "NotSet",
+                "targetWeaponType": "NotSet",
+                "targetAmmoCategory": "NotSet",
+                "targetWeaponSubType": "NotSet"
+			}
+		}
+	],
+	"IsPrimaryAbility" : true
+}

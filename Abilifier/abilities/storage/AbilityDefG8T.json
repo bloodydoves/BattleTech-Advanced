@@ -1,0 +1,47 @@
+{
+	"Description" : {
+		"Id" : "AbilityDefG8T",
+		"Name" : "PERFECT TARGETING",
+		"Details" : "PASSIVE: This tank crew is able to use their increased knowledge of targeting systems to accurately target anything, letting them ignore 2 evasion on enemies at all times.",
+		"Icon" : "AdvancedTC"
+	},
+    "DisplayParams" : "ShowInMWTRay",
+	"ReqSkill": "Gunnery",
+	"ReqSkillLevel": 8,
+	"ActivationTime": "Passive",
+	"EffectData" :
+	[
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-PerfectTargetEvasiveIgnore",
+				"Name": "Perfect Targeting",
+				"Details": "This unit ignores two enemy evasion at all times.",
+				"Icon": "AdvancedTC"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "EvasivePipsIgnored",
+				"operation": "Float_Add",
+				"modValue": "2.0",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			}
+		}
+	],
+	"IsPrimaryAbility" : true
+}

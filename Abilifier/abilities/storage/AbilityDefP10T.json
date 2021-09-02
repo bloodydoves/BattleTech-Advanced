@@ -1,0 +1,129 @@
+{
+	"Description": {
+		"Id": "AbilityDefP10T",
+		"Name": "SPOTTER",
+		"Details": "ACTION: This unit uses targeting and spotting systems to transmit better movement paths to an allied unit, granting that unit increased movement speed (+60 meters) for a turn. Spotter has a 500 meter range. 4 turn cooldown. <b><color=#099ff2>Costs 40 Resolve to use!</color></b>",
+		"Icon": "spyglass"
+	},
+	"DisplayParams": "ShowInMWTRay",
+	"ReqSkill": "Tactics",
+	"ReqSkillLevel": 10,
+	"ActivationTime": "ConsumedByFiring",
+	"TargetFriendlyUnit": "FRIENDLY",
+	"IntParam2" : 500,
+	"ActivationCooldown": 4,
+	"Targeting": "ActorSelf",
+	"ResolveCost": 40,
+	"EffectData": [
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "SingleTarget",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-SpotterCruise",
+				"Name": "Spotted",
+				"Details": "This unit has been spotted for and has +60 meters of movement speed for the turn.",
+				"Icon": "spyglass"
+			},
+			"statisticData": {
+				"statName": "CruiseSpeed",
+				"operation": "Float_Add",
+				"modValue": "60",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "SingleTarget",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-SpotterFlank",
+				"Name": "Spotted",
+				"Details": "This unit has been spotted for and has +60 meters of movement speed for the turn.",
+				"Icon": "spyglass"
+			},
+			"statisticData": {
+				"statName": "FlankSpeed",
+				"operation": "Float_Add",
+				"modValue": "60",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "SingleTarget",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-SpotterFlank",
+				"Name": "Spotted",
+				"Details": "This unit has been spotted for and has +60 meters of movement speed for the turn.",
+				"Icon": "spyglass"
+			},
+			"statisticData": {
+				"statName": "WalkSpeed",
+				"operation": "Float_Add",
+				"modValue": "60",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "SingleTarget",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-SpotterFlank",
+				"Name": "Spotted",
+				"Details": "This unit has been spotted for and has +60 meters of movement speed for the turn.",
+				"Icon": "spyglass"
+			},
+			"statisticData": {
+				"statName": "CBTBE_RunMultiMod",
+				"operation": "Float_Add",
+				"modValue": "0.2",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	],
+	"IsPrimaryAbility": true,
+    "Priority": 6
+}

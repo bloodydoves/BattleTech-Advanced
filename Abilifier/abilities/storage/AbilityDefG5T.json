@@ -1,0 +1,104 @@
+{
+	"Description": {
+		"Id": "AbilityDefG5T",
+		"Name": "INTENSIFY FIREPOWER",
+		"Details": "ACTION: Intentionally pillbox this tank, losing all ability to move for the turn. In exchange, gain +30% damage for the turn. 3 turn cooldown. <b><color=#099ff2>Costs 30 Resolve to use!</color></b>",
+		"Icon": "hypersonic-bolt"
+	},
+	"DisplayParams": "ShowInMWTRay",
+	"ReqSkill": "Gunnery",
+	"ReqSkillLevel": 5,
+	"ActivationTime": "ConsumedByMovement",
+	"ActivationCooldown": 3,
+	"Targeting": "ActorSelf",
+	"ResolveCost": 30,
+	"EffectData": [
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-IntenseCruise",
+				"Name": "Intensified Firepower",
+				"Details": "This unit can no longer move but deals +30% damage for this turn.",
+				"Icon": "hypersonic-bolt"
+			},
+			"statisticData": {
+				"statName": "CruiseSpeed",
+				"operation": "Float_Multiply",
+				"modValue": "0.01",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-IntenseFlank",
+				"Name": "Intensified Firepower",
+				"Details": "This unit can no longer move but deals +30% damage for this turn.",
+				"Icon": "hypersonic-bolt"
+			},
+			"statisticData": {
+				"statName": "FlankSpeed",
+				"operation": "Float_Multiply",
+				"modValue": "0.01",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": 1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-IntenseDmgBoost",
+				"Name": "Intensified Firepower",
+				"Details": "This unit can no longer move but deals +30% damage for this turn.",
+				"Icon": "hypersonic-bolt"
+			},
+			"statisticData": {
+				"statName": "DamagePerShot",
+                "operation": "Float_Multiply",
+                "modValue": "1.3",
+                "modType": "System.Single",
+                "additionalRules": "NotSet",
+                "targetCollection": "Weapon",
+                "targetWeaponCategory": "NotSet",
+                "targetWeaponType": "NotSet",
+                "targetAmmoCategory": "NotSet",
+                "targetWeaponSubType": "NotSet"
+			},
+			"nature": "Buff"
+		}
+	],
+	"IsPrimaryAbility": true,
+    "Priority": 6
+}
