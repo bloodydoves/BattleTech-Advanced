@@ -2,14 +2,14 @@
 	"Description": {
 		"Id": "AbilityDefG5T",
 		"Name": "INTENSIFY FIREPOWER",
-		"Details": "ACTION: Intentionally pillbox this tank, losing all ability to move for the turn. In exchange, gain +30% damage for the turn. 3 turn cooldown. <b><color=#099ff2>Costs 30 Resolve to use!</color></b>",
+		"Details": "ACTION: Intentionally pillbox this tank, losing all ability to move for the following turn. In exchange, gain +30% damage this turn. 4 turn cooldown. <b><color=#099ff2>Costs 30 Resolve to use!</color></b>",
 		"Icon": "hypersonic-bolt"
 	},
 	"DisplayParams": "ShowInMWTRay",
 	"ReqSkill": "Gunnery",
 	"ReqSkillLevel": 5,
-	"ActivationTime": "ConsumedByMovement",
-	"ActivationCooldown": 3,
+	"ActivationTime": "ConsumedByFiring",
+	"ActivationCooldown": 4,
 	"Targeting": "ActorSelf",
 	"ResolveCost": 30,
 	"EffectData": [
@@ -23,6 +23,7 @@
 			"targetingData": {
 				"effectTriggerType": "OnActivation",
 				"effectTargetType": "Creator",
+				"forcePathRebuild": true,
 				"showInStatusPanel": true
 			},
 			"effectType": "StatisticEffect",
@@ -50,6 +51,7 @@
 			"targetingData": {
 				"effectTriggerType": "OnActivation",
 				"effectTargetType": "Creator",
+				"forcePathRebuild": true,
 				"showInStatusPanel": false
 			},
 			"effectType": "StatisticEffect",
@@ -70,6 +72,8 @@
 		{
 			"durationData": {
 				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
 				"stackLimit": 1
 			},
 			"targetingData": {
