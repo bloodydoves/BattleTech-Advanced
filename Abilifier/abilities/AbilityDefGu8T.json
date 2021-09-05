@@ -1,210 +1,41 @@
 {
-	"Description": {
-		"Id": "AbilityDefGu8T",
-		"Name": "BRUTE FORCE",
-		"Details": "ACTION: Supercharge this tank's movement, gaining 60 meters of speed, at the cost of damage to the tank's structure equal to 10% of its current structure value. 3 turn cooldown. <b><color=#099ff2>Costs 20 Resolve to use!</color></b>",
-		"Icon": "gear-stick"
+	"Description" : {
+		"Id" : "AbilityDefGu8T",
+		"Name" : "STREET RACER",
+		"Details" : "PASSIVE: This tank crew is able to their incredible mastery of their machine to literally dodge incoming fire, reducing damage taken by 20% at all times.",
+		"Icon" : "speedometer"
 	},
-	"DisplayParams": "ShowInMWTRay",
+    "DisplayParams" : "ShowInMWTRay",
 	"ReqSkill": "Guts",
 	"ReqSkillLevel": 8,
-	"ActivationTime": "ConsumedByFiring",
-	"ActivationCooldown": 3,
-	"Targeting": "ActorSelf",
-	"ResolveCost": 20,
-	"EffectData": [
+	"ActivationTime": "Passive",
+	"EffectData" :
+	[
 		{
 			"durationData": {
 				"duration": -1,
-				"ticksOnActivations": true,
-				"useActivationsOfTarget": true,
-				"stackLimit": 10
+				"stackLimit": 1
 			},
 			"targetingData": {
-				"effectTriggerType": "OnActivation",
+				"effectTriggerType": "Passive",
 				"effectTargetType": "Creator",
 				"showInStatusPanel": true
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "StatusEffect-BruteForceLeftSide",
-				"Name": "Brute Forcing It",
-				"Details": "This unit gains 60 meters of speed this turn but loses 10% of its structure to do it.",
-				"Icon": "gear-stick"
+				"Id": "StatusEffect-RacerDmgReduce",
+				"Name": "Street Racer",
+				"Details": "This unit takes 20% less damage at all times.",
+				"Icon": "speedometer"
 			},
+			"nature": "Buff",
 			"statisticData": {
-				"statName": "LeftSide.Structure",
+				"statName": "DamageReductionMultiplierAll",
 				"operation": "Float_Multiply",
-				"modValue": "0.9",
+				"modValue": "0.8",
 				"modType": "System.Single"
-			},
-			"nature": "Buff"
-		},
-		{
-			"durationData": {
-				"duration": -1,
-				"ticksOnActivations": true,
-				"useActivationsOfTarget": true,
-				"stackLimit": 10
-			},
-			"targetingData": {
-				"effectTriggerType": "OnActivation",
-				"effectTargetType": "Creator",
-				"showInStatusPanel": false
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "StatusEffect-BruteForceRightSide",
-				"Name": "Brute Forcing It",
-				"Details": "This unit gains 60 meters of speed this turn but loses 10% of its structure to do it.",
-				"Icon": "gear-stick"
-			},
-			"statisticData": {
-				"statName": "RightSide.Structure",
-				"operation": "Float_Multiply",
-				"modValue": "0.9",
-				"modType": "System.Single"
-			},
-			"nature": "Buff"
-		},
-		{
-			"durationData": {
-				"duration": -1,
-				"ticksOnActivations": true,
-				"useActivationsOfTarget": true,
-				"stackLimit": 10
-			},
-			"targetingData": {
-				"effectTriggerType": "OnActivation",
-				"effectTargetType": "Creator",
-				"showInStatusPanel": false
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "StatusEffect-BruteForceTurret",
-				"Name": "Brute Forcing It",
-				"Details": "This unit gains 60 meters of speed this turn but loses 10% of its structure to do it.",
-				"Icon": "gear-stick"
-			},
-			"statisticData": {
-				"statName": "Turret.Structure",
-				"operation": "Float_Multiply",
-				"modValue": "0.9",
-				"modType": "System.Single"
-			},
-			"nature": "Buff"
-		},
-		{
-			"durationData": {
-				"duration": -1,
-				"ticksOnActivations": true,
-				"useActivationsOfTarget": true,
-				"stackLimit": 10
-			},
-			"targetingData": {
-				"effectTriggerType": "OnActivation",
-				"effectTargetType": "Creator",
-				"showInStatusPanel": false
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "StatusEffect-BruteForceFront",
-				"Name": "Brute Forcing It",
-				"Details": "This unit gains 60 meters of speed this turn but loses 10% of its structure to do it.",
-				"Icon": "gear-stick"
-			},
-			"statisticData": {
-				"statName": "Front.Structure",
-				"operation": "Float_Multiply",
-				"modValue": "0.9",
-				"modType": "System.Single"
-			},
-			"nature": "Buff"
-		},
-		{
-			"durationData": {
-				"duration": -1,
-				"ticksOnActivations": true,
-				"useActivationsOfTarget": true,
-				"stackLimit": 10
-			},
-			"targetingData": {
-				"effectTriggerType": "OnActivation",
-				"effectTargetType": "Creator",
-				"showInStatusPanel": false
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "StatusEffect-BruteForceRear",
-				"Name": "Brute Forcing It",
-				"Details": "This unit gains 60 meters of speed this turn but loses 10% of its structure to do it.",
-				"Icon": "gear-stick"
-			},
-			"statisticData": {
-				"statName": "Rear.Structure",
-				"operation": "Float_Multiply",
-				"modValue": "0.9",
-				"modType": "System.Single"
-			},
-			"nature": "Buff"
-		},
-		{
-			"durationData": {
-				"duration": 1,
-				"ticksOnActivations": true,
-				"useActivationsOfTarget": true,
-				"stackLimit": 1
-			},
-			"targetingData": {
-				"effectTriggerType": "OnActivation",
-				"effectTargetType": "Creator",
-				"forcePathRebuild": true,
-				"showInStatusPanel": false
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "StatusEffect-BruteForceCruiseSpeed",
-				"Name": "Brute Forcing It",
-				"Details": "This unit gains 60 meters of speed this turn but loses 10% of its structure to do it.",
-				"Icon": "gear-stick"
-			},
-			"statisticData": {
-				"statName": "CruiseSpeed",
-				"operation": "Float_Add",
-				"modValue": "60",
-				"modType": "System.Single"
-			},
-			"nature": "Buff"
-		},
-		{
-			"durationData": {
-				"duration": 1,
-				"ticksOnActivations": true,
-				"useActivationsOfTarget": true,
-				"stackLimit": 1
-			},
-			"targetingData": {
-				"effectTriggerType": "OnActivation",
-				"effectTargetType": "Creator",
-				"forcePathRebuild": true,
-				"showInStatusPanel": false
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "StatusEffect-BruteForceFlankSpeed",
-				"Name": "Brute Forcing It",
-				"Details": "This unit gains 60 meters of speed this turn but loses 10% of its structure to do it.",
-				"Icon": "gear-stick"
-			},
-			"statisticData": {
-				"statName": "FlankSpeed",
-				"operation": "Float_Add",
-				"modValue": "60",
-				"modType": "System.Single"
-			},
-			"nature": "Buff"
+			}
 		}
 	],
-	"IsPrimaryAbility": true,
-    "Priority": 6
+	"IsPrimaryAbility" : true
 }

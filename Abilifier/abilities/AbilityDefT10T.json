@@ -2,24 +2,21 @@
 	"Description": {
 		"Id": "AbilityDefT10T",
 		"Name": "COMMAND AND CONTROL",
-		"Details": "ACTION: Using special on-board command and control electronics, this unit serves as a lance coordinator, improving all allied unit initiatives by 1 for 2 turns. 6 turn cooldown. <b><color=#099ff2>Costs 60 Resolve to use!</color></b>",
+		"Details": "PASSIVE: Using special on-board command and control electronics, this unit serves as a lance coordinator, improving all allied unit initiatives by 1.",
 		"Icon": "corporal"
 	},
 	"DisplayParams": "ShowInMWTRay",
 	"ReqSkill": "Tactics",
 	"ReqSkillLevel": 10,
-	"ActivationTime": "ConsumedByMovement",
-	"ActivationCooldown": 6,
-	"Targeting": "ActorSelf",
-	"ResolveCost": 60,
+	"ActivationTime": "Passive",
 	"EffectData": [
 		{
             "durationData" : {
-                "duration" : 2,
+                "duration" : -1,
                 "stackLimit" : 1
             },
             "targetingData" : {
-                "effectTriggerType" : "OnActivation",
+                "effectTriggerType" : "Passive",
                 "effectTargetType" : "AllLanceMates",
                 "showInStatusPanel" : true
             },
@@ -39,6 +36,5 @@
             }
         }
 	],
-	"IsPrimaryAbility": true,
-    "Priority": 6
+	"IsPrimaryAbility": true
 }
