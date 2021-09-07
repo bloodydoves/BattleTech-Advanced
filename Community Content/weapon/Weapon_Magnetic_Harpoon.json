@@ -1,0 +1,122 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/a/g/gaussrifle"
+			}
+		],
+		"ComponentExplosion": {
+			"ExplosionDamage": 50,
+			"StabilityDamage": 75
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"StabDamage: 75",
+				"WpnAccuracy: +1",
+				"WeaponBoom: 50"
+			]
+		}
+	},
+	"Category": "Ballistic",
+	"Type": "Gauss",
+	"WeaponSubType": "Gauss",
+	"MinRange": 0,
+	"MaxRange": 120,
+	"RangeSplit": [
+		30,
+		60,
+		90
+	],
+	"AmmoCategory": "Flamer",
+	"StartingAmmoCapacity": 15,
+	"HeatGenerated": 1,
+	"Damage": 10,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 0,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": -1,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": true,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 0,
+	"Instability": 75,
+	"WeaponEffectID": "WeaponEffect-Weapon_LRM10",
+	"Description": {
+		"Cost": 300000,
+		"Rarity": 0,
+		"Purchasable": true,
+		"Manufacturer": "Big Mack's Weapon Barn",
+		"Model": "Electro-Mag",
+		"UIName": "Magnetic Harpoon",
+		"Id": "Weapon_Magnetic_Harpoon",
+		"Name": "Mag. Harpoon",
+		"Details": "The Magnetic Harpoon is a semi-unique weapon, developed by an engineering firm with more ideas than common sense. Everyone said it'd never work and yet, here it is, fully functional and ready to rock. The Magnetic Harpoon fires a single 'harpoon' projectile. Upon impact, the projectile deposits a powerful magnet on the target that is then acted on by a companion magnet on the weapon itself, heavily destabilizing the target. While extremely effective against Battlemechs, the Magnetic Harpoon has virtually no effect against anything else, as hitting a tank with a powerful repulsor magnet doesn't actually really do anything.",
+		"Icon": "FerroMag"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "Gauss",
+	"BattleValue": 0,
+	"InventorySize": 4,
+	"Tonnage": 7,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": 2,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "NotSet",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false,
+				"hideApplicationFloatie": true
+			},
+			"effectType": "VFXEffect",
+			"Description": {
+				"Id": "StatusEffect-TAG-IndicatorVFX",
+				"Name": "TAG MARKED",
+				"Details": "Visual indicator of the TAG effect",
+				"Icon": "uixSvgIcon_status_sensorsImpaired"
+			},
+			"nature": "Debuff",
+			"vfxData": {
+				"vfxName": "vfxPrfPrtl_TAGmarker_loop",
+				"attachToImpactPoint": true,
+				"location": -1,
+				"isAttached": true,
+				"facesAttacker": false,
+				"isOneShot": false,
+				"duration": -1.0
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_extreme"
+		],
+		"tagSetSourceFile": ""
+	}
+}
