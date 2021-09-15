@@ -1,36 +1,37 @@
 {
 	"Custom": {
-		"ArmActuatorSupport": {
-			"LeftLimit": "Upper",
-			"RightLimit": "Upper"
+		"AssemblyVariant": {
+			"PrefabID": "Corsair",
+			"Exclude": false,
+			"Include": true
 		}
 	},
 	"Description": {
-		"Cost": 7765630,
-		"Rarity": 3,
+		"Cost": 12490000,
+		"Rarity": 4,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Toyama",
-		"Id": "chassisdef_toyama_TYM-MKD",
-		"Name": "Toyama",
-		"Details": "Made with a real mélange of weaponry and equipment, the Toyama TYM-MKD is a Word of Blake weapons test of the new Magnetic Harpoon weapon system. To back up the experimental weapon are a pair of equally experimental Haywire Medium Lasers, as well as a salvaged Clan-spec Enhanced ER PPC. Weirdly, the final weapon is an ancient Heavy Rifle for reasons unknown. A Clan Extra-Light 360-rated engine powers the mech to reasonable speeds while 16 DHS keep it all frosty.",
-		"Icon": "uixTxrIcon_toyama"
+		"UIName": "Corsair",
+		"Id": "chassisdef_corsair_COR-MKD",
+		"Name": "Corsair",
+		"Details": "This Corsair is even more of a Frankenmech than other Corsairs. Armed with a battery of Clan-spec Mortars and a strange variant on the ER Large Laser, this Corsair serves an admirable role as indirect fire support. The generous 8 tons of Mortar ammo is protected by CASE II and the mech is powered by an extremely hot and expensive Clan-spec XXL 250-rated engine. Truly, the pirates are off their rockers.",
+		"Icon": "uixTxrIcon_corsair"
 	},
-	"MovementCapDefID": "movedef_marauder_MAD-3R",
+	"MovementCapDefID": "movedef_corsair_COR-5R",
 	"PathingCapDefID": "pathingdef_heavy",
-	"HardpointDataDefID": "hardpointdatadef_toyama",
-	"PrefabIdentifier": "chrprfmech_toyamabase-001",
-	"PrefabBase": "toyama",
+	"HardpointDataDefID": "hardpointdatadef_rtcorsair1",
+	"PrefabIdentifier": "chrprfmech_rtcorsair1base-001",
+	"PrefabBase": "rtcorsair1",
 	"Tonnage": 75,
 	"InitialTonnage": 7.5,
 	"weightClass": "HEAVY",
-	"BattleValue": 7124000,
+	"BattleValue": 9360000,
 	"Heatsinks": 0,
-	"TopSpeed": 64,
+	"TopSpeed": 120,
 	"TurnRadius": 90,
 	"MaxJumpjets": 30,
-	"Stability": 160,
+	"Stability": 200,
 	"StabilityDefenses": [
 		0,
 		0,
@@ -72,6 +73,10 @@
 				{
 					"WeaponMount": "Ballistic",
 					"Omni": false
+				},
+				{
+					"WeaponMount": "Ballistic",
+					"Omni": false
 				}
 			],
 			"Tonnage": 0,
@@ -86,14 +91,6 @@
 				{
 					"WeaponMount": "Energy",
 					"Omni": false
-				},
-				{
-					"WeaponMount": "Energy",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "Energy",
-					"Omni": false
 				}
 			],
 			"Tonnage": 0,
@@ -104,7 +101,12 @@
 		},
 		{
 			"Location": "CenterTorso",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 16,
 			"MaxArmor": 230,
@@ -115,11 +117,7 @@
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
 					"Omni": false
 				}
 			],
@@ -133,11 +131,15 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Ballistic",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Ballistic",
 					"Omni": false
 				}
 			],
@@ -169,58 +171,58 @@
 	"LOSSourcePositions": [
 		{
 			"x": 0,
-			"y": 13.5,
-			"z": 1
+			"y": 17,
+			"z": 0
 		},
 		{
-			"x": 3,
-			"y": 13,
+			"x": 5,
+			"y": 16,
 			"z": -1
 		},
 		{
-			"x": -3,
-			"y": 13,
+			"x": -5,
+			"y": 16,
 			"z": -1
 		}
 	],
 	"LOSTargetPositions": [
 		{
 			"x": 0,
-			"y": 13.5,
+			"y": 17,
+			"z": 0
+		},
+		{
+			"x": 5,
+			"y": 16,
+			"z": -1
+		},
+		{
+			"x": -5,
+			"y": 16,
+			"z": -1
+		},
+		{
+			"x": 3.5,
+			"y": 5.5,
 			"z": 1
 		},
 		{
-			"x": 3,
-			"y": 13,
-			"z": -1
-		},
-		{
-			"x": -3,
-			"y": 13,
-			"z": -1
-		},
-		{
-			"x": 2.5,
-			"y": 7,
-			"z": -2.5
-		},
-		{
-			"x": -2.5,
-			"y": 7,
-			"z": -2.5
+			"x": -3.5,
+			"y": 5.5,
+			"z": 1
 		}
 	],
-	"VariantName": "TYM-MKD",
+	"VariantName": "COR-MKD",
 	"ChassisTags": {
 		"items": [],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "Multi-Role BattleMech",
-	"YangsThoughts": "Made with a real mélange of weaponry and equipment, the Toyama TYM-MKD is a Word of Blake weapons test of the new Magnetic Harpoon weapon system. To back up the experimental weapon are a pair of equally experimental Haywire Medium Lasers, as well as a salvaged Clan-spec Enhanced ER PPC. Weirdly, the final weapon is an ancient Heavy Rifle for reasons unknown. A Clan Extra-Light 360-rated engine powers the mech to reasonable speeds while 16 DHS keep it all frosty.",
+	"StockRole": "Scrapped-Together Frankenmech",
+	"YangsThoughts": "This Corsair is even more of a Frankenmech than other Corsairs. Armed with a battery of Clan-spec Mortars and a strange variant on the ER Large Laser, this Corsair serves an admirable role as indirect fire support. The generous 8 tons of Mortar ammo is protected by CASE II and the mech is powered by an extremely hot and expensive Clan-spec XXL 250-rated engine. Truly, the pirates are off their rockers",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "Gear_Quirk_EasytoPilot_Toyama",
+			"ComponentDefID": "Gear_Quirk_Rugged_Corsair",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
@@ -232,15 +234,48 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_structureslots_endosteel",
-			"SimGameUID": "",
+			"ComponentDefID": "emod_structureslots_standard",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
-			"IsFixed": true,
-			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": "",
+			"hasPrefabName": true
+		},
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "emod_engineslots_cxxl_center",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "emod_engineslots_size4",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "emod_engineslots_size4",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
 			"hasPrefabName": false
 		}
-	]
+	],
+	"CustomParts": {
+		"CustomParts": []
+	}
 }
