@@ -1,105 +1,107 @@
 {
-    "Custom": {
-        "Category": [{
-            "CategoryID": "Cockpit"
-        }],
-        "WorkOrderCosts": {
-            "Install": {
-                "TechCost": "[[Chassis.Tonnage]]/10",
-                "CBillCost": "[[Chassis.Tonnage]] * 1.15"
-            }
-        },
-        "BonusDescriptions": {
-            "Bonuses": [
-                "Breaching",
-                "CalledShot",
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "Cockpit"
+			}
+		],
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "[[Chassis.Tonnage]]/10",
+				"CBillCost": "[[Chassis.Tonnage]] * 1.15"
+			}
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"Breaching",
+				"CalledShot",
 				"IsCockpit"
 			]
-        },
-        "InventorySorter": {
-            "SortKey": "00201"
-        }
-    },
-    "StatName": null,
-    "RelativeModifier": 0,
-    "AbsoluteModifier": 0,
-    "Description": {
-        "Cost": 450000,
-        "Rarity": 4,
-        "Purchasable": true,
-        "Manufacturer": "NAIS",
-        "Model": "ADV TC",
-        "UIName": "FCS Adv TC",
-        "Id": "Gear_TTS_AdvancedTC",
-        "Name": "Targeting Computer",
-        "Details": "Targeting Computers are sophisticated pieces of electronics that, unlike normal targeting systems, physically help MechWarriors target their opponents. Complex stablizers and calculation algorithms permit much more precise weapons fire, even breaching enemy defensive stances and permitting the precise targeting of mech components. This allows for more surgical precision of weapons fire, especially with naturally accurate systems.",
-        "Icon": "AdvancedTC"
-    },
-    "BonusValueA": "Breaching Shot",
-    "BonusValueB": "",
-    "ComponentType": "Upgrade",
-    "ComponentSubType": "NotSet",
-    "PrefabIdentifier": "",
-    "BattleValue": 0,
-    "InventorySize": 1,
-    "Tonnage": 2,
-    "AllowedLocations": "Head",
-    "DisallowedLocations": "All",
-    "CriticalComponent": false,
-    "statusEffects": [
-        {
-            "durationData": {
-                "duration": -1
-            },
-            "targetingData": {
-                "effectTriggerType": "Passive",
-                "effectTargetType": "Creator"
-            },
-            "effectType": "StatisticEffect",
-            "Description": {
-                "Id": "TC-Breaching",
-                "Name": "BREACHING SHOT",
-                "Details": "PASSIVE: Attacking with a single weapon ignores COVER and GUARDED on the target.",
-                "Icon": "uixSvgIcon_ability_precisionstrike"
-            },
-            "statisticData": {
-                "statName": "PrecisionStrike",
-                "operation": "Set",
-                "modValue": "true",
-                "modType": "System.Boolean"
-            },
-            "nature": "Buff"
-        },
-        {
-            "durationData": {
-                "duration": -1
-            },
-            "targetingData": {
-                "effectTriggerType": "Passive",
-                "effectTargetType": "Creator"
-            },
-            "effectType": "StatisticEffect",
-            "Description": {
-                "Id": "TC-CalledShot",
-                "Name": "True Called Shot",
-                "Details": "PASSIVE: Making a Precision Strike gives the Called Shot interface.",
-                "Icon": "uixSvgIcon_ability_precisionstrike"
-            },
-            "statisticData": {
-                "statName": "IRTCalledShotAlwaysAllow",
-                "operation": "Set",
-                "modValue": "true",
-                "modType": "System.Boolean"
-            },
-            "nature": "Buff"
-        }
-    ],
-    "ComponentTags": {
-        "items": [
-            "component_type_stock",
+		},
+		"InventorySorter": {
+			"SortKey": "00201"
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 450000,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "NAIS",
+		"Model": "ADV TC",
+		"UIName": "FCS Adv TC",
+		"Id": "Gear_TTS_AdvancedTC",
+		"Name": "Targeting Computer",
+		"Details": "Targeting Computers are sophisticated pieces of electronics that, unlike normal targeting systems, physically help MechWarriors target their opponents. Complex stablizers and calculation algorithms permit much more precise weapons fire, even breaching enemy defensive stances and permitting the precise targeting of mech components. This allows for more surgical precision of weapons fire, especially with naturally accurate systems.",
+		"Icon": "AdvancedTC"
+	},
+	"BonusValueA": "Breaching Shot",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 2,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator"
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "TC-Breaching",
+				"Name": "BREACHING SHOT",
+				"Details": "PASSIVE: Attacking with a single weapon ignores COVER and GUARDED on the target.",
+				"Icon": "uixSvgIcon_ability_precisionstrike"
+			},
+			"statisticData": {
+				"statName": "PrecisionStrike",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator"
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "TC-CalledShot",
+				"Name": "True Called Shot",
+				"Details": "PASSIVE: Making a Precision Strike gives the Called Shot interface.",
+				"Icon": "uixSvgIcon_ability_precisionstrike"
+			},
+			"statisticData": {
+				"statName": "IRTCalledShotAlwaysAllow",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			},
+			"nature": "Buff"
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
 			"lv-vismode-zoom_m0_c-3_s10",
 			"lv-vismode-heat_m1_d50"
-        ],
-        "tagSetSourceFile": ""
-    }
+		],
+		"tagSetSourceFile": ""
+	}
 }

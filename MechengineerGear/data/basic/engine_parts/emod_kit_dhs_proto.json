@@ -1,6 +1,10 @@
 {
 	"Custom": {
-		"ComponentExplosion": { "HeatDamage": 50, "ExplosionDamage": 50, "StabilityDamage": 50 },
+		"ComponentExplosion": {
+			"HeatDamage": 50,
+			"ExplosionDamage": 50,
+			"StabilityDamage": 50
+		},
 		"BonusDescriptions": {
 			"Bonuses": [
 				"CoolingSystemProtoDHS",
@@ -22,148 +26,148 @@
 				"CBillCost": "2000 * [[Chassis.Tonnage]] * [[Chassis.Tonnage]] / 40"
 			}
 		},
-		"Category" : { 
-			"CategoryID" : "Cooling" 
+		"Category": {
+			"CategoryID": "Cooling"
 		},
-		"Flags" : { 
-			"flags" : [ 
-				"ignore_damage", 
-				"no_salvage"  
-			] 
-		}	
+		"Flags": {
+			"flags": [
+				"ignore_damage",
+				"no_salvage"
+			]
+		}
 	},
-    "DissipationCapacity" : 0,
-    "Description" : {
-        "Cost" : 3000000,
-        "Rarity" : 7,
-        "Purchasable" : true,
-        "Manufacturer" : "Prototype",
-        "Model" : "Engine Kit",
-        "UIName" : "Heat Sink Kit (Proto DHS)",
-        "Id" : "emod_kit_dhs_proto",
-        "Name" : "Heat Sink Kit Proto DHS",
-        "Details" : "Converts an SHS engine to use Prototype Double Heatsinks. Treating the Engines <b>Cooling System</b> with this experimental system improves the general performance at risk of a Fatal Explosion. The prototype nature of these heat sinks also increases the equipped mech's heat thresholds. <b><color=#099ff2>VOLATILE!</color></b>",
-        "Icon" : "uixSvgIcon_equipment_Heatsink"
-    },
-    "BonusValueA" : "",
-    "BonusValueB" : "",
-    "ComponentType" : "HeatSink",
-    "ComponentSubType" : "Heatsink",
-    "PrefabIdentifier" : "",
-    "BattleValue" : 0,
-    "InventorySize" : 1,
-    "Tonnage" : 0,
-    "AllowedLocations" : "CenterTorso",
-    "DisallowedLocations" : "All",
-    "CriticalComponent" : false,
-    "statusEffects" : [
-        {
-            "durationData" : {
-                "duration" : -1,
-                "ticksOnActivations" : false,
-                "useActivationsOfTarget" : false,
-                "ticksOnEndOfRound" : false,
-                "ticksOnMovements" : false,
-                "stackLimit" : 1,
-                "clearedWhenAttacked" : false
-            },
-            "targetingData" : {
-                "effectTriggerType" : "Passive",
-                "triggerLimit" : 0,
-                "extendDurationOnTrigger" : 0,
-                "specialRules" : "NotSet",
-                "effectTargetType" : "Creator",
-                "range" : 0,
-                "forcePathRebuild" : false,
-                "forceVisRebuild" : false,
-                "showInTargetPreview" : false,
-                "showInStatusPanel" : true
-            },
-            "effectType" : "StatisticEffect",
-            "Description" : {
-                "Id" : "StatusEffect-Heat_Max-PDHSKIT",
-                "Name" : "Prototype DHS system",
-                "Details" : "Improves cooling and Heat Threshholds.",
-                "Icon" : "uixSvgIcon_equipment_HeatBank"
-            },
-            "nature" : "Buff",
-            "statisticData" : {
-                "appliesEachTick" : false,
-                "effectsPersistAfterDestruction" : false,
-                "statName" : "MaxHeat",
-                "operation" : "Int_Add",
-                "modValue" : "30",
-                "modType" : "System.Int32",
-                "additionalRules" : "NotSet",
-                "targetCollection" : "NotSet",
-                "targetWeaponCategory" : "NotSet",
-                "targetWeaponType" : "NotSet",
-                "targetAmmoCategory" : "NotSet",
-                "targetWeaponSubType" : "NotSet"
-            },
-            "tagData" : null,
-            "floatieData" : null,
-            "actorBurningData" : null,
-            "vfxData" : null,
-            "instantModData" : null,
-            "poorlyMaintainedEffectData" : null
-        },
-        {
-            "durationData" : {
-                "duration" : -1,
-                "ticksOnActivations" : false,
-                "useActivationsOfTarget" : false,
-                "ticksOnEndOfRound" : false,
-                "ticksOnMovements" : false,
-                "stackLimit" : 1,
-                "clearedWhenAttacked" : false
-            },
-            "targetingData" : {
-                "effectTriggerType" : "Passive",
-                "triggerLimit" : 0,
-                "extendDurationOnTrigger" : 0,
-                "specialRules" : "NotSet",
-                "effectTargetType" : "Creator",
-                "range" : 0,
-                "forcePathRebuild" : false,
-                "forceVisRebuild" : false,
-                "showInTargetPreview" : false,
-                "showInStatusPanel" : false
-            },
-            "effectType" : "StatisticEffect",
-            "Description" : {
-                "Id" : "StatusEffect-Overheat_Threshold-PDHSKIT",
-                "Name" : "Increased Overheat Level",
-                "Details" : "Overheat threshold increased by 10",
-                "Icon" : "uixSvgIcon_equipment_HeatBank"
-            },
-            "nature" : "Buff",
-            "statisticData" : {
-                "appliesEachTick" : false,
-                "effectsPersistAfterDestruction" : false,
-                "statName" : "OverheatLevel",
-                "operation" : "Int_Add",
-                "modValue" : "10",
-                "modType" : "System.Int32",
-                "additionalRules" : "NotSet",
-                "targetCollection" : "NotSet",
-                "targetWeaponCategory" : "NotSet",
-                "targetWeaponType" : "NotSet",
-                "targetAmmoCategory" : "NotSet",
-                "targetWeaponSubType" : "NotSet"
-            },
-            "tagData" : null,
-            "floatieData" : null,
-            "actorBurningData" : null,
-            "vfxData" : null,
-            "instantModData" : null,
-            "poorlyMaintainedEffectData" : null
-        }	
+	"DissipationCapacity": 0,
+	"Description": {
+		"Cost": 3000000,
+		"Rarity": 7,
+		"Purchasable": true,
+		"Manufacturer": "Prototype",
+		"Model": "Engine Kit",
+		"UIName": "Heat Sink Kit (Proto DHS)",
+		"Id": "emod_kit_dhs_proto",
+		"Name": "Heat Sink Kit Proto DHS",
+		"Details": "Converts an SHS engine to use Prototype Double Heatsinks. Treating the Engines <b>Cooling System</b> with this experimental system improves the general performance at risk of a Fatal Explosion. The prototype nature of these heat sinks also increases the equipped mech's heat thresholds. <b><color=#099ff2>VOLATILE!</color></b>",
+		"Icon": "uixSvgIcon_equipment_Heatsink"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "HeatSink",
+	"ComponentSubType": "Heatsink",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0,
+	"AllowedLocations": "CenterTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-Heat_Max-PDHSKIT",
+				"Name": "Prototype DHS system",
+				"Details": "Improves cooling and Heat Threshholds.",
+				"Icon": "uixSvgIcon_equipment_HeatBank"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "MaxHeat",
+				"operation": "Int_Add",
+				"modValue": "30",
+				"modType": "System.Int32",
+				"additionalRules": "NotSet",
+				"targetCollection": "NotSet",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-Overheat_Threshold-PDHSKIT",
+				"Name": "Increased Overheat Level",
+				"Details": "Overheat threshold increased by 10",
+				"Icon": "uixSvgIcon_equipment_HeatBank"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "OverheatLevel",
+				"operation": "Int_Add",
+				"modValue": "10",
+				"modType": "System.Int32",
+				"additionalRules": "NotSet",
+				"targetCollection": "NotSet",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
+		}
 	],
-    "ComponentTags" : {
-        "items" : [
-            "component_type_stock"
-        ],
-        "tagSetSourceFile" : ""
-    }
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
 }

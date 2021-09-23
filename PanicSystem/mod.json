@@ -1,123 +1,102 @@
 {
-  "Name": "PanicSystem",
-  "Enabled": true,
+	"Name": "PanicSystem",
+	"Enabled": true,
 	"Hidden": true,
 	"Version": "4.2.0.32",
-  "Description": "Simulates MechWarrior and vehicle crew panic, and automatic ejections",
-  "Website": "https://github.com/BattletechModders/PanicSystem",
-  "DLL": "PanicSystem.dll",
-  "DLLEntryPoint": "PanicSystem.PanicSystem.Init",
-  "OptionallyDependsOn" : [ "Custom Ammo Categories" ],
-  "Manifest": [
-    {
-      "Type": "SVGAsset",
-      "Path": "icons",
-      "ShouldMergeJSON": false
-    }
-  ],
-  "Settings": {
-    "Debug": false,
-    "CombatLog": true,
-	"CombatSaves": false,
-    "PanicStates": [
-      "CONFIDENT",
-      "UNSETTLED",
-      "STRESSED",
-      "PANICKED"
-    ],
-    "PanicSpamSaveString": "SAVE",
-    "PanicSpamFailString": "FAIL",
-    "PanicSpamRollString": "ROLL",
-    "PanicSpamCritSaveString": "CRIT SAVE!",
-    "PanicSpamNoWeaponsString": "NO WEAPONS!",
-    "PanicSpamAloneString": "ALONE!",
-    "PanicSpamEjectResistString": "EJECT RESIST!",
-    "PanicCritFailString": "PANIC LEVEL CRITICAL!",
-    "PanicImprovedString": "IMPROVED TO",
-    "PanicWorsenedString": "",
-    "PanicCritSaveString": "CRIT SAVE!",
-    
-    "LimitManualEjection": false,
-    "LimitManualEjectionLevel": 0,
-    
-    "LimitManualEjectionTags": [
-      "pilot_example_tag"
-    ],
-    
-    "EnableEjectPhrases": true,
-    "EjectPhraseChance": 100,
-
-    "FloatieSpam": false,
-
-    "ColorizeFloaties": true,
-
-    "CountAsKills": true,
-
-    "PlayersCanPanic": true,
-    "EnemiesCanPanic": true,
-    "VehiclesCanPanic": false,
-    "ConsiderEjectingWithNoWeaps": true,
-    "LosingLimbAlwaysPanics": false,
-
-    "MinimumDamagePercentageRequired": 15,
-
-    "MinimumMechStructureDamageRequired": 10,
-    "MinimumVehicleStructureDamageRequired": 0,
-
-	"BleedLevelFactor": 10,
-	"BleedRateFactor": 25,
-
-    "UnsteadyModifier": 5,
-    "PilotHealthMaxModifier": 25,
-    "HeadMaxModifier": 25,
-    "CenterTorsoMaxModifier": 100,
-    "SideTorsoMaxModifier": 25,
-    "LeggedMaxModifier": 15,
-    "WeaponlessModifier": 15,
-    "AloneModifier": 5,
-    "ResolveMaxModifier": 10,
-    "OverheatedModifier": 0,
-    "ShutdownModifier": 0,
-    "HeatDamageFactor": 0,
-    "VehicleDamageFactor": 50,
-    "ArmorDamageThreshold": 0,
-
-    "MedianResolve": 50,
-    "VehicleResolveFactor": 0,
-
-    "UnsettledPanicFactor": 1,
-    "StressedPanicFactor" : 0.66,
-    "PanickedPanicFactor" : 0.50,
-
-    "GutsEjectionResistPerPoint": 3,
-    "TacticsEjectionResistPerPoint": 0,
-    "VehicleGutAndTacticsFactor": 0,
-
-    "BaseEjectionResist": 75,
-    "BaseVehicleEjectionResist": 0,
-
-    "MaxEjectChance": 100,
-
-    "EjectChanceFactor": 1,
-
-    "QuirksEnabled": true,
-    "BraveModifier": 5,
-    "DependableModifier": 5,
-    
-    "DistractingModifier": 5,
-
-    "UnsettledAimModifier": 1,
-    "StressedAimModifier": 1,
-    "StressedToHitModifier": -1,
-    "PanickedAimModifier": 2,
-    "PanickedToHitModifier": -2,
-
-    "MechHealthForCrit": 30,
-
-    "CritOver": 25,
-
-    "OneChangePerTurn" : false,
-	"ObeyPilotCanEjectStat": true,
-	"ObeyPilotCannotEjectTag": false
-  }
+	"Description": "Simulates MechWarrior and vehicle crew panic, and automatic ejections",
+	"Website": "https://github.com/BattletechModders/PanicSystem",
+	"DLL": "PanicSystem.dll",
+	"DLLEntryPoint": "PanicSystem.PanicSystem.Init",
+	"OptionallyDependsOn": [
+		"Custom Ammo Categories"
+	],
+	"Manifest": [
+		{
+			"Type": "SVGAsset",
+			"Path": "icons",
+			"ShouldMergeJSON": false
+		}
+	],
+	"Settings": {
+		"Debug": false,
+		"CombatLog": true,
+		"CombatSaves": false,
+		"PanicStates": [
+			"CONFIDENT",
+			"UNSETTLED",
+			"STRESSED",
+			"PANICKED"
+		],
+		"PanicSpamSaveString": "SAVE",
+		"PanicSpamFailString": "FAIL",
+		"PanicSpamRollString": "ROLL",
+		"PanicSpamCritSaveString": "CRIT SAVE!",
+		"PanicSpamNoWeaponsString": "NO WEAPONS!",
+		"PanicSpamAloneString": "ALONE!",
+		"PanicSpamEjectResistString": "EJECT RESIST!",
+		"PanicCritFailString": "PANIC LEVEL CRITICAL!",
+		"PanicImprovedString": "IMPROVED TO",
+		"PanicWorsenedString": "",
+		"PanicCritSaveString": "CRIT SAVE!",
+		"LimitManualEjection": false,
+		"LimitManualEjectionLevel": 0,
+		"LimitManualEjectionTags": [
+			"pilot_example_tag"
+		],
+		"EnableEjectPhrases": true,
+		"EjectPhraseChance": 100,
+		"FloatieSpam": false,
+		"ColorizeFloaties": true,
+		"CountAsKills": true,
+		"PlayersCanPanic": true,
+		"EnemiesCanPanic": true,
+		"VehiclesCanPanic": false,
+		"ConsiderEjectingWithNoWeaps": true,
+		"LosingLimbAlwaysPanics": false,
+		"MinimumDamagePercentageRequired": 15,
+		"MinimumMechStructureDamageRequired": 10,
+		"MinimumVehicleStructureDamageRequired": 0,
+		"BleedLevelFactor": 10,
+		"BleedRateFactor": 25,
+		"UnsteadyModifier": 5,
+		"PilotHealthMaxModifier": 25,
+		"HeadMaxModifier": 25,
+		"CenterTorsoMaxModifier": 100,
+		"SideTorsoMaxModifier": 25,
+		"LeggedMaxModifier": 15,
+		"WeaponlessModifier": 15,
+		"AloneModifier": 5,
+		"ResolveMaxModifier": 10,
+		"OverheatedModifier": 0,
+		"ShutdownModifier": 0,
+		"HeatDamageFactor": 0,
+		"VehicleDamageFactor": 50,
+		"ArmorDamageThreshold": 0,
+		"MedianResolve": 50,
+		"VehicleResolveFactor": 0,
+		"UnsettledPanicFactor": 1,
+		"StressedPanicFactor": 0.66,
+		"PanickedPanicFactor": 0.5,
+		"GutsEjectionResistPerPoint": 3,
+		"TacticsEjectionResistPerPoint": 0,
+		"VehicleGutAndTacticsFactor": 0,
+		"BaseEjectionResist": 75,
+		"BaseVehicleEjectionResist": 0,
+		"MaxEjectChance": 100,
+		"EjectChanceFactor": 1,
+		"QuirksEnabled": true,
+		"BraveModifier": 5,
+		"DependableModifier": 5,
+		"DistractingModifier": 5,
+		"UnsettledAimModifier": 1,
+		"StressedAimModifier": 1,
+		"StressedToHitModifier": -1,
+		"PanickedAimModifier": 2,
+		"PanickedToHitModifier": -2,
+		"MechHealthForCrit": 30,
+		"CritOver": 25,
+		"OneChangePerTurn": false,
+		"ObeyPilotCanEjectStat": true,
+		"ObeyPilotCannotEjectTag": false
+	}
 }

@@ -1,29 +1,28 @@
 {
-    "TargetID": "CareerDifficultySettings",
-    "Instructions": [
-        {
+	"TargetID": "CareerDifficultySettings",
+	"Instructions": [
+		{
 			"JSONPath": "$.difficultyList[?(@.ID== 'diff_startingplanet')].Options",
-            "Action": "ArrayAdd",
-            "Value":
-				{
-					"ID": "diff_Primitive",
-					"Name": "Primitive",
-					"TelemetryEventDesc": "",
-					"DifficultyValue": 2,
-					"CareerScoreModifier": 0.6,
-					"DifficultyConstants": [
-						{
-							"ConstantType": "CareerMode",
-							"ConstantName": "StartingSystems",
-							"ConstantValue": "Ålborg"
-						},
-						{
-							"ConstantType": "CareerMode",
-							"ConstantName": "StartingRandomMechLists",
-							"ConstantValue": "itemCollection_Mechs_Generic_Primitive_Light,itemCollection_Mechs_Generic_Primitive_Light,itemCollection_Mechs_Generic_Primitive_Light,itemCollection_Mechs_Generic_Primitive_Heavy,itemCollection_Mechs_Generic_Primitive_Heavy"
-						}
-					]
-				}
-         }
-    ]
+			"Action": "ArrayAdd",
+			"Value": {
+				"ID": "diff_Primitive",
+				"Name": "Primitive",
+				"TelemetryEventDesc": "",
+				"DifficultyValue": 2,
+				"CareerScoreModifier": 0.6,
+				"DifficultyConstants": [
+					{
+						"ConstantType": "CareerMode",
+						"ConstantName": "StartingSystems",
+						"ConstantValue": "\u00c5lborg"
+					},
+					{
+						"ConstantType": "CareerMode",
+						"ConstantName": "StartingRandomMechLists",
+						"ConstantValue": "itemCollection_Mechs_Generic_Primitive_Light,itemCollection_Mechs_Generic_Primitive_Light,itemCollection_Mechs_Generic_Primitive_Light,itemCollection_Mechs_Generic_Primitive_Heavy,itemCollection_Mechs_Generic_Primitive_Heavy"
+					}
+				]
+			}
+		}
+	]
 }

@@ -1,70 +1,61 @@
 {
-	"Description" : {
-		"Id" : "AbilityDefP5",
-		"Name" : "SURE MOVEMENT",
-		"Details" : "PASSIVE: 'Mechs piloted by this pilot gain one bonus Evasion charge after moving (can exceed the unit's maximum). If the move is not a sprint, jump, or charge to melee, the 'unit also gains ENTRENCHED (50% stability damage reduction).",
-		"Icon" : "uixSvgIcon_ability_sureFooting"
+	"Description": {
+		"Id": "AbilityDefP5",
+		"Name": "SURE MOVEMENT",
+		"Details": "PASSIVE: 'Mechs piloted by this pilot gain one bonus Evasion charge after moving (can exceed the unit's maximum). If the move is not a sprint, jump, or charge to melee, the 'unit also gains ENTRENCHED (50% stability damage reduction).",
+		"Icon": "uixSvgIcon_ability_sureFooting"
 	},
-    "DisplayParams" : "ShowInMWTRay",
-	"ReqSkill" : "Piloting",
-	"ReqSkillLevel" : 5,
-	"ActivationTime" : "Passive",
-	"EffectData" :
-	[
+	"DisplayParams": "ShowInMWTRay",
+	"ReqSkill": "Piloting",
+	"ReqSkillLevel": 5,
+	"ActivationTime": "Passive",
+	"EffectData": [
 		{
-			"durationData" :
-			{
-				"duration" : -1
+			"durationData": {
+				"duration": -1
 			},
-			"targetingData" : 
-			{
-				"effectTriggerType" : "OnActivation",
-				"effectTargetType" : "Creator"
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator"
 			},
-			"effectType" : "StatisticEffect",
-			"Description" :
-			{
-				"Id" : "AbilityDefP5",
-				"Name" : "SURE MOVEMENT",
-				"Details" : "PASSIVE: This unit generates an extra EVASIVE charge from normal movement actions (can exceed the unit's maximum).",
-				"Icon" : "uixSvgIcon_ability_sureFooting"
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDefP5",
+				"Name": "SURE MOVEMENT",
+				"Details": "PASSIVE: This unit generates an extra EVASIVE charge from normal movement actions (can exceed the unit's maximum).",
+				"Icon": "uixSvgIcon_ability_sureFooting"
 			},
-			"statisticData" : 
-			{
-				"statName" : "EvasivePipsGainedAdditional",
-				"operation" : "Int_Add",
-				"modValue" : "1",
-				"modType" : "System.Int32"
+			"statisticData": {
+				"statName": "EvasivePipsGainedAdditional",
+				"operation": "Int_Add",
+				"modValue": "1",
+				"modType": "System.Int32"
 			},
-			"nature" : "Buff"
+			"nature": "Buff"
 		},
 		{
-			"durationData" :
-			{
-				"duration" : -1
+			"durationData": {
+				"duration": -1
 			},
-			"targetingData" : 
-			{
-				"effectTriggerType" : "OnActivation",
-				"effectTargetType" : "Creator"
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator"
 			},
-			"effectType" : "StatisticEffect",
-			"Description" :
-			{
-				"Id" : "AbilityDefP5",
-				"Name" : "SURE MOVEMENT",
-				"Details" : "PASSIVE: This unit gains ENTRENCHED from normal movement actions.",
-				"Icon" : "uixSvgIcon_ability_sureFooting"
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDefP5",
+				"Name": "SURE MOVEMENT",
+				"Details": "PASSIVE: This unit gains ENTRENCHED from normal movement actions.",
+				"Icon": "uixSvgIcon_ability_sureFooting"
 			},
-			"statisticData" : 
-			{
-				"statName" : "GainEntrenchedOnNormalMove",
-				"operation" : "Set",
-				"modValue" : "true",
-				"modType" : "System.Boolean"
+			"statisticData": {
+				"statName": "GainEntrenchedOnNormalMove",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
 			},
-			"nature" : "Buff"
+			"nature": "Buff"
 		}
 	],
-	"IsPrimaryAbility" : true
+	"IsPrimaryAbility": true
 }
