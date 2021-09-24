@@ -1,77 +1,77 @@
 {
-    "Description": {
-        "Id": "Ammunition_Mortar_Suppressant",
-        "Name": "MORTAR Suppressant Ammo",
-        "UIName": "Suppressant",
-        "Details": "Massive rounds, designed for devastating impact, to be used in an AC/20.",
-        "Icon": null,
-        "Cost": 0,
-        "Rarity": 0,
-        "Purchasable": false
-    },
-    "Type": "Normal",
-    "Category": "MORTAR",
-    "HeatGenerated": 0,
-    "HeatGeneratedModifier": 1,
-    "ArmorDamageModifier": 1,
-    "ISDamageModifier": 1,
-    "CriticalDamageModifier": 1,
-    "DamagePerShot": -7.0,
-    "AOECapable": true,
-    "AOERange": 60,
-    "AOEDamage": 1,
-    "AlwaysIndirectVisuals": true,
-    "statusEffects": [
-        {
-            "durationData": {
-                "duration": 2,
-                "ticksOnActivations": true,
-                "useActivationsOfTarget": true,
-                "ticksOnEndOfRound": false,
-                "ticksOnMovements": false,
-                "stackLimit": 2,
-                "clearedWhenAttacked": false
-            },
-            "targetingData": {
-                "effectTriggerType": "OnHit",
-                "triggerLimit": 0,
-                "extendDurationOnTrigger": 0,
-                "specialRules": "NotSet",
-                "effectTargetType": "SingleTarget",
-                "range": 0,
-                "forcePathRebuild": false,
-                "forceVisRebuild": false,
-                "showInTargetPreview": true,
-                "showInStatusPanel": true
-            },
-            "effectType": "StatisticEffect",
-            "Description": {
-                "Id": "Suppressant-Effect",
-                "Name": "Heat Suppressed",
-                "Details": "High energy residue reduces heat efficiency by 10%.",
-                "Icon": "uixSvgIcon_equipment_ThermalExchanger"
-            },
-            "nature": "Debuff",
-            "statisticData": {
-                "appliesEachTick": false,
-                "effectsPersistAfterDestruction": false,
-                "statName": "HeatGenerated",
-                "operation": "Float_Multiply",
-                "modValue": "1.1",
-                "modType": "System.Single",
-                "additionalRules": "NotSet",
-                "targetCollection": "Weapon",
-                "targetWeaponCategory": "NotSet",
-                "targetWeaponType": "NotSet",
-                "targetAmmoCategory": "NotSet",
-                "targetWeaponSubType": "NotSet"
-            },
-            "tagData": null,
-            "floatieData": null,
-            "actorBurningData": null,
-            "vfxData": null,
-            "instantModData": null,
-            "poorlyMaintainedEffectData": null
-        }
-    ]
+	"Description": {
+		"Id": "Ammunition_Mortar_Suppressant",
+		"Name": "MORTAR Suppressant Ammo",
+		"UIName": "Suppressant",
+		"Details": "Massive rounds, designed for devastating impact, to be used in an AC/20.",
+		"Icon": null,
+		"Cost": 0,
+		"Rarity": 0,
+		"Purchasable": false
+	},
+	"Type": "Normal",
+	"Category": "MORTAR",
+	"HeatGenerated": 0,
+	"HeatGeneratedModifier": 1,
+	"ArmorDamageModifier": 1,
+	"ISDamageModifier": 1,
+	"CriticalDamageModifier": 1,
+	"DamagePerShot": -7.0,
+	"AOECapable": true,
+	"AOERange": 60,
+	"AOEDamage": 1,
+	"AlwaysIndirectVisuals": true,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": 2,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 2,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "SingleTarget",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": true,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Suppressant-Effect",
+				"Name": "Heat Suppressed",
+				"Details": "High energy residue reduces heat efficiency by 10%.",
+				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+			},
+			"nature": "Debuff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "HeatGenerated",
+				"operation": "Float_Multiply",
+				"modValue": "1.1",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
+		}
+	]
 }
