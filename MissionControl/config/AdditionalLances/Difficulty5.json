@@ -1,64 +1,73 @@
 {
-  "IncludeContractTypes": [],
-  "ExcludeContractTypes": [],
-  "LancePool": {
-    "ALL": ["Generic_Medium_Battle_Lance", "Damaged_Medium_Battle_Lance"]
-  },
-    "RewardsPerLance": [
-      {
-        "Type": "ContractBonusRewardFlat",
-        "Value": "65000"
-      },
-      {
-        "Type": "ContractBonusRewardPct",
-        "Value": "0.4"
-      },
-      {
-        "Type": "ContractBonusEmployerReputation",
-        "Value": "1"
-      },
-      {
-        "Type": "ContractBonusTargetReputation",
-        "Value": "-1"
-      }
-    ],
-  "Enemy": {
-    "Max": 1,
-    "ExcludeContractTypes": [],
-    "ChanceToSpawn": 0.4,
-    "EliteLances": {
-      "Conditions": ["IsEnemy"],
-      "Suffix": "_Elite",
-      "Overrides": {
-        "ChanceToSpawn": 0.6
-      }
-    },
-    "LancePool": {
-      "ALL": [
-        "Generic_Medium_Battle_Lance"
-      ]
-    }
-  },
-  "Allies": {
-    "Max": 0,
-    "ChanceToSpawn": 0,
-    "EliteLances": {
-      "Conditions": ["IsAlly"],
-      "Overrides": {
-        "Max": 0,
-        "ChanceToSpawn": 0
-      }
-    },
-    "LancePool": {
-      "ALL": [
-        "Generic_Medium_Battle_Lance"
-      ],
-      "CONTRACT_TYPE:DestroyBase": [
-        "Heavy_Missile_Lance", "Attacking_Lance"
-      ],
-      "CONTRACT_TYPE:DefendBase": [
-        "Brawler_Lance", "Defending_Lance"
-      ]
-    }
-  }
+	"IncludeContractTypes": [],
+	"ExcludeContractTypes": [],
+	"LancePool": {
+		"ALL": [
+			"Generic_Medium_Battle_Lance",
+			"Damaged_Medium_Battle_Lance"
+		]
+	},
+	"RewardsPerLance": [
+		{
+			"Type": "ContractBonusRewardFlat",
+			"Value": "65000"
+		},
+		{
+			"Type": "ContractBonusRewardPct",
+			"Value": "0.4"
+		},
+		{
+			"Type": "ContractBonusEmployerReputation",
+			"Value": "1"
+		},
+		{
+			"Type": "ContractBonusTargetReputation",
+			"Value": "-1"
+		}
+	],
+	"Enemy": {
+		"Max": 1,
+		"ExcludeContractTypes": [],
+		"ChanceToSpawn": 0.4,
+		"EliteLances": {
+			"Conditions": [
+				"IsEnemy"
+			],
+			"Suffix": "_Elite",
+			"Overrides": {
+				"ChanceToSpawn": 0.6
+			}
+		},
+		"LancePool": {
+			"ALL": [
+				"Generic_Medium_Battle_Lance"
+			]
+		}
+	},
+	"Allies": {
+		"Max": 0,
+		"ChanceToSpawn": 0,
+		"EliteLances": {
+			"Conditions": [
+				"IsAlly"
+			],
+			"Overrides": {
+				"Max": 0,
+				"ChanceToSpawn": 0
+			}
+		},
+		"LancePool": {
+			"ALL": [
+				"Generic_Medium_Battle_Lance"
+			],
+			"CONTRACT_TYPE:DestroyBase": [
+				"Heavy_Missile_Lance",
+				"Attacking_Lance"
+			],
+			"CONTRACT_TYPE:DefendBase": [
+				"Brawler_Lance",
+				"Defending_Lance"
+			]
+		}
+	}
 }

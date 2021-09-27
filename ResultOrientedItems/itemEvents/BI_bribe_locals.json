@@ -1,0 +1,51 @@
+{
+	"Item": "Gear_Bribe_Locals",
+	"AllowInInventory": false,
+	"Requirements": [
+		{
+			"Scope": "Company",
+			"RequirementComparisons": [
+				{
+					"obj": "Reputation.Owner",
+					"op": "LessThan",
+					"val": 10
+				}
+			]
+		},
+		{
+			"Scope": "StarSystem",
+			"ExclusionTags": [
+				"planet_pop_none",
+				"planet_pop_small"
+			],
+			"RequirementComparisons": []
+		},
+		{
+			"Scope": "StarSystem",
+			"ExclusionTags": [
+				"planet_pop_none",
+				"planet_faction_clanjadefalcon",
+				"planet_faction_clanwolf",
+				"planet_faction_clanghostbear",
+				"planet_faction_clannovacat",
+				"planet_faction_clandiamondshark"
+			],
+			"RequirementComparisons": []
+		}
+	],
+	"Results": [
+		{
+			"Scope": "Company",
+			"Stats": [
+				{
+					"typeString": "System.Int32",
+					"name": "Reputation.Owner",
+					"value": "15",
+					"set": false
+				}
+			],
+			"TemporaryResult": false,
+			"ResultDuration": 0
+		}
+	]
+}

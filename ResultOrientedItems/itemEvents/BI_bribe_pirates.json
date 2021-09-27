@@ -1,0 +1,31 @@
+{
+	"Item": "Gear_Bribe_Pirates",
+	"AllowInInventory": false,
+	"Requirements": [
+		{
+			"Scope": "Company",
+			"RequirementComparisons": [
+				{
+					"obj": "Reputation.AuriganPirates",
+					"op": "LessThan",
+					"val": 10
+				}
+			]
+		}
+	],
+	"Results": [
+		{
+			"Scope": "Company",
+			"Stats": [
+				{
+					"typeString": "System.Int32",
+					"name": "Reputation.AuriganPirates",
+					"value": "15",
+					"set": false
+				}
+			],
+			"TemporaryResult": false,
+			"ResultDuration": 0
+		}
+	]
+}

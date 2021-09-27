@@ -1,194 +1,194 @@
 {
-    "StartingMilestoneID": "ms_fp_StoryTime1_001_Start",
-    "Milestones": [
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime1_001_Start",
-                "Name": "Start",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": null,
-                    "AddedTags": {},
-                    "RemovedTags": {},
-                    "Stats": [],
-                    "Actions": [
-                        {
-                            "Type" : "System_PlayVideo",
-                            "value" : "1B-betrayal.bk2",
-                            "valueConstant" : null
-                        },
-                        {
-                            "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime1_002_Mission",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        }
-                    ],
-                    "ForceEvents": [],
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime1_002_Mission",
-                "Name": "A-Mission",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": null,
-                    "AddedTags": {},
-                    "RemovedTags": {},
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "Flashpoint_AddContract",
-                            "value": "",
-                            "valueConstant": null,
-                            "additionalValues": [
-                                null,
-                                null,
-                                "StoryTime_1_Retreat_Default",
-                                "AuriganRestoration",
-                                "AuriganDirectorate",
-                                "2",
-                                "ms_fp_StoryTime1_003_Complete"
-                            ]
-                        },
-                        {
-                            "Type": "System_ForceDropshipRoom",
-                            "value": "Contract",
-                            "valueConstant": null,
-                            "additionalValues": [
-                                "BaseFlashpoint"
-                            ]
-                        }
-                    ],
-                    "ForceEvents": null,
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime1_003_Complete",
-                "Name": "Cancel-Complete",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": null,
-                    "AddedTags": {
-                        "items": [
-                            "flashpoint_StoryTime1_complete"
-                        ],
-                        "tagSetSourceFile": "Tags/CompanyTags"
-                    },
-                    "RemovedTags": {},
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "System_ForceDropshipRoom",
-                            "value": "Ship",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        },
-                        {
-                            "Type": "Flashpoint_CompleteFlashpoint",
-                            "value": "ms_fp_StoryTime1_004_Reward",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        },
-                        {
-                            "Type" : "System_PauseNotification",
-                            "value" : "Punching out of your overheating mech, the last thing you remember is noise and pain and a vast open sky.",
-                            "additionalValues" : [
-                                  "Ejecting",
-                                  "castDef_None"
-                            ],
-                            "valueConstant" : null
-                        }
-                    ],
-                    "ForceEvents": [
-                        {
-                            "Scope" : "Company",
-                            "EventID" : "forcedevent_FP_StoryTime1_A",
-                            "MinDaysWait" : 0,
-                            "MaxDaysWait" : 0,
-                            "Probability" : 100
-                        }
-                    ],
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime1_004_Reward",
-                "Name": "Reward",
-                "Details": "Extra rewards, including Reputation and bonus C-Bills go here",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": null,
-                    "AddedTags": {},
-                    "RemovedTags": {},
-                    "Stats": [
-                        {
-                            "typeString": "System.Int32",
-                            "name": "Funds",
-                            "value": "180000",
-                            "set": false,
-                            "valueConstant": null
-                        },
-                        {
-                            "typeString": "System.Int32",
-                            "name": "Reputation.MercenaryReviewBoard",
-                            "value": "8",
-                            "set": false,
-                            "valueConstant": null
-                        }
-                    ],
-                    "Actions": null,
-                    "ForceEvents": null,
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        }
-    ]
+	"StartingMilestoneID": "ms_fp_StoryTime1_001_Start",
+	"Milestones": [
+		{
+			"Description": {
+				"Id": "ms_fp_StoryTime1_001_Start",
+				"Name": "Start",
+				"Details": "flashpoint",
+				"Icon": null
+			},
+			"Scope": "Company",
+			"Requirements": [],
+			"Results": [
+				{
+					"Scope": "Company",
+					"Requirements": null,
+					"AddedTags": {},
+					"RemovedTags": {},
+					"Stats": [],
+					"Actions": [
+						{
+							"Type": "System_PlayVideo",
+							"value": "1B-betrayal.bk2",
+							"valueConstant": null
+						},
+						{
+							"Type": "Flashpoint_SetNextMilestone",
+							"value": "ms_fp_StoryTime1_002_Mission",
+							"valueConstant": null,
+							"additionalValues": null
+						}
+					],
+					"ForceEvents": [],
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				}
+			],
+			"Repeatable": false,
+			"UseRandomInvocation": false,
+			"InvokeChance": 0
+		},
+		{
+			"Description": {
+				"Id": "ms_fp_StoryTime1_002_Mission",
+				"Name": "A-Mission",
+				"Details": "flashpoint",
+				"Icon": null
+			},
+			"Scope": "Company",
+			"Requirements": [],
+			"Results": [
+				{
+					"Scope": "Company",
+					"Requirements": null,
+					"AddedTags": {},
+					"RemovedTags": {},
+					"Stats": null,
+					"Actions": [
+						{
+							"Type": "Flashpoint_AddContract",
+							"value": "",
+							"valueConstant": null,
+							"additionalValues": [
+								null,
+								null,
+								"StoryTime_1_Retreat_Default",
+								"AuriganRestoration",
+								"AuriganDirectorate",
+								"2",
+								"ms_fp_StoryTime1_003_Complete"
+							]
+						},
+						{
+							"Type": "System_ForceDropshipRoom",
+							"value": "Contract",
+							"valueConstant": null,
+							"additionalValues": [
+								"BaseFlashpoint"
+							]
+						}
+					],
+					"ForceEvents": null,
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				}
+			],
+			"Repeatable": false,
+			"UseRandomInvocation": false,
+			"InvokeChance": 0
+		},
+		{
+			"Description": {
+				"Id": "ms_fp_StoryTime1_003_Complete",
+				"Name": "Cancel-Complete",
+				"Details": "flashpoint",
+				"Icon": null
+			},
+			"Scope": "Company",
+			"Requirements": [],
+			"Results": [
+				{
+					"Scope": "Company",
+					"Requirements": null,
+					"AddedTags": {
+						"items": [
+							"flashpoint_StoryTime1_complete"
+						],
+						"tagSetSourceFile": "Tags/CompanyTags"
+					},
+					"RemovedTags": {},
+					"Stats": null,
+					"Actions": [
+						{
+							"Type": "System_ForceDropshipRoom",
+							"value": "Ship",
+							"valueConstant": null,
+							"additionalValues": null
+						},
+						{
+							"Type": "Flashpoint_CompleteFlashpoint",
+							"value": "ms_fp_StoryTime1_004_Reward",
+							"valueConstant": null,
+							"additionalValues": null
+						},
+						{
+							"Type": "System_PauseNotification",
+							"value": "Punching out of your overheating mech, the last thing you remember is noise and pain and a vast open sky.",
+							"additionalValues": [
+								"Ejecting",
+								"castDef_None"
+							],
+							"valueConstant": null
+						}
+					],
+					"ForceEvents": [
+						{
+							"Scope": "Company",
+							"EventID": "forcedevent_FP_StoryTime1_A",
+							"MinDaysWait": 0,
+							"MaxDaysWait": 0,
+							"Probability": 100
+						}
+					],
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				}
+			],
+			"Repeatable": false,
+			"UseRandomInvocation": false,
+			"InvokeChance": 0
+		},
+		{
+			"Description": {
+				"Id": "ms_fp_StoryTime1_004_Reward",
+				"Name": "Reward",
+				"Details": "Extra rewards, including Reputation and bonus C-Bills go here",
+				"Icon": null
+			},
+			"Scope": "Company",
+			"Requirements": [],
+			"Results": [
+				{
+					"Scope": "Company",
+					"Requirements": null,
+					"AddedTags": {},
+					"RemovedTags": {},
+					"Stats": [
+						{
+							"typeString": "System.Int32",
+							"name": "Funds",
+							"value": "180000",
+							"set": false,
+							"valueConstant": null
+						},
+						{
+							"typeString": "System.Int32",
+							"name": "Reputation.MercenaryReviewBoard",
+							"value": "8",
+							"set": false,
+							"valueConstant": null
+						}
+					],
+					"Actions": null,
+					"ForceEvents": null,
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				}
+			],
+			"Repeatable": false,
+			"UseRandomInvocation": false,
+			"InvokeChance": 0
+		}
+	]
 }

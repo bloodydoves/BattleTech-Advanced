@@ -1,341 +1,341 @@
 {
-    "StartingMilestoneID": "ms_fp_StoryTime6_001_Start",
-    "Milestones": [
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime6_001_Start",
-                "Name": "Start",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": null,
-                    "AddedTags": {},
-                    "RemovedTags": {},
-                    "Stats": [],
-                    "Actions": [
-                        {
-                            "Type": "System_SimGameCharacterVisible",
-                            "value": true,
-                            "additionalValues": [
-                                "Kamea"
-                            ]
-                        },
-                        {
-                            "Type" : "System_StartConversation",
-                            "value": "StoryTime6-GraveRobbing",
-                            "additionalValues": [
-                                "GRAVE ROBBING",
-                                "In Orbit — Artru"
-                            ]
-                        },
-                        {
-                            "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime6_002_Mission",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        }
-                    ],
-                    "ForceEvents": [],
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime6_002_Mission",
-                "Name": "Mission",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": null,
-                    "AddedTags": {},
-                    "RemovedTags": {},
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "Flashpoint_StartContract",
-                            "value": "",
-                            "valueConstant": null,
-                            "additionalValues": [
-                                "",
-                                "",
-                                "StoryTime_6_a_TreasureTrove_Default",
-                                "AuriganRestoration",
-                                null,
-                                "6",
-                                "ms_fp_StoryTime6_003_Cutscene",
-                                null,
-                                null,
-                                null,
-                                null,
-                                null
-                            ]
-                        }
-                    ],
-                    "ForceEvents": null,
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime6_003_Cutscene",
-                "Name": "Exit flow to event for cinematic",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": null,
-                    "AddedTags": {},
-                    "RemovedTags": {},
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime6_004_Mission",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        },
-                        {
-                            "Type" : "System_PauseNotification",
-                            "value" : "Commander, I finally identified that incoming ship... Not good news.",
-                            "additionalValues" : [
-                                  "Castle Nautilus",
-                                  "castDef_SumiereDefault"
-                            ],
-                            "valueConstant" : null
-                        }
-                    ],
-                    "ForceEvents": [
-                        {
-                            "Scope" : "Company",
-                            "EventID" : "forcedevent_FP_StoryTime6_A",
-                            "MinDaysWait" : 0,
-                            "MaxDaysWait" : 0,
-                            "Probability" : 100
-                        }
-                    ],
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime6_004_Mission",
-                "Name": "Mission 2",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": null,
-                    "AddedTags": {},
-                    "RemovedTags": {},
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "Flashpoint_StartContract",
-                            "value": "",
-                            "valueConstant": null,
-                            "additionalValues": [
-                                "",
-                                "",
-                                "StoryTime_6_b_TreasureTrove_Default",
-                                "AuriganRestoration",
-                                "TaurianConcordat",
-                                "6",
-                                "ms_fp_StoryTime6_005_Cutscene",
-                                null,
-                                null,
-                                null,
-                                null,
-                                null
-                            ]
-                        }
-                    ],
-                    "ForceEvents": null,
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime6_005_Cutscene",
-                "Name": "Cutscene or skip",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Company",
-                        "RequirementTags": {},
-                        "ExclusionTags": {},
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {},
-                    "RemovedTags": {},
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime6_006_Complete",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        },
-                        {
-                            "Type" : "System_PauseNotification",
-                            "value" : "As the Leopard lifts off, Another transmission comes in...",
-                            "additionalValues" : [
-                                  "Armory",
-                                  "castDef_None"
-                            ],
-                            "valueConstant" : null
-                        }
-                    ],
-                    "ForceEvents": [
-                        {
-                            "Scope" : "Company",
-                            "EventID" : "forcedevent_FP_StoryTime6_B",
-                            "MinDaysWait" : 0,
-                            "MaxDaysWait" : 0,
-                            "Probability" : 100
-                        }
-                    ],
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime6_006_Complete",
-                "Name": "Complete",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Company",
-                        "RequirementTags": {},
-                        "ExclusionTags": {},
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {
-                        "items": [
-                            "flashpoint_StoryTime6_complete"
-                        ],
-                        "tagSetSourceFile": "Tags/CompanyTags"
-                    },
-                    "RemovedTags": {},
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "Flashpoint_CompleteFlashpoint",
-                            "value": "ms_fp_StoryTime6_007_Reward",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        }
-                    ],
-                    "ForceEvents": [],
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime6_007_Reward",
-                "Name": "Reward",
-                "Details": "Extra rewards, including Reputation and bonus C-Bills go here",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Company",
-                        "RequirementTags": {},
-                        "ExclusionTags": {},
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {},
-                    "RemovedTags": {},
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type" : "System_PauseNotification",
-                            "value" : "Lady Arano has left a note, alongside a new mech. \"In thanks for your help on Artru, I offer you this Star League-era mech, {COMMANDER.Callsign}. May it carry you to victory in the days to come.\" You can almost feel the excitement radiating from Yang as he shows off your latest aquisition.",
-                            "additionalValues" : [
-                                  "A Gift",
-                                  "castDef_KameaDefault"
-                            ],
-                            "valueConstant" : null
-                        },
-                        {
-                            "Type" : "System_SimGameCharacterVisible",
-                            "value" : false,
-                            "additionalValues" : [
-                                "Kamea"
-                            ]
-                        }
-                    ],
-                    "ForceEvents": [],
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        }
-    ]
+	"StartingMilestoneID": "ms_fp_StoryTime6_001_Start",
+	"Milestones": [
+		{
+			"Description": {
+				"Id": "ms_fp_StoryTime6_001_Start",
+				"Name": "Start",
+				"Details": "flashpoint",
+				"Icon": null
+			},
+			"Scope": "Company",
+			"Requirements": [],
+			"Results": [
+				{
+					"Scope": "Company",
+					"Requirements": null,
+					"AddedTags": {},
+					"RemovedTags": {},
+					"Stats": [],
+					"Actions": [
+						{
+							"Type": "System_SimGameCharacterVisible",
+							"value": true,
+							"additionalValues": [
+								"Kamea"
+							]
+						},
+						{
+							"Type": "System_StartConversation",
+							"value": "StoryTime6-GraveRobbing",
+							"additionalValues": [
+								"GRAVE ROBBING",
+								"In Orbit \u2014 Artru"
+							]
+						},
+						{
+							"Type": "Flashpoint_SetNextMilestone",
+							"value": "ms_fp_StoryTime6_002_Mission",
+							"valueConstant": null,
+							"additionalValues": null
+						}
+					],
+					"ForceEvents": [],
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				}
+			],
+			"Repeatable": false,
+			"UseRandomInvocation": false,
+			"InvokeChance": 0
+		},
+		{
+			"Description": {
+				"Id": "ms_fp_StoryTime6_002_Mission",
+				"Name": "Mission",
+				"Details": "flashpoint",
+				"Icon": null
+			},
+			"Scope": "Company",
+			"Requirements": [],
+			"Results": [
+				{
+					"Scope": "Company",
+					"Requirements": null,
+					"AddedTags": {},
+					"RemovedTags": {},
+					"Stats": null,
+					"Actions": [
+						{
+							"Type": "Flashpoint_StartContract",
+							"value": "",
+							"valueConstant": null,
+							"additionalValues": [
+								"",
+								"",
+								"StoryTime_6_a_TreasureTrove_Default",
+								"AuriganRestoration",
+								null,
+								"6",
+								"ms_fp_StoryTime6_003_Cutscene",
+								null,
+								null,
+								null,
+								null,
+								null
+							]
+						}
+					],
+					"ForceEvents": null,
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				}
+			],
+			"Repeatable": false,
+			"UseRandomInvocation": false,
+			"InvokeChance": 0
+		},
+		{
+			"Description": {
+				"Id": "ms_fp_StoryTime6_003_Cutscene",
+				"Name": "Exit flow to event for cinematic",
+				"Details": "flashpoint",
+				"Icon": null
+			},
+			"Scope": "Company",
+			"Requirements": [],
+			"Results": [
+				{
+					"Scope": "Company",
+					"Requirements": null,
+					"AddedTags": {},
+					"RemovedTags": {},
+					"Stats": null,
+					"Actions": [
+						{
+							"Type": "Flashpoint_SetNextMilestone",
+							"value": "ms_fp_StoryTime6_004_Mission",
+							"valueConstant": null,
+							"additionalValues": null
+						},
+						{
+							"Type": "System_PauseNotification",
+							"value": "Commander, I finally identified that incoming ship... Not good news.",
+							"additionalValues": [
+								"Castle Nautilus",
+								"castDef_SumiereDefault"
+							],
+							"valueConstant": null
+						}
+					],
+					"ForceEvents": [
+						{
+							"Scope": "Company",
+							"EventID": "forcedevent_FP_StoryTime6_A",
+							"MinDaysWait": 0,
+							"MaxDaysWait": 0,
+							"Probability": 100
+						}
+					],
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				}
+			],
+			"Repeatable": false,
+			"UseRandomInvocation": false,
+			"InvokeChance": 0
+		},
+		{
+			"Description": {
+				"Id": "ms_fp_StoryTime6_004_Mission",
+				"Name": "Mission 2",
+				"Details": "flashpoint",
+				"Icon": null
+			},
+			"Scope": "Company",
+			"Requirements": [],
+			"Results": [
+				{
+					"Scope": "Company",
+					"Requirements": null,
+					"AddedTags": {},
+					"RemovedTags": {},
+					"Stats": null,
+					"Actions": [
+						{
+							"Type": "Flashpoint_StartContract",
+							"value": "",
+							"valueConstant": null,
+							"additionalValues": [
+								"",
+								"",
+								"StoryTime_6_b_TreasureTrove_Default",
+								"AuriganRestoration",
+								"TaurianConcordat",
+								"6",
+								"ms_fp_StoryTime6_005_Cutscene",
+								null,
+								null,
+								null,
+								null,
+								null
+							]
+						}
+					],
+					"ForceEvents": null,
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				}
+			],
+			"Repeatable": false,
+			"UseRandomInvocation": false,
+			"InvokeChance": 0
+		},
+		{
+			"Description": {
+				"Id": "ms_fp_StoryTime6_005_Cutscene",
+				"Name": "Cutscene or skip",
+				"Details": "flashpoint",
+				"Icon": null
+			},
+			"Scope": "Company",
+			"Requirements": [],
+			"Results": [
+				{
+					"Scope": "Company",
+					"Requirements": {
+						"Scope": "Company",
+						"RequirementTags": {},
+						"ExclusionTags": {},
+						"RequirementComparisons": []
+					},
+					"AddedTags": {},
+					"RemovedTags": {},
+					"Stats": null,
+					"Actions": [
+						{
+							"Type": "Flashpoint_SetNextMilestone",
+							"value": "ms_fp_StoryTime6_006_Complete",
+							"valueConstant": null,
+							"additionalValues": null
+						},
+						{
+							"Type": "System_PauseNotification",
+							"value": "As the Leopard lifts off, Another transmission comes in...",
+							"additionalValues": [
+								"Armory",
+								"castDef_None"
+							],
+							"valueConstant": null
+						}
+					],
+					"ForceEvents": [
+						{
+							"Scope": "Company",
+							"EventID": "forcedevent_FP_StoryTime6_B",
+							"MinDaysWait": 0,
+							"MaxDaysWait": 0,
+							"Probability": 100
+						}
+					],
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				}
+			],
+			"Repeatable": false,
+			"UseRandomInvocation": false,
+			"InvokeChance": 0
+		},
+		{
+			"Description": {
+				"Id": "ms_fp_StoryTime6_006_Complete",
+				"Name": "Complete",
+				"Details": "flashpoint",
+				"Icon": null
+			},
+			"Scope": "Company",
+			"Requirements": [],
+			"Results": [
+				{
+					"Scope": "Company",
+					"Requirements": {
+						"Scope": "Company",
+						"RequirementTags": {},
+						"ExclusionTags": {},
+						"RequirementComparisons": []
+					},
+					"AddedTags": {
+						"items": [
+							"flashpoint_StoryTime6_complete"
+						],
+						"tagSetSourceFile": "Tags/CompanyTags"
+					},
+					"RemovedTags": {},
+					"Stats": null,
+					"Actions": [
+						{
+							"Type": "Flashpoint_CompleteFlashpoint",
+							"value": "ms_fp_StoryTime6_007_Reward",
+							"valueConstant": null,
+							"additionalValues": null
+						}
+					],
+					"ForceEvents": [],
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				}
+			],
+			"Repeatable": false,
+			"UseRandomInvocation": false,
+			"InvokeChance": 0
+		},
+		{
+			"Description": {
+				"Id": "ms_fp_StoryTime6_007_Reward",
+				"Name": "Reward",
+				"Details": "Extra rewards, including Reputation and bonus C-Bills go here",
+				"Icon": null
+			},
+			"Scope": "Company",
+			"Requirements": [],
+			"Results": [
+				{
+					"Scope": "Company",
+					"Requirements": {
+						"Scope": "Company",
+						"RequirementTags": {},
+						"ExclusionTags": {},
+						"RequirementComparisons": []
+					},
+					"AddedTags": {},
+					"RemovedTags": {},
+					"Stats": null,
+					"Actions": [
+						{
+							"Type": "System_PauseNotification",
+							"value": "Lady Arano has left a note, alongside a new mech. \"In thanks for your help on Artru, I offer you this Star League-era mech, {COMMANDER.Callsign}. May it carry you to victory in the days to come.\" You can almost feel the excitement radiating from Yang as he shows off your latest aquisition.",
+							"additionalValues": [
+								"A Gift",
+								"castDef_KameaDefault"
+							],
+							"valueConstant": null
+						},
+						{
+							"Type": "System_SimGameCharacterVisible",
+							"value": false,
+							"additionalValues": [
+								"Kamea"
+							]
+						}
+					],
+					"ForceEvents": [],
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				}
+			],
+			"Repeatable": false,
+			"UseRandomInvocation": false,
+			"InvokeChance": 0
+		}
+	]
 }

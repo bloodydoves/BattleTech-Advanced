@@ -1,72 +1,63 @@
 {
-	"Description" : {
-		"Id" : "AbilityDefGu8",
-		"Name" : "JUGGERNAUT",
-		"Details" : "PASSIVE: Successful Melee attacks knock your target back one Initiative Phase. Braces after Melee and DFA. Also grants one extra attack using physical weapons such as Hatchets, Maces, and Swords.",
-		"Icon" : "uixSvgIcon_juggernaut"
+	"Description": {
+		"Id": "AbilityDefGu8",
+		"Name": "JUGGERNAUT",
+		"Details": "PASSIVE: Successful Melee attacks knock your target back one Initiative Phase. Braces after Melee and DFA. Also grants one extra attack using physical weapons such as Hatchets, Maces, and Swords.",
+		"Icon": "uixSvgIcon_juggernaut"
 	},
-    "DisplayParams" : "ShowInMWTRay",
-	"ReqSkill" : "Guts",
-	"ReqSkillLevel" : 8,
-	"ActivationTime" : "Passive",
-	"EffectData" :
-	[
+	"DisplayParams": "ShowInMWTRay",
+	"ReqSkill": "Guts",
+	"ReqSkillLevel": 8,
+	"ActivationTime": "Passive",
+	"EffectData": [
 		{
-			"durationData" :
-			{
-				"duration" : -1
+			"durationData": {
+				"duration": -1
 			},
-			"targetingData" : 
-			{
-				"effectTriggerType" : "OnActivation",
-				"effectTargetType" : "Creator"
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator"
 			},
-			"effectType" : "StatisticEffect",
-			"Description" :
-			{
-				"Id" : "AbilityDefGu8",
-        		"Name" : "JUGGERNAUT",
-		        "Details" : "PASSIVE: Successful Melee attacks knock your target back one Initiative Phase.",
-				"Icon" : "uixSvgIcon_juggernaut"
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDefGu8",
+				"Name": "JUGGERNAUT",
+				"Details": "PASSIVE: Successful Melee attacks knock your target back one Initiative Phase.",
+				"Icon": "uixSvgIcon_juggernaut"
 			},
-			"statisticData" : 
-			{
-				"statName" : "MeleeHitPushBackPhases",
-				"operation" : "Int_Add",
-				"modValue" : "1",
-				"modType" : "System.Int32"
+			"statisticData": {
+				"statName": "MeleeHitPushBackPhases",
+				"operation": "Int_Add",
+				"modValue": "1",
+				"modType": "System.Int32"
 			},
-			"nature" : "Buff"
+			"nature": "Buff"
 		},
 		{
-			"durationData" :
-			{
-				"duration" : -1
+			"durationData": {
+				"duration": -1
 			},
-			"targetingData" : 
-			{
-				"effectTriggerType" : "OnActivation",
-				"effectTargetType" : "Creator",
-                "showInTargetPreview" : false,
-                "showInStatusPanel" : false
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
 			},
-			"effectType" : "StatisticEffect",
-			"Description" :
-			{
-				"Id" : "TraitDefTwoPhysWeap",
-				"Name" : "Two Physical Weapons",
-				"Details" : "Gain One Additional Physical Weapon Attack",
-				"Icon" : "uixSvgIcon_action_evasivemove"
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "TraitDefTwoPhysWeap",
+				"Name": "Two Physical Weapons",
+				"Details": "Gain One Additional Physical Weapon Attack",
+				"Icon": "uixSvgIcon_action_evasivemove"
 			},
-			"statisticData" : 
-			{
-				"statName" : "CBTBE_Physical_Weapon_Extra_Hits_Count",
-				"operation" : "Float_Add",
-				"modValue" : "1.0",
-				"modType" : "System.Single"
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Extra_Hits_Count",
+				"operation": "Float_Add",
+				"modValue": "1.0",
+				"modType": "System.Single"
 			},
-			"nature" : "Buff"
+			"nature": "Buff"
 		}
 	],
-	"IsPrimaryAbility" : true
+	"IsPrimaryAbility": true
 }

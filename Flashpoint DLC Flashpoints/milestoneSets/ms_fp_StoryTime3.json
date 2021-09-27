@@ -1,206 +1,206 @@
 {
-    "StartingMilestoneID": "ms_fp_StoryTime3_001_Start",
-    "Milestones": [
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime3_001_Start",
-                "Name": "Start",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": null,
-                    "AddedTags": {},
-                    "RemovedTags": {},
-                    "Stats": [],
-                    "Actions": [
-                        {
-                            "Type" : "System_PauseNotification",
-                            "value" : "Commander, I'm setting a course for Lady Centrella's JumpShip. It's strange, though\u2026 this moon it's taking us to, Axylus, doesn't appear on any of my maps. Which leads me to wonder: where, exactly, are we going, and how do they intend to get us there?",
-                            "additionalValues" : [
-                                "Axylus",
-                                "castDef_SumireDefault"
-                            ],
-                            "valueConstant" : null
-                        },
-                        {
-                            "Type" : "System_StartConversation",
-                            "value" : "StoryTime3a-Axylus",
-                            "additionalValues" : [
-                                "SEVERAL HOURS LATER",
-                                "Uncharted Space",
-                                null,
-                                null
-                            ]
-                        },
-                        {
-                            "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime3_002_Mission",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        }
-                    ],
-                    "ForceEvents": [],
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime3_002_Mission",
-                "Name": "Mission",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": null,
-                    "AddedTags": {},
-                    "RemovedTags": {},
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "Flashpoint_StartContract",
-                            "value": "",
-                            "valueConstant": null,
-                            "additionalValues": [
-                                "",
-                                "",
-                                "StoryTime_3_Axylus_Default",
-                                "AuriganRestoration",
-                                "AuriganPirates",
-                                "3",
-                                "ms_fp_StoryTime3_003_Complete",
-                                null,
-                                null,
-                                null,
-                                null,
-                                null
-                            ]
-                        },
-                        {
-                            "Type": "System_ForceDropshipRoom",
-                            "value": "Contract",
-                            "valueConstant": null,
-                            "additionalValues": [
-                                "BaseFlashpoint"
-                            ]
-                        }
-                    ],
-                    "ForceEvents": null,
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime3_003_Complete",
-                "Name": "Cancel-Complete",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": null,
-                    "AddedTags": {
-                        "items": [
-                            "flashpoint_StoryTime3_complete"
-                        ],
-                        "tagSetSourceFile": "Tags/CompanyTags"
-                    },
-                    "RemovedTags": {},
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "System_ForceDropshipRoom",
-                            "value": "Ship",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        },
-                        {
-                            "Type": "Flashpoint_CompleteFlashpoint",
-                            "value": "ms_fp_StoryTime3_004_Reward",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        },
-                        {
-                            "Type" : "System_PauseNotification",
-                            "value" : "The <i>Scheria</i> shudders, ancient frame groaning with the strain...",
-                            "additionalValues" : [
-                                  "Lifting Off",
-                                  "castDef_None"
-                            ],
-                            "valueConstant" : null
-                        }
-                    ],
-                    "ForceEvents": [
-                        {
-                            "Scope" : "Company",
-                            "EventID" : "forcedevent_FP_StoryTime3_A",
-                            "MinDaysWait" : 0,
-                            "MaxDaysWait" : 0,
-                            "Probability" : 100
-                        }
-                    ],
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime3_004_Reward",
-                "Name": "Reward",
-                "Details": "Extra rewards, including Reputation and bonus C-Bills go here",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": null,
-                    "AddedTags": {},
-                    "RemovedTags": {},
-                    "Stats": [
-                        {
-                            "typeString": "System.Int32",
-                            "name": "Funds",
-                            "value": "300000",
-                            "set": false,
-                            "valueConstant": null
-                        }
-                    ],
-                    "Actions": null,
-                    "ForceEvents": null,
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        }
-    ]
+	"StartingMilestoneID": "ms_fp_StoryTime3_001_Start",
+	"Milestones": [
+		{
+			"Description": {
+				"Id": "ms_fp_StoryTime3_001_Start",
+				"Name": "Start",
+				"Details": "flashpoint",
+				"Icon": null
+			},
+			"Scope": "Company",
+			"Requirements": [],
+			"Results": [
+				{
+					"Scope": "Company",
+					"Requirements": null,
+					"AddedTags": {},
+					"RemovedTags": {},
+					"Stats": [],
+					"Actions": [
+						{
+							"Type": "System_PauseNotification",
+							"value": "Commander, I'm setting a course for Lady Centrella's JumpShip. It's strange, though\u2026 this moon it's taking us to, Axylus, doesn't appear on any of my maps. Which leads me to wonder: where, exactly, are we going, and how do they intend to get us there?",
+							"additionalValues": [
+								"Axylus",
+								"castDef_SumireDefault"
+							],
+							"valueConstant": null
+						},
+						{
+							"Type": "System_StartConversation",
+							"value": "StoryTime3a-Axylus",
+							"additionalValues": [
+								"SEVERAL HOURS LATER",
+								"Uncharted Space",
+								null,
+								null
+							]
+						},
+						{
+							"Type": "Flashpoint_SetNextMilestone",
+							"value": "ms_fp_StoryTime3_002_Mission",
+							"valueConstant": null,
+							"additionalValues": null
+						}
+					],
+					"ForceEvents": [],
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				}
+			],
+			"Repeatable": false,
+			"UseRandomInvocation": false,
+			"InvokeChance": 0
+		},
+		{
+			"Description": {
+				"Id": "ms_fp_StoryTime3_002_Mission",
+				"Name": "Mission",
+				"Details": "flashpoint",
+				"Icon": null
+			},
+			"Scope": "Company",
+			"Requirements": [],
+			"Results": [
+				{
+					"Scope": "Company",
+					"Requirements": null,
+					"AddedTags": {},
+					"RemovedTags": {},
+					"Stats": null,
+					"Actions": [
+						{
+							"Type": "Flashpoint_StartContract",
+							"value": "",
+							"valueConstant": null,
+							"additionalValues": [
+								"",
+								"",
+								"StoryTime_3_Axylus_Default",
+								"AuriganRestoration",
+								"AuriganPirates",
+								"3",
+								"ms_fp_StoryTime3_003_Complete",
+								null,
+								null,
+								null,
+								null,
+								null
+							]
+						},
+						{
+							"Type": "System_ForceDropshipRoom",
+							"value": "Contract",
+							"valueConstant": null,
+							"additionalValues": [
+								"BaseFlashpoint"
+							]
+						}
+					],
+					"ForceEvents": null,
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				}
+			],
+			"Repeatable": false,
+			"UseRandomInvocation": false,
+			"InvokeChance": 0
+		},
+		{
+			"Description": {
+				"Id": "ms_fp_StoryTime3_003_Complete",
+				"Name": "Cancel-Complete",
+				"Details": "flashpoint",
+				"Icon": null
+			},
+			"Scope": "Company",
+			"Requirements": [],
+			"Results": [
+				{
+					"Scope": "Company",
+					"Requirements": null,
+					"AddedTags": {
+						"items": [
+							"flashpoint_StoryTime3_complete"
+						],
+						"tagSetSourceFile": "Tags/CompanyTags"
+					},
+					"RemovedTags": {},
+					"Stats": null,
+					"Actions": [
+						{
+							"Type": "System_ForceDropshipRoom",
+							"value": "Ship",
+							"valueConstant": null,
+							"additionalValues": null
+						},
+						{
+							"Type": "Flashpoint_CompleteFlashpoint",
+							"value": "ms_fp_StoryTime3_004_Reward",
+							"valueConstant": null,
+							"additionalValues": null
+						},
+						{
+							"Type": "System_PauseNotification",
+							"value": "The <i>Scheria</i> shudders, ancient frame groaning with the strain...",
+							"additionalValues": [
+								"Lifting Off",
+								"castDef_None"
+							],
+							"valueConstant": null
+						}
+					],
+					"ForceEvents": [
+						{
+							"Scope": "Company",
+							"EventID": "forcedevent_FP_StoryTime3_A",
+							"MinDaysWait": 0,
+							"MaxDaysWait": 0,
+							"Probability": 100
+						}
+					],
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				}
+			],
+			"Repeatable": false,
+			"UseRandomInvocation": false,
+			"InvokeChance": 0
+		},
+		{
+			"Description": {
+				"Id": "ms_fp_StoryTime3_004_Reward",
+				"Name": "Reward",
+				"Details": "Extra rewards, including Reputation and bonus C-Bills go here",
+				"Icon": null
+			},
+			"Scope": "Company",
+			"Requirements": [],
+			"Results": [
+				{
+					"Scope": "Company",
+					"Requirements": null,
+					"AddedTags": {},
+					"RemovedTags": {},
+					"Stats": [
+						{
+							"typeString": "System.Int32",
+							"name": "Funds",
+							"value": "300000",
+							"set": false,
+							"valueConstant": null
+						}
+					],
+					"Actions": null,
+					"ForceEvents": null,
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				}
+			],
+			"Repeatable": false,
+			"UseRandomInvocation": false,
+			"InvokeChance": 0
+		}
+	]
 }

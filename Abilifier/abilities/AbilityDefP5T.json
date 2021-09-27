@@ -68,8 +68,37 @@
 				"modType": "System.Boolean"
 			},
 			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"forcePathRebuild": true,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-SideslipIgnorePathing",
+				"Name": "Sideslipping",
+				"Details": "This unit ignores pathing this turn.",
+				"Icon": "journey"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"effectsPersistAfterDestruction": false,
+				"statName": "CUPathingUnaffected",
+				"operation": "Set",
+				"modValue": "True",
+				"modType": "System.Boolean"
+			}
 		}
 	],
 	"IsPrimaryAbility": true,
-    "Priority": 8
+	"Priority": 8
 }
