@@ -1,75 +1,77 @@
 {
 	"Custom": {
-        "Flags": {
-            "flags": [
+		"Flags": {
+			"flags": [
 				"ignore_damage",
-                "no_salvage"
-            ]
-        },
+				"no_salvage"
+			]
+		},
 		"BonusDescriptions": {
-            "Bonuses": [
+			"Bonuses": [
 				"Activatable",
 				"FailChance: 10%",
 				"FailChanceTurn: 25%",
 				"FailCritLoc",
-                "ActiveAccuracy: +4",
+				"ActiveAccuracy: +4",
 				"ActiveWeaponDamage: +40%",
 				"ActiveHeatPerTurn: +40%",
 				"ActivateHeatLevel: 60",
 				"DeActivateHeatLevel: 59"
-            ]
-        },
+			]
+		},
 		"ActivatableComponent": {
-            "ButtonName": "Activate The Alpha Strike",
+			"ButtonName": "Activate The Alpha Strike",
 			"AutoActivateOnHeat": 60,
 			"AutoDeactivateOnHeat": 59,
-            "CanNotBeActivatedManualy": true,
-            "NoUniqueCheck": false,
-            "ActiveByDefault": false,
-            "ActivationMessage": "Alpha Strike Enabled",
-            "DeactivationMessage": "Alpha Strike Disabled",
+			"CanNotBeActivatedManualy": true,
+			"NoUniqueCheck": false,
+			"ActiveByDefault": false,
+			"ActivationMessage": "Alpha Strike Enabled",
+			"DeactivationMessage": "Alpha Strike Disabled",
 			"FailFlatChance": 0.1,
 			"FailRoundsStart": 1,
 			"FailChancePerTurn": 0.25,
 			"FailCrit": true,
-			"FailDamageLocations": ["CenterTorso"],
-            "Linkage": {
-                "OnActivate": {
-                    "Activate": [],
-                    "Deactivate": []
-                },
-                "OnDeactivate": {
-                    "Activate": [],
-                    "Deactivate": []
-                }
-            },
-            "statusEffects": [
-                {
-                    "durationData": {
-                        "duration": -1,
-                        "stackLimit": -1
-                    },
-                    "targetingData": {
-                        "effectTriggerType": "Passive",
-                        "effectTargetType": "Creator",
-                        "showInStatusPanel": true
-                    },
-                    "effectType": "StatisticEffect",
-                    "Description": {
-                        "Id": "AS-Damage",
-                        "Name": "Alpha Strike Engaged",
-                        "Details": "The Alpha Strike circuitry has been engaged, increasing this unit's weapon damage, weapon accuracy and heat generation.",
-                        "Icon": "ion-cannon-blast"
-                    },
-                    "nature": "Buff",
-                    "statisticData": {
-                        "statName" : "DamagePerShot",
-						"operation" : "Float_Multiply",
-						"modValue" : "1.4",
-						"modType" : "System.Single",
+			"FailDamageLocations": [
+				"CenterTorso"
+			],
+			"Linkage": {
+				"OnActivate": {
+					"Activate": [],
+					"Deactivate": []
+				},
+				"OnDeactivate": {
+					"Activate": [],
+					"Deactivate": []
+				}
+			},
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "AS-Damage",
+						"Name": "Alpha Strike Engaged",
+						"Details": "The Alpha Strike circuitry has been engaged, increasing this unit's weapon damage, weapon accuracy and heat generation.",
+						"Icon": "ion-cannon-blast"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamagePerShot",
+						"operation": "Float_Multiply",
+						"modValue": "1.4",
+						"modType": "System.Single",
 						"targetCollection": "Weapon"
 					}
-                },
+				},
 				{
 					"durationData": {
 						"duration": -1,
@@ -116,48 +118,48 @@
 					},
 					"nature": "Buff",
 					"statisticData": {
-						"statName" : "HeatGenerated",
-						"operation" : "Float_Multiply",
-						"modValue" : "1.4",
-						"modType" : "System.Single",
+						"statName": "HeatGenerated",
+						"operation": "Float_Multiply",
+						"modValue": "1.4",
+						"modType": "System.Single",
 						"targetCollection": "Weapon"
 					}
 				}
-            ],
-            "offlineStatusEffects": []
-        }
-    },
-    "StatName" : null,
-    "RelativeModifier" : 0,
-    "AbsoluteModifier" : 0,
-    "Description" : {
-        "Cost" : 4000000,
-        "Rarity" : 99,
-        "Purchasable" : false,
-        "Manufacturer" : "Herakleon",
-        "Model" : "Tarnkappe",
-        "UIName" : "The Alpha Strike",
-        "Id" : "Gear_Alpha_Strike",
-        "Name" : "The Alpha Strike",
-        "Details" : "The Alpha Strike, named for the favorite activity of mechwarriors everywhere, is a prototype circuitry system that supercharges the carrying unit's weapon systems at the cost of incredible heat. The Alpha Strike activates automatically, kicking into gear when the mech is already overheating and pushing the heat bar further while enhancing the unit's weapon systems in both damage and accuracy. However, the system creates a large heat burden, meaning that the system is risky. If the mechwarrior pushes too hard, they can easily overtax their heat containment systems, leading to catastrophic meltdowns.",
-        "Icon" : "ion-cannon-blast"
-    },
-    "BonusValueA" : "",
-    "BonusValueB" : "",
-    "ComponentType" : "Upgrade",
-    "ComponentSubType" : "NotSet",
-    "PrefabIdentifier" : "",
-    "BattleValue" : 0,
-    "InventorySize" : 4,
-    "Tonnage" : 4,
-    "AllowedLocations" : "CenterTorso",
-    "DisallowedLocations" : "All",
-    "CriticalComponent" : false,
-    "statusEffects" : [],
-    "ComponentTags" : {
-        "items" : [
+			],
+			"offlineStatusEffects": []
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 4000000,
+		"Rarity": 99,
+		"Purchasable": false,
+		"Manufacturer": "Herakleon",
+		"Model": "Tarnkappe",
+		"UIName": "The Alpha Strike",
+		"Id": "Gear_Alpha_Strike",
+		"Name": "The Alpha Strike",
+		"Details": "The Alpha Strike, named for the favorite activity of mechwarriors everywhere, is a prototype circuitry system that supercharges the carrying unit's weapon systems at the cost of incredible heat. The Alpha Strike activates automatically, kicking into gear when the mech is already overheating and pushing the heat bar further while enhancing the unit's weapon systems in both damage and accuracy. However, the system creates a large heat burden, meaning that the system is risky. If the mechwarrior pushes too hard, they can easily overtax their heat containment systems, leading to catastrophic meltdowns.",
+		"Icon": "ion-cannon-blast"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 4,
+	"Tonnage": 4,
+	"AllowedLocations": "CenterTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [],
+	"ComponentTags": {
+		"items": [
 			"BLACKLISTED"
-        ],
-        "tagSetSourceFile" : ""
-    }
+		],
+		"tagSetSourceFile": ""
+	}
 }

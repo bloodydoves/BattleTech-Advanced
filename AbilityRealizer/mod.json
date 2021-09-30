@@ -1,63 +1,189 @@
 {
-    "Name": "AbilityRealizer",
-    "DLL": "AbilityRealizer.dll",
+	"Name": "AbilityRealizer",
+	"DLL": "AbilityRealizer.dll",
 	"Enabled": true,
 	"Hidden": true,
-
-	"DependsOn" : [ "IRBTModUtils", "IRTweaks" ],
-
-    "Version": "1.0.5.0",
-    "Description": "Allows for ability mods to more easily exist.",
-    "Author": "mpstark",
-    "Website": "www.github.com/mpstark/AbilityRealizer",
-
-	    "Manifest": [],
-
-    "Settings": {
-        "AddTreeAbilities": false,
-        "RemoveNonTreeAbilities": false,
-        "IgnoreAbilities": [],
-		"IgnorePilotsWithTags": ["pilot_npc_tanker"],
-        "FactionAbilities": {},
-        "TagAbilities": {
-				"pilot_defaultTree": ["TraitDefIAmMech"],
-				"commander_career_aerospace_pilot":["AbilityDefCMDPilot", "AbilityDef_CarefulManeuvers", "TraitDefIAmMech"],
-				"commander_career_bounty_hunter":["AbilityDefCMDHunter", "AbilityDef_CarefulManeuvers", "TraitDefIAmMech"],
-				"commander_career_officer_trainee":["AbilityDefCMDTrainee", "AbilityDef_CarefulManeuvers", "TraitDefIAmMech"],
-				"commander_career_offroad_racer":["AbilityDefCMDRacer", "AbilityDef_CarefulManeuvers", "TraitDefIAmMech"],
-				"commander_career_offworld_smuggler":["AbilityDefCMDSmuggler", "AbilityDef_CarefulManeuvers", "TraitDefIAmMech"],
-				"commander_career_special_operative":["AbilityDefCMDOperative", "AbilityDef_CarefulManeuvers", "TraitDefIAmMech"],
-				"name_bloodydoves": ["AbilityDefBDInit"],
-				"name_aether": ["AbilityDefBlueAP"],
-				"name_taintedloki": ["AbilityDefLokiGhost"],
-				"name_t-bone": ["AbilityDeftboneHunt"],
-				"name_Tex": ["AbilityDefTexHealth"],
-				"name_wulfbanes": ["AbilityDefWulfSRM"],
-				"name_Revostae": ["AbilityDefRevostaeIndirect"],
-				"name_Turtrus": ["AbilityDefTurtrusEnergy"],
-				"name_GrampaTex": ["AbilityDefGrampaTex"],
-				"name_Shade": ["AbilityDefShadeMelee"],
-				"name_scorch": ["AbilityDefFrostDR"],
-				"pilot_mechwarrior": [ "AbilityDef_EmergencyVent", "AbilityDef_CarefulManeuvers", "AbilityDef_FirstAid", "TraitDefIAmMech"],
-				"pilot_vehicle_crew": ["AbilityDef_FirstAid", "AbilityDef_CarefulManeuvers", "TraitDefIAmTank"],
-				"pilot_lostech": [ "AbilityDef_EmergencyVent", "AbilityDef_CarefulManeuvers", "AbilityDef_FirstAid"],
-				"pilot_lucky": [ "AbilityDef_EmergencyVent", "AbilityDef_CarefulManeuvers", "AbilityDef_FirstAid"],
-				"pilot_military": [ "AbilityDef_EmergencyVent", "AbilityDef_CarefulManeuvers", "AbilityDef_FirstAid"],
-				"pilot_athletic": [ "AbilityDef_EmergencyVent", "AbilityDef_CarefulManeuvers", "AbilityDef_FirstAid"],
-				"pilot_comstar": [ "AbilityDef_EmergencyVent", "AbilityDef_CarefulManeuvers", "AbilityDef_FirstAid"],
-				"pilot_dependable": [ "AbilityDef_EmergencyVent", "AbilityDef_CarefulManeuvers", "AbilityDef_FirstAid"],
-				"pilot_gladiator": [ "AbilityDef_EmergencyVent", "AbilityDef_CarefulManeuvers", "AbilityDef_FirstAid"],
-				"pilot_honest": [ "AbilityDef_EmergencyVent", "AbilityDef_CarefulManeuvers", "AbilityDef_FirstAid"],
-				"pilot_officer": [ "AbilityDef_EmergencyVent", "AbilityDef_CarefulManeuvers", "AbilityDef_FirstAid"],
-				"pilot_spacer": [ "AbilityDef_EmergencyVent", "AbilityDef_CarefulManeuvers", "AbilityDef_FirstAid"],
-				"pilot_brave": [ "AbilityDef_EmergencyVent", "AbilityDef_CarefulManeuvers", "AbilityDef_FirstAid"],
-				"pilot_command": [ "AbilityDef_EmergencyVent", "AbilityDef_CarefulManeuvers", "AbilityDef_FirstAid"],
-				"pilot_merchant": [ "AbilityDef_EmergencyVent", "AbilityDef_CarefulManeuvers", "AbilityDef_FirstAid"],
-				"pilot_criminal": [ "AbilityDef_EmergencyVent", "AbilityDef_CarefulManeuvers", "AbilityDef_FirstAid"],
-				"pilot_periphery": [ "AbilityDef_EmergencyVent", "AbilityDef_CarefulManeuvers", "AbilityDef_FirstAid"],
-				"pilot_assassin": [ "AbilityDef_EmergencyVent", "AbilityDef_CarefulManeuvers", "AbilityDef_FirstAid"],
-				"pilot_tech": [ "AbilityDef_EmergencyVent", "AbilityDef_CarefulManeuvers", "AbilityDef_FirstAid"]
-				},
-        "SwapAIAbilities": {}
-    }
+	"DependsOn": [
+		"IRBTModUtils",
+		"IRTweaks"
+	],
+	"Version": "1.0.5.0",
+	"Description": "Allows for ability mods to more easily exist.",
+	"Author": "mpstark",
+	"Website": "www.github.com/mpstark/AbilityRealizer",
+	"Manifest": [],
+	"Settings": {
+		"AddTreeAbilities": false,
+		"RemoveNonTreeAbilities": false,
+		"IgnoreAbilities": [],
+		"IgnorePilotsWithTags": [
+			"pilot_npc_tanker"
+		],
+		"FactionAbilities": {},
+		"TagAbilities": {
+			"pilot_defaultTree": [
+				"TraitDefIAmMech"
+			],
+			"commander_career_aerospace_pilot": [
+				"AbilityDefCMDPilot",
+				"AbilityDef_CarefulManeuvers",
+				"TraitDefIAmMech"
+			],
+			"commander_career_bounty_hunter": [
+				"AbilityDefCMDHunter",
+				"AbilityDef_CarefulManeuvers",
+				"TraitDefIAmMech"
+			],
+			"commander_career_officer_trainee": [
+				"AbilityDefCMDTrainee",
+				"AbilityDef_CarefulManeuvers",
+				"TraitDefIAmMech"
+			],
+			"commander_career_offroad_racer": [
+				"AbilityDefCMDRacer",
+				"AbilityDef_CarefulManeuvers",
+				"TraitDefIAmMech"
+			],
+			"commander_career_offworld_smuggler": [
+				"AbilityDefCMDSmuggler",
+				"AbilityDef_CarefulManeuvers",
+				"TraitDefIAmMech"
+			],
+			"commander_career_special_operative": [
+				"AbilityDefCMDOperative",
+				"AbilityDef_CarefulManeuvers",
+				"TraitDefIAmMech"
+			],
+			"name_bloodydoves": [
+				"AbilityDefBDInit"
+			],
+			"name_aether": [
+				"AbilityDefBlueAP"
+			],
+			"name_taintedloki": [
+				"AbilityDefLokiGhost"
+			],
+			"name_t-bone": [
+				"AbilityDeftboneHunt"
+			],
+			"name_Tex": [
+				"AbilityDefTexHealth"
+			],
+			"name_wulfbanes": [
+				"AbilityDefWulfSRM"
+			],
+			"name_Revostae": [
+				"AbilityDefRevostaeIndirect"
+			],
+			"name_Turtrus": [
+				"AbilityDefTurtrusEnergy"
+			],
+			"name_GrampaTex": [
+				"AbilityDefGrampaTex"
+			],
+			"name_Shade": [
+				"AbilityDefShadeMelee"
+			],
+			"name_scorch": [
+				"AbilityDefFrostDR"
+			],
+			"pilot_mechwarrior": [
+				"AbilityDef_EmergencyVent",
+				"AbilityDef_CarefulManeuvers",
+				"AbilityDef_FirstAid",
+				"TraitDefIAmMech"
+			],
+			"pilot_vehicle_crew": [
+				"AbilityDef_FirstAid",
+				"AbilityDef_CarefulManeuvers",
+				"TraitDefIAmTank"
+			],
+			"pilot_lostech": [
+				"AbilityDef_EmergencyVent",
+				"AbilityDef_CarefulManeuvers",
+				"AbilityDef_FirstAid"
+			],
+			"pilot_lucky": [
+				"AbilityDef_EmergencyVent",
+				"AbilityDef_CarefulManeuvers",
+				"AbilityDef_FirstAid"
+			],
+			"pilot_military": [
+				"AbilityDef_EmergencyVent",
+				"AbilityDef_CarefulManeuvers",
+				"AbilityDef_FirstAid"
+			],
+			"pilot_athletic": [
+				"AbilityDef_EmergencyVent",
+				"AbilityDef_CarefulManeuvers",
+				"AbilityDef_FirstAid"
+			],
+			"pilot_comstar": [
+				"AbilityDef_EmergencyVent",
+				"AbilityDef_CarefulManeuvers",
+				"AbilityDef_FirstAid"
+			],
+			"pilot_dependable": [
+				"AbilityDef_EmergencyVent",
+				"AbilityDef_CarefulManeuvers",
+				"AbilityDef_FirstAid"
+			],
+			"pilot_gladiator": [
+				"AbilityDef_EmergencyVent",
+				"AbilityDef_CarefulManeuvers",
+				"AbilityDef_FirstAid"
+			],
+			"pilot_honest": [
+				"AbilityDef_EmergencyVent",
+				"AbilityDef_CarefulManeuvers",
+				"AbilityDef_FirstAid"
+			],
+			"pilot_officer": [
+				"AbilityDef_EmergencyVent",
+				"AbilityDef_CarefulManeuvers",
+				"AbilityDef_FirstAid"
+			],
+			"pilot_spacer": [
+				"AbilityDef_EmergencyVent",
+				"AbilityDef_CarefulManeuvers",
+				"AbilityDef_FirstAid"
+			],
+			"pilot_brave": [
+				"AbilityDef_EmergencyVent",
+				"AbilityDef_CarefulManeuvers",
+				"AbilityDef_FirstAid"
+			],
+			"pilot_command": [
+				"AbilityDef_EmergencyVent",
+				"AbilityDef_CarefulManeuvers",
+				"AbilityDef_FirstAid"
+			],
+			"pilot_merchant": [
+				"AbilityDef_EmergencyVent",
+				"AbilityDef_CarefulManeuvers",
+				"AbilityDef_FirstAid"
+			],
+			"pilot_criminal": [
+				"AbilityDef_EmergencyVent",
+				"AbilityDef_CarefulManeuvers",
+				"AbilityDef_FirstAid"
+			],
+			"pilot_periphery": [
+				"AbilityDef_EmergencyVent",
+				"AbilityDef_CarefulManeuvers",
+				"AbilityDef_FirstAid"
+			],
+			"pilot_assassin": [
+				"AbilityDef_EmergencyVent",
+				"AbilityDef_CarefulManeuvers",
+				"AbilityDef_FirstAid"
+			],
+			"pilot_tech": [
+				"AbilityDef_EmergencyVent",
+				"AbilityDef_CarefulManeuvers",
+				"AbilityDef_FirstAid"
+			]
+		},
+		"SwapAIAbilities": {}
+	}
 }

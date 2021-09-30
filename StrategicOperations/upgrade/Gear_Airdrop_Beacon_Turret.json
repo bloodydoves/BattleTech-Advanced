@@ -1,72 +1,70 @@
 {
-    "Custom": {
-        "Category": [
-            {
-                "CategoryID": "Airdrop"
-            }
-        ],
-        "BonusDescriptions": {
-            "Bonuses": [
-                "Airdrop",
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "Airdrop"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"Airdrop",
 				"AirdropTurret",
 				"AbilityResolveCost: 15",
 				"AbilityCBillCost: 10000",
 				"AirdropCount: 2",
 				"AirdropRange: 250"
-            ]
-        }
-    },
-    "StatName": null,
-    "RelativeModifier": 0,
-    "AbsoluteModifier": 0,
-    "Description": {
-        "Cost": 1000000,
-        "Rarity": 5,
-        "Purchasable": true,
-        "Manufacturer": "Gravity Industries",
-        "Model": "Beacon",
-        "UIName": "Turret Airdrop Beacon",
-        "Id": "Gear_Airdrop_Beacon_Turret",
-        "Name": "Turret Airdrop Beacon",
-        "Details": "This bulky and heavy communication equipment grants the carrying mech's pilot the ability to coordinate with the Argo and call in an airdropped turret, either one of Yang's turrets or a turret provided by an ally faction. Turrets other than Yang's turret can be called in after buying their contract from the relevant faction.",
-        "Icon": "turret"
-    },
-    "BonusValueA": "",
-    "BonusValueB": "",
-    "ComponentType": "Upgrade",
-    "ComponentSubType": "NotSet",
-    "PrefabIdentifier": "",
-    "BattleValue": 0,
-    "InventorySize": 1,
-    "Tonnage": 1,
-    "AllowedLocations": "All",
-    "DisallowedLocations": "All",
-    "CriticalComponent": false,
-    "statusEffects": [
-        {
-            "targetingData": {
-                "effectTriggerType": "OnActivation",
-                "effectTargetType": "Creator",
-                "showInStatusPanel": true
-            },
-			"effectType" : "ActiveAbility",
-			"Description" :
-			{
-				"Id" : "Airdrop_Beacon_Turret",
-				"Name" : "Turret Airdrop Beacon",
-				"Details" : "Activated ability (uses Firing action). Calls in a Turret Airdrop.",
-				"Icon" : "uixSvgIcon_action_sensorlock"
+			]
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 1000000,
+		"Rarity": 5,
+		"Purchasable": true,
+		"Manufacturer": "Gravity Industries",
+		"Model": "Beacon",
+		"UIName": "Turret Airdrop Beacon",
+		"Id": "Gear_Airdrop_Beacon_Turret",
+		"Name": "Turret Airdrop Beacon",
+		"Details": "This bulky and heavy communication equipment grants the carrying mech's pilot the ability to coordinate with the Argo and call in an airdropped turret, either one of Yang's turrets or a turret provided by an ally faction. Turrets other than Yang's turret can be called in after buying their contract from the relevant faction.",
+		"Icon": "turret"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 1,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
 			},
-			"activeAbilityEffectData" : 
-			{
-				"abilityName" : "AbilityDefCMD_FireBase"
+			"effectType": "ActiveAbility",
+			"Description": {
+				"Id": "Airdrop_Beacon_Turret",
+				"Name": "Turret Airdrop Beacon",
+				"Details": "Activated ability (uses Firing action). Calls in a Turret Airdrop.",
+				"Icon": "uixSvgIcon_action_sensorlock"
+			},
+			"activeAbilityEffectData": {
+				"abilityName": "AbilityDefCMD_FireBase"
 			}
 		}
-    ],
-    "ComponentTags": {
-        "items": [
-            "component_type_stock"
-        ],
-        "tagSetSourceFile": ""
-    }
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
 }

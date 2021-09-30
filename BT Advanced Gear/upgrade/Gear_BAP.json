@@ -1,123 +1,121 @@
 {
-    "Custom": {
-        "Category": [
-            {
-                "CategoryID": "Probe"
-            }
-        ],
-        "BonusDescriptions": {
-            "Bonuses": [
-                "Sensors: +15%",
-                "Sight: +15%"
-            ]
-        },
-        "InventorySorter": {
-            "SortKey": "00024"
-        }
-    },
-    "StatName": null,
-    "RelativeModifier": 0,
-    "AbsoluteModifier": 0,
-    "Description": {
-        "Cost": 370000,
-        "Rarity": 5,
-        "Purchasable": true,
-        "Manufacturer": "Achernar",
-        "Model": "BAP",
-        "UIName": "Beagle Probe",
-        "Id": "Gear_BAP",
-        "Name": "Beagle Active Probe",
-        "Details": "The Beagle Active Probe (BAP) is a suite of enhancement technology that, when attached to general electronic sensors, enables the equipped unit to detect and classify other battlefield units whether they are camouflaged or even shut down, with the exception of conventional infantry.",
-        "Icon": "uixSvgIcon_equipment_Comms"
-    },
-    "BonusValueA": "+20% Sensors/Sight",
-    "BonusValueB": "Active Probe Ping",
-    "ComponentType": "Upgrade",
-    "ComponentSubType": "NotSet",
-    "PrefabIdentifier": "",
-    "BattleValue": 0,
-    "InventorySize": 2,
-    "Tonnage": 1.5,
-    "AllowedLocations": "All",
-    "DisallowedLocations": "All",
-    "CriticalComponent": false,
-    "statusEffects": [
-        {
-            "durationData": {
-                "duration": -1,
-                "stackLimit": 1
-            },
-            "targetingData": {
-                "effectTriggerType": "Passive",
-                "effectTargetType": "Creator",
-                "showInTargetPreview": false,
-                "showInStatusPanel": false
-            },
-            "effectType": "StatisticEffect",
-            "Description": {
-                "Id": "SensorRange",
-                "Name": "Beagle Probe",
-                "Details": "Increased Sight/Sensors",
-                "Icon": "uixSvgIcon_equipment_Cockpit"
-            },
-            "nature": "Buff",
-            "statisticData": {
-                "statName": "SensorDistanceMultiplier",
-                "operation": "Float_Multiply",
-                "modValue": "1.15",
-                "modType": "System.Single"
-            }
-        },
-        {
-            "targetingData" : {
-                "effectTriggerType" : "OnActivation",
-                "effectTargetType" : "EnemiesWithinRange",
-				"alsoTargetsCreator" : true,
-                "forceVisRebuild" : true
-            },
-			"effectType" : "ActiveAbility",
-			"Description" :
+	"Custom": {
+		"Category": [
 			{
-				"Id" : "ActiveProbe_Ping",
-				"Name" : "ACTIVE PROBE PING",
-				"Details" : "Activated ability (uses Firing action). Performs a Sensor Lock against all enemies within its radius, as indicated by the spinning gold ring. Will go into cooldown state after use.",
-				"Icon" : "uixSvgIcon_action_sensorlock"
+				"CategoryID": "Probe"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"Sensors: +15%",
+				"Sight: +15%"
+			]
+		},
+		"InventorySorter": {
+			"SortKey": "00024"
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 370000,
+		"Rarity": 5,
+		"Purchasable": true,
+		"Manufacturer": "Achernar",
+		"Model": "BAP",
+		"UIName": "Beagle Probe",
+		"Id": "Gear_BAP",
+		"Name": "Beagle Active Probe",
+		"Details": "The Beagle Active Probe (BAP) is a suite of enhancement technology that, when attached to general electronic sensors, enables the equipped unit to detect and classify other battlefield units whether they are camouflaged or even shut down, with the exception of conventional infantry.",
+		"Icon": "uixSvgIcon_equipment_Comms"
+	},
+	"BonusValueA": "+20% Sensors/Sight",
+	"BonusValueB": "Active Probe Ping",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 2,
+	"Tonnage": 1.5,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
 			},
-			"activeAbilityEffectData" : 
-			{
-				"abilityName" : "AbilityDef_ActiveProbe_Ping"
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "SensorRange",
+				"Name": "Beagle Probe",
+				"Details": "Increased Sight/Sensors",
+				"Icon": "uixSvgIcon_equipment_Cockpit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "SensorDistanceMultiplier",
+				"operation": "Float_Multiply",
+				"modValue": "1.15",
+				"modType": "System.Single"
 			}
 		},
-        {
-            "durationData": {
-                "duration": -1,
-                "stackLimit": 1
-            },
-            "targetingData": {
-                "effectTriggerType": "Passive",
-                "effectTargetType": "Creator"
-            },
-            "effectType": "StatisticEffect",
-            "Description": {
-                "Id": "SpottingRange",
-                "Name": "SPOTTING DISTANCE INCREASED",
-                "Details": "Increases spotting distance by 50m.",
-                "Icon": "uixSvgIcon_equipment_Cockpit"
-            },
-            "nature": "Buff",
-            "statisticData": {
-                "statName": "SpotterDistanceMultiplier",
-                "operation": "Float_Multiply",
-                "modValue": "1.15",
-                "modType": "System.Single"
-            }
-        }
-    ],
-    "ComponentTags": {
-        "items": [
-            "component_type_stock",
-            "lv-probe_m2"
-        ],
-        "tagSetSourceFile": ""
-    }
+		{
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "EnemiesWithinRange",
+				"alsoTargetsCreator": true,
+				"forceVisRebuild": true
+			},
+			"effectType": "ActiveAbility",
+			"Description": {
+				"Id": "ActiveProbe_Ping",
+				"Name": "ACTIVE PROBE PING",
+				"Details": "Activated ability (uses Firing action). Performs a Sensor Lock against all enemies within its radius, as indicated by the spinning gold ring. Will go into cooldown state after use.",
+				"Icon": "uixSvgIcon_action_sensorlock"
+			},
+			"activeAbilityEffectData": {
+				"abilityName": "AbilityDef_ActiveProbe_Ping"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator"
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "SpottingRange",
+				"Name": "SPOTTING DISTANCE INCREASED",
+				"Details": "Increases spotting distance by 50m.",
+				"Icon": "uixSvgIcon_equipment_Cockpit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "SpotterDistanceMultiplier",
+				"operation": "Float_Multiply",
+				"modValue": "1.15",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"lv-probe_m2"
+		],
+		"tagSetSourceFile": ""
+	}
 }

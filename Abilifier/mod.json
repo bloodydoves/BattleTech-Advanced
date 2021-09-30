@@ -1,19 +1,18 @@
 {
-    "Name": "Abilifier",
-    "DLL": "Abilifier.dll",
+	"Name": "Abilifier",
+	"DLL": "Abilifier.dll",
 	"Enabled": true,
 	"Hidden": true,
-    "Version": "1.1.1.1",
-    "Description": "Allows for choices between abilities when leveling pilots.",
-    "Author": "gnivler, T-Bone",
-    "Website": "",
+	"Version": "1.1.1.1",
+	"Description": "Allows for choices between abilities when leveling pilots.",
+	"Author": "gnivler, T-Bone",
+	"Website": "",
 	"DependsOn": [
 		"CustomActivatableEquipment"
 	],
-    "ConflictsWith": [],
-    "CustomResourceTypes": [],
-
-    "Settings": {
+	"ConflictsWith": [],
+	"CustomResourceTypes": [],
+	"Settings": {
 		"enableTrace": false,
 		"enableLog": true,
 		"usePopUpsForAbilityDesc": false,
@@ -28,26 +27,56 @@
 		"extraAbilitiesAllowedPerSkill": 1,
 		"nonTreeAbilities": 3,
 		"cleanUpCombatUI": true,
-		"skillLockThreshold":8,
-		"usingCACabilitySelector":true,
+		"skillLockThreshold": 8,
+		"usingCACabilitySelector": true,
 		"usingHumanResources": false,
-		"tagTraitForTree": 
-		{	
+		"tagTraitForTree": {
 			"pilot_vehicle_crew": "TraitDefIAmTank",
 			"pilot_mechwarrior": "TraitDefIAmMech",
 			"pilot_defaultTree": "TraitDefIAmMech"
 		},
-		"defaultTagTraitForTree": {"pilot_defaultTree": "TraitDefIAmMech"},
+		"defaultTagTraitForTree": {
+			"pilot_defaultTree": "TraitDefIAmMech"
+		},
 		"defaultTagTraitException": "pilot_nomech_crew",
-		"abilityReqs":
-		{
-			"TraitDefIAmTank":[ "AbilityDefG5T", "AbilityDefG8T", "AbilityDefG10T", "AbilityDefGu5T", "AbilityDefGu8T", "AbilityDefGu10T", "AbilityDefP5T", "AbilityDefP8T", "AbilityDefP10T", "AbilityDefT5T", "AbilityDefT8T", "AbilityDefT10T" ],
-			"TraitDefIAmMech":[ "AbilityDefG5a", "AbilityDefG8a", "AbilityDefG8b", "AbilityDefG8c", "AbilityDefG10a", "AbilityDefGu5", "AbilityDefGu8", "AbilityDefGu8a", "AbilityDefGu10a", "AbilityDefP5a", "AbilityDefP8a", "AbilityDefP10a", "AbilityDefT5Aa", "AbilityDefT8Aa", "AbilityDefT10Aa" ]
+		"abilityReqs": {
+			"TraitDefIAmTank": [
+				"AbilityDefG5T",
+				"AbilityDefG8T",
+				"AbilityDefG10T",
+				"AbilityDefGu5T",
+				"AbilityDefGu8T",
+				"AbilityDefGu10T",
+				"AbilityDefP5T",
+				"AbilityDefP8T",
+				"AbilityDefP10T",
+				"AbilityDefT5T",
+				"AbilityDefT8T",
+				"AbilityDefT10T"
+			],
+			"TraitDefIAmMech": [
+				"AbilityDefG5a",
+				"AbilityDefG8a",
+				"AbilityDefG8b",
+				"AbilityDefG8c",
+				"AbilityDefG10a",
+				"AbilityDefGu5",
+				"AbilityDefGu8",
+				"AbilityDefGu8a",
+				"AbilityDefGu10a",
+				"AbilityDefP5a",
+				"AbilityDefP8a",
+				"AbilityDefP10a",
+				"AbilityDefT5Aa",
+				"AbilityDefT8Aa",
+				"AbilityDefT10Aa"
+			]
 		}
 	},
-
-    "Manifest": [
-		{ "Type": "AbilityDef", "Path": "abilities" }
-
-    ]
+	"Manifest": [
+		{
+			"Type": "AbilityDef",
+			"Path": "abilities"
+		}
+	]
 }

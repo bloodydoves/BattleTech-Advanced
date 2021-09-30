@@ -1,429 +1,428 @@
 {
-    "StartingMilestoneID": "ms_fp_StoryTime5_001_Start",
-    "Milestones": [
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime5_001_Start",
-                "Name": "Start",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": null,
-                    "AddedTags": {},
-                    "RemovedTags": {},
-                    "Stats": [],
-                    "Actions": [
-                        {
-                            "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime5_002_Mission",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        }
-                    ],
-                    "ForceEvents": [],
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime5_002_Mission",
-                "Name": "Mission",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": null,
-                    "AddedTags": {},
-                    "RemovedTags": {},
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "Flashpoint_AddContract",
-                            "value": "",
-                            "valueConstant": null,
-                            "additionalValues": [
-                                "",
-                                "",
-                                "StoryTime_5_a_SmithonAttack_Default",
-                                "AuriganRestoration",
-                                "AuriganDirectorate",
-                                "4",
-                                "ms_fp_StoryTime5_003_Talk"
-                            ]
-                        },
-                        {
-                            "Type": "System_ForceDropshipRoom",
-                            "value": "Contract",
-                            "valueConstant": null,
-                            "additionalValues": [
-                                "BaseFlashpoint"
-                            ]
-                        }
-                    ],
-                    "ForceEvents": null,
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime5_003_Talk",
-                "Name": "Talk",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": null,
-                    "AddedTags": {},
-                    "RemovedTags": {},
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type" : "System_SimGameCharacterVisible",
-                            "value" : true,
-                            "additionalValues" : [
-                                "Kamea",
-                                "Alexander"
-                            ]
-                        },
-                        {
-                            "Type": "System_StartConversation",
-                            "value": "StoryTime5-BlackBox",
-                            "valueConstant": null,
-                            "additionalValues": [
-                                "BLACK BOX",
-                                "In Orbit — Smithon"
-                            ]
-                        },
-                        {
-                            "Type": "System_StartConversation",
-                            "value": "StoryTime5-Anvelt",
-                            "valueConstant": null,
-                            "additionalValues": [
-                                "ANVELT",
-                                "In Orbit — First Moon of Smithon"
-                            ]
-                        },
-                        {
-                            "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime5_004_Mission",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        }
-                    ],
-                    "ForceEvents": null,
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime5_004_Mission",
-                "Name": "Mission 2",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": null,
-                    "AddedTags": {},
-                    "RemovedTags": {},
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type" : "System_SimGameCharacterVisible",
-                            "value" : false,
-                            "additionalValues" : [
-                                "Kamea"
-                            ]
-                        },
-                        {
-                            "Type": "Flashpoint_AddContract",
-                            "value": "",
-                            "valueConstant": null,
-                            "additionalValues": [
-                                "",
-                                "",
-                                "StoryTime_5_b_ServedCold_Default",
-                                "AuriganRestoration",
-                                "AuriganDirectorate",
-                                "5",
-                                "ms_fp_StoryTime5_005_Cutscene"
-                            ]
-                        },
-                        {
-                            "Type": "System_ForceDropshipRoom",
-                            "value": "Contract",
-                            "valueConstant": null,
-                            "additionalValues": [
-                                "BaseFlashpoint"
-                            ]
-                        }
-                    ],
-                    "ForceEvents": null,
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime5_005_Cutscene",
-                "Name": "Complete",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": null,
-                    "AddedTags": {},
-                    "RemovedTags": {},
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "System_ForceDropshipRoom",
-                            "value": "Ship",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        },
-                        {
-                            "Type": "Flashpoint_SetNextMilestone",
-                            "value": "ms_fp_StoryTime5_006_Talk",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        },
-                        {
-                            "Type" : "System_PauseNotification",
-                            "value" : "I'm coming in hot, Commander, before the Directorate can send in more forces.",
-                            "additionalValues" : [
-                                  "Capturing Lady Espinoza",
-                                  "castDef_SumiereDefault"
-                            ],
-                            "valueConstant" : null
-                        }
-                    ],
-                    "ForceEvents": [
-                        {
-                            "Scope" : "Company",
-                            "EventID" : "forcedevent_FP_StoryTime5_A",
-                            "MinDaysWait" : 0,
-                            "MaxDaysWait" : 0,
-                            "Probability" : 100
-                        }
-                    ],
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime5_006_Talk",
-                "Name": "Talk",
-                "Details": "flashpoint",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Company",
-                        "RequirementTags": {},
-                        "ExclusionTags": {
-                            "items": [
-                                "flashpoint_StoryTime5_complete"
-                            ],
-                            "tagSetSourceFile": "Tags/CompanyTags"
-                        },
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {
-                        "items": [
-                            "flashpoint_StoryTime5_complete"
-                        ],
-                        "tagSetSourceFile": "Tags/CompanyTags"
-                    },
-                    "RemovedTags": {},
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "System_SimGameCharacterVisible",
-                            "value": true,
-                            "additionalValues": [
-                                "Kamea"
-                            ]
-                        },
-                        {
-                            "Type": "System_StartConversation",
-                            "value": "StoryTime5-FamilyReunion",
-                            "additionalValues": [
-                                "IN EXILE",
-                                "High Orbit — Alloway"
-                            ]
-                        },
-                        {
-                            "Type" : "System_StartConversation",
-                            "value" : "StoryTime5-MendingFences",
-                            "additionalValues" : [
-                                "MENDING FENCES",
-                                "In Orbit — Anvelt"
-                            ]
-                        },
-                        {
-                            "Type": "Flashpoint_CompleteFlashpoint",
-                            "value": "ms_fp_StoryTime5_007_Reward",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        }
-                    ],
-                    "ForceEvents": null,
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                },
-                {
-                    "Scope": "Company",
-                    "Requirements": {
-                        "Scope": "Company",
-                        "RequirementTags": {
-                            "items": [
-                                "flashpoint_StoryTime5_complete"
-                            ],
-                            "tagSetSourceFile": "Tags/CompanyTags"
-                        },
-                        "ExclusionTags": {},
-                        "RequirementComparisons": []
-                    },
-                    "AddedTags": {},
-                    "RemovedTags": {},
-                    "Stats": null,
-                    "Actions": [
-                        {
-                            "Type": "Flashpoint_CompleteFlashpoint",
-                            "value": "ms_fp_StoryTime5_007_Reward",
-                            "valueConstant": null,
-                            "additionalValues": null
-                        }
-                    ],
-                    "ForceEvents": null,
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        },
-
-        {
-            "Description": {
-                "Id": "ms_fp_StoryTime5_007_Reward",
-                "Name": "Reward",
-                "Details": "Extra rewards, including Reputation and bonus C-Bills go here",
-                "Icon": null
-            },
-            "Scope": "Company",
-            "Requirements": [],
-            "Results": [
-                {
-                    "Scope": "Company",
-                    "Requirements": null,
-                    "AddedTags": {},
-                    "RemovedTags": {},
-                    "Stats": [
-                        {
-                            "typeString": "System.Int32",
-                            "name": "Funds",
-                            "value": "300000",
-                            "set": false,
-                            "valueConstant": null
-                        },
-                        {
-                            "typeString": "System.Int32",
-                            "name": "Reputation.TaurianConcordat",
-                            "value": "-10",
-                            "set": false,
-                            "valueConstant": null
-                        },
-                        {
-                            "typeString": "System.Int32",
-                            "name": "Reputation.MercenaryReviewBoard",
-                            "value": "8",
-                            "set": false,
-                            "valueConstant": null
-                        }
-                    ],
-                    "Actions": [
-                        {
-                            "Type": "System_SimGameCharacterVisible",
-                            "value": false,
-                            "additionalValues": [
-                                "Kamea"
-                            ]
-                        }
-                    ],
-                    "ForceEvents": [
-                        {
-                            "Scope" : "Company",
-                            "EventID" : "forcedevent_FP_StoryTime5_B",
-                            "MinDaysWait" : 0,
-                            "MaxDaysWait" : 0,
-                            "Probability" : 100
-                        },
-                        {
-                            "Scope" : "Company",
-                            "EventID" : "forcedevent_FP_StoryTime5_C",
-                            "MinDaysWait" : 10,
-                            "MaxDaysWait" : 30,
-                            "Probability" : 100
-                        }
-                    ],
-                    "TemporaryResult": false,
-                    "ResultDuration": 0
-                }
-            ],
-            "Repeatable": false,
-            "UseRandomInvocation": false,
-            "InvokeChance": 0
-        }
-    ]
+	"StartingMilestoneID": "ms_fp_StoryTime5_001_Start",
+	"Milestones": [
+		{
+			"Description": {
+				"Id": "ms_fp_StoryTime5_001_Start",
+				"Name": "Start",
+				"Details": "flashpoint",
+				"Icon": null
+			},
+			"Scope": "Company",
+			"Requirements": [],
+			"Results": [
+				{
+					"Scope": "Company",
+					"Requirements": null,
+					"AddedTags": {},
+					"RemovedTags": {},
+					"Stats": [],
+					"Actions": [
+						{
+							"Type": "Flashpoint_SetNextMilestone",
+							"value": "ms_fp_StoryTime5_002_Mission",
+							"valueConstant": null,
+							"additionalValues": null
+						}
+					],
+					"ForceEvents": [],
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				}
+			],
+			"Repeatable": false,
+			"UseRandomInvocation": false,
+			"InvokeChance": 0
+		},
+		{
+			"Description": {
+				"Id": "ms_fp_StoryTime5_002_Mission",
+				"Name": "Mission",
+				"Details": "flashpoint",
+				"Icon": null
+			},
+			"Scope": "Company",
+			"Requirements": [],
+			"Results": [
+				{
+					"Scope": "Company",
+					"Requirements": null,
+					"AddedTags": {},
+					"RemovedTags": {},
+					"Stats": null,
+					"Actions": [
+						{
+							"Type": "Flashpoint_AddContract",
+							"value": "",
+							"valueConstant": null,
+							"additionalValues": [
+								"",
+								"",
+								"StoryTime_5_a_SmithonAttack_Default",
+								"AuriganRestoration",
+								"AuriganDirectorate",
+								"4",
+								"ms_fp_StoryTime5_003_Talk"
+							]
+						},
+						{
+							"Type": "System_ForceDropshipRoom",
+							"value": "Contract",
+							"valueConstant": null,
+							"additionalValues": [
+								"BaseFlashpoint"
+							]
+						}
+					],
+					"ForceEvents": null,
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				}
+			],
+			"Repeatable": false,
+			"UseRandomInvocation": false,
+			"InvokeChance": 0
+		},
+		{
+			"Description": {
+				"Id": "ms_fp_StoryTime5_003_Talk",
+				"Name": "Talk",
+				"Details": "flashpoint",
+				"Icon": null
+			},
+			"Scope": "Company",
+			"Requirements": [],
+			"Results": [
+				{
+					"Scope": "Company",
+					"Requirements": null,
+					"AddedTags": {},
+					"RemovedTags": {},
+					"Stats": null,
+					"Actions": [
+						{
+							"Type": "System_SimGameCharacterVisible",
+							"value": true,
+							"additionalValues": [
+								"Kamea",
+								"Alexander"
+							]
+						},
+						{
+							"Type": "System_StartConversation",
+							"value": "StoryTime5-BlackBox",
+							"valueConstant": null,
+							"additionalValues": [
+								"BLACK BOX",
+								"In Orbit \u2014 Smithon"
+							]
+						},
+						{
+							"Type": "System_StartConversation",
+							"value": "StoryTime5-Anvelt",
+							"valueConstant": null,
+							"additionalValues": [
+								"ANVELT",
+								"In Orbit \u2014 First Moon of Smithon"
+							]
+						},
+						{
+							"Type": "Flashpoint_SetNextMilestone",
+							"value": "ms_fp_StoryTime5_004_Mission",
+							"valueConstant": null,
+							"additionalValues": null
+						}
+					],
+					"ForceEvents": null,
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				}
+			],
+			"Repeatable": false,
+			"UseRandomInvocation": false,
+			"InvokeChance": 0
+		},
+		{
+			"Description": {
+				"Id": "ms_fp_StoryTime5_004_Mission",
+				"Name": "Mission 2",
+				"Details": "flashpoint",
+				"Icon": null
+			},
+			"Scope": "Company",
+			"Requirements": [],
+			"Results": [
+				{
+					"Scope": "Company",
+					"Requirements": null,
+					"AddedTags": {},
+					"RemovedTags": {},
+					"Stats": null,
+					"Actions": [
+						{
+							"Type": "System_SimGameCharacterVisible",
+							"value": false,
+							"additionalValues": [
+								"Kamea"
+							]
+						},
+						{
+							"Type": "Flashpoint_AddContract",
+							"value": "",
+							"valueConstant": null,
+							"additionalValues": [
+								"",
+								"",
+								"StoryTime_5_b_ServedCold_Default",
+								"AuriganRestoration",
+								"AuriganDirectorate",
+								"5",
+								"ms_fp_StoryTime5_005_Cutscene"
+							]
+						},
+						{
+							"Type": "System_ForceDropshipRoom",
+							"value": "Contract",
+							"valueConstant": null,
+							"additionalValues": [
+								"BaseFlashpoint"
+							]
+						}
+					],
+					"ForceEvents": null,
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				}
+			],
+			"Repeatable": false,
+			"UseRandomInvocation": false,
+			"InvokeChance": 0
+		},
+		{
+			"Description": {
+				"Id": "ms_fp_StoryTime5_005_Cutscene",
+				"Name": "Complete",
+				"Details": "flashpoint",
+				"Icon": null
+			},
+			"Scope": "Company",
+			"Requirements": [],
+			"Results": [
+				{
+					"Scope": "Company",
+					"Requirements": null,
+					"AddedTags": {},
+					"RemovedTags": {},
+					"Stats": null,
+					"Actions": [
+						{
+							"Type": "System_ForceDropshipRoom",
+							"value": "Ship",
+							"valueConstant": null,
+							"additionalValues": null
+						},
+						{
+							"Type": "Flashpoint_SetNextMilestone",
+							"value": "ms_fp_StoryTime5_006_Talk",
+							"valueConstant": null,
+							"additionalValues": null
+						},
+						{
+							"Type": "System_PauseNotification",
+							"value": "I'm coming in hot, Commander, before the Directorate can send in more forces.",
+							"additionalValues": [
+								"Capturing Lady Espinoza",
+								"castDef_SumiereDefault"
+							],
+							"valueConstant": null
+						}
+					],
+					"ForceEvents": [
+						{
+							"Scope": "Company",
+							"EventID": "forcedevent_FP_StoryTime5_A",
+							"MinDaysWait": 0,
+							"MaxDaysWait": 0,
+							"Probability": 100
+						}
+					],
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				}
+			],
+			"Repeatable": false,
+			"UseRandomInvocation": false,
+			"InvokeChance": 0
+		},
+		{
+			"Description": {
+				"Id": "ms_fp_StoryTime5_006_Talk",
+				"Name": "Talk",
+				"Details": "flashpoint",
+				"Icon": null
+			},
+			"Scope": "Company",
+			"Requirements": [],
+			"Results": [
+				{
+					"Scope": "Company",
+					"Requirements": {
+						"Scope": "Company",
+						"RequirementTags": {},
+						"ExclusionTags": {
+							"items": [
+								"flashpoint_StoryTime5_complete"
+							],
+							"tagSetSourceFile": "Tags/CompanyTags"
+						},
+						"RequirementComparisons": []
+					},
+					"AddedTags": {
+						"items": [
+							"flashpoint_StoryTime5_complete"
+						],
+						"tagSetSourceFile": "Tags/CompanyTags"
+					},
+					"RemovedTags": {},
+					"Stats": null,
+					"Actions": [
+						{
+							"Type": "System_SimGameCharacterVisible",
+							"value": true,
+							"additionalValues": [
+								"Kamea"
+							]
+						},
+						{
+							"Type": "System_StartConversation",
+							"value": "StoryTime5-FamilyReunion",
+							"additionalValues": [
+								"IN EXILE",
+								"High Orbit \u2014 Alloway"
+							]
+						},
+						{
+							"Type": "System_StartConversation",
+							"value": "StoryTime5-MendingFences",
+							"additionalValues": [
+								"MENDING FENCES",
+								"In Orbit \u2014 Anvelt"
+							]
+						},
+						{
+							"Type": "Flashpoint_CompleteFlashpoint",
+							"value": "ms_fp_StoryTime5_007_Reward",
+							"valueConstant": null,
+							"additionalValues": null
+						}
+					],
+					"ForceEvents": null,
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				},
+				{
+					"Scope": "Company",
+					"Requirements": {
+						"Scope": "Company",
+						"RequirementTags": {
+							"items": [
+								"flashpoint_StoryTime5_complete"
+							],
+							"tagSetSourceFile": "Tags/CompanyTags"
+						},
+						"ExclusionTags": {},
+						"RequirementComparisons": []
+					},
+					"AddedTags": {},
+					"RemovedTags": {},
+					"Stats": null,
+					"Actions": [
+						{
+							"Type": "Flashpoint_CompleteFlashpoint",
+							"value": "ms_fp_StoryTime5_007_Reward",
+							"valueConstant": null,
+							"additionalValues": null
+						}
+					],
+					"ForceEvents": null,
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				}
+			],
+			"Repeatable": false,
+			"UseRandomInvocation": false,
+			"InvokeChance": 0
+		},
+		{
+			"Description": {
+				"Id": "ms_fp_StoryTime5_007_Reward",
+				"Name": "Reward",
+				"Details": "Extra rewards, including Reputation and bonus C-Bills go here",
+				"Icon": null
+			},
+			"Scope": "Company",
+			"Requirements": [],
+			"Results": [
+				{
+					"Scope": "Company",
+					"Requirements": null,
+					"AddedTags": {},
+					"RemovedTags": {},
+					"Stats": [
+						{
+							"typeString": "System.Int32",
+							"name": "Funds",
+							"value": "300000",
+							"set": false,
+							"valueConstant": null
+						},
+						{
+							"typeString": "System.Int32",
+							"name": "Reputation.TaurianConcordat",
+							"value": "-10",
+							"set": false,
+							"valueConstant": null
+						},
+						{
+							"typeString": "System.Int32",
+							"name": "Reputation.MercenaryReviewBoard",
+							"value": "8",
+							"set": false,
+							"valueConstant": null
+						}
+					],
+					"Actions": [
+						{
+							"Type": "System_SimGameCharacterVisible",
+							"value": false,
+							"additionalValues": [
+								"Kamea"
+							]
+						}
+					],
+					"ForceEvents": [
+						{
+							"Scope": "Company",
+							"EventID": "forcedevent_FP_StoryTime5_B",
+							"MinDaysWait": 0,
+							"MaxDaysWait": 0,
+							"Probability": 100
+						},
+						{
+							"Scope": "Company",
+							"EventID": "forcedevent_FP_StoryTime5_C",
+							"MinDaysWait": 10,
+							"MaxDaysWait": 30,
+							"Probability": 100
+						}
+					],
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				}
+			],
+			"Repeatable": false,
+			"UseRandomInvocation": false,
+			"InvokeChance": 0
+		}
+	]
 }

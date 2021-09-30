@@ -5,214 +5,237 @@
 			"Exclude": false,
 			"Include": true
 		},
-        "ArmActuatorSupport": {
-			  "LeftLimit": "Hand",
-			  "RightLimit": "Hand",
-			  "LeftDefaultShoulder": "Quad_Front_leg_hip",
-			  "RightDefaultShoulder": "Quad_Front_leg_hip",
-			  "LeftDefaultUpper": "Quad_Front_leg_upper",
-			  "RightDefaultUpper": "Quad_Front_leg_upper",
-			  "LeftDefaultLower": "Quad_Front_leg_lower",
-			  "RightDefaultLower": "Quad_Front_leg_lower",
-			  "LeftDefaultHand": "Quad_Front_leg_foot",
-			  "RightDefaultHand": "Quad_Front_leg_foot"
+		"ArmActuatorSupport": {
+			"LeftLimit": "Hand",
+			"RightLimit": "Hand",
+			"LeftDefaultShoulder": "Quad_Front_leg_hip",
+			"RightDefaultShoulder": "Quad_Front_leg_hip",
+			"LeftDefaultUpper": "Quad_Front_leg_upper",
+			"RightDefaultUpper": "Quad_Front_leg_upper",
+			"LeftDefaultLower": "Quad_Front_leg_lower",
+			"RightDefaultLower": "Quad_Front_leg_lower",
+			"LeftDefaultHand": "Quad_Front_leg_foot",
+			"RightDefaultHand": "Quad_Front_leg_foot"
 		},
 		"ChassisDefaults": [
-			  {
+			{
 				"Location": "LeftLeg",
 				"CategoryID": "LegHip",
 				"DefID": "Quad_Hind_leg_hip",
 				"Type": "Upgrade"
-			  },
-			  {
+			},
+			{
 				"Location": "LeftLeg",
 				"CategoryID": "LegUpperActuator",
 				"DefID": "Quad_Hind_leg_upper",
 				"Type": "Upgrade"
-			  },
-			  {
+			},
+			{
 				"Location": "LeftLeg",
 				"CategoryID": "LegLowerActuator",
 				"DefID": "Quad_Hind_leg_lower",
 				"Type": "Upgrade"
-			  },
-			  {
+			},
+			{
 				"Location": "LeftLeg",
 				"CategoryID": "LegFootActuator",
 				"DefID": "Quad_Hind_leg_foot",
 				"Type": "Upgrade"
-			  },
-			  {
+			},
+			{
 				"Location": "RightLeg",
 				"CategoryID": "LegHip",
 				"DefID": "Quad_Hind_leg_hip",
 				"Type": "Upgrade"
-			  },
-			  {
+			},
+			{
 				"Location": "RightLeg",
 				"CategoryID": "LegUpperActuator",
 				"DefID": "Quad_Hind_leg_upper",
 				"Type": "Upgrade"
-			  },
-			  {
+			},
+			{
 				"Location": "RightLeg",
 				"CategoryID": "LegLowerActuator",
 				"DefID": "Quad_Hind_leg_lower",
 				"Type": "Upgrade"
-			  },
-			  {
+			},
+			{
 				"Location": "RightLeg",
 				"CategoryID": "LegFootActuator",
 				"DefID": "Quad_Hind_leg_foot",
 				"Type": "Upgrade"
-			  }
+			}
 		]
 	},
 	"CustomParts": {
-		"quadVisualInfo":{
-		  "UseQuadVisuals": true,
-		  "FLegsPrefab": "chrPrfMech_atlasBase-001",
-		  "BodyLength":5.2,
-		  "FLegsPrefabBase": "atlas",
-		  "RLegsPrefabBase": "atlas",
-		  "NotSuppressRenderers":["_left_leg_","_right_leg_"]
+		"quadVisualInfo": {
+			"UseQuadVisuals": true,
+			"FLegsPrefab": "chrPrfMech_atlasBase-001",
+			"BodyLength": 5.2,
+			"FLegsPrefabBase": "atlas",
+			"RLegsPrefabBase": "atlas",
+			"NotSuppressRenderers": [
+				"_left_leg_",
+				"_right_leg_"
+			]
 		},
-		"MeleeWeaponOverride":{
-		  "DefaultWeapon": "Weapon_MeleeAttackEx"
+		"MeleeWeaponOverride": {
+			"DefaultWeapon": "Weapon_MeleeAttackEx"
 		},
 		"FiringArc": 360,
 		"Unaffected": {
-		  "DesignMasks": "false",
-		  "Pathing": "false",
-		  "Fire": "false",
-		  "Landmines": "false"
+			"DesignMasks": "false",
+			"Pathing": "false",
+			"Fire": "false",
+			"Landmines": "false"
 		},
-		"ArmsCountedAsLegs":true,
+		"ArmsCountedAsLegs": true,
 		"MoveCostModPerBiome": {
-		  "DesignMaskBiomeMartianVacuum": 1.0,
-		  "DesignMaskBiomeLunarVacuum": 1.0
+			"DesignMaskBiomeMartianVacuum": 1.0,
+			"DesignMaskBiomeLunarVacuum": 1.0
 		},
 		"CustomParts": [
-		  {
-			"prefab": "jgoliathbody",
-			"MaterialInfo": {
-			  "jgoliathbody": {
-				"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
-				"shaderKeyWords": [
-				  "_DETAIL_OVERLAY",
-				  "_EMISSION",
-				  "_METALLICGLOSSMAP",
-				  "_NORMALMAP"
-				]
-			  },
-			  "jgoliathbody_damaged": {
-				"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
-				"shaderKeyWords": [
-				  "_DETAIL_OVERLAY",
-				  "_EMISSION",
-				  "_METALLICGLOSSMAP",
-				  "_NORMALMAP"
-				]
-			  }
+			{
+				"prefab": "jgoliathbody",
+				"MaterialInfo": {
+					"jgoliathbody": {
+						"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
+						"shaderKeyWords": [
+							"_DETAIL_OVERLAY",
+							"_EMISSION",
+							"_METALLICGLOSSMAP",
+							"_NORMALMAP"
+						]
+					},
+					"jgoliathbody_damaged": {
+						"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
+						"shaderKeyWords": [
+							"_DETAIL_OVERLAY",
+							"_EMISSION",
+							"_METALLICGLOSSMAP",
+							"_NORMALMAP"
+						]
+					}
+				},
+				"prefabTransform": {
+					"offset": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+					},
+					"scale": {
+						"x": 1,
+						"y": 1,
+						"z": 1
+					},
+					"rotate": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+					}
+				},
+				"MechChassisLocation": "CenterTorso",
+				"RequiredUpgrades": [],
+				"RequiredComponents": [],
+				"AnimationType": "QuadBody",
+				"AnimationData": {
+					"VerticalRotate": "rotate",
+					"TurretAttach": "turret_attach",
+					"FrontLegsAttach": "front_legs_attach",
+					"ShowFrontLegsAxis": false,
+					"DamageAnimator": "CT_LT_RT_plus_damage_models",
+					"RTVFXTransform": "RT_vfx_transform",
+					"LTVFXTransform": "LT_vfx_transform",
+					"CTVFXTransform": "CT_vfx_transform",
+					"HEADVFXTransform": "HEAD_vfx_transform",
+					"JumpJetsSpawnPoints": [
+						"jumpjet_rear",
+						"jumpjet_front",
+						"jumpjet_left",
+						"jumpjet_right"
+					],
+					"HeadLightSpawnPoints": [
+						"headlight_left",
+						"headlight_right"
+					]
+				}
 			},
-			"prefabTransform": {
-			  "offset": {
-				"x": 0,
-				"y": 0,
-				"z": 0
-			  },
-			  "scale": {
-				"x": 1,
-				"y": 1,
-				"z": 1
-			  },
-			  "rotate": {
-				"x": 0,
-				"y": 0,
-				"z": 0
-			  }
-			},
-			"MechChassisLocation": "CenterTorso",
-			"RequiredUpgrades": [],
-			"RequiredComponents": [],
-			"AnimationType": "QuadBody",
-			"AnimationData": { 
-			  "VerticalRotate":"rotate", 
-			  "TurretAttach": "turret_attach", 
-			  "FrontLegsAttach":"front_legs_attach",
-			  "ShowFrontLegsAxis": false,
-			  "DamageAnimator":"CT_LT_RT_plus_damage_models",
-			  "RTVFXTransform":"RT_vfx_transform",
-			  "LTVFXTransform":"LT_vfx_transform",
-			  "CTVFXTransform":"CT_vfx_transform",
-			  "HEADVFXTransform":"HEAD_vfx_transform",
-			  "JumpJetsSpawnPoints": ["jumpjet_rear","jumpjet_front","jumpjet_left","jumpjet_right"],
-			  "HeadLightSpawnPoints": ["headlight_left","headlight_right"]
+			{
+				"prefab": "jgoliath_turret",
+				"MaterialInfo": {
+					"jgoliathbody": {
+						"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
+						"shaderKeyWords": [
+							"_DETAIL_OVERLAY",
+							"_EMISSION",
+							"_METALLICGLOSSMAP",
+							"_NORMALMAP"
+						]
+					},
+					"bargest_turret_material": {
+						"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
+						"shaderKeyWords": [
+							"_DETAIL_OVERLAY",
+							"_EMISSION",
+							"_METALLICGLOSSMAP",
+							"_NORMALMAP"
+						]
+					},
+					"ModularSci-FiWeapons_Blue": {
+						"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
+						"shaderKeyWords": [
+							"_DETAIL_OVERLAY",
+							"_EMISSION",
+							"_METALLICGLOSSMAP",
+							"_NORMALMAP"
+						]
+					}
+				},
+				"prefabTransform": {
+					"offset": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+					},
+					"scale": {
+						"x": 1,
+						"y": 1,
+						"z": 1
+					},
+					"rotate": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+					}
+				},
+				"MechChassisLocation": "CenterTorso",
+				"RequiredUpgrades": [],
+				"RequiredComponents": [],
+				"AnimationType": "MechTurret",
+				"AnimationData": {
+					"TurnAnimator": "base",
+					"AttachPoints": [
+						{
+							"Location": "LeftTorso",
+							"AttachTo": "WeaponAttachL",
+							"Animator": "WeaponMountL"
+						},
+						{
+							"Location": "RightTorso",
+							"AttachTo": "WeaponAttachR",
+							"Animator": "WeaponMountR"
+						},
+						{
+							"Location": "CenterTorso",
+							"AttachTo": "WeaponAttachC",
+							"Animator": "WeaponMountC"
+						}
+					]
+				}
 			}
-		  },
-		  {
-			"prefab": "jgoliath_turret",
-			"MaterialInfo": {
-			  "jgoliathbody": {
-				"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
-				"shaderKeyWords": [
-				  "_DETAIL_OVERLAY",
-				  "_EMISSION",
-				  "_METALLICGLOSSMAP",
-				  "_NORMALMAP"
-				]
-			  },
-			  "bargest_turret_material": {
-				"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
-				"shaderKeyWords": [
-				  "_DETAIL_OVERLAY",
-				  "_EMISSION",
-				  "_METALLICGLOSSMAP",
-				  "_NORMALMAP"
-				]
-			  },
-			  "ModularSci-FiWeapons_Blue": {
-				"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
-				"shaderKeyWords": [
-				  "_DETAIL_OVERLAY",
-				  "_EMISSION",
-				  "_METALLICGLOSSMAP",
-				  "_NORMALMAP"
-				]
-			  }
-			},
-			"prefabTransform": {
-			  "offset": {
-				"x": 0,
-				"y": 0,
-				"z": 0
-			  },
-			  "scale": {
-				"x": 1,
-				"y": 1,
-				"z": 1
-			  },
-			  "rotate": {
-				"x": 0,
-				"y": 0,
-				"z": 0
-			  }
-			},
-			"MechChassisLocation": "CenterTorso",
-			"RequiredUpgrades": [],
-			"RequiredComponents": [],
-			"AnimationType": "MechTurret",
-			"AnimationData": {
-			  "TurnAnimator":"base",
-			  "AttachPoints":[
-				{"Location":"LeftTorso","AttachTo":"WeaponAttachL","Animator":"WeaponMountL"},
-				{"Location":"RightTorso","AttachTo":"WeaponAttachR","Animator":"WeaponMountR"},
-				{"Location":"CenterTorso","AttachTo":"WeaponAttachC","Animator":"WeaponMountC"}
-			  ]
-			}
-		  }
 		]
-	  },
+	},
 	"Description": {
 		"Cost": 7536120,
 		"Rarity": 3,
@@ -281,7 +304,8 @@
 		},
 		{
 			"Location": "LeftTorso",
-			"Hardpoints": [{
+			"Hardpoints": [
+				{
 					"WeaponMount": "Missile",
 					"Omni": false
 				},

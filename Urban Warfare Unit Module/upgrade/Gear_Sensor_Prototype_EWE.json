@@ -1,141 +1,139 @@
 {
 	"Custom": {
-        "Flags": {
-            "flags": [
-                "no_salvage"
-            ]
-        }
-    },
-    "StatName" : null,
-    "RelativeModifier" : 0,
-    "AbsoluteModifier" : 0,
-    "Description" : {
-        "Cost" : 1,
-        "Rarity" : 99,
-        "Purchasable" : false,
-        "Manufacturer" : "Ceres Arms",
-        "Model" : "Gen 1 EWE",
-        "UIName" : "X-1 EW Equipment",
-        "Id" : "Gear_Sensor_Prototype_EWE",
-        "Name" : "EW SUITE (Prototype)",
-        "Details" : "Prototype Electronic Warfare component. Adds an ECM field that provides a passive defense against missiles and immunity to indirect fire. Friendly units in the ECM field also gain Stealth Charges and cannot be targeted by direct fire unless spotted by enemy units within the ECM field or sensor locked. The ECM carrier gains an additional Stealth Charge.\n\nThe EW Suite also adds the Active Probe ability to unit's weapons panel. Active Probe is a triggered ability that uses the firing action and performs a Sensor Lock against all enemies within range. Note: you can only equip one Prototype component on most 'Mechs.",
-        "Icon" : "UixSvgIcon_specialEquip_Sensors"
-    },
-    "BonusValueA" : "+ ECM Field",
-    "BonusValueB" : "+ Area Sensor Lock",
-    "ComponentType" : "Upgrade",
-    "ComponentSubType" : "Prototype_ElectronicWarfare",
-    "PrefabIdentifier" : "",
-    "BattleValue" : 0,
-    "InventorySize" : 4,
-    "Tonnage" : 7.5,
-    "AllowedLocations" : "All",
-    "DisallowedLocations" : "All",
-    "CriticalComponent" : false,
-    "statusEffects" : [
-        {
-            "durationData": {
-                "duration": -1,
-                "stackLimit": -1
-            },
-            "targetingData": {
-                "effectTriggerType": "Passive",
-                "effectTargetType": "Creator",
-                "showInTargetPreview": false,
-                "showInStatusPanel": false
-            },
-            "effectType": "StatisticEffect",
-            "Description": {
-                "Id": "GECMInterference",
-                "Name": "GECM Interference",
-                "Details": "Guardian ECM making this unit harder to hit.",
-                "Icon": "uixSvgIcon_equipment_Gyro"
-            },
-            "nature": "Buff",
-            "statisticData": {
-                "statName": "ToHitThisActor",
-                "operation": "Float_Add",
-                "modValue": "3.0",
-                "modType": "System.Single"
-            }
-        },
-        {
-            "durationData": {
-                "duration": -1,
-                "stackLimit": -1
-            },
-            "targetingData": {
-                "effectTriggerType": "Passive",
-                "effectTargetType": "Creator",
-                "showInTargetPreview": false,
-                "showInStatusPanel": false
-            },
-            "effectType": "StatisticEffect",
-            "Description": {
-                "Id": "Angel-Signature_Decrease_45",
-                "Name": "Null Signature Systems",
-                "Details": "Active Null Signature Systems reduce visibility and grant Bulwark.",
-                "Icon": "uixSvgIcon_equipment_TTS"
-            },
-            "nature": "Buff",
-            "statisticData": {
-                "statName": "SensorSignatureModifier",
-                "operation": "Float_Multiply",
-                "modValue": "0.85",
-                "modType": "System.Single"
-            }
-        },
-        {
-            "durationData": {
-                "duration": -1,
-                "stackLimit": -1
-            },
-            "targetingData": {
-                "effectTriggerType": "Passive",
-                "effectTargetType": "Creator",
-                "showInTargetPreview": false,
-                "showInStatusPanel": false
-            },
-            "effectType": "StatisticEffect",
-            "Description": {
-                "Id": "Angel-visi",
-                "Name": "Active Stealth Armor",
-                "Details": "Provides a +2 difficulty to hit bonus.",
-                "Icon": "uixSvgIcon_equipment_Gyro"
-            },
-            "nature": "Buff",
-            "statisticData": {
-                "statName": "SpottingVisibilityMultiplier",
-                "operation": "Float_Multiply",
-                "modValue": "0.85",
-                "modType": "System.Single"
-            }
-        },
+		"Flags": {
+			"flags": [
+				"no_salvage"
+			]
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 1,
+		"Rarity": 99,
+		"Purchasable": false,
+		"Manufacturer": "Ceres Arms",
+		"Model": "Gen 1 EWE",
+		"UIName": "X-1 EW Equipment",
+		"Id": "Gear_Sensor_Prototype_EWE",
+		"Name": "EW SUITE (Prototype)",
+		"Details": "Prototype Electronic Warfare component. Adds an ECM field that provides a passive defense against missiles and immunity to indirect fire. Friendly units in the ECM field also gain Stealth Charges and cannot be targeted by direct fire unless spotted by enemy units within the ECM field or sensor locked. The ECM carrier gains an additional Stealth Charge.\n\nThe EW Suite also adds the Active Probe ability to unit's weapons panel. Active Probe is a triggered ability that uses the firing action and performs a Sensor Lock against all enemies within range. Note: you can only equip one Prototype component on most 'Mechs.",
+		"Icon": "UixSvgIcon_specialEquip_Sensors"
+	},
+	"BonusValueA": "+ ECM Field",
+	"BonusValueB": "+ Area Sensor Lock",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "Prototype_ElectronicWarfare",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 4,
+	"Tonnage": 7.5,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
 		{
-            "targetingData" : {
-                "effectTriggerType" : "OnActivation",
-                "effectTargetType" : "EnemiesWithinRange",
-				"alsoTargetsCreator" : true,
-                "forceVisRebuild" : true
-            },
-			"effectType" : "ActiveAbility",
-			"Description" :
-			{
-				"Id" : "ActiveProbe_Ping",
-				"Name" : "ACTIVE PROBE PING",
-				"Details" : "Activated ability (uses Firing action). Performs a Sensor Lock against all enemies within its radius, as indicated by the spinning gold ring. Will go into cooldown state after use.",
-				"Icon" : "uixSvgIcon_action_sensorlock"
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
 			},
-			"activeAbilityEffectData" : 
-			{
-				"abilityName" : "AbilityDef_ActiveProbe_Ping"
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "GECMInterference",
+				"Name": "GECM Interference",
+				"Details": "Guardian ECM making this unit harder to hit.",
+				"Icon": "uixSvgIcon_equipment_Gyro"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "ToHitThisActor",
+				"operation": "Float_Add",
+				"modValue": "3.0",
+				"modType": "System.Single"
 			}
-		}	
-    ],
-    "ComponentTags" : {
-        "items" : [
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Angel-Signature_Decrease_45",
+				"Name": "Null Signature Systems",
+				"Details": "Active Null Signature Systems reduce visibility and grant Bulwark.",
+				"Icon": "uixSvgIcon_equipment_TTS"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "SensorSignatureModifier",
+				"operation": "Float_Multiply",
+				"modValue": "0.85",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Angel-visi",
+				"Name": "Active Stealth Armor",
+				"Details": "Provides a +2 difficulty to hit bonus.",
+				"Icon": "uixSvgIcon_equipment_Gyro"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "SpottingVisibilityMultiplier",
+				"operation": "Float_Multiply",
+				"modValue": "0.85",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "EnemiesWithinRange",
+				"alsoTargetsCreator": true,
+				"forceVisRebuild": true
+			},
+			"effectType": "ActiveAbility",
+			"Description": {
+				"Id": "ActiveProbe_Ping",
+				"Name": "ACTIVE PROBE PING",
+				"Details": "Activated ability (uses Firing action). Performs a Sensor Lock against all enemies within its radius, as indicated by the spinning gold ring. Will go into cooldown state after use.",
+				"Icon": "uixSvgIcon_action_sensorlock"
+			},
+			"activeAbilityEffectData": {
+				"abilityName": "AbilityDef_ActiveProbe_Ping"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
 			"BLACKLISTED"
-        ],
-        "tagSetSourceFile" : ""
-    }
+		],
+		"tagSetSourceFile": ""
+	}
 }
