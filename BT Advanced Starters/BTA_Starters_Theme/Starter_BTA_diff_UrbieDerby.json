@@ -1,0 +1,28 @@
+{
+	"TargetID": "CareerDifficultySettings",
+	"Instructions": [
+		{
+			"JSONPath": "$.difficultyList[?(@.ID== 'diff_startingplanet')].Options",
+			"Action": "ArrayAdd",
+			"Value": {
+				"ID": "diff_start_Lights",
+				"Name": "Urbie Derby",
+				"TelemetryEventDesc": "",
+				"DifficultyValue": 1,
+				"CareerScoreModifier": 0.4,
+				"DifficultyConstants": [
+					{
+						"ConstantType": "CareerMode",
+						"ConstantName": "StartingSystems",
+						"ConstantValue": "Waypoint"
+					},
+					{
+						"ConstantType": "CareerMode",
+						"ConstantName": "StartingRandomMechLists",
+						"ConstantValue": "itemCollection_Mechs_Generic_Urbies,itemCollection_Mechs_Generic_Urbies,itemCollection_Mechs_Generic_Urbies,itemCollection_Mechs_Generic_Urbies,itemCollection_Mechs_Generic_Urbies"
+					}
+				]
+			}
+		}
+	]
+}
