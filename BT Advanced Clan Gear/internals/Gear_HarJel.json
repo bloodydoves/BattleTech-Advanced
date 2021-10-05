@@ -1,0 +1,104 @@
+{
+  "Custom": {
+    "Category": [
+      {
+        "CategoryID": "HarJel"
+      }
+    ],
+    "BonusDescriptions": {
+      "Bonuses": [
+        "HarJel",
+        "HarJelLocation",
+        "HarJelArmor: 10"
+      ]
+    },
+    "ActivatableComponent": {
+      "ButtonName": "HarJel",
+      "CanNotBeActivatedManualy": true,
+      "NoUniqueCheck": true,
+      "ActivationMessage": "HarJel Activating",
+      "DeactivationMessage": "Repairs Complete",
+      "Repair": {
+        "InnerStructure": 0,
+        "Armor": 10,
+        "MechStructureLocations": [],
+        "MechArmorLocations": [],
+        "VehicleLocations": [],
+        "BuildingLocations": [],
+        "AffectInstalledLocation": true,
+        "TurnsSinceDamage": 1,
+        "repairTrigger": {
+          "OnActivation": false,
+          "OnDamage": "InstalledLocation",
+          "AtEndOfTurn": true
+        }
+      }
+    },
+    "ComponentExplosion": {
+      "ExplosionDamage": 20
+    },
+    "Flags": {
+      "flags": [
+        "not_broken"
+      ]
+    }
+  },
+  "StatName": null,
+  "RelativeModifier": 0,
+  "AbsoluteModifier": 0,
+  "Description": {
+    "Cost": 175000,
+    "Rarity": 4,
+    "Purchasable": true,
+    "Manufacturer": "CLANS",
+    "Model": "Self-Repair System",
+    "UIName": "HarJel",
+    "Id": "Gear_HarJel",
+    "Name": "HarJel Self Repair System",
+    "Details": "HarJel is based on a very rare, naturally occuring, black jel substance discovered by Clan Diamond Shark in the Clan Homeworlds and later discovered on an uninhabitable planet in the Twycross system in the Inner Sphere. The Sharks zealously defend their monopoly over the substance, resorting to violence when necessary. HarJel was originally used as a sealant for underwater or vacuum operations but the Sharks discovered that, with proper treatment and stimulus, HarJel could be prompted to seal gaps in 'Mech armor, leading to the HarJel Self-Repair System. The HarJel SRS activates on taking damage and seals small amounts of damage to BattleMech armor over time. The system only protects any location it is installed in however, meaning it must be widely installed for maximum effect.",
+    "Icon": "healing"
+  },
+  "BonusValueA": "",
+  "BonusValueB": "",
+  "ComponentType": "Upgrade",
+  "ComponentSubType": "NotSet",
+  "PrefabIdentifier": "",
+  "BattleValue": 0,
+  "InventorySize": 1,
+  "Tonnage": 0.5,
+  "AllowedLocations": "All",
+  "DisallowedLocations": "Head",
+  "CriticalComponent": false,
+  "statusEffects": [
+    {
+      "durationData": {
+        "duration": -1
+      },
+      "targetingData": {
+        "effectTriggerType": "Passive",
+        "effectTargetType": "Creator"
+      },
+      "effectType": "StatisticEffect",
+      "Description": {
+        "Id": "BreachImmunity",
+        "Name": "BreachImmunity",
+        "Details": "Immune to Hull Breach",
+        "Icon": "uixSvgIcon_ability_precisionstrike"
+      },
+      "statisticData": {
+        "statName": "CBTBE_HullBreachImmunity",
+        "operation": "Set",
+        "modValue": "true",
+        "modType": "System.Boolean"
+      },
+      "nature": "Buff"
+    }
+  ],
+  "ComponentTags": {
+    "items": [
+      "component_type_variant",
+      "component_type_variant2"
+    ],
+    "tagSetSourceFile": ""
+  }
+}

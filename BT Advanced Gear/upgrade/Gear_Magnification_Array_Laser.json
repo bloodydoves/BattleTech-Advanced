@@ -1,0 +1,80 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "Misc"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"EnergyMaxRange: +10%"
+			]
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 150000,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "Technicron Manufacturing",
+		"Model": "Technicron UltraZoom",
+		"UIName": "Laser Zoom Array",
+		"Id": "Gear_Magnification_Array_Laser",
+		"Name": "Laser Zoom Array",
+		"Details": "This highly specialized sensor array provides detailed targeting data against long-range targets in real-time, increasing the carrying unit's effective maximum weapons range against distant targets. Specifically, the Laser Zoom Array benefits energy weapons such as laser and PPC weapons, it provides no benefit to ballistic or missile weapons.",
+		"Icon": "uixSvgIcon_equipment_Comms"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0.5,
+	"AllowedLocations": "Torso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "MaxBallisticRange",
+				"Name": "Max Ballistic Range",
+				"Details": "Increased sensors range",
+				"Icon": "uixSvgIcon_equipment_Cockpit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "MaxRange",
+				"operation": "Float_Multiply",
+				"modValue": "1.1",
+				"modType": "System.Single",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "Energy",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"lv-shares-sensors"
+		],
+		"tagSetSourceFile": ""
+	}
+}
