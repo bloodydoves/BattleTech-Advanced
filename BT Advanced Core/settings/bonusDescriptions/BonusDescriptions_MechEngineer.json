@@ -559,6 +559,12 @@
 			"Full": "{0} damage penalty to direct hits before the airburst shell splits normally, so under 300m."
 		},
 		{
+			"Bonus": "NoAreaOfEffect",
+			"Short": "No AOE",
+			"Long": "No AOE",
+			"Full": "Does not deal Area Of Effect damage."
+		},
+		{
 			"Bonus": "AreaOfEffect",
 			"Short": "AOE",
 			"Long": "{0}M AOE",
@@ -575,6 +581,12 @@
 			"Short": "AOE-H-Dmg",
 			"Long": "AOE {0} Heat Dmg",
 			"Full": "Additional Area Effect Heat Damage is {0} to Primary and Secondary targets"
+		},
+		{
+			"Bonus": "AreaOfEffectSTABDmg",
+			"Short": "AOE-S-Dmg {0}",
+			"Long": "AOE STAB {0} Dmg",
+			"Full": "{0} Area-of-effect stability damage to units in radius."
 		},
 		{
 			"Bonus": "AMSChance",
@@ -2109,7 +2121,7 @@
 			"Bonus": "Streak",
 			"Short": "Streak",
 			"Long": "Streak Weapon",
-			"Full": "Streak Weapons only fire when it is a guaranteed hit."
+			"Full": "Streak Weapons only fire when they have a lock, which means they are guaranteed to hit when fired."
 		},
 		{
 			"Bonus": "FTLLRM",
@@ -2280,6 +2292,12 @@
 			"Full": "{0} increased Range with Ballistic Weapons"
 		},
 		{
+			"Bonus": "BallisticMaxRange",
+			"Short": "{0} Max Ball.Range",
+			"Long": "{0} Max Ballistic Range",
+			"Full": "{0} increased maximum range with ballistic weapons"
+		},
+		{
 			"Bonus": "BallisticACRange",
 			"Short": "{0} AC.Range",
 			"Long": "{0} AC Range",
@@ -2292,10 +2310,22 @@
 			"Full": "{0} increased Range with Energy Weapons"
 		},
 		{
+			"Bonus": "EnergyMaxRange",
+			"Short": "{0} Max Enrg.Range",
+			"Long": "{0} Max Energy Range",
+			"Full": "{0} increased maximum range with energy weapons"
+		},
+		{
 			"Bonus": "MissileRange",
 			"Short": "{0} Miss.Range",
 			"Long": "{0} Missile Range",
 			"Full": "{0} increased Range with Missile Weapons"
+		},
+		{
+			"Bonus": "MissileMaxRange",
+			"Short": "{0} Max Miss.Range",
+			"Long": "{0} Max Missile Range",
+			"Full": "{0} increased maximum range with missile weapons"
 		},
 		{
 			"Bonus": "SRMRange",
@@ -3606,12 +3636,6 @@
 			"Full": "The user is immune to this weapon's AOE effects."
 		},
 		{
-			"Bonus": "AreaOfEffectSTABDmg",
-			"Short": "AOE-S-Dmg {0}",
-			"Long": "AOE STAB {0} Dmg",
-			"Full": "{0} Area-of-effect stability damage to units in radius."
-		},
-		{
 			"Bonus": "DelayedImpact",
 			"Short": "{0} Turns",
 			"Long": "{0} Turns Delay",
@@ -4216,6 +4240,42 @@
 			"Short": "ASF Weaponry",
 			"Long": "ASF Weaponry",
 			"Full": "The Aerospace Fighter provided by this contract fields the following weapon as its main weaponry: {0}."
+		},
+		{
+			"Bonus": "Dissipation",
+			"Short": "{0} Dissipation",
+			"Long": "{0} Heat Dissipation",
+			"Full": "This component provides {0} heat dissipation to the carrying unit."
+		},
+		{
+			"Bonus": "ModularArmor",
+			"Short": "Modular Armor",
+			"Long": "Modular Armor",
+			"Full": "This component provides {0} bonus armor to the location this component is mounted in."
+		},
+		{
+			"Bonus": "SkillPiloting",
+			"Short": "Piloting Skill",
+			"Long": "Piloting Skill Modification",
+			"Full": "This component modifies the pilot's Piloting Skill by {0}."
+		},
+		{
+			"Bonus": "HarJel",
+			"Short": "HarJel",
+			"Long": "HarJel",
+			"Full": "HarJel is a black jel substance that provides BattleMechs with slow but consistent self-repair in combat."
+		},
+		{
+			"Bonus": "HarJelLocation",
+			"Short": "HarJel Location",
+			"Long": "HarJel Protected Location",
+			"Full": "The HarJel Self-Repair System only protects locations that it is installed in."
+		},
+		{
+			"Bonus": "HarJelArmor",
+			"Short": "HarJel Protection",
+			"Long": "HarJel Protection Amount",
+			"Full": "The HarJel Self-Repair System repairs {0} armor in its installed location per turn."
 		}
 	]
 }

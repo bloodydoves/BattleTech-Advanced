@@ -1,0 +1,78 @@
+{
+	"Description": {
+		"Id": "AbilityDefBTeam",
+		"Name": "TRAINING WHEELS",
+		"Details": "ACTION: Focus attention for a turn, gaining +1 to weapon accuracy and +5% to weapon damage for the turn. 2 turn cooldown. <b><color=#099ff2>Costs 15 Resolve to use!</color></b>",
+		"Icon": "digital-trace"
+	},
+	"DisplayParams": "ShowInMWTRay",
+	"ActivationTime": "ConsumedByFiring",
+	"ActivationCooldown": 2,
+	"Targeting": "ActorSelf",
+	"ResolveCost": 15,
+	"EffectData": [
+		{
+			"durationData": {
+				"duration": 1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-BattlemasterDamage",
+				"Name": "Overcharged Weapons",
+				"Details": "+5% Weapon Damage",
+				"Icon": "digital-trace"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "DamagePerShot",
+				"operation": "Float_Multiply",
+				"modValue": "1.05",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			}
+		},
+		{
+			"durationData": {
+				"duration": 1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-BattlemasterAccuracy",
+				"Name": "Overcharged Targeting",
+				"Details": "+1 Accuracy",
+				"Icon": "digital-trace"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "AccuracyModifier",
+				"operation": "Float_Add",
+				"modValue": "-1",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			}
+		}
+	],
+	"Priority": 8
+}
