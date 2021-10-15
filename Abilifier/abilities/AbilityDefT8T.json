@@ -1,78 +1,19 @@
 {
 	"Description": {
 		"Id": "AbilityDefT8T",
-		"Name": "TARGET PAINTING",
-		"Details": "ACTION: This unit uses a high-power targeting laser to paint an enemy target instead of firing weapons this turn. Allied units gain a +3 hit chance against that target for 2 turns. Target Painting has a 500 meter range. 4 turn cooldown. <b><color=#099ff2>Costs 30 Resolve to use!</color></b>",
-		"Icon": "target-laser"
+		"Name": "SENSOR SWEEP",
+		"Details": "ACTION: Perform a Sensor Lock on all enemies within 350 meters. There is a 5 round cooldown and the effect ends the unit's turn. <b><color=#099ff2>Costs 60 Resolve to use!</color></b>",
+		"Icon": "radio-tower"
 	},
-	"DisplayParams": "ShowInMWTRay",
+	"ActivationTime": "ConsumedByFiring",
+	"Targeting": "ActiveProbe",
 	"ReqSkill": "Tactics",
 	"ReqSkillLevel": 8,
-	"ActivationTime": "ConsumedByFiring",
-	"TargetFriendlyUnit": "ENEMY",
-	"IntParam2": 500,
-	"ActivationCooldown": 4,
-	"Targeting": "ActorTarget",
-	"ResolveCost": 30,
-	"EffectData": [
-		{
-			"durationData": {
-				"duration": 2,
-				"ticksOnActivations": true,
-				"useActivationsOfTarget": true,
-				"stackLimit": 1
-			},
-			"targetingData": {
-				"effectTriggerType": "OnActivation",
-				"effectTargetType": "SingleTarget",
-				"showInTargetPreview": false,
-				"showInStatusPanel": true
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "TAG-Effect",
-				"Name": "Target Painted",
-				"Details": "This target was TAG'ed. +3 to hit.",
-				"Icon": "target-laser"
-			},
-			"nature": "Debuff",
-			"statisticData": {
-				"statName": "ToHitThisActor",
-				"operation": "Float_Add",
-				"modValue": "-3.0",
-				"modType": "System.Single"
-			}
-		},
-		{
-			"durationData": {
-				"duration": 2,
-				"ticksOnActivations": true,
-				"useActivationsOfTarget": true,
-				"stackLimit": 1
-			},
-			"targetingData": {
-				"effectTriggerType": "OnHit",
-				"hideApplicationFloatie": true
-			},
-			"effectType": "VFXEffect",
-			"Description": {
-				"Id": "StatusEffect-TAG-IndicatorVFX",
-				"Name": "TAG MARKED",
-				"Details": "Visual indicator of the TAG effect",
-				"Icon": "uixSvgIcon_status_sensorsImpaired"
-			},
-			"nature": "Debuff",
-			"vfxData": {
-				"vfxName": "vfxPrfPrtl_TAGmarker_loop",
-				"attachToImpactPoint": true,
-				"location": -1,
-				"isAttached": true,
-				"facesAttacker": false,
-				"isOneShot": false,
-				"duration": -1.0
-			}
-		}
-	],
+	"ActivationCooldown": 5,
+	"ResolveCost": 60,
+	"FloatParam1": 350.0,
+	"FloatParam2": 100.0,
+	"StringParam1": "Ping is unavailable.",
 	"IsPrimaryAbility": true,
-	"Priority": 7
+	"Priority": 10
 }
