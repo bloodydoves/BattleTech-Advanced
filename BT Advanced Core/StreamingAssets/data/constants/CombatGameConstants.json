@@ -37,7 +37,32 @@
 	},
 	"Visibility": {
 		"BaseSpotterDistance": 375.0,
-		"BaseSensorDistance": 500.0
+		"BaseSensorDistance": 500.0,
+		"FiredWeaponsEffect": {
+			  "durationData": {
+				"duration": 1,
+				"ticksOnEndOfRound": true,
+				"stackLimit": 1
+			  },
+			  "targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "SingleTarget"
+			  },
+			  "effectType": "StatisticEffect",
+			  "Description": {
+				"Id": "FiredWeaponsSignatureEffect",
+				"Name": "FIRED WEAPONS",
+				"Details": "+125% SIGNATURE",
+				"Icon": "uixSvgIcon_genericDiamond"
+			  },
+			  "statisticData": {
+				"statName": "SensorSignatureModifier",
+				"operation": "Float_Add",
+				"modValue": "0.25",
+				"modType": "System.Single"
+			  },
+			  "nature": "Debuff"
+		}
 	},
 	"ToHit": {
 		"ToHitBaseFloor": 0.8,
