@@ -122,6 +122,22 @@
       "DamageLevel": "Functional"
     },
 	{
+      "MountedLocation": "CenterTorso",
+      "ComponentDefID": "Gear_Gyro_Omnimech",
+      "ComponentDefType": "Upgrade",
+      "HardpointSlot": -1,
+      "hasPrefabName": false,
+      "DamageLevel": "Functional"
+    },
+    {
+      "MountedLocation": "CenterTorso",
+      "ComponentDefID": "emod_kit_dhs_proto",
+      "ComponentDefType": "HeatSink",
+      "HardpointSlot": -1,
+      "hasPrefabName": false,
+      "DamageLevel": "Functional"
+    },
+	{
 		"MountedLocation": "LeftLeg",
 		"ComponentDefID": "Gear_JumpJet_Superheavy_LAM",
 		"SimGameUID": null,
@@ -142,7 +158,23 @@
 		"DamageLevel": "Functional",
 		"prefabName": null,
 		"hasPrefabName": false
-	}
+	},
+	{
+      "MountedLocation": "CenterTorso",
+      "ComponentDefID": "Weapon_Laser_MediumLaserER_0-STOCK",
+      "ComponentDefType": "Weapon",
+      "HardpointSlot": 0,
+      "hasPrefabName": false,
+      "DamageLevel": "Functional"
+    },
+	{
+      "MountedLocation": "CenterTorso",
+      "ComponentDefID": "Weapon_Laser_MediumLaserER_0-STOCK",
+      "ComponentDefType": "Weapon",
+      "HardpointSlot": 0,
+      "hasPrefabName": false,
+      "DamageLevel": "Functional"
+    }
   ],
   "Description": {
     "Cost": 35741070,
@@ -150,19 +182,21 @@
     "Purchasable": true,
     "Manufacturer": "",
     "Model": "",
-    "UIName": "Monster LAM",
-    "Id": "chassisdef_monster_MNST-3R-LAM",
-    "Name": "Monster LAM",
-    "Details": "This mech shouldn't exist. By all known tenets of mech design, it physically can't exist. And yet, here it is. Almost twice as heavy as the heaviest LAM, the Hector LAM, this Monster LAM is a fever dream given form. How it works, why it works, is unclear. It just works. Scratched into the control panel is the phrase 'Todd Was Here'. It's not clear who Todd was, but perhaps he was the madcap designer of this monstrosity. The Monster LAM's weapons are almost irrelevant, but for the sake of completeness, it carries a pair each of Streak SRM-4s, Thunderbolt-5s, and Silver Bullet Gauss Rifles.",
+    "UIName": "Monster LAM Omni",
+    "Id": "chassisdef_monster_MNST-3R-LAM-PRIME",
+    "Name": "Monster LAM Omni",
+    "Details": "The Monster LAM wasn't bad enough. Now, the myserious 'Todd' has struck again with the Monster LAM Omni. Somehow, he found a way to weld omni technology onto the Monster LAM's frame, creating an Omni variant of the mech. Again, leading scientists are unclear why or how this monstrosity functions, but function it does. The firepower on the MON LAM Prime is, as usual, mostly irrelevant but for reference it comes with an Insanity PPC, 6 ER Medium Lasers, twin Rocket Launcher/40s, and a trio of Light Autocannon/2s.",
     "Icon": "uixTxrIcon_monster"
   },
-  "VariantName": "MNST-3R-LAM",
+  "VariantName": "MNST-3R-LAM-PRIME",
   "ChassisTags": {
-    "items": [],
+    "items": [
+		"OmniMech"
+	],
     "tagSetSourceFile": ""
   },
-  "StockRole": "Superheavy... LAM?",
-  "YangsThoughts": "This mech shouldn't exist. By all known tenets of mech design, it physically can't exist. And yet, here it is. Almost twice as heavy as the heaviest LAM, the Hector LAM, this Monster LAM is a fever dream given form. How it works, why it works, is unclear. It just works. Scratched into the control panel is the phrase 'Todd Was Here'. It's not clear who Todd was, but perhaps he was the madcap designer of this monstrosity. The Monster LAM's weapons are almost irrelevant, but for the sake of completeness, it carries a pair each of Streak SRM-4s, Thunderbolt-5s, and Silver Bullet Gauss Rifles.",
+  "StockRole": "Superheavy... LAM... Omni?!",
+  "YangsThoughts": "The Monster LAM wasn't bad enough. Now, the myserious 'Todd' has struck again with the Monster LAM Omni. Somehow, he found a way to weld omni technology onto the Monster LAM's frame, creating an Omni variant of the mech. Again, leading scientists are unclear why or how this monstrosity functions, but function it does. The firepower on the MON LAM Prime is, as usual, mostly irrelevant but for reference it comes with an Insanity PPC, 6 ER Medium Lasers, twin Rocket Launcher/40s, and a trio of Light Autocannon/2s.",
   "MovementCapDefID": "movedef_annihilator_ANH-1A",
   "PathingCapDefID": "pathingdef_assault",
   "HardpointDataDefID": "hardpointdatadef_monster",
@@ -213,19 +247,15 @@
       "Hardpoints": [
         {
           "WeaponMount": "AntiPersonnel",
-          "Omni": false
+          "Omni": true
         },
 		{
           "WeaponMount": "AntiPersonnel",
-          "Omni": false
+          "Omni": true
         },
 		{
           "WeaponMount": "Missile",
-          "Omni": false
-        },
-		{
-          "WeaponMount": "Missile",
-          "Omni": false
+          "Omni": true
         }
       ],
       "Tonnage": 0,
@@ -239,32 +269,20 @@
       "Hardpoints": [
         {
           "WeaponMount": "Ballistic",
-          "Omni": false
+          "Omni": true
         },
 		{
           "WeaponMount": "Ballistic",
-          "Omni": false
+          "Omni": true
         },
 		{
           "WeaponMount": "Ballistic",
-          "Omni": false
+          "Omni": true
         },
 		{
-		  "WeaponMount": "Energy",
-		  "Omni": false
-		},
-		{
-		  "WeaponMount": "Energy",
-		  "Omni": false
-		},
-		{
-		  "WeaponMount": "Energy",
-		  "Omni": false
-		},
-		{
-		  "WeaponMount": "Energy",
-		  "Omni": false
-		}
+          "WeaponMount": "Ballistic",
+          "Omni": true
+        }
       ],
       "Tonnage": 0,
       "InventorySlots": 15,
@@ -277,10 +295,14 @@
       "Hardpoints": [
 		{
           "WeaponMount": "AntiPersonnel",
+          "Omni": true
+        },
+		{
+          "WeaponMount": "Energy",
           "Omni": false
         },
 		{
-          "WeaponMount": "AntiPersonnel",
+          "WeaponMount": "Energy",
           "Omni": false
         }
 	  ],
@@ -295,32 +317,16 @@
       "Hardpoints": [
         {
           "WeaponMount": "Ballistic",
-          "Omni": false
+          "Omni": true
         },
 		{
           "WeaponMount": "Ballistic",
-          "Omni": false
+          "Omni": true
         },
 		{
           "WeaponMount": "Ballistic",
-          "Omni": false
-        },
-		{
-		  "WeaponMount": "Energy",
-		  "Omni": false
-		},
-		{
-		  "WeaponMount": "Energy",
-		  "Omni": false
-		},
-		{
-		  "WeaponMount": "Energy",
-		  "Omni": false
-		},
-		{
-		  "WeaponMount": "Energy",
-		  "Omni": false
-		}
+          "Omni": true
+        }
       ],
       "Tonnage": 0,
       "InventorySlots": 15,
@@ -333,19 +339,15 @@
       "Hardpoints": [
         {
           "WeaponMount": "AntiPersonnel",
-          "Omni": false
+          "Omni": true
         },
 		{
           "WeaponMount": "AntiPersonnel",
-          "Omni": false
+          "Omni": true
         },
 		{
           "WeaponMount": "Missile",
-          "Omni": false
-        },
-		{
-          "WeaponMount": "Missile",
-          "Omni": false
+          "Omni": true
         }
       ],
       "Tonnage": 0,
