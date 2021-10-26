@@ -1,27 +1,27 @@
 {
 	"Description": {
-		"Cost": 7912000,
-		"Rarity": 3,
+		"Cost": 8160750,
+		"Rarity": 5,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Tempest",
-		"Id": "chassisdef_archer_ARC-T",
-		"Name": "Tempest",
-		"Details": "Named for Morgan Kell's pirate lover, customized with LosTech he recovered from the Periphery before his return in 3006. Identical to the standard ARC-2R in most respects, the addition on an Endo Steel frame frees up the weight for a Guardian ECM suite and two extra heat sinks, all of which are upgraded to double heat sinks boosting the Tempest's endurance.",
-		"Icon": "uixTxrIcon_archer"
+		"UIName": "Partisan",
+		"Id": "chassisdef_blackknight_BL-P-KNT",
+		"Name": "Partisan",
+		"Details": "Patterned after a MechWarrior who served House Davion in the War of 3039, Partisan is a customized arena design using a mix of downgraded Succession Wars technology and cutting-edge tech. Partisan carries the standard Black Knight mix of lasers but mixes it up with an Autocannon/5 and a SRM-2. Double heat sinks keep it cold while Triple-Strength Myomer is a nod to the mech's use as a gladiator.",
+		"Icon": "uixTxrIcon_blackknight"
 	},
-	"MovementCapDefID": "movedef_archer_ARC-2R",
+	"MovementCapDefID": "movedef_blackknight_BL-6-KNT",
 	"PathingCapDefID": "pathingdef_heavy",
-	"HardpointDataDefID": "hardpointdatadef_archer",
-	"PrefabIdentifier": "chrPrfMech_archerBase-001",
-	"PrefabBase": "archer",
-	"Tonnage": 70,
-	"InitialTonnage": 7,
+	"HardpointDataDefID": "hardpointdatadef_blackknight",
+	"PrefabIdentifier": "chrPrfMech_blackknightBase-001",
+	"PrefabBase": "blackknight",
+	"Tonnage": 75,
+	"InitialTonnage": 7.5,
 	"weightClass": "HEAVY",
-	"BattleValue": 7602000,
+	"BattleValue": 7124000,
 	"Heatsinks": 0,
-	"TopSpeed": 120,
+	"TopSpeed": 64,
 	"TurnRadius": 90,
 	"MaxJumpjets": 30,
 	"Stability": 160,
@@ -39,17 +39,22 @@
 	"Signature": 0,
 	"Radius": 8,
 	"PunchesWithLeftArm": false,
-	"MeleeDamage": 80,
+	"MeleeDamage": 85,
 	"MeleeInstability": 40,
 	"MeleeToHitModifier": 0,
-	"DFADamage": 80,
+	"DFADamage": 85,
 	"DFAToHitModifier": 0,
-	"DFASelfDamage": 80,
+	"DFASelfDamage": 85,
 	"DFAInstability": 40,
 	"Locations": [
 		{
 			"Location": "Head",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 6,
 			"MaxArmor": 45,
@@ -60,37 +65,41 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Ballistic",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Missile",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 110,
+			"MaxArmor": 120,
 			"MaxRearArmor": -1,
-			"InternalStructure": 55
+			"InternalStructure": 60
 		},
 		{
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 150,
-			"MaxRearArmor": 75,
-			"InternalStructure": 75
+			"MaxArmor": 160,
+			"MaxRearArmor": 80,
+			"InternalStructure": 80
 		},
 		{
 			"Location": "CenterTorso",
@@ -98,35 +107,35 @@
 				{
 					"WeaponMount": "Energy",
 					"Omni": false
-				},
-				{
-					"WeaponMount": "Energy",
-					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 15,
-			"MaxArmor": 220,
-			"MaxRearArmor": 110,
-			"InternalStructure": 110
+			"MaxArmor": 230,
+			"MaxRearArmor": 115,
+			"InternalStructure": 115
 		},
 		{
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 150,
-			"MaxRearArmor": 75,
-			"InternalStructure": 75
+			"MaxArmor": 160,
+			"MaxRearArmor": 80,
+			"InternalStructure": 80
 		},
 		{
 			"Location": "RightArm",
@@ -138,90 +147,94 @@
 				{
 					"WeaponMount": "Energy",
 					"Omni": false
+				},
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 110,
+			"MaxArmor": 120,
 			"MaxRearArmor": -1,
-			"InternalStructure": 55
+			"InternalStructure": 60
 		},
 		{
 			"Location": "LeftLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 150,
+			"MaxArmor": 160,
 			"MaxRearArmor": -1,
-			"InternalStructure": 75
+			"InternalStructure": 80
 		},
 		{
 			"Location": "RightLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 150,
+			"MaxArmor": 160,
 			"MaxRearArmor": -1,
-			"InternalStructure": 75
+			"InternalStructure": 80
 		}
 	],
 	"LOSSourcePositions": [
 		{
 			"x": 0,
-			"y": 15,
-			"z": -1
+			"y": 18,
+			"z": 1
 		},
 		{
 			"x": 4,
-			"y": 14,
-			"z": -0.5
+			"y": 16,
+			"z": 0
 		},
 		{
 			"x": -4,
-			"y": 14,
-			"z": -0.5
+			"y": 16,
+			"z": 0
 		}
 	],
 	"LOSTargetPositions": [
 		{
 			"x": 0,
-			"y": 15,
-			"z": -1
+			"y": 18,
+			"z": 1
 		},
 		{
 			"x": 4,
-			"y": 14,
-			"z": -0.5
+			"y": 16,
+			"z": 0
 		},
 		{
 			"x": -4,
-			"y": 14,
-			"z": -0.5
+			"y": 16,
+			"z": 0
 		},
 		{
-			"x": 2.5,
-			"y": 5,
-			"z": 1
+			"x": 3,
+			"y": 6,
+			"z": 0
 		},
 		{
-			"x": -2.5,
-			"y": 5,
-			"z": 1
+			"x": -3,
+			"y": 6,
+			"z": 0
 		}
 	],
-	"VariantName": "ARC-T",
+	"VariantName": "BL-P-KNT",
 	"ChassisTags": {
 		"items": [
 			"HeroMech"
 		],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "World-Famous Fire Support",
-	"YangsThoughts": "Named for Morgan Kell's pirate lover, customized with LosTech he recovered from the Periphery before his return in 3006. Identical to the standard ARC-2R in most respects, the addition on an Endo Steel frame frees up the weight for a Guardian ECM suite and two extra heat sinks, all of which are upgraded to double heat sinks boosting the Tempest's endurance.",
+	"StockRole": "Gladiator",
+	"YangsThoughts": "Patterned after a MechWarrior who served House Davion in the War of 3039, Partisan is a customized arena design using a mix of downgraded Succession Wars technology and cutting-edge tech. Partisan carries the standard Black Knight mix of lasers but mixes it up with an Autocannon/5 and a SRM-2. Double heat sinks keep it cold while Triple-Strength Myomer is a nod to the mech's use as a gladiator.",
 	"FixedEquipment": [
 		{
-			"MountedLocation": "LeftArm",
-			"ComponentDefID": "Gear_Quirk_Battlefists_Archer",
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "Gear_TSM",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
@@ -232,8 +245,8 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "RightArm",
-			"ComponentDefID": "Gear_Quirk_Battlefists_Archer",
+			"MountedLocation": "Head",
+			"ComponentDefID": "Gear_Quirk_CommandMech_BlackKnight",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
@@ -246,11 +259,14 @@
 		{
 			"MountedLocation": "CenterTorso",
 			"ComponentDefID": "emod_structureslots_endosteel",
+			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
+			"IsFixed": true,
+			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": "",
-			"hasPrefabName": true
+			"hasPrefabName": false
 		}
 	],
 	"CustomParts": {

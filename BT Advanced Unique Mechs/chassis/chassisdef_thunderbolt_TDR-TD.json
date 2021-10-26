@@ -1,25 +1,25 @@
 {
 	"Description": {
-		"Cost": 7912000,
+		"Cost": 7388000,
 		"Rarity": 3,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Tempest",
-		"Id": "chassisdef_archer_ARC-T",
-		"Name": "Tempest",
-		"Details": "Named for Morgan Kell's pirate lover, customized with LosTech he recovered from the Periphery before his return in 3006. Identical to the standard ARC-2R in most respects, the addition on an Endo Steel frame frees up the weight for a Guardian ECM suite and two extra heat sinks, all of which are upgraded to double heat sinks boosting the Tempest's endurance.",
-		"Icon": "uixTxrIcon_archer"
+		"UIName": "Top Dog",
+		"Id": "chassisdef_thunderbolt_TDR-TD",
+		"Name": "Top Dog",
+		"Details": "A simple, clean, basic arena brawler variant of the Thunderbolt, the Top Dog has shown itself to be rugged and enduring, winning a dozen matches in as many weeks during one Solaris VII season. The firepower could not be simpler: a Large Laser for range and 8 Medium Lasers for close up work. Double heat sinks and an enlarged engine manage the heat smoothly.",
+		"Icon": "uixTxrIcon_thunderbolt"
 	},
-	"MovementCapDefID": "movedef_archer_ARC-2R",
+	"MovementCapDefID": "movedef_thunderbolt_TDR-5S",
 	"PathingCapDefID": "pathingdef_heavy",
-	"HardpointDataDefID": "hardpointdatadef_archer",
-	"PrefabIdentifier": "chrPrfMech_archerBase-001",
-	"PrefabBase": "archer",
-	"Tonnage": 70,
-	"InitialTonnage": 7,
+	"HardpointDataDefID": "hardpointdatadef_thunderbolt",
+	"PrefabIdentifier": "chrPrfMech_thunderboltBase-001",
+	"PrefabBase": "thunderbolt",
+	"Tonnage": 65,
+	"InitialTonnage": 6.5,
 	"weightClass": "HEAVY",
-	"BattleValue": 7602000,
+	"BattleValue": 6057000,
 	"Heatsinks": 0,
 	"TopSpeed": 120,
 	"TurnRadius": 90,
@@ -39,13 +39,13 @@
 	"Signature": 0,
 	"Radius": 8,
 	"PunchesWithLeftArm": false,
-	"MeleeDamage": 80,
-	"MeleeInstability": 40,
+	"MeleeDamage": 75,
+	"MeleeInstability": 35,
 	"MeleeToHitModifier": 0,
-	"DFADamage": 80,
+	"DFADamage": 75,
 	"DFAToHitModifier": 0,
-	"DFASelfDamage": 80,
-	"DFAInstability": 40,
+	"DFASelfDamage": 75,
+	"DFAInstability": 35,
 	"Locations": [
 		{
 			"Location": "Head",
@@ -58,31 +58,30 @@
 		},
 		{
 			"Location": "LeftArm",
-			"Hardpoints": [
-				{
-					"WeaponMount": "Energy",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "Energy",
-					"Omni": false
-				}
-			],
+			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 110,
+			"MaxArmor": 100,
 			"MaxRearArmor": -1,
-			"InternalStructure": 55
+			"InternalStructure": 50
 		},
 		{
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Energy",
 					"Omni": false
 				}
 			],
@@ -94,31 +93,30 @@
 		},
 		{
 			"Location": "CenterTorso",
-			"Hardpoints": [
-				{
-					"WeaponMount": "Energy",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "Energy",
-					"Omni": false
-				}
-			],
+			"Hardpoints": [],
 			"Tonnage": 0,
-			"InventorySlots": 15,
-			"MaxArmor": 220,
-			"MaxRearArmor": 110,
-			"InternalStructure": 110
+			"InventorySlots": 16,
+			"MaxArmor": 210,
+			"MaxRearArmor": 105,
+			"InternalStructure": 105
 		},
 		{
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Energy",
 					"Omni": false
 				}
 			],
@@ -142,9 +140,9 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 110,
+			"MaxArmor": 100,
 			"MaxRearArmor": -1,
-			"InternalStructure": 55
+			"InternalStructure": 50
 		},
 		{
 			"Location": "LeftLeg",
@@ -168,72 +166,60 @@
 	"LOSSourcePositions": [
 		{
 			"x": 0,
-			"y": 15,
-			"z": -1
+			"y": 14,
+			"z": 1
 		},
 		{
 			"x": 4,
-			"y": 14,
-			"z": -0.5
+			"y": 13,
+			"z": 0
 		},
 		{
 			"x": -4,
-			"y": 14,
-			"z": -0.5
+			"y": 13,
+			"z": 0
 		}
 	],
 	"LOSTargetPositions": [
 		{
 			"x": 0,
-			"y": 15,
-			"z": -1
+			"y": 14,
+			"z": 1
 		},
 		{
 			"x": 4,
-			"y": 14,
-			"z": -0.5
+			"y": 13,
+			"z": 0
 		},
 		{
 			"x": -4,
-			"y": 14,
-			"z": -0.5
+			"y": 13,
+			"z": 0
 		},
 		{
-			"x": 2.5,
+			"x": 3,
 			"y": 5,
-			"z": 1
+			"z": 0
 		},
 		{
-			"x": -2.5,
+			"x": -3,
 			"y": 5,
-			"z": 1
+			"z": 0
 		}
 	],
-	"VariantName": "ARC-T",
+	"VariantName": "TDR-TD",
 	"ChassisTags": {
 		"items": [
 			"HeroMech"
 		],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "World-Famous Fire Support",
-	"YangsThoughts": "Named for Morgan Kell's pirate lover, customized with LosTech he recovered from the Periphery before his return in 3006. Identical to the standard ARC-2R in most respects, the addition on an Endo Steel frame frees up the weight for a Guardian ECM suite and two extra heat sinks, all of which are upgraded to double heat sinks boosting the Tempest's endurance.",
+	"StockRole": "Gladiator",
+	"YangsThoughts": "A simple, clean, basic arena brawler variant of the Thunderbolt, the Top Dog has shown itself to be rugged and enduring, winning a dozen matches in as many weeks during one Solaris VII season. The firepower could not be simpler: a Large Laser for range and 8 Medium Lasers for close up work. Double heat sinks and an enlarged engine manage the heat smoothly.",
 	"FixedEquipment": [
 		{
-			"MountedLocation": "LeftArm",
-			"ComponentDefID": "Gear_Quirk_Battlefists_Archer",
-			"SimGameUID": "",
-			"ComponentDefType": "Upgrade",
-			"HardpointSlot": -1,
-			"IsFixed": true,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "RightArm",
-			"ComponentDefID": "Gear_Quirk_Battlefists_Archer",
+			"MountedLocation": "Head",
+			"ComponentDefID": "Gear_Quirk_MultiTrac_Thunderbolt",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
@@ -245,12 +231,15 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_structureslots_endosteel",
+			"ComponentDefID": "emod_structureslots_standard",
+			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
+			"IsFixed": true,
+			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": "",
-			"hasPrefabName": true
+			"hasPrefabName": false
 		}
 	],
 	"CustomParts": {

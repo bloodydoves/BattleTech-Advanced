@@ -1,21 +1,21 @@
 {
 	"Description": {
 		"Cost": 7912000,
-		"Rarity": 3,
+		"Rarity": 4,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Tempest",
-		"Id": "chassisdef_archer_ARC-T",
-		"Name": "Tempest",
-		"Details": "Named for Morgan Kell's pirate lover, customized with LosTech he recovered from the Periphery before his return in 3006. Identical to the standard ARC-2R in most respects, the addition on an Endo Steel frame frees up the weight for a Guardian ECM suite and two extra heat sinks, all of which are upgraded to double heat sinks boosting the Tempest's endurance.",
-		"Icon": "uixTxrIcon_archer"
+		"UIName": "Mjolnir",
+		"Id": "chassisdef_grasshopper_GHR-MJ",
+		"Name": "Mjolnir",
+		"Details": "Patterned after famous MechWarrior Tor Miraborg's personal ride during the 3039 Ronin Wars between the Free Rasalhague Republic and rogue Draconis Combine units, the Mjolnir has proven a powerful arena combatant. Armed with a long-range loadout of a PPC, a Large Laser, and a Gauss Rifle, the Mjolnir favors destroying enemies at range instead of point blank like most mechs of its lineage.",
+		"Icon": "uixTxrIcon_grasshopper"
 	},
-	"MovementCapDefID": "movedef_archer_ARC-2R",
+	"MovementCapDefID": "movedef_grasshopper_GHR-5H",
 	"PathingCapDefID": "pathingdef_heavy",
-	"HardpointDataDefID": "hardpointdatadef_archer",
-	"PrefabIdentifier": "chrPrfMech_archerBase-001",
-	"PrefabBase": "archer",
+	"HardpointDataDefID": "hardpointdatadef_grasshopper",
+	"PrefabIdentifier": "chrPrfMech_grasshopperBase-001",
+	"PrefabBase": "grasshopper",
 	"Tonnage": 70,
 	"InitialTonnage": 7,
 	"weightClass": "HEAVY",
@@ -49,7 +49,12 @@
 	"Locations": [
 		{
 			"Location": "Head",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 6,
 			"MaxArmor": 45,
@@ -60,11 +65,7 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Ballistic",
 					"Omni": false
 				}
 			],
@@ -78,11 +79,15 @@
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -98,14 +103,10 @@
 				{
 					"WeaponMount": "Energy",
 					"Omni": false
-				},
-				{
-					"WeaponMount": "Energy",
-					"Omni": false
 				}
 			],
 			"Tonnage": 0,
-			"InventorySlots": 15,
+			"InventorySlots": 16,
 			"MaxArmor": 220,
 			"MaxRearArmor": 110,
 			"InternalStructure": 110
@@ -114,11 +115,15 @@
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -136,7 +141,7 @@
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -168,72 +173,60 @@
 	"LOSSourcePositions": [
 		{
 			"x": 0,
-			"y": 15,
-			"z": -1
+			"y": 18,
+			"z": 0
 		},
 		{
 			"x": 4,
-			"y": 14,
-			"z": -0.5
+			"y": 17,
+			"z": 0
 		},
 		{
 			"x": -4,
-			"y": 14,
-			"z": -0.5
+			"y": 17,
+			"z": 0
 		}
 	],
 	"LOSTargetPositions": [
 		{
 			"x": 0,
-			"y": 15,
-			"z": -1
+			"y": 18,
+			"z": 0
 		},
 		{
 			"x": 4,
-			"y": 14,
-			"z": -0.5
+			"y": 17,
+			"z": 0
 		},
 		{
 			"x": -4,
-			"y": 14,
-			"z": -0.5
+			"y": 17,
+			"z": 0
 		},
 		{
-			"x": 2.5,
+			"x": 3,
 			"y": 5,
-			"z": 1
+			"z": 0
 		},
 		{
-			"x": -2.5,
+			"x": -3,
 			"y": 5,
-			"z": 1
+			"z": 0
 		}
 	],
-	"VariantName": "ARC-T",
+	"VariantName": "GHR-MJ",
 	"ChassisTags": {
 		"items": [
 			"HeroMech"
 		],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "World-Famous Fire Support",
-	"YangsThoughts": "Named for Morgan Kell's pirate lover, customized with LosTech he recovered from the Periphery before his return in 3006. Identical to the standard ARC-2R in most respects, the addition on an Endo Steel frame frees up the weight for a Guardian ECM suite and two extra heat sinks, all of which are upgraded to double heat sinks boosting the Tempest's endurance.",
+	"StockRole": "Gladiator",
+	"YangsThoughts": "Patterned after famous MechWarrior Tor Miraborg's personal ride during the 3039 Ronin Wars between the Free Rasalhague Republic and rogue Draconis Combine units, the Mjolnir has proven a powerful arena combatant. Armed with a long-range loadout of a PPC, a Large Laser, and a Gauss Rifle, the Mjolnir favors destroying enemies at range instead of point blank like most mechs of its lineage.",
 	"FixedEquipment": [
 		{
-			"MountedLocation": "LeftArm",
-			"ComponentDefID": "Gear_Quirk_Battlefists_Archer",
-			"SimGameUID": "",
-			"ComponentDefType": "Upgrade",
-			"HardpointSlot": -1,
-			"IsFixed": true,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "RightArm",
-			"ComponentDefID": "Gear_Quirk_Battlefists_Archer",
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "Gear_Quirk_Rugged_Grasshopper",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
@@ -246,11 +239,14 @@
 		{
 			"MountedLocation": "CenterTorso",
 			"ComponentDefID": "emod_structureslots_endosteel",
+			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
+			"IsFixed": true,
+			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": "",
-			"hasPrefabName": true
+			"hasPrefabName": false
 		}
 	],
 	"CustomParts": {

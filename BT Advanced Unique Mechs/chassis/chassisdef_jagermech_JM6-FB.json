@@ -1,25 +1,31 @@
 {
+	"Custom": {
+		"ArmActuatorSupport": {
+			"LeftLimit": "Upper",
+			"RightLimit": "Upper"
+		}
+	},
 	"Description": {
-		"Cost": 7912000,
+		"Cost": 7396000,
 		"Rarity": 3,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Tempest",
-		"Id": "chassisdef_archer_ARC-T",
-		"Name": "Tempest",
-		"Details": "Named for Morgan Kell's pirate lover, customized with LosTech he recovered from the Periphery before his return in 3006. Identical to the standard ARC-2R in most respects, the addition on an Endo Steel frame frees up the weight for a Guardian ECM suite and two extra heat sinks, all of which are upgraded to double heat sinks boosting the Tempest's endurance.",
-		"Icon": "uixTxrIcon_archer"
+		"UIName": "Firebrand",
+		"Id": "chassisdef_jagermech_JM6-FB",
+		"Name": "Firebrand",
+		"Details": "The Firebrand is an oddity among gladiatorial designs as it is meant primarily for long-range combat. Armed with twin PPCs and AC/2s, the Firebrand is a potent, if fragile, sniper design. Smart opponents though will close the distance against the mech as it has little recourse against point-blank opposition.",
+		"Icon": "uixTxrIcon_jagermech"
 	},
-	"MovementCapDefID": "movedef_archer_ARC-2R",
+	"MovementCapDefID": "movedef_jagermech_JM6-S",
 	"PathingCapDefID": "pathingdef_heavy",
-	"HardpointDataDefID": "hardpointdatadef_archer",
-	"PrefabIdentifier": "chrPrfMech_archerBase-001",
-	"PrefabBase": "archer",
-	"Tonnage": 70,
-	"InitialTonnage": 7,
+	"HardpointDataDefID": "hardpointdatadef_jagermech",
+	"PrefabIdentifier": "chrPrfMech_jagermechBase-001",
+	"PrefabBase": "jagermech",
+	"Tonnage": 65,
+	"InitialTonnage": 6.5,
 	"weightClass": "HEAVY",
-	"BattleValue": 7602000,
+	"BattleValue": 5514000,
 	"Heatsinks": 0,
 	"TopSpeed": 120,
 	"TurnRadius": 90,
@@ -39,13 +45,13 @@
 	"Signature": 0,
 	"Radius": 8,
 	"PunchesWithLeftArm": false,
-	"MeleeDamage": 80,
-	"MeleeInstability": 40,
+	"MeleeDamage": 65,
+	"MeleeInstability": 30,
 	"MeleeToHitModifier": 0,
-	"DFADamage": 80,
+	"DFADamage": 65,
 	"DFAToHitModifier": 0,
-	"DFASelfDamage": 80,
-	"DFAInstability": 40,
+	"DFASelfDamage": 65,
+	"DFAInstability": 30,
 	"Locations": [
 		{
 			"Location": "Head",
@@ -64,25 +70,25 @@
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Ballistic",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 110,
+			"MaxArmor": 100,
 			"MaxRearArmor": -1,
-			"InternalStructure": 55
+			"InternalStructure": 50
 		},
 		{
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
 					"Omni": false
 				}
 			],
@@ -94,31 +100,22 @@
 		},
 		{
 			"Location": "CenterTorso",
-			"Hardpoints": [
-				{
-					"WeaponMount": "Energy",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "Energy",
-					"Omni": false
-				}
-			],
+			"Hardpoints": [],
 			"Tonnage": 0,
-			"InventorySlots": 15,
-			"MaxArmor": 220,
-			"MaxRearArmor": 110,
-			"InternalStructure": 110
+			"InventorySlots": 16,
+			"MaxArmor": 210,
+			"MaxRearArmor": 105,
+			"InternalStructure": 105
 		},
 		{
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
 					"Omni": false
 				}
 			],
@@ -136,15 +133,15 @@
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Ballistic",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 110,
+			"MaxArmor": 100,
 			"MaxRearArmor": -1,
-			"InternalStructure": 55
+			"InternalStructure": 50
 		},
 		{
 			"Location": "LeftLeg",
@@ -168,60 +165,60 @@
 	"LOSSourcePositions": [
 		{
 			"x": 0,
-			"y": 15,
-			"z": -1
+			"y": 14,
+			"z": 1
 		},
 		{
 			"x": 4,
-			"y": 14,
-			"z": -0.5
+			"y": 13,
+			"z": 0
 		},
 		{
 			"x": -4,
-			"y": 14,
-			"z": -0.5
+			"y": 13,
+			"z": 0
 		}
 	],
 	"LOSTargetPositions": [
 		{
 			"x": 0,
-			"y": 15,
-			"z": -1
+			"y": 14,
+			"z": 1
 		},
 		{
 			"x": 4,
-			"y": 14,
-			"z": -0.5
+			"y": 13,
+			"z": 0
 		},
 		{
 			"x": -4,
-			"y": 14,
-			"z": -0.5
+			"y": 13,
+			"z": 0
 		},
 		{
-			"x": 2.5,
+			"x": 2,
 			"y": 5,
-			"z": 1
+			"z": 0
 		},
 		{
-			"x": -2.5,
+			"x": -2,
 			"y": 5,
-			"z": 1
+			"z": 0
 		}
 	],
-	"VariantName": "ARC-T",
+	"VariantName": "JM6-FB",
 	"ChassisTags": {
 		"items": [
 			"HeroMech"
 		],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "World-Famous Fire Support",
-	"YangsThoughts": "Named for Morgan Kell's pirate lover, customized with LosTech he recovered from the Periphery before his return in 3006. Identical to the standard ARC-2R in most respects, the addition on an Endo Steel frame frees up the weight for a Guardian ECM suite and two extra heat sinks, all of which are upgraded to double heat sinks boosting the Tempest's endurance.",
+	"StockRole": "Gladiator",
+	"YangsThoughts": "The Firebrand is an oddity among gladiatorial designs as it is meant primarily for long-range combat. Armed with twin PPCs and AC/2s, the Firebrand is a potent, if fragile, sniper design. Smart opponents though will close the distance against the mech as it has little recourse against point-blank opposition.",
 	"FixedEquipment": [
 		{
-			"MountedLocation": "LeftArm",
-			"ComponentDefID": "Gear_Quirk_Battlefists_Archer",
+			"MountedLocation": "Head",
+			"ComponentDefID": "Gear_TargetingTrackingSystem_Kallon_Lock-On",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
@@ -232,8 +229,8 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "RightArm",
-			"ComponentDefID": "Gear_Quirk_Battlefists_Archer",
+			"MountedLocation": "Head",
+			"ComponentDefID": "Gear_Quirk_ImprovedTargeting_JagerMech",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
@@ -246,11 +243,14 @@
 		{
 			"MountedLocation": "CenterTorso",
 			"ComponentDefID": "emod_structureslots_endosteel",
+			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
+			"IsFixed": true,
+			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": "",
-			"hasPrefabName": true
+			"hasPrefabName": false
 		}
 	],
 	"CustomParts": {

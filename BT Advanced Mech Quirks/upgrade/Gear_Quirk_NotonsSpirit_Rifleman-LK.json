@@ -1,0 +1,271 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "SensorsA"
+			},
+			{
+				"CategoryID": "SensorsB"
+			},
+			{
+				"CategoryID": "Cockpit"
+			},
+			{
+				"CategoryID": "Quirk"
+			}
+		],
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "[[Chassis.Tonnage]]/10",
+				"CBillCost": "[[Chassis.Tonnage]] * 1.15"
+			}
+		},
+		"Flags": {
+			"flags": [
+				"default",
+				"not_broken",
+				"no_salvage",
+				"autorepair"
+			]
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"NotonsSpirit"
+			]
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 500000,
+		"Rarity": 99,
+		"Purchasable": false,
+		"Manufacturer": "Quirk",
+		"Model": "Legend-Killer",
+		"UIName": "Noton's Spirit",
+		"Id": "Gear_Quirk_NotonsSpirit_Rifleman-LK",
+		"Name": "Noton's Spirit",
+		"Details": "There's something about the electronics of Legend-Killer, something hard to pin down among the wires, something ephemeral and difficult to quantify. Previous owners have dubbed this 'Noton's Spirit' as the hacked-together electronics seem to impart some of that legendary MechWarrior's skill to Legend-Killer's current owner. Noton's Spirit improves the stock weapons on the Legend-Killer, the AC/5 and Large and Medium Lasers, bringing them more in-line with the legend around the mech than might seem possible.",
+		"Icon": "uixSvgIcon_equipment_Cockpit"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "AllLanceMates",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "NotonsSpirit-Resolve",
+				"Name": "Improved Communications",
+				"Details": "Provides a +2 bonus to actions that generate Morale.",
+				"Icon": "uixSvgIcon_equipment_Cockpit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "MoraleBonusGain",
+				"operation": "Int_Add",
+				"modValue": "2",
+				"modType": "System.Int32"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "NotonsSpirit-MaxResolve",
+				"Name": "Pilot Max Resolve Boosted",
+				"Details": "Increases maximum resolve by 15.",
+				"Icon": "uixSvgIcon_equipment_Cockpit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "maxResolveMod",
+				"operation": "Int_Add",
+				"modValue": "15",
+				"modType": "System.Int32"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "NotonsSpirit-EnergyDamage",
+				"Name": "Energy Damage Increased",
+				"Details": "Energy attacks deal [AMT] more damage.",
+				"Icon": "plasma-bolt"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"modType": "System.Single",
+				"modValue": "1.4",
+				"operation": "Float_Multiply",
+				"statName": "DamagePerShot",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "Energy",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "Laser"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "NotonsSpirit-EnergyAccuracy",
+				"Name": "Energy Accuracy Increased",
+				"Details": "Energy attacks gain +2 accuracy.",
+				"Icon": "plasma-bolt"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"modType": "System.Single",
+				"modValue": "-3.0",
+				"operation": "Float_Add",
+				"statName": "AccuracyModifier",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "Energy",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "Laser"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "NotonsSpirit-BallisticDamage",
+				"Name": "Ballistic Damage Increased",
+				"Details": "Ballistic attacks deal [AMT] more damage.",
+				"Icon": "UltraAC"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"modType": "System.Single",
+				"modValue": "1.4",
+				"operation": "Float_Multiply",
+				"statName": "DamagePerShot",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "Ballistic",
+				"targetWeaponSubType": "AC5",
+				"targetWeaponType": "Autocannon"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "NotonsSpirit-BallisticAccuracy",
+				"Name": "Ballistic Accuracy Increased",
+				"Details": "Ballistic attacks gain +2 accuracy.",
+				"Icon": "UltraAC"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"modType": "System.Single",
+				"modValue": "-3.0",
+				"operation": "Float_Add",
+				"statName": "AccuracyModifier",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "Ballistic",
+				"targetWeaponSubType": "AC5",
+				"targetWeaponType": "Autocannon"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "NotonsSpirit-Initiative",
+				"Name": "Command Consoles",
+				"Details": "Provides + 1 Initiative and several buffs.",
+				"Icon": "uixSvgIcon_equipment_Cockpit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "BaseInitiative",
+				"operation": "Int_Add",
+				"modValue": "-2",
+				"modType": "System.Int32"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"BLACKLISTED",
+			"component_type_stock",
+			"lv-shares-sensors"
+		],
+		"tagSetSourceFile": ""
+	}
+}

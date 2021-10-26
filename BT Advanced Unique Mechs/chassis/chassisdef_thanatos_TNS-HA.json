@@ -1,27 +1,33 @@
 {
+	"Custom": {
+		"ArmActuatorSupport": {
+			"LeftLimit": "Lower",
+			"RightLimit": "Lower"
+		}
+	},
 	"Description": {
-		"Cost": 7912000,
+		"Cost": 8372000,
 		"Rarity": 3,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Tempest",
-		"Id": "chassisdef_archer_ARC-T",
-		"Name": "Tempest",
-		"Details": "Named for Morgan Kell's pirate lover, customized with LosTech he recovered from the Periphery before his return in 3006. Identical to the standard ARC-2R in most respects, the addition on an Endo Steel frame frees up the weight for a Guardian ECM suite and two extra heat sinks, all of which are upgraded to double heat sinks boosting the Tempest's endurance.",
-		"Icon": "uixTxrIcon_archer"
+		"UIName": "Hangover",
+		"Id": "chassisdef_thanatos_TNS-HA",
+		"Name": "Hangover",
+		"Details": "Carrying a hell of a right hook, the Hangover has caught many an unsuspecting opponent off-guard. While the battery of ER and Pulse Lasers looks fairly conventional, it's the right arm brace of rockets that are the real danger in a one-and-done arena brawler like the Hangover. 70 Rocket Launcher tubes don't look like a lot, but all the Hangover needs is one good shot and with its high speed, it's likely to find one.",
+		"Icon": "uixTxrIcon_thanatos"
 	},
-	"MovementCapDefID": "movedef_archer_ARC-2R",
+	"MovementCapDefID": "movedef_thanatos_TNS-4S",
 	"PathingCapDefID": "pathingdef_heavy",
-	"HardpointDataDefID": "hardpointdatadef_archer",
-	"PrefabIdentifier": "chrPrfMech_archerBase-001",
-	"PrefabBase": "archer",
-	"Tonnage": 70,
-	"InitialTonnage": 7,
+	"HardpointDataDefID": "hardpointdatadef_thanatos",
+	"PrefabIdentifier": "chrprfmech_thanatosbase-001",
+	"PrefabBase": "thanatos",
+	"Tonnage": 75,
+	"InitialTonnage": 7.5,
 	"weightClass": "HEAVY",
-	"BattleValue": 7602000,
+	"BattleValue": 7124000,
 	"Heatsinks": 0,
-	"TopSpeed": 120,
+	"TopSpeed": 64,
 	"TurnRadius": 90,
 	"MaxJumpjets": 30,
 	"Stability": 160,
@@ -38,7 +44,7 @@
 	"SensorRangeMultiplier": 1,
 	"Signature": 0,
 	"Radius": 8,
-	"PunchesWithLeftArm": false,
+	"PunchesWithLeftArm": true,
 	"MeleeDamage": 80,
 	"MeleeInstability": 40,
 	"MeleeToHitModifier": 0,
@@ -66,31 +72,35 @@
 				{
 					"WeaponMount": "Energy",
 					"Omni": false
+				},
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 110,
+			"MaxArmor": 120,
 			"MaxRearArmor": -1,
-			"InternalStructure": 55
+			"InternalStructure": 60
 		},
 		{
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 150,
-			"MaxRearArmor": 75,
-			"InternalStructure": 75
+			"MaxArmor": 160,
+			"MaxRearArmor": 80,
+			"InternalStructure": 80
 		},
 		{
 			"Location": "CenterTorso",
@@ -98,130 +108,138 @@
 				{
 					"WeaponMount": "Energy",
 					"Omni": false
-				},
-				{
-					"WeaponMount": "Energy",
-					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 15,
-			"MaxArmor": 220,
-			"MaxRearArmor": 110,
-			"InternalStructure": 110
+			"MaxArmor": 230,
+			"MaxRearArmor": 115,
+			"InternalStructure": 115
 		},
 		{
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 150,
-			"MaxRearArmor": 75,
-			"InternalStructure": 75
+			"MaxArmor": 160,
+			"MaxRearArmor": 80,
+			"InternalStructure": 80
 		},
 		{
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Missile",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Missile",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Missile",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Missile",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Missile",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 110,
+			"MaxArmor": 120,
 			"MaxRearArmor": -1,
-			"InternalStructure": 55
+			"InternalStructure": 60
 		},
 		{
 			"Location": "LeftLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 150,
+			"MaxArmor": 160,
 			"MaxRearArmor": -1,
-			"InternalStructure": 75
+			"InternalStructure": 80
 		},
 		{
 			"Location": "RightLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 150,
+			"MaxArmor": 160,
 			"MaxRearArmor": -1,
-			"InternalStructure": 75
+			"InternalStructure": 80
 		}
 	],
 	"LOSSourcePositions": [
 		{
 			"x": 0,
+			"y": 16,
+			"z": 0
+		},
+		{
+			"x": 3.5,
 			"y": 15,
-			"z": -1
+			"z": 0
 		},
 		{
-			"x": 4,
-			"y": 14,
-			"z": -0.5
-		},
-		{
-			"x": -4,
-			"y": 14,
-			"z": -0.5
+			"x": -3.5,
+			"y": 15,
+			"z": 0
 		}
 	],
 	"LOSTargetPositions": [
 		{
 			"x": 0,
+			"y": 16,
+			"z": 0
+		},
+		{
+			"x": 3.5,
 			"y": 15,
-			"z": -1
+			"z": 0
 		},
 		{
-			"x": 4,
-			"y": 14,
-			"z": -0.5
+			"x": -3.5,
+			"y": 15,
+			"z": 0
 		},
 		{
-			"x": -4,
-			"y": 14,
-			"z": -0.5
-		},
-		{
-			"x": 2.5,
+			"x": 3,
 			"y": 5,
-			"z": 1
+			"z": 0
 		},
 		{
-			"x": -2.5,
+			"x": -3,
 			"y": 5,
-			"z": 1
+			"z": 0
 		}
 	],
-	"VariantName": "ARC-T",
+	"VariantName": "TNS-HA",
 	"ChassisTags": {
 		"items": [
 			"HeroMech"
 		],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "World-Famous Fire Support",
-	"YangsThoughts": "Named for Morgan Kell's pirate lover, customized with LosTech he recovered from the Periphery before his return in 3006. Identical to the standard ARC-2R in most respects, the addition on an Endo Steel frame frees up the weight for a Guardian ECM suite and two extra heat sinks, all of which are upgraded to double heat sinks boosting the Tempest's endurance.",
+	"StockRole": "Gladiator",
+	"YangsThoughts": "Carrying a hell of a right hook, the Hangover has caught many an unsuspecting opponent off-guard. While the battery of ER and Pulse Lasers looks fairly conventional, it's the right arm brace of rockets that are the real danger in a one-and-done arena brawler like the Hangover. 70 Rocket Launcher tubes don't look like a lot, but all the Hangover needs is one good shot and with its high speed, it's likely to find one.",
 	"FixedEquipment": [
 		{
-			"MountedLocation": "LeftArm",
-			"ComponentDefID": "Gear_Quirk_Battlefists_Archer",
+			"MountedLocation": "Head",
+			"ComponentDefID": "Gear_Quirk_ImprovedSensors_Thanatos",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
@@ -232,8 +250,8 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "RightArm",
-			"ComponentDefID": "Gear_Quirk_Battlefists_Archer",
+			"MountedLocation": "Head",
+			"ComponentDefID": "Gear_TargetingTrackingSystem_Hartford_S2000",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
@@ -246,11 +264,14 @@
 		{
 			"MountedLocation": "CenterTorso",
 			"ComponentDefID": "emod_structureslots_endosteel",
+			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
+			"IsFixed": true,
+			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": "",
-			"hasPrefabName": true
+			"hasPrefabName": false
 		}
 	],
 	"CustomParts": {

@@ -1,27 +1,33 @@
 {
+	"Custom": {
+		"ArmActuatorSupport": {
+			"LeftLimit": "Upper",
+			"RightLimit": "Upper"
+		}
+	},
 	"Description": {
-		"Cost": 7912000,
+		"Cost": 7800000,
 		"Rarity": 3,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Tempest",
-		"Id": "chassisdef_archer_ARC-T",
-		"Name": "Tempest",
-		"Details": "Named for Morgan Kell's pirate lover, customized with LosTech he recovered from the Periphery before his return in 3006. Identical to the standard ARC-2R in most respects, the addition on an Endo Steel frame frees up the weight for a Guardian ECM suite and two extra heat sinks, all of which are upgraded to double heat sinks boosting the Tempest's endurance.",
-		"Icon": "uixTxrIcon_archer"
+		"UIName": "Butterbee",
+		"Id": "chassisdef_catapult_CPLT-BB",
+		"Name": "Butterbee",
+		"Details": "The Butterbee is patterned after the personal ride of MechWarrior Jenny Templeton of the Capellan Chesterton Reserves and turns the Catapult into a brutal heavy brawler in the arena. The Butterbee very simply just switches the heat sinks for doubles and loses the LRM-15s for a quartet of SRM-6s. The four Medium Lasers and the jump jets are retained, of course.",
+		"Icon": "uixTxrIcon_catapult"
 	},
-	"MovementCapDefID": "movedef_archer_ARC-2R",
+	"MovementCapDefID": "movedef_catapult_CPLT-C1",
 	"PathingCapDefID": "pathingdef_heavy",
-	"HardpointDataDefID": "hardpointdatadef_archer",
-	"PrefabIdentifier": "chrPrfMech_archerBase-001",
-	"PrefabBase": "archer",
-	"Tonnage": 70,
-	"InitialTonnage": 7,
+	"HardpointDataDefID": "hardpointdatadef_catapult",
+	"PrefabIdentifier": "chrPrfMech_catapultBase-001",
+	"PrefabBase": "catapult",
+	"Tonnage": 65,
+	"InitialTonnage": 6.5,
 	"weightClass": "HEAVY",
-	"BattleValue": 7602000,
+	"BattleValue": 7144000,
 	"Heatsinks": 0,
-	"TopSpeed": 120,
+	"TopSpeed": 64,
 	"TurnRadius": 90,
 	"MaxJumpjets": 30,
 	"Stability": 160,
@@ -39,13 +45,13 @@
 	"Signature": 0,
 	"Radius": 8,
 	"PunchesWithLeftArm": false,
-	"MeleeDamage": 80,
-	"MeleeInstability": 40,
+	"MeleeDamage": 65,
+	"MeleeInstability": 30,
 	"MeleeToHitModifier": 0,
-	"DFADamage": 80,
+	"DFADamage": 65,
 	"DFAToHitModifier": 0,
-	"DFASelfDamage": 80,
-	"DFAInstability": 40,
+	"DFASelfDamage": 65,
+	"DFAInstability": 30,
 	"Locations": [
 		{
 			"Location": "Head",
@@ -60,29 +66,29 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Missile",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Missile",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 110,
+			"MaxArmor": 100,
 			"MaxRearArmor": -1,
-			"InternalStructure": 55
+			"InternalStructure": 50
 		},
 		{
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -106,19 +112,19 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 15,
-			"MaxArmor": 220,
-			"MaxRearArmor": 110,
-			"InternalStructure": 110
+			"MaxArmor": 210,
+			"MaxRearArmor": 105,
+			"InternalStructure": 105
 		},
 		{
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -132,19 +138,19 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Missile",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Missile",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 110,
+			"MaxArmor": 100,
 			"MaxRearArmor": -1,
-			"InternalStructure": 55
+			"InternalStructure": 50
 		},
 		{
 			"Location": "LeftLeg",
@@ -168,60 +174,60 @@
 	"LOSSourcePositions": [
 		{
 			"x": 0,
-			"y": 15,
-			"z": -1
+			"y": 12,
+			"z": 1
 		},
 		{
 			"x": 4,
-			"y": 14,
-			"z": -0.5
+			"y": 12,
+			"z": 0
 		},
 		{
 			"x": -4,
-			"y": 14,
-			"z": -0.5
+			"y": 12,
+			"z": 0
 		}
 	],
 	"LOSTargetPositions": [
 		{
 			"x": 0,
-			"y": 15,
-			"z": -1
+			"y": 12,
+			"z": 1
 		},
 		{
 			"x": 4,
-			"y": 14,
-			"z": -0.5
+			"y": 12,
+			"z": 0
 		},
 		{
 			"x": -4,
-			"y": 14,
-			"z": -0.5
+			"y": 12,
+			"z": 0
 		},
 		{
-			"x": 2.5,
+			"x": 3,
 			"y": 5,
-			"z": 1
+			"z": 0
 		},
 		{
-			"x": -2.5,
+			"x": -3,
 			"y": 5,
-			"z": 1
+			"z": 0
 		}
 	],
-	"VariantName": "ARC-T",
+	"VariantName": "CPLT-BB",
 	"ChassisTags": {
 		"items": [
 			"HeroMech"
 		],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "World-Famous Fire Support",
-	"YangsThoughts": "Named for Morgan Kell's pirate lover, customized with LosTech he recovered from the Periphery before his return in 3006. Identical to the standard ARC-2R in most respects, the addition on an Endo Steel frame frees up the weight for a Guardian ECM suite and two extra heat sinks, all of which are upgraded to double heat sinks boosting the Tempest's endurance.",
+	"StockRole": "Gladiator",
+	"YangsThoughts": "The Butterbee is patterned after the personal ride of MechWarrior Jenny Templeton of the Capellan Chesterton Reserves and turns the Catapult into a brutal heavy brawler in the arena. The Butterbee very simply just switches the heat sinks for doubles and loses the LRM-15s for a quartet of SRM-6s. The four Medium Lasers and the jump jets are retained, of course.",
 	"FixedEquipment": [
 		{
-			"MountedLocation": "LeftArm",
-			"ComponentDefID": "Gear_Quirk_Battlefists_Archer",
+			"MountedLocation": "Head",
+			"ComponentDefID": "Gear_TargetingTrackingSystem_Hartford_S2000",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
@@ -232,8 +238,8 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "RightArm",
-			"ComponentDefID": "Gear_Quirk_Battlefists_Archer",
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "Gear_Quirk_NimbleJumper_Catapult",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
@@ -246,11 +252,14 @@
 		{
 			"MountedLocation": "CenterTorso",
 			"ComponentDefID": "emod_structureslots_endosteel",
+			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
+			"IsFixed": true,
+			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": "",
-			"hasPrefabName": true
+			"hasPrefabName": false
 		}
 	],
 	"CustomParts": {
