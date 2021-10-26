@@ -1,16 +1,4 @@
 {
-	"Version": 1,
-	"Description": {
-		"Cost": 250000,
-		"Rarity": 0,
-		"Purchasable": false,
-		"UIName": "Badger Tracked Transport",
-		"Id": "vehicledef_BADGER_PRIME",
-		"Name": "Badger Tracked Transport",
-		"Details": "Considered the Prime People Movers of the Inner Sphere, the humble APC may seem underwhelming and uninteresting, but it harbors a secret: it can disgorge infantry anywhere and at any time, surprising even hardened mech forces. Use them wisely and APCs can turn the tide of combat.\n\n <b><color=#ffcc00>Wheeled: High traction, agile turning.\n\n <b><color=#ffcc00>Movement: 5/8 Hex: 150/240 Meters.</color></b>\n\n<b>Armor:</b> Armor\n<b>Structure:</b> Structure\n<b>Values       A        S  </b>\n<b>Front</b>       100     20\n<b>Left</b>         90     20\n<b>Right</b>       90     20\n<b>Rear</b>        70     20\n<b>Turret</b>      90     20\n\n<b>Total</b>      440    100\n",
-		"Icon": "Badger"
-	},
-	"ChassisID": "vehiclechassisdef_BADGER_PRIME",
 	"VehicleTags": {
 		"items": [
 			"unit_controllableTank",
@@ -47,6 +35,18 @@
 		],
 		"tagSetSourceFile": ""
 	},
+	"ChassisID": "vehiclechassisdef_BADGER_PRIME",
+	"Description": {
+		"Cost": 250000,
+		"Rarity": 0,
+		"Purchasable": false,
+		"UIName": "Badger Tracked Transport",
+		"Id": "vehicledef_BADGER_PRIME",
+		"Name": "Badger Tracked Transport",
+		"Details": "Considered the Prime People Movers of the Inner Sphere, the humble APC may seem underwhelming and uninteresting, but it harbors a secret: it can disgorge infantry anywhere and at any time, surprising even hardened mech forces. Use them wisely and APCs can turn the tide of combat.\n\n <b><color=#ffcc00>Wheeled: High traction, agile turning.\n\n <b><color=#ffcc00>Movement: 5/8 Hex: 150/240 Meters.</color></b>\n\n<b>Armor:</b> Armor\n<b>Structure:</b> Structure\n<b>Values       A        S  </b>\n<b>Front</b>       100     20\n<b>Left</b>         90     20\n<b>Right</b>       90     20\n<b>Rear</b>        70     20\n<b>Turret</b>      90     20\n\n<b>Total</b>      440    100\n",
+		"Icon": "Badger"
+	},
+	"Version": 1,
 	"Locations": [
 		{
 			"Location": "Front",
@@ -86,37 +86,37 @@
 	],
 	"inventory": [
 		{
+			"MountedLocation": "Front",
 			"ComponentDefID": "Weapon_SRM_SRM2_0-STOCK",
 			"ComponentDefType": "Weapon",
-			"MountedLocation": "Front",
 			"HardpointSlot": 0,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Turret",
 			"ComponentDefID": "Weapon_Laser_MediumLaser_0-STOCK",
 			"ComponentDefType": "Weapon",
-			"MountedLocation": "Turret",
 			"HardpointSlot": 1,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Turret",
 			"ComponentDefID": "Weapon_Laser_MediumLaser_0-STOCK",
 			"ComponentDefType": "Weapon",
-			"MountedLocation": "Turret",
 			"HardpointSlot": 2,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Turret",
 			"ComponentDefID": "Weapon_Laser_MediumLaser_0-STOCK",
 			"ComponentDefType": "Weapon",
-			"MountedLocation": "Turret",
 			"HardpointSlot": 3,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Front",
 			"ComponentDefID": "Ammo_AmmunitionBox_Generic_SRM",
 			"ComponentDefType": "AmmunitionBox",
-			"MountedLocation": "Front",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		},
@@ -163,37 +163,63 @@
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Turret",
 			"ComponentDefID": "Tank_Turret",
 			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Turret",
 			"HardpointSlot": 1,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Front",
 			"ComponentDefID": "Tank_CrewCompartment",
 			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Front",
 			"HardpointSlot": 1,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "Tank_FCS_Generic",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "Tank_Sensors_Generic",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "emod_structureslots_standard",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1
+		},
+		{
+			"MountedLocation": "Rear",
+			"ComponentDefID": "emod_armorslots_standard",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1
+		},
+		{
+			"MountedLocation": "Rear",
 			"ComponentDefID": "Tank_InfantryCompartment",
 			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Rear",
 			"HardpointSlot": 1,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Right",
 			"ComponentDefID": "Gear_Tracked_Right",
 			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Right",
 			"HardpointSlot": 1,
 			"DamageLevel": "Functional"
 		},
 		{
+			"MountedLocation": "Left",
 			"ComponentDefID": "Gear_Tracked_Left",
 			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Left",
 			"HardpointSlot": 1,
 			"DamageLevel": "Functional"
 		}
