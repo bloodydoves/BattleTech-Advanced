@@ -17,7 +17,7 @@
 		"BonusDescriptions": {
 			"Bonuses": [
 				"SureFoot",
-				"StabDamageTaken: -10%",
+				"Recoil: -1",
 				"GyroStab: 40"
 			]
 		},
@@ -34,10 +34,10 @@
 		"Purchasable": true,
 		"Manufacturer": "Rawlings",
 		"Model": "StabiliTrak 10",
-		"UIName": "Gyro Stab +",
+		"UIName": "Gyro Stabilization +",
 		"Id": "Gear_Gyro_Rawlings_StabiliTrak-10",
 		"Name": "Rawlings StabiliTrak 10 Gyro",
-		"Details": "Gyros counteract the massive amounts of momentum generated from 'Mech engines and allow for precision maneuvering and recovery from stability-impacting attacks. All 'Mechs come equipped with a stock Gyro, which can be upgraded for improved performance.",
+		"Details": "The Rawlings StabiliTrak Gyro is the last word in stabilization technology for any combat situation. Rawlings: the Last Name You'll Ever Need in Stabilization! This gryo, the StabiliTrak-10, provides modest weapon stabilization, reducing weapon recoil from all weapon sources as well as providing Rawling's patented Sure Footed Technology while moving through rough terrain.",
 		"Icon": "uixSvgIcon_equipment_Gyro"
 	},
 	"BonusValueA": "- 20% Stb.Dmg. Taken",
@@ -47,7 +47,7 @@
 	"PrefabIdentifier": "",
 	"BattleValue": 0,
 	"InventorySize": 3,
-	"Tonnage": 0,
+	"Tonnage": 1,
 	"AllowedLocations": "CenterTorso",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
@@ -79,53 +79,30 @@
 		{
 			"durationData": {
 				"duration": -1,
-				"ticksOnActivations": false,
-				"useActivationsOfTarget": false,
-				"ticksOnEndOfRound": false,
-				"ticksOnMovements": false,
-				"stackLimit": 1,
-				"clearedWhenAttacked": false
+				"stackLimit": -1
 			},
 			"targetingData": {
 				"effectTriggerType": "Passive",
-				"triggerLimit": 0,
-				"extendDurationOnTrigger": 0,
-				"specialRules": "NotSet",
-				"effectTargetType": "Creator",
-				"range": 0,
-				"forcePathRebuild": false,
-				"forceVisRebuild": false,
-				"showInTargetPreview": false,
-				"showInStatusPanel": true
+				"effectTargetType": "Creator"
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "StatusEffect-Defense_StabilityAll-T2",
-				"Name": "INCOMING STABILITY DAMAGE DECREASED",
-				"Details": "Incoming stability damage reduced by 20%.",
-				"Icon": "uixSvgIcon_equipment_Gyro"
+				"Id": "Gyro_Stab-Recoil",
+				"Name": "Stabilized Weapon Ballistic",
+				"Details": "Reduced Ballistic Recoil",
+				"Icon": "uixSvgIcon_equipment_TTS"
 			},
-			"nature": "Buff",
 			"statisticData": {
-				"appliesEachTick": false,
-				"effectsPersistAfterDestruction": false,
-				"statName": "ReceivedInstabilityMultiplier",
-				"operation": "Float_Multiply",
-				"modValue": "0.9",
-				"modType": "System.Single",
-				"additionalRules": "NotSet",
-				"targetCollection": "NotSet",
+				"statName": "RefireModifier",
+				"operation": "Int_Add",
+				"modValue": "-1",
+				"modType": "System.Int32",
+				"targetCollection": "Weapon",
 				"targetWeaponCategory": "NotSet",
 				"targetWeaponType": "NotSet",
 				"targetAmmoCategory": "NotSet",
 				"targetWeaponSubType": "NotSet"
-			},
-			"tagData": null,
-			"floatieData": null,
-			"actorBurningData": null,
-			"vfxData": null,
-			"instantModData": null,
-			"poorlyMaintainedEffectData": null
+			}
 		},
 		{
 			"durationData": {
