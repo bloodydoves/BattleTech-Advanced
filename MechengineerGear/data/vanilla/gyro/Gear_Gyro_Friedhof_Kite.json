@@ -16,7 +16,7 @@
 		},
 		"BonusDescriptions": {
 			"Bonuses": [
-				"EvaPips: +1",
+				"Defense: +1",
 				"GyroStab: 40"
 			]
 		},
@@ -36,7 +36,7 @@
 		"UIName": "Gyro Defense +",
 		"Id": "Gear_Gyro_Friedhof_Kite",
 		"Name": "Friedhof Kite Gyro",
-		"Details": "Here at Friedhof, we know that a safe customer is a repeat customer. That's why our Birds of Prey line of gyros is designed for maximum effectiveness on the battlefield. This model, the Kite, is our midrange design. The Kite doesn't make you harder to hit directly, but it does make you more evasive while moving about the cluttered battlefield. Tests have shown that pilots using the Kite have their combat effectiveness increased by a factor of 5! The Kite comes with a lifetime guarantee and free shipping, order one today before your opponents do!",
+		"Details": "Here at Friedhof, we know that a safe customer is a repeat customer. That's why our Birds of Prey line of gyros is designed for maximum effectiveness on the battlefield. This model, the Kite, is our midrange design. The Kite doesn't make you harder to hit directly, but it does make you more defensive while moving about the cluttered battlefield. Tests have shown that pilots using the Kite have their combat effectiveness increased by a factor of 5! The Kite comes with a lifetime guarantee and free shipping, order one today before your opponents do!",
 		"Icon": "uixSvgIcon_equipment_Gyro"
 	},
 	"BonusValueA": "",
@@ -54,27 +54,53 @@
 		{
 			"durationData": {
 				"duration": -1,
-				"stackLimit": 1
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
 			},
 			"targetingData": {
 				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
 				"effectTargetType": "Creator",
-				"showInStatusPanel": false
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "Gyro_Kite_MoreEvasion",
-				"Name": "EVASIVE MOVE",
-				"Details": "This unit generates an extra EVASIVE charge from movement actions (up to its maximum).",
-				"Icon": "uixSvgIcon_action_evasivemove"
+				"Id": "Gyro_Osprey-Defense",
+				"Name": "HARDER TO HIT",
+				"Details": "Provides a penalty to all attacks against this unit.",
+				"Icon": "uixSvgIcon_equipment_Gyro"
 			},
+			"nature": "Buff",
 			"statisticData": {
-				"statName": "EvasivePipsGainedAdditional",
-				"operation": "Int_Add",
-				"modValue": "1",
-				"modType": "System.Int32"
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "ToHitThisActor",
+				"operation": "Float_Add",
+				"modValue": "1.0",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "NotSet",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
 			},
-			"nature": "Buff"
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
 		},
 		{
 			"durationData": {
