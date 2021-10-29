@@ -1,7 +1,7 @@
 {
 	"Custom": {
 		"ArmActuatorSupport": {
-			"LeftLimit": "Hand",
+			"LeftLimit": "Upper",
 			"RightLimit": "Hand"
 		}
 	},
@@ -17,17 +17,6 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engine_300",
-			"SimGameUID": null,
-			"ComponentDefType": "HeatSink",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "CenterTorso",
 			"ComponentDefID": "Gear_Gyro_Omnimech",
 			"SimGameUID": null,
 			"ComponentDefType": "Upgrade",
@@ -39,7 +28,40 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engineslots_std_center",
+			"ComponentDefID": "emod_engineslots_cxl_center",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "emod_engine_360",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "emod_engineslots_size2",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "emod_engineslots_size2",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -59,7 +81,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engine_cooling",
+			"ComponentDefID": "emod_kit_cdhs",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -70,7 +92,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_kit_cdhs",
+			"ComponentDefID": "emod_engine_cooling_2",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -81,31 +103,31 @@
 		}
 	],
 	"Description": {
-		"Cost": 5900000,
+		"Cost": 3800000,
 		"Rarity": 2,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Lupus",
-		"Id": "chassisdef_lupus_B",
-		"Name": "Lupus",
-		"Details": "The Lupus OmniMech was Clan Coyote's follow-up to the Coyotl. This heavy Omni was able to keep pace with an early Griffin and carried more armor protection as well. This version also used an autocannon, but it was a massive LB 20-X AC with three tons of ammunition. This was supported by a pair each of Medium Pulse Lasers, ER Small Lasers, and ER Medium Lasers. This variant carried eleven double heat sinks.",
-		"Icon": "uixTxrIcon_lupus"
+		"UIName": "Rainbow Crow",
+		"Id": "chassisdef_iceferret_IFR-RC",
+		"Name": "Rainbow Crow",
+		"Details": "A customized variant of the Rainbow Crow. Piloted by Karl Devalis, the Rainbow Crow uses a pair of Heavy Medium Lasers in its left arm. The center torso carries a Guardian ECM. The right arm uses a single Heavy Machine Gun with one ton of ammo. In the right torso, a single Streak SRM-6 with two tons of ammo.",
+		"Icon": "uixTxrIcon_iceferret"
 	},
-	"MovementCapDefID": "movedef_lupus",
-	"PathingCapDefID": "pathingdef_heavy",
-	"HardpointDataDefID": "hardpointdatadef_lupus",
-	"PrefabIdentifier": "chrprfmech_lupusbase-001",
-	"PrefabBase": "lupus",
-	"Tonnage": 60,
-	"InitialTonnage": 6,
-	"weightClass": "HEAVY",
-	"BattleValue": 5383000,
+	"MovementCapDefID": "movedef_iceferret",
+	"PathingCapDefID": "pathingdef_medium",
+	"HardpointDataDefID": "hardpointdatadef_iceferret",
+	"PrefabIdentifier": "chrprfmech_iceferretbase-001",
+	"PrefabBase": "iceferret",
+	"Tonnage": 45,
+	"InitialTonnage": 4.5,
+	"weightClass": "MEDIUM",
+	"BattleValue": 4252000,
 	"Heatsinks": 0,
-	"TopSpeed": 150,
+	"TopSpeed": 120,
 	"TurnRadius": 90,
 	"MaxJumpjets": 99,
-	"Stability": 160,
+	"Stability": 130,
 	"StabilityDefenses": [
 		0,
 		0,
@@ -118,15 +140,15 @@
 	"VisibilityMultiplier": 1,
 	"SensorRangeMultiplier": 1,
 	"Signature": 0,
-	"Radius": 8,
-	"PunchesWithLeftArm": false,
-	"MeleeDamage": 55,
-	"MeleeInstability": 15,
+	"Radius": 5,
+	"PunchesWithLeftArm": true,
+	"MeleeDamage": 35,
+	"MeleeInstability": 10,
 	"MeleeToHitModifier": 0,
-	"DFADamage": 55,
+	"DFADamage": 35,
 	"DFAToHitModifier": 0,
-	"DFASelfDamage": 55,
-	"DFAInstability": 15,
+	"DFASelfDamage": 35,
+	"DFAInstability": 10,
 	"Locations": [
 		{
 			"Location": "Head",
@@ -141,7 +163,7 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMount": "Energy",
 					"Omni": true
 				},
 				{
@@ -151,59 +173,41 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 100,
+			"MaxArmor": 70,
 			"MaxRearArmor": -1,
-			"InternalStructure": 50
+			"InternalStructure": 35
 		},
 		{
 			"Location": "LeftTorso",
-			"Hardpoints": [
-				{
-					"WeaponMount": "Ballistic",
-					"Omni": true
-				},
-				{
-					"WeaponMount": "Energy",
-					"Omni": true
-				}
-			],
+			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 110,
-			"MaxRearArmor": 35,
-			"InternalStructure": 70
+			"MaxArmor": 85,
+			"MaxRearArmor": 25,
+			"InternalStructure": 55
 		},
 		{
 			"Location": "CenterTorso",
-			"Hardpoints": [
-				{
-					"WeaponMount": "Energy",
-					"Omni": true
-				}
-			],
+			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 15,
-			"MaxArmor": 150,
-			"MaxRearArmor": 50,
-			"InternalStructure": 100
+			"MaxArmor": 105,
+			"MaxRearArmor": 35,
+			"InternalStructure": 70
 		},
 		{
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Ballistic",
-					"Omni": true
-				},
-				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Missile",
 					"Omni": true
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 110,
-			"MaxRearArmor": 35,
-			"InternalStructure": 70
+			"MaxArmor": 85,
+			"MaxRearArmor": 25,
+			"InternalStructure": 55
 		},
 		{
 			"Location": "RightArm",
@@ -211,50 +215,46 @@
 				{
 					"WeaponMount": "Ballistic",
 					"Omni": true
-				},
-				{
-					"WeaponMount": "Energy",
-					"Omni": true
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 100,
+			"MaxArmor": 70,
 			"MaxRearArmor": -1,
-			"InternalStructure": 50
+			"InternalStructure": 35
 		},
 		{
 			"Location": "LeftLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 140,
+			"MaxArmor": 110,
 			"MaxRearArmor": -1,
-			"InternalStructure": 70
+			"InternalStructure": 55
 		},
 		{
 			"Location": "RightLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 140,
+			"MaxArmor": 110,
 			"MaxRearArmor": -1,
-			"InternalStructure": 70
+			"InternalStructure": 55
 		}
 	],
 	"LOSSourcePositions": [
 		{
 			"x": 0,
-			"y": 13,
-			"z": 1
+			"y": 14,
+			"z": 0
 		},
 		{
-			"x": 3,
+			"x": 3.5,
 			"y": 13,
 			"z": 0
 		},
 		{
-			"x": -3,
+			"x": -3.5,
 			"y": 13,
 			"z": 0
 		}
@@ -262,40 +262,41 @@
 	"LOSTargetPositions": [
 		{
 			"x": 0,
+			"y": 14,
+			"z": 0
+		},
+		{
+			"x": 3.5,
 			"y": 13,
-			"z": 1
+			"z": 0
+		},
+		{
+			"x": -3.5,
+			"y": 13,
+			"z": 0
 		},
 		{
 			"x": 3,
-			"y": 13,
+			"y": 5,
 			"z": 0
 		},
 		{
 			"x": -3,
-			"y": 13,
-			"z": 0
-		},
-		{
-			"x": 2,
-			"y": 5,
-			"z": 0
-		},
-		{
-			"x": -2,
 			"y": 5,
 			"z": 0
 		}
 	],
-	"VariantName": "LUPUS-B",
+	"VariantName": "IFR-RC",
 	"ChassisTags": {
 		"items": [
+			"OmniMech",
 			"ClanMech",
-			"OmniMech"
+			"HeroMech"
 		],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "Early Omnimech",
-	"YangsThoughts": "The Lupus OmniMech was Clan Coyote's follow-up to the Coyotl. This heavy Omni was able to keep pace with an early Griffin and carried more armor protection as well. This version also used an autocannon, but it was a massive LB 20-X AC with three tons of ammunition. This was supported by a pair each of Medium Pulse Lasers, ER Small Lasers, and ER Medium Lasers. This variant carried eleven double heat sinks.",
+	"StockRole": "Gladiator",
+	"YangsThoughts": "A customized variant of the Rainbow Crow. Piloted by Karl Devalis, the Rainbow Crow uses a pair of Heavy Medium Lasers in its left arm. The center torso carries a Guardian ECM. The right arm uses a single Heavy Machine Gun with one ton of ammo. In the right torso, a single Streak SRM-6 with two tons of ammo.",
 	"CustomParts": {
 		"CustomParts": []
 	}
