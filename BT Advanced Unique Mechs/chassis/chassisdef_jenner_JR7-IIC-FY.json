@@ -6,30 +6,30 @@
 		}
 	},
 	"Description": {
-		"Cost": 1624000,
-		"Rarity": 0,
+		"Cost": 3309700,
+		"Rarity": 2,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Romeo 5000",
-		"Id": "chassisdef_flea_FLE-R5K",
-		"Name": "Romeo 5000",
-		"Details": "The Romeo 5000 is a highly customized arena design of the Flea. Armed with a battery of ER Small and Medium Pulse Lasers, as well as twin SRM-2s, the R5K poses a serious threat to anyone who encounters it.",
-		"Icon": "uixTxrIcon_flea"
+		"UIName": "Fury",
+		"Id": "chassisdef_jenner_JR7-IIC-FY",
+		"Name": "Fury",
+		"Details": "A design first piloted by Zane Nova Cat, the Jenner IIC Hero 'Mech mounts a Heavy Machine Gun and twin standard Machine Guns in each arm fed by a whopping eight tons of Machine Gun ammunition, supported by a single center torso-mounted ER Medium Laser. Defensively the Fury trades its speed for more armor, reducing to a 280 size XL engine.",
+		"Icon": "uixTxrIcon_jenneriic"
 	},
-	"MovementCapDefID": "movedef_flea_FLE-15",
+	"MovementCapDefID": "movedef_jenner_JR7-IIC",
 	"PathingCapDefID": "pathingdef_light",
-	"HardpointDataDefID": "hardpointdatadef_flea",
-	"PrefabIdentifier": "chrPrfMech_fleaBase-001",
-	"PrefabBase": "flea",
-	"Tonnage": 20,
-	"InitialTonnage": 2,
+	"HardpointDataDefID": "hardpointdatadef_jenneriic",
+	"PrefabIdentifier": "chrprfmech_jenneriicbase-001",
+	"PrefabBase": "jenneriic",
+	"Tonnage": 35,
+	"InitialTonnage": 3.5,
 	"weightClass": "LIGHT",
-	"BattleValue": 1642000,
+	"BattleValue": 4362000,
 	"Heatsinks": 0,
-	"TopSpeed": 210,
+	"TopSpeed": 65,
 	"TurnRadius": 90,
-	"MaxJumpjets": 30,
+	"MaxJumpjets": 99,
 	"Stability": 100,
 	"StabilityDefenses": [
 		0,
@@ -66,6 +66,10 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
+					"WeaponMount": "Ballistic",
+					"Omni": false
+				},
+				{
 					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				},
@@ -76,23 +80,18 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 30,
+			"MaxArmor": 60,
 			"MaxRearArmor": -1,
-			"InternalStructure": 15
+			"InternalStructure": 30
 		},
 		{
 			"Location": "LeftTorso",
-			"Hardpoints": [
-				{
-					"WeaponMount": "Missile",
-					"Omni": false
-				}
-			],
+			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 50,
-			"MaxRearArmor": 25,
-			"InternalStructure": 25
+			"MaxArmor": 60,
+			"MaxRearArmor": 20,
+			"InternalStructure": 40
 		},
 		{
 			"Location": "CenterTorso",
@@ -100,31 +99,34 @@
 				{
 					"WeaponMount": "Energy",
 					"Omni": false
-				}
-			],
-			"Tonnage": 0,
-			"InventorySlots": 15,
-			"MaxArmor": 60,
-			"MaxRearArmor": 30,
-			"InternalStructure": 30
-		},
-		{
-			"Location": "RightTorso",
-			"Hardpoints": [
+				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
-			"InventorySlots": 12,
-			"MaxArmor": 50,
+			"InventorySlots": 15,
+			"MaxArmor": 85,
 			"MaxRearArmor": 25,
-			"InternalStructure": 25
+			"InternalStructure": 55
+		},
+		{
+			"Location": "RightTorso",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 12,
+			"MaxArmor": 60,
+			"MaxRearArmor": 20,
+			"InternalStructure": 40
 		},
 		{
 			"Location": "RightArm",
 			"Hardpoints": [
+				{
+					"WeaponMount": "Ballistic",
+					"Omni": false
+				},
 				{
 					"WeaponMount": "AntiPersonnel",
 					"Omni": false
@@ -136,103 +138,92 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 30,
+			"MaxArmor": 60,
 			"MaxRearArmor": -1,
-			"InternalStructure": 15
+			"InternalStructure": 30
 		},
 		{
 			"Location": "LeftLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 40,
+			"MaxArmor": 80,
 			"MaxRearArmor": -1,
-			"InternalStructure": 20
+			"InternalStructure": 40
 		},
 		{
 			"Location": "RightLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 40,
+			"MaxArmor": 80,
 			"MaxRearArmor": -1,
-			"InternalStructure": 20
+			"InternalStructure": 40
 		}
 	],
 	"LOSSourcePositions": [
 		{
 			"x": 0,
-			"y": 6.5,
-			"z": 0
+			"y": 10,
+			"z": 0.5
 		},
 		{
-			"x": 2,
-			"y": 6.5,
+			"x": -3,
+			"y": 9,
 			"z": -0.5
 		},
 		{
-			"x": -2,
-			"y": 6.5,
+			"x": 3,
+			"y": 9,
 			"z": -0.5
 		}
 	],
 	"LOSTargetPositions": [
 		{
 			"x": 0,
-			"y": 6.5,
-			"z": 0
+			"y": 10,
+			"z": 0.5
 		},
 		{
-			"x": 2,
-			"y": 6.5,
+			"x": -3,
+			"y": 9,
 			"z": -0.5
 		},
 		{
-			"x": -2,
-			"y": 6.5,
+			"x": 3,
+			"y": 9,
 			"z": -0.5
 		},
 		{
-			"x": 1.25,
-			"y": 3.5,
-			"z": 0
+			"x": -2.5,
+			"y": 3,
+			"z": 0.5
 		},
 		{
-			"x": -1.25,
-			"y": 3.5,
-			"z": 0
+			"x": 2.5,
+			"y": 3,
+			"z": 0.5
 		}
 	],
-	"VariantName": "FLE-R5K",
+	"VariantName": "JR7-IIC-FY",
 	"ChassisTags": {
 		"items": [
+			"ClanMech",
 			"HeroMech"
 		],
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Gladiator",
-	"YangsThoughts": "The Romeo 5000 is a highly customized arena design of the Flea. Armed with a battery of ER Small and Medium Pulse Lasers, as well as twin SRM-2s, the R5K poses a serious threat to anyone who encounters it.",
+	"YangsThoughts": "A design first piloted by Zane Nova Cat, the Jenner IIC Hero 'Mech mounts a Heavy Machine Gun and twin standard Machine Guns in each arm fed by a whopping eight tons of Machine Gun ammunition, supported by a single center torso-mounted ER Medium Laser. Defensively the Fury trades its speed for more armor, reducing to a 280 size XL engine.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "Gear_Quirk_NarrowProfile_Flea",
-			"SimGameUID": "",
+			"ComponentDefID": "emod_structureslots_clanendosteel",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
-			"IsFixed": true,
-			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": null,
 			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_structureslots_endosteel",
-			"ComponentDefType": "Upgrade",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional",
-			"prefabName": "",
-			"hasPrefabName": true
 		}
 	],
 	"CustomParts": {
