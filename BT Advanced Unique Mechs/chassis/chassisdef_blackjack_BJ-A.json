@@ -6,31 +6,31 @@
 		}
 	},
 	"Description": {
-		"Cost": 2123540,
-		"Rarity": 5,
+		"Cost": 4254000,
+		"Rarity": 1,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Huginn",
-		"Id": "chassisdef_raven_RVN-HU",
-		"Name": "Huginn",
-		"Details": "The Huginn, named for one of Odin's ravens from old Terran mythology, is a customized arena brawler that relies on its high speed for surival. Armed with a quartet of Machine Guns for primary firepower, the Huginn also sports a SRM-6 and a SSRM-2 for extra punch.",
-		"Icon": "uixTxrIcon_raven"
+		"UIName": "The Arrow",
+		"Id": "chassisdef_blackjack_BJ-A",
+		"Name": "The Arrow",
+		"Details": "An interpretation of Michael Ubodo's original Blackjack, The Arrow is armed with a trio of Machine Guns in each arm supplied with a ton of ammo, supported by a Medium Laser in each side torso and a Large Pulse Laser mounted in the center torso. Mounting a 235 standard engine, the 'Mech is clad in Ferro-Fibrous armor on an Endo Steel frame, carrying eleven Double Heat Sinks and just two Jump Jets.",
+		"Icon": "uixTxrIcon_blackjack"
 	},
-	"MovementCapDefID": "movedef_raven_RVN-1X",
-	"PathingCapDefID": "pathingdef_light",
-	"HardpointDataDefID": "hardpointdatadef_raven",
-	"PrefabIdentifier": "chrPrfMech_ravenBase-001",
-	"PrefabBase": "raven",
-	"Tonnage": 35,
-	"InitialTonnage": 3.5,
-	"weightClass": "LIGHT",
-	"BattleValue": 4642000,
+	"MovementCapDefID": "movedef_blackjack_BJ-1",
+	"PathingCapDefID": "pathingdef_medium",
+	"HardpointDataDefID": "hardpointdatadef_blackjack",
+	"PrefabIdentifier": "chrPrfMech_blackjackBase-001",
+	"PrefabBase": "blackjack",
+	"Tonnage": 45,
+	"InitialTonnage": 4.5,
+	"weightClass": "MEDIUM",
+	"BattleValue": 4067000,
 	"Heatsinks": 0,
-	"TopSpeed": 210,
+	"TopSpeed": 120,
 	"TurnRadius": 90,
 	"MaxJumpjets": 30,
-	"Stability": 100,
+	"Stability": 130,
 	"StabilityDefenses": [
 		0,
 		0,
@@ -43,15 +43,15 @@
 	"VisibilityMultiplier": 1,
 	"SensorRangeMultiplier": 1,
 	"Signature": 0,
-	"Radius": 4,
+	"Radius": 5,
 	"PunchesWithLeftArm": false,
-	"MeleeDamage": 35,
-	"MeleeInstability": 10,
+	"MeleeDamage": 45,
+	"MeleeInstability": 20,
 	"MeleeToHitModifier": 0,
-	"DFADamage": 35,
+	"DFADamage": 45,
 	"DFAToHitModifier": 0,
-	"DFASelfDamage": 35,
-	"DFAInstability": 10,
+	"DFASelfDamage": 45,
+	"DFAInstability": 20,
 	"Locations": [
 		{
 			"Location": "Head",
@@ -72,13 +72,17 @@
 				{
 					"WeaponMount": "AntiPersonnel",
 					"Omni": false
+				},
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 60,
+			"MaxArmor": 70,
 			"MaxRearArmor": -1,
-			"InternalStructure": 30
+			"InternalStructure": 35
 		},
 		{
 			"Location": "LeftTorso",
@@ -86,54 +90,47 @@
 				{
 					"WeaponMount": "Energy",
 					"Omni": false
-				},
-				{
-					"WeaponMount": "AntiPersonnel",
-					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 80,
-			"MaxRearArmor": 40,
-			"InternalStructure": 40
-		},
-		{
-			"Location": "CenterTorso",
-			"Hardpoints": [],
-			"Tonnage": 0,
-			"InventorySlots": 15,
 			"MaxArmor": 110,
 			"MaxRearArmor": 55,
 			"InternalStructure": 55
 		},
 		{
+			"Location": "CenterTorso",
+			"Hardpoints": [
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 16,
+			"MaxArmor": 140,
+			"MaxRearArmor": 70,
+			"InternalStructure": 70
+		},
+		{
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Energy",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 80,
-			"MaxRearArmor": 40,
-			"InternalStructure": 40
+			"MaxArmor": 110,
+			"MaxRearArmor": 55,
+			"InternalStructure": 55
 		},
 		{
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				},
 				{
@@ -147,77 +144,77 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 60,
+			"MaxArmor": 70,
 			"MaxRearArmor": -1,
-			"InternalStructure": 30
+			"InternalStructure": 35
 		},
 		{
 			"Location": "LeftLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 80,
+			"MaxArmor": 110,
 			"MaxRearArmor": -1,
-			"InternalStructure": 40
+			"InternalStructure": 55
 		},
 		{
 			"Location": "RightLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 80,
+			"MaxArmor": 110,
 			"MaxRearArmor": -1,
-			"InternalStructure": 40
+			"InternalStructure": 55
 		}
 	],
 	"LOSSourcePositions": [
 		{
 			"x": 0,
-			"y": 8,
+			"y": 14,
 			"z": 0
 		},
 		{
-			"x": 2,
-			"y": 8,
-			"z": -1
+			"x": 4,
+			"y": 14,
+			"z": 0
 		},
 		{
-			"x": -2,
-			"y": 8,
-			"z": -1
+			"x": -4,
+			"y": 14,
+			"z": 0
 		}
 	],
 	"LOSTargetPositions": [
 		{
 			"x": 0,
-			"y": 8,
+			"y": 14,
 			"z": 0
 		},
 		{
-			"x": 2,
-			"y": 8,
-			"z": -1
-		},
-		{
-			"x": -2,
-			"y": 8,
-			"z": -1
-		},
-		{
-			"x": 1.5,
-			"y": 3,
+			"x": 4,
+			"y": 14,
 			"z": 0
 		},
 		{
-			"x": -1.5,
-			"y": 3,
+			"x": -4,
+			"y": 14,
 			"z": 0
+		},
+		{
+			"x": 2.5,
+			"y": 6,
+			"z": 2.5
+		},
+		{
+			"x": -2.5,
+			"y": 6,
+			"z": 2.5
 		}
 	],
 	"FixedEquipment": [
 		{
-			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "Gear_Quirk_NarrowProfile_Raven",
+			"MountedLocation": "Head",
+			"ComponentDefID": "Gear_Quirk_ImprovedTargeting_Blackjack",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
@@ -230,14 +227,17 @@
 		{
 			"MountedLocation": "CenterTorso",
 			"ComponentDefID": "emod_structureslots_endosteel",
+			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
+			"IsFixed": true,
+			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": "",
-			"hasPrefabName": true
+			"hasPrefabName": false
 		}
 	],
-	"VariantName": "RVN-HU",
+	"VariantName": "BJ-A",
 	"ChassisTags": {
 		"items": [
 			"HeroMech"
@@ -245,7 +245,7 @@
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Gladiator",
-	"YangsThoughts": "The Huginn, named for one of Odin's ravens from old Terran mythology, is a customized arena brawler that relies on its high speed for surival. Armed with a quartet of Machine Guns for primary firepower, the Huginn also sports a SRM-6 and a SSRM-2 for extra punch.",
+	"YangsThoughts": "An interpretation of Michael Ubodo's original Blackjack, The Arrow is armed with a trio of Machine Guns in each arm supplied with a ton of ammo, supported by a Medium Laser in each side torso and a Large Pulse Laser mounted in the center torso. Mounting a 235 standard engine, the 'Mech is clad in Ferro-Fibrous armor on an Endo Steel frame, carrying eleven Double Heat Sinks and just two Jump Jets.",
 	"CustomParts": {
 		"CustomParts": []
 	}
