@@ -1,19 +1,30 @@
 {
 	"Custom": {
 		"ArmActuatorSupport": {
-			"LeftLimit": "Lower",
-			"RightLimit": "Upper"
+			"LeftLimit": "Upper",
+			"RightLimit": "Hand"
 		}
 	},
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_structureslots_clanendosteel",
+			"ComponentDefID": "emod_structureslots_standard",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional",
 			"prefabName": "",
 			"hasPrefabName": true
+		},
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "emod_engine_380",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
 		},
 		{
 			"MountedLocation": "CenterTorso",
@@ -29,17 +40,6 @@
 		{
 			"MountedLocation": "CenterTorso",
 			"ComponentDefID": "emod_engineslots_cxl_center",
-			"SimGameUID": null,
-			"ComponentDefType": "HeatSink",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engine_250",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -81,9 +81,9 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "Gear_JumpJet_Generic_Standard",
+			"ComponentDefID": "emod_kit_cdhs",
 			"SimGameUID": null,
-			"ComponentDefType": "JumpJet",
+			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
 			"GUID": null,
 			"DamageLevel": "Functional",
@@ -91,10 +91,10 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "Gear_JumpJet_Generic_Standard",
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "emod_engine_cooling_5",
 			"SimGameUID": null,
-			"ComponentDefType": "JumpJet",
+			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
 			"GUID": null,
 			"DamageLevel": "Functional",
@@ -103,7 +103,29 @@
 		},
 		{
 			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Gear_JumpJet_Generic_Standard",
+			"ComponentDefID": "Gear_HeatSink_Generic_Double_Clan",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "Gear_MASC_CLAN",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightLeg",
+			"ComponentDefID": "Gear_JumpJet_Generic_Assault",
 			"SimGameUID": null,
 			"ComponentDefType": "JumpJet",
 			"HardpointSlot": -1,
@@ -114,7 +136,7 @@
 		},
 		{
 			"MountedLocation": "RightLeg",
-			"ComponentDefID": "Gear_JumpJet_Generic_Standard",
+			"ComponentDefID": "Gear_JumpJet_Generic_Assault",
 			"SimGameUID": null,
 			"ComponentDefType": "JumpJet",
 			"HardpointSlot": -1,
@@ -125,7 +147,7 @@
 		},
 		{
 			"MountedLocation": "LeftLeg",
-			"ComponentDefID": "Gear_JumpJet_Generic_Standard",
+			"ComponentDefID": "Gear_JumpJet_Generic_Assault",
 			"SimGameUID": null,
 			"ComponentDefType": "JumpJet",
 			"HardpointSlot": -1,
@@ -135,21 +157,10 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engine_cooling",
+			"MountedLocation": "LeftLeg",
+			"ComponentDefID": "Gear_JumpJet_Generic_Assault",
 			"SimGameUID": null,
-			"ComponentDefType": "HeatSink",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_kit_cdhs",
-			"SimGameUID": null,
-			"ComponentDefType": "HeatSink",
+			"ComponentDefType": "JumpJet",
 			"HardpointSlot": -1,
 			"GUID": null,
 			"DamageLevel": "Functional",
@@ -158,31 +169,31 @@
 		}
 	],
 	"Description": {
-		"Cost": 4200000,
-		"Rarity": 3,
+		"Cost": 17159064,
+		"Rarity": 2,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Huntsman",
-		"Id": "chassisdef_huntsman_HMN-B",
-		"Name": "Huntsman",
-		"Details": "Exemplifying the OmniMech concept, the flexible Huntsman was the premier medium 'Mech of Clan Nova Cat during Operation REVIVAL. No expense has been spared in the construction of this front-line OmniMech that uses an Extra-Light Engine, Endo Steel structure, and nine tons of Ferro-Fibrous armor. Five jump jets enable it to leap up to 150 meters at a time. The Huntsman B uses an ER PPC at long range. Close in, it can call upon an LB-X Autocannon/10 and a pair of Medium Pulse Lasers. Two Machine Guns can make short work of unarmored infantry.",
-		"Icon": "uixTxrIcon_huntsman"
+		"UIName": "Cherbi",
+		"Id": "chassisdef_executioner_CH",
+		"Name": "Cherbi",
+		"Details": "Patterned after the Executioner driven by Gorman Bekker, one of Clan Ghost Bear's greatest warriors and a MechWarrior who successfully defended Clan Ghost Bear's right to the Executioner more than 18 times, the Cherbi proved equally adept in the arena as in a Clan Trial. Armed with a grab-bag of close-range firepower, the Cherbi can call upon its UAC/20, SSRM-6, and trio of ER Small Lasers for defense. At range, it mounts a LRM-20 to soften up targets as it closes to optimal range.",
+		"Icon": "uixTxrIcon_executioner"
 	},
-	"MovementCapDefID": "movedef_huntsman",
-	"PathingCapDefID": "pathingdef_medium",
-	"HardpointDataDefID": "hardpointdatadef_huntsman",
-	"PrefabIdentifier": "chrprfmech_huntsmanbase-001",
-	"PrefabBase": "huntsman",
-	"Tonnage": 50,
-	"InitialTonnage": 5,
-	"weightClass": "MEDIUM",
-	"BattleValue": 4596000,
+	"MovementCapDefID": "movedef_executioner",
+	"PathingCapDefID": "pathingdef_assault",
+	"HardpointDataDefID": "hardpointdatadef_executioner",
+	"PrefabIdentifier": "chrprfmech_executionerbase-001",
+	"PrefabBase": "executioner",
+	"Tonnage": 95,
+	"InitialTonnage": 9.5,
+	"weightClass": "ASSAULT",
+	"BattleValue": 17997756,
 	"Heatsinks": 0,
-	"TopSpeed": 120,
+	"TopSpeed": 65,
 	"TurnRadius": 90,
 	"MaxJumpjets": 99,
-	"Stability": 130,
+	"Stability": 100,
 	"StabilityDefenses": [
 		0,
 		0,
@@ -195,15 +206,15 @@
 	"VisibilityMultiplier": 1,
 	"SensorRangeMultiplier": 1,
 	"Signature": 0,
-	"Radius": 5,
-	"PunchesWithLeftArm": false,
-	"MeleeDamage": 35,
-	"MeleeInstability": 10,
+	"Radius": 4,
+	"PunchesWithLeftArm": true,
+	"MeleeDamage": 85,
+	"MeleeInstability": 25,
 	"MeleeToHitModifier": 0,
-	"DFADamage": 35,
+	"DFADamage": 85,
 	"DFAToHitModifier": 0,
-	"DFASelfDamage": 35,
-	"DFAInstability": 10,
+	"DFASelfDamage": 85,
+	"DFAInstability": 25,
 	"Locations": [
 		{
 			"Location": "Head",
@@ -218,44 +229,52 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
+					"WeaponMount": "Ballistic",
+					"Omni": true
+				},
+				{
 					"WeaponMount": "Energy",
+					"Omni": true
+				},
+				{
+					"WeaponMount": "Missile",
 					"Omni": true
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 80,
+			"MaxArmor": 160,
 			"MaxRearArmor": -1,
-			"InternalStructure": 40
+			"InternalStructure": 80
 		},
 		{
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMount": "Missile",
 					"Omni": true
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 90,
-			"MaxRearArmor": 30,
-			"InternalStructure": 60
+			"MaxArmor": 150,
+			"MaxRearArmor": 50,
+			"InternalStructure": 100
 		},
 		{
 			"Location": "CenterTorso",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 15,
-			"MaxArmor": 120,
-			"MaxRearArmor": 40,
-			"InternalStructure": 80
+			"MaxArmor": 225,
+			"MaxRearArmor": 75,
+			"InternalStructure": 150
 		},
 		{
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMount": "Ballistic",
 					"Omni": true
 				},
 				{
@@ -265,9 +284,9 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 90,
-			"MaxRearArmor": 30,
-			"InternalStructure": 60
+			"MaxArmor": 150,
+			"MaxRearArmor": 50,
+			"InternalStructure": 100
 		},
 		{
 			"Location": "RightArm",
@@ -281,89 +300,90 @@
 					"Omni": true
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Missile",
 					"Omni": true
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 80,
+			"MaxArmor": 160,
 			"MaxRearArmor": -1,
-			"InternalStructure": 40
+			"InternalStructure": 80
 		},
 		{
 			"Location": "LeftLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 120,
+			"MaxArmor": 200,
 			"MaxRearArmor": -1,
-			"InternalStructure": 60
+			"InternalStructure": 100
 		},
 		{
 			"Location": "RightLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 120,
+			"MaxArmor": 200,
 			"MaxRearArmor": -1,
-			"InternalStructure": 60
+			"InternalStructure": 100
 		}
 	],
 	"LOSSourcePositions": [
 		{
 			"x": 0,
-			"y": 15,
-			"z": 0
+			"y": 12.5,
+			"z": 0.5
 		},
 		{
-			"x": 4,
-			"y": 14,
-			"z": 0
+			"x": -2.5,
+			"y": 11.5,
+			"z": -0.5
 		},
 		{
-			"x": -4,
-			"y": 14,
-			"z": 0
+			"x": 2.5,
+			"y": 11.5,
+			"z": -0.5
 		}
 	],
 	"LOSTargetPositions": [
 		{
 			"x": 0,
-			"y": 15,
-			"z": 0
-		},
-		{
-			"x": 4,
-			"y": 14,
-			"z": 0
-		},
-		{
-			"x": -4,
-			"y": 14,
-			"z": 0
-		},
-		{
-			"x": 2.5,
-			"y": 6,
-			"z": 2.5
+			"y": 12.5,
+			"z": 0.5
 		},
 		{
 			"x": -2.5,
-			"y": 6,
-			"z": 2.5
+			"y": 11.5,
+			"z": -0.5
+		},
+		{
+			"x": 2.5,
+			"y": 11.5,
+			"z": -0.5
+		},
+		{
+			"x": -2,
+			"y": 3,
+			"z": 0.5
+		},
+		{
+			"x": 2,
+			"y": 3,
+			"z": 0.5
 		}
 	],
-	"VariantName": "HMN-B",
+	"VariantName": "EXE-CH",
 	"ChassisTags": {
 		"items": [
+			"ClanMech",
 			"OmniMech",
-			"ClanMech"
+			"HeroMech"
 		],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "Flexible Front-Line Omnimech",
-	"YangsThoughts": "Exemplifying the OmniMech concept, the flexible Huntsman was the premier medium 'Mech of Clan Nova Cat during Operation REVIVAL. No expense has been spared in the construction of this front-line OmniMech that uses an Extra-Light Engine, Endo Steel structure, and nine tons of Ferro-Fibrous armor. Five jump jets enable it to leap up to 150 meters at a time. The Huntsman B uses an ER PPC at long range. Close in, it can call upon an LB-X Autocannon/10 and a pair of Medium Pulse Lasers. Two Machine Guns can make short work of unarmored infantry.",
+	"StockRole": "Gladiator",
+	"YangsThoughts": "Patterned after the Executioner driven by Gorman Bekker, one of Clan Ghost Bear's greatest warriors and a MechWarrior who successfully defended Clan Ghost Bear's right to the Executioner more than 18 times, the Cherbi proved equally adept in the arena as in a Clan Trial. Armed with a grab-bag of close-range firepower, the Cherbi can call upon its UAC/20, SSRM-6, and trio of ER Small Lasers for defense. At range, it mounts a LRM-20 to soften up targets as it closes to optimal range.",
 	"CustomParts": {
 		"CustomParts": []
 	}
