@@ -1,0 +1,104 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "ImprovedJJ"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"JumpCapacity: 1.25",
+				"JumpHeat: 1.75",
+				"MinWeightJJ: 90",
+				"MaxWeightJJ: 100",
+				"MaxCountJJ: 1.5"
+			]
+		}
+	},
+	"JumpCapacity": 1.25,
+	"MinTonnage": 90,
+	"MaxTonnage": 90,
+	"Description": {
+		"Cost": 70000,
+		"Rarity": 3,
+		"Purchasable": true,
+		"Manufacturer": "Generic",
+		"Model": "Assault",
+		"UIName": "Heavy Metal Jump Jet",
+		"Id": "Gear_JumpJet_Improved_HeavyMetal",
+		"Name": "Heavy Metal Jump Jet",
+		"Details": "This is an experimental jumpjet found only on Heavy Metal, Rhonda Snord's Highlander. Somehow, Snord found a way to create a special Improved Jump Jet that weighs normal assault jet weights. The downside is that they're locked to Heavy Metal and can't be removed.",
+		"Icon": "uixSvgIcon_action_jump"
+	},
+	"BonusValueA": null,
+	"BonusValueB": null,
+	"ComponentType": "JumpJet",
+	"ComponentSubType": "Functionality",
+	"PrefabIdentifier": "JumpJet",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 2,
+	"AllowedLocations": "Torso, Legs",
+	"DisallowedLocations": "Head, Arms",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-JumpHeat",
+				"Name": "Jump Jet Heat",
+				"Details": "This Jump Jets Heat Generation per Hex",
+				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "JumpHeat",
+				"operation": "Float_Add",
+				"modValue": "1.75",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-JumpAmount",
+				"Name": "Jump Jet Amount",
+				"Details": "Max Jump Jet Amount per Walk MP",
+				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "JumpJetCountMultiplier",
+				"operation": "Set",
+				"modValue": "1.6",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}
