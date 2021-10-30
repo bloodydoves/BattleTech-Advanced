@@ -29,6 +29,7 @@
 		"BonusDescriptions": {
 			"Bonuses": [
 				"EvaPips: +2",
+				"WalkSpeed: +20%",
 				"IsGyro"
 			]
 		},
@@ -84,6 +85,32 @@
 				"operation": "Int_Add",
 				"modValue": "2",
 				"modType": "System.Int32"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "EtPWalk",
+				"Name": "Supercharged",
+				"Details": "Increased walking speed.",
+				"Icon": "uixSvgIcon_action_evasivemove"
+			},
+			"statisticData": {
+				"statName": "WalkSpeed",
+				"operation": "Float_Multiply",
+				"modValue": "1.2",
+				"modType": "System.Single"
 			},
 			"nature": "Buff"
 		}
