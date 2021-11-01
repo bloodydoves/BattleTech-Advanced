@@ -1,21 +1,27 @@
 {
+	"Custom": {
+		"ArmActuatorSupport": {
+			"LeftLimit": "Upper",
+			"RightLimit": "Upper"
+		}
+	},
 	"Description": {
 		"Cost": 2224000,
 		"Rarity": 1,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Anansi",
-		"Id": "chassisdef_spider_SDR-AN",
-		"Name": "Anansi",
-		"Details": "The Anansi is a supportive arena design meant to cover for larger, heavier designs in the arena. Two AMS provide coverage against missiles while two each Medium Lasers and Machine Guns, as well as an SRM-4, provide no frills firepower.",
-		"Icon": "uixTxrIcon_spider"
+		"UIName": "Sekhmet",
+		"Id": "chassisdef_osiris_OSR-SE",
+		"Name": "Sekhmet",
+		"Details": "The Sekhmet is a highly customized arena combat design, meant for gladiatorial bouts. Armed with a trio of ER Medium Lasers, a pair of Heavy MGs, and a Light PPC, the Sekhmet can threaten anyone, no matter how far they run or where they hide.",
+		"Icon": "uixTxrIcon_osiris"
 	},
-	"MovementCapDefID": "movedef_spider_SDR-5V",
+	"MovementCapDefID": "movedef_osiris_OSR-3D",
 	"PathingCapDefID": "pathingdef_light",
-	"HardpointDataDefID": "hardpointdatadef_spider",
-	"PrefabIdentifier": "chrPrfMech_spiderBase-001",
-	"PrefabBase": "spider",
+	"HardpointDataDefID": "hardpointdatadef_osiris",
+	"PrefabIdentifier": "chrprfmech_osirisbase-001",
+	"PrefabBase": "osiris",
 	"Tonnage": 30,
 	"InitialTonnage": 3,
 	"weightClass": "LIGHT",
@@ -39,12 +45,12 @@
 	"Signature": 0,
 	"Radius": 4,
 	"PunchesWithLeftArm": false,
-	"MeleeDamage": 40,
+	"MeleeDamage": 30,
 	"MeleeInstability": 10,
 	"MeleeToHitModifier": 0,
-	"DFADamage": 40,
+	"DFADamage": 30,
 	"DFAToHitModifier": 0,
-	"DFASelfDamage": 40,
+	"DFASelfDamage": 30,
 	"DFAInstability": 10,
 	"Locations": [
 		{
@@ -52,7 +58,7 @@
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 30,
+			"MaxArmor": 45,
 			"MaxRearArmor": -1,
 			"InternalStructure": 16
 		},
@@ -60,7 +66,11 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMount": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Energy",
 					"Omni": false
 				}
 			],
@@ -72,7 +82,20 @@
 		},
 		{
 			"Location": "LeftTorso",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Ballistic",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
 			"MaxArmor": 70,
@@ -81,17 +104,18 @@
 		},
 		{
 			"Location": "CenterTorso",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 15,
+			"MaxArmor": 100,
+			"MaxRearArmor": 50,
+			"InternalStructure": 50
+		},
+		{
+			"Location": "RightTorso",
 			"Hardpoints": [
 				{
 					"WeaponMount": "Energy",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "Energy",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				},
 				{
@@ -99,15 +123,6 @@
 					"Omni": false
 				}
 			],
-			"Tonnage": 0,
-			"InventorySlots": 16,
-			"MaxArmor": 100,
-			"MaxRearArmor": 50,
-			"InternalStructure": 50
-		},
-		{
-			"Location": "RightTorso",
-			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 12,
 			"MaxArmor": 70,
@@ -118,7 +133,11 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Ballistic",
 					"Omni": false
 				}
 			],
@@ -191,7 +210,7 @@
 			"z": 0.5
 		}
 	],
-	"VariantName": "SDR-AN",
+	"VariantName": "OSR-SE",
 	"ChassisTags": {
 		"items": [
 			"HeroMech"
@@ -199,11 +218,11 @@
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Gladiator",
-	"YangsThoughts": "The Anansi is a supportive arena design meant to cover for larger, heavier designs in the arena. Two AMS provide coverage against missiles while two each Medium Lasers and Machine Guns, as well as an SRM-4, provide no frills firepower.",
+	"YangsThoughts": "The Sekhmet is a highly customized arena combat design, meant for gladiatorial bouts. Armed with a trio of ER Medium Lasers, a pair of Heavy MGs, and a Light PPC, the Sekhmet can threaten anyone, no matter how far they run or where they hide.",
 	"FixedEquipment": [
 		{
-			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "Gear_Quirk_NimbleJumper_Spider",
+			"MountedLocation": "Head",
+			"ComponentDefID": "Gear_Quirk_ImprovedSensors_Osiris",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
