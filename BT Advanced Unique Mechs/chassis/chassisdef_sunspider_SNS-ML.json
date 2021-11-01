@@ -1,8 +1,8 @@
 {
 	"Custom": {
 		"ArmActuatorSupport": {
-			"LeftLimit": "Hand",
-			"RightLimit": "Hand"
+			"LeftLimit": "Upper",
+			"RightLimit": "Upper"
 		}
 	},
 	"FixedEquipment": [
@@ -17,7 +17,27 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engine_300",
+			"ComponentDefID": "emod_armorslots_clanferrosfibrous",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "emod_engine_cooling_4",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "emod_engine_350",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -39,7 +59,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engineslots_std_center",
+			"ComponentDefID": "emod_engineslots_cxl_center",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -49,17 +69,8 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_armorslots_clanferrosfibrous",
-			"ComponentDefType": "Upgrade",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engine_cooling_1",
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "emod_engineslots_size2",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -69,8 +80,8 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_kit_cdhs",
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "emod_engineslots_size2",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -81,28 +92,28 @@
 		}
 	],
 	"Description": {
-		"Cost": 5900000,
-		"Rarity": 2,
+		"Cost": 6700000,
+		"Rarity": 5,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Tiburon",
-		"Id": "chassisdef_lupus_TB",
-		"Name": "Tiburon",
-		"Details": "The personal mech of Emilio 'Old Man' Sennet, Tiburon has a strong reputation in the arenas, though more for its pilot than the mech. Sennet is a pilot everyone loves to hate, owing to his origins with Clan Diamond Shark. He participated in the Invasion but had a 'falling out' with his Khan and ended up on the Gladiator's World looking to set up a stable. He's managed to do just that with Carcharodon Stable, which has gone very well and elevated his status significantly. Tiburon is his personal ride and is armed for brawling, with a battery of Clan-tech SRMs and Heavy Medium Lasers.",
-		"Icon": "uixTxrIcon_lupus"
+		"UIName": "Manul",
+		"Id": "chassisdef_sunspider_SNS-ML",
+		"Name": "Manul",
+		"Details": "The custom configuration of Star Colonel Tabok of the Fourth Scorpion Cuirassiers, the Manul Hero 'Mech is a ranged energy boat with an ER PPC and ER Large Laser in each arm. Its only other weapon is an ER Small Laser in the left torso. The SNS-ML is fitted with AMS and single ton of reloads, the remaining weight devoted to nine extra Double Heat Sinks.",
+		"Icon": "uixTxrIcon_sunspider"
 	},
-	"MovementCapDefID": "movedef_lupus",
+	"MovementCapDefID": "movedef_sunspider",
 	"PathingCapDefID": "pathingdef_heavy",
-	"HardpointDataDefID": "hardpointdatadef_lupus",
-	"PrefabIdentifier": "chrprfmech_lupusbase-001",
-	"PrefabBase": "lupus",
-	"Tonnage": 60,
-	"InitialTonnage": 6,
+	"HardpointDataDefID": "hardpointdatadef_sunspider",
+	"PrefabIdentifier": "chrprfmech_sunspiderbase-001",
+	"PrefabBase": "sunspider",
+	"Tonnage": 70,
+	"InitialTonnage": 7,
 	"weightClass": "HEAVY",
-	"BattleValue": 5383000,
+	"BattleValue": 6577000,
 	"Heatsinks": 0,
-	"TopSpeed": 150,
+	"TopSpeed": 120,
 	"TurnRadius": 90,
 	"MaxJumpjets": 99,
 	"Stability": 160,
@@ -120,12 +131,12 @@
 	"Signature": 0,
 	"Radius": 8,
 	"PunchesWithLeftArm": false,
-	"MeleeDamage": 55,
+	"MeleeDamage": 50,
 	"MeleeInstability": 15,
 	"MeleeToHitModifier": 0,
-	"DFADamage": 55,
+	"DFADamage": 50,
 	"DFAToHitModifier": 0,
-	"DFASelfDamage": 55,
+	"DFASelfDamage": 50,
 	"DFAInstability": 15,
 	"Locations": [
 		{
@@ -141,25 +152,7 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Ballistic",
-					"Omni": true
-				},
-				{
 					"WeaponMount": "Energy",
-					"Omni": true
-				}
-			],
-			"Tonnage": 0,
-			"InventorySlots": 12,
-			"MaxArmor": 100,
-			"MaxRearArmor": -1,
-			"InternalStructure": 50
-		},
-		{
-			"Location": "LeftTorso",
-			"Hardpoints": [
-				{
-					"WeaponMount": "Ballistic",
 					"Omni": true
 				},
 				{
@@ -170,41 +163,41 @@
 			"Tonnage": 0,
 			"InventorySlots": 12,
 			"MaxArmor": 110,
+			"MaxRearArmor": -1,
+			"InternalStructure": 55
+		},
+		{
+			"Location": "LeftTorso",
+			"Hardpoints": [
+				{
+					"WeaponMount": "Missile",
+					"Omni": true
+				},
+				{
+					"WeaponMount": "Energy",
+					"Omni": true
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 12,
+			"MaxArmor": 115,
 			"MaxRearArmor": 35,
-			"InternalStructure": 70
+			"InternalStructure": 75
 		},
 		{
 			"Location": "CenterTorso",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 15,
-			"MaxArmor": 150,
-			"MaxRearArmor": 50,
-			"InternalStructure": 100
+			"MaxArmor": 165,
+			"MaxRearArmor": 55,
+			"InternalStructure": 110
 		},
 		{
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Ballistic",
-					"Omni": true
-				},
-				{
-					"WeaponMount": "Ballistic",
-					"Omni": true
-				}
-			],
-			"Tonnage": 0,
-			"InventorySlots": 12,
-			"MaxArmor": 110,
-			"MaxRearArmor": 35,
-			"InternalStructure": 70
-		},
-		{
-			"Location": "RightArm",
-			"Hardpoints": [
-				{
-					"WeaponMount": "Ballistic",
+					"WeaponMount": "Missile",
 					"Omni": true
 				},
 				{
@@ -214,74 +207,92 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 100,
+			"MaxArmor": 115,
+			"MaxRearArmor": 35,
+			"InternalStructure": 75
+		},
+		{
+			"Location": "RightArm",
+			"Hardpoints": [
+				{
+					"WeaponMount": "Energy",
+					"Omni": true
+				},
+				{
+					"WeaponMount": "Energy",
+					"Omni": true
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 12,
+			"MaxArmor": 110,
 			"MaxRearArmor": -1,
-			"InternalStructure": 50
+			"InternalStructure": 55
 		},
 		{
 			"Location": "LeftLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 140,
+			"MaxArmor": 150,
 			"MaxRearArmor": -1,
-			"InternalStructure": 70
+			"InternalStructure": 75
 		},
 		{
 			"Location": "RightLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 140,
+			"MaxArmor": 150,
 			"MaxRearArmor": -1,
-			"InternalStructure": 70
+			"InternalStructure": 75
 		}
 	],
 	"LOSSourcePositions": [
 		{
 			"x": 0,
-			"y": 13,
+			"y": 15,
 			"z": 1
 		},
 		{
-			"x": 3,
-			"y": 13,
+			"x": 4,
+			"y": 14,
 			"z": 0
 		},
 		{
-			"x": -3,
-			"y": 13,
+			"x": -4,
+			"y": 14,
 			"z": 0
 		}
 	],
 	"LOSTargetPositions": [
 		{
 			"x": 0,
-			"y": 13,
+			"y": 15,
 			"z": 1
 		},
 		{
+			"x": 4,
+			"y": 14,
+			"z": 0
+		},
+		{
+			"x": -4,
+			"y": 14,
+			"z": 0
+		},
+		{
 			"x": 3,
-			"y": 13,
+			"y": 5,
 			"z": 0
 		},
 		{
 			"x": -3,
-			"y": 13,
-			"z": 0
-		},
-		{
-			"x": 2,
-			"y": 5,
-			"z": 0
-		},
-		{
-			"x": -2,
 			"y": 5,
 			"z": 0
 		}
 	],
-	"VariantName": "LUPUS-TB",
+	"VariantName": "SNS-ML",
 	"ChassisTags": {
 		"items": [
 			"ClanMech",
@@ -291,7 +302,7 @@
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Gladiator",
-	"YangsThoughts": "The personal mech of Emilio 'Old Man' Sennet, Tiburon has a strong reputation in the arenas, though more for its pilot than the mech. Sennet is a pilot everyone loves to hate, owing to his origins with Clan Diamond Shark. He participated in the Invasion but had a 'falling out' with his Khan and ended up on the Gladiator's World looking to set up a stable. He's managed to do just that with Carcharodon Stable, which has gone very well and elevated his status significantly. Tiburon is his personal ride and is armed for brawling, with a battery of Clan-tech SRMs and Heavy Medium Lasers.",
+	"YangsThoughts": "The custom configuration of Star Colonel Tabok of the Fourth Scorpion Cuirassiers, the Manul Hero 'Mech is a ranged energy boat with an ER PPC and ER Large Laser in each arm. Its only other weapon is an ER Small Laser in the left torso. The SNS-ML is fitted with AMS and single ton of reloads, the remaining weight devoted to nine extra Double Heat Sinks.",
 	"CustomParts": {
 		"CustomParts": []
 	}

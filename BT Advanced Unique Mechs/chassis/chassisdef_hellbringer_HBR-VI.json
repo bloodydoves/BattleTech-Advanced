@@ -1,14 +1,14 @@
 {
 	"Custom": {
 		"ArmActuatorSupport": {
-			"LeftLimit": "Hand",
-			"RightLimit": "Hand"
+			"LeftLimit": "Lower",
+			"RightLimit": "Lower"
 		}
 	},
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_structureslots_clanendosteel",
+			"ComponentDefID": "emod_structureslots_standard",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional",
@@ -17,11 +17,9 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engine_300",
-			"SimGameUID": null,
-			"ComponentDefType": "HeatSink",
+			"ComponentDefID": "emod_armorslots_clstandard",
+			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
-			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": null,
 			"hasPrefabName": false
@@ -39,7 +37,29 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engineslots_std_center",
+			"ComponentDefID": "emod_engine_325",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "emod_engineslots_size2",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "emod_engineslots_size2",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -50,16 +70,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_armorslots_clanferrosfibrous",
-			"ComponentDefType": "Upgrade",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engine_cooling_1",
+			"ComponentDefID": "emod_engineslots_cxl_center",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -70,7 +81,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_kit_cdhs",
+			"ComponentDefID": "emod_engine_cooling_3",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -81,31 +92,31 @@
 		}
 	],
 	"Description": {
-		"Cost": 5900000,
-		"Rarity": 2,
+		"Cost": 12285000,
+		"Rarity": 3,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Tiburon",
-		"Id": "chassisdef_lupus_TB",
-		"Name": "Tiburon",
-		"Details": "The personal mech of Emilio 'Old Man' Sennet, Tiburon has a strong reputation in the arenas, though more for its pilot than the mech. Sennet is a pilot everyone loves to hate, owing to his origins with Clan Diamond Shark. He participated in the Invasion but had a 'falling out' with his Khan and ended up on the Gladiator's World looking to set up a stable. He's managed to do just that with Carcharodon Stable, which has gone very well and elevated his status significantly. Tiburon is his personal ride and is armed for brawling, with a battery of Clan-tech SRMs and Heavy Medium Lasers.",
-		"Icon": "uixTxrIcon_lupus"
+		"UIName": "Virago",
+		"Id": "chassisdef_hellbringer_HBR-VI",
+		"Name": "Virago",
+		"Details": "Allegedly first piloted by Joanna of Clan Jade Falcon, this Hellbringer variant mounts paired ER Large Lasers in left arm, supported by a LRM-20 and LRM-15 rack in the right arm. At shorter ranges twin ER Medium Lasers in each side torso come into play. Virago carries two tons of LRM reloads and is fitted with nineteen double heat sinks.",
+		"Icon": "uixTxrIcon_hellbringer"
 	},
-	"MovementCapDefID": "movedef_lupus",
+	"MovementCapDefID": "movedef_hellbringer",
 	"PathingCapDefID": "pathingdef_heavy",
-	"HardpointDataDefID": "hardpointdatadef_lupus",
-	"PrefabIdentifier": "chrprfmech_lupusbase-001",
-	"PrefabBase": "lupus",
-	"Tonnage": 60,
-	"InitialTonnage": 6,
+	"HardpointDataDefID": "hardpointdatadef_hellbringer",
+	"PrefabIdentifier": "chrprfmech_hellbringerbase-001",
+	"PrefabBase": "hellbringer",
+	"Tonnage": 65,
+	"InitialTonnage": 6.5,
 	"weightClass": "HEAVY",
-	"BattleValue": 5383000,
+	"BattleValue": 7124000,
 	"Heatsinks": 0,
 	"TopSpeed": 150,
 	"TurnRadius": 90,
 	"MaxJumpjets": 99,
-	"Stability": 160,
+	"Stability": 100,
 	"StabilityDefenses": [
 		0,
 		0,
@@ -119,7 +130,7 @@
 	"SensorRangeMultiplier": 1,
 	"Signature": 0,
 	"Radius": 8,
-	"PunchesWithLeftArm": false,
+	"PunchesWithLeftArm": true,
 	"MeleeDamage": 55,
 	"MeleeInstability": 15,
 	"MeleeToHitModifier": 0,
@@ -141,7 +152,7 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMount": "Energy",
 					"Omni": true
 				},
 				{
@@ -159,7 +170,11 @@
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMount": "Energy",
+					"Omni": true
+				},
+				{
+					"WeaponMount": "Energy",
 					"Omni": true
 				},
 				{
@@ -169,46 +184,50 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 110,
+			"MaxArmor": 115,
 			"MaxRearArmor": 35,
-			"InternalStructure": 70
+			"InternalStructure": 75
 		},
 		{
 			"Location": "CenterTorso",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 15,
-			"MaxArmor": 150,
+			"MaxArmor": 160,
 			"MaxRearArmor": 50,
-			"InternalStructure": 100
+			"InternalStructure": 105
 		},
 		{
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMount": "Energy",
 					"Omni": true
 				},
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMount": "Energy",
+					"Omni": true
+				},
+				{
+					"WeaponMount": "AntiPersonnel",
 					"Omni": true
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 110,
+			"MaxArmor": 115,
 			"MaxRearArmor": 35,
-			"InternalStructure": 70
+			"InternalStructure": 75
 		},
 		{
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMount": "Missile",
 					"Omni": true
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Missile",
 					"Omni": true
 				}
 			],
@@ -223,65 +242,65 @@
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 140,
+			"MaxArmor": 150,
 			"MaxRearArmor": -1,
-			"InternalStructure": 70
+			"InternalStructure": 75
 		},
 		{
 			"Location": "RightLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 140,
+			"MaxArmor": 150,
 			"MaxRearArmor": -1,
-			"InternalStructure": 70
+			"InternalStructure": 75
 		}
 	],
 	"LOSSourcePositions": [
 		{
 			"x": 0,
-			"y": 13,
-			"z": 1
-		},
-		{
-			"x": 3,
-			"y": 13,
+			"y": 16,
 			"z": 0
 		},
 		{
-			"x": -3,
-			"y": 13,
+			"x": 3.5,
+			"y": 15,
+			"z": 0
+		},
+		{
+			"x": -3.5,
+			"y": 15,
 			"z": 0
 		}
 	],
 	"LOSTargetPositions": [
 		{
 			"x": 0,
-			"y": 13,
-			"z": 1
+			"y": 16,
+			"z": 0
+		},
+		{
+			"x": 3.5,
+			"y": 15,
+			"z": 0
+		},
+		{
+			"x": -3.5,
+			"y": 15,
+			"z": 0
 		},
 		{
 			"x": 3,
-			"y": 13,
+			"y": 5,
 			"z": 0
 		},
 		{
 			"x": -3,
-			"y": 13,
-			"z": 0
-		},
-		{
-			"x": 2,
-			"y": 5,
-			"z": 0
-		},
-		{
-			"x": -2,
 			"y": 5,
 			"z": 0
 		}
 	],
-	"VariantName": "LUPUS-TB",
+	"VariantName": "HBR-VI",
 	"ChassisTags": {
 		"items": [
 			"ClanMech",
@@ -291,7 +310,7 @@
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Gladiator",
-	"YangsThoughts": "The personal mech of Emilio 'Old Man' Sennet, Tiburon has a strong reputation in the arenas, though more for its pilot than the mech. Sennet is a pilot everyone loves to hate, owing to his origins with Clan Diamond Shark. He participated in the Invasion but had a 'falling out' with his Khan and ended up on the Gladiator's World looking to set up a stable. He's managed to do just that with Carcharodon Stable, which has gone very well and elevated his status significantly. Tiburon is his personal ride and is armed for brawling, with a battery of Clan-tech SRMs and Heavy Medium Lasers.",
+	"YangsThoughts": "Allegedly first piloted by Joanna of Clan Jade Falcon, this Hellbringer variant mounts paired ER Large Lasers in left arm, supported by a LRM-20 and LRM-15 rack in the right arm. At shorter ranges twin ER Medium Lasers in each side torso come into play. Virago carries two tons of LRM reloads and is fitted with nineteen double heat sinks.",
 	"CustomParts": {
 		"CustomParts": []
 	}

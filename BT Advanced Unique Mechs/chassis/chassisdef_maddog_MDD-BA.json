@@ -1,30 +1,19 @@
 {
 	"Custom": {
 		"ArmActuatorSupport": {
-			"LeftLimit": "Hand",
-			"RightLimit": "Hand"
+			"LeftLimit": "Lower",
+			"RightLimit": "Lower"
 		}
 	},
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_structureslots_clanendosteel",
+			"ComponentDefID": "emod_structureslots_standard",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional",
 			"prefabName": "",
 			"hasPrefabName": true
-		},
-		{
-			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engine_300",
-			"SimGameUID": null,
-			"ComponentDefType": "HeatSink",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
 		},
 		{
 			"MountedLocation": "CenterTorso",
@@ -39,7 +28,40 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engineslots_std_center",
+			"ComponentDefID": "emod_engine_300",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "emod_engineslots_size2",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "emod_engineslots_size2",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "emod_engineslots_cxl_center",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -59,7 +81,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engine_cooling_1",
+			"ComponentDefID": "emod_engine_cooling_2",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -81,31 +103,31 @@
 		}
 	],
 	"Description": {
-		"Cost": 5900000,
+		"Cost": 7873010,
 		"Rarity": 2,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Tiburon",
-		"Id": "chassisdef_lupus_TB",
-		"Name": "Tiburon",
-		"Details": "The personal mech of Emilio 'Old Man' Sennet, Tiburon has a strong reputation in the arenas, though more for its pilot than the mech. Sennet is a pilot everyone loves to hate, owing to his origins with Clan Diamond Shark. He participated in the Invasion but had a 'falling out' with his Khan and ended up on the Gladiator's World looking to set up a stable. He's managed to do just that with Carcharodon Stable, which has gone very well and elevated his status significantly. Tiburon is his personal ride and is armed for brawling, with a battery of Clan-tech SRMs and Heavy Medium Lasers.",
-		"Icon": "uixTxrIcon_lupus"
+		"UIName": "Bandit",
+		"Id": "chassisdef_maddog_MDD-BA",
+		"Name": "Bandit",
+		"Details": "First piloted by Russou Howell of Clan Smoke Jaguar, the Bandit is armed with a mammoth Ultra Autocannon/20 in each side torso. With only twin ER Small Lasers in each arm as supporting weapons, its pilot must make every shot of its combined total of two tons of reloads count.",
+		"Icon": "uixTxrIcon_maddog"
 	},
-	"MovementCapDefID": "movedef_lupus",
+	"MovementCapDefID": "movedef_maddog",
 	"PathingCapDefID": "pathingdef_heavy",
-	"HardpointDataDefID": "hardpointdatadef_lupus",
-	"PrefabIdentifier": "chrprfmech_lupusbase-001",
-	"PrefabBase": "lupus",
+	"HardpointDataDefID": "hardpointdatadef_maddog",
+	"PrefabIdentifier": "chrprfmech_maddogbase-001",
+	"PrefabBase": "maddog",
 	"Tonnage": 60,
 	"InitialTonnage": 6,
 	"weightClass": "HEAVY",
-	"BattleValue": 5383000,
+	"BattleValue": 3749000,
 	"Heatsinks": 0,
-	"TopSpeed": 150,
+	"TopSpeed": 85,
 	"TurnRadius": 90,
 	"MaxJumpjets": 99,
-	"Stability": 160,
+	"Stability": 100,
 	"StabilityDefenses": [
 		0,
 		0,
@@ -118,14 +140,14 @@
 	"VisibilityMultiplier": 1,
 	"SensorRangeMultiplier": 1,
 	"Signature": 0,
-	"Radius": 8,
-	"PunchesWithLeftArm": false,
-	"MeleeDamage": 55,
+	"Radius": 4,
+	"PunchesWithLeftArm": true,
+	"MeleeDamage": 50,
 	"MeleeInstability": 15,
 	"MeleeToHitModifier": 0,
-	"DFADamage": 55,
+	"DFADamage": 50,
 	"DFAToHitModifier": 0,
-	"DFASelfDamage": 55,
+	"DFASelfDamage": 50,
 	"DFAInstability": 15,
 	"Locations": [
 		{
@@ -141,11 +163,11 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMount": "AntiPersonnel",
 					"Omni": true
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "AntiPersonnel",
 					"Omni": true
 				}
 			],
@@ -163,7 +185,7 @@
 					"Omni": true
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Ballistic",
 					"Omni": true
 				}
 			],
@@ -175,7 +197,16 @@
 		},
 		{
 			"Location": "CenterTorso",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "Energy",
+					"Omni": true
+				},
+				{
+					"WeaponMount": "Energy",
+					"Omni": true
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 15,
 			"MaxArmor": 150,
@@ -204,11 +235,11 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMount": "AntiPersonnel",
 					"Omni": true
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "AntiPersonnel",
 					"Omni": true
 				}
 			],
@@ -240,48 +271,48 @@
 	"LOSSourcePositions": [
 		{
 			"x": 0,
-			"y": 13,
-			"z": 1
+			"y": 12.5,
+			"z": 0.5
 		},
 		{
-			"x": 3,
-			"y": 13,
-			"z": 0
+			"x": -2.5,
+			"y": 11.5,
+			"z": -0.5
 		},
 		{
-			"x": -3,
-			"y": 13,
-			"z": 0
+			"x": 2.5,
+			"y": 11.5,
+			"z": -0.5
 		}
 	],
 	"LOSTargetPositions": [
 		{
 			"x": 0,
-			"y": 13,
-			"z": 1
+			"y": 12.5,
+			"z": 0.5
 		},
 		{
-			"x": 3,
-			"y": 13,
-			"z": 0
+			"x": -2.5,
+			"y": 11.5,
+			"z": -0.5
 		},
 		{
-			"x": -3,
-			"y": 13,
-			"z": 0
-		},
-		{
-			"x": 2,
-			"y": 5,
-			"z": 0
+			"x": 2.5,
+			"y": 11.5,
+			"z": -0.5
 		},
 		{
 			"x": -2,
-			"y": 5,
-			"z": 0
+			"y": 3,
+			"z": 0.5
+		},
+		{
+			"x": 2,
+			"y": 3,
+			"z": 0.5
 		}
 	],
-	"VariantName": "LUPUS-TB",
+	"VariantName": "MDD-BA",
 	"ChassisTags": {
 		"items": [
 			"ClanMech",
@@ -291,7 +322,7 @@
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Gladiator",
-	"YangsThoughts": "The personal mech of Emilio 'Old Man' Sennet, Tiburon has a strong reputation in the arenas, though more for its pilot than the mech. Sennet is a pilot everyone loves to hate, owing to his origins with Clan Diamond Shark. He participated in the Invasion but had a 'falling out' with his Khan and ended up on the Gladiator's World looking to set up a stable. He's managed to do just that with Carcharodon Stable, which has gone very well and elevated his status significantly. Tiburon is his personal ride and is armed for brawling, with a battery of Clan-tech SRMs and Heavy Medium Lasers.",
+	"YangsThoughts": "First piloted by Russou Howell of Clan Smoke Jaguar, the Bandit is armed with a mammoth Ultra Autocannon/20 in each side torso. With only twin ER Small Lasers in each arm as supporting weapons, its pilot must make every shot of its combined total of two tons of reloads count.",
 	"CustomParts": {
 		"CustomParts": []
 	}
