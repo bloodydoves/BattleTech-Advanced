@@ -1,27 +1,21 @@
 {
-	"Custom": {
-		"ArmActuatorSupport": {
-			"LeftLimit": "Upper",
-			"RightLimit": "Upper"
-		}
-	},
 	"Description": {
 		"Cost": 2224000,
 		"Rarity": 1,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Sekhmet",
-		"Id": "chassisdef_osiris_OSR-SK",
-		"Name": "Sekhmet",
-		"Details": "The Sekhmet is a highly customized arena combat design, meant for gladiatorial bouts. Armed with a trio of ER Medium Lasers, a pair of Heavy MGs, and a Light PPC, the Sekhmet can threaten anyone, no matter how far they run or where they hide.",
-		"Icon": "uixTxrIcon_osiris"
+		"UIName": "Anansi",
+		"Id": "chassisdef_spider_SDR-A",
+		"Name": "Anansi",
+		"Details": "The Anansi is a supportive arena design meant to cover for larger, heavier designs in the arena. Two AMS provide coverage against missiles while two each Medium Lasers and Machine Guns, as well as an SRM-4, provide no frills firepower.",
+		"Icon": "uixTxrIcon_spider"
 	},
-	"MovementCapDefID": "movedef_osiris_OSR-3D",
+	"MovementCapDefID": "movedef_spider_SDR-5V",
 	"PathingCapDefID": "pathingdef_light",
-	"HardpointDataDefID": "hardpointdatadef_osiris",
-	"PrefabIdentifier": "chrprfmech_osirisbase-001",
-	"PrefabBase": "osiris",
+	"HardpointDataDefID": "hardpointdatadef_spider",
+	"PrefabIdentifier": "chrPrfMech_spiderBase-001",
+	"PrefabBase": "spider",
 	"Tonnage": 30,
 	"InitialTonnage": 3,
 	"weightClass": "LIGHT",
@@ -45,12 +39,12 @@
 	"Signature": 0,
 	"Radius": 4,
 	"PunchesWithLeftArm": false,
-	"MeleeDamage": 30,
+	"MeleeDamage": 40,
 	"MeleeInstability": 10,
 	"MeleeToHitModifier": 0,
-	"DFADamage": 30,
+	"DFADamage": 40,
 	"DFAToHitModifier": 0,
-	"DFASelfDamage": 30,
+	"DFASelfDamage": 40,
 	"DFAInstability": 10,
 	"Locations": [
 		{
@@ -58,7 +52,7 @@
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 45,
+			"MaxArmor": 30,
 			"MaxRearArmor": -1,
 			"InternalStructure": 16
 		},
@@ -70,7 +64,7 @@
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -84,15 +78,7 @@
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
-					"Omni": false
-				},
-				{
 					"WeaponMount": "AntiPersonnel",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "Ballistic",
 					"Omni": false
 				}
 			],
@@ -104,9 +90,18 @@
 		},
 		{
 			"Location": "CenterTorso",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "Missile",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Missile",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
-			"InventorySlots": 15,
+			"InventorySlots": 16,
 			"MaxArmor": 100,
 			"MaxRearArmor": 50,
 			"InternalStructure": 50
@@ -114,10 +109,6 @@
 		{
 			"Location": "RightTorso",
 			"Hardpoints": [
-				{
-					"WeaponMount": "Energy",
-					"Omni": false
-				},
 				{
 					"WeaponMount": "AntiPersonnel",
 					"Omni": false
@@ -137,7 +128,7 @@
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -210,7 +201,7 @@
 			"z": 0.5
 		}
 	],
-	"VariantName": "OSR-SK",
+	"VariantName": "SDR-A",
 	"ChassisTags": {
 		"items": [
 			"HeroMech"
@@ -218,11 +209,11 @@
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Gladiator",
-	"YangsThoughts": "The Sekhmet is a highly customized arena combat design, meant for gladiatorial bouts. Armed with a trio of ER Medium Lasers, a pair of Heavy MGs, and a Light PPC, the Sekhmet can threaten anyone, no matter how far they run or where they hide.",
+	"YangsThoughts": "The Anansi is a supportive arena design meant to cover for larger, heavier designs in the arena. Two AMS provide coverage against missiles while two each Medium Lasers and Machine Guns, as well as an SRM-4, provide no frills firepower.",
 	"FixedEquipment": [
 		{
-			"MountedLocation": "Head",
-			"ComponentDefID": "Gear_Quirk_ImprovedSensors_Osiris",
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "Gear_Quirk_NimbleJumper_Spider",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
