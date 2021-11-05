@@ -1,0 +1,245 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/s/m/melee"
+			},
+			{
+				"CategoryID": "PartHand"
+			},
+			{
+				"CategoryID": "ArmHandActuator"
+			}
+		],
+		"ArmActuator": {
+			"Type": "PartHand"
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"IsPhysWeap",
+				"PhysWeapUnsteady",
+				"PhysWeapDamage: 1",
+				"PhysWeapStab: 1.5",
+				"PhysWeapAccuracy: +1"
+			]
+		},
+		"Flags": {
+			"flags": [
+				"no_salvage",
+				"not_broken"
+			]
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 750000,
+		"Rarity": 99,
+		"Purchasable": false,
+		"Manufacturer": "Silver Wyrm",
+		"Model": "Mithril Wyrm Experimental",
+		"UIName": "Large Vibroblade",
+		"Id": "Gear_RedReaper_Vibroblade",
+		"Name": "Mithril Wyrm Vibroblade",
+		"Details": "The Vibroblade is a BattleMech-scale version of a fairly old technology. Vibroblade technology has existed at the personal scale for centuries but it was not until the 3060s that the Draconis Combine managed to perfect it for 'Mech application. The technology found its footing in the arenas of Solaris VII and from there to other gameworlds in quick order. The Large Vibroblade is the biggest of its kind and uses its advanced motors to bisect anything in its path.",
+		"Icon": "UixSvgIcon_specialEquip_Melee"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 4,
+	"Tonnage": 7,
+	"AllowedLocations": "Arms",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "PunchIsPhysical",
+				"Name": "This is a Physical Weapon",
+				"Details": "This is a physical weapon and uses those melee rules."
+			},
+			"statisticData": {
+				"statName": "CBTBE_Punch_Is_Physical_Weapon",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0.0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "CBTBE_PHYSICAL_WEAPON_APPLY_UNSTEADY",
+				"Name": "Target will be Unsteady",
+				"Details": "Foo"
+			},
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Unsteady_Target_On_Hit",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0.0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "CBTBE_PHYSICAL_WEAPON_LOCATION_TABLE",
+				"Name": "Location table to use",
+				"Details": "Foo"
+			},
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Location_Table",
+				"operation": "Set",
+				"modValue": "STANDARD",
+				"modType": "System.String"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-VibrobladeBaseDamage",
+				"Name": "Vibroblade Base Damage",
+				"Details": "Vibroblades do 5 damage per 5 tons of the mech.",
+				"Icon": "UixSvgIcon_specialEquip_Melee"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Target_Damage_Per_Attacker_Ton",
+				"operation": "Set",
+				"modValue": "1.0",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-VibrobladeBaseStabDamage",
+				"Name": "Vibroblade Base Stab Damage",
+				"Details": "Vibroblades do 15 stab damage per 10 tons of the mech.",
+				"Icon": "UixSvgIcon_specialEquip_Melee"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Target_Instability_Per_Attacker_Ton",
+				"operation": "Set",
+				"modValue": "1.5",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-VibrobladeBaseAcc",
+				"Name": "Vibroblade Base Accuracy",
+				"Details": "Vibroblades gain +1 accuracy on their attacks.",
+				"Icon": "UixSvgIcon_specialEquip_Melee"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Attack_Mod",
+				"operation": "Int_Add",
+				"modValue": "-1",
+				"modType": "System.Int32"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"BLACKLISTED"
+		],
+		"tagSetSourceFile": ""
+	}
+}
