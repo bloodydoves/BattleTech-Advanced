@@ -1,0 +1,137 @@
+{
+	"Custom": {
+		"ComponentExplosion": {
+			"StabilityDamage": 100
+		},
+		"Category": [
+			{
+				"CategoryID": "Gyro"
+			}
+		],
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "1",
+				"CBillCost": "[[Chassis.Tonnage]]"
+			}
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"EvaMax: +1",
+				"EvaPips: +2",
+				"GyroStab: 40"
+			]
+		},
+		"InventorySorter": {
+			"SortKey": "00022"
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 900000,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "Trickster",
+		"Model": "Sparrow",
+		"UIName": "Gyro Defense + +",
+		"Id": "Gear_Gyro_Friedhof_Sparrow_Locked",
+		"Name": "Trickster Sparrow Gyro",
+		"Details": "Here at Friedhof, we know that a safe customer is a repeat customer. That's why our Birds of Prey line of gyros is designed for maximum effectiveness on the battlefield. This model, the Sparrow, is our deluxe model. The Sparrow picks up where the Osprey leaves off. The Sparrow not only makes you more evasive but it makes you twice as evasive as the Osprey can! Truly, the Sparrow is the pinnacle of luxury for the discerning MechWarrior. The Sparrow comes with a lifetime guarantee and free shipping, order one today before your opponents do!",
+		"Icon": "uixSvgIcon_equipment_Gyro"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 3,
+	"Tonnage": 0,
+	"AllowedLocations": "CenterTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator"
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Gyro_Sparrow-MaxEvasion",
+				"Name": "EVASIVE MOVE",
+				"Details": "This unit generates an extra EVASIVE charge from movement actions (up to its maximum).",
+				"Icon": "uixSvgIcon_action_evasivemove"
+			},
+			"statisticData": {
+				"statName": "MaxEvasivePips",
+				"operation": "Int_Add",
+				"modValue": "2",
+				"modType": "System.Int32"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Gyro_Sparrow-MoreEvasion",
+				"Name": "EVASIVE MOVE",
+				"Details": "This unit generates an extra EVASIVE charge from movement actions (up to its maximum).",
+				"Icon": "uixSvgIcon_action_evasivemove"
+			},
+			"statisticData": {
+				"statName": "EvasivePipsGainedAdditional",
+				"operation": "Int_Add",
+				"modValue": "1",
+				"modType": "System.Int32"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "GyroGenericThreshhold",
+				"Name": "Gyroscopic Orientation",
+				"Details": "The gyro helps establish center-of-mass equilibrium for the BattleMech.",
+				"Icon": "uixSvgIcon_equipment_Gyro"
+			},
+			"statisticData": {
+				"statName": "UnsteadyThreshold",
+				"operation": "Float_Add",
+				"modValue": "40.0",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_variant",
+			"component_type_variant3"
+		],
+		"tagSetSourceFile": ""
+	}
+}

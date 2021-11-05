@@ -1,0 +1,167 @@
+{
+	"Custom": {
+		"ComponentExplosion": {
+			"StabilityDamage": 100
+		},
+		"Category": [
+			{
+				"CategoryID": "Gyro"
+			}
+		],
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "1",
+				"CBillCost": "[[Chassis.Tonnage]]"
+			}
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"SureFoot",
+				"StabDamageTaken: -10%",
+				"Recoil: -1",
+				"GyroStab: 40"
+			]
+		},
+		"InventorySorter": {
+			"SortKey": "00022"
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 900000,
+		"Rarity": 5,
+		"Purchasable": true,
+		"Manufacturer": "Trickster",
+		"Model": "StabiliTrak 15",
+		"UIName": "Gyro Stabilization + +",
+		"Id": "Gear_Gyro_Rawlings_StabiliTrak-15_Locked",
+		"Name": "Trickster StabiliTrak 15 Gyro",
+		"Details": "The Rawlings StabiliTrak Gyro is the last word in stabilization technology for any combat situation. Rawlings: the Last Name You'll Ever Need in Stabilization! This gryo, the StabiliTrak-15, provides modest weapon stabilization, reducing weapon recoil from all weapon sources as well as providing Rawling's patented Sure Footed Technology while moving through rough terrain. The StabiliTrak-15 even dampens incoming stability-reducing damage against your mech!",
+		"Icon": "uixSvgIcon_equipment_Gyro"
+	},
+	"BonusValueA": "- 30% Stb.Dmg. Taken",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 3,
+	"Tonnage": 0,
+	"AllowedLocations": "CenterTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator"
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "GyroSureFoot",
+				"Name": "BULWARK",
+				"Details": "PASSIVE: This unit is GUARDED (50% damage reduction against ranged attacks to the front and side) from remaining stationary.Increases Melee Damage by 10%.",
+				"Icon": "uixSvgIcon_ability_bulwark"
+			},
+			"statisticData": {
+				"statName": "GainEntrenchedOnNormalMove",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Gyro_Stab-StabReduction",
+				"Name": "INCOMING STABILITY DAMAGE DECREASED",
+				"Details": "Incoming stability damage reduced by 30%.",
+				"Icon": "uixSvgIcon_equipment_Gyro"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "ReceivedInstabilityMultiplier",
+				"operation": "Float_Multiply",
+				"modValue": "0.9",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator"
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Gyro_Stab-Recoil",
+				"Name": "Stabilized Weapon Ballistic",
+				"Details": "Reduced Ballistic Recoil",
+				"Icon": "uixSvgIcon_equipment_TTS"
+			},
+			"statisticData": {
+				"statName": "RefireModifier",
+				"operation": "Int_Add",
+				"modValue": "-1",
+				"modType": "System.Int32",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "GyroGenericThreshhold",
+				"Name": "Gyroscopic Orientation",
+				"Details": "The gyro helps establish center-of-mass equilibrium for the BattleMech.",
+				"Icon": "uixSvgIcon_equipment_Gyro"
+			},
+			"statisticData": {
+				"statName": "UnsteadyThreshold",
+				"operation": "Float_Add",
+				"modValue": "40.0",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_variant",
+			"component_type_variant3"
+		],
+		"tagSetSourceFile": ""
+	}
+}
