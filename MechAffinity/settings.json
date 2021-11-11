@@ -226,11 +226,9 @@
 				"chrPrfMech_spiderBase-001_30",
 				"chrPrfMech_firestarterBase-001_35",
 				"FirestarterOmni_45",
-				"chrPrfMech_assassinBase-001_40",
 				"chrprfmech_chimerabase-001_40",
 				"chrPrfMech_catapultBase-001_65",
 				"chrPrfMech_grasshopperBase-001_70",
-				"Highlander_90",
 				"chrprfmech_mistlynxbase-001_25",
 				"chrPrfMech_hellhoundBase-001_50",
 				"chrprfmech_executionerbase-001_95",
@@ -240,8 +238,8 @@
 				"chrprfmech_wyvernbase-001_45",
 				"chrprfmech_phoenixbase-001_50",
 				"chrprfmech_brigandbase-001_25",
-				"chrprfmech_turkinabase-001_95",
 				"chrprfmech_vossieostscoutbase-001_35",
+				"chrPrfMech_phoenixhawkBase-001_45",
 				"chrprfmech_legacybase-001_80"
 			],
 			"affinityLevels": [
@@ -292,14 +290,9 @@
 				"chrprfmech_valkyriehotd-001_30",
 				"chrprfmech_hussarbase-001_30",
 				"chrprfmech_torobase-001_35",
-				"chrPrfMech_phoenixhawkBase-001_45",
 				"chrprfmech_phawklammechbase-001_50",
 				"chrPrfMech_crabBase-001_50",
-				"chrPrfMech_wolverineBase-001_55",
 				"chrPrfMech_quickdrawBase-001_60",
-				"Rifleman_60",
-				"Rifleman_50",
-				"RiflemanII_80",
 				"chrprfmech_mackiebase-001_100",
 				"chrPrfMech_vaporeagleBase-001_55",
 				"chrprfmech_nightgyrbase-001_75",
@@ -361,14 +354,11 @@
 				"Hollander_35",
 				"HollanderII_45",
 				"chrprfmech_icarusiibase-001_40",
-				"chrprfmech_clintbase-001_40",
 				"chrPrfMech_blackjackBase-001_45",
 				"BlackjackOmni_50",
 				"Centurion_50",
 				"Centurion_55",
 				"MonsterLamOmni_150",
-				"chrPrfMech_jagermechBase-001_65",
-				"chrPrfMech_jagermechBase-001_70",
 				"chrPrfMech_cataphractBase-001_70",
 				"chrprfmech_fafnirbase-001_100",
 				"chrprfmech_fafnir2base-001_100",
@@ -664,7 +654,6 @@
 			"chassisNames": [
 				"chrprfmech_firebeebase-001_35",
 				"chrPrfMech_jennerBase-001_35",
-				"chrPrfMech_hatchetmanBase-001_45",
 				"chrPrfMech_enforcerBase-001_50",
 				"chrprfmech_kitfoxbase-001_30",
 				"chrprfmech_cougarbase-001_35",
@@ -994,7 +983,8 @@
 				"chrprfmech_excavatorbase-001_70",
 				"chrprfmech_yenlowang1base-001_50",
 				"chrprfmech_redreaperbase-001_75",
-				"chrprfmech_digkingbase-001_30"
+				"chrprfmech_digkingbase-001_30",
+				"chrPrfMech_hatchetmanBase-001_45"
 			],
 			"affinityLevels": [
 				{
@@ -1111,11 +1101,11 @@
 				"chrPrfMech_marauderBase-001_75",
 				"chrPrfMech_battlemasterBase-001_85",
 				"chrprfmech_redcorsairbase-001_85",
-				"chrprfmech_nightstarbase-001_95",
 				"chrprfmech_impbase-001_100",
 				"chrprfmech_riflemaniicbase-001_65",
 				"Timberwolf_75",
 				"Madcat_75",
+				"chrPrfMech_wolverineBase-001_55",
 				"chrprfmech_supernovabase-001_90",
 				"chrprfmech_stonerhinobase-001_100",
 				"chrprfmech_napesospreybase-001_55",
@@ -1194,6 +1184,266 @@
 								"statName": "ReceivedInstabilityMultiplier",
 								"operation": "Float_Multiply",
 								"modValue": "0.5",
+								"modType": "System.Single"
+							},
+							"targetingData": {
+								"effectTargetType": "Creator",
+								"effectTriggerType": "Passive",
+								"hideApplicationFloatie": true,
+								"showInStatusPanel": false,
+								"showInTargetPreview": false
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"chassisNames": [
+				"chrprfmech_clintbase-001_40",
+				"chrPrfMech_jagermechBase-001_65",
+				"chrPrfMech_jagermechBase-001_70",
+				"Rifleman_60",
+				"Rifleman_50",
+				"RiflemanII_80",
+				"chrPrfMech_assassinBase-001_40"
+			],
+			"affinityLevels": [
+				{
+					"missionsRequired": 15,
+					"levelName": "Sharpshooter",
+					"decription": "Ignores 1 enemy evasion.",
+					"effectData": [
+						{
+							"Description": {
+								"Details": "The pilot's incredible skill with this mech improves its targeting by 1.",
+								"Icon": "UixSvgIcon_specialEquip_System",
+								"Id": "StatusEffect-Affinity-EvasionIgnore",
+								"Name": "Mech Affinity Targeting Boost"
+							},
+							"durationData": {
+								"duration": -1,
+								"stackLimit": -1
+							},
+							"effectType": "StatisticEffect",
+							"nature": "Buff",
+							"statisticData": {
+								"statName": "EvasivePipsIgnored",
+								"operation": "Float_Add",
+								"modValue": "1.0",
+								"modType": "System.Single"
+							},
+							"targetingData": {
+								"effectTargetType": "Creator",
+								"effectTriggerType": "Passive",
+								"hideApplicationFloatie": true,
+								"showInStatusPanel": false,
+								"showInTargetPreview": false
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"chassisNames": [
+				"chrprfmech_nightstarbase-001_95"
+			],
+			"affinityLevels": [
+				{
+					"missionsRequired": 15,
+					"levelName": "Long-Range Specialist",
+					"decription": "Gains +3 accuracy at extreme range, but has worse accuracy the closer the target is.",
+					"effectData": [
+						{
+						  "durationData": {
+							"duration": -1,
+							"stackLimit": -1
+						  },
+						  "targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator",
+							"showInTargetPreview": false,
+							"showInStatusPanel": false
+						  },
+						  "effectType": "StatisticEffect",
+						  "Description": {
+							"Id": "RangeBracketBonusAccER",
+							"Name": "Bonus Accuracy at range",
+							"Details": "range bracket bonus accuracy",
+							"Icon": "uixSvgIcon_ability_precisionstrike"
+						  },
+						  "nature": "Buff",
+						  "statisticData": {
+							"statName": "CACExtraLongRangeAccuracyMod",
+							"operation": "Float_Add",
+							"modValue": "-3.0",
+							"modType": "System.Single"
+						  }
+						},
+						{
+						  "durationData": {
+							"duration": -1,
+							"stackLimit": -1
+						  },
+						  "targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator",
+							"showInTargetPreview": false,
+							"showInStatusPanel": false
+						  },
+						  "effectType": "StatisticEffect",
+						  "Description": {
+							"Id": "RangeBracketBonusAccLR",
+							"Name": "Bonus Accuracy at range",
+							"Details": "range bracket bonus accuracy",
+							"Icon": "uixSvgIcon_ability_precisionstrike"
+						  },
+						  "nature": "Buff",
+						  "statisticData": {
+							"statName": "CACLongRangeAccuracyMod",
+							"operation": "Float_Add",
+							"modValue": "1.0",
+							"modType": "System.Single"
+						  }
+						},
+						{
+						  "durationData": {
+							"duration": -1,
+							"stackLimit": -1
+						  },
+						  "targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator",
+							"showInTargetPreview": false,
+							"showInStatusPanel": false
+						  },
+						  "effectType": "StatisticEffect",
+						  "Description": {
+							"Id": "RangeBracketBonusAccMR",
+							"Name": "Bonus Accuracy at range",
+							"Details": "range bracket bonus accuracy",
+							"Icon": "uixSvgIcon_ability_precisionstrike"
+						  },
+						  "nature": "Buff",
+						  "statisticData": {
+							"statName": "CACMediumRangeAccuracyMod",
+							"operation": "Float_Add",
+							"modValue": "2.0",
+							"modType": "System.Single"
+						  }
+						},
+						{
+						  "durationData": {
+							"duration": -1,
+							"stackLimit": -1
+						  },
+						  "targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator",
+							"showInTargetPreview": false,
+							"showInStatusPanel": false
+						  },
+						  "effectType": "StatisticEffect",
+						  "Description": {
+							"Id": "RangeBracketBonusAccSR",
+							"Name": "Bonus Accuracy at range",
+							"Details": "range bracket bonus accuracy",
+							"Icon": "uixSvgIcon_ability_precisionstrike"
+						  },
+						  "nature": "Buff",
+						  "statisticData": {
+							"statName": "CACShortRangeAccuracyMod",
+							"operation": "Float_Add",
+							"modValue": "3.0",
+							"modType": "System.Single"
+						  }
+						},
+						{
+						  "durationData": {
+							"duration": -1,
+							"stackLimit": -1
+						  },
+						  "targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator",
+							"showInTargetPreview": false,
+							"showInStatusPanel": false
+						  },
+						  "effectType": "StatisticEffect",
+						  "Description": {
+							"Id": "RangeBracketBonusAccMin",
+							"Name": "Bonus Accuracy at range",
+							"Details": "range bracket bonus accuracy",
+							"Icon": "uixSvgIcon_ability_precisionstrike"
+						  },
+						  "nature": "Buff",
+						  "statisticData": {
+							"statName": "CACMinRangeAccuracyMod",
+							"operation": "Float_Add",
+							"modValue": "4.0",
+							"modType": "System.Single"
+						  }
+						}
+					]
+				}
+			]
+		},
+		{
+			"chassisNames": [
+				"Highlander_90",
+				"chrprfmech_turkinabase-001_95"
+			],
+			"affinityLevels": [
+				{
+					"missionsRequired": 15,
+					"levelName": "Goomba Stomper",
+					"decription": "Improved DFA skill, taking 20% less stab damage when performing a DFA and dealing 20% more regular damage when performing a DFA.",
+					"effectData": [
+						{
+							"Description": {
+								"Details": "DFA Self-Stab Reduced",
+								"Icon": "UixSvgIcon_specialEquip_System",
+								"Id": "StatusEffect-Affinity-DFAStabReduction",
+								"Name": "DFA Stab Damage Reduced"
+							},
+							"durationData": {
+								"duration": -1,
+								"stackLimit": -1
+							},
+							"effectType": "StatisticEffect",
+							"nature": "Buff",
+							"statisticData": {
+								"statName": "CBTBE_DFA_Attacker_Instability_Multi",
+								"operation": "Float_Multiply",
+								"modValue": "0.8",
+								"modType": "System.Single"
+							},
+							"targetingData": {
+								"effectTargetType": "Creator",
+								"effectTriggerType": "Passive",
+								"hideApplicationFloatie": true,
+								"showInStatusPanel": false,
+								"showInTargetPreview": false
+							}
+						},
+						{
+							"Description": {
+								"Details": "DFA Damage Increased",
+								"Icon": "UixSvgIcon_specialEquip_System",
+								"Id": "StatusEffect-Affinity-DFADmgIncrease",
+								"Name": "DFA Damage Increased"
+							},
+							"durationData": {
+								"duration": -1,
+								"stackLimit": -1
+							},
+							"effectType": "StatisticEffect",
+							"nature": "Buff",
+							"statisticData": {
+								"statName": "CBTBE_DFA_Target_Damage_Multi",
+								"operation": "Float_Multiply",
+								"modValue": "1.2",
 								"modType": "System.Single"
 							},
 							"targetingData": {
