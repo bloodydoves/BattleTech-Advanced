@@ -36,7 +36,7 @@
 	],
 	"AmmoCategory": "Flamer",
 	"StartingAmmoCapacity": 36,
-	"HeatGenerated": 6,
+	"HeatGenerated": 3,
 	"Damage": 20,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
@@ -48,10 +48,12 @@
 	"AOECapable": false,
 	"IndirectFireCapable": false,
 	"RefireModifier": 2,
-	"ShotsWhenFired": 2,
+	"ShotsWhenFired": 1,
 	"ProjectilesPerShot": 1,
 	"AttackRecoil": 2,
 	"Instability": 6,
+	"ImprovedBallistic": true,
+	"FireDelayMultiplier": 0.2,
 	"WeaponEffectID": "WeaponEffect-Weapon_AC5",
 	"Description": {
 		"Cost": 150000,
@@ -79,17 +81,26 @@
 	"statusEffects": [],
 	"Modes": [
 		{
-			"Id": "x2",
-			"UIName": "x2",
+			"Id": "x1",
+			"UIName": "x1",
 			"isBaseMode": true,
 			"ShotsWhenFired": 0
+		},
+		{
+			"Id": "x2",
+			"UIName": "x2",
+			"isBaseMode": false,
+			"ShotsWhenFired": 1,
+			"RefireModifier": 1,
+			"HeatGenerated": 3
 		},
 		{
 			"Id": "x3",
 			"UIName": "x3",
 			"isBaseMode": false,
-			"ShotsWhenFired": 1,
-			"HeatGenerated": 3
+			"ShotsWhenFired": 2,
+			"RefireModifier": 1,
+			"HeatGenerated": 6
 		}
 	],
 	"ComponentTags": {
