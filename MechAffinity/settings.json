@@ -1460,6 +1460,108 @@
 					]
 				}
 			]
+		},
+		{
+			"chassisNames": [
+				"Fa Shih_4",
+				"Infiltrator_4",
+				"IS Standard_4",
+				"Kanazuchi_8",
+				"BA Marauder_9",
+				"Phalanx_6",
+				"BA Ravager_9",
+				"Void_4"
+			],
+			"affinityLevels": [
+				{
+					"missionsRequired": 15,
+					"levelName": "Squirrelly Bastard",
+					"decription": "Hard to catch due to size and skill, gaining +2 defense and +1 evasion at all times.",
+					"effectData": [
+						{
+							"Description": {
+								"Details": "BA Defense Boost",
+								"Icon": "UixSvgIcon_specialEquip_System",
+								"Id": "StatusEffect-Affinity-BattleArmorDefense",
+								"Name": "BA Defense Boost"
+							},
+							"durationData": {
+								"duration": -1,
+								"stackLimit": -1
+							},
+							"effectType": "StatisticEffect",
+							"nature": "Buff",
+							"statisticData": {
+								"statName": "ToHitThisActor",
+								"operation": "Float_Add",
+								"modValue": "2.0",
+								"modType": "System.Single"
+							},
+							"targetingData": {
+								"effectTargetType": "Creator",
+								"effectTriggerType": "Passive",
+								"hideApplicationFloatie": true,
+								"showInStatusPanel": false,
+								"showInTargetPreview": false
+							}
+						},
+						{
+							"Description": {
+								"Details": "BA Evasive Pip Boost",
+								"Icon": "UixSvgIcon_specialEquip_System",
+								"Id": "StatusEffect-Affinity-BattleArmorEvasionPip",
+								"Name": "BA Evasive Pip Boost"
+							},
+							"durationData": {
+								"duration": -1,
+								"stackLimit": -1
+							},
+							"effectType": "StatisticEffect",
+							"nature": "Buff",
+							"statisticData": {
+								"statName": "MaxEvasivePips",
+								"operation": "Int_Add",
+								"modValue": "1",
+								"modType": "System.Int32"
+							},
+							"targetingData": {
+								"effectTargetType": "Creator",
+								"effectTriggerType": "Passive",
+								"hideApplicationFloatie": true,
+								"showInStatusPanel": false,
+								"showInTargetPreview": false
+							}
+						},
+						{
+							"Description": {
+								"Details": "BA Evasive Pip Number",
+								"Icon": "UixSvgIcon_specialEquip_System",
+								"Id": "StatusEffect-Affinity-BattleArmorEvasionPipNum",
+								"Name": "BA Evasive Pip Number"
+							},
+							"durationData": {
+								"duration": -1,
+								"stackLimit": -1
+							},
+							"effectType": "StatisticEffect",
+							"nature": "Buff",
+							"statisticData": {
+								"statName": "EvasivePipsGainedAdditional",
+								"operation": "Int_Add",
+								"modValue": "1",
+								"modType": "System.Int32"
+							},
+							"targetingData": {
+								"effectTargetType": "Creator",
+								"effectTriggerType": "Passive",
+								"hideApplicationFloatie": true,
+								"showInStatusPanel": false,
+								"showInTargetPreview": false
+							}
+						}
+					]
+				}
+			]
 		}
 	],
 	"quirkAffinities": [],
@@ -2179,6 +2281,55 @@
 								"effectTargetType": "Creator",
 								"effectTriggerType": "Passive",
 								"showInStatusPanel": true
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"tag": "Affinity_Virago_BA",
+			"chassisNames": [
+				"Fa Shih_4",
+				"Infiltrator_4",
+				"IS Standard_4",
+				"Kanazuchi_8",
+				"BA Marauder_9",
+				"Phalanx_6",
+				"BA Ravager_9",
+				"Void_4"
+			],
+			"affinityLevels": [
+				{
+					"missionsRequired": 10,
+					"levelName": "Minimizer",
+					"decription": "Virago knows how to be small, gaining a +4 defensive bonus against all attacks. This stacks with the normal Battle Armor affinity of Squirrelly Bastard.",
+					"effectData": [
+						{
+							"Description": {
+								"Details": "Virago's skill in a BA suit gives her a major bonus to defense against all attacks.",
+								"Icon": "UixSvgIcon_specialEquip_System",
+								"Id": "StatusEffect-Affinity-ViragoBA",
+								"Name": "Virage Affinity Defense Boost"
+							},
+							"durationData": {
+								"duration": -1,
+								"stackLimit": -1
+							},
+							"effectType": "StatisticEffect",
+							"nature": "Buff",
+							"statisticData": {
+								"statName": "ToHitThisActor",
+								"operation": "Float_Add",
+								"modValue": "4.0",
+								"modType": "System.Single"
+							},
+							"targetingData": {
+								"effectTargetType": "Creator",
+								"effectTriggerType": "Passive",
+								"hideApplicationFloatie": true,
+								"showInStatusPanel": false,
+								"showInTargetPreview": false
 							}
 						}
 					]
