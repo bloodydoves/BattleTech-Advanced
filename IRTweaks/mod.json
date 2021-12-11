@@ -2,7 +2,7 @@
 	"Name": "IRTweaks",
 	"Enabled": true,
 	"Hidden": true,
-	"Version": "0.9.4.5",
+	"Version": "0.9.4.7",
 	"Description": "Miscellaneous Tweaks and Fixes",
 	"Author": "IceRaptor",
 	"Website": "https://github.com/IceRaptor/IRTweaks",
@@ -80,6 +80,30 @@
 				"EnableTacticsModifier": true,
 				"BaseModifier": -1,
 				"PilotTags": {}
+			},
+			"ToHitStatMods": {
+				"WeaponToHitMods": [
+					{
+						"SourceStatName": "WeaponIgnoreEVASIVE_AeroUnit",
+						"TargetStatName": "AeroUnit",
+						"Multi": false,
+						"Type": "EVASIVE"
+					}
+				],
+				"ActorToHitMods": [
+					{
+						"SourceStatName": "ActorIgnoreDEFENSE_AeroUnit",
+						"TargetStatName": "AeroUnit",
+						"Multi": false,
+						"Type": "DEFENSE"
+					},
+					{
+						"SourceStatName": "ActorABSOLUTE_AeroUnit",
+						"TargetStatName": "AeroUnit",
+						"Multi": false,
+						"Type": "ABSOLUTE"
+					}
+				]
 			},
 			"DamageModsBySkill": {
 				"DisplayFloatiesOnTrigger": true,

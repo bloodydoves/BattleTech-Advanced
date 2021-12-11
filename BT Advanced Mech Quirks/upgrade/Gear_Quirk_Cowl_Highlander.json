@@ -22,7 +22,8 @@
 		},
 		"BonusDescriptions": {
 			"Bonuses": [
-				"ArmoredCowl: 10"
+				"NoBleedout",
+				"ArmoredCowl: 15"
 			]
 		},
 		"InventorySorter": {
@@ -41,10 +42,10 @@
 		"UIName": "Highlander Cowl",
 		"Id": "Gear_Quirk_Cowl_Highlander",
 		"Name": "Highlander Cowl",
-		"Details": "This piece of gear represents the Highlander's inherent Cowl quirk. This gives the Highlander a bonus to head armor.",
+		"Details": "This piece of gear represents the Highlander's inherent Cowl quirk. This gives the Highlander a bonus to head armor and prevents bleedouts.",
 		"Icon": "uixSvgIcon_equipment_Cockpit"
 	},
-	"BonusValueA": "+ 10 Head Armor",
+	"BonusValueA": "",
 	"BonusValueB": "",
 	"ComponentType": "Upgrade",
 	"ComponentSubType": "NotSet",
@@ -78,8 +79,33 @@
 			"statisticData": {
 				"statName": "{location}.Armor",
 				"operation": "Float_Add",
-				"modValue": "10",
+				"modValue": "15",
 				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "ReinforcedLifeSupport-NoBleed",
+				"Name": "No Bleedout",
+				"Details": "This unit cannot bleed out from injuries.",
+				"Icon": "layeredarmor"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "DisablesBleeding",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
 			}
 		}
 	],
