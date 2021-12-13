@@ -1,0 +1,147 @@
+{
+	"Description": {
+		"Id": "tbone_event_co_KringlesKillers",
+		"Name": "Kringle's Killers",
+		"Details": "The static clears from the comm unit, revealing a wide face with rosy cheeks that you can only describe as 'jolly.'\r\n\r\n\"Commander {Commander.LastName}! You don't know me, but I've been keeping tabs on you for some time now. Of course I keep tabs on <i>everyone</i>, a ho ho. How else am I supposed to find out who's been naughty and who's been nice? Where was I... ah yes. You've heard the rumors, every year around this time someone reports supplies showing up or disappearing right when needed to get one side or another to stand down. It's about balance, rewarding the good and punishing the bad. Even the Great Houses check their black ops units for fear of antagonizing Kringle's Killers. Now here is your role. Every year I seek out a highly-rated mercenary unit to sharpen up my people before the holidays. Bring your best units to face me; I'll even cover your damages at the end. Best me and you'll find a special present under your tree! What do you say?\"\r\n\r\n\r\nDarius pulls you aside, practically hopping up and down with excitement, \"Commander, we all know the stories of Kringle's Killers... this is a chance I never thought we'd see! To face off against a legend? Please can we do it? Please please please please?\"",
+		"Icon": "event_wulf_holiday_kringle_killers.png"
+	},
+	"Scope": "Company",
+	"Weight": 10000,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"tagSetSourceFile": "",
+			"items": [
+				"timeline_3062_12_01"
+			]
+		},
+		"ExclusionTags": {
+			"tagSetSourceFile": "",
+			"items": [
+				"fought_Kringle"
+			]
+		},
+		"RequirementComparisons": [
+			{
+				"obj": "Travel",
+				"op": "Equal",
+				"val": 0,
+				"valueConstant": "0"
+			}
+		]
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "outcome_0",
+				"Name": "Pass on the contract",
+				"Details": "Pass on the contract.",
+				"Icon": null
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "outcome_0_0",
+						"Name": "Pass on the contract.",
+						"Details": "\"I'm sorry to disappoint you Mr. Kringle, but we simply don't have the time this holiday season. We're backed up on our contracts as it is.\"",
+						"Icon": null
+					},
+					"Weight": 100,
+					"Results": []
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"ExclusionTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"RequirementComparisons": []
+			}
+		},
+		{
+			"Description": {
+				"Id": "outcome_1",
+				"Name": "Accept the contract.",
+				"Details": "Accept the contract.",
+				"Icon": null
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "outcome_1_0",
+						"Name": "Accept the contract.",
+						"Details": "\"We would be honored to test ourselves against your legendary team Kommandant Kringle.\"\r\n\r\n\"Ho ho! A very merry battle it shall be indeed! If you win, I'll even give you my trusty old sleigh, a customized Goliath!\"\r\n\r\n\r\n<b>A unique contract named Kringle's Killers has been added to the Command Center.</b>",
+						"Icon": null
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"tagSetSourceFile": "Tags/PilotTags",
+								"items": [
+									"fought_Kringle"
+								]
+							},
+							"RemovedTags": {
+								"tagSetSourceFile": "",
+								"items": []
+							},
+							"Stats": null,
+							"Actions": [
+								{
+									"Type": "System_AddContract",
+									"value": "Assassinate_Kringle",
+									"valueConstant": null,
+									"additionalValues": [
+										"Locals",
+										"SelfEmployed",
+										null,
+										null,
+										"mapGeneral_frostySlopes_iTnd",
+										null,
+										"8",
+										null
+									]
+								}
+							],
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"ExclusionTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "NORMAL",
+	"OneTimeEvent": true,
+	"Tags": {
+		"tagSetSourceFile": "tags/EventTags",
+		"items": []
+	}
+}

@@ -1,7 +1,7 @@
 {
 	"Custom": {
 		"AssemblyVariant": {
-			"PrefabID": "Barghest",
+			"PrefabID": "Goliath",
 			"Exclude": false,
 			"Include": true
 		},
@@ -71,10 +71,10 @@
 	"CustomParts": {
 		"quadVisualInfo": {
 			"UseQuadVisuals": true,
-			"FLegsPrefab": "chrPrfMech_kingcrabBase-001",
-			"BodyLength": 7.0,
-			"FLegsPrefabBase": "kingcrab",
-			"RLegsPrefabBase": "kingcrab",
+			"FLegsPrefab": "chrPrfMech_atlasBase-001",
+			"BodyLength": 5.2,
+			"FLegsPrefabBase": "atlas",
+			"RLegsPrefabBase": "atlas",
 			"NotSuppressRenderers": [
 				"_left_leg_",
 				"_right_leg_"
@@ -97,9 +97,18 @@
 		},
 		"CustomParts": [
 			{
-				"prefab": "bargbody",
+				"prefab": "jgoliathbody",
 				"MaterialInfo": {
-					"bargbody": {
+					"jgoliathbody": {
+						"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
+						"shaderKeyWords": [
+							"_DETAIL_OVERLAY",
+							"_EMISSION",
+							"_METALLICGLOSSMAP",
+							"_NORMALMAP"
+						]
+					},
+					"jgoliathbody_damaged": {
 						"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
 						"shaderKeyWords": [
 							"_DETAIL_OVERLAY",
@@ -135,7 +144,7 @@
 					"TurretAttach": "turret_attach",
 					"FrontLegsAttach": "front_legs_attach",
 					"ShowFrontLegsAxis": false,
-					"DamageAnimator": "barg_CT_LT_RT_plus_damage_models",
+					"DamageAnimator": "CT_LT_RT_plus_damage_models",
 					"RTVFXTransform": "RT_vfx_transform",
 					"LTVFXTransform": "LT_vfx_transform",
 					"CTVFXTransform": "CT_vfx_transform",
@@ -153,8 +162,17 @@
 				}
 			},
 			{
-				"prefab": "bargest_turret",
+				"prefab": "jgoliath_turret",
 				"MaterialInfo": {
+					"jgoliathbody": {
+						"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
+						"shaderKeyWords": [
+							"_DETAIL_OVERLAY",
+							"_EMISSION",
+							"_METALLICGLOSSMAP",
+							"_NORMALMAP"
+						]
+					},
 					"bargest_turret_material": {
 						"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
 						"shaderKeyWords": [
@@ -164,16 +182,7 @@
 							"_NORMALMAP"
 						]
 					},
-					"ModularSci-FiWeapons_Camouflage03": {
-						"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
-						"shaderKeyWords": [
-							"_DETAIL_OVERLAY",
-							"_EMISSION",
-							"_METALLICGLOSSMAP",
-							"_NORMALMAP"
-						]
-					},
-					"ModularSci-FiWeapons_White": {
+					"ModularSci-FiWeapons_Blue": {
 						"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
 						"shaderKeyWords": [
 							"_DETAIL_OVERLAY",
@@ -216,6 +225,11 @@
 							"Location": "RightTorso",
 							"AttachTo": "WeaponAttachR",
 							"Animator": "WeaponMountR"
+						},
+						{
+							"Location": "CenterTorso",
+							"AttachTo": "WeaponAttachC",
+							"Animator": "WeaponMountC"
 						}
 					]
 				}
@@ -228,20 +242,20 @@
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Barghest",
-		"Id": "chassisdef_barghest_BGS-2T",
-		"Name": "Barghest",
-		"Details": "Katherine Steiner-Davion decided during her reign over the Lyran Alliance that she wanted a four legged BattleMech that would evoke fear in its enemies in a similar vein to the classic Atlas and Banshee designs. To do this, the Barghest is built on an Earthwerk GRF Quad chassis that supports a Magna 350 XL engine that saves weight and allows the 'Mech to carry a heavy weapons payload. The 2T removes the weapons of the 1T model and replaces them with a single ER PPC and an Ultra Autocannon/20. The ultra autocannon is capable of firing at twice the rate as a standard autocannon, giving the 2T an incredible amount of short range firepower.",
-		"Icon": "uixTxrIcon_barghest"
+		"UIName": "Santa's Sled",
+		"Id": "chassisdef_goliath_GOL-SS",
+		"Name": "Santa's Sled",
+		"Details": "A rare sight on the field, Santa's Sled is only given out by Kringle's Killers to good little mercs and their companies. Armed with a Snowball Cannon (also called a PPC) and an array of festive red and green lasers, Kringle makes sure that his Sled brings the holiday cheer to one and all (but mostly its owner; after all, what's more festive than hard currency?).",
+		"Icon": "uixTxrIcon_goliath"
 	},
 	"MovementCapDefID": "movedef_warhammer_WHM-6R",
 	"PathingCapDefID": "pathingdef_heavy",
-	"HardpointDataDefID": "hardpointdatadef_cubarghest",
-	"PrefabIdentifier": "chrPrfMech_kingcrabBase-001",
-	"PrefabBase": "cubarghest",
-	"Tonnage": 70,
-	"InitialTonnage": 7,
-	"weightClass": "HEAVY",
+	"HardpointDataDefID": "hardpointdatadef_jgoliath",
+	"PrefabIdentifier": "chrPrfMech_atlasBase-001",
+	"PrefabBase": "jgoliath",
+	"Tonnage": 80,
+	"InitialTonnage": 8,
+	"weightClass": "ASSAULT",
 	"BattleValue": 6577000,
 	"Heatsinks": 0,
 	"TopSpeed": 120,
@@ -272,12 +286,7 @@
 	"Locations": [
 		{
 			"Location": "Head",
-			"Hardpoints": [
-				{
-					"WeaponMount": "AntiPersonnel",
-					"Omni": false
-				}
-			],
+			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
 			"MaxArmor": 45,
@@ -286,12 +295,17 @@
 		},
 		{
 			"Location": "LeftArm",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 150,
+			"MaxArmor": 170,
 			"MaxRearArmor": -1,
-			"InternalStructure": 75
+			"InternalStructure": 85
 		},
 		{
 			"Location": "LeftTorso",
@@ -305,73 +319,96 @@
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 13,
-			"MaxArmor": 150,
-			"MaxRearArmor": 75,
-			"InternalStructure": 75
+			"MaxArmor": 170,
+			"MaxRearArmor": 85,
+			"InternalStructure": 85
 		},
 		{
 			"Location": "CenterTorso",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 16,
-			"MaxArmor": 220,
-			"MaxRearArmor": 110,
-			"InternalStructure": 110
+			"MaxArmor": 250,
+			"MaxRearArmor": 125,
+			"InternalStructure": 125
 		},
 		{
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMount": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMount": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 13,
-			"MaxArmor": 150,
-			"MaxRearArmor": 75,
-			"InternalStructure": 75
+			"MaxArmor": 170,
+			"MaxRearArmor": 85,
+			"InternalStructure": 85
 		},
 		{
 			"Location": "RightArm",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 150,
+			"MaxArmor": 170,
 			"MaxRearArmor": -1,
-			"InternalStructure": 75
+			"InternalStructure": 85
 		},
 		{
 			"Location": "LeftLeg",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 150,
+			"MaxArmor": 170,
 			"MaxRearArmor": -1,
-			"InternalStructure": 75
+			"InternalStructure": 85
 		},
 		{
 			"Location": "RightLeg",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 150,
+			"MaxArmor": 170,
 			"MaxRearArmor": -1,
-			"InternalStructure": 75
+			"InternalStructure": 85
 		}
 	],
 	"LOSSourcePositions": [
@@ -418,20 +455,19 @@
 			"z": 1
 		}
 	],
-	"VariantName": "BGS-2T",
+	"VariantName": "GOL-SS",
 	"ChassisTags": {
 		"items": [
-			"QuadMech",
-			"mr-resize-0.85"
+			"QuadMech"
 		],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "Heavy Assault",
-	"YangsThoughts": "Katherine Steiner-Davion decided during her reign over the Lyran Alliance that she wanted a four legged BattleMech that would evoke fear in its enemies in a similar vein to the classic Atlas and Banshee designs. To do this, the Barghest is built on an Earthwerk GRF Quad chassis that supports a Magna 350 XL engine that saves weight and allows the 'Mech to carry a heavy weapons payload. The 2T removes the weapons of the 1T model and replaces them with a single ER PPC and an Ultra Autocannon/20. The ultra autocannon is capable of firing at twice the rate as a standard autocannon, giving the 2T an incredible amount of short range firepower.",
+	"StockRole": "Seasons Beatings",
+	"YangsThoughts": "A rare sight on the field, Santa's Sled is only given out by Kringle's Killers to good little mercs and their companies. Armed with a Snowball Cannon (also called a PPC) and an array of festive red and green lasers, Kringle makes sure that his Sled brings the holiday cheer to one and all (but mostly its owner; after all, what's more festive than hard currency?).",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "Gear_Quirk_Turret_Barghest",
+			"ComponentDefID": "Gear_Quirk_Turret_Goliath",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
@@ -443,7 +479,7 @@
 		},
 		{
 			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Gear_Quirk_Turret_Barghest",
+			"ComponentDefID": "Gear_Quirk_Turret_Goliath",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
