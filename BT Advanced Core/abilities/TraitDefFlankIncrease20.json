@@ -1,0 +1,39 @@
+{
+	"Description": {
+		"Id": "TraitDefFlankIncrease20",
+		"Name": "Increased Flank Speed",
+		"Details": "PASSIVE: Tanks piloted by this Tank Crew gain an additional 15% to their flank multiplier.",
+		"Icon": "uixSvgIcon_action_evasivemove"
+	},
+	"Type": "SprintDistance",
+	"ShortDesc": "+0.2 Flank Multiplier",
+	"DisplayParams": "ShowInPilotToolTip",
+	"ActivationTime": "Passive",
+	"EffectData": [
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "TraitDefFlankIncrease20",
+				"Name": "Increased Flank",
+				"Details": "+15% Flank Multiplier",
+				"Icon": "uixSvgIcon_action_evasivemove"
+			},
+			"statisticData": {
+				"statName": "FlankSpeed",
+				"operation": "Float_Multiply",
+				"modValue": "1.15",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	]
+}
