@@ -30,7 +30,9 @@
 			"Bonuses": [
 				"IsGyro",
 				"WalkSpeed: +10%",
-				"RunSpeed: +10%"
+				"RunSpeed: +10%",
+				"KickDamageBonus: +20",
+				"KickAccuracy: +1"
 			]
 		}
 	},
@@ -46,7 +48,7 @@
 		"UIName": "Quad Mech Gyro",
 		"Id": "Gear_Gyro_Quad",
 		"Name": "Quad Mech Gyro",
-		"Details": "This piece of gear represents the inherently superior gyro that all quad mechs share. It provides a number of benefits to quads, such as XXX",
+		"Details": "This piece of gear represents the inherently superior gyro that all quad mechs share. It provides a number of benefits to quads, such as bonus movement speed, a damage and accuracy bonus to kick attacks, and a higher unsteady threshold.",
 		"Icon": "uixSvgIcon_equipment_Gyro"
 	},
 	"BonusValueA": "",
@@ -63,7 +65,8 @@
 	"statusEffects": [
 		{
 			"durationData": {
-				"duration": -1
+				"duration": -1,
+				"stackLimit": 1
 			},
 			"targetingData": {
 				"effectTriggerType": "Passive",
@@ -100,8 +103,8 @@
 			"effectType": "StatisticEffect",
 			"Description": {
 				"Id": "Gyro-Quad-Walk",
-				"Name": "Supercharged",
-				"Details": "Increased walking speed.",
+				"Name": "Quad Gyro",
+				"Details": "Provides an increased walking and sprinting speed, bonus damage and accuracy to kicks, and an increased unsteady threshold.",
 				"Icon": "uixSvgIcon_action_evasivemove"
 			},
 			"statisticData": {
@@ -120,6 +123,7 @@
 			"targetingData": {
 				"effectTriggerType": "Passive",
 				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
 				"showInStatusPanel": false
 			},
 			"effectType": "StatisticEffect",
@@ -136,6 +140,58 @@
 				"modType": "System.Single"
 			},
 			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Gyro-Quad-Kick_Damage",
+				"Name": "Spikes Kick Damage",
+				"Details": "Kick attacks deal 20 more damage.",
+				"Icon": "uixSvgIcon_equipment_ActuatorArm"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CBTBE_Kick_Target_Damage_Mod",
+				"operation": "Int_Add",
+				"modValue": "20",
+				"modType": "System.Int32"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Gyro-Quad-Kick_Accuracy",
+				"Name": "Spikes Kick Accuracy",
+				"Details": "Kick attacks gain +1 accuracy.",
+				"Icon": "uixSvgIcon_equipment_ActuatorArm"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CBTBE_Kick_Attack_Mod",
+				"operation": "Int_Add",
+				"modValue": "-1",
+				"modType": "System.Int32"
+			}
 		}
 	],
 	"ComponentTags": {
