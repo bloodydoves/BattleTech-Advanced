@@ -19,6 +19,8 @@
 		},
 		"ActivatableComponent": {
 			"ButtonName": "B-Pod",
+			"CanActivateAfterFire": true,
+			"CanActivateAfterMove": true,
 			"FailFlatChance": 0.0,
 			"FailRoundsStart": 1,
 			"FailChancePerTurn": 0.0,
@@ -36,43 +38,32 @@
 			"NoUniqueCheck": true,
 			"CanNotBeActivatedManualy": false,
 			"FailDamageLocations": [],
-			"activateVFX":{  
+			"activateVFX": {
 				"VFXPrefab": "WFX_ExplosiveSmokeM",
-			    "VFXScaleX": 1,
+				"VFXScaleX": 1,
 				"VFXScaleY": 1,
 				"VFXScaleZ": 1,
 				"VFXOffsetX": 0,
 				"VFXOffsetY": 0,
-				"VFXOffsetZ": 0,
-			}, 
-			"statusEffects": [
-				{
-					"durationData": {
-						"duration": 1,
-						"ticksOnActivations": true
-					},
-					"targetingData": {
-						"effectTriggerType": "Passive",
-						"effectTargetType": "Creator",
-						"showInTargetPreview": true,
-						"showInStatusPanel": true
-					},
-					"effectType": "StatisticEffect",
-					"Description": {
-						"Id": "B-Pod_Boom",
-						"Name": "B-Pod Explosion",
-						"Details": "See that Battle Armor? Fuck that Battle Armor!",
-						"Icon": "crowned-explosion"
-					},
-					"statisticData": {
-						"statName": "BPODEXPLOSIONSTATHERE",
-						"operation": "Int_Add",
-						"modValue": "30",
-						"modType": "System.Int32"
-					},
-					"nature": "Buff"
-				}
-			]
+				"VFXOffsetZ": 0
+			},
+			"activateSound": "enum:AudioEventList_explosion.explosion_medium",
+			"Explosion": {
+				"Range": 150,
+				"Damage": 1000,
+				"Heat": 0,
+				"Stability": 0,
+				"Chance": 0,
+				"VFX": "WFX_ExplosiveSmokeM",
+				"VFXScaleX": 1,
+				"VFXScaleY": 1,
+				"VFXScaleZ": 1,
+				"VFXOffsetX": 0,
+				"VFXOffsetY": 0,
+				"VFXOffsetZ": 0
+			},
+			"ExplodeOnSuccess": true,
+			"statusEffects": []
 		}
 	},
 	"DissipationCapacity": 0,

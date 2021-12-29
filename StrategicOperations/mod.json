@@ -2,7 +2,7 @@
 	"Name": "StrategicOperations",
 	"DLL": "StrategicOperations.dll",
 	"Hidden": true,
-	"Version": "2.0.1.8",
+	"Version": "2.0.2.0",
 	"Description": "",
 	"Author": "T-Bone",
 	"Website": "https://github.com/ajkroeg/StrategicOperations",
@@ -10,7 +10,8 @@
 	"DependsOn": [
 		"Abilifier",
 		"MechEngineer",
-		"CustomComponents"
+		"CustomActivatableEquipment",
+		"CustomUnits"
 	],
 	"CustomResourceTypes": [],
 	"Settings": {
@@ -152,6 +153,10 @@
 			"ArmHandActuator",
 			"OmniHandActuator"
 		],
+				"BPodComponentIDs": [
+			"Gear_B_Pod"
+		],
+		"BPodsAutoActivate": false,
 		"BATargetEffect": {
 			"ID": "BA_AccurateFire",
 			"Name": "Battle Armor - SwarmingAccuracy",
@@ -239,6 +244,7 @@
 				],
 				"SpawnChanceBase": 0.0,
 				"SpawnChanceDiffMod": 0.00,
+				"MaxSquadsPerContract": 0,
 				"InternalBattleArmorWeight": {
 					"mechdef_ba_is_standard": 15,
 					"mechdef_ba_marauder": 2
