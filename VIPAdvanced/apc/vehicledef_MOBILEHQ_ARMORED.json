@@ -1,73 +1,26 @@
 {
 	"Version": 1,
 	"Description": {
-		"Id": "vehicledef_MOBILEHQ_ARMORED",
-		"Name": "Armored Mobile HQ",
-		"Details": "",
-		"Icon": "MobileHQ",
-		"Cost": 564,
+		"Cost": 600000,
 		"Rarity": 0,
-		"Purchasable": false
+		"Purchasable": false,
+		"UIName": "Mobile HQ",
+		"Id": "vehicledef_MOBILEHQ_ARMORED",
+		"Name": "Mobile Headquarters",
+		"Details": "Slower than the Medium Tank, but possessing heavier armor and fire power, the Heavy Tank is a fearsome combatant. Carrying an array of ranged weapons, the Heavy Tank is designed to support allied units from range.\n\n <b><color=#ffcc00>CARRIES BATTLE ARMOR AND TURRET AIRDROP BEACONS AND THE STRAFING RUN CALLDOWN BEACON!</color></b>\n\n <b><color=#ffcc00>Tracked: High traction, agile turning.\n\n <b><color=#ffcc00>Movement: 3/5 Hex: 90/150 Meters.</color></b>\n\n<b>Armor:</b> Armor\n<b>Structure:</b> Structure\n<b>Values       A        S  </b>\n<b>Front</b>       190     40\n<b>Left</b>         135     40\n<b>Right</b>       135     40\n<b>Rear</b>        105     40\n<b>Turret</b>      135     40\n\n<b>Total</b>      700    200\n",
+		"Icon": "MobileHQ"
 	},
 	"ChassisID": "vehiclechassisdef_MOBILEHQ_ARMORED",
 	"VehicleTags": {
 		"items": [
-			"unit_noncontrollableTank",
-			"no_parts",
+			"unit_controllableTank",
 			"mr-resize-1.50",
 			"unit_vehicle",
-			"unit_light",
+			"unit_medium",
 			"unit_wheels",
-			"unit_vehicle_mobileHQ",
-			"unit_noncombatant",
 			"unit_generic",
+			"unit_release",
 			"unit_bracket_low",
-			"ComStar",
-			"Steiner",
-			"Marik",
-			"Kurita",
-			"Davion",
-			"Liao",
-			"Locals",
-			"ClanWolf",
-			"ClanJadeFalcon",
-			"ClanGhostBear",
-			"ClanNovaCat",
-			"ClanDiamondShark",
-			"NoFaction",
-			"MercenaryReviewBoard",
-			"Betrayers",
-			"LocalsBrockwayRefugees",
-			"SelfEmployed",
-			"MasonsMarauders",
-			"SteelBeast",
-			"KellHounds",
-			"RazorbackMercs",
-			"HostileMercenaries",
-			"EmeraldDawn",
-			"SianTriumphant",
-			"ProfHorvat",
-			"RedHareRegiment",
-			"EdCorbu",
-			"DuchyOfAndurien",
-			"BlackCalderaDefense",
-			"HouseNakano",
-			"GrayDeathLegion",
-			"BlackCalderaDefense_Hidden",
-			"SelfEmployed_Farah",
-			"SelfEmployed_Yang",
-			"SecuritySolutionsInc",
-			"PaladinProtectionLLC",
-			"HouseKhulan",
-			"Wolfs_Dragoons",
-			"LoneStarRegiment",
-			"KnightsOfCaerbannog",
-			"GraysGhosts",
-			"BroadswordLegion",
-			"Moderbjorn",
-			"BountyHunterAssociates",
-			"BaumannGroup",
-			"BlackWidowCompany",
 			"unit_notsacellum"
 		],
 		"tagSetSourceFile": ""
@@ -76,42 +29,42 @@
 		{
 			"Location": "Front",
 			"CurrentArmor": 125,
-			"CurrentInternalStructure": 15,
+			"CurrentInternalStructure": 30,
 			"AssignedArmor": 125,
 			"DamageLevel": "Functional"
 		},
 		{
 			"Location": "Left",
 			"CurrentArmor": 125,
-			"CurrentInternalStructure": 15,
+			"CurrentInternalStructure": 30,
 			"AssignedArmor": 125,
 			"DamageLevel": "Functional"
 		},
 		{
 			"Location": "Right",
 			"CurrentArmor": 125,
-			"CurrentInternalStructure": 15,
+			"CurrentInternalStructure": 30,
 			"AssignedArmor": 125,
 			"DamageLevel": "Functional"
 		},
 		{
 			"Location": "Rear",
 			"CurrentArmor": 125,
-			"CurrentInternalStructure": 15,
+			"CurrentInternalStructure": 30,
 			"AssignedArmor": 125,
 			"DamageLevel": "Functional"
 		},
 		{
 			"Location": "Turret",
 			"CurrentArmor": 125,
-			"CurrentInternalStructure": 15,
+			"CurrentInternalStructure": 30,
 			"AssignedArmor": 125,
 			"DamageLevel": "Functional"
 		}
 	],
 	"inventory": [
 		{
-			"ComponentDefID": "Weapon_Laser_MediumLaser_0-STOCK",
+			"ComponentDefID": "Weapon_Laser_MediumLaserER_0-STOCK",
 			"ComponentDefType": "Weapon",
 			"MountedLocation": "Turret",
 			"HardpointSlot": 0,
@@ -119,29 +72,43 @@
 		},
 		{
 			"MountedLocation": "Rear",
-			"ComponentDefID": "emod_engine_130",
+			"ComponentDefID": "emod_engine_220",
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		},
 		{
-			"MountedLocation": "Left",
-			"ComponentDefID": "Gear_HeatSink_Generic_Standard",
-			"ComponentDefType": "HeatSink",
+			"MountedLocation": "Turret",
+			"ComponentDefID": "Gear_Airdrop_Beacon_BA",
+			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		},
 		{
-			"MountedLocation": "Right",
-			"ComponentDefID": "Gear_HeatSink_Generic_Standard",
-			"ComponentDefType": "HeatSink",
+			"MountedLocation": "Turret",
+			"ComponentDefID": "Gear_Strafing_Run",
+			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		},
 		{
-			"MountedLocation": "Rear",
-			"ComponentDefID": "Gear_HeatSink_Generic_Standard",
-			"ComponentDefType": "HeatSink",
+			"MountedLocation": "Turret",
+			"ComponentDefID": "Gear_Airdrop_Beacon_Turret",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "Gear_Guardian_ECM",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Turret",
+			"ComponentDefID": "Gear_Vehicle_Comm_Suite",
+			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional"
 		},
@@ -170,6 +137,13 @@
 			"ComponentDefID": "Tank_CrewCompartment",
 			"ComponentDefType": "Upgrade",
 			"MountedLocation": "Front",
+			"HardpointSlot": 1,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Front",
+			"ComponentDefID": "Tank_InfantryCompartment",
+			"ComponentDefType": "Upgrade",
 			"HardpointSlot": 1,
 			"DamageLevel": "Functional"
 		},
