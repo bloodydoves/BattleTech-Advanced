@@ -2,7 +2,7 @@
 	"Name": "StrategicOperations",
 	"DLL": "StrategicOperations.dll",
 	"Hidden": true,
-	"Version": "2.0.1.4",
+	"Version": "2.0.2.0",
 	"Description": "",
 	"Author": "T-Bone",
 	"Website": "https://github.com/ajkroeg/StrategicOperations",
@@ -10,13 +10,15 @@
 	"DependsOn": [
 		"Abilifier",
 		"MechEngineer",
-		"CustomComponents"
+		"CustomActivatableEquipment",
+		"CustomUnits"
 	],
 	"CustomResourceTypes": [],
 	"Settings": {
 		"DEVTEST_AIPOS": false,
 		"enableLogging": true,
 		"enableTrace": true,
+		"flareResourceID": "vfxPrfPrtl_fireTerrain_smLoop",
 		"showStrafeCamera": false,
 		"strafeEndsActivation": true,
 		"spawnTurretEndsActivation": true,
@@ -151,6 +153,10 @@
 			"ArmHandActuator",
 			"OmniHandActuator"
 		],
+				"BPodComponentIDs": [
+			"Gear_B_Pod"
+		],
+		"BPodsAutoActivate": false,
 		"BATargetEffect": {
 			"ID": "BA_AccurateFire",
 			"Name": "Battle Armor - SwarmingAccuracy",
@@ -230,13 +236,42 @@
 				}
 			]
 		},
-		"AI_BattleArmorSpawnChance": 0.0,
-		"AI_BattleArmorSpawnDiffMod": 0.0,
-		"BattleArmorFactionAssociations": {
-			"ClanGhostBear": [
-				"mechdef_ba_is_standard"
-			]
-		},
+		"BattleArmorFactionAssociations": [
+			{
+				"FactionIDs": [
+					"ClanGhostBear",
+					"ClanWolf"
+				],
+				"SpawnChanceBase": 0.0,
+				"SpawnChanceDiffMod": 0.00,
+				"MaxSquadsPerContract": 0,
+				"InternalBattleArmorWeight": {
+					"mechdef_ba_is_standard": 15,
+					"mechdef_ba_marauder": 2
+				},
+				"MountedBattleArmorWeight": {
+					"mechdef_ba_is_standard": 5,
+					"mechdef_ba_infiltratormkii": 5,
+					"BA_EMPTY": 2
+				},
+				"HandsyBattleArmorWeight": {
+					"mechdef_ba_marauder": 10,
+					"BA_EMPTY": 2
+				}
+			},
+			{
+				"FactionIDs": [
+					"Locals"
+				],
+				"SpawnChanceBase": 0.0,
+				"SpawnChanceDiffMod": 0.00,
+				"InternalBattleArmorWeight": {
+					"mechdef_ba_is_standard": 1
+				},
+				"MountedBattleArmorWeight": {},
+				"HandsyBattleArmorWeight": {}
+			}
+		],
 		"AttackOnSwarmSuccess": true
 	},
 	"Manifest": [

@@ -1,0 +1,63 @@
+{
+	"Description": {
+		"Id": "Ammunition_SRM_MagPulse",
+		"Name": "SRM MagPulse Ammo",
+		"UIName": "MagPulse",
+		"Details": "Short range missiles, capable of dealing heavy damage at close range via shaped charge warheads.",
+		"Icon": null,
+		"Cost": 0,
+		"Rarity": 0,
+		"Purchasable": false
+	},
+	"Type": "Normal",
+	"Category": "SRM",
+	"HeatGenerated": 0,
+	"DamagePerShot": 0,
+	"AIBattleValue": 50,
+	"AccuracyModifier": 2.0,
+	"HeatGeneratedModifier": 1,
+	"ArmorDamageModifier": 1.0,
+	"ISDamageModifier": 1.0,
+	"DamagePerShot": -8.0,
+	"CriticalDamageModifier": 1,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 4,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 2,
+				"specialRules": "NotSet",
+				"effectTargetType": "NotSet",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": true,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Effect_MagPulse",
+				"Name": "MagPulse Disruption",
+				"Details": "This unit has been affected by MagPulse munitions. It has a scaling accuracy penalty.",
+				"Icon": "magnet-blast"
+			},
+			"statisticData": {
+				"statName": "AccuracyModifier",
+				"operation": "Float_Add",
+				"modValue": "1.0",
+				"modType": "System.Single",
+				"targetCollection": "Weapon"
+			},
+			"nature": "Debuff"
+		}
+	]
+}

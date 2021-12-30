@@ -1,0 +1,190 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/m/t/arrowiv"
+			},
+			{
+				"CategoryID": "NeverMelee"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"FiresEverything",
+				"NoFireInMelee"
+			]
+		}
+	},
+	"Category": "Missile",
+	"Type": "LRM",
+	"WeaponSubType": "LRM20",
+	"MinRange": 180,
+	"MaxRange": 840,
+	"RangeSplit": [
+		210,
+		420,
+		630
+	],
+	"AmmoCategory": "LRM",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 16,
+	"Damage": 4,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 0,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": 0,
+	"CriticalChanceMultiplier": 1,
+	"IndirectFireCapable": true,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 15,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 1,
+	"Instability": 1,
+	"MissileHealth": 1,
+	"FireTerrainChance": 0,
+	"WeaponEffectID": "WeaponEffect-Weapon_LRM20",
+	"Description": {
+		"Cost": 6152000,
+		"Rarity": 14,
+		"Purchasable": true,
+		"Manufacturer": "Jimbo's Crabshack",
+		"Model": "Missile... Something",
+		"UIName": "Super MML",
+		"Id": "Weapon_SuperMML",
+		"Name": "Super MML",
+		"Details": "The Super MML is a joke weapon, made by a bored weapons merchant who had more free stock than he knew what to do with. The Super MML is capable of firing LRM, SRM, Streak SRM, MRM, ATM, Thunderbolt, and ArrowIV munitions. \n\n <b><color=#ffcc00>Uses every missile ammo.</color></b>",
+		"Icon": "uixSvgIcon_weapon_Missile"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "arrow",
+	"BattleValue": 0,
+	"InventorySize": 12,
+	"Tonnage": 20,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [],
+	"Modes": [
+		{
+			"Id": "LRM",
+			"UIName": "LRM",
+			"isBaseMode": true,
+			"AmmoCategory": "LRM",
+			"MissileHealth": 1
+		},
+		{
+			"Id": "SRM",
+			"UIName": "SRM",
+			"isBaseMode": false,
+			"IndirectFireCapable": false,
+			"DamagePerShot": 4.0,
+			"MinRange": -180.0,
+			"MaxRange": -480.0,
+			"ShortRange": -120.0,
+			"MediumRange": -240.0,
+			"LongRange": -360.0,
+			"AmmoCategory": "SRM",
+			"WeaponEffectID": "WeaponEffect-Weapon_SRM2",
+			"Instability": 3,
+			"MissileHealth": 2,
+			"ShotsWhenFired": -5
+		},
+		{
+			"Id": "SSRM",
+			"UIName": "SSRM",
+			"isBaseMode": false,
+			"IndirectFireCapable": false,
+			"DamagePerShot": 5.0,
+			"AccuracyModifier": -1,
+			"MinRange": -180.0,
+			"MaxRange": -480.0,
+			"ShortRange": -120.0,
+			"MediumRange": -240.0,
+			"LongRange": -360.0,
+			"AmmoCategory": "STREAKSRM",
+			"WeaponEffectID": "WeaponEffect-Weapon_SRM2",
+			"Instability": 3,
+			"MissileHealth": 2,
+			"ShotsWhenFired": -5
+		},
+		{
+			"Id": "ATM",
+			"UIName": "ATM",
+			"isBaseMode": false,
+			"IndirectFireCapable": true,
+			"DamagePerShot": 4.0,
+			"MinRange": -60.0,
+			"MaxRange": -240.0,
+			"ShortRange": -60.0,
+			"MediumRange": -120.0,
+			"LongRange": -180.0,
+			"AmmoCategory": "ATM",
+			"WeaponEffectID": "WeaponEffect-Weapon_LRM5",
+			"Instability": 1,
+			"MissileHealth": 2,
+			"ShotsWhenFired": -5
+		},
+		{
+			"Id": "MRM",
+			"UIName": "MRM",
+			"isBaseMode": false,
+			"IndirectFireCapable": false,
+			"MinRange": -180.0,
+			"MaxRange": -330.0,
+			"ShortRange": -30.0,
+			"MediumRange": -150.0,
+			"LongRange": -210.0,
+			"AmmoCategory": "MRM",
+			"WeaponEffectID": "WeaponEffect-Weapon_LRM5",
+			"MissileHealth": 1,
+			"ShotsWhenFired": 15
+		},
+		{
+			"Id": "Thunderbolt 20",
+			"UIName": "Thunderbolt 20",
+			"isBaseMode": false,
+			"IndirectFireCapable": true,
+			"DamagePerShot": 99.0,
+			"MinRange": -120.0,
+			"MaxRange": -60.0,
+			"ShortRange": -45.0,
+			"LongRange": -60.0,
+			"AmmoCategory": "TBOLT20",
+			"WeaponEffectID": "WeaponEffect-Weapon_LRM20",
+			"Instability": 50,
+			"MissileHealth": 6,
+			"ShotsWhenFired": -14
+		},
+		{
+			"Id": "ArrowIV",
+			"UIName": "ArrowIV",
+			"isBaseMode": false,
+			"IndirectFireCapable": true,
+			"DamagePerShot": 29.0,
+			"MaxRange": 910.0,
+			"ShortRange": 250.0,
+			"MediumRange": 380.0,
+			"LongRange": 850.0,
+			"AmmoCategory": "ArrowIV",
+			"WeaponEffectID": "WeaponEffect-Weapon_LRM20",
+			"Instability": 9,
+			"AMSImmune": true,
+			"ShotsWhenFired": -14,
+			"MinMissRadius": 40,
+			"MaxMissRadius": 80,
+			"DamageVariance": 10
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_extreme"
+		],
+		"tagSetSourceFile": ""
+	}
+}
