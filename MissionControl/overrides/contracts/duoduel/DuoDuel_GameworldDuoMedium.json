@@ -69,7 +69,7 @@
 				"RequirementComparisons": [
 					{
 						"obj": "Duel_Victory_Counter_Medium",
-						"op": "Equal",
+						"op": "GreaterThanOrEqual",
 						"val": 6,
 						"valueConstant": null
 					}
@@ -83,7 +83,15 @@
 				"tagSetSourceFile": "",
 				"items": []
 			},
-			"Stats": [],
+			"Stats": [
+				{
+					"typeString": "System.Int32",
+					"name": "Duel_Victory_Counter_Medium",
+					"value": "0",
+					"set": true,
+					"valueConstant": null
+				}
+			],
 			"Actions": [
 				{
 					"Type": "System_ShowRewards",
@@ -96,7 +104,7 @@
 			"TemporaryResult": false,
 			"ResultDuration": 0
 		}
-    ],
+	],
 	"OnContractFailureResults": [],
 	"encounterPlayStyle": "SinglePlayer",
 	"maxNumberOfPlayerUnits": 2,
