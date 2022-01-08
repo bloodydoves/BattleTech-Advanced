@@ -8,15 +8,55 @@
 	"DLLEntryPoint": "CustomUnits.Core.Init",
 	"DependsOn": [
 		"Custom Ammo Categories",
+		"CustomPrewarm",
+		"IRBTModUtils"
+	],
+	"OptionallyDependsOn": [ 
 		"MechEngineer"
 	],
 	"ConflictsWith": [
 		"MechResizer"
 	],
 	"CustomResourceTypes": [
-		"CustomMechRepresentationDef"
+		"CustomMechRepresentationDef",
+		"CustomPrefabDef",
+		"DropSlotsDef",
+		"DropLanceDef",
+		"DropSlotDef",
+		"DropSlotDecorationDef",
+		"PilotingClassDef",
+		"DropClassDef",
+		"CustomHangarDef"
 	],
 	"Manifest": [
+		{ 
+			"Type": "DropSlotDef", 
+			"Path": "drop_slots" 
+		},
+		{ 	
+			"Type": "DropLanceDef", 
+			"Path": "drop_lances" 
+		},
+		{ 
+			"Type": "DropSlotsDef", 
+			"Path": "drop_layouts" 
+		},
+		{ 
+			"Type": "DropSlotDecorationDef", 
+			"Path": "drop_decorations" 
+		},
+		{ 
+			"Type": "DropClassDef", 
+			"Path": "drop_classes" 
+		},
+		{ 
+			"Type": "CustomHangarDef", 
+			"Path": "hangardefs" 
+		},
+		{ 	
+			"Type": "PilotingClassDef", 
+			"Path": "piloting_classes" 
+		},
 		{
 			"Type": "AssetBundle",
 			"Path": "assetbundles"
@@ -54,10 +94,6 @@
 			"Path": "ability"
 		},
 		{
-			"Type": "SoundBankDef",
-			"Path": "soundbanks"
-		},
-		{
 			"Id": "fake_weapon_prefab",
 			"Type": "Prefab",
 			"Path": "assets/character/vehicle/prefabs/fake_weapon_prefab.prefab",
@@ -75,6 +111,12 @@
 	"Website": "https://www.nexusmods.com/battletech/mods/XXX",
 	"Settings": {
 		"debugLog": false,
+		"baysWidgetsCount": 3,
+		"SortBy": {
+		  "orderByCbillValue": false,
+		  "orderByNickname": false,
+		  "orderByTonnage": true
+		},
 		"ConvoyRouteBeaconVFX": "vfxPrfPrtl_artillerySmokeSignal_loop",
 		"ConvoyRouteBeaconVFXScale": {
 			"x": 1,
@@ -84,6 +126,7 @@
 		"PartialMovementOnlyWalkByDefault": true,
 		"AllowRotateWhileJumpByDefault": true,
 		"DeployManual": false,
+		"AskForDeployManual": false,
 		"DeployMaxDistanceFromOriginal": 30,
 		"DeployMinDistanceFromEnemy": 300,
 		"fixWaterHeight": true,
@@ -146,7 +189,7 @@
 			"Weapon_ArrowIV": 3.5,
 			"Weapon_CruiseMissile50": 4.5
 		},
-		"MaxVehicleRandomPilots": 3,
+		"MaxVehicleRandomPilots": 4,
 		"ShowVehicleBays": true,
 		"AllowVehiclesEdit": false,
 		"MechBaySwitchIconMech": "mech",
@@ -181,370 +224,1319 @@
 		"ConvoyMaxDistFromOther": 200,
 		"ConvoyMaxDistFromPlayer": 400,
 		"ConvoyMaxDistFromRoute": 90,
-		"overallDeploySize": 6,
-		"mechSizeMultipliers": {
-			"chassisdef_griffin_GRF-2N-X": 1.15,
-			"chassisdef_griffin_GRF-1A": 1.15,
-			"chassisdef_wasp_WSP-2A-X": 1.1,
-			"chassisdef_riflemanii_RFL-3N-2": 1.15,
-			"chassisdef_rifleman_RFL-1N": 0.8,
-			"chassisdef_jagermechii_JM7-L": 1.1,
-			"chassisdef_jagermechii_JM7-D": 1.1,
-			"chassisdef_jagermechii_JM7-F": 1.1,
-			"chassisdef_annihilator_ANH-II-L": 0.85,
-			"chassisdef_hollanderii_BZK-F5": 0.9,
-			"chassisdef_hollanderii_BZK-F7": 0.9,
-			"chassisdef_hollander_BZK-G1": 0.8,
-			"chassisdef_hollander_BZK-F3": 0.8,
-			"chassisdef_hollander_BZK-T100": 0.8,
-			"chassisdef_hollander_BZK-K7": 0.8,
-			"chassisdef_hollander_BZK-H3": 0.8,
-			"chassisdef_hollander_BZK-D2": 0.8,
-			"chassisdef_emperor_EMP-6A": 1.08,
-			"chassisdef_emperor_EMP-5A": 1.08,
-			"chassisdef_emperor_EMP-7AIV": 1.08,
-			"chassisdef_emperor_EMP-7G": 1.08,
-			"chassisdef_axman_AXM-1N": 1.08,
-			"chassisdef_axman_AXM-1TL": 1.08,
-			"chassisdef_axman_AXM-2N": 1.08,
-			"chassisdef_axman_AXM-3N": 1.08,
-			"chassisdef_axman_AXM-3S": 1.08,
-			"chassisdef_blackhawkku_BHKU-O": 1.1,
-			"chassisdef_blackhawkku_BHKU-OA": 1.1,
-			"chassisdef_blackhawkku_BHKU-OB": 1.1,
-			"chassisdef_blackhawkku_BHKU-OC": 1.1,
-			"chassisdef_blackhawkku_BHKU-OD": 1.1,
-			"chassisdef_valkyrieii_VLK-II-1A": 0.9,
-			"chassisdef_valkyrieii_VLK-II-1M": 0.9,
-			"chassisdef_valkyrieii_VLK-II-2A": 0.9,
-			"chassisdef_valkyrieii_VLK-II-2L": 0.9,
-			"chassisdef_valkyrieii_VLK-II-2S": 0.9,
-			"chassisdef_valkyrieii_VLK-II-3X": 0.9,
-			"chassisdef_imp_IMP-1A": 1.05,
-			"chassisdef_imp_IMP-1B": 1.05,
-			"chassisdef_imp_IMP-1C": 1.05,
-			"chassisdef_imp_IMP-2E": 1.05,
-			"chassisdef_imp_IMP-3E": 1.05,
-			"chassisdef_imp_IMP-4E": 1.05,
-			"chassisdef_hussar_HSR-200-D": 0.85,
-			"chassisdef_hussar_HSR-200-Db": 0.85,
-			"chassisdef_hussar_HSR-300-D": 0.85,
-			"chassisdef_hussar_HSR-350-D": 0.85,
-			"chassisdef_hussar_HSR-400-D": 0.85,
-			"chassisdef_argus_AGS-2D": 0.95,
-			"chassisdef_argus_AGS-4D": 0.95,
-			"chassisdef_anubis_ABS-2L": 0.85,
-			"chassisdef_anubis_ABS-3L": 0.85,
-			"chassisdef_anubis_ABS-3D": 0.85,
-			"chassisdef_chimera_CMA-1S": 0.9,
-			"chassisdef_chimera_CMA-C": 0.9,
-			"chassisdef_chimera_CMA-3G": 0.9,
-			"chassisdef_merlin_MLN-1A": 0.95,
-			"chassisdef_merlin_MLN-1B": 0.95,
-			"chassisdef_merlin_MLN-2A": 0.95,
-			"chassisdef_merlin_MLN-2B": 0.95,
-			"chassisdef_merlin_MLN-2C": 0.95,
-			"chassisdef_bane_BNE-1": 1.15,
-			"chassisdef_bane_BNE-2": 1.15,
-			"chassisdef_bane_BNE-3": 1.15,
-			"chassisdef_thug_THG-10E": 1.08,
-			"chassisdef_thug_THG-11C": 1.08,
-			"chassisdef_thug_THG-11E": 1.08,
-			"chassisdef_thug_THG-11Eb": 1.08,
-			"chassisdef_thug_THG-12E": 1.08,
-			"chassisdef_thug_THG-13E": 1.08,
-			"chassisdef_hyperion_HYP-1": 1.05,
-			"chassisdef_hyperion_HYP-GB": 1.05,
-			"chassisdef_osteon_EON-Proto": 0.95,
-			"chassisdef_osteon_EON-1": 0.95,
-			"chassisdef_septicemia_SPT-Proto": 0.85,
-			"chassisdef_septicemia_SPT-1": 0.85,
-			"chassisdef_cephalus_CEP-Proto": 0.8,
-			"chassisdef_cephalus_CEP-1": 0.8,
-			"chassisdef_stonerhino_STR-1": 0.8,
-			"chassisdef_stonerhino_STR-2": 0.8,
-			"chassisdef_stonerhino_STR-5": 0.8,
-			"chassisdef_stonerhino_STR-6": 0.8,
-			"chassisdef_crusader_CRD-3PA": 1.1,
-			"chassisdef_crusader_CRD-5TL": 1.1,
-			"chassisdef_crusader_CRD-2R": 1.1,
-			"chassisdef_crusader_CRD-3D": 1.1,
-			"chassisdef_crusader_CRD-3K": 1.1,
-			"chassisdef_crusader_CRD-3L": 1.1,
-			"chassisdef_crusader_CRD-3R": 1.1,
-			"chassisdef_crusader_CRD-4BR": 1.1,
-			"chassisdef_crusader_CRD-4D": 1.1,
-			"chassisdef_crusader_CRD-4K": 1.1,
-			"chassisdef_crusader_CRD-5M": 1.1,
-			"chassisdef_crusader_CRD-5S": 1.1,
-			"chassisdef_crusader_CRD-7MK": 1.1,
-			"chassisdef_wraith_TR1": 0.95,
-			"chassisdef_wraith_TR2": 0.95,
-			"chassisdef_wraith_TR4": 0.95,
-			"chassisdef_swordsman_SWD-1": 0.75,
-			"chassisdef_swordsman_SWD-2": 0.75,
-			"chassisdef_swordsman_SWD-3": 0.75,
-			"chassisdef_swordsman_SWD-4": 0.75,
-			"chassisdef_prometheus_PMTH-1": 0.9,
-			"chassisdef_prometheus_PMTH-2": 0.9,
-			"chassisdef_prometheus_PMTH-3": 0.9,
-			"chassisdef_prometheus_PMTH-4": 0.9,
-			"chassisdef_razorback_RZK-9S": 0.75,
-			"chassisdef_razorback_RZK-9T": 0.75,
-			"chassisdef_razorback_RZK-10R": 0.75,
-			"chassisdef_phantom_PHN-Prime": 0.75,
-			"chassisdef_phantom_PHN-A": 0.75,
-			"chassisdef_phantom_PHN-B": 0.75,
-			"chassisdef_phantom_PHN-C": 0.75,
-			"chassisdef_phantom_PHN-D": 0.75,
-			"chassisdef_phantom_PHN-E": 0.75,
-			"chassisdef_phantom_PHN-H": 0.75,
-			"chassisdef_kingfisher_KNG-Prime": 1.05,
-			"chassisdef_kingfisher_KNG-A": 1.05,
-			"chassisdef_kingfisher_KNG-B": 1.05,
-			"chassisdef_kingfisher_KNG-C": 1.05,
-			"chassisdef_kingfisher_KNG-D": 1.05,
-			"chassisdef_kingfisher_KNG-E": 1.05,
-			"chassisdef_kingfisher_KNG-H": 1.05,
-			"chassisdef_sunder_SD1-O": 0.9,
-			"chassisdef_sunder_SD1-OA": 0.9,
-			"chassisdef_sunder_SD1-OB": 0.9,
-			"chassisdef_sunder_SD1-OC": 0.9,
-			"chassisdef_sunder_SD1-OD": 0.9,
-			"chassisdef_viking_VKG-2F": 0.95,
-			"chassisdef_viking_VKG-2G": 0.95,
-			"chassisdef_longbow_LGB-0W": 0.9,
-			"chassisdef_longbow_LGB-0C": 0.9,
-			"chassisdef_longbow_LGB-7V": 0.9,
-			"chassisdef_longbow_LGB-7Q": 0.9,
-			"chassisdef_longbow_LGB-8Q": 0.9,
-			"chassisdef_longbow_LGB-12C": 0.9,
-			"chassisdef_grendel_GRD-PRIME": 0.9,
-			"chassisdef_grendel_GRD-A": 0.9,
-			"chassisdef_grendel_GRD-B": 0.9,
-			"chassisdef_grendel_GRD-C": 0.9,
-			"chassisdef_grendel_GRD-D": 0.9,
-			"chassisdef_grendel_GRD-E": 0.9,
-			"chassisdef_starslayer_STY-2C": 0.9,
-			"chassisdef_starslayer_STY-3C": 0.9,
-			"chassisdef_starslayer_STY-3D": 0.9,
-			"chassisdef_guillotine_GLT-3N": 0.9,
-			"chassisdef_guillotine_GLT-5M": 0.9,
-			"chassisdef_guillotine_GLT-4L": 0.9,
-			"chassisdef_guillotine_GLT-4P": 0.9,
-			"chassisdef_guillotine_GLT-8D": 0.9,
-			"chassisdef_ion_ION-2R": 1.05,
-			"chassisdef_ion_ION-3R": 1.05,
-			"chassisdef_ion_ION-4R": 1.05,
-			"chassisdef_ion_ION-5R": 1.05,
-			"chassisdef_hazard_HZD-2C": 0.85,
-			"chassisdef_hazard_HZD-3C": 0.85,
-			"chassisdef_icarus_ICR-1X": 0.85,
-			"chassisdef_icarusii_ICR-1S": 0.75,
-			"chassisdef_icarusii_ICR-1R": 0.75,
-			"chassisdef_icarusii_ICR-2S": 0.75,
-			"chassisdef_icarusii_ICR-2PA": 0.75,
-			"chassisdef_grandtitan_T-IT-N10M": 1.1,
-			"chassisdef_grandtitan_T-IT-N11M": 1.1,
-			"chassisdef_crockett_CRK-5003-0": 1.05,
-			"chassisdef_crockett_CRK-5003-1": 1.05,
-			"chassisdef_crockett_CRK-5003-1b": 1.05,
-			"chassisdef_crockett_CRK-5003-3": 1.05,
-			"chassisdef_crockett_CRK-5004-1": 1.05,
-			"chassisdef_katana_CRK-5003-2": 1.05,
-			"chassisdef_katana_CRK-5003-C": 1.05,
-			"chassisdef_katana_CRK-5003-CM": 1.05,
-			"chassisdef_penetrator_PTR-4D": 0.95,
-			"chassisdef_penetrator_PTR-4F": 0.95,
-			"chassisdef_penetrator_PTR-6M": 0.95,
-			"chassisdef_penetrator_PTR-6S": 0.95,
-			"chassisdef_penetrator_PTR-6T": 0.95,
-			"chassisdef_toro_TR-A-1": 0.9,
-			"chassisdef_toro_TR-A-6": 0.9,
-			"chassisdef_toro_TR-A-8": 0.9,
-			"chassisdef_anvil_ANV-3M": 0.9,
-			"chassisdef_anvil_ANV-5M": 0.9,
-			"chassisdef_anvil_ANV-6M": 0.9,
-			"chassisdef_anvil_ANV-8M": 0.9,
-			"chassisdef_gladiator_GLD-1R": 0.8,
-			"chassisdef_gladiator_GLD-2R": 0.8,
-			"chassisdef_gladiator_GLD-3R": 0.8,
-			"chassisdef_gladiator_GLD-4R": 0.8,
-			"chassisdef_sentinel_STN-1S": 0.8,
-			"chassisdef_sentinel_STN-3K": 0.8,
-			"chassisdef_sentinel_STN-3KA": 0.8,
-			"chassisdef_sentinel_STN-3KB": 0.8,
-			"chassisdef_sentinel_STN-3L": 0.8,
-			"chassisdef_sentinel_STN-3Lb": 0.8,
-			"chassisdef_sentinel_STN-3M": 0.8,
-			"chassisdef_whitworth_WTH-1": 0.75,
-			"chassisdef_whitworth_WTH-1S": 0.75,
-			"chassisdef_whitworth_WTH-2": 0.75,
-			"chassisdef_whitworth_WTH-2A": 0.75,
-			"chassisdef_thorn_THE-N": 0.65,
-			"chassisdef_thorn_THE-N1": 0.65,
-			"chassisdef_thorn_THE-Nb": 0.65,
-			"chassisdef_thorn_THE-S": 0.65,
-			"chassisdef_thorn_THE-T": 0.65,
-			"chassisdef_talon_TLN-5V": 0.85,
-			"chassisdef_talon_TLN-5W": 0.85,
-			"chassisdef_talon_TLN-5Z": 0.85,
-			"chassisdef_osprey_OSP-05": 0.8,
-			"chassisdef_osprey_OSP-15": 0.8,
-			"chassisdef_osprey_OSP-25": 0.8,
-			"chassisdef_chameleon_CLN-7V": 0.9,
-			"chassisdef_chameleon_CLN-7W": 0.9,
-			"chassisdef_chameleon_CLN-7Z": 0.9,
-			"chassisdef_chameleon_TRC-4B": 0.9,
-			"chassisdef_firefly_FFL-3A": 0.8,
-			"chassisdef_firefly_FFL-4A": 0.8,
-			"chassisdef_firefly_FFL-4B": 0.8,
-			"chassisdef_firefly_FFL-4C": 0.8,
-			"chassisdef_firefly_FFL-C": 0.8,
-			"chassisdef_scylla_SCY-1": 0.95,
-			"chassisdef_stormgiant_STM-1": 0.95,
-			"chassisdef_stormgiant_STM-2": 0.95,
-			"chassisdef_hermesii_HER-2M": 0.85,
-			"chassisdef_hermesii_HER-2S": 0.85,
-			"chassisdef_hermesii_HER-4K": 0.85,
-			"chassisdef_hermesii_HER-5C": 0.85,
-			"chassisdef_hermesii_HER-5ME": 0.85,
-			"chassisdef_hermesii_HER-5S": 0.85,
-			"chassisdef_hermesii_HER-6D": 0.85,
-			"chassisdef_hermes_HER-1A": 0.8,
-			"chassisdef_hermes_HER-1B": 0.8,
-			"chassisdef_hermes_HER-1S": 0.8,
-			"chassisdef_hermes_HER-1Sb": 0.8,
-			"chassisdef_hermes_HER-3S": 0.8,
-			"chassisdef_hermes_HER-3S1": 0.8,
-			"chassisdef_hermes_HER-3S2": 0.8,
-			"chassisdef_hermes_HER-4K": 0.8,
-			"chassisdef_hermes_HER-4M": 0.8,
-			"chassisdef_hermes_HER-4S": 0.8,
-			"chassisdef_lynx_LNX-8Q": 0.9,
-			"chassisdef_lynx_LNX-9C": 0.9,
-			"chassisdef_lynx_LNX-9Q": 0.9,
-			"chassisdef_lynx_LNX-9R": 0.9,
-			"chassisdef_fireball_ALM-7D": 0.6,
-			"chassisdef_fireball_ALM-8D": 0.6,
-			"chassisdef_fireball_ALM-9D": 0.6,
-			"chassisdef_brigand_LDT-1": 0.75,
-			"chassisdef_brigand_LDT-X1": 0.75,
-			"chassisdef_brigand_LDT-X2": 0.75,
-			"chassisdef_enfield_END-6Q": 0.9,
-			"chassisdef_enfield_END-6J": 0.9,
-			"chassisdef_mantis_MTS-S": 0.75,
-			"chassisdef_mantis_MTS-T": 0.75,
-			"chassisdef_mantis_SA-MN": 0.75,
-			"chassisdef_valiant_V4-LNT-K7": 0.85,
-			"chassisdef_valiant_V4-LNT-K5": 0.85,
-			"chassisdef_valiant_V4-LNT-M4": 0.85,
-			"chassisdef_valiant_V4-LNT-M6": 0.85,
-			"chassisdef_valiant_V4-LNT-L2": 0.85,
-			"chassisdef_valiant_V4-LNT-L7": 0.85,
-			"chassisdef_shayu_SYU-2B": 0.8,
-			"chassisdef_shayu_SYU-4B": 0.8,
-			"chassisdef_templar_TLR1-O": 0.9,
-			"chassisdef_templar_TLR1-OA": 0.9,
-			"chassisdef_templar_TLR1-OB": 0.9,
-			"chassisdef_templar_TLR1-OC": 0.9,
-			"chassisdef_templar_TLR1-OS": 0.9,
-			"chassisdef_clint_CLNT-5U": 0.95,
-			"chassisdef_clint_CLNT-2-3T": 0.95,
-			"chassisdef_clint_CLNT-2-3U": 0.95,
-			"chassisdef_clint_CLNT-2-4T": 0.95,
-			"chassisdef_clint_CLNT-1-2R": 0.95,
-			"chassisdef_clint_CLNT-2-4U": 0.95,
-			"chassisdef_hornet_HNT-151": 0.95,
-			"chassisdef_hornet_HNT-152": 0.95,
-			"chassisdef_hornet_HNT-161": 0.95,
-			"chassisdef_hornet_HNT-171": 0.95,
-			"chassisdef_hornet_HNT-175": 0.95,
-			"chassisdef_hornet_HNT-191": 0.95,
-			"chassisdef_raptor_RTX1-O": 0.95,
-			"chassisdef_raptor_RTX1-OA": 0.95,
-			"chassisdef_raptor_RTX1-OB": 0.95,
-			"chassisdef_raptor_RTX1-OC": 0.95,
-			"chassisdef_raptor_RTX1-OD": 0.95,
-			"chassisdef_raptor_RTX1-OE": 0.95,
-			"chassisdef_raptor_RTX1-OF": 0.95,
-			"chassisdef_piranha_PIR-1": 0.85,
-			"chassisdef_pulverizer_PUL-2V": 0.95,
-			"chassisdef_pulverizer_PUL-3R": 0.95,
-			"chassisdef_pulverizer_PUL-C": 0.95,
-			"chassisdef_pulverizer_PUL-4L": 0.95,
-			"chassisdef_pulverizer_PUL-4W": 0.95,
-			"chassisdef_pulverizer_PUL-5A": 0.95,
-			"chassisdef_cyclone_CYC-A1": 0.95,
-			"chassisdef_cyclone_CYC-A3": 0.95,
-			"chassisdef_cyclone_CYC-A3P": 0.95,
-			"chassisdef_cyclone_CYC-B2": 0.95,
-			"chassisdef_cyclone_CYC-C1": 0.95,
-			"chassisdef_cyclone_CYC-D1": 0.95,
-			"chassisdef_cyclone_CYC-HS": 0.95,
-			"chassisdef_rakshasa_MDG-1A": 1.05,
-			"chassisdef_rakshasa_MDG-1B": 1.05,
-			"chassisdef_rakshasa_MDG-2R": 1.05,
-			"chassisdef_phoenixhawk_PHX-HK1": 0.95,
-			"chassisdef_phoenixhawk_PHX-HK1R": 0.95,
-			"chassisdef_phoenixhawk_PHX-HK2": 0.95,
-			"chassisdef_phoenixhawk_PHX-HK2M": 0.95,
-			"chassisdef_phoenixhawk_PHX-HK3": 0.95,
-			"chassisdef_screamer_SCR-1X-LAM": 0.95,
-			"chassisdef_pallas_PLS-1X": 0.55,
-			"chassisdef_falcon_FLC-4N": 0.75,
-			"chassisdef_falcon_FLC-4Nb": 0.75,
-			"chassisdef_falcon_FLC-4Nb-PP": 0.75,
-			"chassisdef_falcon_FLC-4Nb-PP2": 0.75,
-			"chassisdef_falcon_FLC-4P": 0.75,
-			"chassisdef_vonrohrs_VON-4RH-5": 1.05,
-			"chassisdef_vonrohrs_VON-4RH-6": 1.05,
-			"chassisdef_vonrohrs_VON-4RH-7": 1.05,
-			"chassisdef_vonrohrs_VON-4RH-9": 1.05,
-			"chassisdef_minsk_MNK-101": 1.05,
-			"chassisdef_minsk_MNK-102": 1.05,
-			"chassisdef_archangel_C-ANG-CONDITUS": 0.95,
-			"chassisdef_archangel_C-ANG-DEICIO": 0.95,
-			"chassisdef_archangel_C-ANG-LATERIS": 0.95,
-			"chassisdef_archangel_C-ANG-RAPTUS": 0.95,
-			"chassisdef_preta_X-PRT-O-CONDITUS": 0.95,
-			"chassisdef_preta_X-PRT-O-DEICIO": 0.95,
-			"chassisdef_preta_X-PRT-O-LATERIS": 0.95,
-			"chassisdef_preta_X-PRT-O-RAPTUS": 0.95,
-			"chassisdef_omega_SHP-X4": 0.9,
-			"chassisdef_nagual_S-NG-LAM": 1.05,
-			"chassisdef_digking_RCL-1": 0.85,
-			"chassisdef_digking_RCL-1B": 0.85,
-			"chassisdef_digking_RCL-1M": 0.85,
-			"chassisdef_digking_RCL-1X": 0.85,
-			"chassisdef_digking_RCL-2": 0.85,
-			"chassisdef_ragnarok_RGNK-2": 1.15,
-			"chassisdef_monster_MNST-3R-LAM": 1.05,
-			"chassisdef_monster_MNST-3R": 1.05,
-			"chassisdef_gunslinger_GUN-1ERD": 1.05,
-			"chassisdef_gunslinger_GUN-2ERD": 1.05,
-			"chassisdef_shootist_ST-8A": 0.95,
-			"chassisdef_shootist_ST-8C": 0.95,
-			"chassisdef_juggernaut_JG-R9T1": 1.05,
-			"chassisdef_juggernaut_JG-R9T2": 1.05,
-			"chassisdef_juggernaut_JG-R9T3": 1.05,
-			"chassisdef_juggernaut_JG-R9X1": 1.05,
-			"chassisdef_legacy_LGC-01": 0.95,
-			"chassisdef_legacy_LGC-02": 0.95,
-			"chassisdef_howler_HOW-1": 0.6,
-			"chassisdef_howler_HOW-2": 0.6,
-			"chassisdef_howler_HOW-4": 0.6,
-			"chassisdef_howler_HOW-5": 0.6,
-			"chassisdef_devastator_DVS-1D": 1.05,
-			"chassisdef_devastator_DVS-2": 1.05,
-			"chassisdef_devastator_DVS-3": 1.05,
-			"chassisdef_corsair_COR-4A": 0.95,
-			"chassisdef_corsair_COR-4R": 0.95,
-			"chassisdef_corsair_COR-TB": 0.95,
-			"chassisdef_corsair_COR-3X": 0.85
+		"overallDeploySize": 8,
+		"mechSizePrefabMultipliers": {
+			"anubis": {
+				"x": 0.85,
+				"y": 0.85,
+				"z": 0.85
+			},
+			"anvil": {
+				"x": 0.9,
+				"y": 0.9,
+				"z": 0.9
+			},
+			"archangel": {
+				"x": 1.05,
+				"y": 1.05,
+				"z": 1.05
+			},
+			"argus": {
+				"x": 0.95,
+				"y": 0.95,
+				"z": 0.95
+			},
+			"baboon": {
+				"x": 0.6,
+				"y": 0.6,
+				"z": 0.6
+			},
+			"bane": {
+				"x": 1.15,
+				"y": 1.15,
+				"z": 1.15
+			},
+			"brigand": {
+				"x": 0.75,
+				"y": 0.75,
+				"z": 0.75
+			},
+			"cephalus": {
+				"x": 0.8,
+				"y": 0.8,
+				"z": 0.8
+			},
+			"chameleon": {
+				"x": 0.9,
+				"y": 0.9,
+				"z": 0.9
+			},
+			"chimera": {
+				"x": 0.9,
+				"y": 0.9,
+				"z": 0.9
+			},
+			"clint": {
+				"x": 0.95,
+				"y": 0.95,
+				"z": 0.95
+			},
+			"crk": {
+				"x": 1.05,
+				"y": 1.05,
+				"z": 1.05
+			},
+			"cyclone": {
+				"x": 0.95,
+				"y": 0.95,
+				"z": 0.95
+			},
+			"crockett": {
+				"x": 1.05,
+				"y": 1.05,
+				"z": 1.05
+			},
+			"crusader": {
+				"x": 1.1,
+				"y": 1.1,
+				"z": 1.1
+			},
+			"dasher": {
+				"x": 0.8,
+				"y": 0.8,
+				"z": 0.8
+			},
+			"digking": {
+				"x": 0.85,
+				"y": 0.85,
+				"z": 0.85
+			},
+			"emperor": {
+				"x": 1.08,
+				"y": 1.08,
+				"z": 1.08
+			},
+			"enfield": {
+				"x": 0.9,
+				"y": 0.9,
+				"z": 0.9
+			},
+			"falcon": {
+				"x": 0.75,
+				"y": 0.75,
+				"z": 0.75
+			},
+			"fireball": {
+				"x": 0.6,
+				"y": 0.6,
+				"z": 0.6
+			},
+			"firefly": {
+				"x": 0.8,
+				"y": 0.8,
+				"z": 0.8
+			},
+			"gladiator": {
+				"x": 0.8,
+				"y": 0.8,
+				"z": 0.8
+			},
+			"glt": {
+				"x": 0.9,
+				"y": 0.9,
+				"z": 0.9
+			},
+			"grandtitan": {
+				"x": 1.1,
+				"y": 1.1,
+				"z": 1.1
+			},
+			"grendel": {
+				"x": 0.9,
+				"y": 0.9,
+				"z": 0.9
+			},
+			"gunslinger": {
+				"x": 1.05,
+				"y": 1.05,
+				"z": 1.05
+			},
+			"hazard": {
+				"x": 0.85,
+				"y": 0.85,
+				"z": 0.85
+			},
+			"hermes": {
+				"x": 0.8,
+				"y": 0.8,
+				"z": 0.8
+			},
+			"hornet": {
+				"x": 0.95,
+				"y": 0.95,
+				"z": 0.95
+			},
+			"hussar": {
+				"x": 0.85,
+				"y": 0.85,
+				"z": 0.85
+			},
+			"hyperion": {
+				"x": 1.2,
+				"y": 1.2,
+				"z": 1.2
+			},
+			"icarusii": {
+				"x": 0.75,
+				"y": 0.75,
+				"z": 0.75
+			},
+			"imp": {
+				"x": 1.05,
+				"y": 1.05,
+				"z": 1.05
+			},
+			"ionkingfisher": {
+				"x": 1.05,
+				"y": 1.05,
+				"z": 1.05
+			},
+			"ionlongbow": {
+				"x": 0.9,
+				"y": 0.9,
+				"z": 0.9
+			},
+			"ionraptor": {
+				"x": 0.9,
+				"y": 0.9,
+				"z": 0.9
+			},
+			"ionraptor2": {
+				"x": 1.05,
+				"y": 1.05,
+				"z": 1.05
+			},
+			"ionsunder": {
+				"x": 0.9,
+				"y": 0.9,
+				"z": 0.9
+			},
+			"juggernaut": {
+				"x": 1.05,
+				"y": 1.05,
+				"z": 1.05
+			},
+			"katana": {
+				"x": 1.05,
+				"y": 1.05,
+				"z": 1.05
+			},
+			"legacy": {
+				"x": 0.95,
+				"y": 0.95,
+				"z": 0.95
+			},
+			"lynx": {
+				"x": 0.9,
+				"y": 0.9,
+				"z": 0.9
+			},
+			"mantis": {
+				"x": 0.75,
+				"y": 0.75,
+				"z": 0.75
+			},
+			"masondev": {
+				"x": 1.05,
+				"y": 1.05,
+				"z": 1.05
+			},
+			"masonviking": {
+				"x": 0.95,
+				"y": 0.95,
+				"z": 0.95
+			},
+			"merlin": {
+				"x": 0.95,
+				"y": 0.95,
+				"z": 0.95
+			},
+			"minsk": {
+				"x": 1.05,
+				"y": 1.05,
+				"z": 1.05
+			},
+			"monster": {
+				"x": 1.05,
+				"y": 1.05,
+				"z": 1.05
+			},
+			"napesosprey": {
+				"x": 0.8,
+				"y": 0.8,
+				"z": 0.8
+			},
+			"omega": {
+				"x": 0.9,
+				"y": 0.9,
+				"z": 0.9
+			},
+			"pen": {
+				"x": 0.95,
+				"y": 0.95,
+				"z": 0.95
+			},
+			"phawklegacy": {
+				"x": 1.05,
+				"y": 1.05,
+				"z": 1.05
+			},
+			"preta": {
+				"x": 0.95,
+				"y": 0.95,
+				"z": 0.95
+			},
+			"osteon": {
+				"x": 0.95,
+				"y": 0.95,
+				"z": 0.95
+			},
+			"rakshasa": {
+				"x": 1.05,
+				"y": 1.05,
+				"z": 1.05
+			},
+			"raptor": {
+				"x": 0.95,
+				"y": 0.95,
+				"z": 0.95
+			},
+			"phantom": {
+				"x": 0.75,
+				"y": 0.75,
+				"z": 0.75
+			},
+			"phawklammech": {
+				"x": 0.95,
+				"y": 0.95,
+				"z": 0.95
+			},
+			"piranha": {
+				"x": 0.85,
+				"y": 0.85,
+				"z": 0.85
+			},
+			"prometheus": {
+				"x": 0.9,
+				"y": 0.9,
+				"z": 0.9
+			},
+			"pulverizer": {
+				"x": 0.95,
+				"y": 0.95,
+				"z": 0.95
+			},
+			"razorback": {
+				"x": 0.75,
+				"y": 0.75,
+				"z": 0.75
+			},
+			"scylla": {
+				"x": 0.95,
+				"y": 0.95,
+				"z": 0.95
+			},
+			"sentinel": {
+				"x": 0.8,
+				"y": 0.8,
+				"z": 0.8
+			},
+			"shayu": {
+				"x": 0.8,
+				"y": 0.8,
+				"z": 0.8
+			},
+			"septicemia": {
+				"x": 0.85,
+				"y": 0.85,
+				"z": 0.85
+			},
+			"screamer": {
+				"x": 0.95,
+				"y": 0.95,
+				"z": 0.95
+			},
+			"screamermech": {
+				"x": 0.95,
+				"y": 0.95,
+				"z": 0.95
+			},
+			"shootist": {
+				"x": 0.95,
+				"y": 0.95,
+				"z": 0.95
+			},
+			"starslayer": {
+				"x": 0.9,
+				"y": 0.9,
+				"z": 0.9
+			},
+			"swd": {
+				"x": 0.9,
+				"y": 0.9,
+				"z": 0.9
+			},
+			"talon": {
+				"x": 0.85,
+				"y": 0.85,
+				"z": 0.85
+			},
+			"templar": {
+				"x": 0.9,
+				"y": 0.9,
+				"z": 0.9
+			},
+			"thug": {
+				"x": 1.08,
+				"y": 1.08,
+				"z": 1.08
+			},
+			"thorn": {
+				"x": 0.65,
+				"y": 0.65,
+				"z": 0.65
+			},
+			"toro": {
+				"x": 0.9,
+				"y": 0.9,
+				"z": 0.9
+			},
+			"valiant": {
+				"x": 0.85,
+				"y": 0.85,
+				"z": 0.85
+			},
+			"vonrohrs": {
+				"x": 1.05,
+				"y": 1.05,
+				"z": 1.05
+			},
+			"valkyrieii": {
+				"x": 0.9,
+				"y": 0.9,
+				"z": 0.9
+			},
+			"whitworth": {
+				"x": 0.75,
+				"y": 0.75,
+				"z": 0.75
+			},
+			"wraith": {
+				"x": 0.95,
+				"y": 0.95,
+				"z": 0.95
+			}
+		},
+		"mechSizeMultiplierVectors": {
+			"chassisdef_annihilator_ANH-II-L": {
+				"x": 0.85,
+				"y": 0.85,
+				"z": 0.85
+			},
+			"chassisdef_axman_AXM-1N": {
+				"x": 1.08,
+				"y": 1.08,
+				"z": 1.08
+			},
+			"chassisdef_axman_AXM-1TL": {
+				"x": 1.08,
+				"y": 1.08,
+				"z": 1.08
+			},
+			"chassisdef_axman_AXM-2N": {
+				"x": 1.08,
+				"y": 1.08,
+				"z": 1.08
+			},
+			"chassisdef_axman_AXM-3N": {
+				"x": 1.08,
+				"y": 1.08,
+				"z": 1.08
+			},
+			"chassisdef_axman_AXM-3S": {
+				"x": 1.08,
+				"y": 1.08,
+				"z": 1.08
+			},
+			"chassisdef_blackhawkku_BHKU-O": {
+				"x": 1.1,
+				"y": 1.1,
+				"z": 1.1
+			},
+			"chassisdef_blackhawkku_BHKU-OA": {
+				"x": 1.1,
+				"y": 1.1,
+				"z": 1.1
+			},
+			"chassisdef_blackhawkku_BHKU-OB": {
+				"x": 1.1,
+				"y": 1.1,
+				"z": 1.1
+			},
+			"chassisdef_blackhawkku_BHKU-OC": {
+				"x": 1.1,
+				"y": 1.1,
+				"z": 1.1
+			},
+			"chassisdef_blackhawkku_BHKU-OD": {
+				"x": 1.1,
+				"y": 1.1,
+				"z": 1.1
+			},
+			"chassisdef_centurion_CN9-S": {
+				"x": -1,
+				"y": 1,
+				"z": 1
+			},
+			"chassisdef_corsair_COR-4A": {
+				"x": 0.95,
+				"y": 0.95,
+				"z": 0.95
+			},
+			"chassisdef_corsair_COR-4R": {
+				"x": 0.95,
+				"y": 0.95,
+				"z": 0.95
+			},
+			"chassisdef_corsair_COR-TB": {
+				"x": 0.95,
+				"y": 0.95,
+				"z": 0.95
+			},
+			"chassisdef_corsair_COR-3X": {
+				"x": 0.85,
+				"y": 0.85,
+				"z": 0.85
+			},
+			"chassisdef_griffin_GRF-1A": {
+				"x": 1.15,
+				"y": 1.15,
+				"z": 1.15
+			},
+			"chassisdef_griffin_GRF-2N-X": {
+				"x": 1.15,
+				"y": 1.15,
+				"z": 1.15
+			},
+			"chassisdef_hermesii_HER-2M": {
+				"x": 0.85,
+				"y": 0.85,
+				"z": 0.85
+			},
+			"chassisdef_hermesii_HER-2S": {
+				"x": 0.85,
+				"y": 0.85,
+				"z": 0.85
+			},
+			"chassisdef_hermesii_HER-4K": {
+				"x": 0.85,
+				"y": 0.85,
+				"z": 0.85
+			},
+			"chassisdef_hermesii_HER-5C": {
+				"x": 0.85,
+				"y": 0.85,
+				"z": 0.85
+			},
+			"chassisdef_hermesii_HER-5ME": {
+				"x": 0.85,
+				"y": 0.85,
+				"z": 0.85
+			},
+			"chassisdef_hermesii_HER-5S": {
+				"x": 0.85,
+				"y": 0.85,
+				"z": 0.85
+			},
+			"chassisdef_hermesii_HER-6D": {
+				"x": 0.85,
+				"y": 0.85,
+				"z": 0.85
+			},
+			"chassisdef_hollanderii_BZK-F5": {
+				"x": 0.9,
+				"y": 0.9,
+				"z": 0.9
+			},
+			"chassisdef_hollanderii_BZK-F7": {
+				"x": 0.9,
+				"y": 0.9,
+				"z": 0.9
+			},
+			"chassisdef_hollander_BZK-G1": {
+				"x": 0.8,
+				"y": 0.8,
+				"z": 0.8
+			},
+			"chassisdef_hollander_BZK-F3": {
+				"x": 0.8,
+				"y": 0.8,
+				"z": 0.8
+			},
+			"chassisdef_hollander_BZK-T100": {
+				"x": 0.8,
+				"y": 0.8,
+				"z": 0.8
+			},
+			"chassisdef_hollander_BZK-K7": {
+				"x": 0.8,
+				"y": 0.8,
+				"z": 0.8
+			},
+			"chassisdef_hollander_BZK-H3": {
+				"x": 0.8,
+				"y": 0.8,
+				"z": 0.8
+			},
+			"chassisdef_hollander_BZK-D2": {
+				"x": 0.8,
+				"y": 0.8,
+				"z": 0.8
+			},
+			"chassisdef_icarus_ICR-1X": {
+				"x": 0.85,
+				"y": 0.85,
+				"z": 0.85
+			},
+			"chassisdef_jagermechii_JM7-D": {
+				"x": 1.1,
+				"y": 1.1,
+				"z": 1.1
+			},
+			"chassisdef_jagermechii_JM7-F": {
+				"x": 1.1,
+				"y": 1.1,
+				"z": 1.1
+			},
+			"chassisdef_jagermechii_JM7-L": {
+				"x": 1.1,
+				"y": 1.1,
+				"z": 1.1
+			},
+			"chassisdef_pallas_PLS-1X": {
+				"x": 0.55,
+				"y": 0.55,
+				"z": 0.55
+			},
+			"chassisdef_rifleman_RFL-1N": {
+				"x": 0.8,
+				"y": 0.8,
+				"z": 0.8
+			},
+			"chassisdef_riflemanii_RFL-3N-2": {
+				"x": 1.15,
+				"y": 1.15,
+				"z": 1.15
+			},
+			"chassisdef_stonerhino_STR-1": {
+				"x": 0.8,
+				"y": 0.8,
+				"z": 0.8
+			},
+			"chassisdef_stonerhino_STR-2": {
+				"x": 0.8,
+				"y": 0.8,
+				"z": 0.8
+			},
+			"chassisdef_stonerhino_STR-5": {
+				"x": 0.8,
+				"y": 0.8,
+				"z": 0.8
+			},
+			"chassisdef_stonerhino_STR-6": {
+				"x": 0.8,
+				"y": 0.8,
+				"z": 0.8
+			},
+			"chassisdef_wasp_WSP-2A-X": {
+				"x": 1.1,
+				"y": 1.1,
+				"z": 1.1
+			},
+			"chassisdef_ragnarok_RGNK-2": {
+				"x": 1.15,
+				"y": 1.15,
+				"z": 1.15
+			}
 		},
 		"vehicleSizeMultipliers": {
 			"vehiclechassisdef_GLADIUS": 0.75
-		}
+		},
+		"WeaponPrefabMappings": [
+		  {
+			"PrefabIdentifier": "AC2",
+			"HardpointCandidates": {
+			  "ac2": 1,
+			  "ac": 1,
+			  "ac5": 0.9,
+			  "lbx2": 0.9,
+			  "uac2": 0.9,
+			  "lbx": 0.8,
+			  "uac": 0.8,
+			  "lbx5": 0.8,
+			  "uac5": 0.8,
+			  "mg": 0.5,
+			  "ppc": 0.2,
+			  "laser": 0.2,
+			  "flamer": 0.2,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "LBX2",
+			"HardpointCandidates": {
+			  "lbx2": 1,
+			  "lbx": 1,
+			  "lbx5": 0.9,
+			  "ac2": 0.9,
+			  "uac2": 0.9,
+			  "ac": 0.8,
+			  "uac": 0.8,
+			  "ac5": 0.7,
+			  "uac5": 0.7,
+			  "mg": 0.4,
+			  "ppc": 0.3,
+			  "laser": 0.2,
+			  "flamer": 0.2,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "UAC2",
+			"HardpointCandidates": {
+			  "uac2": 1.0,
+			  "uac5": 0.9,
+			  "uac": 1.0,
+			  "ac2": 0.9,
+			  "lbx2": 0.9,
+			  "ac": 0.8,
+			  "lbx": 0.8,
+			  "ac5": 0.7,
+			  "lbx5": 0.7,
+			  "mg": 0.3,
+			  "ppc": 0.2,
+			  "laser": 0.2,
+			  "flamer": 0.2,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "AMS",
+			"HardpointCandidates": {
+			  "ams": 1.0,
+			  "laser": 0.8,
+			  "mg": 0.8,
+			  "machinegun": 0.8,
+			  "flamer": 0.8,
+			  "ac2": 0.8,
+			  "ppc": 0.3
+			}
+		  },
+		  {
+			"PrefabIdentifier": "Flamer",
+			"HardpointCandidates": {
+			  "flamer": 1.0,
+			  "laser": 0.9,
+			  "mg": 0.8,
+			  "machinegun": 0.8,
+			  "ac2": 0.6,
+			  "ppc": 0.5,
+			  "ac": 0.5,
+			  "lbx": 0.5,
+			  "ams": 0.2
+			}
+		  },
+		  {
+			"PrefabIdentifier": "Laser",
+			"HardpointCandidates": {
+			  "laser": 1.0,
+			  "flamer": 0.9,
+			  "mg": 0.6,
+			  "machinegun": 0.6,
+			  "ac2": 0.5,
+			  "ppc": 0.5,
+			  "ac": 0.4,
+			  "lbx": 0.4,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "AC5",
+			"HardpointCandidates": {
+			  "ac5": 1.0,
+			  "ac": 0.9,
+			  "ac10": 0.8,
+			  "ac2": 0.8,
+			  "uac5": 0.9,
+			  "lbx5": 0.9,
+			  "lbx": 0.7,
+			  "rac2": 0.8,
+			  "uac2": 0.8,
+			  "lbx2": 0.8,
+			  "rac5": 0.9,
+			  "uac10": 0.8,
+			  "lbx10": 0.8,
+			  "rac10": 0.8,
+			  "ac20": 0.6,
+			  "lbx20": 0.6,
+			  "uac20": 0.6,
+			  "rac20": 0.6,
+			  "ppc": 0.5,
+			  "laser": 0.4,
+			  "mg": 0.3,
+			  "flamer": 0.3,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "LBX5",
+			"HardpointCandidates": {
+			  "lbx5": 1.0,
+			  "lbx": 0.9,
+			  "lbx10": 0.8,
+			  "lbx2": 0.8,
+			  "ac5": 0.9,
+			  "uac5": 0.9,
+			  "ac": 0.7,
+			  "rac2": 0.8,
+			  "ac2": 0.8,
+			  "uac2": 0.8,
+			  "rac5": 0.9,
+			  "ac10": 0.8,
+			  "uac10": 0.8,
+			  "rac10": 0.8,
+			  "lbx20": 0.5,
+			  "ac20": 0.5,
+			  "uac20": 0.5,
+			  "rac20": 0.5,
+			  "ppc": 0.4,
+			  "laser": 0.3,
+			  "mg": 0.3,
+			  "flamer": 0.3,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "UAC5",
+			"HardpointCandidates": {
+			  "uac5": 1.0,
+			  "uac10": 0.8,
+			  "uac2": 0.8,
+			  "lbx5": 0.9,
+			  "ac5": 0.9,
+			  "ac": 0.7,
+			  "lbx": 0.7,
+			  "rac2": 0.7,
+			  "ac2": 0.7,
+			  "lbx2": 0.7,
+			  "rac5": 0.8,
+			  "ac10": 0.8,
+			  "lbx10": 0.8,
+			  "rac10": 0.8,
+			  "uac20": 0.6,
+			  "ac20": 0.6,
+			  "lbx20": 0.6,
+			  "rac20": 0.6,
+			  "ppc": 0.4,
+			  "laser": 0.4,
+			  "mg": 0.3,
+			  "flamer": 0.3,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "RAC2",
+			"HardpointCandidates": {
+			  "rac2": 1.0,
+			  "rac5": 0.9,
+			  "rac10": 0.8,
+			  "rac20": 0.6,
+			  "uac5": 0.8,
+			  "lbx5": 0.8,
+			  "ac5": 0.8,
+			  "ac": 0.7,
+			  "lbx": 0.7,
+			  "uac2": 0.8,
+			  "ac2": 0.8,
+			  "lbx2": 0.8,
+			  "uac10": 0.6,
+			  "ac10": 0.6,
+			  "lbx10": 0.6,
+			  "uac20": 0.4,
+			  "ac20": 0.4,
+			  "lbx20": 0.4,
+			  "ppc": 0.3,
+			  "laser": 0.5,
+			  "mg": 0.5,
+			  "flamer": 0.3,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "AC10",
+			"HardpointCandidates": {
+			  "ac10": 1.0,
+			  "ac": 0.8,
+			  "ac5": 0.9,
+			  "ac20": 0.8,
+			  "lbx10": 0.9,
+			  "uac10": 0.9,
+			  "rac5": 0.8,
+			  "lbx": 0.7,
+			  "uac5": 0.7,
+			  "lbx5": 0.7,
+			  "rac2": 0.5,
+			  "rac10": 0.8,
+			  "lbx20": 0.8,
+			  "uac20": 0.8,
+			  "rac20": 0.8,
+			  "ac2": 0.4,
+			  "uac2": 0.4,
+			  "lbx2": 0.4,
+			  "ppc": 0.3,
+			  "laser": 0.3,
+			  "mg": 0.3,
+			  "flamer": 0.3,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "LBX10",
+			"HardpointCandidates": {
+			  "lbx10": 1.0,
+			  "lbx": 0.9,
+			  "lbx5": 0.9,
+			  "lbx20": 0.8,
+			  "ac10": 0.9,
+			  "uac10": 0.9,
+			  "rac5": 0.7,
+			  "ac": 0.7,
+			  "ac5": 0.7,
+			  "uac5": 0.7,
+			  "rac2": 0.6,
+			  "rac10": 0.8,
+			  "ac20": 0.8,
+			  "uac20": 0.8,
+			  "rac20": 0.8,
+			  "lbx2": 0.6,
+			  "ac2": 0.6,
+			  "uac2": 0.6,
+			  "ppc": 0.4,
+			  "laser": 0.4,
+			  "mg": 0.3,
+			  "flamer": 0.3,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "UAC10",
+			"HardpointCandidates": {
+			  "uac10": 1.0,
+			  "ac10": 0.9,
+			  "lbx10": 0.9,
+			  "rac5": 0.8,
+			  "ac": 0.7,
+			  "lbx": 0.7,
+			  "uac5": 0.8,
+			  "ac5": 0.8,
+			  "lbx5": 0.8,
+			  "rac2": 0.6,
+			  "rac10": 0.9,
+			  "uac20": 0.8,
+			  "ac20": 0.8,
+			  "lbx20": 0.8,
+			  "rac20": 0.8,
+			  "uac2": 0.7,
+			  "ac2": 0.7,
+			  "lbx2": 0.7,
+			  "ppc": 0.5,
+			  "laser": 0.5,
+			  "mg": 0.3,
+			  "flamer": 0.3,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "RAC5",
+			"HardpointCandidates": {
+			  "rac5": 1.0,
+			  "rac2": 0.9,
+			  "rac10": 0.9,
+			  "rac20": 0.6,
+			  "uac10": 0.8,
+			  "ac10": 0.8,
+			  "lbx10": 0.8,
+			  "ac": 0.7,
+			  "lbx": 0.7,
+			  "uac5": 0.8,
+			  "ac5": 0.8,
+			  "lbx5": 0.8,
+			  "uac20": 0.6,
+			  "ac20": 0.6,
+			  "lbx20": 0.6,
+			  "uac2": 0.8,
+			  "ac2": 0.8,
+			  "lbx2": 0.8,
+			  "ppc": 0.5,
+			  "laser": 0.4,
+			  "mg": 0.3,
+			  "flamer": 0.3,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "PPC",
+			"HardpointCandidates": {
+			  "ppc": 1.0,
+			  "ac20": 0.8,
+			  "ac": 0.6,
+			  "lbx": 0.6,
+			  "ac10": 0.6,
+			  "lbx10": 0.6,
+			  "laser": 0.7,
+			  "flamer": 0.7,
+			  "mg": 0.3,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "AC20",
+			"HardpointCandidates": {
+			  "ac20": 1.0,
+			  "ac": 0.7,
+			  "ac10": 0.9,
+			  "lbx20": 0.9,
+			  "uac20": 0.9,
+			  "rac20": 0.9,
+			  "lbx": 0.7,
+			  "rac10": 0.8,
+			  "lbx10": 0.8,
+			  "uac10": 0.8,
+			  "rac5": 0.6,
+			  "ac5": 0.6,
+			  "uac5": 0.6,
+			  "lbx5": 0.6,
+			  "rac2": 0.3,
+			  "ppc": 0.2,
+			  "laser": 0.2,
+			  "mg": 0.2,
+			  "flamer": 0.1,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "LBX20",
+			"HardpointCandidates": {
+			  "lbx20": 1.0,
+			  "lbx": 0.8,
+			  "lbx10": 0.9,
+			  "ac20": 0.9,
+			  "uac20": 0.9,
+			  "rac20": 0.9,
+			  "ac": 0.7,
+			  "rac10": 0.7,
+			  "ac10": 0.7,
+			  "uac10": 0.7,
+			  "rac5": 0.5,
+			  "ac5": 0.5,
+			  "uac5": 0.5,
+			  "lbx5": 0.5,
+			  "rac2": 0.4,
+			  "ppc": 0.5,
+			  "laser": 0.3,
+			  "mg": 0.2,
+			  "flamer": 0.2,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "UAC20",
+			"HardpointCandidates": {
+			  "uac20": 1.0,
+			  "uac10": 0.9,
+			  "ac20": 0.9,
+			  "lbx20": 0.9,
+			  "rac20": 0.9,
+			  "ac": 0.7,
+			  "lbx": 0.7,
+			  "rac10": 0.8,
+			  "ac10": 0.8,
+			  "lbx10": 0.8,
+			  "rac5": 0.6,
+			  "ac5": 0.6,
+			  "uac5": 0.6,
+			  "lbx5": 0.6,
+			  "rac2": 0.3,
+			  "ppc": 0.4,
+			  "laser": 0.3,
+			  "mg": 0.2,
+			  "flamer": 0.1,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "RAC10",
+			"HardpointCandidates": {
+			  "rac10": 1.0,
+			  "rac20": 0.9,
+			  "rac5": 0.9,
+			  "rac2": 0.6,
+			  "uac20": 0.8,
+			  "ac20": 0.8,
+			  "lbx20": 0.8,
+			  "ac": 0.7,
+			  "lbx": 0.7,
+			  "ac10": 0.8,
+			  "lbx10": 0.8,
+			  "uac10": 0.8,
+			  "ac5": 0.7,
+			  "uac5": 0.7,
+			  "lbx5": 0.7,
+			  "ppc": 0.5,
+			  "laser": 0.3,
+			  "mg": 0.2,
+			  "flamer": 0.1,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "RAC20",
+			"HardpointCandidates": {
+			  "rac20": 1.0,
+			  "rac10": 0.9,
+			  "rac5": 0.8,
+			  "rac2": 0.5,
+			  "ac20": 0.8,
+			  "lbx20": 0.8,
+			  "uac20": 0.8,
+			  "uac": 0.7,
+			  "ac": 0.7,
+			  "lbx": 0.7,
+			  "ac10": 0.8,
+			  "lbx10": 0.8,
+			  "uac10": 0.8,
+			  "ac5": 0.6,
+			  "uac5": 0.6,
+			  "ppc": 0.5,
+			  "laser": 0.4,
+			  "mg": 0.3,
+			  "flamer": 0.2,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "BFG",
+			"HardpointCandidates": {
+			  "bfg": 1.0,
+			  "artillery": 1.0,
+			  "gauss": 0.9,
+			  "ac20": 0.9,
+			  "ac": 0.6,
+			  "ppc": 0.7,
+			  "lbx": 0.6,
+			  "laser": 0.3,
+			  "mg": 0.2,
+			  "flamer": 0.2,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "Gauss",
+			"HardpointCandidates": {
+			  "gauss": 1.0,
+			  "ac20": 0.8,
+			  "ac": 0.6,
+			  "ppc": 0.8,
+			  "lbx": 0.6,
+			  "laser": 0.7,
+			  "mg": 0.5,
+			  "flamer": 0.3,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "artillery",
+			"HardpointCandidates": {
+			  "artillery": 1.0,
+			  "ac20": 1.0,
+			  "gauss": 0.8,
+			  "ac": 0.7,
+			  "lbx": 0.7,
+			  "ppc": 0.6,
+			  "ams": 0.1,
+			  "machinegun": 0.1,
+			  "mg": 0.1,
+			  "flamer": 0.1,
+			  "laser": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "lrm5",
+			"HardpointCandidates": {
+			  "lrm5": 1.0,
+			  "lrm10": 0.9,
+			  "lrm15": 0.6,
+			  "lrm20": 0.3,
+			  "srm20": 0.3,
+			  "srm6": 0.9,
+			  "srm4": 0.9,
+			  "srm2": 0.6,
+			  "machinegun": 0.2,
+			  "mg": 0.2,
+			  "flamer": 0.1,
+			  "laser": 0.1,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "lrm10",
+			"HardpointCandidates": {
+			  "lrm10": 1.0,
+			  "lrm15": 0.9,
+			  "lrm20": 0.8,
+			  "srm20": 0.8,
+			  "lrm5": 0.6,
+			  "srm6": 0.8,
+			  "srm4": 0.5,
+			  "srm2": 0.2,
+			  "machinegun": 0.1,
+			  "mg": 0.1,
+			  "flamer": 0.1,
+			  "laser": 0.1,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "lrm15",
+			"HardpointCandidates": {
+			  "lrm15": 1.0,
+			  "lrm20": 0.9,
+			  "srm20": 0.9,
+			  "lrm10": 0.8,
+			  "lrm5": 0.6,
+			  "srm6": 0.65,
+			  "srm4": 0.4,
+			  "srm2": 0.2,
+			  "machinegun": 0.1,
+			  "mg": 0.1,
+			  "flamer": 0.1,
+			  "laser": 0.1,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "arrow",
+			"HardpointCandidates": {
+			  "arrow": 1.0,
+			  "lrm5": 0.9,
+			  "lrm20": 0.7,
+			  "srm20": 0.7,
+			  "lrm15": 0.5,
+			  "lrm10": 0.6,
+			  "srm6": 0.9,
+			  "srm4": 0.8,
+			  "srm2": 0.5,
+			  "ppc": 0.2,
+			  "gauss": 0.1,
+			  "machinegun": 0.1,
+			  "mg": 0.1,
+			  "flamer": 0.1,
+			  "laser": 0.1,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "lrm20",
+			"HardpointCandidates": {
+			  "lrm20": 1.0,
+			  "srm20": 1.0,
+			  "lrm15": 0.9,
+			  "lrm10": 0.8,
+			  "lrm5": 0.4,
+			  "srm6": 0.45,
+			  "srm4": 0.3,
+			  "srm2": 0.2,
+			  "machinegun": 0.1,
+			  "mg": 0.1,
+			  "flamer": 0.1,
+			  "laser": 0.1,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "MachineGun",
+			"HardpointCandidates": {
+			  "machinegun": 1.0,
+			  "mg": 1.0,
+			  "flamer": 0.8,
+			  "laser": 0.7,
+			  "ams": 0.5
+			}
+		  },
+		  {
+			"PrefabIdentifier": "srm2",
+			"HardpointCandidates": {
+			  "srm2": 1.0,
+			  "srm4": 0.9,
+			  "srm6": 0.6,
+			  "lrm5": 0.6,
+			  "lrm10": 0.5,
+			  "lrm15": 0.3,
+			  "lrm20": 0.3,
+			  "srm20": 0.3,
+			  "machinegun": 0.1,
+			  "mg": 0.1,
+			  "flamer": 0.1,
+			  "laser": 0.1,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "srm4",
+			"HardpointCandidates": {
+			  "srm4": 1.0,
+			  "srm6": 0.9,
+			  "srm2": 0.6,
+			  "lrm5": 0.8,
+			  "lrm10": 0.7,
+			  "lrm15": 0.5,
+			  "lrm20": 0.3,
+			  "srm20": 0.3,
+			  "machinegun": 0.1,
+			  "mg": 0.1,
+			  "flamer": 0.1,
+			  "laser": 0.1,
+			  "ams": 0.1
+			}
+		  },
+		  {
+			"PrefabIdentifier": "srm6",
+			"HardpointCandidates": {
+			  "srm6": 1.0,
+			  "srm4": 0.9,
+			  "srm2": 0.6,
+			  "lrm5": 0.8,
+			  "lrm10": 0.7,
+			  "lrm15": 0.5,
+			  "lrm20": 0.3,
+			  "srm20": 0.3,
+			  "machinegun": 0.1,
+			  "mg": 0.1,
+			  "flamer": 0.1,
+			  "laser": 0.1,
+			  "ams": 0.1
+			}
+		  }
+		]
 	}
 }
