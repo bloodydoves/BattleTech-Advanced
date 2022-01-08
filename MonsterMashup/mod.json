@@ -1,0 +1,49 @@
+{
+    "Name": "MonsterMashup",
+    "Enabled": true,
+	"Hidden": true,
+    "Version": "0.1.0",
+    "Description": "Builds monster units by mashing bases and turrets",
+    "Author": "FrostRaptor",
+    "Website": "https://github.com/IceRaptor/MonsterMashup/",
+    "Contact": "",
+    "DLL": "MonsterMashup.dll",
+    "DependsOn" : [ "IRBTModUtils", "CustomComponents", "Custom Ammo Categories", "CustomUnits" ],
+    "OptionallyDependsOn": [ ],
+    "ConflictsWith": [ ],
+	"Manifest" : [
+		{
+			"Type": "VehicleDef",
+			"Path": "vehicle"
+		},
+		{
+			"Type": "VehicleChassisDef",
+			"Path": "vehiclechassis"
+		},
+		{
+			"Type": "TurretChassisDef",
+			"Path": "turretChassis",
+			"AddToDB": true
+		},
+		{
+			"Type": "TurretDef",
+			"Path": "turret",
+			"AddToDB": true
+		},
+		{
+			"Type": "UpgradeDef",
+			"Path": "upgrade",
+			"AddToDB": true
+		},
+		
+	],
+    "Settings": {
+        "Debug" : true,
+        "Trace" : false,
+		"DeveloperOptions" : {
+			"EnableFootprintVis" : false,
+			"DebugDamageLocationKillsLinkedTurrets" : false
+		}			
+    },
+
+}
