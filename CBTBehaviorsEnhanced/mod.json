@@ -2,7 +2,7 @@
 	"Name": "CBTBehaviorsEnhanced",
 	"Enabled": true,
 	"Hidden": true,
-	"Version": "0.8.11.0",
+	"Version": "0.9.0",
 	"Description": "Provides TableTop like behaviors for heat, movement, and more",
 	"Author": "FrostRaptor",
 	"Website": "https://github.com/IceRaptor/CBTBehaviorsEnhanced/",
@@ -14,9 +14,6 @@
 		"CustomComponents",
 		"Custom Ammo Categories",
 		"CustomUnits"
-	],
-	"OptionallyDependsOn": [
-		"Better AI"
 	],
 	"ConflictsWith": [
 		"CharlesB"
@@ -207,7 +204,9 @@
 			},
 			"AllowMeleeFromSprint": true,
 			"ProneTargetAttackModifier": -2,
-			"FilterCanUseInMeleeWeaponsByAttack": true
+			"ExtraHitsAverageAllDamage": true,
+			"FilterCanUseInMeleeWeaponsByAttack": true,
+			"DisableMeleeForVehicles" : true
 		},
 		"Move": {
 			"MinimumMove": 40.0,
@@ -226,6 +225,11 @@
 		"Breaches": {
 			"VacuumCheck": 0.17,
 			"ThinAtmoCheck": 0.03
+		},
+		"AI": {
+			"EvasionPipRemovedUtility": 10.0,
+			"EvasionPipLostUtility": 5.0,
+			"PilotInjuryMultiUtility": 1.0
 		},
 		"SkillChecks": {
 			"ModPerPointOfPiloting": 0.05,
