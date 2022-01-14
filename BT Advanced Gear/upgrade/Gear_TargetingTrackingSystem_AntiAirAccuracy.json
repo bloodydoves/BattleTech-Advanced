@@ -2,50 +2,33 @@
 	"Custom": {
 		"Category": [
 			{
-				"CategoryID": "SensorsA"
-			},
-			{
-				"CategoryID": "Quirk"
+				"CategoryID": "Cockpit"
 			}
 		],
-		"WorkOrderCosts": {
-			"Install": {
-				"TechCost": "[[Chassis.Tonnage]]/10",
-				"CBillCost": "[[Chassis.Tonnage]] * 1.15"
-			}
-		},
-		"Flags": {
-			"flags": [
-				"default",
-				"not_broken",
-				"no_salvage",
-				"autorepair"
-			]
-		},
 		"BonusDescriptions": {
 			"Bonuses": [
-				"IsSensorsA",
-				"AntiAirEvasion: +3"
+				"AntiAirTargeting: +3"
+				"IsCockpit"
 			]
 		},
 		"InventorySorter": {
-			"SortKey": "00019"
+			"SortKey": "00201"
 		}
 	},
 	"StatName": null,
 	"RelativeModifier": 0,
 	"AbsoluteModifier": 0,
 	"Description": {
-		"Cost": 500000,
-		"Rarity": 99,
-		"Purchasable": false,
-		"Manufacturer": "Quirk",
-		"Model": "JagerMech",
-		"UIName": "JagerMech Anti-Air Targeting",
-		"Id": "Gear_Quirk_AntiAirTargeting_JagerMech",
-		"Name": "JagerMech Anti-Air Targeting",
-		"Details": "This piece of gear represents the JagerMech's inherent Anti-Air Targeting quirk. This gives the JagerMech bonus evasion ignore against aerial units such as VTOLs and Land-Air Mechs.",
-		"Icon": "uixSvgIcon_equipment_Rangefinder"
+		"Cost": 750000,
+		"Rarity": 7,
+		"Purchasable": true,
+		"Manufacturer": "Mendham Electronics",
+		"Model": "Accuracy",
+		"UIName": "AA Accuracy FCS",
+		"Id": "Gear_TargetingTrackingSystem_AntiAirAccuracy",
+		"Name": "Anti-Air Accuracy FCS",
+		"Details": "A specialized piece of equipment, the Anti-Air Accuracy Fire Control System was designed to give pilots increased chances to tag flying or otherwise airborne units. It found limited acceptance on the battlefield due to a relative paucity of combat-rated aerial units, though it did find a home with anyone who regularly faced down Land-Air Mechs.",
+		"Icon": "AdvancedTC"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
@@ -54,7 +37,7 @@
 	"PrefabIdentifier": "",
 	"BattleValue": 0,
 	"InventorySize": 1,
-	"Tonnage": 0,
+	"Tonnage": 2,
 	"AllowedLocations": "Head",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
@@ -72,14 +55,14 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "Quirk_AAEvasion",
+				"Id": "FCS_AAAccuracy",
 				"Name": "Targeting Computer",
 				"Details": "Improved overall accuracy.",
 				"Icon": "uixSvgIcon_ability_precisionstrike"
 			},
 			"nature": "Buff",
 			"statisticData": {
-				"statName": "WeaponIgnoreEVASIVE_AeroUnit",
+				"statName": "ActorABSOLUTE_AeroUnit",
 				"operation": "Set",
 				"modValue": "-3",
 				"modType": "System.Single",
@@ -89,9 +72,7 @@
 	],
 	"ComponentTags": {
 		"items": [
-			"BLACKLISTED",
-			"component_type_stock",
-			"lv-shares-sensors"
+			"component_type_stock"
 		],
 		"tagSetSourceFile": ""
 	}
