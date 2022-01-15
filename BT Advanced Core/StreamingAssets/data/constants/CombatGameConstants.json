@@ -39,29 +39,29 @@
 		"BaseSpotterDistance": 375.0,
 		"BaseSensorDistance": 500.0,
 		"FiredWeaponsEffect": {
-			  "durationData": {
+			"durationData": {
 				"duration": 1,
 				"ticksOnEndOfRound": true,
 				"stackLimit": 1
-			  },
-			  "targetingData": {
+			},
+			"targetingData": {
 				"effectTriggerType": "OnActivation",
 				"effectTargetType": "SingleTarget"
-			  },
-			  "effectType": "StatisticEffect",
-			  "Description": {
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
 				"Id": "FiredWeaponsSignatureEffect",
 				"Name": "FIRED WEAPONS",
 				"Details": "+125% SIGNATURE",
 				"Icon": "uixSvgIcon_genericDiamond"
-			  },
-			  "statisticData": {
+			},
+			"statisticData": {
 				"statName": "SensorSignatureModifier",
 				"operation": "Float_Add",
 				"modValue": "0.25",
 				"modType": "System.Single"
-			  },
-			  "nature": "Debuff"
+			},
+			"nature": "Debuff"
 		}
 	},
 	"ToHit": {
@@ -140,7 +140,11 @@
 		"VehiclesGetGuarded": true,
 		"MinCritChance": 10,
 		"COILUsesJumping": false,
-		"COILMultipliesShots": false
+		"COILMultipliesShots": false,
+		"MissOffsetHorizontalMin": 1.5,
+		"MissOffsetHorizontalMax": 3.0,
+		"MissOffsetVerticalMin": 3.0,
+		"MissOffsetVerticalMax": 6.0
 	},
 	"CombatValueMultipliers": {
 		"ArmorMultiplierVehicle": 1.0,
