@@ -1,44 +1,46 @@
 {
 	"Custom": {
 		"AssemblyVariant": {
-			"PrefabID": "Kanazuchi",
+			"PrefabID": "Tengu",
 			"Exclude": false,
 			"Include": true
 		}
 	},
 	"CustomParts": {
 		"SquadInfo": {
-			"Troopers": 4,
-			"UnitSize": 0.45,
+			"Troopers": 6,
+			"UnitSize": 0.4,
 			"Hardpoints": {
-				"Energy": "RightArm",
-				"Ballistic": "LeftLeg",
-				"Missile": "LeftLeg",
-				"AntiPersonel": "RightArm"
+				"Energy": "RightTorso",
+				"Ballistic": "RightTorso",
+				"Missile": "RightTorso",
+				"AntiPersonel": "RightTorso"
 			}
-		}
+		},
+		"ArmsCountedAsLegs": true,
+		"FiringArc": 360
 	},
 	"Description": {
-		"Cost": 10000,
+		"Cost": 15000,
 		"Rarity": 0,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Kanazuchi Battle Armor",
-		"Id": "chassisdef_ba_kanazuchi",
-		"Name": "Kanazuchi Battle Armor",
-		"Details": "The Kanazuchi is a Draconis Combine battle armor design, one of the heaviest to come from that realm. Cased in plentiful armor (for battle armor) and armed with a mech-scale Medium Laser as well as backup SRMs, the Kanazuchi is a heavy hitting suit. However, that firepower comes at the cost of speed: the Kanazuchi is extremely slow and lacks any kind of jump jet capability, making it largely useful for urban defense, where the tight quarters ensure enemies come to it.",
-		"Icon": "uixTxrIcon_kanazuchi"
+		"UIName": "Tengu Battle Armor",
+		"Id": "chassisdef_ba_tengu",
+		"Name": "Tengu Battle Armor",
+		"Details": "One of the so-called Demon Series of battle armor suits created by the Word of Blake, the Tengu appears to have been a sort of tech demonstration for the series, intending to creat an almost omnimech esque battle armor suit. While that lofty goal seems to have not been reached, the Tengu remains a potent threat, combining solid armor and maneuverability with strong weaponry. The Tengu's main armament is a Battle Armor-scale Plasma Rifle, capable of dealing significant damage and heat to even hardened targets. Additionally, for light work, it carries a SMG.",
+		"Icon": "uixTxrIcon_tengu"
 	},
 	"MovementCapDefID": "movedef_wasp_WSP-1A",
 	"PathingCapDefID": "pathingdef_light",
-	"HardpointDataDefID": "hardpointdatadef_kanazuchi",
-	"PrefabIdentifier": "chrprfmech_kanazuchibase-001",
-	"PrefabBase": "kanazuchi",
+	"HardpointDataDefID": "hardpointdatadef_shrike",
+	"PrefabIdentifier": "chrprfmech_shrikebase-001",
+	"PrefabBase": "shrike",
 	"Tonnage": 8,
 	"InitialTonnage": 0,
 	"weightClass": "LIGHT",
-	"BattleValue": 1642000,
+	"BattleValue": 95000,
 	"Heatsinks": 0,
 	"TopSpeed": 210,
 	"TurnRadius": 90,
@@ -70,10 +72,6 @@
 			"Location": "Head",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
-					"Omni": false
-				},
-				{
 					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				},
@@ -90,20 +88,25 @@
 		},
 		{
 			"Location": "LeftArm",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 0,
+			"MaxArmor": 100,
 			"MaxRearArmor": -1,
-			"InternalStructure": 1
+			"InternalStructure": 5
 		},
 		{
 			"Location": "LeftTorso",
 			"Hardpoints": [
-				{
-					"WeaponMount": "Energy",
-					"Omni": false
-				},
 				{
 					"WeaponMount": "AntiPersonnel",
 					"Omni": false
@@ -123,10 +126,6 @@
 			"Location": "CenterTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
-					"Omni": false
-				},
-				{
 					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				},
@@ -145,10 +144,6 @@
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
-					"Omni": false
-				},
-				{
 					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				},
@@ -165,12 +160,21 @@
 		},
 		{
 			"Location": "RightArm",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 0,
+			"MaxArmor": 100,
 			"MaxRearArmor": -1,
-			"InternalStructure": 1
+			"InternalStructure": 5
 		},
 		{
 			"Location": "LeftLeg",
@@ -235,7 +239,7 @@
 			"z": 0
 		}
 	],
-	"VariantName": "KNZ-BA",
+	"VariantName": "TENGU-BA",
 	"ChassisTags": {
 		"items": [
 			"ProtoMech",
@@ -244,7 +248,7 @@
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Battle Armor",
-	"YangsThoughts": "The Kanazuchi is a Draconis Combine battle armor design, one of the heaviest to come from that realm. Cased in plentiful armor (for battle armor) and armed with a mech-scale Medium Laser as well as backup SRMs, the Kanazuchi is a heavy hitting suit. However, that firepower comes at the cost of speed: the Kanazuchi is extremely slow and lacks any kind of jump jet capability, making it largely useful for urban defense, where the tight quarters ensure enemies come to it.",
+	"YangsThoughts": "One of the so-called Demon Series of battle armor suits created by the Word of Blake, the Tengu appears to have been a sort of tech demonstration for the series, intending to creat an almost omnimech esque battle armor suit. While that lofty goal seems to have not been reached, the Tengu remains a potent threat, combining solid armor and maneuverability with strong weaponry. The Tengu's main armament is a Battle Armor-scale Plasma Rifle, capable of dealing significant damage and heat to even hardened targets. Additionally, for light work, it carries a SMG.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "LeftLeg",
@@ -366,22 +370,11 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "Head",
-			"ComponentDefID": "Gear_Battle_Armor_Claw",
-			"SimGameUID": null,
-			"ComponentDefType": "Upgrade",
-			"HardpointSlot": 0,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
 			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "Gear_Battle_Armor_Claw",
+			"ComponentDefID": "Gear_JumpJet_BA_Standard",
 			"SimGameUID": null,
-			"ComponentDefType": "Upgrade",
-			"HardpointSlot": 0,
+			"ComponentDefType": "JumpJet",
+			"HardpointSlot": -1,
 			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": null,
@@ -389,10 +382,10 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "Gear_Battle_Armor_Claw",
+			"ComponentDefID": "Gear_JumpJet_BA_Standard",
 			"SimGameUID": null,
-			"ComponentDefType": "Upgrade",
-			"HardpointSlot": 0,
+			"ComponentDefType": "JumpJet",
+			"HardpointSlot": -1,
 			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": null,
@@ -400,10 +393,43 @@
 		},
 		{
 			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Gear_Battle_Armor_Claw",
+			"ComponentDefID": "Gear_JumpJet_BA_Standard",
 			"SimGameUID": null,
-			"ComponentDefType": "Upgrade",
-			"HardpointSlot": 0,
+			"ComponentDefType": "JumpJet",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "Head",
+			"ComponentDefID": "Gear_JumpJet_BA_Standard",
+			"SimGameUID": null,
+			"ComponentDefType": "JumpJet",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightArm",
+			"ComponentDefID": "Gear_JumpJet_BA_Standard",
+			"SimGameUID": null,
+			"ComponentDefType": "JumpJet",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftArm",
+			"ComponentDefID": "Gear_JumpJet_BA_Standard",
+			"SimGameUID": null,
+			"ComponentDefType": "JumpJet",
+			"HardpointSlot": -1,
 			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": null,

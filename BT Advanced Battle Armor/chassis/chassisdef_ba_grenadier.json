@@ -1,7 +1,7 @@
 {
 	"Custom": {
 		"AssemblyVariant": {
-			"PrefabID": "Kanazuchi",
+			"PrefabID": "Grenadier",
 			"Exclude": false,
 			"Include": true
 		}
@@ -9,12 +9,12 @@
 	"CustomParts": {
 		"SquadInfo": {
 			"Troopers": 4,
-			"UnitSize": 0.45,
+			"UnitSize": 0.5,
 			"Hardpoints": {
-				"Energy": "RightArm",
-				"Ballistic": "LeftLeg",
-				"Missile": "LeftLeg",
-				"AntiPersonel": "RightArm"
+				"Energy": "LeftArm",
+				"Ballistic": "LeftArm",
+				"Missile": "LeftTorso",
+				"AntiPersonel": "LeftArm"
 			}
 		}
 	},
@@ -24,17 +24,17 @@
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Kanazuchi Battle Armor",
-		"Id": "chassisdef_ba_kanazuchi",
-		"Name": "Kanazuchi Battle Armor",
-		"Details": "The Kanazuchi is a Draconis Combine battle armor design, one of the heaviest to come from that realm. Cased in plentiful armor (for battle armor) and armed with a mech-scale Medium Laser as well as backup SRMs, the Kanazuchi is a heavy hitting suit. However, that firepower comes at the cost of speed: the Kanazuchi is extremely slow and lacks any kind of jump jet capability, making it largely useful for urban defense, where the tight quarters ensure enemies come to it.",
-		"Icon": "uixTxrIcon_kanazuchi"
+		"UIName": "Grenadier Battle Armor",
+		"Id": "chassisdef_ba_grenadier",
+		"Name": "Grenadier Battle Armor",
+		"Details": "The heaviest Battle Armor deployed by the Federated Suns, the Grenadier exists to carry a dedicated SRM-4 rack into combat. Unlike normal BA-scale SRMs though, the Grenadier's Heavy SRM-4 carries a total of 7 reloads per launcher, giving it extreme endurance in the field compared to most missiles carried by battle armor. Otherwise, the Grenadier carries a Light Recoilless Rifle for additional firepower. The armor though is rather poor on the Grenadier, leading to it needing some cleverness in terms of deployment for maximum effectiveness.",
+		"Icon": "uixTxrIcon_grenadier"
 	},
 	"MovementCapDefID": "movedef_wasp_WSP-1A",
 	"PathingCapDefID": "pathingdef_light",
-	"HardpointDataDefID": "hardpointdatadef_kanazuchi",
-	"PrefabIdentifier": "chrprfmech_kanazuchibase-001",
-	"PrefabBase": "kanazuchi",
+	"HardpointDataDefID": "hardpointdatadef_icarusii",
+	"PrefabIdentifier": "chrprfmech_icarusiibase-001",
+	"PrefabBase": "icarusii",
 	"Tonnage": 8,
 	"InitialTonnage": 0,
 	"weightClass": "LIGHT",
@@ -70,7 +70,7 @@
 			"Location": "Head",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Missile",
 					"Omni": false
 				},
 				{
@@ -101,7 +101,7 @@
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Missile",
 					"Omni": false
 				},
 				{
@@ -123,7 +123,7 @@
 			"Location": "CenterTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Missile",
 					"Omni": false
 				},
 				{
@@ -145,7 +145,7 @@
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Missile",
 					"Omni": false
 				},
 				{
@@ -235,7 +235,7 @@
 			"z": 0
 		}
 	],
-	"VariantName": "KNZ-BA",
+	"VariantName": "GRD-BA",
 	"ChassisTags": {
 		"items": [
 			"ProtoMech",
@@ -244,7 +244,7 @@
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Battle Armor",
-	"YangsThoughts": "The Kanazuchi is a Draconis Combine battle armor design, one of the heaviest to come from that realm. Cased in plentiful armor (for battle armor) and armed with a mech-scale Medium Laser as well as backup SRMs, the Kanazuchi is a heavy hitting suit. However, that firepower comes at the cost of speed: the Kanazuchi is extremely slow and lacks any kind of jump jet capability, making it largely useful for urban defense, where the tight quarters ensure enemies come to it.",
+	"YangsThoughts": "The heaviest Battle Armor deployed by the Federated Suns, the Grenadier exists to carry a dedicated SRM-4 rack into combat. Unlike normal BA-scale SRMs though, the Grenadier's Heavy SRM-4 carries a total of 7 reloads per launcher, giving it extreme endurance in the field compared to most missiles carried by battle armor. Otherwise, the Grenadier carries a Light Recoilless Rifle for additional firepower. The armor though is rather poor on the Grenadier, leading to it needing some cleverness in terms of deployment for maximum effectiveness.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "LeftLeg",
@@ -268,7 +268,7 @@
 		},
 		{
 			"MountedLocation": "LeftLeg",
-			"ComponentDefID": "emod_bacore_010",
+			"ComponentDefID": "emod_bacore_015",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -367,9 +367,9 @@
 		},
 		{
 			"MountedLocation": "Head",
-			"ComponentDefID": "Gear_Battle_Armor_Claw",
+			"ComponentDefID": "Weapon_SRM_SRM4_Heavy_BA",
 			"SimGameUID": null,
-			"ComponentDefType": "Upgrade",
+			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
 			"GUID": null,
 			"DamageLevel": "Functional",
@@ -378,9 +378,9 @@
 		},
 		{
 			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "Gear_Battle_Armor_Claw",
+			"ComponentDefID": "Weapon_SRM_SRM4_Heavy_BA",
 			"SimGameUID": null,
-			"ComponentDefType": "Upgrade",
+			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
 			"GUID": null,
 			"DamageLevel": "Functional",
@@ -389,9 +389,9 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "Gear_Battle_Armor_Claw",
+			"ComponentDefID": "Weapon_SRM_SRM4_Heavy_BA",
 			"SimGameUID": null,
-			"ComponentDefType": "Upgrade",
+			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
 			"GUID": null,
 			"DamageLevel": "Functional",
@@ -400,9 +400,9 @@
 		},
 		{
 			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Gear_Battle_Armor_Claw",
+			"ComponentDefID": "Weapon_SRM_SRM4_Heavy_BA",
 			"SimGameUID": null,
-			"ComponentDefType": "Upgrade",
+			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
 			"GUID": null,
 			"DamageLevel": "Functional",
