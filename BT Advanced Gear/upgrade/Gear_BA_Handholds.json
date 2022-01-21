@@ -1,0 +1,74 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "Handhold"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"BAMounts"
+			]
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 85000,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "Corean",
+		"Model": "Clawgrip",
+		"UIName": "BA Handholds",
+		"Id": "Gear_BA_Handholds",
+		"Name": "Battle Armor Handholds",
+		"Details": "This item is, essentially, a set of handholds and gripping points for Battle Armor to cling to on the exterior of a BattleMech. Normally, only OmniMechs come with such handholds in their basic configuration but with a little elbow grease such handholds can easily be installed on proper BattleMechs, letting any mech carry a squad of Battle Armor into the fray.",
+		"Icon": "barbed-nails"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0.5,
+	"AllowedLocations": "CenterTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-getHasBattleArmorMounts",
+				"Name": "getHasBattleArmorMounts",
+				"Details": "getHasBattleArmorMounts",
+				"Icon": "uixSvgIcon_ability_precisionstrike"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "HasBattleArmorMounts",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"lv-shares-sensors"
+		],
+		"tagSetSourceFile": ""
+	}
+}
