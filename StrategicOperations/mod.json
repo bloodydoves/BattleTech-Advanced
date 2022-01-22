@@ -2,7 +2,7 @@
 	"Name": "StrategicOperations",
 	"DLL": "StrategicOperations.dll",
 	"Hidden": true,
-	"Version": "2.0.2.7",
+	"Version": "2.0.2.8",
 	"Description": "",
 	"Author": "T-Bone",
 	"Website": "https://github.com/ajkroeg/StrategicOperations",
@@ -129,20 +129,25 @@
 			"Item.UpgradeDef.Gear_Contract_Aerospace_Permanent_Batu"
 		],
 		"strafeWaves": 2,
-		"AI_FactionBeacons": {
-			"ClanGhostBear": [
-				"Item.UpgradeDef.Gear_TurretBeacon_lightning"
-			]
-		},
-		"commandAbilities_AI": {
-			"ClanGhostBear": [
-				{
-					"AbilityID": "AbilityDefCMD_Strafe",
-					"AddChance": 0.0,
-					"DiffMod": 0.0
-				}
-			]
-		},
+		"commandAbilities_AI": [
+			{
+				"AbilityDefID": "AbilityDefCMD_Strafe_AI",
+				"FactionIDs": [
+					"ClanGhostBear",
+					"ClanWolf"
+				],
+				"AddChance": 0.0,
+				"DiffMod": 0.0,
+				"MaxUsersAddedPerContract": 0,
+				"AvailableBeacons": [
+					{
+						"UnitDefID": "vehicledef_MECHBUSTER_AERO",
+						"Weight": 10,
+						"StrafeWaves": 3
+					}
+				]
+			}
+		],
 		"AI_SpawnBehavior": [
 			{
 				"Tag": "ProtoMech",
