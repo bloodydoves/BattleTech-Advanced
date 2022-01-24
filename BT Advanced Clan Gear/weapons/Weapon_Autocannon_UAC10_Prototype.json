@@ -7,9 +7,9 @@
 		],
 		"BonusDescriptions": {
 			"Bonuses": [
-				"VariableBurstCount: 2",
 				"WpnRecoil: 3",
-				"WeaponJAMFlat: 10"
+				"WeaponJAMFlat: 10",
+				"VariableBurstCount: 2"
 			]
 		}
 	},
@@ -17,16 +17,16 @@
 	"Type": "Autocannon",
 	"WeaponSubType": "AC10",
 	"MinRange": 0,
-	"MaxRange": 550,
+	"MaxRange": 720,
 	"RangeSplit": [
-		150,
-		350,
-		450
+		180,
+		360,
+		540
 	],
 	"AmmoCategory": "UAC10",
 	"StartingAmmoCapacity": 0,
-	"HeatGenerated": 19,
-	"Damage": 60,
+	"HeatGenerated": 16,
+	"Damage": 55,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
 	"EvasivePipsIgnored": 0,
@@ -36,50 +36,50 @@
 	"CriticalChanceMultiplier": 1,
 	"AOECapable": false,
 	"IndirectFireCapable": false,
-	"RefireModifier": 3,
-	"ShotsWhenFired": 2,
+	"RefireModifier": 4,
+	"ShotsWhenFired": 1,
 	"ProjectilesPerShot": 1,
-	"AttackRecoil": 3,
-	"Instability": 15,
-	"FireDelayMultiplier": 0.2,
-	"FireTerrainChance": 0,
-	"WeaponEffectID": "WeaponEffect-Weapon_AC10_Single",
+	"AttackRecoil": 2,
+	"Instability": 20,
+	"WeaponEffectID": "WeaponEffect-Weapon_AC10",
 	"Description": {
-		"Cost": 900000,
-		"Rarity": 10,
+		"Cost": 240000,
+		"Rarity": 0,
 		"Purchasable": true,
-		"Manufacturer": "CLAN",
+		"Manufacturer": "Clans",
 		"Model": "Heavy Autocannon",
-		"UIName": "Ultra AC/10 (C)",
-		"Id": "Weapon_Autocannon_AC10_CLAN",
-		"Name": "UAC/10 (C)",
-		"Details": "One of the most powerful and efficient weapons mounted in combat, AC/10s are known for their heavy damage and ability to stagger opponents. Like all Autocannon weaponry, AC/10s suffer from recoil effects from continuous fire. \n\n<b><color=#ffcc00>Uses UAC10 Ammo.</color></b> \n\n <b><color=#00ffff>Left Click on Chance to hit during battle to switch firing mode</color> </b>",
+		"UIName": "EC UAC/10",
+		"Id": "Weapon_Autocannon_UAC10_Prototype",
+		"Name": "EC UAC/10",
+		"Details": "An odd and transitory weapon, the Early Clan (or EC) Ultra Autocannon/10 serves as a bridge between the Inner Sphere AC/10 and the later true Clan-grade UAC/10. Dating to the Clan Golden Century, the EC UAC/10 bears much in common with its later Inner Sphere counterpart, showing the similar paths technology would take over the centuries. The EC UAC/10 was largely not a great weapon and was later abandoned by the Clans once they developed a true Clantech version of the weapon.",
 		"Icon": "uixSvgIcon_weapon_Ballistic"
 	},
-	"BonusValueA": "+3 Recoil",
-	"BonusValueB": "Ultra",
+	"BonusValueA": "",
+	"BonusValueB": "",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",
 	"PrefabIdentifier": "AC10",
 	"BattleValue": 0,
-	"InventorySize": 4,
-	"Tonnage": 10,
+	"InventorySize": 8,
+	"Tonnage": 13,
 	"AllowedLocations": "All",
 	"DisallowedLocations": "All",
-	"ImprovedBallistic": true,
 	"CriticalComponent": false,
+	"ImprovedBallistic": true,
 	"Modes": [
 		{
 			"Id": "x1",
 			"UIName": "x1",
 			"isBaseMode": false,
-			"ShotsWhenFired": -1,
-			"HeatGenerated": -9
+			"ShotsWhenFired": 0
 		},
 		{
 			"Id": "x2",
 			"UIName": "x2",
 			"isBaseMode": true,
+			"ShotsWhenFired": 1,
+			"HeatGenerated": 4,
+			"FireDelayMultiplier": 0.3,
 			"FlatJammingChance": 0.1
 		}
 	],
