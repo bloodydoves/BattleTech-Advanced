@@ -1,17 +1,22 @@
 {
-    "Name": "MonsterMashup",
-    "Enabled": true,
+	"Name": "MonsterMashup",
+	"Enabled": true,
 	"Hidden": true,
-    "Version": "0.3.0",
-    "Description": "Builds monster units by mashing bases and turrets",
-    "Author": "FrostRaptor",
-    "Website": "https://github.com/IceRaptor/MonsterMashup/",
-    "Contact": "",
-    "DLL": "MonsterMashup.dll",
-    "DependsOn" : [ "IRBTModUtils", "CustomComponents", "Custom Ammo Categories", "CustomUnits" ],
-    "OptionallyDependsOn": [ ],
-    "ConflictsWith": [ ],
-	"Manifest" : [
+	"Version": "0.3.0",
+	"Description": "Builds monster units by mashing bases and turrets",
+	"Author": "FrostRaptor",
+	"Website": "https://github.com/IceRaptor/MonsterMashup/",
+	"Contact": "",
+	"DLL": "MonsterMashup.dll",
+	"DependsOn": [
+		"IRBTModUtils",
+		"CustomComponents",
+		"Custom Ammo Categories",
+		"CustomUnits"
+	],
+	"OptionallyDependsOn": [],
+	"ConflictsWith": [],
+	"Manifest": [
 		{
 			"Type": "TurretChassisDef",
 			"Path": "turretChassis",
@@ -36,19 +41,18 @@
 			"Type": "VehicleChassisDef",
 			"Path": "vehicleChassis",
 			"AddToDB": true
-		},		
-		{ 
-			"Type": "ContractOverride", 
-			"Path": "contract_override" 
 		},
+		{
+			"Type": "ContractOverride",
+			"Path": "contract_override"
+		}
 	],
-    "Settings": {
-        "Debug" : true,
-        "Trace" : false,
-		"DeveloperOptions" : {
-			"EnableFootprintVis" : false,
-			"DebugDamageLocationKillsLinkedTurrets" : true
-		}			
-    },
-
+	"Settings": {
+		"Debug": true,
+		"Trace": false,
+		"DeveloperOptions": {
+			"EnableFootprintVis": false,
+			"DebugDamageLocationKillsLinkedTurrets": true
+		}
+	}
 }
