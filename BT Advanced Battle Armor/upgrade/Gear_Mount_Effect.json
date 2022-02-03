@@ -27,7 +27,7 @@
 		"Manufacturer": "Generic",
 		"Model": "Generic",
 		"UIName": "Magnetic Clamps",
-		"Id": "Gear_Mag_Clamps",
+		"Id": "Gear_Mount_Effect",
 		"Name": "Magnetic Clamps",
 		"Details": "Magnetic clamps are designed to allow Battle Armor to attach itself to a mech so that they can be carried around. Without clamps, a BA suit cannot be carried.",
 		"Icon": "barbed-nails"
@@ -43,7 +43,25 @@
 	"AllowedLocations": "All",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
-	"statusEffects": [],
+	"statusEffects": [
+		{
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "ActiveAbility",
+			"Description": {
+				"Id": "AbilityDefBattleArmorMount_test",
+				"Name": "AbilityDefBattleArmorMount THING",
+				"Details": "Activated ability (uses Firing action). Performs a AbilityDefBattleArmorMount.",
+				"Icon": "barbed-nails"
+			},
+			"activeAbilityEffectData": {
+				"abilityName": "AbilityDefBattleArmorMount"
+			}
+		}
+	],
 	"ComponentTags": {
 		"items": [
 			"BLACKLISTED"
