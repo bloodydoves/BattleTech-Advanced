@@ -1,0 +1,76 @@
+{
+	"Custom": {
+		"Category": {
+			"CategoryID": "BAGear"
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"JumpDistance: +10%"
+			]
+		},
+		"Flags": {
+			"flags": [
+				"no_salvage",
+				"not_broken"
+			]
+		}
+	},
+	"StatName": null,
+	"Description": {
+		"Cost": 15000,
+		"Rarity": 5,
+		"Purchasable": true,
+		"Manufacturer": "Corean",
+		"Model": "Mono-Wing",
+		"UIName": "BA Parafoil",
+		"Id": "Gear_Parafoil_BA",
+		"Name": "Battle Armor Parafoil",
+		"Details": "The BA Parafoil is essentially a deployable, controllable, parachute equippable by battle armor. The parafoil allows a suit of battle armor to better control its maneuverability in the air, whether that's from a HALO drop or from activating jump jets in the heat of combat. The parafoil essentially increases the effectiveness of battle armor jumpjets.",
+		"Icon": "steelwings"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0.1,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+		  "durationData": {
+			"duration": -1,
+			"stackLimit": 1
+		  },
+		  "targetingData": {
+			"effectTriggerType": "Passive",
+			"effectTargetType": "Creator",
+			"showInTargetPreview": false,
+			"showInStatusPanel": false
+		  },
+		  "effectType": "StatisticEffect",
+		  "Description": {
+			"Id": "StatusEffect-BAParafoilJumpDistance",
+			"Name": "JUMP DISTANCE INCREASED",
+			"Details": "The Partial Wing System increases Jump Jet jump distance by 30%",
+			"Icon": "uixSvgIcon_equipment_Gyro"
+		  },
+		  "nature": "Buff",
+		  "statisticData": {
+			"statName": "JumpDistanceMultiplier",
+			"operation": "Float_Multiply",
+			"modValue": "1.1",
+			"modType": "System.Single"
+		  }
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}

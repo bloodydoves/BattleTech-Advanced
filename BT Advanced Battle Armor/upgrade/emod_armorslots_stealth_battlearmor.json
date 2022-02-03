@@ -8,12 +8,6 @@
 		},
 		"Category": [
 			{
-				"CategoryID": "Armor"
-			},
-			{
-				"CategoryID": "StealthArmor"
-			},
-			{
 				"CategoryID": "BAGear"
 			}
 		],
@@ -29,9 +23,11 @@
 		},
 		"BonusDescriptions": {
 			"Bonuses": [
+				"Defense: +2",
 				"EvaMax: +1",
 				"EvaPips: +1",
-				"Visibility: -30%"
+				"Visibility: -30%",
+				"SensorLockImmune"
 			]
 		}
 	},
@@ -70,7 +66,31 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "MaxEvasion",
+				"Id": "StatusEffect_BAStealthDefense",
+				"Name": "EVASIVE MOVE",
+				"Details": "This unit generates an extra EVASIVE charge from movement actions (up to its maximum).",
+				"Icon": "uixSvgIcon_action_evasivemove"
+			},
+			"statisticData": {
+				"statName": "ToHitThisActor",
+				"operation": "Float_Add",
+				"modValue": "2.0",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator"
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect_BAStealthMaxEvasion",
 				"Name": "EVASIVE MOVE",
 				"Details": "This unit generates an extra EVASIVE charge from movement actions (up to its maximum).",
 				"Icon": "uixSvgIcon_action_evasivemove"
@@ -95,7 +115,7 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "GainEvasion",
+				"Id": "StatusEffect_BAStealthGainEvasion",
 				"Name": "EVASIVE MOVE",
 				"Details": "This unit generates an extra EVASIVE charge from movement actions (up to its maximum).",
 				"Icon": "uixSvgIcon_action_evasivemove"
@@ -132,10 +152,10 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "StealthArmor-visi",
+				"Id": "StatusEffect_BAStealthVisibility",
 				"Name": "Active Stealth Armor",
-				"Details": "Provides increased Evasive bonus and reduced Visibility.",
-				"Icon": "uixSvgIcon_action_end"
+				"Details": "Provides bonuses to evasion and defense, reduces visibility, and provides immunity to sensor locks.",
+				"Icon": "StealthArmor"
 			},
 			"nature": "Buff",
 			"statisticData": {
@@ -158,6 +178,30 @@
 			"vfxData": null,
 			"instantModData": null,
 			"poorlyMaintainedEffectData": null
+		},
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect_BAStealthLockImmunity",
+				"Name": "Sensor Ghost",
+				"Details": "This unit is immune to sensor lock.",
+				"Icon": "specter"
+			},
+			"statisticData": {
+				"statName": "EvasiveSafeFromSensorLock",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			},
+			"nature": "Buff"
 		}
 	],
 	"ComponentTags": {
