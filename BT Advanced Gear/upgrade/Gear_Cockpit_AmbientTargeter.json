@@ -19,8 +19,8 @@
 		},
 		"BonusDescriptions": {
 			"Bonuses": [
-				"ATSTargeting: +1",
-				"ATSSelf: -3",
+				"ATSTargeting: +2",
+				"ATSSelf: -4",
 				"AmbientTargeterRadius: 150",
 				"IsCockpit"
 			]
@@ -91,48 +91,47 @@
 						"Id": "ATS_Targeting",
 						"Name": "ATS Targeting",
 						"Details": "An Ambient Targeting System is improving this unit's targeting systems.",
-						"Icon": "uixSvgIcon_equipment_Cockpit"
+						"Icon": "AdvancedTC"
 					},
 					"statisticData": {
 						"statName": "AccuracyModifier",
 						"operation": "Float_Add",
-						"modValue": "-1.0",
+						"modValue": "-2.0",
 						"modType": "System.Single",
 						"targetCollection": "Weapon"
 					},
 					"nature": "Buff"
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "ATS_Self_Debuff",
+						"Name": "ATS Targeting Debuff",
+						"Details": "An Ambient Targeting System is installed, making this unit's weapon accuracy significantly worse.",
+						"Icon": "AdvancedTC"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "AccuracyModifier",
+						"operation": "Float_Add",
+						"modValue": "4.0",
+						"modType": "System.Single",
+						"targetCollection": "Weapon"
+					}
 				}
 			]
 		}
 	],
-	"statusEffects": [
-		{
-			"durationData": {
-				"duration": -1,
-				"stackLimit": -1
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"effectTargetType": "Creator",
-				"showInStatusPanel": true
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "ATS_Self_Debuff",
-				"Name": "ATS Targeting Debuff",
-				"Details": "An Ambient Targeting System is installed, making this unit's weapon accuracy significantly worse.",
-				"Icon": "uixSvgIcon_equipment_Cockpit"
-			},
-			"nature": "Buff",
-			"statisticData": {
-				"statName": "AccuracyModifier",
-				"operation": "Float_Add",
-				"modValue": "3.0",
-				"modType": "System.Single",
-				"targetCollection": "Weapon"
-			}
-		}
-	],
+	"statusEffects": [],
 	"ComponentTags": {
 		"items": [
 			"component_type_stock"
