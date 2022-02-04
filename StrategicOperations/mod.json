@@ -2,7 +2,7 @@
 	"Name": "StrategicOperations",
 	"DLL": "StrategicOperations.dll",
 	"Hidden": true,
-	"Version": "2.0.3.0",
+	"Version": "2.0.3.1",
 	"Description": "",
 	"Author": "T-Bone",
 	"Website": "https://github.com/ajkroeg/StrategicOperations",
@@ -160,6 +160,7 @@
 		"BattleArmorMountAndSwarmID": "AbilityDefBattleArmorMount",
 		"BattleArmorDeSwarmRoll": "AbilityDefDeSwarmerRoll",
 		"BattleArmorDeSwarmSwat": "AbilityDefDeSwarmerSwat",
+		"BattleArmorDeSwarmSwat": "AbilityDefDeSwarmerSwat",
 		"ArmActuatorCategoryIDs": [
 			"ArmShoulder",
 			"ArmUpperActuator",
@@ -172,85 +173,118 @@
 			"Gear_B_Pod"
 		],
 		"BPodsAutoActivate": false,
-		"BATargetEffect": {
-			"ID": "BA_AccurateFire",
-			"Name": "Battle Armor - SwarmingAccuracy",
-			"description": "Battle Armor has greatly increased accuracy against the unit it is swarming.",
-			"effectDataJO": [
-				{
-					"durationData": {},
-					"targetingData": {
-						"effectTriggerType": "Passive",
-						"effectTargetType": "Creator",
-						"showInStatusPanel": true
+		"BATargetEffects": [
+			{
+				"ID": "BA_AccurateFire",
+				"TargetEffectType": "SWARM",
+				"Name": "Battle Armor - SwarmingAccuracy",
+				"description": "Battle Armor has greatly increased accuracy against the unit it is swarming.",
+				"effectDataJO": [
+					{
+						"durationData": {},
+						"targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator",
+							"showInStatusPanel": true
+						},
+						"effectType": "StatisticEffect",
+						"Description": {
+							"Id": "BA_EasyTargetingPassive",
+							"Name": "Easy shots",
+							"Details": "Battle Armor has increased accuracy while swarming.",
+							"Icon": "allied-star"
+						},
+						"nature": "Buff",
+						"statisticData": {
+							"statName": "AccuracyModifier",
+							"operation": "Set",
+							"modValue": "-9001",
+							"modType": "System.Single"
+						}
 					},
-					"effectType": "StatisticEffect",
-					"Description": {
-						"Id": "BA_EasyTargetingPassive",
-						"Name": "Easy shots",
-						"Details": "Battle Armor has increased accuracy while swarming.",
-						"Icon": "allied-star"
+					{
+						"durationData": {
+							"duration": -1,
+							"stackLimit": -1
+						},
+						"targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator"
+						},
+						"effectType": "StatisticEffect",
+						"Description": {
+							"Id": "BA_CALLED_SHOT",
+							"Name": "BA Called Shot",
+							"Details": "Called Shots twice as reliable when swarming",
+							"Icon": "uixSvgIcon_ability_mastertactician"
+						},
+						"statisticData": {
+							"statName": "CalledShotBonusMultiplier",
+							"operation": "Float_Multiply",
+							"modValue": "9001.0",
+							"modType": "System.Single"
+						}
 					},
-					"nature": "Buff",
-					"statisticData": {
-						"statName": "AccuracyModifier",
-						"operation": "Set",
-						"modValue": "-9001",
-						"modType": "System.Single"
+					{
+						"durationData": {
+							"duration": -1,
+							"stackLimit": -1
+						},
+						"targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator",
+							"showInTargetPreview": false,
+							"showInStatusPanel": false
+						},
+						"effectType": "StatisticEffect",
+						"Description": {
+							"Id": "BA_FocusFireCluster",
+							"Name": "BA ClusterFuck",
+							"Details": "Better clustering for BA while swarming.",
+							"Icon": "UixSvgIcon_specialEquip_System"
+						},
+						"statisticData": {
+							"statName": "ClusteringModifier",
+							"operation": "Float_Add",
+							"modValue": "9001",
+							"modType": "System.Single",
+							"targetCollection": "Weapon"
+						},
+						"nature": "Buff"
 					}
-				},
-				{
-					"durationData": {
-						"duration": -1,
-						"stackLimit": -1
-					},
-					"targetingData": {
-						"effectTriggerType": "Passive",
-						"effectTargetType": "Creator"
-					},
-					"effectType": "StatisticEffect",
-					"Description": {
-						"Id": "BA_CALLED_SHOT",
-						"Name": "BA Called Shot",
-						"Details": "Called Shots twice as reliable when swarming",
-						"Icon": "uixSvgIcon_ability_mastertactician"
-					},
-					"statisticData": {
-						"statName": "CalledShotBonusMultiplier",
-						"operation": "Float_Multiply",
-						"modValue": "9001.0",
-						"modType": "System.Single"
+				]
+			},
+			{
+				"ID": "BA_MountedFireDebuff",
+				"TargetEffectType": "MOUNT",
+				"Name": "Battle Armor - Mounted Debuff",
+				"description": "Battle Armor has decreased accuracy when firing while mounted.",
+				"effectDataJO": [
+					{
+						"durationData": {},
+						"targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator",
+							"showInStatusPanel": true
+						},
+						"effectType": "StatisticEffect",
+						"Description": {
+							"Id": "BA_EasyTargetingPassive",
+							"Name": "Easy shots",
+							"Details": "Battle Armor has decreased accuracy while mounted.",
+							"Icon": "allied-star"
+						},
+						"nature": "Buff",
+						"statisticData": {
+							"statName": "AccuracyModifier",
+							"operation": "Set",
+							"modValue": "8",
+							"modType": "System.Single"
+						}
 					}
-				},
-				{
-					"durationData": {
-						"duration": -1,
-						"stackLimit": -1
-					},
-					"targetingData": {
-						"effectTriggerType": "Passive",
-						"effectTargetType": "Creator",
-						"showInTargetPreview": false,
-						"showInStatusPanel": false
-					},
-					"effectType": "StatisticEffect",
-					"Description": {
-						"Id": "BA_FocusFireCluster",
-						"Name": "BA ClusterFuck",
-						"Details": "Better clustering for BA while swarming.",
-						"Icon": "UixSvgIcon_specialEquip_System"
-					},
-					"statisticData": {
-						"statName": "ClusteringModifier",
-						"operation": "Float_Add",
-						"modValue": "9001",
-						"modType": "System.Single",
-						"targetCollection": "Weapon"
-					},
-					"nature": "Buff"
-				}
-			]
-		},
+				]
+			}
+		],
 		"BattleArmorFactionAssociations": [
 			{
 				"FactionIDs": [
