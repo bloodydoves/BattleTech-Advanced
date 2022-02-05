@@ -2,8 +2,8 @@
 	"Description": {
 		"Id": "AbilityDefDeSwarmerMovement",
 		"Name": "Erratic Maneuvering",
-		"Details": "ACTION: Do fancy footworks and barrel rolls to get rid of little grabby bois. But it's hard to shoot straight.",
-		"Icon": "uixSvgIcon_skullAtlas"
+		"Details": "ACTION: Do fancy footworks and barrel rolls to get rid of swarming Battle Armor but suffer a significant attack penalty while doing so.",
+		"Icon": "falling"
 	},
 	"ActivationTime": "ConsumedByFiring",
 	"ActivationCooldown": -1,
@@ -24,14 +24,14 @@
 			"Description": {
 				"Id": "StatusEffect-BattlemasterAccuracy",
 				"Name": "Overcharged Targeting",
-				"Details": "-6 Accuracy",
-				"Icon": "uixSvgIcon_skullAtlas"
+				"Details": "-10 Accuracy",
+				"Icon": "falling"
 			},
 			"nature": "Buff",
 			"statisticData": {
 				"statName": "AccuracyModifier",
 				"operation": "Float_Add",
-				"modValue": "6",
+				"modValue": "10",
 				"modType": "System.Single",
 				"additionalRules": "NotSet",
 				"targetCollection": "Weapon",
@@ -62,7 +62,7 @@
 			"statisticData": {
 				"statName": "MovementDeSwarmMinChance",
 				"operation": "Set",
-				"modValue": "0.50",
+				"modValue": "0.35",
 				"modType": "System.Single"
 			}
 		},
@@ -87,7 +87,7 @@
 			"statisticData": {
 				"statName": "MovementDeSwarmMaxChance",
 				"operation": "Set",
-				"modValue": "1.0",
+				"modValue": "0.9",
 				"modType": "System.Single"
 			}
 		},
