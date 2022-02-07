@@ -7,32 +7,39 @@
 		],
 		"BonusDescriptions": {
 			"Bonuses": [
-				"WpnAccuracy: +1",
-				"PipsIgnored: 2"
+				"PipsIgnored: 50"
+			]
+		},
+		"AmmoCost": {
+			"PerUnitCost": 20
+		},
+		"Flags": {
+			"flags": [
+				"no_salvage"
 			]
 		}
 	},
 	"Category": "AntiPersonnel",
-	"Type": "Laser",
-	"WeaponSubType": "SmallLaser",
+	"Type": "Autocannon",
+	"WeaponSubType": "AC20",
 	"MinRange": 0,
-	"MaxRange": 160,
+	"MaxRange": 5,
 	"RangeSplit": [
-		40,
-		80,
-		120
+		5,
+		5,
+		5
 	],
 	"AmmoCategory": "NotSet",
 	"StartingAmmoCapacity": 0,
-	"HeatGenerated": 5,
-	"Damage": 15,
+	"HeatGenerated": 1,
+	"Damage": 10,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
-	"EvasivePipsIgnored": 2,
+	"EvasivePipsIgnored": 50,
 	"DamageVariance": 0,
 	"HeatDamage": 0,
-	"AccuracyModifier": -1,
-	"CriticalChanceMultiplier": 1,
+	"AccuracyModifier": 0,
+	"CriticalChanceMultiplier": 1.0,
 	"AOECapable": false,
 	"IndirectFireCapable": false,
 	"RefireModifier": 0,
@@ -40,27 +47,27 @@
 	"ProjectilesPerShot": 1,
 	"AttackRecoil": 0,
 	"Instability": 0,
-	"WeaponEffectID": "WeaponEffect-Weapon_Laser_Small",
+	"WeaponEffectID": "WeaponEffect-Weapon_MachineGun",
 	"Description": {
-		"Cost": 20000,
-		"Rarity": 0,
+		"Cost": 100000,
+		"Rarity": 20,
 		"Purchasable": true,
-		"Manufacturer": "Clans",
-		"Model": "Small Laser",
-		"UIName": "BA ER S Laser (C)",
-		"Id": "Weapon_Laser_SmallLaserER_BA_Clan",
-		"Name": "BA ER S Laser (C)",
-		"Details": "Small Lasers deal superb damage for their weight and heat generation but have extremely limited range. Like all Lasers, Small Lasers enjoy a baseline accuracy bonus over other weapons.",
+		"Manufacturer": "Generic",
+		"Model": "Claw-Plach",
+		"UIName": "BA Swarm Attack",
+		"Id": "Weapon_Swarm_Attack",
+		"Name": "BA Swarm Attack",
+		"Details": "This weapon represents the effect of a Battle Claw-equipped squad of Battle Armor clawing and tearing at a mech as they swarm over it.",
 		"Icon": "battle-amor-suit"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",
-	"PrefabIdentifier": "Laser",
+	"PrefabIdentifier": "AC20",
 	"BattleValue": 0,
 	"InventorySize": 1,
-	"Tonnage": 0.2,
+	"Tonnage": 0,
 	"AllowedLocations": "All",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
@@ -68,7 +75,7 @@
 	"ComponentTags": {
 		"items": [
 			"component_type_stock",
-			"range_close"
+			"range_extreme"
 		],
 		"tagSetSourceFile": ""
 	}
