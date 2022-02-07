@@ -18,6 +18,8 @@
 			"Bonuses": [
 				"StealthRadius: 150",
 				"StealthEffect: 30%",
+				"EvaMax: +1",
+				"EvaPips: +1",
 				"HeatGenerated: 20%"
 			]
 		}
@@ -32,7 +34,7 @@
 		"Id": "Gear_Sensors_StealthField",
 		"Name": "Stealth Field",
 		"Details": "Pleased with the success of their Stealth Armor, House Liao found themselves in possession of unique technology and decided to press their advantage. Based on that armor, the Stealth Field takes the technology to the next level. Essentially a super-powered ECCM suite, the Stealth Field does not render units invisible to anything. Intead, it blankets nearby units with a 'cloaking' effect that reduces their presense on sensors dramatically. This gives the ability to sneak up on target in small groups instead of singly like with Stealth Armor. The downside of the technology is that it also causes heat gain in all affected units.",
-		"Icon": "uixSvgIcon_equipment_Cockpit"
+		"Icon": "invisible"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
@@ -83,7 +85,7 @@
 						"Id": "Field_Stealth_Spotter",
 						"Name": "Stealth Field Stealth Effect",
 						"Details": "A Stealth Field is cloaking this unit.",
-						"Icon": "uixSvgIcon_equipment_Cockpit"
+						"Icon": "invisible"
 					},
 					"statisticData": {
 						"statName": "SpottingVisibilityMultiplier",
@@ -144,7 +146,56 @@
 						"modType": "System.Single"
 					},
 					"nature": "Buff"
-				}
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator"
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "Field_Stealth_MaxEvasion",
+						"Name": "EVASIVE MOVE",
+						"Details": "This unit generates an extra EVASIVE charge from movement actions (up to its maximum).",
+						"Icon": "uixSvgIcon_action_evasivemove"
+					},
+					"statisticData": {
+						"statName": "MaxEvasivePips",
+						"operation": "Int_Add",
+						"modValue": "1",
+						"modType": "System.Int32"
+					},
+					"nature": "Buff"
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "Field_Stealth_EvasionGained",
+						"Name": "EVASIVE MOVE",
+						"Details": "This unit generates an extra EVASIVE charge from movement actions (up to its maximum).",
+						"Icon": "uixSvgIcon_action_evasivemove"
+					},
+					"statisticData": {
+						"statName": "EvasivePipsGainedAdditional",
+						"operation": "Int_Add",
+						"modValue": "1",
+						"modType": "System.Int32"
+					},
+					"nature": "Buff"
+				},
 			]
 		}
 	],

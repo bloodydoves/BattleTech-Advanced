@@ -1,0 +1,124 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/e/p/flamer"
+			}
+		],
+		"ComponentExplosion": {
+			"ExplosionDamagePerAmmo": 30,
+			"HeatDamagePerAmmo": 7,
+			"StabilityDamagePerAmmo": 30
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"PipsIgnored: 4",
+				"OHDamage: +20%",
+				"WeaponBoom: 30",
+				"PIRATEFLAMERDEBUFF: 10%",
+				"WpnCrits: -90%",
+				"AntiBA: 100%",
+				"AlwaysStartsFire"
+			]
+		}
+	},
+	"Category": "AntiPersonnel",
+	"Type": "Flamer",
+	"WeaponSubType": "Flamer",
+	"MinRange": 0,
+	"MaxRange": 120,
+	"RangeSplit": [
+		30,
+		60,
+		90
+	],
+	"AmmoCategory": "Flamer",
+	"StartingAmmoCapacity": 5,
+	"HeatGenerated": 4,
+	"Damage": 5,
+	"OverheatedDamageMultiplier": 1.2,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 4,
+	"DamageVariance": 0,
+	"HeatDamage": 5,
+	"AccuracyModifier": 0,
+	"CriticalChanceMultiplier": 0.1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 0,
+	"Instability": 0,
+	"FireOnSuccessHit": true,
+	"FireTerrainChance": 1,
+	"CantHitUnaffecedByPathing": true,
+	"TrooperSquadDamageModifier": 2,
+	"WeaponEffectID": "WeaponEffect-Weapon_Flamer",
+	"Description": {
+		"Cost": 64000,
+		"Rarity": 10,
+		"Purchasable": true,
+		"Manufacturer": "Periphery Armory, Inc.",
+		"Model": "Chemical Flamethrower",
+		"UIName": "Flammenwerfer",
+		"Id": "Weapon_Flamer_Flammenwerfer",
+		"Name": "Flammenwerfer",
+		"Details": "And old, old-school flamer with integrated fuel tanks. Effective, but potentially dangerous to the 'Mech. Because of the nature of the projected fuel, the fires continue to burn on the target for a bit.",
+		"Icon": "uixSvgIcon_weapon_Support"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "Flamer",
+	"BattleValue": 0,
+	"InventorySize": 2,
+	"Tonnage": 0.5,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": 2,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 3
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"effectTargetType": "SingleTarget",
+				"showInTargetPreview": true,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Flammenwerfer-Effect",
+				"Name": "Chemical Fuel Residue",
+				"Details": "Volatile chemicals reduce heat efficiency by 10%.",
+				"Icon": "fire-zone"
+			},
+			"nature": "Debuff",
+			"statisticData": {
+				"statName": "HeatGenerated",
+				"operation": "Float_Multiply",
+				"modValue": "1.1",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_close"
+		],
+		"tagSetSourceFile": ""
+	}
+}

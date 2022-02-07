@@ -4,7 +4,7 @@
 			"unit_generic",
 			"unit_indirectFire",
 			"unit_mech",
-			"unit_heavy",
+			"unit_medium",
 			"unit_lance_assassin",
 			"unit_role_brawler",
 			"unit_release",
@@ -44,7 +44,7 @@
 		"UIName": "ExcavatorMech EXV-1X",
 		"Id": "mechdef_excavatormech_EXV-1X",
 		"Name": "ExcavatorMech",
-		"Details": "The ExcavatorMech is an industrial digging machine, meant for digging out huge masses of earth for construction projects. The EXV-1X is a very basic refit with some cheap backwater weaponry to let the mech be used for combat if necessary. Generally though the EXV-1X is not a combat-rated machine, as even though 80 Rocket Launcher tubes and a Heavy Rifle pack a punch the mech cannot easily withstand return fire and will crumble to any sustained combat design.",
+		"Details": "The ExcavatorMech is an industrial digging machine, meant for digging out huge masses of earth for construction projects. The EXV-1X is a very basic refit with some cheap backwater weaponry to let the mech be used for combat if necessary. Generally though the EXV-1X is not a combat-rated machine, as even though 40 Rocket Launcher tubes and a Medium Rifle pack a punch the mech cannot easily withstand return fire and will crumble to any sustained combat design.",
 		"Icon": "uixTxrIcon_excavatormech"
 	},
 	"simGameMechPartCost": 880000,
@@ -62,10 +62,10 @@
 		{
 			"DamageLevel": "Functional",
 			"Location": "LeftArm",
-			"CurrentArmor": 110,
+			"CurrentArmor": 80,
 			"CurrentRearArmor": -1,
-			"CurrentInternalStructure": 55,
-			"AssignedArmor": 110,
+			"CurrentInternalStructure": 40,
+			"AssignedArmor": 80,
 			"AssignedRearArmor": -1
 		},
 		{
@@ -73,7 +73,7 @@
 			"Location": "LeftTorso",
 			"CurrentArmor": 100,
 			"CurrentRearArmor": 50,
-			"CurrentInternalStructure": 75,
+			"CurrentInternalStructure": 60,
 			"AssignedArmor": 100,
 			"AssignedRearArmor": 50
 		},
@@ -82,7 +82,7 @@
 			"Location": "CenterTorso",
 			"CurrentArmor": 150,
 			"CurrentRearArmor": 65,
-			"CurrentInternalStructure": 110,
+			"CurrentInternalStructure": 80,
 			"AssignedArmor": 150,
 			"AssignedRearArmor": 65
 		},
@@ -91,35 +91,35 @@
 			"Location": "RightTorso",
 			"CurrentArmor": 100,
 			"CurrentRearArmor": 50,
-			"CurrentInternalStructure": 75,
+			"CurrentInternalStructure": 60,
 			"AssignedArmor": 100,
 			"AssignedRearArmor": 50
 		},
 		{
 			"DamageLevel": "Functional",
 			"Location": "RightArm",
-			"CurrentArmor": 110,
+			"CurrentArmor": 80,
 			"CurrentRearArmor": -1,
-			"CurrentInternalStructure": 55,
-			"AssignedArmor": 110,
+			"CurrentInternalStructure": 40,
+			"AssignedArmor": 80,
 			"AssignedRearArmor": -1
 		},
 		{
 			"DamageLevel": "Functional",
 			"Location": "LeftLeg",
-			"CurrentArmor": 130,
+			"CurrentArmor": 100,
 			"CurrentRearArmor": -1,
-			"CurrentInternalStructure": 75,
-			"AssignedArmor": 130,
+			"CurrentInternalStructure": 60,
+			"AssignedArmor": 100,
 			"AssignedRearArmor": -1
 		},
 		{
 			"DamageLevel": "Functional",
 			"Location": "RightLeg",
-			"CurrentArmor": 130,
+			"CurrentArmor": 100,
 			"CurrentRearArmor": -1,
-			"CurrentInternalStructure": 75,
-			"AssignedArmor": 130,
+			"CurrentInternalStructure": 60,
+			"AssignedArmor": 100,
 			"AssignedRearArmor": -1
 		}
 	],
@@ -135,7 +135,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engine_210",
+			"ComponentDefID": "emod_engine_150",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -322,7 +322,7 @@
 		},
 		{
 			"MountedLocation": "LeftArm",
-			"ComponentDefID": "Weapon_RocketLauncher_RL40_0_STOCK",
+			"ComponentDefID": "Weapon_RocketLauncher_RL20_0_STOCK",
 			"SimGameUID": "",
 			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
@@ -388,7 +388,7 @@
 		},
 		{
 			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Weapon_RocketLauncher_RL40_0_STOCK",
+			"ComponentDefID": "Weapon_RocketLauncher_RL20_0_STOCK",
 			"SimGameUID": "",
 			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
@@ -399,9 +399,31 @@
 		},
 		{
 			"MountedLocation": "RightArm",
-			"ComponentDefID": "Weapon_Autocannon_AC20_HRIFLE",
+			"ComponentDefID": "Weapon_Autocannon_AC10_MRIFLE",
 			"SimGameUID": "",
 			"ComponentDefType": "Weapon",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "Head",
+			"ComponentDefID": "Weapon_MachineGun_MachineGun_0-STOCK",
+			"SimGameUID": "",
+			"ComponentDefType": "Weapon",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "Ammo_AmmunitionBox_Generic_MG",
+			"SimGameUID": "",
+			"ComponentDefType": "AmmunitionBox",
 			"HardpointSlot": 0,
 			"GUID": null,
 			"DamageLevel": "Functional",

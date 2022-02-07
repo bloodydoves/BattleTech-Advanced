@@ -1471,11 +1471,16 @@
 				"Fa Shih_4",
 				"Infiltrator_4",
 				"IS Standard_4",
-				"Kanazuchi_8",
-				"BA Marauder_9",
-				"Phalanx_6",
-				"BA Ravager_9",
-				"Void_4"
+				"Ying Long_4",
+				"Theseus_4",
+				"Salamander_4",
+				"Rottweiler_4",
+				"Void_4",
+				"Raiden_4",
+				"Gnome_4",
+				"Asterion_4",
+				"Tengu_8",
+				"Elemental_5"
 			],
 			"affinityLevels": [
 				{
@@ -1555,6 +1560,55 @@
 								"operation": "Int_Add",
 								"modValue": "1",
 								"modType": "System.Int32"
+							},
+							"targetingData": {
+								"effectTargetType": "Creator",
+								"effectTriggerType": "Passive",
+								"hideApplicationFloatie": true,
+								"showInStatusPanel": false,
+								"showInTargetPreview": false
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"chassisNames": [
+				"Sloth_6",
+				"Achilles_6",
+				"Krupp_8",
+				"Golem_10",
+				"Kanazuchi_8",
+				"BA Marauder_9",
+				"Phalanx_6",
+				"BA Ravager_9",
+				"Grenadier_8"
+			],
+			"affinityLevels": [
+				{
+					"missionsRequired": 15,
+					"levelName": "Armor Block",
+					"decription": "You may be small but you're beefy for your size, resisting even the most determined efforts to squish you. Gain 35% damage reduction at all times.",
+					"effectData": [
+						{
+							"Description": {
+								"Details": "BA Damage Reduction",
+								"Icon": "UixSvgIcon_specialEquip_System",
+								"Id": "StatusEffect-Affinity-BattleArmorDamageReduction",
+								"Name": "BA Damage Reduction"
+							},
+							"durationData": {
+								"duration": -1,
+								"stackLimit": -1
+							},
+							"effectType": "StatisticEffect",
+							"nature": "Buff",
+							"statisticData": {
+								"statName": "DamageReductionMultiplierAll",
+								"operation": "Float_Multiply",
+								"modValue": "0.65",
+								"modType": "System.Single"
 							},
 							"targetingData": {
 								"effectTargetType": "Creator",
@@ -2295,20 +2349,16 @@
 		{
 			"tag": "Affinity_Virago_BA",
 			"chassisNames": [
-				"Fa Shih_4",
-				"Infiltrator_4",
-				"IS Standard_4",
-				"Kanazuchi_8",
-				"BA Marauder_9",
-				"Phalanx_6",
-				"BA Ravager_9",
-				"Void_4"
+				"Gnome_4",
+				"Golem_10",
+				"Salamander_4",
+				"Elemental_5"
 			],
 			"affinityLevels": [
 				{
 					"missionsRequired": 10,
 					"levelName": "Minimizer",
-					"decription": "Virago knows how to be small, gaining a +4 defensive bonus against all attacks. This stacks with the normal Battle Armor affinity of Squirrelly Bastard.",
+					"decription": "Virago knows how to be small, gaining a +4 defensive bonus against all attacks. This stacks with the Squirrelly Bastard affinity.",
 					"effectData": [
 						{
 							"Description": {
@@ -2327,6 +2377,53 @@
 								"statName": "ToHitThisActor",
 								"operation": "Float_Add",
 								"modValue": "4.0",
+								"modType": "System.Single"
+							},
+							"targetingData": {
+								"effectTargetType": "Creator",
+								"effectTriggerType": "Passive",
+								"hideApplicationFloatie": true,
+								"showInStatusPanel": false,
+								"showInTargetPreview": false
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"tag": "Affinity_Webb_BA",
+			"chassisNames": [
+				"Kanazuchi_8",
+				"IS Standard_4",
+				"Raiden_4",
+				"Infiltrator_4",
+				"Grenadier_8",
+				"Void_4"
+			],
+			"affinityLevels": [
+				{
+					"missionsRequired": 10,
+					"levelName": "Battle Brother",
+					"decription": "Star Seed knows the secret of taking a solid punch in a Battle Armor suit, gaining 35% bonus damage reduction in his suits.",
+					"effectData": [
+						{
+							"Description": {
+								"Details": "Star Seed's skill in a BA suit gives him a major bonus to damage reduction against all attacks.",
+								"Icon": "UixSvgIcon_specialEquip_System",
+								"Id": "StatusEffect-Affinity-WebbBA",
+								"Name": "Star Seed Affinity Damage Reduction"
+							},
+							"durationData": {
+								"duration": -1,
+								"stackLimit": -1
+							},
+							"effectType": "StatisticEffect",
+							"nature": "Buff",
+							"statisticData": {
+								"statName": "DamageReductionMultiplierAll",
+								"operation": "Float_Multiply",
+								"modValue": "0.65",
 								"modType": "System.Single"
 							},
 							"targetingData": {

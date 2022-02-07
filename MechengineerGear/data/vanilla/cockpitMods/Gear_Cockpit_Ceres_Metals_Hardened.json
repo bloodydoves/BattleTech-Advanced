@@ -15,6 +15,7 @@
 			"Bonuses": [
 				"Health: +1",
 				"ArmoredCowl: 15",
+				"NoBleedout",
 				"IsCockpit"
 			]
 		},
@@ -26,7 +27,7 @@
 	"RelativeModifier": 0,
 	"AbsoluteModifier": 0,
 	"Description": {
-		"Cost": 320000,
+		"Cost": 600000,
 		"Rarity": 3,
 		"Purchasable": true,
 		"Manufacturer": "Ceres Metals",
@@ -151,6 +152,31 @@
 			"vfxData": null,
 			"instantModData": null,
 			"poorlyMaintainedEffectData": null
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "ReinforcedLifeSupport-NoBleed",
+				"Name": "No Bleedout",
+				"Details": "This unit cannot bleed out from injuries.",
+				"Icon": "layeredarmor"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "DisablesBleeding",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			}
 		}
 	],
 	"ComponentTags": {

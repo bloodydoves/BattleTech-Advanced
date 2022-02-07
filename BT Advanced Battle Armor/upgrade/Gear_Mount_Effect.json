@@ -1,0 +1,71 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "BAGear"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"CanMount"
+			]
+		},
+		"Flags": {
+			"flags": [
+				"no_salvage",
+				"not_broken"
+			]
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 0,
+		"Rarity": 99,
+		"Purchasable": false,
+		"Manufacturer": "Generic",
+		"Model": "Generic",
+		"UIName": "Magnetic Clamps",
+		"Id": "Gear_Mount_Effect",
+		"Name": "Magnetic Clamps",
+		"Details": "Magnetic clamps are designed to allow Battle Armor to attach itself to a mech so that they can be carried around. Without clamps, a BA suit cannot be carried.",
+		"Icon": "barbed-nails"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "ActiveAbility",
+			"Description": {
+				"Id": "CanMountStat",
+				"Name": "AbilityDefBattleArmorMount THING",
+				"Details": "Activated ability (uses Firing action). Performs a AbilityDefBattleArmorMount.",
+				"Icon": "barbed-nails"
+			},
+			"activeAbilityEffectData": {
+				"abilityName": "AbilityDefBattleArmorMount"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"BLACKLISTED"
+		],
+		"tagSetSourceFile": ""
+	}
+}

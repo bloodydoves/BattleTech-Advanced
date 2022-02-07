@@ -1,0 +1,79 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "Cockpit"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"AntiAirEvasion: +2",
+				"IsCockpit"
+			]
+		},
+		"InventorySorter": {
+			"SortKey": "00201"
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 750000,
+		"Rarity": 7,
+		"Purchasable": true,
+		"Manufacturer": "Mendham Electronics",
+		"Model": "Evasion",
+		"UIName": "AA Evasion FCS",
+		"Id": "Gear_TargetingTrackingSystem_AntiAirEvasion",
+		"Name": "Anti-Air Evasion FCS",
+		"Details": "A specialized piece of equipment, the Anti-Air Evasion Fire Control System was designed to give pilots increased chances to tag flying or otherwise airborne units. It found limited acceptance on the battlefield due to a relative paucity of combat-rated aerial units, though it did find a home with anyone who regularly faced down Land-Air Mechs.",
+		"Icon": "AdvancedTC"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 2,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "FCS_AAEvasion",
+				"Name": "Targeting Computer",
+				"Details": "Improved overall accuracy.",
+				"Icon": "uixSvgIcon_ability_precisionstrike"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "WeaponIgnoreEVASIVE_AeroUnit",
+				"operation": "Set",
+				"modValue": "-2",
+				"modType": "System.Single",
+				"targetCollection": "Weapon"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}

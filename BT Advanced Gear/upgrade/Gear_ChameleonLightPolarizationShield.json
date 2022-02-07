@@ -17,16 +17,38 @@
 				"no_salvage"
 			]
 		},
-		"DynamicSlots": {
-			"ReservedSlots": 5,
-			"ShowIcon": false,
-			"NameText": "Chameleon LPS",
-			"BonusAText": "Dynamic Slot"
+		"Linked": {
+			"Links": [
+				{
+					"ComponentDefId": "Gear_Chameleon_Linked",
+					"Location": "LeftTorso"
+				},
+				{
+					"ComponentDefId": "Gear_Chameleon_Linked",
+					"Location": "LeftArm"
+				},
+				{
+					"ComponentDefId": "Gear_Chameleon_Linked",
+					"Location": "LeftLeg"
+				},
+				{
+					"ComponentDefId": "Gear_Chameleon_Linked",
+					"Location": "RightTorso"
+				},
+				{
+					"ComponentDefId": "Gear_Chameleon_Linked",
+					"Location": "RightArm"
+				},
+				{
+					"ComponentDefId": "Gear_Chameleon_Linked",
+					"Location": "RightLeg"
+				}
+			]
 		},
 		"BonusDescriptions": {
 			"Bonuses": [
-				"FixedSlots: 5",
-				"HeatGenerated: +20%",
+				"LinkedSlots: 6",
+				"HeatPerTurn: 18",
 				"Visibility: -45%",
 				"Defense: +2"
 			]
@@ -45,7 +67,7 @@
 		"Id": "Gear_ChameleonLightPolarizationShield",
 		"Name": "Chameleon Light Polarization Shield",
 		"Details": "The Chameleon Light Polarization Shield was a crowning jewel in the Star League's technological cap, a primitive system of mimetic shielding that warped light around the carrying battlemech such that it was visually distorted and blurred, rendering it difficult to hit at best and impossible to hit at worst. The Chameleon LPS was most famously employed by the Exterminator and was believed lost when that mech finally was rendered extinct, only for ComStar to reveal they still had working CLPS on their Exterminators. It was never put back into production and remains incredibly rare even to the modern day.",
-		"Icon": "StealthArmor"
+		"Icon": "invisible"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
@@ -75,7 +97,7 @@
 				"Id": "CLPS-ECM",
 				"Name": "Severe Visual Scrambling",
 				"Details": "CLPS makes this mech very hard to hit.",
-				"Icon": "uixSvgIcon_equipment_Gyro"
+				"Icon": "invisible"
 			},
 			"nature": "Buff",
 			"statisticData": {
@@ -93,22 +115,22 @@
 			"targetingData": {
 				"effectTriggerType": "Passive",
 				"effectTargetType": "Creator",
-				"showInStatusPanel": false
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
 				"Id": "CLPS-Heat",
 				"Name": "Increased Heat",
-				"Details": "Heat generation increased by 20%.",
-				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+				"Details": "Generates a flat 18 heat a turn while equipped.",
+				"Icon": "invisible"
 			},
 			"nature": "Buff",
 			"statisticData": {
-				"statName": "HeatGenerated",
-				"operation": "Float_Multiply",
-				"modValue": "1.2",
-				"modType": "System.Single",
-				"targetCollection": "Weapon"
+				"statName": "HeatSinkCapacity",
+				"operation": "Int_Add",
+				"modValue": "-18",
+				"modType": "System.Int32"
 			}
 		},
 		{
@@ -126,7 +148,7 @@
 				"Id": "CLPS-Spotter",
 				"Name": "Active CLPS",
 				"Details": "Provides massively reduced visibility signature.",
-				"Icon": "uixSvgIcon_action_end"
+				"Icon": "invisible"
 			},
 			"nature": "Buff",
 			"statisticData": {

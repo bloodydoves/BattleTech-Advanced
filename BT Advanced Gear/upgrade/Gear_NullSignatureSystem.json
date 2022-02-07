@@ -17,17 +17,40 @@
 				"no_salvage"
 			]
 		},
-		"DynamicSlots": {
-			"ReservedSlots": 6,
-			"ShowIcon": false,
-			"NameText": "Null Sig System",
-			"BonusAText": "Dynamic Slot"
+		"Linked": {
+			"Links": [
+				{
+					"ComponentDefId": "Gear_NullSig_Linked",
+					"Location": "LeftTorso"
+				},
+				{
+					"ComponentDefId": "Gear_NullSig_Linked",
+					"Location": "LeftArm"
+				},
+				{
+					"ComponentDefId": "Gear_NullSig_Linked",
+					"Location": "LeftLeg"
+				},
+				{
+					"ComponentDefId": "Gear_NullSig_Linked",
+					"Location": "RightTorso"
+				},
+				{
+					"ComponentDefId": "Gear_NullSig_Linked",
+					"Location": "RightArm"
+				},
+				{
+					"ComponentDefId": "Gear_NullSig_Linked",
+					"Location": "RightLeg"
+				}
+			]
 		},
 		"BonusDescriptions": {
 			"Bonuses": [
-				"FixedSlots: 6",
-				"HeatGenerated: +15%",
-				"Defense: +3"
+				"LinkedSlots: 6",
+				"HeatPerTurn: 30",
+				"Defense: +3",
+				"DamageReduction: 20%"
 			]
 		}
 	},
@@ -44,7 +67,7 @@
 		"Id": "Gear_NullSignatureSystem",
 		"Name": "Null Signature System",
 		"Details": "The Null Signature System was the peak of Star League technology, a suite of sensors and baffles built into a mech that, when powered by the mech's reactor, intentionally distort the mech's signature to such a degree that it became near-impossible to hit. The Null Signature System was most famously employed by the Exterminator and was believed lost when that mech finally was rendered extinct, only for ComStar to reveal they still had working NullSig on their Exterminators. It was never put back into production and remains incredibly rare even to the modern day.",
-		"Icon": "StealthArmor"
+		"Icon": "invisible"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
@@ -74,7 +97,7 @@
 				"Id": "NullSigSystem-ECM",
 				"Name": "Severe Sensor Scrambling",
 				"Details": "Null Sig makes this mech very hard to hit.",
-				"Icon": "uixSvgIcon_equipment_Gyro"
+				"Icon": "invisible"
 			},
 			"nature": "Buff",
 			"statisticData": {
@@ -119,7 +142,7 @@
 				"effectsPersistAfterDestruction": false,
 				"statName": "DamageReductionMultiplierAll",
 				"operation": "Float_Multiply",
-				"modValue": "0.85",
+				"modValue": "0.8",
 				"modType": "System.Single"
 			},
 			"tagData": null,
@@ -132,53 +155,28 @@
 		{
 			"durationData": {
 				"duration": -1,
-				"ticksOnActivations": false,
-				"useActivationsOfTarget": false,
-				"ticksOnEndOfRound": false,
-				"ticksOnMovements": false,
-				"stackLimit": 1,
-				"clearedWhenAttacked": false
+				"stackLimit": 1
 			},
 			"targetingData": {
 				"effectTriggerType": "Passive",
-				"triggerLimit": 0,
-				"extendDurationOnTrigger": 0,
-				"specialRules": "NotSet",
 				"effectTargetType": "Creator",
-				"range": 0,
-				"forcePathRebuild": false,
-				"forceVisRebuild": false,
 				"showInTargetPreview": false,
-				"showInStatusPanel": false
+				"showInStatusPanel": true
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
 				"Id": "NullSigSystem-Heat",
 				"Name": "Increased Heat",
-				"Details": "Heat generation increased by 15%.",
-				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+				"Details": "Generates a flat 30 heat a turn while equipped.",
+				"Icon": "invisible"
 			},
 			"nature": "Buff",
 			"statisticData": {
-				"appliesEachTick": false,
-				"effectsPersistAfterDestruction": false,
-				"statName": "HeatGenerated",
-				"operation": "Float_Multiply",
-				"modValue": "1.15",
-				"modType": "System.Single",
-				"additionalRules": "NotSet",
-				"targetCollection": "Weapon",
-				"targetWeaponCategory": "NotSet",
-				"targetWeaponType": "NotSet",
-				"targetAmmoCategory": "NotSet",
-				"targetWeaponSubType": "NotSet"
-			},
-			"tagData": null,
-			"floatieData": null,
-			"actorBurningData": null,
-			"vfxData": null,
-			"instantModData": null,
-			"poorlyMaintainedEffectData": null
+				"statName": "HeatSinkCapacity",
+				"operation": "Int_Add",
+				"modValue": "-30",
+				"modType": "System.Int32"
+			}
 		}
 	],
 	"ComponentTags": {

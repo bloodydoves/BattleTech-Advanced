@@ -1,0 +1,104 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "BAWeapon"
+			},
+			{
+				"CategoryID": "BAGear"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"CanSwarm",
+				"CanMount",
+				"IsPhysWeap",
+				"PhysWeapUnsteady",
+				"PhysWeapDamage: 3",
+				"PhysWeapStab: 3"
+			]
+		},
+		"Flags": {
+			"flags": [
+				"no_salvage",
+				"not_broken"
+			]
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 0,
+		"Rarity": 99,
+		"Purchasable": false,
+		"Manufacturer": "Generic",
+		"Model": "Generic",
+		"UIName": "Battle Claw",
+		"Id": "Gear_Swarm_Effect",
+		"Name": "Battle Claw",
+		"Details": "The Battle Claw is a melee weapon equipped to Battle Armor to allow them to cause reasonable damage against mech-scale opponents. The Battle Claw also allows Battle Armor to conduct swarm attacks against enemy mechs and tanks.",
+		"Icon": "barbed-nails"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0.1,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": true,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "CanSwarmStat",
+				"Name": "This Battle Armor can make swarm attacks.",
+				"Details": "This Battle Armor can make swarm attacks.",
+				"Icon": "barbed-nails"
+			},
+			"statisticData": {
+				"statName": "CanSwarm",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			}
+		},
+		{
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "ActiveAbility",
+			"Description": {
+				"Id": "CanMountStat",
+				"Name": "AbilityDefBattleArmorMount THING",
+				"Details": "Activated ability (uses Firing action). Performs a AbilityDefBattleArmorMount.",
+				"Icon": "barbed-nails"
+			},
+			"activeAbilityEffectData": {
+				"abilityName": "AbilityDefBattleArmorMount"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"BLACKLISTED"
+		],
+		"tagSetSourceFile": ""
+	}
+}

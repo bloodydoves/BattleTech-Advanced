@@ -2,7 +2,7 @@
 	"Name": "StrategicOperations",
 	"DLL": "StrategicOperations.dll",
 	"Hidden": true,
-	"Version": "2.0.2.0",
+	"Version": "2.0.3.3",
 	"Description": "",
 	"Author": "T-Bone",
 	"Website": "https://github.com/ajkroeg/StrategicOperations",
@@ -40,13 +40,24 @@
 		},
 		"customSpawnReticleAsset": "select_spawn_reticle",
 		"deploymentBeaconEquipment": [
+			"Item.UpgradeDef.Gear_Contract_BattleArmor_Achilles_General",
+			"Item.UpgradeDef.Gear_Contract_BattleArmor_Elemental_Clans",
 			"Item.UpgradeDef.Gear_Contract_BattleArmor_FaShih_Liao",
+			"Item.UpgradeDef.Gear_Contract_BattleArmor_YingLong_Liao",
 			"Item.UpgradeDef.Gear_Contract_BattleArmor_InfiltratorMkII_Davion_Steiner",
+			"Item.UpgradeDef.Gear_Contract_BattleArmor_Grenadier_Davion",
+			"Item.UpgradeDef.Gear_Contract_BattleArmor_Rottweiler_Steiner",
+			"Item.UpgradeDef.Gear_Contract_BattleArmor_Sloth_Steiner",
 			"Item.UpgradeDef.Gear_Contract_BattleArmor_Kanazuchi_Kurita",
+			"Item.UpgradeDef.Gear_Contract_BattleArmor_Raiden_Kurita",
 			"Item.UpgradeDef.Gear_Contract_BattleArmor_Marauder_Marian",
 			"Item.UpgradeDef.Gear_Contract_BattleArmor_Ravager_Marian",
 			"Item.UpgradeDef.Gear_Contract_BattleArmor_Phalanx_Marik",
 			"Item.UpgradeDef.Gear_Contract_BattleArmor_Void_Kurita",
+			"Item.UpgradeDef.Gear_Contract_BattleArmor_Asterion_TaurianConcordat",
+			"Item.UpgradeDef.Gear_Contract_BattleArmor_Theseus_Magistracy",
+			"Item.UpgradeDef.Gear_Contract_BattleArmor_Tengu_WoB",
+			"Item.UpgradeDef.Gear_Contract_BattleArmor_Krupp_Rasalhague",
 			"Item.UpgradeDef.Gear_Contract_Mech_Bombard_SolarisVII",
 			"Item.UpgradeDef.Gear_Contract_Mech_Juggernaut_SolarisVII",
 			"Item.UpgradeDef.Gear_Contract_Mech_Prometheus_SolarisVII",
@@ -120,21 +131,26 @@
 			"Item.UpgradeDef.Gear_Contract_Aerospace_Permanent_Avar",
 			"Item.UpgradeDef.Gear_Contract_Aerospace_Permanent_Batu"
 		],
-		"strafeWaves": 3,
-		"AI_FactionBeacons": {
-			"ClanGhostBear": [
-				"Item.UpgradeDef.Gear_TurretBeacon_lightning"
-			]
-		},
-		"commandAbilities_AI": {
-			"ClanGhostBear": [
-				{
-					"AbilityID": "AbilityDefCMD_Strafe",
-					"AddChance": 0.0,
-					"DiffMod": 0.0
-				}
-			]
-		},
+		"strafeWaves": 2,
+		"commandAbilities_AI": [
+			{
+				"AbilityDefID": "AbilityDefCMD_Strafe_AI",
+				"FactionIDs": [
+					"ClanGhostBear",
+					"ClanWolf"
+				],
+				"AddChance": 0.0,
+				"DiffMod": 0.0,
+				"MaxUsersAddedPerContract": 0,
+				"AvailableBeacons": [
+					{
+						"UnitDefID": "vehicledef_MECHBUSTER_AERO",
+						"Weight": 10,
+						"StrafeWaves": 3
+					}
+				]
+			}
+		],
 		"AI_SpawnBehavior": [
 			{
 				"Tag": "ProtoMech",
@@ -145,6 +161,7 @@
 		"BattleArmorMountAndSwarmID": "AbilityDefBattleArmorMount",
 		"BattleArmorDeSwarmRoll": "AbilityDefDeSwarmerRoll",
 		"BattleArmorDeSwarmSwat": "AbilityDefDeSwarmerSwat",
+		"BattleArmorDeSwarmMovement ": "AbilityDefDeSwarmerMovement",
 		"ArmActuatorCategoryIDs": [
 			"ArmShoulder",
 			"ArmUpperActuator",
@@ -153,89 +170,122 @@
 			"ArmHandActuator",
 			"OmniHandActuator"
 		],
-				"BPodComponentIDs": [
+		"BPodComponentIDs": [
 			"Gear_B_Pod"
 		],
 		"BPodsAutoActivate": false,
-		"BATargetEffect": {
-			"ID": "BA_AccurateFire",
-			"Name": "Battle Armor - SwarmingAccuracy",
-			"description": "Battle Armor has greatly increased accuracy against the unit it is swarming.",
-			"effectDataJO": [
-				{
-					"durationData": {},
-					"targetingData": {
-						"effectTriggerType": "Passive",
-						"effectTargetType": "Creator",
-						"showInStatusPanel": true
+		"BATargetEffects": [
+			{
+				"ID": "BA_AccurateFire",
+				"TargetEffectType": "SWARM",
+				"Name": "Battle Armor - SwarmingAccuracy",
+				"description": "Battle Armor has greatly increased accuracy against the unit it is swarming.",
+				"effectDataJO": [
+					{
+						"durationData": {},
+						"targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator",
+							"showInStatusPanel": true
+						},
+						"effectType": "StatisticEffect",
+						"Description": {
+							"Id": "BA_EasyTargetingPassive",
+							"Name": "Easy shots",
+							"Details": "Battle Armor has increased accuracy while swarming.",
+							"Icon": "allied-star"
+						},
+						"nature": "Buff",
+						"statisticData": {
+							"statName": "AccuracyModifier",
+							"operation": "Set",
+							"modValue": "-9001",
+							"modType": "System.Single"
+						}
 					},
-					"effectType": "StatisticEffect",
-					"Description": {
-						"Id": "BA_EasyTargetingPassive",
-						"Name": "Easy shots",
-						"Details": "Battle Armor has increased accuracy while swarming.",
-						"Icon": "allied-star"
+					{
+						"durationData": {
+							"duration": -1,
+							"stackLimit": -1
+						},
+						"targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator"
+						},
+						"effectType": "StatisticEffect",
+						"Description": {
+							"Id": "BA_CALLED_SHOT",
+							"Name": "BA Called Shot",
+							"Details": "Called Shots twice as reliable when swarming",
+							"Icon": "uixSvgIcon_ability_mastertactician"
+						},
+						"statisticData": {
+							"statName": "CalledShotBonusMultiplier",
+							"operation": "Float_Multiply",
+							"modValue": "9001.0",
+							"modType": "System.Single"
+						}
 					},
-					"nature": "Buff",
-					"statisticData": {
-						"statName": "AccuracyModifier",
-						"operation": "Set",
-						"modValue": "-9001",
-						"modType": "System.Single"
+					{
+						"durationData": {
+							"duration": -1,
+							"stackLimit": -1
+						},
+						"targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator",
+							"showInTargetPreview": false,
+							"showInStatusPanel": false
+						},
+						"effectType": "StatisticEffect",
+						"Description": {
+							"Id": "BA_FocusFireCluster",
+							"Name": "BA ClusterFuck",
+							"Details": "Better clustering for BA while swarming.",
+							"Icon": "UixSvgIcon_specialEquip_System"
+						},
+						"statisticData": {
+							"statName": "ClusteringModifier",
+							"operation": "Float_Add",
+							"modValue": "9001",
+							"modType": "System.Single",
+							"targetCollection": "Weapon"
+						},
+						"nature": "Buff"
 					}
-				},
-				{
-					"durationData": {
-						"duration": -1,
-						"stackLimit": -1
-					},
-					"targetingData": {
-						"effectTriggerType": "Passive",
-						"effectTargetType": "Creator"
-					},
-					"effectType": "StatisticEffect",
-					"Description": {
-						"Id": "BA_CALLED_SHOT",
-						"Name": "BA Called Shot",
-						"Details": "Called Shots twice as reliable when swarming",
-						"Icon": "uixSvgIcon_ability_mastertactician"
-					},
-					"statisticData": {
-						"statName": "CalledShotBonusMultiplier",
-						"operation": "Float_Multiply",
-						"modValue": "9001.0",
-						"modType": "System.Single"
+				]
+			},
+			{
+				"ID": "BA_MountedFireDebuff",
+				"TargetEffectType": "MOUNT",
+				"Name": "Battle Armor - Mounted Debuff",
+				"description": "Battle Armor has decreased accuracy when firing while mounted.",
+				"effectDataJO": [
+					{
+						"durationData": {},
+						"targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator",
+							"showInStatusPanel": true
+						},
+						"effectType": "StatisticEffect",
+						"Description": {
+							"Id": "BA_EasyTargetingPassive",
+							"Name": "Easy shots",
+							"Details": "Battle Armor has decreased accuracy while mounted.",
+							"Icon": "allied-star"
+						},
+						"nature": "Buff",
+						"statisticData": {
+							"statName": "AccuracyModifier",
+							"operation": "Set",
+							"modValue": "4",
+							"modType": "System.Single"
+						}
 					}
-				},
-				{
-					"durationData": {
-						"duration": -1,
-						"stackLimit": -1
-					},
-					"targetingData": {
-						"effectTriggerType": "Passive",
-						"effectTargetType": "Creator",
-						"showInTargetPreview": false,
-						"showInStatusPanel": false
-					},
-					"effectType": "StatisticEffect",
-					"Description": {
-						"Id": "BA_FocusFireCluster",
-						"Name": "BA ClusterFuck",
-						"Details": "Better clustering for BA while swarming.",
-						"Icon": "UixSvgIcon_specialEquip_System"
-					},
-					"statisticData": {
-						"statName": "ClusteringModifier",
-						"operation": "Float_Add",
-						"modValue": "9001",
-						"modType": "System.Single",
-						"targetCollection": "Weapon"
-					},
-					"nature": "Buff"
-				}
-			]
-		},
+				]
+			}
+		],
 		"BattleArmorFactionAssociations": [
 			{
 				"FactionIDs": [
@@ -243,7 +293,7 @@
 					"ClanWolf"
 				],
 				"SpawnChanceBase": 0.0,
-				"SpawnChanceDiffMod": 0.00,
+				"SpawnChanceDiffMod": 0.0,
 				"MaxSquadsPerContract": 0,
 				"InternalBattleArmorWeight": {
 					"mechdef_ba_is_standard": 15,
@@ -264,7 +314,7 @@
 					"Locals"
 				],
 				"SpawnChanceBase": 0.0,
-				"SpawnChanceDiffMod": 0.00,
+				"SpawnChanceDiffMod": 0.0,
 				"InternalBattleArmorWeight": {
 					"mechdef_ba_is_standard": 1
 				},
@@ -272,7 +322,17 @@
 				"HandsyBattleArmorWeight": {}
 			}
 		],
-		"AttackOnSwarmSuccess": true
+		"AttackOnSwarmSuccess": true,
+		"AI_BattleArmorExcludedContractTypes": [
+			"DuoDuel",
+			"SoloDuel"
+		],
+		"AI_BattleArmorExcludedContractIDs": [],
+		"BeaconExcludedContractTypes": [
+			"DuoDuel",
+			"SoloDuel"
+		],
+		"BeaconExcludedContractIDs": []
 	},
 	"Manifest": [
 		{

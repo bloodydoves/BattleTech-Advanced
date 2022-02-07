@@ -4,7 +4,7 @@
 			"unit_generic",
 			"unit_indirectFire",
 			"unit_mech",
-			"unit_heavy",
+			"unit_medium",
 			"unit_lance_assassin",
 			"unit_role_brawler",
 			"unit_release",
@@ -44,7 +44,7 @@
 		"UIName": "ExcavatorMech EXV-4K",
 		"Id": "mechdef_excavatormech_EXV-4K",
 		"Name": "ExcavatorMech",
-		"Details": "A jumped-up industrial mech turned combat chassis, the ExcavatorMech EXV-4K carries the Excavator's traditional Backhoe, reinforced for melee use, as well as a basic but effective loadout of simple weapons meant for no-frills combat. Armed with a pair of Light Autocannon/5s and a 5-tubed Multi-Missile Launcher, the EXV-4K brings moderate fire support to any situation. Up close, the Backhoe and TSM make quick work of enemies. The Excavator's traditionally thick armor provides ample protection, though the oddball inclusion of an AMS helps in a pinch.",
+		"Details": "A jumped-up industrial mech turned combat chassis, the ExcavatorMech EXV-4K carries the Excavator's traditional Backhoe, reinforced for melee use, as well as a basic but effective loadout of simple weapons meant for no-frills combat. Armed with a Light Autocannon/5, a Medium Chemical Laser, and a 5-tubed Multi-Missile Launcher, the EXV-4K brings moderate fire support to any situation. Up close, the Backhoe makes quick work of enemies. The Excavator's traditionally thick armor provides ample protection.",
 		"Icon": "uixTxrIcon_excavatormech"
 	},
 	"simGameMechPartCost": 880000,
@@ -62,10 +62,10 @@
 		{
 			"DamageLevel": "Functional",
 			"Location": "LeftArm",
-			"CurrentArmor": 110,
+			"CurrentArmor": 80,
 			"CurrentRearArmor": -1,
-			"CurrentInternalStructure": 55,
-			"AssignedArmor": 110,
+			"CurrentInternalStructure": 40,
+			"AssignedArmor": 80,
 			"AssignedRearArmor": -1
 		},
 		{
@@ -73,7 +73,7 @@
 			"Location": "LeftTorso",
 			"CurrentArmor": 100,
 			"CurrentRearArmor": 50,
-			"CurrentInternalStructure": 75,
+			"CurrentInternalStructure": 60,
 			"AssignedArmor": 100,
 			"AssignedRearArmor": 50
 		},
@@ -82,7 +82,7 @@
 			"Location": "CenterTorso",
 			"CurrentArmor": 150,
 			"CurrentRearArmor": 65,
-			"CurrentInternalStructure": 110,
+			"CurrentInternalStructure": 80,
 			"AssignedArmor": 150,
 			"AssignedRearArmor": 65
 		},
@@ -91,35 +91,35 @@
 			"Location": "RightTorso",
 			"CurrentArmor": 100,
 			"CurrentRearArmor": 50,
-			"CurrentInternalStructure": 75,
+			"CurrentInternalStructure": 60,
 			"AssignedArmor": 100,
 			"AssignedRearArmor": 50
 		},
 		{
 			"DamageLevel": "Functional",
 			"Location": "RightArm",
-			"CurrentArmor": 110,
+			"CurrentArmor": 80,
 			"CurrentRearArmor": -1,
-			"CurrentInternalStructure": 55,
-			"AssignedArmor": 110,
+			"CurrentInternalStructure": 40,
+			"AssignedArmor": 80,
 			"AssignedRearArmor": -1
 		},
 		{
 			"DamageLevel": "Functional",
 			"Location": "LeftLeg",
-			"CurrentArmor": 130,
+			"CurrentArmor": 120,
 			"CurrentRearArmor": -1,
-			"CurrentInternalStructure": 75,
-			"AssignedArmor": 130,
+			"CurrentInternalStructure": 60,
+			"AssignedArmor": 120,
 			"AssignedRearArmor": -1
 		},
 		{
 			"DamageLevel": "Functional",
 			"Location": "RightLeg",
-			"CurrentArmor": 130,
+			"CurrentArmor": 120,
 			"CurrentRearArmor": -1,
-			"CurrentInternalStructure": 75,
-			"AssignedArmor": 130,
+			"CurrentInternalStructure": 60,
+			"AssignedArmor": 120,
 			"AssignedRearArmor": -1
 		}
 	],
@@ -135,7 +135,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engine_280",
+			"ComponentDefID": "emod_engine_200",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -365,10 +365,10 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "Gear_TSM",
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "Weapon_Autocannon_LAC5_0-STOCK",
 			"SimGameUID": "",
-			"ComponentDefType": "Upgrade",
+			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
 			"GUID": null,
 			"DamageLevel": "Functional",
@@ -377,7 +377,7 @@
 		},
 		{
 			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Weapon_Autocannon_LAC5_0-STOCK",
+			"ComponentDefID": "Weapon_Laser_MediumLaser_Chemical_CLAN",
 			"SimGameUID": "",
 			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
@@ -410,7 +410,7 @@
 		},
 		{
 			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Ammo_AmmunitionBox_Generic_AC5",
+			"ComponentDefID": "Ammo_AmmunitionBox_Generic_Chem_Laser",
 			"SimGameUID": "",
 			"ComponentDefType": "AmmunitionBox",
 			"HardpointSlot": 0,
@@ -442,19 +442,8 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Ammo_AmmunitionBox_AntiMissile",
-			"SimGameUID": "",
-			"ComponentDefType": "AmmunitionBox",
-			"HardpointSlot": 0,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
 			"MountedLocation": "RightArm",
-			"ComponentDefID": "Weapon_Autocannon_LAC5_0-STOCK",
+			"ComponentDefID": "Weapon_Laser_SmallLaser_Chemical_CLAN",
 			"SimGameUID": "",
 			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
@@ -465,7 +454,7 @@
 		},
 		{
 			"MountedLocation": "Head",
-			"ComponentDefID": "Weapon_AMS",
+			"ComponentDefID": "Weapon_Laser_SmallLaser_Chemical_CLAN",
 			"SimGameUID": "",
 			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,

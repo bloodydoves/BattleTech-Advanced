@@ -1,0 +1,94 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "LegHip"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"Reinforced: +25%",
+				"ActuatorWeight: 10%"
+			]
+		},
+		"Weights": {
+		  "StructureFactor": 1.1
+		},
+		"WorkOrderCosts": {
+	      "Install": {
+			"TechCost": "1",
+			"CBillCost": "[[Chassis.Tonnage]]"
+		  }
+		},
+		"Flags": {
+		  "flags": [
+			"ignore_shutdown",
+			"not_broken"
+		  ]
+		},
+		"LegActuator": {
+			"Type": "PartHip"
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 300000,
+		"Rarity": 2,
+		"Purchasable": true,
+		"Manufacturer": "Brigadier",
+		"Model": "Dense",
+		"UIName": "Hip Dense",
+		"Id": "Gear_Actuator_Brigadier_Dense",
+		"Name": "Brigadier Dense Leg Reinforcement",
+		"Details": "Actuators control a 'Mech's limbs and are used to perform Melee attacks at close quarters. All 'Mechs come equipped with stock Actuators, which can be upgraded for improved performance.",
+		"Icon": "uixSvgIcon_equipment_ActuatorLeg"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0,
+	"AllowedLocations": "Legs",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 2
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-ReinforcedLegs",
+				"Name": "Charge DAMAGE INCREASED",
+				"Details": "Charge attacks deal 5% more damage.",
+				"Icon": "uixSvgIcon_equipment_ActuatorArm"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"effectsPersistAfterDestruction": true,
+				"statName": "{location}.Structure",
+				"operation": "Float_Multiply",
+				"modValue": "1.25",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_variant",
+			"component_type_variant1"
+		],
+		"tagSetSourceFile": ""
+	}
+}

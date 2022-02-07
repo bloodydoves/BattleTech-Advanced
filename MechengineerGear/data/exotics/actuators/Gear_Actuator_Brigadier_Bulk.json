@@ -1,0 +1,97 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "ArmShoulder"
+			},
+			{
+				"CategoryID": "NonQuad"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"Reinforced: +25%",
+				"ActuatorWeight: 10%"
+			]
+		},
+		"Weights": {
+		  "StructureFactor": 1.1
+		},
+		"WorkOrderCosts": {
+	      "Install": {
+			"TechCost": "1",
+			"CBillCost": "[[Chassis.Tonnage]]"
+		  }
+		},
+		"Flags": {
+		  "flags": [
+			"ignore_shutdown",
+			"not_broken"
+		  ]
+		},
+		"ArmActuator": {
+			"Type": "PartShoulder"
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 300000,
+		"Rarity": 99,
+		"Purchasable": true,
+		"Manufacturer": "Brigadier",
+		"Model": "Bulk",
+		"UIName": "Shoulder Bulk",
+		"Id": "Gear_Actuator_Brigadier_Bulk",
+		"Name": "Brigadier Bulk Arm Reinforcement",
+		"Details": "Actuators control a 'Mech's limbs and are used to perform Melee attacks at close quarters. All 'Mechs come equipped with stock Actuators, which can be upgraded for improved performance.",
+		"Icon": "uixSvgIcon_equipment_ActuatorArm"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0,
+	"AllowedLocations": "Arms",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 2
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-ReinforcedArms",
+				"Name": "Charge DAMAGE INCREASED",
+				"Details": "Charge attacks deal 5% more damage.",
+				"Icon": "uixSvgIcon_equipment_ActuatorArm"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"effectsPersistAfterDestruction": true,
+				"statName": "{location}.Structure",
+				"operation": "Float_Multiply",
+				"modValue": "1.25",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_variant",
+			"component_type_variant3"
+		],
+		"tagSetSourceFile": ""
+	}
+}

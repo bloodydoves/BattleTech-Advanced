@@ -1,6 +1,7 @@
 {
 	"enableLogging": true,
 	"enableTrace": false,
+	"debugPatchEnabled": true,
 	"enableLethalTorsoHead": false,
 	"debilIncapacitates": true,
 	"BleedingOutLethal": true,
@@ -16,11 +17,12 @@
 	"missionKillSeverityThreshold": 4,
 	"reInjureWeightAppliesCurrentContract": false,
 	"reInjureLocWeight": 11,
-	"debilSeverityThreshold": 4,
+	"debilSeverityThreshold": 3,
 	"severityCost": 50,
 	"debilitatedCost": 2000,
 	"medtechDebilMultiplier": 0.5,
 	"injuryHealTimeMultiplier": 1.0,
+	"disableTBASTroopers": false,
 	"disableTBASTag": "TBAS_Disabled",
 	"crewOrCockpitCustomID": [
 		"CrewCompartment",
@@ -45,7 +47,7 @@
 			"injuryLoc": "Head",
 			"couldBeThermal": false,
 			"severity": 1,
-			"description": "This pilot is concussed. Things are spinny.",
+			"description": "This pilot is concussed. Unsteady threshold is decreased.",
 			"effectDataJO": [
 				{
 					"durationData": {},
@@ -58,7 +60,7 @@
 					"Description": {
 						"Id": "Concussed",
 						"Name": "Concussed",
-						"Details": "This pilot is concussed. Things are spinny.",
+						"Details": "This pilot is concussed. Unsteady threshold is decreased.",
 						"Icon": "seeingstars"
 					},
 					"nature": "Buff",
@@ -116,7 +118,7 @@
 			"injuryName": "Severe Burns - Head",
 			"injuryLoc": "Head",
 			"couldBeThermal": true,
-			"severity": 1,
+			"severity": 2,
 			"description": "This pilot has severe burns to the head. Sight distance is impaired.",
 			"effectDataJO": [
 				{
@@ -329,7 +331,7 @@
 			"injuryName": "Compound Fracture - Left Arm",
 			"injuryLoc": "ArmL",
 			"couldBeThermal": false,
-			"severity": 1,
+			"severity": 2,
 			"description": "This pilot has a compound fracture in their arm, and is suffering an accuracy penalty.",
 			"effectDataJO": [
 				{
@@ -367,7 +369,7 @@
 			"injuryName": "Compound Fracture - Right Arm",
 			"injuryLoc": "ArmR",
 			"couldBeThermal": false,
-			"severity": 1,
+			"severity": 2,
 			"description": "This pilot has a compound fracture in their arm, and is suffering an accuracy penalty.",
 			"effectDataJO": [
 				{
@@ -567,7 +569,7 @@
 			"injuryName": "Compound Fracture - Left Leg",
 			"injuryLoc": "LegL",
 			"couldBeThermal": false,
-			"severity": 1,
+			"severity": 2,
 			"description": "This pilot has a compound fracture to their leg and is suffering a severe movement penalty.",
 			"effectDataJO": [
 				{
@@ -676,7 +678,7 @@
 			"injuryName": "Compound Fracture - Right Leg",
 			"injuryLoc": "LegR",
 			"couldBeThermal": false,
-			"severity": 1,
+			"severity": 2,
 			"description": "This pilot has a compound fracture to their leg and is suffering a severe movement penalty.",
 			"effectDataJO": [
 				{
@@ -763,7 +765,7 @@
 			"injuryName": "Broken Ribs",
 			"injuryLoc": "Torso",
 			"couldBeThermal": false,
-			"severity": 1,
+			"severity": 2,
 			"description": "This pilot has broken ribs and receives a debuff to Evasion.",
 			"effectDataJO": [
 				{
@@ -795,7 +797,7 @@
 			"injuryName": "Punctured Lung",
 			"injuryLoc": "Torso",
 			"couldBeThermal": false,
-			"severity": 1,
+			"severity": 2,
 			"description": "This pilot has a punctured lung and has a penalty to Guts.",
 			"effectDataJO": [
 				{
@@ -829,7 +831,7 @@
 			"injuryName": "Collapsed Lung",
 			"injuryLoc": "Torso",
 			"couldBeThermal": false,
-			"severity": 1,
+			"severity": 3,
 			"description": "This pilot has a collapsed lung and has a penalty to Guts.",
 			"effectDataJO": [
 				{
@@ -896,7 +898,7 @@
 			"injuryName": "Neural Feedback",
 			"injuryLoc": "Head",
 			"couldBeThermal": false,
-			"severity": 2,
+			"severity": 3,
 			"description": "This pilot has suffered from neural feedback from a DNI or EI interface, and has drastically reduced accuracy.",
 			"effectDataJO": [
 				{

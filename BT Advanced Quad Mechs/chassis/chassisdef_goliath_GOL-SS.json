@@ -69,172 +69,21 @@
 		]
 	},
 	"CustomParts": {
-		"quadVisualInfo": {
-			"UseQuadVisuals": true,
-			"FLegsPrefab": "chrPrfMech_atlasBase-001",
-			"BodyLength": 5.2,
-			"FLegsPrefabBase": "atlas",
-			"RLegsPrefabBase": "atlas",
-			"NotSuppressRenderers": [
-				"_left_leg_",
-				"_right_leg_"
-			]
-		},
 		"MeleeWeaponOverride": {
-			"DefaultWeapon": "Weapon_MeleeAttackEx"
+		  "DefaultWeapon": "Weapon_MeleeAttackEx"
 		},
 		"FiringArc": 360,
 		"Unaffected": {
-			"DesignMasks": "false",
-			"Pathing": "false",
-			"Fire": "false",
-			"Landmines": "false"
+		  "DesignMasks": "false",
+		  "Pathing": "false",
+		  "Fire": "false",
+		  "Landmines": "false"
 		},
 		"ArmsCountedAsLegs": true,
 		"MoveCostModPerBiome": {
-			"DesignMaskBiomeMartianVacuum": 1.0,
-			"DesignMaskBiomeLunarVacuum": 1.0
-		},
-		"CustomParts": [
-			{
-				"prefab": "jgoliathbody",
-				"MaterialInfo": {
-					"jgoliathbody": {
-						"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
-						"shaderKeyWords": [
-							"_DETAIL_OVERLAY",
-							"_EMISSION",
-							"_METALLICGLOSSMAP",
-							"_NORMALMAP"
-						]
-					},
-					"jgoliathbody_damaged": {
-						"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
-						"shaderKeyWords": [
-							"_DETAIL_OVERLAY",
-							"_EMISSION",
-							"_METALLICGLOSSMAP",
-							"_NORMALMAP"
-						]
-					}
-				},
-				"prefabTransform": {
-					"offset": {
-						"x": 0,
-						"y": 0,
-						"z": 0
-					},
-					"scale": {
-						"x": 1,
-						"y": 1,
-						"z": 1
-					},
-					"rotate": {
-						"x": 0,
-						"y": 0,
-						"z": 0
-					}
-				},
-				"MechChassisLocation": "CenterTorso",
-				"RequiredUpgrades": [],
-				"RequiredComponents": [],
-				"AnimationType": "QuadBody",
-				"AnimationData": {
-					"VerticalRotate": "rotate",
-					"TurretAttach": "turret_attach",
-					"FrontLegsAttach": "front_legs_attach",
-					"ShowFrontLegsAxis": false,
-					"DamageAnimator": "CT_LT_RT_plus_damage_models",
-					"RTVFXTransform": "RT_vfx_transform",
-					"LTVFXTransform": "LT_vfx_transform",
-					"CTVFXTransform": "CT_vfx_transform",
-					"HEADVFXTransform": "HEAD_vfx_transform",
-					"JumpJetsSpawnPoints": [
-						"jumpjet_rear",
-						"jumpjet_front",
-						"jumpjet_left",
-						"jumpjet_right"
-					],
-					"HeadLightSpawnPoints": [
-						"headlight_left",
-						"headlight_right"
-					]
-				}
-			},
-			{
-				"prefab": "jgoliath_turret",
-				"MaterialInfo": {
-					"jgoliathbody": {
-						"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
-						"shaderKeyWords": [
-							"_DETAIL_OVERLAY",
-							"_EMISSION",
-							"_METALLICGLOSSMAP",
-							"_NORMALMAP"
-						]
-					},
-					"bargest_turret_material": {
-						"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
-						"shaderKeyWords": [
-							"_DETAIL_OVERLAY",
-							"_EMISSION",
-							"_METALLICGLOSSMAP",
-							"_NORMALMAP"
-						]
-					},
-					"ModularSci-FiWeapons_Blue": {
-						"shader": "chrPrfWeap_atlas_centertorso_laser_eh1",
-						"shaderKeyWords": [
-							"_DETAIL_OVERLAY",
-							"_EMISSION",
-							"_METALLICGLOSSMAP",
-							"_NORMALMAP"
-						]
-					}
-				},
-				"prefabTransform": {
-					"offset": {
-						"x": 0,
-						"y": 0,
-						"z": 0
-					},
-					"scale": {
-						"x": 1,
-						"y": 1,
-						"z": 1
-					},
-					"rotate": {
-						"x": 0,
-						"y": 0,
-						"z": 0
-					}
-				},
-				"MechChassisLocation": "CenterTorso",
-				"RequiredUpgrades": [],
-				"RequiredComponents": [],
-				"AnimationType": "MechTurret",
-				"AnimationData": {
-					"TurnAnimator": "base",
-					"AttachPoints": [
-						{
-							"Location": "LeftTorso",
-							"AttachTo": "WeaponAttachL",
-							"Animator": "WeaponMountL"
-						},
-						{
-							"Location": "RightTorso",
-							"AttachTo": "WeaponAttachR",
-							"Animator": "WeaponMountR"
-						},
-						{
-							"Location": "CenterTorso",
-							"AttachTo": "WeaponAttachC",
-							"Animator": "WeaponMountC"
-						}
-					]
-				}
-			}
-		]
+		  "DesignMaskBiomeMartianVacuum": 1.0,
+		  "DesignMaskBiomeLunarVacuum": 1.0
+		}
 	},
 	"Description": {
 		"Cost": 7536120,
@@ -250,9 +99,9 @@
 	},
 	"MovementCapDefID": "movedef_warhammer_WHM-6R",
 	"PathingCapDefID": "pathingdef_heavy",
-	"HardpointDataDefID": "hardpointdatadef_jgoliath",
-	"PrefabIdentifier": "chrPrfMech_atlasBase-001",
-	"PrefabBase": "jgoliath",
+	"HardpointDataDefID": "hardpointdatadef_cugoliath",
+	"PrefabIdentifier": "chrprfmech_goliath",
+	"PrefabBase": "cugoliath",
 	"Tonnage": 80,
 	"InitialTonnage": 8,
 	"weightClass": "ASSAULT",
