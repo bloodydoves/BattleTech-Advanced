@@ -230,39 +230,29 @@
 			"targetingData": {
 				"effectTriggerType": "Passive",
 				"effectTargetType": "Creator",
-				"showInTargetPreview": true,
-				"showInStatusPanel": true
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "CanSwarmStat",
-				"Name": "This Battle Armor can make swarm attacks.",
-				"Details": "This Battle Armor can make swarm attacks.",
-				"Icon": "barbed-nails"
+				"Id": "StatusEffect-ClawBonusSwarmDamage",
+				"Name": "Claw Bonus Damage During Swarms",
+				"Details": "Better damage for BA while swarming.",
+				"Icon": "UixSvgIcon_specialEquip_System"
 			},
 			"statisticData": {
-				"statName": "CanSwarm",
-				"operation": "Set",
-				"modValue": "true",
-				"modType": "System.Boolean"
-			}
-		},
-		{
-			"targetingData": {
-				"effectTriggerType": "OnActivation",
-				"effectTargetType": "Creator",
-				"showInStatusPanel": true
+				"statName": "DamagePerShot",
+				"operation": "Float_Add",
+				"modValue": "5",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "AC20"
 			},
-			"effectType": "ActiveAbility",
-			"Description": {
-				"Id": "AbilityDefBattleArmorMount_test",
-				"Name": "AbilityDefBattleArmorMount THING",
-				"Details": "Activated ability (uses Firing action). Performs a AbilityDefBattleArmorMount.",
-				"Icon": "barbed-nails"
-			},
-			"activeAbilityEffectData": {
-				"abilityName": "AbilityDefBattleArmorMount"
-			}
+			"nature": "Buff"
 		}
 	],
 	"ComponentTags": {
