@@ -29,6 +29,14 @@
 			"HardpointSlot": -1,
 			"hasPrefabName": false,
 			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "Weapon_C3_Master",
+			"ComponentDefType": "Weapon",
+			"HardpointSlot": 0,
+			"hasPrefabName": false,
+			"DamageLevel": "Functional"
 		}
 	],
 	"Description": {
@@ -40,7 +48,7 @@
 		"UIName": "Omega IIC",
 		"Id": "chassisdef_omega_SHP-MK",
 		"Name": "Omega IIC",
-		"Details": "As the designer of this mech says, anything the Inner Sphere does, the Clans can do better. The truth of that statement is open for debate but the Omega IIC, as it is called, is at least clearly a formidable combat machine. Armed with a pair of experimental Silver Bullet Hyper-Assault Gauss Rifles as well as a trio of Ultra LB-5X Autocannons, the Omega IIC has withering firepower at all ranges.",
+		"Details": "When a not only functioning, but rather effective, 150-ton mech emerged from the Inner Sphere, in the form of the Omega, a rather eccentric clan mech designer immediately got to work refitting the mech, with some of the best clan and sldf tech at its core. This design variant leans heavily into the Omega's natural role as a command mech, fully integrating a heavily modified Command Console and a c3 Master System. Using Clan Endo-Steel and a Supercharged Clan XXL 375 Engine, this behemoth can move far more closely to the speed of an Inner Sphere 100-ton mech, while still leaving plenty of weight available to split between its massive amounts of armor and its truly brutal array of weaponry. In each arm rests a new experimental 'Improved Heavy Silver Bullet Hyper-Assault Gauss 10', while there is an Ultra Large Bore-Extended Auto Cannon 5 in each of the three torso sections. The combined firepower of this mech's alpha strike will often outright destroy mechs, even assault mechs, if caught out of cover or off guard. The only truly good news about this 'IIC', as far as its enemies are concerned, is that it's both so heavy and expensive that the odds of ever seeing more than one per Company are slim to none. If you are ever unfortunate enough to encounter one, only engage with the utmost caution.",
 		"Icon": "uixTxrIcon_omega"
 	},
 	"VariantName": "SHP-X1",
@@ -51,7 +59,7 @@
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Superheavy Prototype",
-	"YangsThoughts": "As the designer of this mech says, anything the Inner Sphere does, the Clans can do better. The truth of that statement is open for debate but the Omega IIC, as it is called, is at least clearly a formidable combat machine. Armed with a pair of experimental Silver Bullet Hyper-Assault Gauss Rifles as well as a trio of Ultra LB-5X Autocannons, the Omega IIC has withering firepower at all ranges.",
+	"YangsThoughts": "When a not only functioning, but rather effective, 150-ton mech emerged from the Inner Sphere, in the form of the Omega, a rather eccentric clan mech designer immediately got to work refitting the mech, with some of the best clan and sldf tech at its core. This design variant leans heavily into the Omega's natural role as a command mech, fully integrating a heavily modified Command Console and a c3 Master System. Using Clan Endo-Steel and a Supercharged Clan XXL 375 Engine, this behemoth can move far more closely to the speed of an Inner Sphere 100-ton mech, while still leaving plenty of weight available to split between its massive amounts of armor and its truly brutal array of weaponry. In each arm rests a new experimental 'Improved Heavy Silver Bullet Hyper-Assault Gauss 10', while there is an Ultra Large Bore-Extended Auto Cannon 5 in each of the three torso sections. The combined firepower of this mech's alpha strike will often outright destroy mechs, even assault mechs, if caught out of cover or off guard. The only truly good news about this 'IIC', as far as its enemies are concerned, is that it's both so heavy and expensive that the odds of ever seeing more than one per Company are slim to none. If you are ever unfortunate enough to encounter one, only engage with the utmost caution.",
 	"MovementCapDefID": "movedef_annihilator_ANH-1A",
 	"PathingCapDefID": "pathingdef_assault",
 	"HardpointDataDefID": "hardpointdatadef_omega",
@@ -90,12 +98,7 @@
 	"Locations": [
 		{
 			"Location": "Head",
-			"Hardpoints": [
-				{
-					"WeaponMount": "AntiPersonnel",
-					"Omni": false
-				}
-			],
+			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
 			"MaxArmor": 60,
@@ -151,6 +154,10 @@
 			"Hardpoints": [
 				{
 					"WeaponMount": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				}
 			],
