@@ -25,7 +25,7 @@
 		"UIName": "Omega IIC SHP-X1",
 		"Id": "mechdef_omega_SHP-MK",
 		"Name": "Omega IIC SHP-X1",
-		"Details": "As the designer of this mech says, anything the Inner Sphere does, the Clans can do better. The truth of that statement is open for debate but the Omega IIC, as it is called, is at least clearly a formidable combat machine. Armed with a pair of experimental Silver Bullet Hyper-Assault Gauss Rifles as well as a trio of Ultra LB-5X Autocannons, the Omega IIC has withering firepower at all ranges.",
+		"Details": "When a not only functioning, but rather effective, 150-ton mech emerged from the Inner Sphere, in the form of the Omega, a rather eccentric clan mech designer immediately got to work refitting the mech, with some of the best clan and sldf tech at its core. This design variant leans heavily into the Omega's natural role as a command mech, fully integrating a heavily modified Command Console and a c3 Master System. Using Clan Endo-Steel and a Supercharged Clan XXL 375 Engine, this behemoth can move far more closely to the speed of an Inner Sphere 100-ton mech, while still leaving plenty of weight available to split between its massive amounts of armor and its truly brutal array of weaponry. In each arm rests a new experimental 'Improved Heavy Silver Bullet Hyper-Assault Gauss 10', while there is an Ultra Large Bore-Extended Auto Cannon 5 in each of the three torso sections. The combined firepower of this mech's alpha strike will often outright destroy mechs, even assault mechs, if caught out of cover or off guard. The only truly good news about this 'IIC', as far as its enemies are concerned, is that it's both so heavy and expensive that the odds of ever seeing more than one per Company are slim to none. If you are ever unfortunate enough to encounter one, only engage with the utmost caution.",
 		"Icon": "uixTxrIcon_omega"
 	},
 	"simGameMechPartCost": 714821,
@@ -61,10 +61,10 @@
 		{
 			"Location": "CenterTorso",
 			"CurrentArmor": 350,
-			"CurrentRearArmor": 130,
+			"CurrentRearArmor": 150,
 			"CurrentInternalStructure": 230,
 			"AssignedArmor": 350,
-			"AssignedRearArmor": 130,
+			"AssignedRearArmor": 150,
 			"DamageLevel": "Functional"
 		},
 		{
@@ -87,19 +87,19 @@
 		},
 		{
 			"Location": "LeftLeg",
-			"CurrentArmor": 300,
+			"CurrentArmor": 290,
 			"CurrentRearArmor": -1,
 			"CurrentInternalStructure": 160,
-			"AssignedArmor": 300,
+			"AssignedArmor": 290,
 			"AssignedRearArmor": -1,
 			"DamageLevel": "Functional"
 		},
 		{
 			"Location": "RightLeg",
-			"CurrentArmor": 300,
+			"CurrentArmor": 290,
 			"CurrentRearArmor": -1,
 			"CurrentInternalStructure": 160,
-			"AssignedArmor": 300,
+			"AssignedArmor": 290,
 			"AssignedRearArmor": -1,
 			"DamageLevel": "Functional"
 		}
@@ -123,7 +123,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engine_400",
+			"ComponentDefID": "emod_engine_375",
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
 			"hasPrefabName": false,
@@ -155,7 +155,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engine_cooling_6",
+			"ComponentDefID": "emod_engine_cooling_5",
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
 			"hasPrefabName": false,
@@ -296,7 +296,7 @@
 			"DamageLevel": "Functional"
 		},
 		{
-			"MountedLocation": "CenterTorso",
+			"MountedLocation": "LeftTorso",
 			"ComponentDefID": "Gear_Supercharger",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": 0,
@@ -305,16 +305,7 @@
 			"DamageLevel": "Functional"
 		},
 		{
-			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "Gear_C3i",
-			"ComponentDefType": "Upgrade",
-			"HardpointSlot": 0,
-			"SimGameUID": "",
-			"hasPrefabName": false,
-			"DamageLevel": "Functional"
-		},
-		{
-			"MountedLocation": "LeftLeg",
+			"MountedLocation": "RightTorso",
 			"ComponentDefID": "Gear_AP_CLAN",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": 0,
@@ -323,17 +314,8 @@
 			"DamageLevel": "Functional"
 		},
 		{
-			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "Gear_HeatSink_Generic_Thermal-Exchanger-II",
-			"ComponentDefType": "HeatSink",
-			"HardpointSlot": 0,
-			"SimGameUID": "",
-			"hasPrefabName": false,
-			"DamageLevel": "Functional"
-		},
-		{
-			"MountedLocation": "RightLeg",
-			"ComponentDefID": "Gear_HeatSink_Generic_Double_Clan",
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "Gear_HeatSink_Generic_Thermal-Exchanger-III",
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": 0,
 			"SimGameUID": "",
@@ -386,6 +368,14 @@
 			"ComponentDefID": "Weapon_Gauss_SBHAG10_0-STOCK",
 			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
+			"hasPrefabName": false,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "Ammo_AmmunitionBox_Generic_SBGAUSS",
+			"ComponentDefType": "AmmunitionBox",
+			"HardpointSlot": -1,
 			"hasPrefabName": false,
 			"DamageLevel": "Functional"
 		},
