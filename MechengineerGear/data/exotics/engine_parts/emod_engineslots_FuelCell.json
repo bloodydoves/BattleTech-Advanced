@@ -30,7 +30,7 @@
 		"BonusDescriptions": {
 			"Bonuses": [
 				"FuelCellSHS",
-				"EngineWeight: X1.6",
+				"EngineWeight: +60%",
 				"HeatGenerated: -30%"
 			]
 		}
@@ -62,53 +62,28 @@
 		{
 			"durationData": {
 				"duration": -1,
-				"ticksOnActivations": false,
-				"useActivationsOfTarget": false,
-				"ticksOnEndOfRound": false,
-				"ticksOnMovements": false,
-				"stackLimit": 1,
-				"clearedWhenAttacked": false
+				"stackLimit": 1
 			},
 			"targetingData": {
 				"effectTriggerType": "Passive",
-				"triggerLimit": 0,
-				"extendDurationOnTrigger": 0,
-				"specialRules": "NotSet",
 				"effectTargetType": "Creator",
-				"range": 0,
-				"forcePathRebuild": false,
-				"forceVisRebuild": false,
 				"showInTargetPreview": false,
-				"showInStatusPanel": false
+				"showInStatusPanel": true
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
 				"Id": "StatusEffect-FuelCellHeatReduction",
 				"Name": "Reduced Heat",
-				"Details": "Heat generation decreased by 20%.",
+				"Details": "Fuel Cell Engines are highly heat efficient, wicking away 20 heat each turn.",
 				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
 			},
 			"nature": "Buff",
 			"statisticData": {
-				"appliesEachTick": false,
-				"effectsPersistAfterDestruction": false,
-				"statName": "HeatGenerated",
-				"operation": "Float_Multiply",
-				"modValue": "0.7",
-				"modType": "System.Single",
-				"additionalRules": "NotSet",
-				"targetCollection": "Weapon",
-				"targetWeaponCategory": "NotSet",
-				"targetWeaponType": "NotSet",
-				"targetAmmoCategory": "NotSet",
-				"targetWeaponSubType": "NotSet"
-			},
-			"tagData": null,
-			"floatieData": null,
-			"actorBurningData": null,
-			"vfxData": null,
-			"instantModData": null,
-			"poorlyMaintainedEffectData": null
+				"statName": "HeatSinkCapacity",
+				"operation": "Int_Add",
+				"modValue": "20",
+				"modType": "System.Int32"
+			}
 		}
 	],
 	"ComponentTags": {
