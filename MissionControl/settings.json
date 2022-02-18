@@ -87,12 +87,22 @@
 		],
 		"SkipWhenTaggedWithAll": [],
 		"SkipWhenExcludeTagsContain": [
+			"mc_no_extended_lance",
 			"no_extended_lance"
 		],
 		"LanceSizes": {
 			"5": [],
 			"6": []
-		}
+		},
+		"EnableForTargetAlly": true,
+		"EnableForEmployerAlly": true,
+		"EnableForHostileToAll": true,
+		"EnableForNeutralToAll": true,
+		"AutofillType": "RespectEmpty",
+		"AutofillUnitCopyType": "RandomInLance",
+		"AutofillStartingFromContractDifficulty": 3,
+		"ForceLanceOverrideSizeWithTag": "mc_force_extended_lance",
+		"ForceLanceDefSizeWithTag": "mc_force_extended_lance"
 	},
 	"ExtendedBoundaries": {
 		"Enable": true,
@@ -175,6 +185,10 @@
 			},
 			{
 				"MapId": "mapGeneral_desertDam_aDes",
+				"ContractTypeName": "AmbushConvoy",
+				"IncreaseBoundarySizeByPercentage": 0.2
+			},
+			{
 				"ContractTypeName": "AmbushConvoy",
 				"IncreaseBoundarySizeByPercentage": 0.2
 			}
