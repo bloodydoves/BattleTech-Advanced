@@ -268,7 +268,10 @@
 				"description": "Battle Armor has decreased accuracy when firing while mounted.",
 				"effectDataJO": [
 					{
-						"durationData": {},
+						"durationData": {
+							"duration": -1,
+							"stackLimit": -1
+						},
 						"targetingData": {
 							"effectTriggerType": "Passive",
 							"effectTargetType": "Creator",
@@ -292,13 +295,16 @@
 				]
 			},
 			{
-				"ID": "BA_MountedFireDebuff",
+				"ID": "BA_MountedInternalAOEImmunity",
 				"TargetEffectType": "MOUNT_INT",
 				"Name": "Battle Armor - Internal Mounted AOE Immunity",
 				"description": "Battle Armor takes no damage when mounted internally.",
 				"effectDataJO": [
 					{
-						"durationData": {},
+						"durationData": {
+							"duration": -1,
+							"stackLimit": -1
+						},
 						"targetingData": {
 							"effectTriggerType": "Passive",
 							"effectTargetType": "Creator",
