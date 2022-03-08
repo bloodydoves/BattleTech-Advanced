@@ -79,6 +79,62 @@
 			"targetingData": {
 				"effectTriggerType": "OnActivation",
 				"effectTargetType": "Creator",
+				"forcePathRebuild": true,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-IntenseWalk",
+				"Name": "Intensified Firepower",
+				"Details": "This unit can not move this turn but deals +30% damage for this turn.",
+				"Icon": "hypersonic-bolt"
+			},
+			"statisticData": {
+				"statName": "WalkSpeed",
+				"operation": "Float_Multiply",
+				"modValue": "0.01",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"forcePathRebuild": true,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-IntenseRun",
+				"Name": "Intensified Firepower",
+				"Details": "This unit can not move this turn but deals +30% damage for this turn.",
+				"Icon": "hypersonic-bolt"
+			},
+			"statisticData": {
+				"statName": "CBTBE_RunMultiMod",
+				"operation": "Float_Multiply",
+				"modValue": "0.01",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
 				"showInStatusPanel": false
 			},
 			"effectType": "StatisticEffect",
