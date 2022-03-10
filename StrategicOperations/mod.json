@@ -2,7 +2,7 @@
 	"Name": "StrategicOperations",
 	"DLL": "StrategicOperations.dll",
 	"Hidden": true,
-	"Version": "2.0.3.6",
+	"Version": "2.0.4.0",
 	"Description": "",
 	"Author": "T-Bone",
 	"Website": "https://github.com/ajkroeg/StrategicOperations",
@@ -263,12 +263,15 @@
 			},
 			{
 				"ID": "BA_MountedFireDebuff",
-				"TargetEffectType": "MOUNT",
+				"TargetEffectType": "MOUNT_INT",
 				"Name": "Battle Armor - Mounted Debuff",
 				"description": "Battle Armor has decreased accuracy when firing while mounted.",
 				"effectDataJO": [
 					{
-						"durationData": {},
+						"durationData": {
+							"duration": -1,
+							"stackLimit": -1
+						},
 						"targetingData": {
 							"effectTriggerType": "Passive",
 							"effectTargetType": "Creator",
@@ -276,8 +279,8 @@
 						},
 						"effectType": "StatisticEffect",
 						"Description": {
-							"Id": "BA_EasyTargetingPassive",
-							"Name": "Easy shots",
+							"Id": "BA_HardTargetingPassive",
+							"Name": "Hard shots",
 							"Details": "Battle Armor has decreased accuracy while mounted.",
 							"Icon": "allied-star"
 						},
@@ -286,6 +289,39 @@
 							"statName": "AccuracyModifier",
 							"operation": "Set",
 							"modValue": "4",
+							"modType": "System.Single"
+						}
+					}
+				]
+			},
+			{
+				"ID": "BA_MountedInternalAOEImmunity",
+				"TargetEffectType": "MOUNT_INT",
+				"Name": "Battle Armor - Internal Mounted AOE Immunity",
+				"description": "Battle Armor takes no damage when mounted internally.",
+				"effectDataJO": [
+					{
+						"durationData": {
+							"duration": -1,
+							"stackLimit": -1
+						},
+						"targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator",
+							"showInStatusPanel": true
+						},
+						"effectType": "StatisticEffect",
+						"Description": {
+							"Id": "BA_InternalAOEImmune",
+							"Name": "AOE Immune",
+							"Details": "Battle Armor takes no damage when mounted internally.",
+							"Icon": "allied-star"
+						},
+						"nature": "Buff",
+						"statisticData": {
+							"statName": "CACAoEDamageMult",
+							"operation": "Set",
+							"modValue": "0.0",
 							"modType": "System.Single"
 						}
 					}

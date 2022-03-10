@@ -26,6 +26,7 @@
 		},
 		"BonusDescriptions": {
 			"Bonuses": [
+				"WalkSpeed: +25%",
 				"EngineWeight: +50%"
 			]
 		},
@@ -42,11 +43,11 @@
 		"UIName": "Engine Compact",
 		"Id": "emod_engineslots_compact_center",
 		"Name": "Compact Engine",
-		"Details": "The Compact Fusion Engine is mechanically similar to a Fusion Engine but uses much denser radiation shielding. The Compact fusion engine is 50% heavier for the same performance, but occupies less space in the center torso and is less likely to receive a critical hit.",
+		"Details": "The Compact Fusion Engine is mechanically similar to a Fusion Engine but uses much denser radiation shielding. The Compact fusion engine is 50% heavier but occupies less space in the center torso and is less likely to receive a critical hit. Due to their density, compact fusion engines also focus power generation, increasing the power that can be transferred to movement.",
 		"Icon": "uixSvgIcon_equipment_ThermalExchanger"
 	},
-	"BonusValueA": "+ 50% Engine Weight",
-	"BonusValueB": "- 3 Slots Required",
+	"BonusValueA": "",
+	"BonusValueB": "",
 	"ComponentType": "HeatSink",
 	"ComponentSubType": "Heatsink",
 	"PrefabIdentifier": "",
@@ -56,7 +57,45 @@
 	"AllowedLocations": "CenterTorso",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
-	"statusEffects": null,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-CompactWalkSpeed",
+				"Name": "Compact Engine",
+				"Details": "Compact engines focus power generation, increasing walk speed.",
+				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+			},
+			"statisticData": {
+				"statName": "WalkSpeed",
+				"operation": "Float_Multiply",
+				"modValue": "1.25",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	],
 	"ComponentTags": {
 		"items": [
 			"component_type_stock",

@@ -1,0 +1,187 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/a/a/taser"
+			}
+		],
+		"ComponentExplosion": {
+			"ExplosionDamage": 30
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"Taser",
+				"TaserStrength: 45%",
+				"TaserMovement: 10%",
+				"TaserAccuracy: -1"
+			]
+		}
+	},
+	"Category": "Ballistic",
+	"Type": "MachineGun",
+	"WeaponSubType": "MachineGun",
+	"MinRange": 0,
+	"MaxRange": 240,
+	"RangeSplit": [
+		30,
+		60,
+		180
+	],
+	"AmmoCategory": "Taser",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 18,
+	"Damage": 5,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 0,
+	"DamageVariance": 0,
+	"HeatDamage": 10,
+	"AccuracyModifier": 1,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 1,
+	"Instability": 0,
+	"ImprovedBallistic": true,
+	"WeaponEffectID": "WeaponEffect-Weapon_COILS",
+	"Description": {
+		"Cost": 250000,
+		"Rarity": 0,
+		"Purchasable": true,
+		"Manufacturer": "NAIS",
+		"Model": "Mr. Zappy",
+		"UIName": "Mech Taser",
+		"Id": "Weapon_Mech_Taser",
+		"Name": "Mech Taser",
+		"Details": "Originally developed by the Word of Blake for their Battle Armor forces, the Taser was eventually expanded to BattleMech-scale operations by the Federated Suns. While the weapon is short range, bulky, hot, and difficult to use, it has the incredibly powerful effect of (sometimes) instantly disabling the target. Still, there are myriad flaws with the weapon that keep it from wide deployment.",
+		"Icon": "uixSvgIcon_weapon_Ballistic"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "PPC",
+	"BattleValue": 0,
+	"InventorySize": 3,
+	"Tonnage": 4,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": 1,
+				"stackLimit": 4
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "WeaponEffect-TaserShutdown",
+				"Name": "Tased!",
+				"Details": "This unit has been hit by a Mech Taser, it has a chance to shut down. It also suffers a penalty to accuracy and to movement speed.",
+				"Icon": "magnet-blast"
+			},
+			"statisticData": {
+				"statName": "OnHitShutdownChance",
+				"operation": "Float_Add",
+				"modValue": "0.45",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "WeaponEffect-TaserAccuracy",
+				"Name": "SENSORS IMPAIRED",
+				"Details": "[AMT] Difficulty to all of this unit's attacks until its next activation.",
+				"Icon": "uixSvgIcon_status_sensorsImpaired"
+			},
+			"nature": "Debuff",
+			"statisticData": {
+				"statName": "AccuracyModifier",
+				"operation": "Float_Add",
+				"modValue": "1.0",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "WeaponEffect-TaserWalk",
+				"Name": "SENSORS IMPAIRED",
+				"Details": "[AMT] Difficulty to all of this unit's attacks until its next activation.",
+				"Icon": "uixSvgIcon_status_sensorsImpaired"
+			},
+			"nature": "Debuff",
+			"statisticData": {
+				"statName": "WalkSpeed",
+				"operation": "Float_Multiply",
+				"modValue": "0.9",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "WeaponEffect-TaserRun",
+				"Name": "SENSORS IMPAIRED",
+				"Details": "[AMT] Difficulty to all of this unit's attacks until its next activation.",
+				"Icon": "uixSvgIcon_status_sensorsImpaired"
+			},
+			"nature": "Debuff",
+			"statisticData": {
+				"statName": "CBTBE_RunMultiMod",
+				"operation": "Float_Add",
+				"modValue": "-0.1",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_very-long"
+		],
+		"tagSetSourceFile": ""
+	}
+}

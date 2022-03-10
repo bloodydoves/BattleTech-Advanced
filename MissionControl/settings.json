@@ -63,12 +63,12 @@
 		"MatchAllyLanceCountToEnemy": false,
 		"DropWeightInfluence": {
 			"Enable": false,
+			"EnemySpawnInfluenceMax": 0.9,
+			"AllySpawnInfluenceMax": 0.9,
 			"EnemySpawnInfluencePerHalfSkullAbove": 0.1,
 			"AllySpawnInfluencePerHalfSkullAbove": -0.1,
 			"EnemySpawnInfluencePerHalfSkullBelow": -0.1,
-			"AllySpawnInfluencePerHalfSkullBelow": 0.1,
-			"EnemySpawnInfluenceMax": 0.9,
-			"AllySpawnInfluenceMax": 0.9
+			"AllySpawnInfluencePerHalfSkullBelow": 0.1
 		},
 		"DisableAllies": false,
 		"DisableEnemies": false
@@ -77,7 +77,14 @@
 		"Enable": true,
 		"EnableForFlashpoints": true,
 		"EnableForStory": false,
+		"EnableForTargetAlly": true,
+		"EnableForEmployerAlly": true,
+		"EnableForHostileToAll": true,
+		"EnableForNeutralToAll": true,
 		"Autofill": true,
+		"AutofillType": "RespectEmpty",
+		"AutofillUnitCopyType": "RandomInLance",
+		"AutofillStartingFromContractDifficulty": 3,
 		"ExcludeContractTypes": [
 			"SoloDuel",
 			"DuoDuel"
@@ -87,8 +94,11 @@
 		],
 		"SkipWhenTaggedWithAll": [],
 		"SkipWhenExcludeTagsContain": [
+			"mc_no_extended_lance",
 			"no_extended_lance"
 		],
+		"ForceLanceOverrideSizeWithTag": "mc_force_extended_lance",
+		"ForceLanceDefSizeWithTag": "mc_force_extended_lance",
 		"LanceSizes": {
 			"5": [],
 			"6": []
@@ -167,6 +177,15 @@
 				"MapId": "mapGeneral_riftValley_vJung",
 				"ContractTypeName": "AmbushConvoy",
 				"IncreaseBoundarySizeByPercentage": 0.4
+			},
+			{
+				"MapId": "mapMultiPurp_metroGreen_uTech",
+				"ContractTypeName": "CaptureBase",
+				"IncreaseBoundarySizeByPercentage": 0.2
+			},
+			{
+				"ContractTypeName": "AmbushConvoy",
+				"IncreaseBoundarySizeByPercentage": 0.2
 			}
 		]
 	},

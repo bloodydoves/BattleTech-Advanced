@@ -2,7 +2,7 @@
 	"Name": "IRTweaks",
 	"Enabled": true,
 	"Hidden": true,
-	"Version": "0.9.4.7",
+	"Version": "0.9.4.9",
 	"Description": "Miscellaneous Tweaks and Fixes",
 	"Author": "IceRaptor",
 	"Website": "https://github.com/IceRaptor/IRTweaks",
@@ -20,6 +20,7 @@
 			"AlternateMechNamingStyle": false,
 			"BuildingDamageColorChange": false,
 			"BraceOnMeleeWithJuggernaut": true,
+			"BreachingShotIgnoresAllDR": false,
 			"BulkPurchasing": false,
 			"BulkScrapping": false,
 			"CombatLog": false,
@@ -62,7 +63,8 @@
 		"Abilities": {
 			"FlexibleSensorLockId": "AbilityDefT5A",
 			"JuggernautId": "AbilityDefGu8",
-			"MultiTargetId": "AbilityDefG5"
+			"MultiTargetId": "AbilityDefG5",
+			"BraceEffectConfig": {}
 		},
 		"CheatDetection": {
 			"CheatDetection": false,
@@ -229,6 +231,17 @@
 					"unit_vehicle": 0.5,
 					"unit_quad": 0.25
 				}
+			},
+			"OnWeaponFireOpts": {
+				"SelfKnockdownCheckStatName": "SelfknockdownCheck_OnFire",
+				"IgnoreSelfKnockdownTag": "big_chungus",
+				"SelfKnockdownPilotingFactor": 0.01,
+				"SelfKnockdownBracedFactor": 100.0
+			},
+			"OnWeaponHitOpts": {
+				"ForceShutdownOnHitStat": "OnHitShutdownChance",
+				"IgnoreShutdownTag": "DontTazeMeBro",
+				"ResistShutdownGutsFactor": 0.0325
 			},
 			"TurretArmorAndStructure": {
 				"StructureMultiplierTurret": 0,

@@ -1,23 +1,32 @@
 {
 	"debug": true,
-	"showDescriptionsOnChassis": true,
 	"missionsBeforeDecay": 3,
-	"removeAffinityAfter": 13,
 	"lowestPossibleDecay": 2,
+	"removeAffinityAfter": 13,
 	"maxAffinityPoints": 18,
 	"decayByModulo": false,
+	"debugForceTag": "",
 	"defaultDaysBeforeSimDecay": -1,
-	"topAffinitiesInTooltipCount": 3,
 	"showQuirks": true,
-	"enablePilotQuirks": true,
+	"showDescriptionsOnChassis": true,
 	"trackSimDecayByStat": true,
 	"trackLowestDecayByStat": false,
 	"showAllPilotAffinities": true,
+	"topAffinitiesInTooltipCount": 3,
+	"enablePilotQuirks": true,
+	"playerQuirkPools": false,
+	"pqArgoAdditive": true,
+	"pqArgoMultiAutoAdjust": true,
+	"pqArgoMin": 0.0,
+	"enablePilotSelect": true,
+	"enableMonthlyMoraleReset": false,
+	"quirkPools": [],
+	"pqTooltipTags": [],
 	"pilotQuirks": [
 		{
 			"tag": "Tutorial_PlotArmor",
 			"quirkName": "Plot Armor",
-			"description": "The OpFor weapons have been depowered for this training exercise, effectively giving you a 10% damage reduction.",
+			"description": "The OpFor weapons have been underpowered for this training exercise, effectively giving you a 10% damage reduction.",
 			"effectData": [
 				{
 					"durationData": {},
@@ -47,6 +56,7 @@
 	],
 	"globalAffinities": [
 		{
+			"id": "Comfortable_(5)",
 			"missionsRequired": 5,
 			"levelName": "Comfortable (5)",
 			"decription": "Gain +1 Piloting",
@@ -55,9 +65,11 @@
 					"type": "Piloting",
 					"bonus": 1
 				}
-			]
+			],
+			"effectData": []
 		},
 		{
+			"id": "Attuned_(10)",
 			"missionsRequired": 10,
 			"levelName": "Attuned (10)",
 			"decription": "Gain +1 to all pilot skills",
@@ -78,7 +90,8 @@
 					"type": "Gunnery",
 					"bonus": 1
 				}
-			]
+			],
+			"effectData": []
 		}
 	],
 	"chassisAffinities": [
@@ -110,9 +123,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Zippy",
 					"missionsRequired": 15,
 					"levelName": "Zippy",
 					"decription": "15% boost to sprint speed!",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -157,6 +172,7 @@
 				"chrPrfMech_commandoBase-001_25",
 				"chrprfmech_urbiebase-001_30",
 				"Urbie-LAM_30",
+				"UrbanLord_70",
 				"chrPrfMech_ravenBase-001_35",
 				"chrprfmech_owensbase-001_35",
 				"chrPrfMech_vulcanBase-001_40",
@@ -177,9 +193,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Evasive",
 					"missionsRequired": 15,
 					"levelName": "Evasive",
 					"decription": "+2 bonus against being hit",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -245,9 +263,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Nimble",
 					"missionsRequired": 15,
 					"levelName": "Nimble",
 					"decription": "15% more jumping distance",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -308,9 +328,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Encouraging",
 					"missionsRequired": 15,
 					"levelName": "Encouraging",
 					"decription": "+2 resolve whenever resolve is gained",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -381,9 +403,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Precise_Shot",
 					"missionsRequired": 15,
 					"levelName": "Precise Shot",
 					"decription": "+1 bonus on weapon attacks",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -450,9 +474,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Keen-Eyed",
 					"missionsRequired": 15,
 					"levelName": "Keen-Eyed",
 					"decription": "15% boost to sensor and sight range",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -549,9 +575,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Agile",
 					"missionsRequired": 15,
 					"levelName": "Agile",
 					"decription": "Gains 1 bonus evasion on movement",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -616,9 +644,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Sturdy",
 					"missionsRequired": 15,
 					"levelName": "Sturdy",
 					"decription": "Gains 2 extra pilot hits",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -673,9 +703,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Cool-Running",
 					"missionsRequired": 15,
 					"levelName": "Cool-Running",
 					"decription": "Adds 6 bonus heat sinking, effectively one extra double heat sink.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -738,9 +770,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Ice_Cold",
 					"missionsRequired": 15,
 					"levelName": "Ice Cold",
 					"decription": "Adds 9 bonus heat sinking, effectively one and a half extra double heat sinks.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -804,9 +838,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Resistant",
 					"missionsRequired": 15,
 					"levelName": "Resistant",
 					"decription": "50% less chance to suffer critical hits",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -867,9 +903,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Unlimited_Power",
 					"missionsRequired": 15,
 					"levelName": "Unlimited Power",
 					"decription": "Energy, Ballistic, and Missile weapons deal 10% more damage.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -994,13 +1032,16 @@
 				"chrprfmech_yenlowang1base-001_50",
 				"chrprfmech_redreaperbase-001_75",
 				"chrprfmech_digkingbase-001_30",
-				"chrPrfMech_hatchetmanBase-001_45"
+				"chrPrfMech_hatchetmanBase-001_45",
+				"chrprfmech_iongrigoribase-001_60"
 			],
 			"affinityLevels": [
 				{
+					"id": "Brawler",
 					"missionsRequired": 15,
 					"levelName": "Brawler",
 					"decription": "Kicks, punches, and physical weapon attacks deal 15% more damage.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -1118,15 +1159,18 @@
 				"chrPrfMech_wolverineBase-001_55",
 				"chrprfmech_supernovabase-001_90",
 				"chrprfmech_stonerhinobase-001_100",
+				"BehemothII_100",
 				"chrprfmech_napesospreybase-001_55",
 				"chrprfmech_dragonfirebase-001_75",
 				"chrprfmech_thunderhawkbase-001_100"
 			],
 			"affinityLevels": [
 				{
+					"id": "Command_Unit",
 					"missionsRequired": 15,
 					"levelName": "Command Unit",
 					"decription": "Gains +1 initiative",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -1172,9 +1216,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Stabilized",
 					"missionsRequired": 15,
 					"levelName": "Stabilized",
 					"decription": "Reduces stability damage taken by 50%.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -1216,13 +1262,16 @@
 				"Rifleman_60",
 				"Rifleman_50",
 				"RiflemanII_80",
-				"chrPrfMech_assassinBase-001_40"
+				"chrPrfMech_assassinBase-001_40",
+				"chrprfmech_ymirbase-001_90"
 			],
 			"affinityLevels": [
 				{
+					"id": "Sharpshooter",
 					"missionsRequired": 15,
 					"levelName": "Sharpshooter",
 					"decription": "Ignores 1 enemy evasion.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -1261,9 +1310,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Long-Range_Specialist",
 					"missionsRequired": 15,
 					"levelName": "Long-Range Specialist",
 					"decription": "Gains +4 accuracy at extreme range, but has worse accuracy the closer the target is.",
+					"affinities": [],
 					"effectData": [
 						{
 						  "durationData": {
@@ -1406,9 +1457,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Goomba_Stomper",
 					"missionsRequired": 15,
 					"levelName": "Goomba Stomper",
 					"decription": "Improved DFA skill, taking 20% less stab damage when performing a DFA and dealing 20% more regular damage when performing a DFA.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -1482,13 +1535,16 @@
 				"Gnome_4",
 				"Asterion_4",
 				"Tengu_8",
-				"Elemental_5"
+				"Elemental_5",
+				"Simo_4"
 			],
 			"affinityLevels": [
 				{
+					"id": "Squirrelly_Bastard",
 					"missionsRequired": 15,
 					"levelName": "Squirrelly Bastard",
 					"decription": "Hard to catch due to size and skill, gaining +2 defense and +1 evasion at all times.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -1589,9 +1645,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Armor_Block",
 					"missionsRequired": 15,
 					"levelName": "Armor Block",
 					"decription": "You may be small but you're beefy for your size, resisting even the most determined efforts to squish you. Gain 35% damage reduction at all times.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -1634,9 +1692,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Speed_King",
 					"missionsRequired": 10,
 					"levelName": "Speed King",
 					"decription": "Wulf gains +15% sprint speed with his Commandos.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -1682,9 +1742,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Too_Angry_to_Die",
 					"missionsRequired": 10,
 					"levelName": "Too Angry to Die",
 					"decription": "Tex gains +10% energy damage with his Awesome.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -1730,9 +1792,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Choppy_Choppy",
 					"missionsRequired": 10,
 					"levelName": "Choppy Choppy",
 					"decription": "Loki gains +30% physical weapon damage with his Hatchetman's hatchet.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -1774,14 +1838,17 @@
 		{
 			"tag": "Affinity_tbone_Corsair",
 			"chassisNames": [
+				"Corsair_55",
 				"Corsair_75",
 				"Corsair_95"
 			],
 			"affinityLevels": [
 				{
+					"id": "Warfighter",
 					"missionsRequired": 10,
 					"levelName": "Warfighter",
 					"decription": "t-bone gains +10% ballistic damage with his Corsair.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -1827,9 +1894,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Beats_By_Crab",
 					"missionsRequired": 10,
 					"levelName": "Beats By Crab",
 					"decription": "Bloodydoves gains +10% weapon damage with his King Crab.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -1941,9 +2010,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Shield_of_Faith",
 					"missionsRequired": 10,
 					"levelName": "Shield of Faith",
 					"decription": "Shade gains +10% damage reduction in his Valkyrie II.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -1983,9 +2054,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Radar_Jammer",
 					"missionsRequired": 10,
 					"levelName": "Radar Jammer",
 					"decription": "Turtrus gains a unique +2 hit defense in his Crab due to his electronics expertise. Stacks with ECM.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -2025,9 +2098,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Little_Purple_Tank",
 					"missionsRequired": 10,
 					"levelName": "Little Purple Tank",
 					"decription": "Hellion gains 20% damage reduction in her Bushwacker at all times.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -2067,9 +2142,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Foundation's_Edge",
 					"missionsRequired": 10,
 					"levelName": "Foundation's Edge",
 					"decription": "Raza gains +10% energy damage and ignores 1 evasion with energy weapons in his Mongoose.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -2140,9 +2217,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Wizard_of_Camelot",
 					"missionsRequired": 10,
 					"levelName": "Wizard of Camelot",
 					"decription": "LeFay's sensor signature is reduced by 40% in her Merlin, making her less likely to take enemy fire.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -2184,9 +2263,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "On_the_Wings_of_Angels",
 					"missionsRequired": 10,
 					"levelName": "On the Wings of Angels",
 					"decription": "Ridgeline's dream came true, he's driving a LAM! He gets +2 bonus accurascy in Wasp LAMs, Stinger LAMs, and Phoenix Hawk LAMs.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -2226,9 +2307,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Bring_Your_Pretty_Face_To_My_Axe",
 					"missionsRequired": 10,
 					"levelName": "Bring Your Pretty Face To My Axe",
 					"decription": "Pharoah's skill with his Berserker grants him a little extra speed in it, increasing his sprint speed somewhat.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -2268,9 +2351,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Make_It_Rain",
 					"missionsRequired": 10,
 					"levelName": "Make It Rain",
 					"decription": "Revostae's skill with his Archer grants him a small damage bonus with missile weapons.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -2315,9 +2400,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Can't_Break_Me",
 					"missionsRequired": 10,
 					"levelName": "Can't Break Me",
 					"decription": "Scorch's skill with his Cataphract grants him increased critical damage resistance, making crits 35% less likely against him.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -2358,9 +2445,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Minimizer",
 					"missionsRequired": 10,
 					"levelName": "Minimizer",
 					"decription": "Virago knows how to be small, gaining a +4 defensive bonus against all attacks. This stacks with the Squirrelly Bastard affinity.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -2405,9 +2494,11 @@
 			],
 			"affinityLevels": [
 				{
+					"id": "Battle_Brother",
 					"missionsRequired": 10,
 					"levelName": "Battle Brother",
 					"decription": "Star Seed knows the secret of taking a solid punch in a Battle Armor suit, gaining 35% bonus damage reduction in his suits.",
+					"affinities": [],
 					"effectData": [
 						{
 							"Description": {
@@ -2440,5 +2531,7 @@
 				}
 			]
 		}
-	]
+	],
+	"prefabOverrides": [],
+	"affinityGroups": []
 }

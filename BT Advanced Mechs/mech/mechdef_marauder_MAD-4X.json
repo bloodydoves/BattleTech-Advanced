@@ -1,13 +1,11 @@
 {
 	"MechTags": {
 		"items": [
-			"KSBeta",
 			"unit_mech",
 			"unit_heavy",
 			"unit_lance_tank",
 			"unit_role_sniper",
 			"unit_release",
-			"unit_jumpOK",
 			"Marik",
 			"DuchyOfAndurien",
 			"BlackCalderaDefense",
@@ -27,7 +25,7 @@
 		"UIName": "Marauder MAD-4X",
 		"Id": "mechdef_marauder_MAD-4X",
 		"Name": "Marauder",
-		"Details": "This experimental variant was made at Ronin Incorporated's facility on Wallis in 3039. Techs removed the standard weaponry from a Marauder and replaced the arm mounted weapons with a Binary Laser Cannon in each arm, while the torso mounted autocannon was replaced by twin SRM-6 launchers backed by one ton of ammunition. The Marauder-4X was also noteworthy because it used an early Endo Steel chassis. To keep the heat under control, technicians installed 18 prototype Double Heat Sinks, which are explosive but highly effective.",
+		"Details": "This experimental variant was made at Ronin Incorporated's facility on Wallis in 3039. Techs removed the standard weaponry from a Marauder and replaced the arm mounted weapons with a Binary Laser Cannon in each arm, while the torso mounted autocannon was replaced by twin SRM-6 launchers backed by one ton of ammunition each. The Marauder-4X was also noteworthy because it used an early Endo Steel chassis. To keep the heat under control, technicians installed experimental Freezer Heat Sinks, which are tricky to manufacture but moderately effective.",
 		"Icon": "uixTxrIcon_marauder"
 	},
 	"simGameMechPartCost": 880000,
@@ -129,7 +127,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_kit_dhs_proto",
+			"ComponentDefID": "emod_kit_shs",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -327,6 +325,17 @@
 		},
 		{
 			"MountedLocation": "LeftArm",
+			"ComponentDefID": "Gear_HeatSink_Prototype_Freezer",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftArm",
 			"ComponentDefID": "Weapon_Laser_BinaryLaserCannon_1-Defiance",
 			"SimGameUID": null,
 			"ComponentDefType": "Weapon",
@@ -337,39 +346,6 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "LeftArm",
-			"ComponentDefID": "Gear_HeatSink_Prototype_Double",
-			"SimGameUID": null,
-			"ComponentDefType": "HeatSink",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "Gear_HeatSink_Prototype_Double",
-			"SimGameUID": null,
-			"ComponentDefType": "HeatSink",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "Gear_HeatSink_Prototype_Double",
-			"SimGameUID": null,
-			"ComponentDefType": "HeatSink",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
 			"MountedLocation": "LeftTorso",
 			"ComponentDefID": "Weapon_SRM_SRM6_0-STOCK",
 			"SimGameUID": null,
@@ -392,11 +368,22 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Ammo_AmmunitionBox_Generic_SRM",
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "Gear_HeatSink_Prototype_Freezer",
 			"SimGameUID": null,
-			"ComponentDefType": "AmmunitionBox",
-			"HardpointSlot": 0,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "Gear_HeatSink_Prototype_Freezer",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
 			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": null,
@@ -415,7 +402,18 @@
 		},
 		{
 			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Gear_HeatSink_Prototype_Double",
+			"ComponentDefID": "Ammo_AmmunitionBox_Generic_SRM",
+			"SimGameUID": null,
+			"ComponentDefType": "AmmunitionBox",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "Gear_HeatSink_Prototype_Freezer",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -426,7 +424,7 @@
 		},
 		{
 			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Gear_HeatSink_Prototype_Double",
+			"ComponentDefID": "Gear_HeatSink_Prototype_Freezer",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -437,7 +435,7 @@
 		},
 		{
 			"MountedLocation": "RightArm",
-			"ComponentDefID": "Gear_HeatSink_Prototype_Double",
+			"ComponentDefID": "Gear_HeatSink_Prototype_Freezer",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,

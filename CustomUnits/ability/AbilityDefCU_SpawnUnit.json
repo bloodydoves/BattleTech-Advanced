@@ -19,58 +19,6 @@
 				"effectTriggerType": "OnActivation",
 				"effectTargetType": "Creator",
 				"forcePathRebuild": true,
-				"showInStatusPanel": true
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "StatusEffect-CarefulCruiseReduce",
-				"Name": "Careful Maneuvering",
-				"Details": "This unit ignores terrain bonuses and penalties as well as landmines this turn but has massively reduced movement.",
-				"Icon": "horizon-road"
-			},
-			"statisticData": {
-				"statName": "CruiseSpeed",
-				"operation": "Float_Multiply",
-				"modValue": "0.01",
-				"modType": "System.Single"
-			},
-			"nature": "Buff"
-		},
-		{
-			"durationData": {
-				"duration": 1,
-				"stackLimit": 1
-			},
-			"targetingData": {
-				"effectTriggerType": "OnActivation",
-				"effectTargetType": "Creator",
-				"forcePathRebuild": true,
-				"showInStatusPanel": false
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "StatusEffect-CarefulFlankReduce",
-				"Name": "Careful Maneuvering",
-				"Details": "This unit ignores terrain bonuses and penalties as well as landmines this turn but has massively reduced movement.",
-				"Icon": "horizon-road"
-			},
-			"statisticData": {
-				"statName": "FlankSpeed",
-				"operation": "Float_Multiply",
-				"modValue": "0.01",
-				"modType": "System.Single"
-			},
-			"nature": "Buff"
-		},
-		{
-			"durationData": {
-				"duration": 1,
-				"stackLimit": 1
-			},
-			"targetingData": {
-				"effectTriggerType": "OnActivation",
-				"effectTargetType": "Creator",
-				"forcePathRebuild": true,
 				"showInStatusPanel": false
 			},
 			"effectType": "StatisticEffect",
@@ -82,7 +30,7 @@
 			},
 			"statisticData": {
 				"statName": "CruiseSpeed",
-				"operation": "Float_Add",
+				"operation": "Set",
 				"modValue": "30",
 				"modType": "System.Single"
 			},
@@ -108,60 +56,8 @@
 			},
 			"statisticData": {
 				"statName": "FlankSpeed",
-				"operation": "Float_Add",
+				"operation": "Set",
 				"modValue": "30",
-				"modType": "System.Single"
-			},
-			"nature": "Buff"
-		},
-		{
-			"durationData": {
-				"duration": 1,
-				"stackLimit": 1
-			},
-			"targetingData": {
-				"effectTriggerType": "OnActivation",
-				"effectTargetType": "Creator",
-				"forcePathRebuild": true,
-				"showInStatusPanel": false
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "StatusEffect-CarefulWalkReduce",
-				"Name": "Careful Maneuvering",
-				"Details": "This unit ignores terrain bonuses and penalties as well as landmines this turn but has massively reduced movement.",
-				"Icon": "horizon-road"
-			},
-			"statisticData": {
-				"statName": "WalkSpeed",
-				"operation": "Float_Multiply",
-				"modValue": "0.01",
-				"modType": "System.Single"
-			},
-			"nature": "Buff"
-		},
-		{
-			"durationData": {
-				"duration": 1,
-				"stackLimit": 1
-			},
-			"targetingData": {
-				"effectTriggerType": "OnActivation",
-				"effectTargetType": "Creator",
-				"forcePathRebuild": true,
-				"showInStatusPanel": false
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "StatusEffect-CarefulRunReduce",
-				"Name": "Careful Maneuvering",
-				"Details": "This unit ignores terrain bonuses and penalties as well as landmines this turn but has massively reduced movement.",
-				"Icon": "horizon-road"
-			},
-			"statisticData": {
-				"statName": "CBTBE_RunMultiMod",
-				"operation": "Float_Multiply",
-				"modValue": "0.01",
 				"modType": "System.Single"
 			},
 			"nature": "Buff"
@@ -186,7 +82,7 @@
 			},
 			"statisticData": {
 				"statName": "WalkSpeed",
-				"operation": "Float_Add",
+				"operation": "Set",
 				"modValue": "30",
 				"modType": "System.Single"
 			},
@@ -212,34 +108,8 @@
 			},
 			"statisticData": {
 				"statName": "CBTBE_RunMultiMod",
-				"operation": "Float_Multiply",
-				"modValue": "0",
-				"modType": "System.Single"
-			},
-			"nature": "Buff"
-		},
-		{
-			"durationData": {
-				"duration": 1,
-				"stackLimit": 1
-			},
-			"targetingData": {
-				"effectTriggerType": "OnActivation",
-				"effectTargetType": "Creator",
-				"forcePathRebuild": true,
-				"showInStatusPanel": false
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "StatusEffect-CarefulRun30-2",
-				"Name": "Careful Maneuvering",
-				"Details": "This unit ignores terrain bonuses and penalties as well as landmines this turn but has massively reduced movement.",
-				"Icon": "horizon-road"
-			},
-			"statisticData": {
-				"statName": "CBTBE_RunMultiMod",
-				"operation": "Float_Add",
-				"modValue": "-0.5",
+				"operation": "Set",
+				"modValue": "-0.50",
 				"modType": "System.Single"
 			},
 			"nature": "Buff"
@@ -323,5 +193,5 @@
 			"nature": "Buff"
 		}
 	],
-    "Priority": 0
+	"Priority": 0
 }

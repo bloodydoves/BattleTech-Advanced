@@ -126,7 +126,9 @@
 				"emod_kit_dhs_proto",
 				"emod_kit_dhs",
 				"emod_kit_cdhs",
-				"emod_kit_chs"
+				"emod_kit_chs",
+				"emod_kit_lhs",
+				"emod_kit_battlearmor"
 			]
 		},
 		{
@@ -230,7 +232,7 @@
 		{
 			"Tag": "Handhold",
 			"IncompatibleTags": [
-				"OmniMech",
+				"OmniGyro",
 				"Avionics"
 			]
 		},
@@ -274,6 +276,78 @@
 			"IncompatibleTags": [
 				"unit_mech",
 				"ProtoMech"
+			]
+		},
+		{
+			"Tag": "Freezer",
+			"RequiredTags": [
+				"SHSKit"
+			],
+			"IncompatibleTags": [
+				"DHSKit",
+				"LHSKit",
+				"CDHSKit",
+				"PDHSKit"
+			]
+		},
+		{
+			"Tag": "DHS",
+			"RequiredTags": [
+				"DHSKit"
+			],
+			"IncompatibleTags": [
+				"CDHSKit",
+				"LHSKit",
+				"PDHSKit",
+				"SHSKit"
+			]
+		},
+		{
+			"Tag": "SHS",
+			"RequiredTags": [
+				"SHSKit"
+			],
+			"IncompatibleTags": [
+				"DHSKit",
+				"PDHSKit",
+				"CDHSKit",
+				"LHSKit"
+			]
+		},
+		{
+			"Tag": "CDHS",
+			"RequiredTags": [
+				"CDHSKit"
+			],
+			"IncompatibleTags": [
+				"DHSKit",
+				"PDHSKit",
+				"SHSKit",
+				"LHSKit"
+			]
+		},
+		{
+			"Tag": "LHS",
+			"RequiredTags": [
+				"LHSKit"
+			],
+			"IncompatibleTags": [
+				"DHSKit",
+				"CDHSKit",
+				"PDHSKit",
+				"SHSKit"
+			]
+		},
+		{
+			"Tag": "PDHS",
+			"RequiredTags": [
+				"PDHSKit"
+			],
+			"IncompatibleTags": [
+				"DHSKit",
+				"CDHSKit",
+				"SHSKit",
+				"LHSKit"
 			]
 		}
 	]

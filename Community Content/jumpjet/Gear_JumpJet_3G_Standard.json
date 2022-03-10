@@ -1,0 +1,110 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "ImprovedJJ"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"JumpCapacity: 1.25",
+				"JumpHeat: 2",
+				"MinWeightJJ: 20",
+				"MaxWeightJJ: 55",
+				"MaxCountJJ: 1.6"
+			]
+		},
+		"Flags": {
+			"flags": [
+				"not_broken",
+				"no_salvage"
+			]
+		}
+	},
+	"JumpCapacity": 1.25,
+	"MinTonnage": 20,
+	"MaxTonnage": 55,
+	"Description": {
+		"Cost": 120000,
+		"Rarity": 1,
+		"Purchasable": true,
+		"Manufacturer": "St. Ives",
+		"Model": "3rd Gen.",
+		"UIName": "3rd Gen. Jump Jet (S)",
+		"Id": "Gear_JumpJet_3G_Standard",
+		"Name": "3rd Gen. Jump Jet (S)",
+		"Details": "Developed by St. Ives in response to excessive Capellan aggression, the 3rd Generation Jump Jet functions similarly in strength to the Inner Sphere's regular Improved Jump Jets, but with the tonnage and size of a normal, non-improved, jump jet. This leads the 3rd Generation Jump Jet to be the best of all worlds: the power of an improved jump jet with no drawbacks of that technology.",
+		"Icon": "uixSvgIcon_action_jump"
+	},
+	"BonusValueA": null,
+	"BonusValueB": null,
+	"ComponentType": "JumpJet",
+	"ComponentSubType": "Functionality",
+	"PrefabIdentifier": "JumpJet",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0.5,
+	"AllowedLocations": "Torso, Legs",
+	"DisallowedLocations": "Head, Arms",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-JumpHeat",
+				"Name": "Jump Jet Heat",
+				"Details": "This Jump Jets Heat Generation per Hex",
+				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "JumpHeat",
+				"operation": "Float_Add",
+				"modValue": "2",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-JumpAmount",
+				"Name": "Jump Jet Amount",
+				"Details": "Max Jump Jet Amount per Walk MP",
+				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "JumpJetCountMultiplier",
+				"operation": "Set",
+				"modValue": "1.6",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}
