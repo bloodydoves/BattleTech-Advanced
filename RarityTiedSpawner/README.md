@@ -1,4 +1,6 @@
-Rarity Tied Spawner (RTS) is a mod for HBS's Battletech computer game. It is a small, focused mod with a single purpose - adjusting the rarity of units based on their tags.
+Rarity Tied Spawner (RTS) is a mod for HBS's Battletech computer game. It is a small, focused mod with a single purpose - adjusting the rarity of units based on their tags. The mod's homepage is https://github.com/BlueWinds/RarityTiedSpawner, where you can always find the most up to date source code.
+
+RTS is distributed under the GNU General Public License v3.0 license. Special permission is granted to Battletech Advanced: 3062 and Roguetech to distribute this alongside Custom Bundle and other proprietary code. Please reach out to BlueWinds on github, or the BTA/RogueTech discords for more details.
 
 ## `moreCommonTags`
 In settings.json, `moreCommonTags` is a dictionary of tags, mapping each to an integer.
