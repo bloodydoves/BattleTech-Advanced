@@ -2,7 +2,7 @@
 	"Name": "StrategicOperations",
 	"DLL": "StrategicOperations.dll",
 	"Hidden": true,
-	"Version": "2.0.4.0",
+	"Version": "3.0.0.0",
 	"Description": "",
 	"Author": "T-Bone",
 	"Website": "https://github.com/ajkroeg/StrategicOperations",
@@ -167,7 +167,6 @@
 		"BattleArmorMountAndSwarmID": "AbilityDefBattleArmorMount",
 		"BattleArmorDeSwarmRoll": "AbilityDefDeSwarmerRoll",
 		"BattleArmorDeSwarmSwat": "AbilityDefDeSwarmerSwat",
-		"BattleArmorDeSwarmMovement": "AbilityDefDeSwarmerMovement",
 		"ArmActuatorCategoryIDs": [
 			"ArmShoulder",
 			"ArmUpperActuator",
@@ -176,6 +175,34 @@
 			"ArmHandActuator",
 			"OmniHandActuator"
 		],
+		"DeswarmConfigs": {
+			"AbilityDefDeSwarmerRoll": {
+				"BaseSuccessChance": 0.5,
+				"MaxSuccessChance": 0.9,
+				"PilotingSuccessFactor": 0.05,
+				"TotalDamage": 150,
+				"Clusters": 6,
+				"InitPenalty": 2
+			},
+			"AbilityDefDeSwarmerSwat": {
+				"BaseSuccessChance": 0.33,
+				"MaxSuccessChance": 0.9,
+				"PilotingSuccessFactor": 0.05,
+				"TotalDamage": 75,
+				"Clusters": 3,
+				"InitPenalty": 1
+			}
+		},
+		"DeswarmMovementConfig": {
+			"AbilityDefID": "AbilityDefDeSwarmerMovement",
+			"BaseSuccessChance": 0.35,
+			"MaxSuccessChance": 0.95,
+			"EvasivePipsFactor": 0.1,
+			"JumpMovementModifier": 1.2,
+			"UseDFADamage": false,
+			"LocationDamageOverride": 100,
+			"PilotingDamageReductionFactor": 0.1
+		},
 		"BPodComponentIDs": [
 			"Gear_B_Pod"
 		],
@@ -326,6 +353,155 @@
 						}
 					}
 				]
+			},
+			{
+				"ID": "BA_GarrisonDefense",
+				"TargetEffectType": "GARRISON",
+				"Name": "Battle Armor - Garrisoned Defensive Bonuses",
+				"Description": "Garrisoned units have Defensive bosnuses.",
+				"effectDataJO": [
+					{
+						"durationData": {},
+						"targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator",
+							"showInStatusPanel": true
+						},
+						"effectType": "StatisticEffect",
+						"Description": {
+							"Id": "BA_GarrisonDamageResistance",
+							"Name": "AOE Immune",
+							"Details": "Garrisoned units have 50% additional damage resist as well as +10 defense against being hit.",
+							"Icon": "allied-star"
+						},
+						"nature": "Buff",
+						"statisticData": {
+							"statName": "DamageReductionMultiplierAll",
+							"operation": "Float_Add",
+							"modValue": "-0.5",
+							"modType": "System.Single"
+						}
+					},
+					{
+						"durationData": {},
+						"targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator",
+							"showInStatusPanel": false
+						},
+						"effectType": "StatisticEffect",
+						"Description": {
+							"Id": "BA_GarrisonHardToHit",
+							"Name": "harder to hit",
+							"Details": "garrisoned are harder to hit becuase reasons",
+							"Icon": "allied-star"
+						},
+						"nature": "Buff",
+						"statisticData": {
+							"statName": "ToHitThisActor",
+							"operation": "Float_Add",
+							"modValue": "10.0",
+							"modType": "System.Single"
+						}
+					}
+				]
+			}
+		],
+		"AirliftTargetEffects": [
+			{
+				"ID": "Airlift_Accuracy",
+				"FriendlyAirlift": true,
+				"Name": "Airlift Airlift_Accuracy",
+				"Description": "Airlifted Units get extra accuracy because t-bone needed to test something.",
+				"effectDataJO": [
+					{
+						"durationData": {},
+						"targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator",
+							"showInStatusPanel": true
+						},
+						"effectType": "StatisticEffect",
+						"Description": {
+							"Id": "Airlift_Accuracy_Bonus",
+							"Name": "Easy shots",
+							"Details": "Airlift_Accuracy has increased accuracy while airlift.",
+							"Icon": "allied-star"
+						},
+						"nature": "Buff",
+						"statisticData": {
+							"statName": "AccuracyModifier",
+							"operation": "Set",
+							"modValue": "-9001",
+							"modType": "System.Single"
+						}
+					}
+				]
+			},
+			{
+				"ID": "Airlift_Immobile",
+				"FriendlyAirlift": false,
+				"Name": "Airlift Airlift_Immobile",
+				"Description": "Airlifted enemies are immobilezed (but can still shoot).",
+				"effectDataJO": [
+					{
+						"durationData": {},
+						"targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator",
+							"showInStatusPanel": true
+						},
+						"effectType": "StatisticEffect",
+						"Description": {
+							"Id": "Airlift_Airlift_Immobile",
+							"Name": "Immobilized",
+							"Details": "Imnmobiledzed",
+							"Icon": "allied-star"
+						},
+						"nature": "Buff",
+						"statisticData": {
+							"statName": "irbtmu_immobile_unit",
+							"operation": "Set",
+							"modValue": "true",
+							"modType": "System.Boolean"
+						}
+					}
+				]
+			}
+		],
+		"OnGarrisonCollapseEffects": [
+			{
+				"ID": "GarrisonCollapseAccuracy",
+				"TargetEffectType": "GARRISON",
+				"Name": "Accuracy Penalty",
+				"Description": "Accuracy Penalty when building collapse",
+				"effectDataJO": [
+					{
+						"durationData": {
+							"duration": 2,
+							"stackLimit": 1
+						},
+						"targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator",
+							"showInStatusPanel": true
+						},
+						"effectType": "StatisticEffect",
+						"Description": {
+							"Id": "Garrison_Collapse_accuracy",
+							"Name": "hard shots",
+							"Details": "Garrison_Collapse_accuracy has worse accuracy after collpase.",
+							"Icon": "allied-star"
+						},
+						"nature": "Buff",
+						"statisticData": {
+							"statName": "AccuracyModifier",
+							"operation": "Float_Add",
+							"modValue": "10",
+							"modType": "System.Single"
+						}
+					}
+				]
 			}
 		],
 		"BattleArmorFactionAssociations": [
@@ -374,7 +550,14 @@
 			"DuoDuel",
 			"SoloDuel"
 		],
-		"BeaconExcludedContractIDs": []
+		"BeaconExcludedContractIDs": [],
+		"DisableGarrisons": false,
+		"GarrisonBuildingArmorFactor": 0.5,
+		"UsingMechAffinityForSwarmBreach": true,
+		"AirliftAbilityID": "AbilityDefAirliftActivate",
+		"AirliftCapacityByTonnage": false,
+		"CanDropOffAfterMoving": true,
+		"AirliftImmuneTags": []
 	},
 	"Manifest": [
 		{
