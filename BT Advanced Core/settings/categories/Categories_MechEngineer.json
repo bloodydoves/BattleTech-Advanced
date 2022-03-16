@@ -527,6 +527,67 @@
 			}
 		},
 		{
+			"Name": "WheeledMotiveSystem",
+			"DisplayName": "Wheeled Motive System",
+			"DefaultCustoms": {
+				"VehicleCriticalEffects": {
+					"LinkedStatisticName": "VehicleEngineCrits",
+					"PenalizedEffectIDs": [
+						[
+							"CriticalEffect-VehicleMotiveCruiseWheeledCrit1",
+							"CriticalEffect-VehicleMotiveFlankWheeledCrit1",
+							"CriticalEffect-MotiveTankCritPenalty2"
+						]
+					],
+					"OnDestroyedEffectIDs": [
+						"CriticalEffect-VehicleMotiveCruiseWheeledCrit2",
+						"CriticalEffect-VehicleMotiveFlankWheeledCrit2",
+						"CriticalEffect-MotiveTankCritPenalty3"
+					]
+				}
+			}
+		},
+		{
+			"Name": "TrackedMotiveSystem",
+			"DisplayName": "Tracked Motive System",
+			"DefaultCustoms": {
+				"VehicleCriticalEffects": {
+					"LinkedStatisticName": "VehicleEngineCrits",
+					"PenalizedEffectIDs": [
+						[
+							"CriticalEffect-VehicleMotiveCruiseTrackCrit1",
+							"CriticalEffect-VehicleMotiveFlankTrackCrit1",
+							"CriticalEffect-MotiveTankCritPenalty1"
+						],
+						[
+							"CriticalEffect-VehicleMotiveCruiseTrackCrit2",
+							"CriticalEffect-VehicleMotiveFlankTrackCrit2",
+							"CriticalEffect-MotiveTankCritPenalty2"
+						]
+					],
+					"OnDestroyedEffectIDs": [
+						"CriticalEffect-VehicleMotiveCruiseTrackCrit3",
+						"CriticalEffect-VehicleMotiveFlankTrackCrit3",
+						"CriticalEffect-MotiveTankCritPenalty3"
+					]
+				}
+			}
+		},
+		{
+			"Name": "HoverMotiveSystem",
+			"DisplayName": "Hover Motive System",
+			"DefaultCustoms": {
+				"VehicleCriticalEffects": {
+					"LinkedStatisticName": "VehicleEngineCrits",
+					"OnDestroyedEffectIDs": [
+						"CriticalEffect-VehicleMotiveCruiseHoverCrit1",
+						"CriticalEffect-VehicleMotiveFlankHoverCrit1",
+						"CriticalEffect-MotiveTankCritPenalty3"
+					]
+				}
+			}
+		},
+		{
 			"Name": "Patchwork",
 			"displayName": "Patchwork Materials",
 			"MaxEquipedPerLocation": "1",
