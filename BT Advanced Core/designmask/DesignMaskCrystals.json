@@ -1,8 +1,8 @@
 {
 	"Description": {
 		"Id": "DesignMaskCrystals",
-		"Name": "MINERAL FIELD",
-		"Details": "These mineral deposits interfere with targeting systems. +4 Difficulty to hit units within a Mineral Field. +2 Difficulty for attacks made by units within a Mineral Field. Reduces enemy detection.",
+		"Name": "CRYSTAL FIELD",
+		"Details": "These mineral deposits interfere with targeting systems and boost energy weapons. Crystal Fields provide 5% damage reduction against ranged attacks to the front and side. +4 Difficulty to hit units within a Crystal Field. +2 Difficulty for attacks made by units within a Crystal Field. Crystal Fields provide a 5% damage boost for all energy weapons.",
 		"Icon": "uixSvgIcon_designMask_mineral"
 	},
 	"moveCostMechLight": 1.1,
@@ -19,7 +19,7 @@
 	"moveCostWheeledAssault": 1.1,
 	"moveCostSprintMultiplier": 1.0,
 	"stabilityDamageMultiplier": 1.0,
-	"energyDamageDealtMultiplier": 1.0,
+	"energyDamageDealtMultiplier": 1.05,
 	"energyDamageTakenMultiplier": 1.0,
 	"visibilityMultiplier": 0.75,
 	"visibilityHeight": 15.0,
@@ -43,5 +43,31 @@
 				"SprintMultiplier": 1
 			}
 		}
+	},
+	"stickyEffect": {
+		"durationData": {
+			"duration": 2,
+			"ticksOnMovements": true,
+			"stackLimit": 1
+		},
+		"targetingData": {
+			"effectTargetType": "SingleTarget",
+			"showInStatusPanel": true,
+			"showInTargetPreview": true
+		},
+		"effectType": "StatisticEffect",
+		"Description": {
+			"Id": "DesignMaskCrystals_DR",
+			"Name": "CRYSTAL FIELD",
+			"Details": "This unit moved through a crystal field, granting it temporary damage reduction of 5%.",
+			"Icon": "uixSvgIcon_designMask_mineral"
+		},
+		"statisticData": {
+			"statName": "DamageReductionMultiplierAll",
+			"operation": "Float_Multiply",
+			"modValue": "0.95",
+			"modType": "System.Single"
+		},
+		"nature": "Debuff"
 	}
 }

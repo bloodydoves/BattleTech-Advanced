@@ -1,0 +1,44 @@
+{
+	"Description" : {
+		"Id" : "AbilityDefGu5",
+		"Name" : "BULWARK",
+		"Details" : "PASSIVE: Gain a flat 20% damage reduction at all times. This stacks with damage reduction from Brace and from cover sources.",
+		"Icon" : "uixSvgIcon_ability_fortify"
+	},
+    "DisplayParams" : "ShowInMWTRay",
+	"ReqSkill" : "Guts",
+	"ReqSkillLevel" : 5,
+	"ActivationTime" : "Passive",
+	"EffectData" :
+	[
+		{
+			"durationData" :
+			{
+				"duration" : -1
+			},
+			"targetingData" :
+			{
+				"effectTriggerType" : "Passive",
+				"effectTargetType" : "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType" : "StatisticEffect",
+			"Description" :
+			{
+				"Id" : "AbilityDefGu5",
+				"Name" : "BULWARK",
+				"Details" : "PASSIVE: Gain a flat 15% damage reduction at all times. This stacks with damage reduction from Brace and from cover sources.",
+				"Icon" : "uixSvgIcon_ability_fortify"
+			},
+			"statisticData" :
+			{
+				"statName": "DamageReductionMultiplierAll",
+				"operation": "Float_Multiply",
+				"modValue": "0.85",
+				"modType": "System.Single"
+			},
+			"nature" : "Buff"
+		}
+	],
+	"IsPrimaryAbility" : true
+}
