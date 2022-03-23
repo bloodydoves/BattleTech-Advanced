@@ -1,0 +1,118 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/e/p/ppc"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"TargetInitiative: 1"
+			]
+		}
+	},
+	"Category": "Energy",
+	"Type": "PPC",
+	"WeaponSubType": "PPC",
+	"MinRange": 0,
+	"MaxRange": 500,
+	"RangeSplit": [
+		125,
+		250,
+		375
+	],
+	"AmmoCategory": "NotSet",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 30,
+	"Damage": 30,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 0,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": 0,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 2,
+	"Instability": 0,
+	"OverheatedDamageMultiplier": 1.0,
+	"FireTerrainChance": 0,
+	"ColorsTable": [
+		{
+			"C": "#16537e",
+			"I": 5
+		}
+	],
+	"ImprovedBallistic": true,
+	"ColorChangeRule": "t0",
+	"ProjectileSpeedMultiplier": 0.75,
+	"ProjectileScale": {
+		"x": 1,
+		"y": 1,
+		"z": 0.7
+	},
+	"WeaponEffectID": "WeaponEffect-Weapon_PPC",
+	"Description": {
+		"Cost": 660000,
+		"Rarity": 5,
+		"Purchasable": true,
+		"Manufacturer": "Big Mack's Weapon Barn",
+		"Model": "The Zapper",
+		"UIName": "Shock Cannon",
+		"Id": "Weapon_Shock_Cannon",
+		"Name": "Shock Cannon",
+		"Details": "The Shock Cannon is an experimental weapon designed to impede enemy movement and combat behavior. It does relatively light damage for its size and makes prodigous waste heat but it, in the vernacular of MechWarriors, pushes the target's initiative back a bit. Despite the drawbacks, the Shock Cannon shows promise and has been put into very limited production at Mack's Dustball.",
+		"Icon": "particle"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "PPC",
+	"BattleValue": 0,
+	"InventorySize": 3,
+	"Tonnage": 6,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": 2,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"effectTargetType": "SingleTarget",
+				"showInTargetPreview": true,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect_ShockCannon-Initiative",
+				"Name": "Shock Cannon Init",
+				"Details": "High-energy residue has delayed this unit's initiative by 1.",
+				"Icon": "particle"
+			},
+			"nature": "Debuff",
+			"statisticData": {
+				"statName": "BaseInitiative",
+				"operation": "Int_Add",
+				"modValue": "1",
+				"modType": "System.Int32"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_standard"
+		],
+		"tagSetSourceFile": ""
+	}
+}
