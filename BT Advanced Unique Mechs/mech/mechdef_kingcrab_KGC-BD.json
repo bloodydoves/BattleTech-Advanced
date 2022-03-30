@@ -23,7 +23,7 @@
 		"UIName": "King Crab KGC-BD",
 		"Id": "mechdef_kingcrab_KGC-BD",
 		"Name": "King Crab",
-		"Details": "A personalized design driven by the pilot callsign of bloodydoves, the KGC-BD superficially resembles the KGC-001 it started life as. The Gauss Rifles and LRM rack remain from that design, but the heat sinks have been upgraded to doubles, the backup weapons replaced with an ER PPC, and CASE II shields both side torsos in case of catastrophic ammo or gauss explosion.",
+		"Details": "A personalized design driven by the pilot callsign of bloodydoves, the KGC-BD is a highly customized King Crab that exists to punish enemies merely for existing in the same battlezone as it does. The primary weapons are a pair of massive Rotary Gauss Rifles. Backing them up and providing incredible damage potential are a Piercing Large Pulse Laser and six Piercing SRM tubes. A Clan-spec ECM gives protection while an advanced TTS provides accuracy for the gauss rifles.",
 		"Icon": "uixTxrIcon_kingcrab"
 	},
 	"simGameMechPartCost": 1270000,
@@ -136,7 +136,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engine_cooling_2",
+			"ComponentDefID": "emod_engine_cooling_1",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -191,7 +191,18 @@
 		},
 		{
 			"MountedLocation": "Head",
-			"ComponentDefID": "Gear_TargetingTrackingSystem_ARTEMISIV",
+			"ComponentDefID": "Gear_Cockpit_Generic_Standard",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "Head",
+			"ComponentDefID": "Gear_TargetingTrackingSystem_Kallon_Lock-On",
 			"SimGameUID": null,
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
@@ -334,7 +345,7 @@
 		},
 		{
 			"MountedLocation": "LeftArm",
-			"ComponentDefID": "Weapon_Gauss_Gauss_0-STOCK",
+			"ComponentDefID": "Weapon_Gauss_Gauss_3-Blackwell",
 			"SimGameUID": null,
 			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
@@ -367,7 +378,7 @@
 		},
 		{
 			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "Weapon_LRM_LRM15_0-STOCK",
+			"ComponentDefID": "Weapon_SRM_SRM6_1-Irian",
 			"SimGameUID": null,
 			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
@@ -378,9 +389,9 @@
 		},
 		{
 			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "Ammo_AmmunitionBox_ArtemisIV_LRM",
+			"ComponentDefID": "Weapon_SRM_SRM6_1-Irian",
 			"SimGameUID": null,
-			"ComponentDefType": "AmmunitionBox",
+			"ComponentDefType": "Weapon",
 			"HardpointSlot": -1,
 			"GUID": null,
 			"DamageLevel": "Functional",
@@ -389,7 +400,7 @@
 		},
 		{
 			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "Ammo_AmmunitionBox_ArtemisIV_LRM",
+			"ComponentDefID": "Ammo_AmmunitionBox_Pierce_SRM",
 			"SimGameUID": null,
 			"ComponentDefType": "AmmunitionBox",
 			"HardpointSlot": -1,
@@ -410,11 +421,22 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Weapon_PPC_PPCER_0-STOCK",
+			"MountedLocation": "Head",
+			"ComponentDefID": "Ammo_AmmunitionBox_Generic_GAUSS",
 			"SimGameUID": null,
-			"ComponentDefType": "Weapon",
-			"HardpointSlot": 0,
+			"ComponentDefType": "AmmunitionBox",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "Gear_Guardian_ECM_CLAN",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
 			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": null,
@@ -422,9 +444,9 @@
 		},
 		{
 			"MountedLocation": "RightTorso",
-			"ComponentDefID": "emod_case2",
+			"ComponentDefID": "Weapon_Laser_LargeLaserPulse_2-Exostar",
 			"SimGameUID": null,
-			"ComponentDefType": "Upgrade",
+			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
 			"GUID": null,
 			"DamageLevel": "Functional",
@@ -433,7 +455,7 @@
 		},
 		{
 			"MountedLocation": "RightArm",
-			"ComponentDefID": "Weapon_Gauss_Gauss_0-STOCK",
+			"ComponentDefID": "Weapon_Gauss_Gauss_3-Blackwell",
 			"SimGameUID": null,
 			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
