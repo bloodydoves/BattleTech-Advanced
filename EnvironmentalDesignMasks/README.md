@@ -54,7 +54,7 @@ Use the dropdown on the left to view data about existing Moods - both builtin an
 ### Basic Fields
 Only two fields are required:
 - `ID`: A human readable name for the mood. Must be globally unique. This may be visible when selecting the mood for a skirmish, but is otherwise not used in the UI.
-- `baseMood`: The ID of the mood this one inherets from. Any optional properties (other than `moodTags`) not defined will be copied from the baseMood into this one. This can be either any mood from the base game (see the log file after loading into the game for a list), or another custom Mood already loaded.
+- `baseMood`: The ID of the mood this one inherets from. Any optional properties not defined will be copied from the baseMood into this one. This can be either any mood from the base game (see the log file after loading into the game for a list), or another custom Mood already loaded.
   - Custom Moods are loaded alphabetically, which means `moodZ` can have `moodA` as a baseMood, but not vis versa.
 
 All other fields are optional:
@@ -72,7 +72,7 @@ All other fields are optional:
     }
   ]
   ```
-- `moodTags`: A list of biomes (see [Biomes](#Biomes)) for which this Mood can be selected in the Skirmish bay. These tags have no effect outside the skirmish bay.
+- `moodTags`: A list of biomes for which this Mood can be selected in the Skirmish bay. These moodTags also control the lighting in the leopard/deployment screen as defined by `briefingCameraTimeTags`, and determine which biomes a mood will be visible for in the skirmish bay.
 - `sunXRotation`: A float (0 - 360) specifying where the sun appears in the sky.
 - `sunYRotation`: A float (0 - 360) specifying where the sun appears in the sky.
 
@@ -177,3 +177,38 @@ Colors are specified in the format `{"r": 1, "g": 0.818, "b": 0.666}`, with an o
   - `Horizontal`
   - `Vertical`
   - `HorizAndVert`
+
+## Leopard/Deployment screen
+
+The lighting/time of day shown during the deployment screen is randomly chosen by default. EDM now allows you to control the lighting profile and match it to the appropriate moodTags for the current contract. EDM ships with appropriate default settings, but mod authors may wish to tweak them.
+
+EDM looks at the chosen mood's `moodTags`, comparing them in order to `briefingCameraTimeTags`. The **first** matching tag is used, and a lighting profile randomly selected from that list.
+
+e.g for the following in settings.json:
+
+```
+"briefingCameraTimeTags": {
+  "mood_timeMorning": [0,	1],
+  "mood_timeSunset": [0, 1, 3	],
+  "mood_timeAfternoon": [2, 4],
+  "mood_timeNoon": [2, 4],
+  "mood_timeDay": [0, 1, 2, 4],
+  "mood_timeNight": [3]
+}
+```
+If a contract mood contains moodTag `mood_timeMorning` AND `mood_timeDay`, the lighting would choose between 0 and 1 and NOT between 0, 1, 2, 4. The lighting profiles are always controlled by the same integer index value. Available lighting is as as follows:
+
+#### Lighting Profile Index 0:
+![TextPop](https://github.com/ajkroeg/EnvironmentalDesignMasks/blob/main/doc/lights_0.png)
+
+#### Lighting Profile Index 1:
+![TextPop](https://github.com/ajkroeg/EnvironmentalDesignMasks/blob/main/doc/lights_1.png)
+
+#### Lighting Profile Index 2:
+![TextPop](https://github.com/ajkroeg/EnvironmentalDesignMasks/blob/main/doc/lights_2.png)
+
+#### Lighting Profile Index 3:
+![TextPop](https://github.com/ajkroeg/EnvironmentalDesignMasks/blob/main/doc/lights_3.png)
+
+#### Lighting Profile Index 4:
+![TextPop](https://github.com/ajkroeg/EnvironmentalDesignMasks/blob/main/doc/lights_4.png)
