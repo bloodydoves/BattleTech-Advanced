@@ -1,0 +1,148 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/s/t/hpg"
+			},
+			{
+				"CategoryID": "NeverMelee"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"HPG",
+				"HPGStrength: 75%",
+				"WpnCooldown: 5",
+				"AreaOfEffect: 210",
+				"AreaOfEffectDmg: 5",
+				"AreaOfEffectHeatDmg: 15",
+				"NoFireInMelee"
+			]
+		},
+		"Flags": {
+			"flags": [
+				"no_salvage",
+				"not_broken"
+			]
+		}
+	},
+	"Category": "Energy",
+	"Type": "PPC",
+	"WeaponSubType": "PPC",
+	"MinRange": 0,
+	"MaxRange": 600,
+	"RangeSplit": [
+		150,
+		300,
+		450
+	],
+	"AmmoCategory": "NotSet",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 100,
+	"Damage": 5,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 0,
+	"DamageVariance": 0,
+	"HeatDamage": 30,
+	"AccuracyModifier": 1,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 1,
+	"Instability": 0,
+	"ImprovedBallistic": true,
+	"Cooldown": 5,
+	"AMSImmune": true,
+	"AOERange": 210,
+	"AOEDamage": 5,
+	"AOEHeat": 15,
+	"WeaponEffectID": "WeaponEffect-Weapon_COILS",
+	"Description": {
+		"Cost": 25000000,
+		"Rarity": 0,
+		"Purchasable": true,
+		"Manufacturer": "SLCOMNET",
+		"Model": "HPG",
+		"UIName": "Ground Mobile HPG",
+		"Id": "Weapon_Ground_Mobile_HPG",
+		"Name": "Ground Mobile HPG",
+		"Details": "The Ground Mobile HPG is a miniaturized version of the Hyperpulse Generator, the basis of all interstellar communication technology. Normally, HPGs have no effective combat usage but thanks to some clever engineering this Ground Mobile HPG has been rigged to emit a massive energy pulse that can shut down any unit in the effect's radius. This makes it extremely dangerous to both friends and foes as the effect does not discriminate. However, the HPG is slow to charge and can only be activated periodically.",
+		"Icon": "radar-dish"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "PPC",
+	"BattleValue": 0,
+	"InventorySize": 16,
+	"Tonnage": 30,
+	"AllowedLocations": "LeftTorso,RightTorso,CenterTorso",
+	"DisallowedLocations": "LeftArm,RightArm",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": 1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "WeaponEffect-HPGShutdown",
+				"Name": "Hit By A HPG!",
+				"Details": "This unit has been hit by a HPG blast, it has a chance to shut down. It also suffers a significant penalty (+4) to accuracy.",
+				"Icon": "radar-dish"
+			},
+			"statisticData": {
+				"statName": "OnHitShutdownChance",
+				"operation": "Float_Add",
+				"modValue": "0.75",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "WeaponEffect-HPGAccuracy",
+				"Name": "SENSORS IMPAIRED",
+				"Details": "[AMT] Difficulty to all of this unit's attacks until its next activation.",
+				"Icon": "uixSvgIcon_status_sensorsImpaired"
+			},
+			"nature": "Debuff",
+			"statisticData": {
+				"statName": "AccuracyModifier",
+				"operation": "Float_Add",
+				"modValue": "4.0",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_very-long"
+		],
+		"tagSetSourceFile": ""
+	}
+}
