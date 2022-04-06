@@ -5,7 +5,12 @@
 				"no_salvage",
 				"ignore_damage"
 			]
-		}
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"DamageTaken: -20%"
+			]
+		},
 	},
 	"StatName": null,
 	"RelativeModifier": 0,
@@ -19,8 +24,8 @@
 		"UIName": "VTOL Armoring",
 		"Id": "Gear_VTOL_Armor_Plating",
 		"Name": "VTOL Armoring",
-		"Details": "Small fast squishy things get this. This unit generates an extra EVASIVE charge from movement actions, and takes 25% less damage at all times.",
-		"Icon": "uixSvgIcon_equipment_TTS"
+		"Details": "Small fast squishy things get this. This unit takes 20% less damage at all times.",
+		"Icon": "chest-armor"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
@@ -41,45 +46,21 @@
 			},
 			"targetingData": {
 				"effectTriggerType": "Passive",
-				"effectTargetType": "Creator"
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "MaxEvasion",
-				"Name": "EVASIVE MOVE",
-				"Details": "This unit generates an extra EVASIVE charge from movement actions (up to its maximum).",
-				"Icon": "uixSvgIcon_action_evasivemove"
-			},
-			"statisticData": {
-				"statName": "MaxEvasivePips",
-				"operation": "Int_Add",
-				"modValue": "1",
-				"modType": "System.Int32"
-			},
-			"nature": "Buff"
-		},
-		{
-			"durationData": {
-				"duration": -1,
-				"stackLimit": -1
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
 				"effectTargetType": "Creator",
 				"showInStatusPanel": true
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
 				"Id": "StatusEffect-VTOLArmoring",
-				"Name": "VTOL Evasion",
-				"Details": "This unit takes 25% less damage at all times.",
-				"Icon": "speedometer"
+				"Name": "VTOL Armor Plating",
+				"Details": "This unit takes 20% less damage thanks to its armor plating.",
+				"Icon": "chest-armor"
 			},
 			"nature": "Buff",
 			"statisticData": {
 				"statName": "DamageReductionMultiplierAll",
 				"operation": "Float_Multiply",
-				"modValue": "0.75",
+				"modValue": "0.8",
 				"modType": "System.Single"
 			}
 		}
