@@ -1,0 +1,86 @@
+{
+	"Custom": {
+		"Flags": {
+			"flags": [
+				"not_broken",
+				"no_salvage",
+				"autorepair"
+			]
+		}
+	},
+	"Description": {
+		"Cost": 0,
+		"Rarity": 99,
+		"Purchasable": true,
+		"Manufacturer": "Generic",
+		"Model": "Generic",
+		"UIName": "Airlift Hoists",
+		"Id": "Gear_VTOL_Airlift_Hoists",
+		"Name": "Airlift Hoists",
+		"Details": "This is a series of cranes and hoists that allow the lifting of allied units, be they mech, tank, or turret. Airlifted units can take actions while lifted but cannot move in any way while lifted.",
+		"Icon": "cargo-crate"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 20,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "ActiveAbility",
+			"Description": {
+				"Id": "Airlift_Hoists",
+				"Name": "Airlift Hoists",
+				"Details": "Activated ability (uses Firing action). Allows for airlifting of a friendly unit.",
+				"Icon": "cargo-crate"
+			},
+			"activeAbilityEffectData": {
+				"abilityName": "AbilityDefAirliftActivate"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-ExternalLiftCapacity",
+				"Name": "ExternalLiftCapacity",
+				"Details": "ExternalLiftCapacity",
+				"Icon": "uixSvgIcon_ability_precisionstrike"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "ExternalLiftCapacity",
+				"operation": "Set",
+				"modValue": "1",
+				"modType": "System.Int32"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"TanksOnly",
+			"BLACKLISTED",
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}
