@@ -2,7 +2,7 @@
   "VehicleTags": {
     "items": [
       "unit_vehicle",
-      "unit_medium",
+      "unit_heavy",
       "unit_vtol",
       "unit_release",
       "unit_lance_support",
@@ -13,112 +13,77 @@
     ],
     "tagSetSourceFile": ""
   },
-  "ChassisID": "vehiclechassisdef_KARNOV_TRANSPORT",
+  "ChassisID": "vehiclechassisdef_HORSKR_AIRLIFT",
   "Description": {
     "Cost": 1559760,
     "Rarity": 0,
     "Purchasable": false,
-    "UIName": "Karnov Heavy Transport",
-    "Id": "vehicledef_KARNOV_TRANSPORT",
-    "Name": "Karnov Heavy Transport",
-    "Details": "Produced by the New Earth Trading Company, with secret ComStar assistance, the Karnov Support VTOL has been a staple in militaries and mercenary commands across the Inner Sphere for centuries. This version, the Karnov Heavy Transport VTOL, was been retooled to carry two squads of Battle Armor into combat. While dangerous as the Karnov is poorly armored, it provides deep strike capability for BA teams.</color></b>\n\n <b><color=#ffcc00>ICE: Air breathing Combustion Engine. This unit can not deploy in thin atmosphere.</color></b>\n\n <b><color=#ffcc00>Movement: 7/11 Hex: 210/330 Meters.</color></b>\n\n<b>Armor:</b> Armor\n<b>Structure:</b> Structure\n<b>Values       A        S  </b>\n<b>Front</b>       120     15\n<b>Left</b>          101     15\n<b>Right</b>        101     15\n<b>Rear</b>         60     15\n\n<b>Total</b>      382     75\n",
-    "Icon": "RedKite"
+    "UIName": "Horskr Airlift VTOL",
+    "Id": "vehicledef_HORSKR_AIRLIFT",
+    "Name": "Horskr Airlift VTOL",
+    "Details": "The Horskr Airlift VTOL was originally designed for rapid battlefield salvage: it could come in and make off with valuable salvage quicker than any ground team could do. However, while it excelled at this task it wasn't long until enterprising mercenaries realized a second use for the VTOL, namely carrying combat units around to places they normally couldn't go. The Horskr is lightly armed and armored but the immense utility it provides is generally considered worthwhile.</color></b>\n\n <b><color=#ffcc00>Movement: 5/8 Hex: 150/240 Meters.</color></b>\n\n<b>Armor:</b> Armor\n<b>Structure:</b> Structure\n<b>Values       A        S  </b>\n<b>Front</b>       165     30\n<b>Left</b>          125     30\n<b>Right</b>        125     30\n<b>Rear</b>         75     30\n\n<b>Total</b>      490     120\n",
+    "Icon": "Horskr"
   },
   "Version": 1,
   "Locations": [
     {
       "Location": "Front",
-      "CurrentArmor": 120,
-      "CurrentInternalStructure": 15,
-      "AssignedArmor": 120,
+      "CurrentArmor": 165,
+      "CurrentInternalStructure": 30,
+      "AssignedArmor": 165,
       "DamageLevel": "Functional"
     },
     {
       "Location": "Left",
-      "CurrentArmor": 101,
-      "CurrentInternalStructure": 15,
-      "AssignedArmor": 101,
+      "CurrentArmor": 125,
+      "CurrentInternalStructure": 30,
+      "AssignedArmor": 125,
       "DamageLevel": "Functional"
     },
     {
       "Location": "Right",
-      "CurrentArmor": 101,
-      "CurrentInternalStructure": 15,
-      "AssignedArmor": 101,
+      "CurrentArmor": 125,
+      "CurrentInternalStructure": 30,
+      "AssignedArmor": 125,
       "DamageLevel": "Functional"
     },
     {
       "Location": "Rear",
-      "CurrentArmor": 60,
-      "CurrentInternalStructure": 15,
-      "AssignedArmor": 60,
+      "CurrentArmor": 75,
+      "CurrentInternalStructure": 30,
+      "AssignedArmor": 75,
       "DamageLevel": "Functional"
     },
     {
       "Location": "Turret",
-      "CurrentArmor": 30,
-      "CurrentInternalStructure": 15,
-      "AssignedArmor": 30,
+      "CurrentArmor": 45,
+      "CurrentInternalStructure": 30,
+      "AssignedArmor": 45,
       "DamageLevel": "Functional"
     }
   ],
   "inventory": [
     {
       "MountedLocation": "Front",
-      "ComponentDefID": "Weapon_MML_3",
+      "ComponentDefID": "Weapon_Laser_LargeLaser_0-STOCK",
       "ComponentDefType": "Weapon",
       "HardpointSlot": 0,
       "DamageLevel": "Functional"
     },
 	{
       "MountedLocation": "Front",
-      "ComponentDefID": "Weapon_MML_3",
+      "ComponentDefID": "Weapon_MML_7",
       "ComponentDefType": "Weapon",
       "HardpointSlot": 0,
       "DamageLevel": "Functional"
     },
-	{
+    {
       "MountedLocation": "Front",
-      "ComponentDefID": "Weapon_MML_3",
-      "ComponentDefType": "Weapon",
-      "HardpointSlot": 0,
+      "ComponentDefID": "Gear_VTOL_Airlift_Hoists",
+      "ComponentDefType": "Upgrade",
+      "HardpointSlot": -1,
       "DamageLevel": "Functional"
     },
-	{
-      "MountedLocation": "Front",
-      "ComponentDefID": "Weapon_MML_3",
-      "ComponentDefType": "Weapon",
-      "HardpointSlot": 0,
-      "DamageLevel": "Functional"
-    },
-	{
-		"MountedLocation": "Left",
-		"ComponentDefID": "Ammo_AmmunitionBox_Thunder_LRM",
-		"ComponentDefType": "AmmunitionBox",
-		"HardpointSlot": -1,
-		"DamageLevel": "Functional"
-	},
-	{
-		"MountedLocation": "Left",
-		"ComponentDefID": "Ammo_AmmunitionBox_Generic_SRM",
-		"ComponentDefType": "AmmunitionBox",
-		"HardpointSlot": -1,
-		"DamageLevel": "Functional"
-	},
-	{
-		"MountedLocation": "Right",
-		"ComponentDefID": "Ammo_AmmunitionBox_Generic_LRM",
-		"ComponentDefType": "AmmunitionBox",
-		"HardpointSlot": -1,
-		"DamageLevel": "Functional"
-	},
-	{
-		"MountedLocation": "Right",
-		"ComponentDefID": "Ammo_AmmunitionBox_Inferno_SRM",
-		"ComponentDefType": "AmmunitionBox",
-		"HardpointSlot": -1,
-		"DamageLevel": "Functional"
-	},
     {
       "MountedLocation": "Front",
       "ComponentDefID": "Tank_CrewCompartment",
@@ -187,10 +152,17 @@
       "HardpointSlot": -1,
       "DamageLevel": "Functional"
     },
-    {
+	{
       "MountedLocation": "Rear",
-      "ComponentDefID": "Tank_BattleArmorBay",
-      "ComponentDefType": "Upgrade",
+      "ComponentDefID": "Ammo_AmmunitionBox_Generic_LRM",
+	  "ComponentDefType": "AmmunitionBox",
+      "HardpointSlot": -1,
+      "DamageLevel": "Functional"
+    },
+	{
+      "MountedLocation": "Rear",
+      "ComponentDefID": "Ammo_AmmunitionBox_Generic_SRM",
+	  "ComponentDefType": "AmmunitionBox",
       "HardpointSlot": -1,
       "DamageLevel": "Functional"
     }
