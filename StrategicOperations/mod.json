@@ -435,40 +435,10 @@
 		],
 		"AirliftTargetEffects": [
 			{
-				"ID": "Airlift_Accuracy",
-				"FriendlyAirlift": true,
-				"Name": "Airlift Airlift_Accuracy",
-				"Description": "Airlifted Units get extra accuracy because t-bone needed to test something.",
-				"effectDataJO": [
-					{
-						"durationData": {},
-						"targetingData": {
-							"effectTriggerType": "Passive",
-							"effectTargetType": "Creator",
-							"showInStatusPanel": true
-						},
-						"effectType": "StatisticEffect",
-						"Description": {
-							"Id": "Airlift_Accuracy_Bonus",
-							"Name": "Easy shots",
-							"Details": "Airlift_Accuracy has increased accuracy while airlift.",
-							"Icon": "allied-star"
-						},
-						"nature": "Buff",
-						"statisticData": {
-							"statName": "AccuracyModifier",
-							"operation": "Set",
-							"modValue": "-9001",
-							"modType": "System.Single"
-						}
-					}
-				]
-			},
-			{
 				"ID": "Airlift_Immobile",
 				"FriendlyAirlift": false,
 				"Name": "Airlift Airlift_Immobile",
-				"Description": "Airlifted enemies are immobilezed (but can still shoot).",
+				"Description": "Airlifted enemies are Immobilized (but can still shoot).",
 				"effectDataJO": [
 					{
 						"durationData": {},
@@ -481,8 +451,8 @@
 						"Description": {
 							"Id": "Airlift_Airlift_Immobile",
 							"Name": "Immobilized",
-							"Details": "Immobilized",
-							"Icon": "allied-star"
+							"Details": "This unit is being held in an airlift and cannot move.",
+							"Icon": "cancel"
 						},
 						"nature": "Buff",
 						"statisticData": {
@@ -583,7 +553,10 @@
 		"AirliftAbilityID": "AbilityDefAirliftActivate",
 		"AirliftCapacityByTonnage": false,
 		"CanDropOffAfterMoving": true,
-		"AirliftImmuneTags": [],
+		"AirliftImmuneTags": [
+			"unit_superheavy",
+			"unit_vtol"
+		],
 		"ResupplyConfig": {
 			"ResupplyIndicatorAsset": "Target",
 			"ResupplyIndicatorColor": {
