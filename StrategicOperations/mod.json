@@ -2,7 +2,7 @@
 	"Name": "StrategicOperations",
 	"DLL": "StrategicOperations.dll",
 	"Hidden": true,
-	"Version": "3.0.0.0",
+	"Version": "3.0.1.7",
 	"Description": "",
 	"Author": "T-Bone",
 	"Website": "https://github.com/ajkroeg/StrategicOperations",
@@ -285,6 +285,32 @@
 							"targetCollection": "Weapon"
 						},
 						"nature": "Buff"
+					},
+					{
+						"durationData": {
+							"duration": -1,
+							"stackLimit": -1
+						},
+						"targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator",
+							"showInTargetPreview": false,
+							"showInStatusPanel": false
+						},
+						"effectType": "StatisticEffect",
+						"Description": {
+							"Id": "BA_AutoBreach",
+							"Name": "BA Auto Breach",
+							"Details": "Auto breaching shot on swarm attacks.",
+							"Icon": "UixSvgIcon_specialEquip_System"
+						},
+						"statisticData": {
+							"statName": "SuperPrecisionShot",
+							"operation": "Set",
+							"modValue": "true",
+							"modType": "System.Boolean"
+						},
+						"nature": "Buff"
 					}
 				]
 			},
@@ -409,40 +435,10 @@
 		],
 		"AirliftTargetEffects": [
 			{
-				"ID": "Airlift_Accuracy",
-				"FriendlyAirlift": true,
-				"Name": "Airlift Airlift_Accuracy",
-				"Description": "Airlifted Units get extra accuracy because t-bone needed to test something.",
-				"effectDataJO": [
-					{
-						"durationData": {},
-						"targetingData": {
-							"effectTriggerType": "Passive",
-							"effectTargetType": "Creator",
-							"showInStatusPanel": true
-						},
-						"effectType": "StatisticEffect",
-						"Description": {
-							"Id": "Airlift_Accuracy_Bonus",
-							"Name": "Easy shots",
-							"Details": "Airlift_Accuracy has increased accuracy while airlift.",
-							"Icon": "allied-star"
-						},
-						"nature": "Buff",
-						"statisticData": {
-							"statName": "AccuracyModifier",
-							"operation": "Set",
-							"modValue": "-9001",
-							"modType": "System.Single"
-						}
-					}
-				]
-			},
-			{
 				"ID": "Airlift_Immobile",
 				"FriendlyAirlift": false,
 				"Name": "Airlift Airlift_Immobile",
-				"Description": "Airlifted enemies are immobilezed (but can still shoot).",
+				"Description": "Airlifted enemies are Immobilized (but can still shoot).",
 				"effectDataJO": [
 					{
 						"durationData": {},
@@ -455,8 +451,8 @@
 						"Description": {
 							"Id": "Airlift_Airlift_Immobile",
 							"Name": "Immobilized",
-							"Details": "Imnmobiledzed",
-							"Icon": "allied-star"
+							"Details": "This unit is being held in an airlift and cannot move.",
+							"Icon": "cancel"
 						},
 						"nature": "Buff",
 						"statisticData": {
@@ -557,7 +553,53 @@
 		"AirliftAbilityID": "AbilityDefAirliftActivate",
 		"AirliftCapacityByTonnage": false,
 		"CanDropOffAfterMoving": true,
-		"AirliftImmuneTags": []
+		"AirliftImmuneTags": [
+			"unit_superheavy",
+			"unit_vtol"
+		],
+		"ResupplyConfig": {
+			"ResupplyIndicatorAsset": "Target",
+			"ResupplyIndicatorColor": {
+				"r": 255,
+				"g": 0,
+				"b": 255
+			},
+			"ResupplyIndicatorInRangeAsset": "Target",
+			"ResupplyIndicatorInRangeColor": {
+				"r": 255,
+				"g": 255,
+				"b": 0
+			},
+			"ResupplyAbilityID": "AbilityDefResupply",
+			"ResupplyUnitTag": "unit_resupply",
+			"SPAMMYAmmoDefId": "Ammunition_SPAMMY",
+			"SPAMMYBlackList": [
+				"Ammunition_ArrowIV_Nuke",
+				"Ammunition_ARMORAMMO",
+				"Ammunition_CM50",
+				"Ammunition_SPAMMY",
+				"Ammunition_Railgun"
+			],
+			"InternalSPAMMYDefId": "Ammunition_SPAMMY",
+			"InternalSPAMMYBlackList": [
+				"Ammunition_ArrowIV_Nuke",
+				"Ammunition_ARMORAMMO",
+				"Ammunition_CM50",
+				"Ammunition_SPAMMY",
+				"Ammunition_Railgun"
+			],
+			"ArmorSupplyAmmoDefId": "Ammunition_ARMORAMMO",
+			"ArmorRepairMax": 0.9,
+			"PhasesToResupply": 9,
+			"ResupplyPhasesPerAmmoTonnage": 0,
+			"ResupplyPhasesPerArmorPoint": 0,
+			"UnitTagFactor": {
+				"unit_resupply": 1
+			}
+		},
+		"ShowAmmoInVehicleTooltips": true,
+		"EnforceIFFForAmmoTooltips": true,
+		"EnableQuickReserve": true
 	},
 	"Manifest": [
 		{

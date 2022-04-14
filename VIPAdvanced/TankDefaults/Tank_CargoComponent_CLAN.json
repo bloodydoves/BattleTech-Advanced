@@ -1,0 +1,77 @@
+{
+	"Custom": {
+		"Flags": {
+			"flags": [
+				"not_broken",
+				"autorepair"
+			]
+		},
+		"Category": {
+			"CategoryID": "notused"
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"CashPayment: 150000",
+				"Lootcrate"
+			]
+		}
+	},
+	"Description": {
+		"Cost": 150000,
+		"Rarity": 99,
+		"Purchasable": true,
+		"Manufacturer": "Generic",
+		"Model": "Cargo Compartment",
+		"UIName": "Cargo Compartment",
+		"Id": "Tank_CargoComponent_CLAN",
+		"Name": "Cargo Compartment",
+		"Details": "This is the cargo being carried by Clan convoy trucks. It's usually not incredibly valuable but it still has some cash value. Salvaging it will give us a nice bonus payday and maybe a few military-grade components. Who knows, there might be mechparts in there, you never know with these convoys.",
+		"Icon": "uixSvgIcon_equipment_HeatBank"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 1,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "TankCritPenalizedCrew",
+				"Name": "ChargerSprint",
+				"Details": "MORE SPEED.",
+				"Icon": "uixSvgIcon_run_n_gun"
+			},
+			"statisticData": {
+				"statName": "CriticalHitChanceReceivedMultiplier",
+				"operation": "Float_Multiply",
+				"modValue": "0.9",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"TanksOnly",
+			"BLACKLISTED",
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}

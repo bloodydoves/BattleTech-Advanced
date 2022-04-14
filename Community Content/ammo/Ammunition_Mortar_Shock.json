@@ -1,0 +1,51 @@
+{
+    "Description": {
+        "Id": "Ammunition_Mortar_Shock",
+        "Name": "MORTAR Shock Ammo",
+        "UIName": "Shock",
+        "Details": "Massive rounds, designed for devastating impact, to be used in an AC/20.",
+        "Icon": null,
+        "Cost": 0,
+        "Rarity": 0,
+        "Purchasable": false
+    },
+    "Type": "Normal",
+    "Category": "MORTAR",
+    "HeatGenerated": 0,
+    "HeatGeneratedModifier": 1,
+    "ArmorDamageModifier": 1,
+    "ISDamageModifier": 1,
+    "CriticalDamageModifier": 1,
+    "DamagePerShot": -6.0,
+    "AlwaysIndirectVisuals": true,
+    "statusEffects": [
+		{
+			"durationData": {
+				"duration": 2,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 2
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"effectTargetType": "SingleTarget",
+				"showInTargetPreview": true,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-MortarShock",
+				"Name": "Slowed By Shock",
+				"Details": "This unit has been blasted by a shock mortar, delaying this unit's initiative by 1.",
+				"Icon": "particle"
+			},
+			"statisticData": {
+				"statName": "BaseInitiative",
+				"operation": "Int_Add",
+				"modValue": "1",
+				"modType": "System.Int32"
+			},
+			"nature": "Debuff"
+		}
+	]
+}

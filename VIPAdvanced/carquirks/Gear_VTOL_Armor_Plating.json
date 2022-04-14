@@ -5,6 +5,11 @@
 				"no_salvage",
 				"ignore_damage"
 			]
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"DamageTaken: -20%"
+			]
 		}
 	},
 	"StatName": null,
@@ -19,8 +24,8 @@
 		"UIName": "VTOL Armoring",
 		"Id": "Gear_VTOL_Armor_Plating",
 		"Name": "VTOL Armoring",
-		"Details": "Small fast squishy things get this.",
-		"Icon": "uixSvgIcon_equipment_TTS"
+		"Details": "Small fast squishy things get this. This unit takes 20% less damage at all times.",
+		"Icon": "chest-armor"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
@@ -29,7 +34,7 @@
 	"PrefabIdentifier": "",
 	"BattleValue": 0,
 	"InventorySize": 2,
-	"Tonnage": 100,
+	"Tonnage": 0,
 	"AllowedLocations": "All",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
@@ -41,45 +46,21 @@
 			},
 			"targetingData": {
 				"effectTriggerType": "Passive",
-				"effectTargetType": "Creator"
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "MaxEvasion",
-				"Name": "EVASIVE MOVE",
-				"Details": "This unit generates an extra EVASIVE charge from movement actions (up to its maximum).",
-				"Icon": "uixSvgIcon_action_evasivemove"
-			},
-			"statisticData": {
-				"statName": "MaxEvasivePips",
-				"operation": "Int_Add",
-				"modValue": "1",
-				"modType": "System.Int32"
-			},
-			"nature": "Buff"
-		},
-		{
-			"durationData": {
-				"duration": -1,
-				"stackLimit": -1
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
 				"effectTargetType": "Creator",
-				"showInStatusPanel": false
+				"showInStatusPanel": true
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
 				"Id": "StatusEffect-VTOLArmoring",
-				"Name": "Street Racer",
-				"Details": "This unit takes 20% less damage at all times.",
-				"Icon": "speedometer"
+				"Name": "VTOL Armor Plating",
+				"Details": "This unit takes 20% less damage thanks to its armor plating.",
+				"Icon": "chest-armor"
 			},
 			"nature": "Buff",
 			"statisticData": {
 				"statName": "DamageReductionMultiplierAll",
 				"operation": "Float_Multiply",
-				"modValue": "0.7",
+				"modValue": "0.8",
 				"modType": "System.Single"
 			}
 		}

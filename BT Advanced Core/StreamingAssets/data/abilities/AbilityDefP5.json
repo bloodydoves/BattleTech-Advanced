@@ -2,7 +2,7 @@
 	"Description": {
 		"Id": "AbilityDefP5",
 		"Name": "SURE MOVEMENT",
-		"Details": "PASSIVE: 'Mechs piloted by this pilot gain one bonus Evasion charge after moving (can exceed the unit's maximum). If the move is not a sprint, jump, or charge to melee, the 'unit also gains ENTRENCHED (50% stability damage reduction).",
+		"Details": "PASSIVE: 'Mechs piloted by this pilot gain one bonus Evasion charge after moving (can exceed the unit's maximum). If the move is not a sprint, jump, or charge to melee, the unit also gains ENTRENCHED (50% stability damage reduction). Finally, the unit also gains 5% damage reduction against Area-of-Effect attacks.",
 		"Icon": "uixSvgIcon_ability_sureFooting"
 	},
 	"DisplayParams": "ShowInMWTRay",
@@ -16,13 +16,14 @@
 			},
 			"targetingData": {
 				"effectTriggerType": "OnActivation",
-				"effectTargetType": "Creator"
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
 				"Id": "AbilityDefP5",
 				"Name": "SURE MOVEMENT",
-				"Details": "PASSIVE: This unit generates an extra EVASIVE charge from normal movement actions (can exceed the unit's maximum).",
+				"Details": "PASSIVE: This unit generates an extra EVASIVE charge from normal movement actions (can exceed the unit's maximum). It also gains ENTRENCHED from normal movement actions. It also gains 5% damage reduction against Area-of-Effect attacks.",
 				"Icon": "uixSvgIcon_ability_sureFooting"
 			},
 			"statisticData": {
@@ -55,6 +56,31 @@
 				"modType": "System.Boolean"
 			},
 			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDefP5_AoEDR",
+				"Name": "BRACED",
+				"Details": "Braced Units take 20% less damage from all conventional sources as well as 20% less AoE damage. It also takes 50% less stability damage.",
+				"Icon": "allied-star"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CACAoEDamageMult",
+				"operation": "Float_Add",
+				"modValue": "-0.05",
+				"modType": "System.Single"
+			}
 		}
 	],
 	"IsPrimaryAbility": true

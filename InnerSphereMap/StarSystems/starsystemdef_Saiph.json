@@ -2,7 +2,7 @@
 	"Description": {
 		"Id": "starsystemdef_Saiph",
 		"Name": "Saiph",
-		"Details": "The headquarters of Sitwell Corporation, the main competitor to Bluth Corporation. ",
+		"Details": "The headquarters of Sitwell Corporation, the main competitor to Bluth Corporation. Saiph joined the so-called Chaos March in the 3060s, sparking off a race to conquer the wayward independent worlds.",
 		"Icon": ""
 	},
 	"Position": {
@@ -27,7 +27,7 @@
 			"planet_industry_research",
 			"planet_industry_manufacturing",
 			"planet_other_blackmarket",
-			"planet_faction_liao"
+			"planet_faction_locals"
 		],
 		"tagSetSourceFile": ""
 	},
@@ -45,7 +45,7 @@
 	},
 	"FuelingStation": false,
 	"JumpDistance": 9,
-	"ownerID": "Liao",
+	"ownerID": "Locals",
 	"ShopRefreshRate": 0,
 	"ShopMaxInventory": 0,
 	"ShopMaxSpecials": 9,
@@ -131,14 +131,11 @@
 	"UseMaxContractOverride": false,
 	"MaxContractOverride": 0,
 	"SystemShopItems": [
-		"itemCollection_major_Liao",
 		"itemCollection_shop_chemicalsProgression",
 		"itemCollection_shop_miningProgression"
 	],
-	"factionShopOwnerID": "Liao",
-	"FactionShopItems": [
-		"itemCollection_faction_Liao"
-	],
+	"factionShopOwnerID": "Locals",
+	"FactionShopItems": [],
 	"BlackMarketShopItems": [
 		"itemCollection_faction_AuriganPirates"
 	],
@@ -152,18 +149,25 @@
 	"DifficultyList": [],
 	"DifficultyModes": [],
 	"contractEmployerIDs": [
-		"Liao",
-		"Locals"
-	],
-	"contractTargetIDs": [
-		"Marik",
+		"Locals",
+		"Steiner",
 		"Davion",
-		"AuriganRestoration",
+		"Liao",
+		"Kurita",
+		"Marik",
 		"ComStar",
 		"WordOfBlake",
-		"Ives",
-		"MagistracyOfCanopus",
-		"TaurianConcordat",
+		"AuriganPirates"
+	],
+	"contractTargetIDs": [
+		"Steiner",
+		"Davion",
+		"Liao",
+		"Kurita",
+		"Marik",
+		"ComStar",
+		"WordOfBlake",
+		"Mercenaries",
 		"AuriganPirates"
 	]
 }

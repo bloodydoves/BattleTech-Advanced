@@ -2,7 +2,7 @@
 	"Description" : {
 		"Id" : "DesignMaskWhirlwind",
 		"Name" : "WHIRLWIND",
-		"Details" : "Whirlwinds reduce movement and spotting distance, but they provide COVER (20% damage reduction against ranged attacks to the front and side).",
+		"Details" : "Whirlwinds reduce movement and spotting distance, but they provide 10% damage reduction against ranged attacks to the front and side. +2 Difficulty to hit units within Whirlwinds. +1 Difficulty for attacks made by units within Whirlwinds.",
 		"Icon" : "uixSvgIcon_whirlwind"
 	},
     "moveCostMechLight" : 1.25,
@@ -22,10 +22,10 @@
     "visibilityMultiplier" : 2.0,
     "visibilityHeight" : 20.0,
     "signatureMultiplier" : 1.0,
-    "targetabilityModifier" : 0.0,
+    "targetabilityModifier" : 2.0,
     "grantsGuarded" : true,
     "grantsEvasive" : false,
-    "toHitFromModifier" : 0.0,
+    "toHitFromModifier" : 1.0,
     "heatSinkMultiplier" : 1.0,
     "heatPerTurn" : 0,
     "legStructureDamageMin" : 0,
@@ -33,5 +33,31 @@
     "canBurn" : false,
     "canExplode" : false,
 	"audioSwitchSurfaceType" : "dirt",
-	"audioSwitchRainingSurfaceType" : "dirt"
+	"audioSwitchRainingSurfaceType" : "dirt",
+	"stickyEffect": {
+		"durationData": {
+			"duration": 2,
+			"ticksOnMovements": true,
+			"stackLimit": 1
+		},
+		"targetingData": {
+			"effectTargetType": "SingleTarget",
+			"showInStatusPanel": true,
+			"showInTargetPreview": true
+		},
+		"effectType": "StatisticEffect",
+		"Description": {
+			"Id": "DesignMaskWhirlwind",
+			"Name": "WHIRLDWIND",
+			"Details": "This unit moved through a forest, granting it temporary damage reduction of 10%.",
+			"Icon": "uixSvgIcon_whirlwind"
+		},
+		"statisticData": {
+			"statName": "DamageReductionMultiplierAll",
+			"operation": "Float_Multiply",
+			"modValue": "0.9",
+			"modType": "System.Single"
+		},
+		"nature": "Debuff"
+	}
 }

@@ -2,7 +2,7 @@
 	"Name": "IRTweaks",
 	"Enabled": true,
 	"Hidden": true,
-	"Version": "0.9.5.1",
+	"Version": "0.9.5.6",
 	"Description": "Miscellaneous Tweaks and Fixes",
 	"Author": "IceRaptor",
 	"Website": "https://github.com/IceRaptor/IRTweaks",
@@ -20,11 +20,12 @@
 			"AlternateMechNamingStyle": false,
 			"BuildingDamageColorChange": false,
 			"BraceOnMeleeWithJuggernaut": true,
-			"BreachingShotIgnoresAllDR": false,
-			"BulkPurchasing": false,
+			"BreachingShotIgnoresAllDR": true,
+			"BulkPurchasing": true,
 			"BulkScrapping": false,
 			"CombatLog": false,
 			"CTDestructInjuryFix": true,
+			"DamageReductionInCombatHud": true,
 			"DifficultyModsFromStats": false,
 			"DisableCampaign": true,
 			"DisableDebug": true,
@@ -64,7 +65,88 @@
 			"FlexibleSensorLockId": "AbilityDefT5A",
 			"JuggernautId": "AbilityDefGu8",
 			"MultiTargetId": "AbilityDefG5",
-			"BraceEffectConfig": {}
+			"BraceEffectConfig": {
+				"ID": "EffectsOnBrace",
+				"Name": "EffectsOnBracing",
+				"Description": "Effects happen on brace",
+				"effectDataJO": [
+					{
+						"durationData": {
+							"duration": 1,
+							"stackLimit": 1
+						},
+						"targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator",
+							"showInStatusPanel": true
+						},
+						"effectType": "StatisticEffect",
+						"Description": {
+							"Id": "BraceAOE_DR",
+							"Name": "BRACED",
+							"Details": "Braced Units take 20% less damage from all conventional sources as well as 20% less AoE damage. It also takes 50% less stability damage.",
+							"Icon": "allied-star"
+						},
+						"nature": "Buff",
+						"statisticData": {
+							"statName": "CACAoEDamageMult",
+							"operation": "Float_Add",
+							"modValue": "-0.2",
+							"modType": "System.Single"
+						}
+					},
+					{
+						"durationData": {
+							"duration": 1,
+							"stackLimit": 1
+						},
+						"targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator",
+							"showInStatusPanel": false
+						},
+						"effectType": "StatisticEffect",
+						"Description": {
+							"Id": "Brace_StandardDR",
+							"Name": "AOE DR",
+							"Details": "Braced Units take 20% less AOE damage.",
+							"Icon": "allied-star"
+						},
+						"nature": "Buff",
+						"statisticData": {
+							"statName": "DamageReductionMultiplierAll",
+							"operation": "Float_Multiply",
+							"modValue": "0.8",
+							"modType": "System.Single"
+						}
+					},
+					{
+						"durationData": {
+							"duration": 1,
+							"stackLimit": 1
+						},
+						"targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator",
+							"showInStatusPanel": false
+						},
+						"effectType": "StatisticEffect",
+						"Description": {
+							"Id": "Brace_StabilityDR",
+							"Name": "Stability DR",
+							"Details": "Braced Units take 50% less stability damage.",
+							"Icon": "allied-star"
+						},
+						"nature": "Buff",
+						"statisticData": {
+							"statName": "ReceivedInstabilityMultiplier",
+							"operation": "Float_Multiply",
+							"modValue": "0.5",
+							"modType": "System.Single"
+						}
+					}
+				]
+			}
 		},
 		"CheatDetection": {
 			"CheatDetection": false,
@@ -236,6 +318,9 @@
 				"SelfKnockdownCheckStatName": "SelfknockdownCheck_OnFire",
 				"IgnoreSelfKnockdownTag": "big_chungus",
 				"SelfKnockdownPilotingFactor": 0.01,
+				"SelfKnockdownTonnageFactor": 0.01,
+				"SelfKnockdownTonnageBonusThreshold": 100.0,
+				"SelfKnockdownTonnageBonusFactor": 0.05,
 				"SelfKnockdownBracedFactor": 100.0
 			},
 			"OnWeaponHitOpts": {

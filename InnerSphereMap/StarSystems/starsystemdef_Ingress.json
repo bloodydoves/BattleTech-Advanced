@@ -2,7 +2,7 @@
 	"Description": {
 		"Id": "starsystemdef_Ingress",
 		"Name": "Ingress",
-		"Details": "Ingress was one of the first worlds settled during the Terran Exodus. Its rich soil soon allowed the inhabitants to grow a great deal of food, far more than they needed. These crops remain the foundation of Ingress' economy, but the planet does have some light industry as well, making it totally self-sufficient.",
+		"Details": "Ingress was one of the first worlds settled during the Terran Exodus. Its rich soil soon allowed the inhabitants to grow a great deal of food, far more than they needed. These crops remain the foundation of Ingress' economy, but the planet does have some light industry as well, making it totally self-sufficient. Ingress joined the so-called Chaos March in the 3060s, sparking off a race to conquer the wayward independent worlds.",
 		"Icon": ""
 	},
 	"Position": {
@@ -28,12 +28,13 @@
 			"planet_industry_research",
 			"planet_industry_manufacturing",
 			"planet_other_comstar",
-			"planet_ruins",
-			"planet_faction_liao"
+			"planet_other_ruins",
+			"planet_faction_locals"
 		],
 		"tagSetSourceFile": ""
 	},
 	"SupportedBiomes": [
+		"martianVacuum",
 		"highlandsSpring",
 		"highlandsFall",
 		"lowlandsSpring",
@@ -53,7 +54,7 @@
 	},
 	"FuelingStation": false,
 	"JumpDistance": 12,
-	"ownerID": "Liao",
+	"ownerID": "Locals",
 	"ShopRefreshRate": 0,
 	"ShopMaxInventory": 0,
 	"ShopMaxSpecials": 9,
@@ -139,14 +140,11 @@
 	"UseMaxContractOverride": false,
 	"MaxContractOverride": 0,
 	"SystemShopItems": [
-		"itemCollection_major_Liao",
 		"itemCollection_shop_chemicalsProgression",
 		"itemCollection_shop_miningProgression"
 	],
-	"factionShopOwnerID": "Liao",
-	"FactionShopItems": [
-		"itemCollection_faction_Liao"
-	],
+	"factionShopOwnerID": "Locals",
+	"FactionShopItems": [],
 	"BlackMarketShopItems": null,
 	"CoreSystemID": "starsystemdef_Ingress",
 	"StartingSystemModes": [
@@ -158,18 +156,25 @@
 	"DifficultyList": [],
 	"DifficultyModes": [],
 	"contractEmployerIDs": [
-		"Liao",
-		"Locals"
-	],
-	"contractTargetIDs": [
-		"Marik",
+		"Locals",
+		"Steiner",
 		"Davion",
-		"AuriganRestoration",
+		"Liao",
+		"Kurita",
+		"Marik",
 		"ComStar",
 		"WordOfBlake",
-		"Ives",
-		"MagistracyOfCanopus",
-		"TaurianConcordat",
+		"AuriganPirates"
+	],
+	"contractTargetIDs": [
+		"Steiner",
+		"Davion",
+		"Liao",
+		"Kurita",
+		"Marik",
+		"ComStar",
+		"WordOfBlake",
+		"Mercenaries",
 		"AuriganPirates"
 	]
 }

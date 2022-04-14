@@ -2,7 +2,7 @@
 	"Description": {
 		"Id": "starsystemdef_Hall",
 		"Name": "Hall",
-		"Details": "Hall is a populous planet with a significant agricultural sector as well as a large light industrial base. Only recently lost by the Capellan Confederation, a battalion of Wolf's Dragoons currently makes up part of the planetary garrison.",
+		"Details": "Hall is a populous planet with a significant agricultural sector as well as a large light industrial base. Only recently lost by the Capellan Confederation, a battalion of Wolf's Dragoons currently makes up part of the planetary garrison. Hall joined the so-called Chaos March in the 3060s, sparking off a race to conquer the wayward independent worlds.",
 		"Icon": ""
 	},
 	"Position": {
@@ -22,7 +22,7 @@
 			"planet_industry_agriculture",
 			"planet_industry_manufacturing",
 			"planet_other_comstar",
-			"planet_faction_liao"
+			"planet_faction_locals"
 		],
 		"tagSetSourceFile": ""
 	},
@@ -40,7 +40,7 @@
 	},
 	"FuelingStation": true,
 	"JumpDistance": 5,
-	"ownerID": "Liao",
+	"ownerID": "Locals",
 	"ShopRefreshRate": 0,
 	"ShopMaxInventory": 0,
 	"ShopMaxSpecials": 9,
@@ -126,14 +126,11 @@
 	"UseMaxContractOverride": false,
 	"MaxContractOverride": 0,
 	"SystemShopItems": [
-		"itemCollection_major_Liao",
 		"itemCollection_shop_chemicalsProgression",
 		"itemCollection_shop_miningProgression"
 	],
-	"factionShopOwnerID": "Liao",
-	"FactionShopItems": [
-		"itemCollection_faction_Liao"
-	],
+	"factionShopOwnerID": "Locals",
+	"FactionShopItems": [],
 	"BlackMarketShopItems": null,
 	"CoreSystemID": "starsystemdef_Hall",
 	"StartingSystemModes": [
@@ -145,18 +142,25 @@
 	"DifficultyList": [],
 	"DifficultyModes": [],
 	"contractEmployerIDs": [
-		"Liao",
-		"Locals"
-	],
-	"contractTargetIDs": [
-		"Marik",
+		"Locals",
+		"Steiner",
 		"Davion",
-		"AuriganRestoration",
+		"Liao",
+		"Kurita",
+		"Marik",
 		"ComStar",
 		"WordOfBlake",
-		"Ives",
-		"MagistracyOfCanopus",
-		"TaurianConcordat",
+		"AuriganPirates"
+	],
+	"contractTargetIDs": [
+		"Steiner",
+		"Davion",
+		"Liao",
+		"Kurita",
+		"Marik",
+		"ComStar",
+		"WordOfBlake",
+		"Mercenaries",
 		"AuriganPirates"
 	]
 }

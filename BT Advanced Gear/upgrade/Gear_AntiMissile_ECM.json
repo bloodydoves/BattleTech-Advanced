@@ -1,0 +1,150 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "ECM"
+			}
+		],
+		"Flags": {
+			"flags": [
+				"not_broken",
+				"no_salvage"
+			]
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"Defense: +1",
+				"AntiMissileDefense: +4",
+				"ECMRadius: 120"
+			]
+		},
+		"InventorySorter": {
+			"SortKey": "00024"
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 1000000,
+		"Rarity": 3,
+		"Purchasable": true,
+		"Manufacturer": "Hellespont",
+		"Model": "Arrowhead",
+		"UIName": "Anti-Missile ECM",
+		"Id": "Gear_AntiMissile_ECM",
+		"Name": "Anti-Missile ECM",
+		"Details": "Designed and integrated into the experimental Raven-4LX, the Anti-Missile ECM combines the circuitry of a Guardian ECM with a unique sensor scrabler that interfers with incoming missile targeting. The Anti-Missile ECM emits a special signal that actively scrambles incoming missile fire in an area around the unit, keeping the Raven-4LX and its allies safe under even the heaviest weapons fire. However, the effect proved prone to maintenance woes and remains experimental.",
+		"Icon": "circuitry"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 3,
+	"Tonnage": 3,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"Auras": [
+		{
+			"Id": "Gear_GECM_ECM",
+			"Name": "ECM",
+			"ReticleColor": "#ffffff",
+			"Range": 120,
+			"RemoveOnSensorLock": false,
+			"State": "Persistent",
+			"ApplySelf": true,
+			"AllyStealthAffection": "None",
+			"EnemyStealthAffection": "None",
+			"IsPositiveToAlly": true,
+			"IsNegativeToEnemy": false,
+			"ownerVFX": [],
+			"targetVFX": [],
+			"removeOwnerVFX": [],
+			"removeTargetVFX": [],
+			"ownerSFX": [],
+			"targetSFX": [],
+			"removeOwnerSFX": [],
+			"removeTargetSFX": [],
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"specialRules": "NotSet",
+						"effectTargetType": "AlliesWithinRange",
+						"range": 0.0,
+						"forcePathRebuild": false,
+						"forceVisRebuild": false,
+						"showInTargetPreview": false,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "GECMInterference",
+						"Name": "GECM Interference",
+						"Details": "Guardian ECM making this unit harder to hit, +1 penalty to enemy attacks.",
+						"Icon": "circuitry"
+					},
+					"statisticData": {
+						"statName": "ToHitThisActor",
+						"operation": "Float_Add",
+						"modValue": "1.0",
+						"modType": "System.Single"
+					},
+					"nature": "Buff"
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"specialRules": "NotSet",
+						"effectTargetType": "AlliesWithinRange",
+						"range": 0.0,
+						"forcePathRebuild": false,
+						"forceVisRebuild": false,
+						"showInTargetPreview": false,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect_AntiMissileECM",
+						"Name": "Missile Scrambling",
+						"Details": "The Anti-Missile ECM scrambles enemy missile fire, giving a +4 penalty to enemy missile attacks. This penalty stacks with the normal ECM effect.",
+						"Icon": "circuitry"
+					},
+					"statisticData": {
+						"statName": "ToHitThisActor",
+						"operation": "Float_Add",
+						"modValue": "4.0",
+						"modType": "System.Single",
+						"targetAmmoCategory": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "Missile",
+						"targetWeaponSubType": "NotSet",
+						"targetWeaponType": "NotSet"
+					},
+					"nature": "Buff"
+				}
+			]
+		}
+	],
+	"statusEffects": [],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"ElectronicCounterMeasures",
+			"lv-jammer_m2_r6"
+		],
+		"tagSetSourceFile": ""
+	}
+}

@@ -2,41 +2,15 @@
 	"Description": {
 		"Id": "AbilityDefAirliftActivate",
 		"Name": "Airlift",
-		"Details": "ACTION: Unit will Airlift target",
-		"Icon": "mounted-knight"
+		"Details": "ACTION: This unit will airlift the targeted unit, hoisting it into the air and carrying it around. The airlifted unit can still shoot, but can take no movement actions as long as it is held.",
+		"Icon": "cargo-crate"
 	},
 	"DisplayParams": "ShowInMWTRay",
-	"ActivationTime": "ConsumedByFiring",
+	"ActivationTime": "NotSet",
 	"ActivationCooldown": -1,
 	"Targeting": "ActorTarget",
 	"ResolveCost": 0,
 	"TargetFriendlyUnit": "BOTH",
 	"IgnoresUniversalCooldown": true,
-	"EffectData": [
-		{
-			"durationData": {
-				"duration": -1,
-				"stackLimit": -1
-			},
-			"targetingData": {
-				"effectTriggerType": "OnActivation",
-				"effectTargetType": "SingleTarget",
-				"showInStatusPanel": false
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "StatusEffect-MountUnit",
-				"Name": "Battle Armor Mount",
-				"Details": "mount",
-				"Icon": "uixSvgIcon_ability_precisionstrike"
-			},
-			"nature": "Buff",
-			"statisticData": {
-				"statName": "Airlifting",
-				"operation": "Set",
-				"modValue": "true",
-				"modType": "System.Boolean"
-			}
-		}
-	]
+	"EffectData": []
 }

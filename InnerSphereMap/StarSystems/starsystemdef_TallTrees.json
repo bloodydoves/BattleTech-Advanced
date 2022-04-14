@@ -2,7 +2,7 @@
 	"Description": {
 		"Id": "starsystemdef_TallTrees",
 		"Name": "Tall Trees",
-		"Details": "Tall Trees is infamous as the site of the New Tierra del Fuego II plague, a virulent plague which hit the island and killed everyone living there. Rumour has it that the plague was actually created in a Capellan genetic research lab.",
+		"Details": "Tall Trees is infamous as the site of the New Tierra del Fuego II plague, a virulent plague which hit the island and killed everyone living there. Rumour has it that the plague was actually created in a Capellan genetic research lab. Tall Trees joined the so-called Chaos March in the 3060s, sparking off a race to conquer the wayward independent worlds.",
 		"Icon": ""
 	},
 	"Position": {
@@ -22,11 +22,12 @@
 			"planet_industry_agriculture",
 			"planet_industry_research",
 			"planet_other_comstar",
-			"planet_faction_liao"
+			"planet_faction_locals"
 		],
 		"tagSetSourceFile": ""
 	},
 	"SupportedBiomes": [
+		"lunarVacuum",
 		"jungleTropical",
 		"desertParched"
 	],
@@ -40,7 +41,7 @@
 	},
 	"FuelingStation": true,
 	"JumpDistance": 11,
-	"ownerID": "Liao",
+	"ownerID": "Locals",
 	"ShopRefreshRate": 0,
 	"ShopMaxInventory": 0,
 	"ShopMaxSpecials": 9,
@@ -126,14 +127,11 @@
 	"UseMaxContractOverride": false,
 	"MaxContractOverride": 0,
 	"SystemShopItems": [
-		"itemCollection_major_Liao",
 		"itemCollection_shop_chemicalsProgression",
 		"itemCollection_shop_miningProgression"
 	],
-	"factionShopOwnerID": "Liao",
-	"FactionShopItems": [
-		"itemCollection_faction_Liao"
-	],
+	"factionShopOwnerID": "Locals",
+	"FactionShopItems": [],
 	"BlackMarketShopItems": null,
 	"CoreSystemID": "starsystemdef_TallTrees",
 	"StartingSystemModes": [
@@ -145,18 +143,25 @@
 	"DifficultyList": [],
 	"DifficultyModes": [],
 	"contractEmployerIDs": [
-		"Liao",
-		"Locals"
-	],
-	"contractTargetIDs": [
-		"Marik",
+		"Locals",
+		"Steiner",
 		"Davion",
-		"AuriganRestoration",
+		"Liao",
+		"Kurita",
+		"Marik",
 		"ComStar",
 		"WordOfBlake",
-		"Ives",
-		"MagistracyOfCanopus",
-		"TaurianConcordat",
+		"AuriganPirates"
+	],
+	"contractTargetIDs": [
+		"Steiner",
+		"Davion",
+		"Liao",
+		"Kurita",
+		"Marik",
+		"ComStar",
+		"WordOfBlake",
+		"Mercenaries",
 		"AuriganPirates"
 	]
 }

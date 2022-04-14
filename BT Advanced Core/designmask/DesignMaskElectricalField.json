@@ -2,7 +2,7 @@
 	"Description" : {
 		"Id" : "DesignMaskElectricalField",
 		"Name" : "ELECTRICAL FIELD",
-		"Details" : "The exposed conduits' electromagnetic discharge interferes with targeting systems. +4 Difficulty to hit units within an Electrical Field. +4 Difficulty for attacks made by units within an Electrical Field.",
+		"Details" : "The exposed conduits' electromagnetic discharge interferes with targeting systems and juices up energy weaponry. +4 Difficulty to hit units within an Electrical Field. +4 Difficulty for attacks made by units within an Electrical Field. 50% damage dealt by energy weapons within an Electrical Field. 50% damage taken from energy weapons within an Electrical Field.",
 		"Icon" : "UixSvgIcon_designMask_electricalField"
 	},
     "moveCostMechLight" : 1.1,
@@ -19,8 +19,8 @@
     "moveCostWheeledAssault" : 1.1,
     "moveCostSprintMultiplier" : 1.0,
     "stabilityDamageMultiplier" : 1.0,
-    "energyDamageDealtMultiplier" : 1.0,
-    "energyDamageTakenMultiplier" : 1.0,
+    "energyDamageDealtMultiplier" : 1.5,
+    "energyDamageTakenMultiplier" : 1.5,
     "visibilityMultiplier" : 1.0,
     "visibilityHeight" : 1.0,
     "signatureMultiplier" : 1.0,
@@ -35,5 +35,31 @@
     "canBurn" : false,
     "canExplode" : false,
 	"audioSwitchSurfaceType" : "dirt",
-	"audioSwitchRainingSurfaceType" : "mud"
+	"audioSwitchRainingSurfaceType" : "mud",
+	"stickyEffect": {
+		"durationData": {
+			"duration": 2,
+			"ticksOnMovements": true,
+			"stackLimit": 1
+		},
+		"targetingData": {
+			"effectTargetType": "SingleTarget",
+			"showInStatusPanel": true,
+			"showInTargetPreview": true
+		},
+		"effectType": "StatisticEffect",
+		"Description": {
+			"Id": "DesignMaskElectricalField",
+			"Name": "ELECTRICAL FIELD",
+			"Details": "This unit moved through a electrical field, granting it temporary damage reduction of 5%.",
+			"Icon": "UixSvgIcon_designMask_electricalField"
+		},
+		"statisticData": {
+			"statName": "DamageReductionMultiplierAll",
+			"operation": "Float_Multiply",
+			"modValue": "0.95",
+			"modType": "System.Single"
+		},
+		"nature": "Debuff"
+	}
 }

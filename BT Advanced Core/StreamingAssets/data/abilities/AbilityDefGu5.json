@@ -1,0 +1,69 @@
+{
+	"Description" : {
+		"Id" : "AbilityDefGu5",
+		"Name" : "BULWARK",
+		"Details" : "PASSIVE: Gain a flat 15% damage reduction against normal attacks at all times as well as 10% damage reduction against Area-of-Effect attacks. These stack with damage reduction from Brace and from cover sources.",
+		"Icon" : "uixSvgIcon_ability_fortify"
+	},
+    "DisplayParams" : "ShowInMWTRay",
+	"ReqSkill" : "Guts",
+	"ReqSkillLevel" : 5,
+	"ActivationTime" : "Passive",
+	"EffectData" :
+	[
+		{
+			"durationData" :
+			{
+				"duration" : -1
+			},
+			"targetingData" :
+			{
+				"effectTriggerType" : "Passive",
+				"effectTargetType" : "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType" : "StatisticEffect",
+			"Description" :
+			{
+				"Id" : "AbilityDefGu5",
+				"Name" : "BULWARK",
+				"Details" : "PASSIVE: Gain a flat 15% damage reduction against normal attacks at all times as well as 10% damage reduction against Area-of-Effect attacks. This stacks with damage reduction from Brace and from cover sources.",
+				"Icon" : "uixSvgIcon_ability_fortify"
+			},
+			"statisticData" :
+			{
+				"statName": "DamageReductionMultiplierAll",
+				"operation": "Float_Multiply",
+				"modValue": "0.85",
+				"modType": "System.Single"
+			},
+			"nature" : "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDefGu5_AoEDR",
+				"Name": "BRACED",
+				"Details": "Braced Units take 20% less damage from all conventional sources as well as 20% less AoE damage. It also takes 50% less stability damage.",
+				"Icon": "allied-star"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CACAoEDamageMult",
+				"operation": "Float_Add",
+				"modValue": "-0.1",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"IsPrimaryAbility" : true
+}
