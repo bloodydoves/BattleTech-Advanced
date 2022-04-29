@@ -1,0 +1,142 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/e/p/snppc"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"PPCDEBUFF: 2",
+				"ModalWeapon: Snub PPC",
+				"ModalWeapon1: Shotgun PPC",
+				"WpnRecoil: 1",
+				"DmgFallOff: 50%",
+				"DmgFallOffStart: 280",
+				"DmgFallOffEnd: 450"
+			]
+		}
+	},
+	"Category": "Energy",
+	"Type": "PPC",
+	"WeaponSubType": "PPC",
+	"MinRange": 0,
+	"MaxRange": 530,
+	"RangeSplit": [
+		150,
+		270,
+		390
+	],
+	"AmmoCategory": "NotSet",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 34,
+	"Damage": 65,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 0,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": 0,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 1,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 0,
+	"Instability": 30,
+	"DistantVariance": 0.5,
+	"DamageFalloffStartDistance": 280,
+	"DamageFalloffEndDistance": 450,
+	"DistantVarianceReversed": false,
+	"RangedDmgFalloffType": "Linear",
+	"WeaponEffectID": "WeaponEffect-Weapon_PPC",
+	"Description": {
+		"Cost": 1893000,
+		"Rarity": 10,
+		"Purchasable": true,
+		"Manufacturer": "Bear Necessities",
+		"Model": "Snubgun PPC",
+		"UIName": "Snubgun PPC",
+		"Id": "Weapon_PPC_Snubgun_0-STOCK",
+		"Name": "Snubgun PPC",
+		"Details": "The so called 'Snubgun' is a mix of the ER PPC Shotgun and the Snub-Nose PPC. The resulting weapon offers increased flexibility at close ranges, at the cost of increased heat. \n\n <b><color=#00ffff>Left Click on Chance to hit during battle to switch firing mode</color></b>",
+		"Icon": "particle"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "PPC",
+	"BattleValue": 0,
+	"InventorySize": 3,
+	"Tonnage": 6,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"Modes": [
+		{
+			"Id": "Snub",
+			"UIName": "Snubnose",
+			"isBaseMode": true
+		},
+		{
+			"Id": "Shotgun",
+			"UIName": "Shotgun",
+			"isBaseMode": false,
+			"ProjectilesPerShot": 10,
+			"WeaponEffectID": "WeaponEffect-Weapon_PPCSnub",
+			"DisableClustering": false,
+			"ImprovedBallistic": true,
+			"BallisticDamagePerPallet": true,
+			"AlternateDamageCalc": false,
+			"CriticalChanceMultiplier": 1.25
+		}
+	],
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": 2,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "NotSet",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDefPPC",
+				"Name": "SENSORS IMPAIRED",
+				"Details": "[AMT] Difficulty to all of this unit's attacks until its next activation.",
+				"Icon": "uixSvgIcon_status_sensorsImpaired"
+			},
+			"nature": "Debuff",
+			"statisticData": {
+				"statName": "AccuracyModifier",
+				"operation": "Float_Add",
+				"modValue": "2.0",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_standard"
+		],
+		"tagSetSourceFile": ""
+	}
+}
