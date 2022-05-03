@@ -25,7 +25,8 @@
 		"BonusDescriptions": {
 			"Bonuses": [
 				"IsSensorsA",
-				"AntiAirTargeting: +5"
+				"LanceResolve: +3",
+				"MaxResolveIncrease: 15"
 			]
 		}
 	},
@@ -37,14 +38,14 @@
 		"Rarity": 99,
 		"Purchasable": false,
 		"Manufacturer": "Quirk",
-		"Model": "Rifleman",
-		"UIName": "Rifleman Anti-Air Targeting",
-		"Id": "Gear_Quirk_AntiAirTargeting_Rifleman",
-		"Name": "Rifleman Anti-Air Targeting",
-		"Details": "This piece of gear represents the Rifleman's inherent Anti-Air Targeting quirk. This gives the Rifleman bonus hit chance against aerial units such as VTOLs and Land-Air Mechs.",
+		"Model": "Shorty's 'Rifleman'",
+		"UIName": "Shorty's 'Rifleman' Improved Communications",
+		"Id": "Gear_Quirk_ImprovedCommunications_ShortysRifleman",
+		"Name": "Shorty's 'Rifleman' Improved Communications",
+		"Details": "This piece of gear represents Shorty's 'Rifleman's inherent Improved Communications quirk. This gives Shorty's 'Rifleman' increased resolve generation.",
 		"Icon": "uixSvgIcon_equipment_Rangefinder"
 	},
-	"BonusValueA": "",
+	"BonusValueA": "+3 Resolve Generation",
 	"BonusValueB": "",
 	"ComponentType": "Upgrade",
 	"ComponentSubType": "NotSet",
@@ -59,6 +60,32 @@
 		{
 			"durationData": {
 				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "AllLanceMates",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "ImprovedCommunications",
+				"Name": "Improved Communications",
+				"Details": "Provides a +3 bonus to actions that generate Morale.",
+				"Icon": "uixSvgIcon_equipment_Rangefinder"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "MoraleBonusGain",
+				"operation": "Int_Add",
+				"modValue": "3",
+				"modType": "System.Int32"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
 				"stackLimit": -1
 			},
 			"targetingData": {
@@ -69,44 +96,18 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "Quirk_AAAccuracy",
-				"Name": "Targeting Computer",
-				"Details": "Improved overall accuracy.",
-				"Icon": "uixSvgIcon_ability_precisionstrike"
+				"Id": "MaxResolveIncreased",
+				"Name": "Pilot Max Resolve Boosted",
+				"Details": "Increases maximum resolve by 15.",
+				"Icon": "uixSvgIcon_equipment_Rangefinder"
 			},
 			"nature": "Buff",
 			"statisticData": {
-				"statName": "ActorABSOLUTE_AeroUnit",
-				"operation": "Set",
-				"modValue": "-5",
-				"modType": "System.Single",
-				"targetCollection": "Weapon"
+				"statName": "maxResolveMod",
+				"operation": "Int_Add",
+				"modValue": "15",
+				"modType": "System.Int32"
 			}
-		},
-		{
-			"durationData": {
-				"duration": -1
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"effectTargetType": "Creator",
-				"showInTargetPreview": false,
-				"showInStatusPanel": false
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "FCS_AA_Counter",
-				"Name": "AA Strafe Counter Effect",
-				"Details": "AA Strafe Counter Effect.",
-				"Icon": "AdvancedTC"
-			},
-			"statisticData": {
-				"statName": "AAAFactor",
-				"operation": "Float_Add",
-				"modValue": "0.5",
-				"modType": "System.Single"
-			},
-			"nature": "Buff"
 		}
 	],
 	"ComponentTags": {
