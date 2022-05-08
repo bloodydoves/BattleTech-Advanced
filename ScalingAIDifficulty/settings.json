@@ -1,32 +1,32 @@
 {
-  "debug": true,
-  "trace": true,
-  "minPoints": -20,
-  "maxPoints": 20,
-  "points": {
-    "victory": 1,
-    "retreat": -2,
-    "defeat": -3,
-    "pilotInjured": -1,
-    "pilotKilled": -5,
-    "unitDestroyed": -3
-  },
-  "EnemyEffectsPerPoint": [
-    {
-      "statName": "DamageReductionMultiplierAll",
-      "operation": "Float_Multiply",
-      "modValue": 0.99
-    },
-    {
-      "statName": "ToHitThisActor",
-      "operation": "Float_Add",
-      "modValue": 0.25
-    }
-	{,
-		"statName": "CACAoEDamageMult",
-		"operation": "Float_Add",
-		"modValue": "-0.025",
-	}
-  ],
-  "SelfEffectsPerPoint": []
+	"debug": true,
+	"trace": true,
+	"minPoints": -20,
+	"maxPoints": 20,
+	"points": {
+		"victory": 1,
+		"retreat": -2,
+		"defeat": -3,
+		"pilotInjured": -1,
+		"pilotKilled": -5,
+		"unitDestroyed": -3
+	},
+	"EnemyEffectsPerPoint": [
+		{
+			"statName": "DamageReductionMultiplierAll",
+			"operation": "Float_Multiply",
+			"modValue": 0.99
+		},
+		{
+			"statName": "ToHitThisActor",
+			"operation": "Float_Add",
+			"modValue": 0.25
+		},
+		{
+			"statName": "CACAoEDamageMult",
+			"operation": "Float_Add",
+			"modValue": "-0.025"
+		}
+	],
+	"SelfEffectsPerPoint": []
 }
