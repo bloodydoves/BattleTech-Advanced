@@ -5,7 +5,9 @@ SAD is distributed under the GNU General Public License v3.0 license. Special pe
 ## SAD_points
 Each career has "SAD_points", representing the size of bonuses SAD will apply to enemy units. 0 has no effect, and larger numbers make the game harder. A player's total SAD_points can go negative, if they are struggling.
 
-These are stored in the `SAD_points` company statistic, and so could theoretically be read or altered by events, as any other company stat.
+These are stored in the `SAD_points` company statistic, and so could theoretically be read or altered by events, as any other company stat. They are visible to the player by hovering over the contract difficulty rating.
+
+![SAD Points](SAD.png "SAD Points")
 
 ### Points change each mission.
 A player's SAD_points increase or decrease at the conclusion of each mission, based on how things went. Winning will increase their SAD_points, making future missions harder. Suffering losses will decrease their SAD_points, making future missions easier. This is capped by `minPoints` and `maxPoints` - a player's SAD_points will never move beyond these limits.
