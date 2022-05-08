@@ -1,0 +1,89 @@
+{
+	"Description": {
+		"Id": "3062-08-21",
+		"Name": "MercNews Broadcast",
+		"Details": "STYK COMMONALITY UNDER SEIGE!\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]]: The beleaguered [[DM.BaseDescriptionDefs[LoreStykCommonality],Styk Commonality]] has come under heavy attack in recent weeks by [[DM.BaseDescriptionDefs[LoreHouseLiao], Capellan Confederation]] forces. Though not confirmed, it has long been suspected that Capellan Chancellor [[DM.BaseDescriptionDefs[LoreSunTzuLiao],Sun Zhu Liao]] has been preparing to once again absorb large portions of the [[DM.BaseDescriptionDefs[LoreChaosMarch], Chaos March]] into the [[DM.BaseDescriptionDefs[LoreHouseLiao], Capellan Confederation]]. The call for mercenary support on both sides of the conflict has reached record levels as the fate of this world, and very likely several others, hangs in the balance.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "STYK COMMONALITY UNDER SEIGE!\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]]: The recently formed [[DM.BaseDescriptionDefs[LoreStykCommonality],Styk Commonality]] has been a hotbed of fighting in and around the central region of the [[DM.BaseDescriptionDefs[LoreChaosMarch], Chaos March]]. The planet Styk is at the center of the conflict, as it is home to the Tao MechWorks. The conflict is extremely chaotic, as the [[DM.BaseDescriptionDefs[LoreHouseLiao], Capellan Confederation]] has unleashed numerous mercenary and marauder units in an attempt to mask brazen aggression against the Commonality.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+							"WIIC_give_starsystemdef_Styk_to_Locals", 
+							"WIIC_give_starsystemdef_GanSingh_to_Locals",
+							"WIIC_Liao_attacks_starsystemdef_Styk",
+							"WIIC_set_starsystemdef_Styk_defender_strength_18",
+							"WIIC_set_starsystemdef_Styk_attacker_strength_14",
+							"WIIC_Liao_attacks_starsystemdef_GanSingh",
+							"WIIC_set_starsystemdef_GanSingh_defender_strength_18",
+							"WIIC_set_starsystemdef_GanSingh_attacker_strength_14"
+							],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

@@ -1,0 +1,85 @@
+{
+	"Description": {
+		"Id": "3063-08-21",
+		"Name": "MercNews Broadcast",
+		"Details": "MRBC SPOTLIGHT: CARVER V!\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],OUTREACH]]: After both pro-[[DM.BaseDescriptionDefs[LoreKatherineSteiner],Katrina]] and pro-[[DM.BaseDescriptionDefs[LoreVictorSD],Victor]] forces called in reinforcements, fighting is at an all time high on [[DM.BaseDescriptionDefs[LoreCarverV],Carver V]]. Refugees gather in makeshift camps as tanks and BattleMechs roam the countryside, attacking and counterattacking in an attempt to wrest control of the planet.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue Broadcast.",
+				"Details": "Broadcast continues.",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "REBELLION ON CARVER V – THE PEOPLE'S REVOLT!\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]]: New reports, however, confirm that a revolt is underway on the planet. Civilians, some say in the thousands, have banded together to stop the destruction of their planet.  Rallying under an ex-civil engineer, and styling themselves the Partisans, they seek to create a world free of [[DM.BaseDescriptionDefs[LoreGreatHouses],Great House]] control. More importantly, sources from the [[DM.BaseDescriptionDefs[LoreVictorSD],Victor]] camp have indicated they would support an independent world they now call Liberty.  Meanwhile, all sides are calling for reinforcements and offering contracts through the [[DM.BaseDescriptionDefs[LoreMRBC],MRBC]].",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_give_starsystemdef_Carver(Liberty3063+)_to_Steiner",
+									"WIIC_Locals_attacks_starsystemdef_Carver(Liberty3063+)",
+									"WIIC_set_starsystemdef_Carver(Liberty3063+)_defender_strength_18",
+									"WIIC_set_starsystemdef_Carver(Liberty3063+))_attacker_strength_14",
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}
