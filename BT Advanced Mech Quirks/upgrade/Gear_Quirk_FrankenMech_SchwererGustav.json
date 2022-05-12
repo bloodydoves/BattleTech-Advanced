@@ -1,0 +1,119 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "LifeSupportB"
+			},
+			{
+				"CategoryID": "Quirk"
+			}
+		],
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "[[Chassis.Tonnage]]/10",
+				"CBillCost": "[[Chassis.Tonnage]] * 1.15"
+			}
+		},
+		"Flags": {
+			"flags": [
+				"default",
+				"not_broken",
+				"no_salvage",
+				"autorepair"
+			]
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"IsLifeSupportB",
+				"Initiative: +1"
+			]
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 500000,
+		"Rarity": 99,
+		"Purchasable": false,
+		"Manufacturer": "Tooth of Ymir",
+		"Model": "Schwerer Gustav",
+		"UIName": "Schwerer Gustav FrankenMech",
+		"Id": "Gear_Quirk_FrankenMech_SchwererGustav",
+		"Name": "Schwerer Gustav FrankenMech",
+		"Details": "This piece of gear represents Schwerer Gustav's inherent FrankenMech quirk. Because of the Schwerer Gustav's intended use as a command unit for the Tooth of Ymir, it was constructed with extra powerful electronics, permitting it to act before opponents would expect it to. This grants it an effective initiative boost, as if it had the Command Mech quirk.",
+		"Icon": "caduceus"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": -1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": true,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "CommandInitative",
+				"Name": "Quirk",
+				"Details": "Provides + 1 Initiative.",
+				"Icon": "uixSvgIcon_equipment_Cockpit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "BaseInitiative",
+				"operation": "Int_Add",
+				"modValue": "-1",
+				"modType": "System.Int32",
+				"additionalRules": "NotSet",
+				"targetCollection": "NotSet",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"BLACKLISTED",
+			"component_type_stock",
+			"lv-shares-sensors"
+		],
+		"tagSetSourceFile": ""
+	}
+}

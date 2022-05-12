@@ -1,0 +1,217 @@
+{
+    "Description" : {
+        "Id" : "bd_event_TheIronPrice",
+        "Name" : "The Iron Price",
+		"Details" : "While visiting [[TGT_SYSTEM,{TGT_SYSTEM.Name}]], Darius flags you down on the bridge one morning. \"Commander, we've been contacted by the local authorities. It seems that the [[DM.BaseDescriptionDefs[LoreBlackWarriors],Black Warriors]] want to ring us up about something. I've got their local representative on the horn now.\"\r\n\r\nA moment later, a grizzled looking MechWarrior flashes on the screen. \"Commander, you've been a friend to the Circinus Federation and we'd like to recognize that fact. We've got a one-time offer for you: a special FrankenMech that's served with the Black Warriors for awhile now and whose pilot was killed in a recent... training exercise, let's call it. If you want it and you've got the funds to cover the shipping and fees, it's yours. What say you?\"",
+        "Icon" : "uixTxrSpot_IllicitDealings.png"
+    },
+    "Scope" : "MechWarrior",
+    "Weight" : 200,
+    "Requirements" : {
+            "Scope" : "Company",
+            "RequirementTags" : {
+                "tagSetSourceFile" : "",
+                "items" : []
+            },
+            "ExclusionTags" : {
+                "tagSetSourceFile" : "",
+                "items" : []
+            },
+            "RequirementComparisons" : [
+                {
+					"obj" : "Reputation.Circinus",
+					"op" : "GreaterThanOrEqual",
+					"val" : 40,
+					"valueConstant" : "[rep_friendly_min]"
+				},
+				{
+                    "obj" : "Funds",
+                    "op" : "GreaterThan",
+                    "val" : "7000000",
+                    "valueConstant" : "7000000"
+                },
+                {
+                    "obj" : "Travel",
+                    "op" : "Equal",
+                    "val" : 0,
+                    "valueConstant" : "0"
+                }
+            ]
+        },
+    "AdditionalRequirements" : [
+        {
+            "Scope" : "StarSystem",
+            "RequirementTags" : {
+                "items" : [
+                    "planet_faction_circinus"
+                ],
+                "tagSetSourceFile" : "Tags/PlanetTags"
+            },
+            "ExclusionTags" : {
+                "items" : [
+                    "planet_event_pox",
+                    "planet_other_plague",
+                    "planet_pop_none"
+                ],
+                "tagSetSourceFile" : "Tags/PlanetTags"
+            },
+            "RequirementComparisons" : []
+        }
+    ],
+    "AdditionalObjects" : [],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Accept their generous offer.",
+                "Details" : "[\u00A27,000,000]",
+                "Icon" : null
+            },
+            "RequirementList" : [
+                {
+                    "Scope" : "Company",
+                    "RequirementTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "ExclusionTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "RequirementComparisons" : [
+                        {
+                            "obj" : "Funds",
+                            "op" : "GreaterThanOrEqual",
+                            "val" : 7000000,
+                            "valueConstant" : "7000000"
+                        }
+                    ]
+                }
+            ],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Gain the mech.",
+                        "Details" : "It doesn't even take a second to consider the offer. \"It's a done deal, we'll take it. Darius, arrange it and let Yang know it's coming.\"\r\n\r\n\"You've made the right choice, Commander.\" The Black Warriors representative nods and ends the call. A few hours later Darius comms you.\r\n\r\n\"I've arranged the purchase, Commander. The Black Warriors rep was quite colorful about the mech's service history, apparently it's called the Crabrauder, or something equally strange sounding. Anyhow, it'll be here in a few days after the paperwork clears, a suspicious amount of paperwork, given where we are, but it can't be helped I guess.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"tagSetSourceFile": "",
+								"items": [
+									"bd_event_TheIronPrice_mech"
+								]
+							},
+							"RemovedTags": {},
+							"Stats": [
+								{
+                                    "typeString" : "System.Int32",
+                                    "name" : "Funds",
+                                    "value" : "-7000000",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+							],
+							"Actions": [],
+							"ForceEvents": [
+								{
+									"Scope": "Company",
+									"EventID": "forcedevent_TheIronPrice_mech",
+									"MinDaysWait": 2,
+									"MaxDaysWait": 4,
+									"Probability": 100
+								}
+							],
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "Thanks but no thanks.",
+                "Details" : "refuse MW",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "Do not gain the mech.",
+                        "Details" : "You shake your head. \"No, I think we'll pass. Pass my thanks to your commanding officer for the offer, but we're good without such a colorful mech.\"\r\n\r\nThe representative shakes his head disappointedly. \"Your choice, Commander, but it's the wrong one. We'll remember this next time we need a favor.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": [],
+								"tagSetSourceFile": ""
+							},
+							"Stats": [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.Circinus",
+                                    "value" : "-8",
+                                    "set" : false,
+                                    "valueConstant" : "[rep_loss_large]"
+                                }
+                            ],
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}

@@ -1,0 +1,109 @@
+{
+    "Description" : {
+        "Id" : "forcedevent_TheIronPrice_mech",
+        "Name" : "The Iron Price Delivery",
+        "Details" : "The afternoon goes on like usual, right up until you're in your quarters relaxing a little, when Darius comms you about a 'Mech delivery. \"Commander, that 'Mech we bought from the [[DM.BaseDescriptionDefs[LoreBlackWarriors],Black Warriors]] has arrived. You may want to take a look at it, it's quite a doozy.\"",
+        "Icon" : "uixTxrSpot_HM_YangLootImage"
+    },
+    "Scope" : "MechWarrior",
+    "Weight" : 1000,
+    "Requirements" : {
+        "Scope" : "Company",
+            "RequirementTags" : {
+                "tagSetSourceFile" : "",
+                "items" : [
+					"bd_event_TheIronPrice_mech"
+				]
+            },
+            "ExclusionTags" : {
+                "tagSetSourceFile" : "",
+                "items" : []
+            },
+        "RequirementComparisons" : []
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "The mech arrives.",
+                "Details" : "mech arrives",
+                "Icon" : null
+            },
+            "RequirementList" : [
+                {
+                    "Scope" : "Company",
+                    "RequirementTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "ExclusionTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "RequirementComparisons" : []
+                }
+            ],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Gain the mech.",
+                        "Details" : "As you approach the MechBay, you can hear the excitement and befuddlement of the techs in their raised voices down the hallway. When you step into the MechBay and behold the FrankenMech in all its \"glory\" Yang catches your eye and dashes to you. \"Commander, what on earth <i>is</i> this thing and who did you get it from?\"\r\n\r\n\"Pirates, Yang, we got it from pirates.\" Yang chuckles. \"Yeah that tracks based on what I've seen of it so far. Anyway, thanks for the 'Mech, Commander, she's made my day for sure!\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+									"bd_event_TheIronPrice_mech"
+								]
+                            },
+                            "Stats" : [],
+                            "Actions" : [
+                                {
+                                    "Type" : "System_ShowRewards",
+                                    "value" : "itemCollection_loot_eventTheIronPrice",
+                                    "valueConstant" : null,
+                                    "additionalValues" : null
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}

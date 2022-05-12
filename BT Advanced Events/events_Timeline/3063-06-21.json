@@ -1,0 +1,141 @@
+{
+	"Description": {
+		"Id": "3063-06-21",
+		"Name": "MercNews Broadcast",
+		"Details": "TENSIONS IN THE [[DM.BaseDescriptionDefs[LoreChaosMarch],CHAOS MARCH]] - SPOTLIGHT CARVER V!\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],OUTREACH]]: New tensions in the [[DM.BaseDescriptionDefs[LoreChaosMarch],Chaos March]] threaten to again spark fighting between former comrades. On [[DM.BaseDescriptionDefs[LoreCarverV],Carver V]], pro-[[DM.BaseDescriptionDefs[LoreKatherineSteiner],Katrina]] and pro-[[DM.BaseDescriptionDefs[LoreVictorSD],Victor]] officers have carefully separated their commands into [[DM.BaseDescriptionDefs[LoreLyranAlliance],Lyran]] and [[DM.BaseDescriptionDefs[LoreHouseDavion],Federated Suns]] military containment zones.\r\n\n\nWould you like to know more?",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Yes.",
+				"Details": "Broadcast continues.",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "TENSIONS IN THE [[DM.BaseDescriptionDefs[LoreChaosMarch],CHAOS MARCH]] - SPOTLIGHT CARVER V!\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],OUTREACH]]: Meanwhile, In a series of daring raids, a bandit army consisting of tanks and light BattleMechs seized several Steiner outposts across the planet, stealing supplies and capturing several weapon facilities. While Archon [[DM.BaseDescriptionDefs[LoreKatherineSteiner],Katrina Steiner]] has rejected sending additional Lyran Alliance forces, she has instead put calls out for mercenaries to assist Steiner forces on the planet.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+"WIIC_give_starsystemdef_Carver(Liberty3063+)_to_Steiner",
+"WIIC_Liao_attacks_starsystemdef_Carver(Liberty3063+)",
+"WIIC_set_starsystemdef_Carver(Liberty3063+)_defender_strength_12",
+"WIIC_set_starsystemdef_Carver(Liberty3063+))_attacker_strength_8"
+							],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		},
+		{
+			"Description": {
+				"Id": "end",
+				"Name": "No.",
+				"Details": "Broadcast ends.",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "end1",
+						"Name": "MercNews Broadcast",
+						"Details": "Transmission terminated.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+						"WIIC_give_starsystemdef_Carver(Liberty3063+)_to_Steiner",
+						"WIIC_Liao_attacks_starsystemdef_Carver(Liberty3063+)",
+						"WIIC_set_starsystemdef_Carver(Liberty3063+)_defender_strength_12",
+						"WIIC_set_starsystemdef_Carver(Liberty3063+))_attacker_strength_8"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

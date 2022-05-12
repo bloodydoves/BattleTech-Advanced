@@ -1,0 +1,256 @@
+{
+    "Description" : {
+        "Id" : "bd_event_mw_theComfortingThunder",
+        "Name" : "Comforting Thunder of the Big Guns",
+        "Details" : "While planetside on [[TGT_SYSTEM,{TGT_SYSTEM.Name}]], [[TGT_MW,{TGT_MW.Callsign}]] catches you and Darius with a proposition. \"Commander, I just heard from my old merc unit, the [[DM.BaseDescriptionDefs[LoreToothofYmir],Tooth of Ymir]]. Apparently, they've got a unique, one-of-a-kind, 'Mech available for sale and have been reaching out to old members about picking it up. Sounds like she's a real beauty. Problem is, she's a little expensive, a cool ten million c-bills. Whadda ya think?.\"\r\n\r\nDarius arches an eyebrow. \"What makes this 'Mech special, {TGT_MW.Callsign}?\"\r\n\r\n{TGT_MW.Callsign} grins. \"It's a one of a kind custom FrankenMech that the Tooth's chief tech put together, can't get it anywhere else. Imagine what Yang will say when he sees it! It's called the <i>Schwerer Gustav</i>.\"\r\n\r\nDarius frowns. \"You're not considering buying a ramshackle FrankenMech are you, Commander? It's probably a maintenance nightmare.\"",
+        "Icon" : "uixTxrSpot_IllicitDealings.png"
+    },
+    "Scope" : "MechWarrior",
+    "Weight" : 200,
+    "Requirements" : {
+        "Scope" : "MechWarrior",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "",
+            "items" : [
+                "pilot_tech"
+            ]
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : [
+                "pilot_rebellious",
+                "pilot_dishonest"
+            ]
+        },
+        "RequirementComparisons" : []
+    },
+    "AdditionalRequirements" : [
+        {
+            "Scope" : "Company",
+            "RequirementTags" : {
+                "tagSetSourceFile" : "",
+                "items" : []
+            },
+            "ExclusionTags" : {
+                "tagSetSourceFile" : "",
+                "items" : []
+            },
+            "RequirementComparisons" : [
+                {
+                    "obj" : "Funds",
+                    "op" : "GreaterThan",
+                    "val" : 10000000,
+                    "valueConstant" : "10000000"
+                },
+                {
+                    "obj" : "Travel",
+                    "op" : "Equal",
+                    "val" : 0,
+                    "valueConstant" : "0"
+                }
+            ]
+        },
+        {
+            "Scope" : "StarSystem",
+            "RequirementTags" : {
+                "tagSetSourceFile" : "Tags/PlanetTags",
+                "items" : []
+            },
+            "ExclusionTags" : {
+                "tagSetSourceFile" : "Tags/PlanetTags",
+                "items" : [
+                    "planet_pop_none"
+                ]
+            },
+            "RequirementComparisons" : []
+        }
+    ],
+    "AdditionalObjects" : [],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Grant {TGT_MW.Callsign} the funds and the authority to purchase the mech.",
+                "Details" : "[\u00A210,000,000]",
+                "Icon" : null
+            },
+            "RequirementList" : [
+                {
+                    "Scope" : "Company",
+                    "RequirementTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "ExclusionTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "RequirementComparisons" : [
+                        {
+                            "obj" : "Funds",
+                            "op" : "GreaterThanOrEqual",
+                            "val" : 10000000,
+                            "valueConstant" : "10000000"
+                        }
+                    ]
+                }
+            ],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Gain the mech.",
+                        "Details" : "You rub your chin for a moment before speaking. \"This is pretty unusual, [[TGT_MW,{TGT_MW.Callsign}]], but I like the sound of a unique 'Mech. You'll get the funds to buy it, and be sure to let your old command know that we're grateful for the offer.\"\r\n\r\n\"Aye, aye, Commander. I'll get right on it!\" Darius rolls his eyes as {TGT_MW.Callsign} departs with a smile.\r\n\r\nHours later, as you're inspecting the Leopard, a 'Mech Carrier rumbles up to the landing pad. Darius patches in the ship's hail. \"Special delivery, Commander!\" {TGT_MW.Callsign}'s voice crackles over the comms. \"Apparently, we caught them at the right time, they had the 'Mech right here for immediate delivery!\"\r\n\r\n\"Someone let Yang know to prepare for his new toy, I'm sure he'll want to crawl over it.\" You signal to open up the Leopard's bay doors. The 'Mech Carrier stops nearby, revealing the gleaming 'Mech inside.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "MechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : [
+                                    "pilot_morale_high"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 30
+                        },
+                        {
+                            "Scope" : "MechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "pilot_morale_low"
+                                ]
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        },
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Funds",
+                                    "value" : "-10000000",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : [
+                                {
+                                    "Type" : "System_ShowRewards",
+                                    "value" : "itemCollection_loot_eventComfortingThunder",
+                                    "valueConstant" : null,
+                                    "additionalValues" : null
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "Order {TGT_MW.Callsign} to pass on the offer.",
+                "Details" : "refuse MW",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "MW gains low morale.",
+                        "Details" : "You give a dismissive shake of the head. \"Darius has got a point. It's a nice offer, {TGT_MW.Callsign}, but that price tag is too high for an unknown like this.\"\r\n\r\n{TGT_MW.Callsign} releases a long sigh. \"I was afraid you might say something <i>reasonable</i> like that.\"\r\n\r\n\"Pass on our thanks for the offer to the Tooth of Ymir but let them know we'll pass on this one.\"\r\n\r\n{TGT_MW.Callsign} nods sadly. \"Sure thing, Commander.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "MechWarrior",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "Tags/PilotTags",
+                                "items" : [
+                                    "pilot_morale_low"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : null,
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 30
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}

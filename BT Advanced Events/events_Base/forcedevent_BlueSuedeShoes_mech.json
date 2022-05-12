@@ -1,0 +1,109 @@
+{
+    "Description" : {
+        "Id" : "forcedevent_BlueSuedeShoes_mech",
+        "Name" : "Blue Suede Shoes Delivery",
+        "Details" : "The morning comes and goes like usual, right up until lunch, when Darius comms you about a 'Mech delivery. \"Commander, that 'Mech we bought from [[DM.BaseDescriptionDefs[LoreSnordsIrregulars],Snord's Irregulars]] has arrived. You might want to go take a look down in the MechBay, Yang is apparently bouncing off the walls over it.\"",
+        "Icon" : "uixTxrSpot_HM_YangLootImage"
+    },
+    "Scope" : "MechWarrior",
+    "Weight" : 1000,
+    "Requirements" : {
+        "Scope" : "Company",
+            "RequirementTags" : {
+                "tagSetSourceFile" : "",
+                "items" : [
+					"bd_event_BlueSuedeShoes_mech"
+				]
+            },
+            "ExclusionTags" : {
+                "tagSetSourceFile" : "",
+                "items" : []
+            },
+        "RequirementComparisons" : []
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "The mech arrives.",
+                "Details" : "mech arrives",
+                "Icon" : null
+            },
+            "RequirementList" : [
+                {
+                    "Scope" : "Company",
+                    "RequirementTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "ExclusionTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "RequirementComparisons" : []
+                }
+            ],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Gain the mech.",
+                        "Details" : "As you approach the MechBay, you can hear Yang excitedly nattering to his techs. When you step into the MechBay and behold the FrankenMech in all its \"glory\" Yang catches your eye and rushes over. \"Commander, I don't know what this cost us and I don't care, you've made my month with this thing! I can't wait to see her put through her paces! That Sneede knew what he was doing, wish I could have met him and swapped notes!\"\r\n\r\nAfter another look at the so-called Rifleman, you're not sure you see what Yang does but at least he's happy. A happy Yang means quick refits and few problems.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+									"bd_event_BlueSuedeShoes_mech"
+								]
+                            },
+                            "Stats" : [],
+                            "Actions" : [
+                                {
+                                    "Type" : "System_ShowRewards",
+                                    "value" : "itemCollection_loot_eventBlueSuedeShoes",
+                                    "valueConstant" : null,
+                                    "additionalValues" : null
+                                }
+                            ],
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}

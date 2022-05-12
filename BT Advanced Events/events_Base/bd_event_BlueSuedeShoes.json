@@ -1,0 +1,199 @@
+{
+    "Description" : {
+        "Id" : "bd_event_BlueSuedeShoes",
+        "Name" : "Blue Suede Shoes",
+		"Details" : "While orbiting [[TGT_SYSTEM,{TGT_SYSTEM.Name}]], Darius calls you to the bridge unexpectedly. \"Commander, I've gotten wind of a rumor on the mercenary markets. It seems that the [[DM.BaseDescriptionDefs[LoreSnordsIrregulars],Snord's Irregulars]] are selling off some material after their clash with Victor-aligned forces on Odessa. Included in the lot of material they're selling is a one-off FrankenMech made by one of their MechTechs, Shorty Sneede. Seems that Sneede met his end on Odessa and the unit is selling his 'Mech. I guess it used to be a Rifleman but is heavily modified now. I've got a contact with the Irregulars and could reach out if we're interested in buying the 'Mech? It's a little expensive and I have no idea what precisely we'll be getting but having a 'Mech from the very famous Irregulars has gotta look good to employers.\"",
+        "Icon" : "uixTxrSpot_IllicitDealings.png"
+    },
+    "Scope" : "MechWarrior",
+    "Weight" : 200,
+    "Requirements" : {
+            "Scope" : "Company",
+            "RequirementTags" : {
+                "tagSetSourceFile" : "",
+                "items" : []
+            },
+            "ExclusionTags" : {
+                "tagSetSourceFile" : "",
+                "items" : []
+            },
+            "RequirementComparisons" : [
+                {
+                    "obj" : "Funds",
+                    "op" : "GreaterThan",
+                    "val" : 8000000,
+                    "valueConstant" : "8000000"
+                },
+                {
+                    "obj" : "Travel",
+                    "op" : "Equal",
+                    "val" : 0,
+                    "valueConstant" : "0"
+                }
+            ]
+        },
+    "AdditionalRequirements" : [
+        {
+            "Scope" : "StarSystem",
+            "RequirementTags" : {
+                "tagSetSourceFile" : "Tags/PlanetTags",
+                "items" : []
+            },
+            "ExclusionTags" : {
+                "tagSetSourceFile" : "Tags/PlanetTags",
+                "items" : [
+                    "planet_pop_none"
+                ]
+            },
+            "RequirementComparisons" : []
+        }
+    ],
+    "AdditionalObjects" : [],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Have Darius arrange the purchase.",
+                "Details" : "[\u00A28,000,000]",
+                "Icon" : null
+            },
+            "RequirementList" : [
+                {
+                    "Scope" : "Company",
+                    "RequirementTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "ExclusionTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "RequirementComparisons" : [
+                        {
+                            "obj" : "Funds",
+                            "op" : "GreaterThanOrEqual",
+                            "val" : 8000000,
+                            "valueConstant" : "8000000"
+                        }
+                    ]
+                }
+            ],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Gain the mech.",
+                        "Details" : "You stroke your chin for a moment before speaking. \"This is a weird one, Darius, but I like the sound of a unique 'Mech. Arrange it and let Yang know it's coming.\"\r\n\r\n\"Aye, aye, Commander.\" A few hours later Darius comms you again.\r\n\r\n\"I've arranged the purchase, Commander, and the Irregulars will drop the mech off with us in a few days. Yang's already buzzing about it.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"tagSetSourceFile": "",
+								"items": [
+									"bd_event_BlueSuedeShoes_mech"
+								]
+							},
+							"RemovedTags": {},
+							"Stats": [
+								{
+                                    "typeString" : "System.Int32",
+                                    "name" : "Funds",
+                                    "value" : "-8000000",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+							],
+							"Actions": [],
+							"ForceEvents": [
+								{
+									"Scope": "Company",
+									"EventID": "forcedevent_BlueSuedeShoes_mech",
+									"MinDaysWait": 2,
+									"MaxDaysWait": 4,
+									"Probability": 100
+								}
+							],
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "Tell Darius to forget about it.",
+                "Details" : "refuse MW",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "Do not gain the mech.",
+                        "Details" : "You shake your head. \"No, I think we'll pass. Getting a random unknown element like this, at the price-tag they're asking? Not interested.\"\r\n\r\nDarius nods and deletes his prepped message. \"No problem, Commander.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": [],
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}

@@ -1,0 +1,141 @@
+{
+	"Description": {
+		"Id": "3063-10-21",
+		"Name": "MercNews Broadcast",
+		"Details": "IAN DRESARI RETURNS TO KENTARES!\r\n\n\nKentares IV, [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:  Months of scattered reports of resistance have coalesced into open rebellion against pro-[[DM.BaseDescriptionDefs[LoreKatherineSteiner],Katrina]] Duke William.  Duke William's cousin and supporter of Prince [[DM.BaseDescriptionDefs[LoreVictorSD],Victor Steiner-Davion]], Ian Dresari, has announced his return to the planet and begun a campaign to unseat William. With Ian's force of ex-AFFC officers and [[DM.BaseDescriptionDefs[LoreChaosMarch], Chaos March]] mercenaries preparing to take on the Clovis DMM and the 5th Donegal Guards, both sides are calling for additional mercenary support.\r\n\n\nWould you like to know more?",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Yes.",
+				"Details": "Broadcast continues.",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "ORDER RESTORED ON MERCENARY'S STAR\r\n\n\nGALATEA, [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:\r\n\n\n After nearly fourteen months of what was described as a BattlemMech-scale ballroom brawl,  Duke David Nowakowski has successfully employed [[DM.BaseDescriptionDefs[LoreGroupW],Group W]] in subduing the warrior bands of marauding mechs that had carved Galatea into warring ganglands.\r\n\n\nGroup W, fresh from the contracts in the St. Ives and [[DM.BaseDescriptionDefs[LoreLyonsThumb],Lyons Thumb]] conflicts, plunged into restoring order with, as some sources state, a thoroughness and enthusiasm that bordered on brutality. In the wake of Group W's success, Duke Nowakowski subsequently used his role to subcontract several local mercenary commands to form a planetary police force to maintain the newly restored peace.  The presence of these troops is providing enough stability for the [[DM.BaseDescriptionDefs[LoreMRBC],MRBC]] to finalize it's own interrupted plans for the new satellite offices in Galatean City.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_give_starsystemdef_Kentares_to_Steiner",
+									"WIIC_Davion_attacks_starsystemdef_Kentares",
+									"WIIC_set_starsystemdef_Kentares_defender_strength_30",
+									"WIIC_set_starsystemdef_Kentares_attacker_strength_20"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		},
+		{
+			"Description": {
+				"Id": "end",
+				"Name": "No.",
+				"Details": "Broadcast ends.",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "end1",
+						"Name": "MercNews Broadcast",
+						"Details": "Transmission terminated.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_give_starsystemdef_Kentares_to_Steiner",
+									"WIIC_Davion_attacks_starsystemdef_Kentares",
+									"WIIC_set_starsystemdef_Kentares_defender_strength_30",
+									"WIIC_set_starsystemdef_Kentares_attacker_strength_20"
+									],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

@@ -43,6 +43,62 @@
 			]
 		},
 		{
+			"ID": "diff_SAD_initial",
+			"Name": "Initial Enemy Scaling",
+			"TelemetryEventName": "",
+			"UIOrder": 0,
+			"Tooltip": "The initial strength of enemy units, affecting their accuracy, damage taken and defenses",
+			"Enabled": true,
+			"Visible": true,
+			"Toggle": false,
+			"StartOnly": true,
+			"DefaultIndex": 1,
+			"Options": [
+				{
+					"ID": "diff_SAD_initial_easy",
+					"Name": "Easy",
+					"TelemetryEventDesc": "",
+					"DifficultyValue": 0,
+					"CareerScoreModifier": -0.2,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "Story",
+							"ConstantName": "ArgoMedTechs",
+							"ConstantValue": "-5"
+						}
+					]
+				},
+				{
+					"ID": "diff_SAD_initial_normal",
+					"Name": "Normal",
+					"TelemetryEventDesc": "",
+					"DifficultyValue": 0,
+					"CareerScoreModifier": 0,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "Story",
+							"ConstantName": "ArgoMedTechs",
+							"ConstantValue": "0"
+						}
+					]
+				},
+				{
+					"ID": "diff_SAD_initial_hard",
+					"Name": "Hard",
+					"TelemetryEventDesc": "",
+					"DifficultyValue": 0,
+					"CareerScoreModifier": 0.2,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "Story",
+							"ConstantName": "ArgoMedTechs",
+							"ConstantValue": "5"
+						}
+					]
+				}
+			]
+		},
+		{
 			"ID": "diff_FriendlyFire",
 			"Name": "Friendly Fire",
 			"TelemetryEventName": "",
@@ -647,7 +703,7 @@
 		{
 			"ID": "diff_advancedPilots",
 			"Name": "Advanced MechWarriors",
-			"TelemetryEventDesc": "advanced_mech_warriors",
+			"TelemetryEventName": "advanced_mech_warriors",
 			"UIOrder": 6,
 			"Tooltip": "In the later parts of the game, new MechWarriors in the Hiring Hall will often have better stats and skills than in the early parts of the game. Modify this setting to change the frequency of new MechWarriors having these improvements.",
 			"Enabled": true,
@@ -1743,6 +1799,76 @@
 							"ConstantType": "CareerMode",
 							"ConstantName": "ArgoMaintenanceMultiplier",
 							"ConstantValue": "0.5"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "diff_SAD",
+			"Name": "Enemy Scaling",
+			"TelemetryEventName": "",
+			"UIOrder": 19,
+			"Tooltip": "How quickly enemies' stats to match your skill level, growing harder or easier based on your success or failure.",
+			"Enabled": true,
+			"Visible": true,
+			"Toggle": false,
+			"StartOnly": false,
+			"DefaultIndex": 1,
+			"Options": [
+				{
+					"ID": "diff_SAD_None",
+					"Name": "Disabled",
+					"TelemetryEventDesc": "",
+					"DifficultyValue": 0,
+					"CareerScoreModifier": -0.2,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "Story",
+							"ConstantName": "ArgoMechTechs",
+							"ConstantValue": "0"
+						}
+					]
+				},
+				{
+					"ID": "diff_SAD_Normal",
+					"Name": "Normal",
+					"TelemetryEventDesc": "",
+					"DifficultyValue": 0,
+					"CareerScoreModifier": -0.1,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "Story",
+							"ConstantName": "ArgoMechTechs",
+							"ConstantValue": "100"
+						}
+					]
+				},
+				{
+					"ID": "diff_SAD_Fast",
+					"Name": "Fast",
+					"TelemetryEventDesc": "",
+					"DifficultyValue": 0,
+					"CareerScoreModifier": 0,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "Story",
+							"ConstantName": "ArgoMechTechs",
+							"ConstantValue": "200"
+						}
+					]
+				},
+				{
+					"ID": "diff_SAD_Faster",
+					"Name": "Faster",
+					"TelemetryEventDesc": "",
+					"DifficultyValue": 0,
+					"CareerScoreModifier": 0.1,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "Story",
+							"ConstantName": "ArgoMechTechs",
+							"ConstantValue": "300"
 						}
 					]
 				}
