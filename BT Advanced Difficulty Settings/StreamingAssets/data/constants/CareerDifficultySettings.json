@@ -1809,12 +1809,12 @@
 			"Name": "Enemy Scaling",
 			"TelemetryEventName": "",
 			"UIOrder": 19,
-			"Tooltip": "How quickly enemies' stats to match your skill level, growing harder or easier based on your success or failure.",
+			"Tooltip": "How much enemies' stats change to match your skill level, growing harder or easier based on your success or failure.",
 			"Enabled": true,
 			"Visible": true,
 			"Toggle": false,
 			"StartOnly": false,
-			"DefaultIndex": 1,
+			"DefaultIndex": 2,
 			"Options": [
 				{
 					"ID": "diff_SAD_None",
@@ -1831,11 +1831,25 @@
 					]
 				},
 				{
+					"ID": "diff_SAD_Slow",
+					"Name": "Faster",
+					"TelemetryEventDesc": "",
+					"DifficultyValue": 0,
+					"CareerScoreModifier": -0.1,
+					"DifficultyConstants": [
+						{
+							"ConstantType": "Story",
+							"ConstantName": "ArgoMechTechs",
+							"ConstantValue": "50"
+						}
+					]
+				},
+				{
 					"ID": "diff_SAD_Normal",
 					"Name": "Normal",
 					"TelemetryEventDesc": "",
 					"DifficultyValue": 0,
-					"CareerScoreModifier": -0.1,
+					"CareerScoreModifier": 0,
 					"DifficultyConstants": [
 						{
 							"ConstantType": "Story",
@@ -1849,26 +1863,12 @@
 					"Name": "Fast",
 					"TelemetryEventDesc": "",
 					"DifficultyValue": 0,
-					"CareerScoreModifier": 0,
-					"DifficultyConstants": [
-						{
-							"ConstantType": "Story",
-							"ConstantName": "ArgoMechTechs",
-							"ConstantValue": "200"
-						}
-					]
-				},
-				{
-					"ID": "diff_SAD_Faster",
-					"Name": "Faster",
-					"TelemetryEventDesc": "",
-					"DifficultyValue": 0,
 					"CareerScoreModifier": 0.1,
 					"DifficultyConstants": [
 						{
 							"ConstantType": "Story",
 							"ConstantName": "ArgoMechTechs",
-							"ConstantValue": "300"
+							"ConstantValue": "150"
 						}
 					]
 				}
