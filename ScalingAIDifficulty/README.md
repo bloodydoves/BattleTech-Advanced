@@ -27,14 +27,14 @@ For example, if a player wins, has an injury and loses a unit, SAD will search t
 ### Difficulty Settings
 `ArgoMechTechs` and `ArgoMedTechs` are vanilla simgameconstants which, in the base game, have no meaning. They are repurposed by SAD. When a player begins their career, their `SAD_points` are set to equal `ArgoMedTechs`. This lets mod authors create a difficulty setting that controls the initial value.
 
-Changes to a player's SAD_points are multiplied by `ArgoMechTechs / 100`. For example, if the value is 50, then a player's SAD_points will rise or fall half as quickly. A value of 0 (which all saves have unless it's changed) means that SAD will have no effect (because the player's SAD_points will never change). **You must use a Difficulty Setting (or other method) to set `ArgoMechTechs` and/or `ArgoMedTechs` to a non-0 value if you want SAD to have any effect at all.**
+The effects of a player's SAD_points are multiplied by `ArgoMechTechs / 100`. For example, if the value is 50, then a player's SAD_points will only have half their usual effect. A value of 0 (which all saves have unless it's changed) means that SAD will have no effect (because the player's SAD_points have 0 effect). **You must use a Difficulty Setting (or other method) to set `ArgoMechTechs` and/or `ArgoMedTechs` to a non-0 value if you want SAD to have any effect at all.**
 
 See the examples in src/data/CareerDifficultySettings.json.
 
 ### Effects
 Whenever an enemy unit spawns (be it start of mission, reenforcements, or any other time), SAD applies each entry in `EnemyEffectsPerPoint` effect to it. Similarly, `SelfEffectsPerPoint` is applied to the player's units.
 
-The effects in each of these are applied once for each of the player's SAD_points. For example, if `EnemyEffectsPerPoint` is
+The effects in each of these are applied once for each of the player's SAD_points, multiplied by `ArgoMechTechs / 100`. For example, if `EnemyEffectsPerPoint` is
 ```
 [
   {
@@ -50,10 +50,10 @@ The effects in each of these are applied once for each of the player's SAD_point
 ]
 ```
 
-and the player has 3 SAD_points, all enemy units will get (0.99 * 0.99 * 0.99) = ~3% damage reduction and (0.1 + 0.1 + 0.1) = 0.3 difficulty to hit. Though they may look similar, these are not statistic effects - you cannot set targeting data, duration, description, etc, and the `modValue` is a number and not a string. The only valid `operation`s are `Float_Add` (you can use negative numbers, though) and `Float_Multiply`.
+and the player has 3 SAD_points and `ArgoMechTechs` 150, all enemy units will get (0.99 * 0.99 * 0.99)^1.5 = ~4.5% damage reduction and (0.1 + 0.1 + 0.1) * 1.5 = 0.45 difficulty to hit. Though they may look similar, these are not statistic effects - you cannot set targeting data, duration, description, etc, and the `modValue` is a number and not a string. The only valid `operation`s are `Float_Add` (you can use negative numbers, though) and `Float_Multiply`.
 
 ## Contract-Specific Settings
 
 Contracts listed in `IgnoreContracts` are ignored. No effects are applied during the contract, and the results do not modify the player's SAD_points.
 
-Contracts in `ContractDifficulty` have the listed value added to the player's own SAD_points to determine what effects to apply. For example, if the player has 3.5 points, and the contract is listed as -10, then the final value for this contract will be -6.5.
+Contracts in `ContractDifficulty` have the listed value added to the player's own SAD_points to determine what effects to apply *after* `ArgoMechTechs` is taken into account. For example, if the player has 3.5 points, `ArgoMechTechs` of 50, and the contract is listed as -10, then the final value for this contract will be (3.5 * 50 / 100) - 10 = -8.25.
