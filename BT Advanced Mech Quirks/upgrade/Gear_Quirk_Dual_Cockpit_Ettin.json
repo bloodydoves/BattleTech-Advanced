@@ -1,0 +1,290 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "Cockpit"
+			},
+			{
+				"CategoryID": "SensorsA"
+			},
+			{
+				"CategoryID": "LifeSupportA"
+			},
+			{
+				"CategoryID": "SensorsB"
+			},
+			{
+				"CategoryID": "LifeSupportB"
+			}
+		],
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "[[Chassis.Tonnage]]/10",
+				"CBillCost": "[[Chassis.Tonnage]] * 1.15"
+			}
+		},
+		"Flags": {
+			"flags": [
+				"no_salvage"
+			]
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"Sensors: +20%",
+				"Sight: +20%",
+				"Tacticon: +1",
+				"LanceIndirectAcc: +2",
+				"Health: +4",
+				"LanceResolve: +2",
+				"MechCowl: 45",
+				"NoBleedout",
+				"IsCockpit"
+			]
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 900000,
+		"Rarity": 5,
+		"Purchasable": false,
+		"Manufacturer": "FrankenMech",
+		"Model": "Ettin",
+		"UIName": "Dual Cockpit",
+		"Id": "Gear_Quirk_Dual_Cockpit_Ettin",
+		"Name": "Dual Cockpit",
+		"Details": "This is a unique Dual Cockpit design for the Ettin FrankenMech. Effectively, it consists of a second head location that contains a command and control officer who directs the company's operations in battle. The Dual Cockpit offers excellent protection to the MechWarrior (as the other officer takes damage first), increases armor on the head location, and provides a wide range of benefits for the entire force. However, the Dual Cockpit takes up the entire head location and cannot be removed.",
+		"Icon": "two-head"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 6,
+	"Tonnage": 3,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "AllLanceMates",
+				"showInTargetPreview": true,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Ettin_DualCockpit_Initiative",
+				"Name": "Dual Cockpit",
+				"Details": "Provides extensive benefits: 20% sensors/sight, +1 lance initiative, +2 lance indirect accuracy, and +2 lance resolve gain.",
+				"Icon": "two-head"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "BaseInitiative",
+				"operation": "Int_Add",
+				"modValue": "-1",
+				"modType": "System.Int32"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Ettin_DualCockpit_Health",
+				"Name": "MAX INJURIES INCREASED",
+				"Details": "Prevents Injuries against a MechWarrior.",
+				"Icon": "uixSvgIcon_equipment_Cockpit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "BonusHealth",
+				"operation": "Int_Add",
+				"modValue": "4",
+				"modType": "System.Int32",
+				"additionalRules": "NotSet",
+				"targetCollection": "Pilot",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "AllLanceMates",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Ettin_DualCockpit_Resolve",
+				"Name": "MORALE GENERATION INCREASED",
+				"Details": "Provides a bonus to actions that generate Morale.",
+				"Icon": "uixSvgIcon_equipment_Cockpit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "MoraleBonusGain",
+				"operation": "Int_Add",
+				"modValue": "2",
+				"modType": "System.Int32"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "AllLanceMates",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Ettin_DualCockpit_IndirectAccuracy",
+				"Name": "INDIRECT HIT CHANCE IMPROVED",
+				"Details": "Indirect fire penalties reduced by 2.",
+				"Icon": "uixSvgIcon_equipment_Cockpit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "ToHitIndirectModifier",
+				"operation": "Float_Add",
+				"modValue": "-2.0",
+				"modType": "System.Single",
+				"additionalRules": "NotSet"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Ettin_DualCockpit_Sensors",
+				"Name": "SLIC Black Ops",
+				"Details": "Increased Sight/Sensors/Health.",
+				"Icon": "uixSvgIcon_equipment_Cockpit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "SensorDistanceMultiplier",
+				"operation": "Float_Multiply",
+				"modValue": "1.2",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Ettin_DualCockpit_Sight",
+				"Name": "SPOTTING DISTANCE INCREASED",
+				"Details": "Increases spotting distance by 50m.",
+				"Icon": "uixSvgIcon_equipment_Cockpit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "SpotterDistanceMultiplier",
+				"operation": "Float_Multiply",
+				"modValue": "1.2",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Ettin_DualCockpit_NoBleed",
+				"Name": "No Bleedout",
+				"Details": "This unit cannot bleed out from injuries.",
+				"Icon": "layeredarmor"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "DisablesBleeding",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Status-ArmorCowlArmor-{location}",
+				"Name": "Armoured Cowl",
+				"Details": "Improved Head Armor",
+				"Icon": "uixSvgIcon_equipment_ActuatorArm"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "{location}.Armor",
+				"operation": "Float_Add",
+				"modValue": "45",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}
