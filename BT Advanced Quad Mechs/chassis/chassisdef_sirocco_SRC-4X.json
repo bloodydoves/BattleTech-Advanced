@@ -1,0 +1,341 @@
+{
+  "Custom": {
+    "AssemblyVariant": {
+      "PrefabID": "Sirocco",
+      "Exclude": false,
+      "Include": true
+    },
+    "ArmActuatorSupport": {
+      "LeftLimit": "Hand",
+      "RightLimit": "Hand",
+      "LeftDefaultShoulder": "Quad_Front_leg_hip",
+      "RightDefaultShoulder": "Quad_Front_leg_hip",
+      "LeftDefaultUpper": "Quad_Front_leg_upper",
+      "RightDefaultUpper": "Quad_Front_leg_upper",
+      "LeftDefaultLower": "Quad_Front_leg_lower",
+      "RightDefaultLower": "Quad_Front_leg_lower",
+      "LeftDefaultHand": "Quad_Front_leg_foot",
+      "RightDefaultHand": "Quad_Front_leg_foot"
+    },
+    "ChassisDefaults": [
+      {
+        "Location": "LeftLeg",
+        "CategoryID": "LegHip",
+        "DefID": "Quad_Hind_leg_hip",
+        "Type": "Upgrade"
+      },
+      {
+        "Location": "LeftLeg",
+        "CategoryID": "LegUpperActuator",
+        "DefID": "Quad_Hind_leg_upper",
+        "Type": "Upgrade"
+      },
+      {
+        "Location": "LeftLeg",
+        "CategoryID": "LegLowerActuator",
+        "DefID": "Quad_Hind_leg_lower",
+        "Type": "Upgrade"
+      },
+      {
+        "Location": "LeftLeg",
+        "CategoryID": "LegFootActuator",
+        "DefID": "Quad_Hind_leg_foot",
+        "Type": "Upgrade"
+      },
+      {
+        "Location": "RightLeg",
+        "CategoryID": "LegHip",
+        "DefID": "Quad_Hind_leg_hip",
+        "Type": "Upgrade"
+      },
+      {
+        "Location": "RightLeg",
+        "CategoryID": "LegUpperActuator",
+        "DefID": "Quad_Hind_leg_upper",
+        "Type": "Upgrade"
+      },
+      {
+        "Location": "RightLeg",
+        "CategoryID": "LegLowerActuator",
+        "DefID": "Quad_Hind_leg_lower",
+        "Type": "Upgrade"
+      },
+      {
+        "Location": "RightLeg",
+        "CategoryID": "LegFootActuator",
+        "DefID": "Quad_Hind_leg_foot",
+        "Type": "Upgrade"
+      }
+    ]
+  },
+  "CustomParts": {
+    "MeleeWeaponOverride": {
+      "DefaultWeapon": "Weapon_MeleeAttackEx"
+    },
+    "FiringArc": 360,
+    "Unaffected": {
+      "DesignMasks": "false",
+      "Pathing": "false",
+      "Fire": "false",
+      "Landmines": "false"
+    },
+    "ArmsCountedAsLegs": true,
+    "MoveCostModPerBiome": {
+      "DesignMaskBiomeMartianVacuum": 1.0,
+      "DesignMaskBiomeLunarVacuum": 1.0
+    }
+  },
+  "Description": {
+    "Cost": 9507224,
+    "Rarity": 3,
+    "Purchasable": true,
+    "Manufacturer": "",
+    "Model": "",
+    "UIName": "Sirocco",
+    "Id": "chassisdef_sirocco_SRC-4X",
+    "Name": "Sirocco",
+    "Details": "With the success of the Sirocco, Corean Enterprises found themselves in possession of an incredibly stable weapons platform, as the Sirocco had excellent stability and mobility for its size. With this in mind, an engineering team at Corean proposed using the Sirocco as a platform for their newly developed Scattershot Railgun, a gauss-based artillery piece to rival the Sniper or Long Tom artillery pieces. Thus was the SRC-4X created. Armed primarily with the gigantic railgun, the -4X uses a trio of Medium Lasers and a SRM-6 as backup weaponry while a TAG helps with accuracy. The -4X proved a successful testbed and went on to see limited deployment with the FWLM.",
+    "Icon": "uixTxrIcon_sirocco"
+  },
+  "MovementCapDefID": "movedef_warhammer_WHM-6R",
+  "PathingCapDefID": "pathingdef_heavy",
+  "HardpointDataDefID": "hardpointdatadef_cusirocco",
+  "PrefabIdentifier": "chrprfmech_cusiroccobase-001",
+  "PrefabBase": "cusirocco",
+  "Tonnage": 95,
+  "InitialTonnage": 9.5,
+  "weightClass": "ASSAULT",
+  "BattleValue": 6577000,
+  "Heatsinks": 0,
+  "TopSpeed": 120,
+  "TurnRadius": 90,
+  "MaxJumpjets": 30,
+  "Stability": 160,
+  "StabilityDefenses": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "SpotterDistanceMultiplier": 1,
+  "VisibilityMultiplier": 1,
+  "SensorRangeMultiplier": 1,
+  "Signature": 0,
+  "Radius": 8,
+  "PunchesWithLeftArm": false,
+  "MeleeDamage": 75,
+  "MeleeInstability": 35,
+  "MeleeToHitModifier": 0,
+  "DFADamage": 75,
+  "DFAToHitModifier": 0,
+  "DFASelfDamage": 75,
+  "DFAInstability": 35,
+  "Locations": [
+    {
+      "Location": "Head",
+      "Hardpoints": [
+        {
+          "WeaponMount": "AntiPersonnel",
+          "Omni": false
+        }
+      ],
+      "Tonnage": 0,
+      "InventorySlots": 6,
+      "MaxArmor": 45,
+      "MaxRearArmor": -1,
+      "InternalStructure": 16
+    },
+    {
+      "Location": "LeftArm",
+      "Hardpoints": [
+		{
+          "WeaponMount": "Energy",
+          "Omni": false
+        }
+	  ],
+      "Tonnage": 0,
+      "InventorySlots": 6,
+      "MaxArmor": 200,
+	  "MaxRearArmor": -1,
+	  "InternalStructure": 100
+    },
+    {
+      "Location": "LeftTorso",
+      "Hardpoints": [
+        {
+          "WeaponMount": "Ballistic",
+          "Omni": false
+        }
+      ],
+      "Tonnage": 0,
+      "InventorySlots": 13,
+      "MaxArmor": 300,
+      "MaxRearArmor": 100,
+      "InternalStructure": 100
+    },
+    {
+      "Location": "CenterTorso",
+      "Hardpoints": [
+		{
+          "WeaponMount": "Energy",
+          "Omni": false
+        }
+	  ],
+      "Tonnage": 0,
+      "InventorySlots": 16,
+      "MaxArmor": 300,
+	  "MaxRearArmor": 150,
+	  "InternalStructure": 150
+    },
+    {
+      "Location": "RightTorso",
+      "Hardpoints": [
+        {
+          "WeaponMount": "Energy",
+          "Omni": false
+        },
+        {
+          "WeaponMount": "Energy",
+          "Omni": false
+        },
+        {
+          "WeaponMount": "Missile",
+          "Omni": false
+        },
+        {
+          "WeaponMount": "Missile",
+          "Omni": false
+        }
+      ],
+      "Tonnage": 0,
+      "InventorySlots": 13,
+      "MaxArmor": 300,
+      "MaxRearArmor": 100,
+      "InternalStructure": 100
+    },
+    {
+      "Location": "RightArm",
+      "Hardpoints": [
+		{
+          "WeaponMount": "Energy",
+          "Omni": false
+        }
+	  ],
+      "Tonnage": 0,
+      "InventorySlots": 6,
+      "MaxArmor": 200,
+	  "MaxRearArmor": -1,
+	  "InternalStructure": 100
+    },
+    {
+      "Location": "LeftLeg",
+      "Hardpoints": [],
+      "Tonnage": 0,
+      "InventorySlots": 6,
+      "MaxArmor": 200,
+	  "MaxRearArmor": -1,
+	  "InternalStructure": 100
+    },
+    {
+      "Location": "RightLeg",
+      "Hardpoints": [],
+      "Tonnage": 0,
+      "InventorySlots": 6,
+      "MaxArmor": 200,
+	  "MaxRearArmor": -1,
+	  "InternalStructure": 100
+    }
+  ],
+  "LOSSourcePositions": [
+    {
+      "x": 0,
+      "y": 15,
+      "z": 1
+    },
+    {
+      "x": 4,
+      "y": 14,
+      "z": 0
+    },
+    {
+      "x": -4,
+      "y": 14,
+      "z": 0
+    }
+  ],
+  "LOSTargetPositions": [
+    {
+      "x": 0,
+      "y": 15,
+      "z": 1
+    },
+    {
+      "x": 4,
+      "y": 14,
+      "z": 0
+    },
+    {
+      "x": -4,
+      "y": 14,
+      "z": 0
+    },
+    {
+      "x": 2.5,
+      "y": 5,
+      "z": 1
+    },
+    {
+      "x": -2.5,
+      "y": 5,
+      "z": 1
+    }
+  ],
+  "VariantName": "SRC-4X",
+  "ChassisTags": {
+    "items": [
+      "QuadMech"
+    ],
+    "tagSetSourceFile": ""
+  },
+  "StockRole": "Quad Assault",
+  "YangsThoughts": "With the success of the Sirocco, Corean Enterprises found themselves in possession of an incredibly stable weapons platform, as the Sirocco had excellent stability and mobility for its size. With this in mind, an engineering team at Corean proposed using the Sirocco as a platform for their newly developed Scattershot Railgun, a gauss-based artillery piece to rival the Sniper or Long Tom artillery pieces. Thus was the SRC-4X created. Armed primarily with the gigantic railgun, the -4X uses a trio of Medium Lasers and a SRM-6 as backup weaponry while a TAG helps with accuracy. The -4X proved a successful testbed and went on to see limited deployment with the FWLM.",
+  "FixedEquipment": [
+    {
+      "MountedLocation": "CenterTorso",
+      "ComponentDefID": "Gear_Gyro_360Twist_Sirocco",
+      "SimGameUID": "",
+      "ComponentDefType": "Upgrade",
+      "HardpointSlot": -1,
+      "IsFixed": true,
+      "GUID": null,
+      "DamageLevel": "Functional",
+      "prefabName": "",
+      "hasPrefabName": false
+    },
+	{
+		"MountedLocation": "LeftTorso",
+		"ComponentDefID": "Weapon_Gauss_Scattershot_Railgun_0-STOCK",
+		"SimGameUID": "",
+		"ComponentDefType": "Weapon",
+		"HardpointSlot": 0,
+		"GUID": null,
+		"DamageLevel": "Functional",
+		"prefabName": null,
+		"hasPrefabName": false
+	},
+    {
+      "MountedLocation": "CenterTorso",
+      "ComponentDefID": "emod_structureslots_standard",
+      "SimGameUID": "",
+      "ComponentDefType": "Upgrade",
+      "HardpointSlot": -1,
+      "IsFixed": true,
+      "GUID": null,
+      "DamageLevel": "Functional",
+      "prefabName": "",
+      "hasPrefabName": false
+    }
+  ]
+}
