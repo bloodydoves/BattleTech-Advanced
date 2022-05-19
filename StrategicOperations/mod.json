@@ -2,7 +2,7 @@
 	"Name": "StrategicOperations",
 	"DLL": "StrategicOperations.dll",
 	"Hidden": true,
-	"Version": "3.0.3.1",
+	"Version": "3.0.3.2",
 	"Description": "",
 	"Author": "T-Bone",
 	"Website": "https://github.com/ajkroeg/StrategicOperations",
@@ -227,7 +227,7 @@
 							"Id": "BA_EasyTargetingPassive",
 							"Name": "Easy shots",
 							"Details": "Battle Armor has increased accuracy while swarming.",
-							"Icon": "allied-star"
+							"Icon": "battle-amor-suit"
 						},
 						"nature": "Buff",
 						"statisticData": {
@@ -334,15 +334,15 @@
 						"effectType": "StatisticEffect",
 						"Description": {
 							"Id": "BA_HardTargetingPassive",
-							"Name": "Hard shots",
+							"Name": "Difficult Shots",
 							"Details": "Battle Armor has decreased accuracy while mounted.",
-							"Icon": "allied-star"
+							"Icon": "battle-amor-suit"
 						},
 						"nature": "Buff",
 						"statisticData": {
 							"statName": "AccuracyModifier",
-							"operation": "Set",
-							"modValue": "4",
+							"operation": "Float_Add",
+							"modValue": "6",
 							"modType": "System.Single"
 						}
 					}
@@ -369,7 +369,7 @@
 							"Id": "BA_InternalAOEImmune",
 							"Name": "AOE Immune",
 							"Details": "Battle Armor takes no damage when mounted internally.",
-							"Icon": "allied-star"
+							"Icon": "battle-amor-suit"
 						},
 						"nature": "Buff",
 						"statisticData": {
@@ -399,7 +399,7 @@
 							"Id": "BA_GarrisonDamageResistance",
 							"Name": "AOE Immune",
 							"Details": "Garrisoned units have 50% additional damage resist as well as +10 defense against being hit.",
-							"Icon": "allied-star"
+							"Icon": "battle-amor-suit"
 						},
 						"nature": "Buff",
 						"statisticData": {
@@ -428,6 +428,58 @@
 							"statName": "ToHitThisActor",
 							"operation": "Float_Add",
 							"modValue": "10.0",
+							"modType": "System.Single"
+						}
+					}
+				]
+			},
+			{
+				"ID": "BA_CarrierSlowdown",
+				"TargetEffectType": "MOUNTTARGET",
+				"Name": "Battle Armor - Carrier Unit Slowdown",
+				"Description": "Vehicles carrying BA are significantly slower due to BA's weight slowing them down.",
+				"effectDataJO": [
+					{
+						"durationData": {},
+						"targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator",
+							"showInStatusPanel": true
+						},
+						"effectType": "StatisticEffect",
+						"Description": {
+							"Id": "BA_CarrierCruise",
+							"Name": "Carrier Slowdown",
+							"Details": "This vehicle is 20% slower thanks to the BA it is carrying being heavy.",
+							"Icon": "cargo-crate"
+						},
+						"nature": "Buff",
+						"statisticData": {
+							"statName": "CruiseSpeed",
+							"operation": "Float_Multiply",
+							"modValue": "0.8",
+							"modType": "System.Single"
+						}
+					},
+					{
+						"durationData": {},
+						"targetingData": {
+							"effectTriggerType": "Passive",
+							"effectTargetType": "Creator",
+							"showInStatusPanel": false
+						},
+						"effectType": "StatisticEffect",
+						"Description": {
+							"Id": "BA_CarrierFlank",
+							"Name": "harder to hit",
+							"Details": "garrisoned are harder to hit becuase reasons",
+							"Icon": "allied-star"
+						},
+						"nature": "Buff",
+						"statisticData": {
+							"statName": "FlankSpeed",
+							"operation": "Float_Multiply",
+							"modValue": "0.8",
 							"modType": "System.Single"
 						}
 					}

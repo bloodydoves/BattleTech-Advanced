@@ -1,0 +1,233 @@
+{
+    "Description" : {
+        "Id" : "bd_event_TwoHeadsAreBetterThanOne",
+        "Name" : "Two Heads Are Better Than One",
+		"Details" : "Between meetings with suppliers and technicians on [[TGT_SYSTEM,{TGT_SYSTEM.Name}]], Yang unexpectedly meets you on the bridge. \"Hey Commander, got a sec?\"\r\n\r\nYou shrug. \"Sure Yang, what is it?\" Your chief MechTech grins. \"Well, you know how gameworlds are famous for their weird modifications and custom 'Mech jobs? I heard from a friend who's local right now and he's got something he's gotta off-load ASAP. His stable won a fight recently and got this weird thing they're calling the Ettin as a prize. Problem is, the stablemaster <i>hates</i> FrankenMechs and is demanding they get rid of it immediately. He knew I was in town and let me know. For a pretty low price we can score a premium one-of-a-kind FrakenMech here! Whatta ya say, do I call him back?\"",
+        "Icon" : "uixTxrSpot_IllicitDealings.png"
+    },
+    "Scope" : "MechWarrior",
+    "Weight" : 200,
+    "Requirements" : {
+            "Scope" : "Company",
+            "RequirementTags" : {
+                "tagSetSourceFile" : "",
+                "items" : []
+            },
+            "ExclusionTags" : {
+                "tagSetSourceFile" : "",
+                "items" : []
+            },
+            "RequirementComparisons" : [
+                {
+                    "obj" : "Funds",
+                    "op" : "GreaterThan",
+                    "val" : "8000000",
+                    "valueConstant" : "8000000"
+                },
+                {
+                    "obj" : "Travel",
+                    "op" : "Equal",
+                    "val" : 0,
+                    "valueConstant" : "0"
+                }
+            ]
+        },
+    "AdditionalRequirements" : [
+        {
+            "Scope" : "StarSystem",
+            "RequirementTags" : {
+                "items" : [
+                    "planet_gameworld"
+                ],
+                "tagSetSourceFile" : "Tags/PlanetTags"
+            },
+            "ExclusionTags" : {
+                "items" : [
+                    "planet_event_pox",
+                    "planet_other_plague",
+                    "planet_pop_none"
+                ],
+                "tagSetSourceFile" : "Tags/PlanetTags"
+            },
+            "RequirementComparisons" : []
+        }
+    ],
+    "AdditionalObjects" : [],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Sure, why not? Might be fun.",
+                "Details" : "[\u00A28,000,000]",
+                "Icon" : null
+            },
+            "RequirementList" : [
+                {
+                    "Scope" : "Company",
+                    "RequirementTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "ExclusionTags" : {
+                        "tagSetSourceFile" : "",
+                        "items" : []
+                    },
+                    "RequirementComparisons" : [
+                        {
+                            "obj" : "Funds",
+                            "op" : "GreaterThanOrEqual",
+                            "val" : 8000000,
+                            "valueConstant" : "8000000"
+                        }
+                    ]
+                }
+            ],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Gain the mech.",
+                        "Details" : "You consider for a few moments, then a thought crosses your mind. \"Call him back and tell him we'll take it. However, we'll also need a little something extra, a few extra techs on deck to help get the thing ready for a real battlefield. See if we can't arrange a few techs from the stable at the same time. We'll make it worth their while.\"\r\n\r\nYang takes on a confused expression for a moment before realizing what you're doing. \"Oh, I get it, Commander, we're helping them so they'll help us back with some techs. Sounds good, I'll get on the horn right away!.\"\r\n\r\nA few hours later, Yang calls you down to the Mech Bay where the new... thing is being unloaded by an unfamiliar tech team with colorful matching jackets on.\r\n\r\n\"My buddy was so excited to get rid of the thing that he agreed to the extra techs instantly! We've got 'em for a week, Commander, and I'm gonna get every ounce of work out of them!\" You smile, knowing that a pleased Yang means quick refits and smooth operations.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"tagSetSourceFile": "",
+								"items": []
+							},
+							"RemovedTags": {},
+							"Stats": [
+								{
+                                    "typeString" : "System.Int32",
+                                    "name" : "Funds",
+                                    "value" : "-8000000",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+							],
+							"Actions": [
+								{
+                                    "Type" : "System_ShowRewards",
+                                    "value" : "itemCollection_loot_eventTwoHeads",
+                                    "valueConstant" : null,
+                                    "additionalValues" : null
+                                }
+							],
+							"ForceEvents": [],
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						},
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : null
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : null
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "MechTechSkill",
+                                    "value" : "2",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : true,
+                            "ResultDuration" : 7
+                        }
+					]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "What? No, not interested.",
+                "Details" : "Refuse Yang",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "Do not gain the mech.",
+                        "Details" : "You shake your head. \"Pass on my apologies to your friend, but we're not in a place to spend a bunch of cash on an unknown FrankenMech right now. Sorry Yang.\"\r\n\r\nYang hangs his head dejectedly. \"Yeah... alright, never mind, Commander.\" Having overheard the conversation from nearby, Darius walks over.\r\n\r\n\"Not sure that was a good idea, Commander, Yang's gonna be unhappy for awhile after being turned down, the Mech Bay is gonna suffer.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": [],
+								"tagSetSourceFile": ""
+							},
+							"Stats": [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "MechTechSkill",
+                                    "value" : "-4",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 14
+						}
+					]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL",
+    "OneTimeEvent" : true,
+    "Tags" : {
+        "tagSetSourceFile" : "tags/EventTags",
+        "items" : []
+    }
+}

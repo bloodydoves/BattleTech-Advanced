@@ -1,0 +1,345 @@
+{
+  "Custom": {
+    "AssemblyVariant": {
+      "PrefabID": "Sirocco",
+      "Exclude": false,
+      "Include": true
+    },
+    "ArmActuatorSupport": {
+      "LeftLimit": "Hand",
+      "RightLimit": "Hand",
+      "LeftDefaultShoulder": "Quad_Front_leg_hip",
+      "RightDefaultShoulder": "Quad_Front_leg_hip",
+      "LeftDefaultUpper": "Quad_Front_leg_upper",
+      "RightDefaultUpper": "Quad_Front_leg_upper",
+      "LeftDefaultLower": "Quad_Front_leg_lower",
+      "RightDefaultLower": "Quad_Front_leg_lower",
+      "LeftDefaultHand": "Quad_Front_leg_foot",
+      "RightDefaultHand": "Quad_Front_leg_foot"
+    },
+    "ChassisDefaults": [
+      {
+        "Location": "LeftLeg",
+        "CategoryID": "LegHip",
+        "DefID": "Quad_Hind_leg_hip",
+        "Type": "Upgrade"
+      },
+      {
+        "Location": "LeftLeg",
+        "CategoryID": "LegUpperActuator",
+        "DefID": "Quad_Hind_leg_upper",
+        "Type": "Upgrade"
+      },
+      {
+        "Location": "LeftLeg",
+        "CategoryID": "LegLowerActuator",
+        "DefID": "Quad_Hind_leg_lower",
+        "Type": "Upgrade"
+      },
+      {
+        "Location": "LeftLeg",
+        "CategoryID": "LegFootActuator",
+        "DefID": "Quad_Hind_leg_foot",
+        "Type": "Upgrade"
+      },
+      {
+        "Location": "RightLeg",
+        "CategoryID": "LegHip",
+        "DefID": "Quad_Hind_leg_hip",
+        "Type": "Upgrade"
+      },
+      {
+        "Location": "RightLeg",
+        "CategoryID": "LegUpperActuator",
+        "DefID": "Quad_Hind_leg_upper",
+        "Type": "Upgrade"
+      },
+      {
+        "Location": "RightLeg",
+        "CategoryID": "LegLowerActuator",
+        "DefID": "Quad_Hind_leg_lower",
+        "Type": "Upgrade"
+      },
+      {
+        "Location": "RightLeg",
+        "CategoryID": "LegFootActuator",
+        "DefID": "Quad_Hind_leg_foot",
+        "Type": "Upgrade"
+      }
+    ]
+  },
+  "CustomParts": {
+    "MeleeWeaponOverride": {
+      "DefaultWeapon": "Weapon_MeleeAttackEx"
+    },
+    "FiringArc": 360,
+    "Unaffected": {
+      "DesignMasks": "false",
+      "Pathing": "false",
+      "Fire": "false",
+      "Landmines": "false"
+    },
+    "ArmsCountedAsLegs": true,
+    "MoveCostModPerBiome": {
+      "DesignMaskBiomeMartianVacuum": 1.0,
+      "DesignMaskBiomeLunarVacuum": 1.0
+    }
+  },
+  "Description": {
+    "Cost": 9507224,
+    "Rarity": 3,
+    "Purchasable": true,
+    "Manufacturer": "",
+    "Model": "",
+    "UIName": "Sirocco",
+    "Id": "chassisdef_sirocco_SRC-5C",
+    "Name": "Sirocco",
+    "Details": "Named for the stinging desert winds of legend and intended to replace the now-aging Goliath in many Successor State armies, the Sirocco was ready for field testing and deployment by 3059. Built on a rugged 285-rated standard fusion engine and clad in 19.5 tons of armor plating, the Sirocco is able to take just about any punishment conceivable. For weaponry, it relies heavily on its twin Light Gauss Rifles, which are supported by a battery of 4 ER Medium Lasers, 1 Medium Pulse Laser, 2 SRM-4s, and 4 A-Pods to fend off pesky infantry. For a final layer of defense, the Sirocco carries a Guardian ECM system.",
+    "Icon": "uixTxrIcon_sirocco"
+  },
+  "MovementCapDefID": "movedef_warhammer_WHM-6R",
+  "PathingCapDefID": "pathingdef_heavy",
+  "HardpointDataDefID": "hardpointdatadef_cusirocco",
+  "PrefabIdentifier": "chrprfmech_cusiroccobase-001",
+  "PrefabBase": "cusirocco",
+  "Tonnage": 95,
+  "InitialTonnage": 9.5,
+  "weightClass": "ASSAULT",
+  "BattleValue": 6577000,
+  "Heatsinks": 0,
+  "TopSpeed": 120,
+  "TurnRadius": 90,
+  "MaxJumpjets": 30,
+  "Stability": 160,
+  "StabilityDefenses": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "SpotterDistanceMultiplier": 1,
+  "VisibilityMultiplier": 1,
+  "SensorRangeMultiplier": 1,
+  "Signature": 0,
+  "Radius": 8,
+  "PunchesWithLeftArm": false,
+  "MeleeDamage": 75,
+  "MeleeInstability": 35,
+  "MeleeToHitModifier": 0,
+  "DFADamage": 75,
+  "DFAToHitModifier": 0,
+  "DFASelfDamage": 75,
+  "DFAInstability": 35,
+  "Locations": [
+    {
+      "Location": "Head",
+      "Hardpoints": [
+        {
+          "WeaponMount": "Energy",
+          "Omni": false
+        }
+      ],
+      "Tonnage": 0,
+      "InventorySlots": 6,
+      "MaxArmor": 45,
+      "MaxRearArmor": -1,
+      "InternalStructure": 16
+    },
+    {
+      "Location": "LeftArm",
+      "Hardpoints": [
+		{
+          "WeaponMount": "AntiPersonnel",
+          "Omni": false
+        },
+		{
+          "WeaponMount": "AntiPersonnel",
+          "Omni": false
+        }
+	  ],
+      "Tonnage": 0,
+      "InventorySlots": 6,
+      "MaxArmor": 200,
+	  "MaxRearArmor": -1,
+	  "InternalStructure": 100
+    },
+    {
+      "Location": "LeftTorso",
+      "Hardpoints": [
+        {
+          "WeaponMount": "Energy",
+          "Omni": false
+        },
+        {
+          "WeaponMount": "Energy",
+          "Omni": false
+        },
+        {
+          "WeaponMount": "Ballistic",
+          "Omni": false
+        },
+        {
+          "WeaponMount": "Missile",
+          "Omni": false
+        }
+      ],
+      "Tonnage": 0,
+      "InventorySlots": 13,
+      "MaxArmor": 300,
+      "MaxRearArmor": 100,
+      "InternalStructure": 100
+    },
+    {
+      "Location": "CenterTorso",
+      "Hardpoints": [],
+      "Tonnage": 0,
+      "InventorySlots": 16,
+      "MaxArmor": 300,
+	  "MaxRearArmor": 150,
+	  "InternalStructure": 150
+    },
+    {
+      "Location": "RightTorso",
+      "Hardpoints": [
+        {
+          "WeaponMount": "Energy",
+          "Omni": false
+        },
+        {
+          "WeaponMount": "Energy",
+          "Omni": false
+        },
+        {
+          "WeaponMount": "Ballistic",
+          "Omni": false
+        },
+        {
+          "WeaponMount": "Missile",
+          "Omni": false
+        }
+      ],
+      "Tonnage": 0,
+      "InventorySlots": 13,
+      "MaxArmor": 300,
+      "MaxRearArmor": 100,
+      "InternalStructure": 100
+    },
+    {
+      "Location": "RightArm",
+      "Hardpoints": [
+		{
+          "WeaponMount": "AntiPersonnel",
+          "Omni": false
+        },
+		{
+          "WeaponMount": "AntiPersonnel",
+          "Omni": false
+        }
+	  ],
+      "Tonnage": 0,
+      "InventorySlots": 6,
+      "MaxArmor": 200,
+	  "MaxRearArmor": -1,
+	  "InternalStructure": 100
+    },
+    {
+      "Location": "LeftLeg",
+      "Hardpoints": [],
+      "Tonnage": 0,
+      "InventorySlots": 6,
+      "MaxArmor": 200,
+	  "MaxRearArmor": -1,
+	  "InternalStructure": 100
+    },
+    {
+      "Location": "RightLeg",
+      "Hardpoints": [],
+      "Tonnage": 0,
+      "InventorySlots": 6,
+      "MaxArmor": 200,
+	  "MaxRearArmor": -1,
+	  "InternalStructure": 100
+    }
+  ],
+  "LOSSourcePositions": [
+    {
+      "x": 0,
+      "y": 15,
+      "z": 1
+    },
+    {
+      "x": 4,
+      "y": 14,
+      "z": 0
+    },
+    {
+      "x": -4,
+      "y": 14,
+      "z": 0
+    }
+  ],
+  "LOSTargetPositions": [
+    {
+      "x": 0,
+      "y": 15,
+      "z": 1
+    },
+    {
+      "x": 4,
+      "y": 14,
+      "z": 0
+    },
+    {
+      "x": -4,
+      "y": 14,
+      "z": 0
+    },
+    {
+      "x": 2.5,
+      "y": 5,
+      "z": 1
+    },
+    {
+      "x": -2.5,
+      "y": 5,
+      "z": 1
+    }
+  ],
+  "VariantName": "SRC-5C",
+  "ChassisTags": {
+    "items": [
+      "QuadMech"
+    ],
+    "tagSetSourceFile": ""
+  },
+  "StockRole": "Quad Assault",
+  "YangsThoughts": "Named for the stinging desert winds of legend and intended to replace the now-aging Goliath in many Successor State armies, the Sirocco was ready for field testing and deployment by 3059. Built on a rugged 285-rated standard fusion engine and clad in 19.5 tons of armor plating, the Sirocco is able to take just about any punishment conceivable. For weaponry, it relies heavily on its twin Light Gauss Rifles, which are supported by a battery of 4 ER Medium Lasers, 1 Medium Pulse Laser, 2 SRM-4s, and 4 A-Pods to fend off pesky infantry. For a final layer of defense, the Sirocco carries a Guardian ECM system.",
+  "FixedEquipment": [
+    {
+      "MountedLocation": "CenterTorso",
+      "ComponentDefID": "Gear_Gyro_360Twist_Sirocco",
+      "SimGameUID": "",
+      "ComponentDefType": "Upgrade",
+      "HardpointSlot": -1,
+      "IsFixed": true,
+      "GUID": null,
+      "DamageLevel": "Functional",
+      "prefabName": "",
+      "hasPrefabName": false
+    },
+    {
+      "MountedLocation": "CenterTorso",
+      "ComponentDefID": "emod_structureslots_standard",
+      "SimGameUID": "",
+      "ComponentDefType": "Upgrade",
+      "HardpointSlot": -1,
+      "IsFixed": true,
+      "GUID": null,
+      "DamageLevel": "Functional",
+      "prefabName": "",
+      "hasPrefabName": false
+    }
+  ]
+}
