@@ -20,7 +20,7 @@
 			"planet_industry_poor",
 			"planet_other_blackmarket",
 			"planet_name_alloway",
-			"planet_faction_magistracyofcanopus",
+			"planet_faction_independent",
 			"planet_industry_manufacturing"
 		],
 		"tagSetSourceFile": ""
@@ -41,7 +41,7 @@
 	},
 	"FuelingStation": false,
 	"JumpDistance": 10,
-	"ownerID": "MagistracyOfCanopus",
+	"ownerID": "Locals",
 	"ShopRefreshRate": 0,
 	"ShopMaxInventory": 0,
 	"ShopMaxSpecials": 4,
@@ -125,35 +125,37 @@
 	"UseMaxContractOverride": true,
 	"MaxContractOverride": 2,
 	"SystemShopItems": [
-		"itemCollection_major_MagistracyOfCanopus",
+		"itemCollection_minor_Locals",
 		"itemCollection_shop_manufacturing"
 	],
-	"factionShopOwnerID": "MagistracyOfCanopus",
-	"FactionShopItems": [
-		"itemCollection_faction_MagistracyOfCanopus"
+	"factionShopOwnerID": "INVALID_UNSET",
+	"FactionShopItems": null,
+	"BlackMarketShopItems": [
+		"itemCollection_faction_AuriganPirates"
 	],
-	"BlackMarketShopItems": null,
 	"CoreSystemID": "starsystemdef_Alloway",
 	"StartingSystemModes": [
 		"KAMEA_CAMPAIGN",
-		"CAREER",
 		"NONE"
 	],
-	"DefaultDifficulty": 5,
-	"DifficultyList": [],
-	"DifficultyModes": [],
+	"DefaultDifficulty": -1,
+	"DifficultyList": [
+		-1,
+		3
+	],
+	"DifficultyModes": [
+		"KAMEA_CAMPAIGN",
+		"CAREER"
+	],
 	"contractEmployerIDs": [
-		"MagistracyOfCanopus",
-		"Locals"
+		"Locals",
+		"AuriganPirates"
 	],
 	"contractTargetIDs": [
-		"Liao",
-		"Marik",
-		"Marian",
-		"TaurianConcordat",
 		"AuriganPirates",
+		"Liao",
+		"MagistracyOfCanopus",
 		"AuriganRestoration",
-		"Mercenaries",
-		"ComStar"
+		"TaurianConcordat"
 	]
 }
