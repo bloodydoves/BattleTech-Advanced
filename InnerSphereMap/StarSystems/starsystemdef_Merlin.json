@@ -1,35 +1,35 @@
 {
 	"Description": {
-		"Id": "starsystemdef_DainmarMajoris",
-		"Name": "Dainmar Majoris",
-		"Details": "This frozen world is made habitable by the constant geothermal activity that convulses its surface. This also makes it a source of highly valuable radioactive ores, and the Magistracy keeps a garrison on the planet to protect its interests there.",
+		"Id": "starsystemdef_Merlin",
+		"Name": "Merlin",
+		"Details": "Though there's no official record of anybody colonizing Merlin, the desert planet is nonetheless dotted with multiple unfinished construction projects on high rocky cliffs that suggest somebody once had ambitions for the world.",
 		"Icon": ""
 	},
 	"Position": {
-		"x": -62.84,
-		"y": -488.3,
+		"x": 170.29,
+		"y": -364.49,
 		"z": 0
 	},
 	"Tags": {
 		"items": [
 			"planet_size_medium",
-			"planet_climate_arctic",
-			"planet_pop_small",
-			"planet_civ_periphery",
+			"planet_climate_desert",
+			"planet_pop_none",
 			"planet_progress_3",
+			"planet_feature_moon02",
+			"planet_other_ruins",
+			"planet_other_empty",
+			"planet_other_moon",
+			"planet_name_merlin",
+			"planet_faction_davion",
 			"planet_industry_mining",
-			"planet_other_volcanic",
-			"planet_name_dainmarmajoris",
-			"planet_faction_magistracy",
-			"planet_faction_magistracyofcanopus"
+			"planet_industry_manufacturing"
 		],
 		"tagSetSourceFile": ""
 	},
 	"SupportedBiomes": [
-		"highlandsSpring",
-		"highlandsFall",
-		"polarFrozen",
-		"tundraFrozen"
+		"desertParched",
+		"martianVacuum"
 	],
 	"MapRequiredTags": {
 		"items": [],
@@ -40,11 +40,11 @@
 		"tagSetSourceFile": ""
 	},
 	"FuelingStation": false,
-	"JumpDistance": 8,
-	"ownerID": "MagistracyOfCanopus",
+	"JumpDistance": 10,
+	"ownerID": "Davion",
 	"ShopRefreshRate": 0,
 	"ShopMaxInventory": 0,
-	"ShopMaxSpecials": 4,
+	"ShopMaxSpecials": 6,
 	"SystemInfluence": [
 		{
 			"factionID": "NoFaction",
@@ -120,45 +120,47 @@
 		}
 	],
 	"StarPosition": null,
-	"StarType": "G",
+	"StarType": "F",
 	"Depletable": false,
 	"UseSystemRoninHiringChance": false,
 	"RoninHiringChance": 0,
 	"UseMaxContractOverride": false,
 	"MaxContractOverride": 0,
 	"SystemShopItems": [
-		"itemCollection_minor_MagistracyOfCanopus",
-		"itemCollection_shop_mining"
+		"itemCollection_shop_miningProgression",
+		"itemCollection_shop_manufacturingProgression"
 	],
-	"factionShopOwnerID": "INVALID_UNSET",
-	"FactionShopItems": null,
+	"factionShopOwnerID": "Steiner",
+	"FactionShopItems": [
+		"itemCollection_faction_Steiner"
+	],
 	"BlackMarketShopItems": null,
-	"CoreSystemID": "starsystemdef_DainmarMajoris",
+	"CoreSystemID": "starsystemdef_Merlin",
 	"StartingSystemModes": [
 		"KAMEA_CAMPAIGN",
 		"CAREER",
 		"NONE"
 	],
-	"DefaultDifficulty": -1,
+	"DefaultDifficulty": 2,
 	"DifficultyList": [
-		-1,
-		4
+		2,
+		7
 	],
 	"DifficultyModes": [
 		"KAMEA_CAMPAIGN",
 		"CAREER"
 	],
 	"contractEmployerIDs": [
-		"Locals",
-		"MagistracyOfCanopus"
+		"Davion",
+		"Locals"
 	],
 	"contractTargetIDs": [
+		"Kurita",
 		"Liao",
-		"Marik",
-		"Marian",
 		"TaurianConcordat",
+		"Outworld",
+		"Tortuga",
 		"AuriganPirates",
-		"AuriganRestoration",
-		"ComStar"
+		"ClanNovaCat"
 	]
 }
