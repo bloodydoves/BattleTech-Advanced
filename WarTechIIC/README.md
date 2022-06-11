@@ -15,15 +15,15 @@ Every day that passes, there is a `dailyAttackChance` chance that a new Flareup 
 
 ### Deciding attacker and location
 WIIC first decides who will be the attacker and where they'll attack by iterating through all star systems on the map.
-1) If the star system already has a flareup or flashpoint present, it's ignored. Similarly if it has one of the `cantBeAttackedTags`.
-2) If it's controlled by a faction in `cantBeAttacked` or `ignoreFactions`, it's also skipped.
-3) Each faction that controls a neighboring system and isn't in `ignoreFactions` might attack, if they're either the owner's enemy or `limitTargetsToFactionEnemies` is `false`. The weight for that attacker on this star system is the following items multiplied together:
+1) If it's controlled by a faction in `cantBeAttacked` or `ignoreFactions`, it's also skipped.
+2) Each faction that controls a neighboring system and isn't in `ignoreFactions` might attack, if they're either the owner's enemy or `limitTargetsToFactionEnemies` is `false`. The weight for that attacker on this star system is the following items multiplied together:
     1) The number of bordering systems the attacker controls (within one jump)
     2) The distance multipilier: `1 / sqrt(distanceFactor + distanceInLyFromPlayer)`. Systems near the player are more likely to be attacked than those far across the map.
     3) `aggression[attacker]`, read from the settings, defaulting to 1.
     4) `reputationMultiplier[attacker] + reputationMultiplier[defender]`.
     5) `hates[attacker][defender]`, defaulting to 1.
-4) For attacks, `factionInvasionTags` are always considered adjacent to the appropriate faction (that is to say, Jade Falcon can always attack planets with the falcon_invasion_corridor tag, if such is set in settings.json). For raids, `factionActivityTags` is used instead (eg, Pirates can always raid planet_other_pirate worlds in the default settings).
+    6) Multipliers from any tags in `systemAggressionByTag` that the system has. A multiplier of 0 means this system can never be attacked or raided randomly.
+3) For attacks, `factionInvasionTags` are always considered adjacent to the appropriate faction (that is to say, Jade Falcon can always attack planets with the falcon_invasion_corridor tag, if such is set in settings.json). For raids, `factionActivityTags` is used instead (eg, Pirates can always raid planet_other_pirate worlds in the default settings).
     * The weight uses the same rules as above. Each tag the planet has is equivalent to one 'border world'.
 
 Factions will only attack or raid themselves if they are set to be their own enemy (regardless of `limitTargetsToFactionEnemies`). With the weight for each target system and each faction which could attack it figured out, one is selected at random.
@@ -35,7 +35,8 @@ The initial attacker and defender forces are calculated as follows.
 1) The attacker begins with `defaultAttackStrength` points, overridden by their setting in `attackStrength` if they have one.
 2) The defender begins with `defaultDefenseStrength` points, overridden by their setting in `defenseStrength` if they have one.
 3) The `WIIC_{attacker}_attack_strength` and ``WIIC_{defender}_defense_strength` company stats are added to attack and defense strength respectively.
-4) If it's a raid, both strengths are multiplied by `raidStrengthMultiplier`
+4) If the location has any `addStrengthTags`, this amount is added to both the attacker's and defender's strengths.
+5) If it's a raid, both strengths are multiplied by `raidStrengthMultiplier`
 
 ## How Flareups proceed
 When initially generated, flareups are in "countdown", a random number of days chosen based on `minCountdown` and `maxCountdown`. Nothing will happen until that many days pass - the attacker and defender are mustering their forces, preparing for the coming confrontation.
