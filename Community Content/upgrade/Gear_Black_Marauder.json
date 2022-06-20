@@ -1,0 +1,160 @@
+{
+	"Custom": {
+        "Flags": {
+            "flags": [
+				"ignore_damage",
+                "no_salvage"
+            ]
+        },
+		"BonusDescriptions": {
+            "Bonuses": [
+				"Activatable",
+				"FailChance: 7.5%",
+				"FailChanceTurn: 25%",
+				"FailCritLoc",
+				"ActiveEvasionIgnore: 2",
+				"ActiveHeatPerTurn: +20%",
+				"DeactivatedDamageReduction: 10%"
+            ]
+        },
+		"ActivatableComponent": {
+            "ButtonName": "Awaken the Machine",
+            "CanNotBeActivatedManualy": false,
+            "NoUniqueCheck": false,
+            "ActiveByDefault": false,
+            "ActivationMessage": "Spirit Awake",
+            "DeactivationMessage": "Spirit Asleep",
+			"FailFlatChance": 0.075,
+			"FailRoundsStart": 1,
+			"FailChancePerTurn": 0.25,
+			"FailCrit": true,
+			"FailDamageLocations": ["CenterTorso"],
+            "Linkage": {
+                "OnActivate": {
+                    "Activate": [],
+                    "Deactivate": []
+                },
+                "OnDeactivate": {
+                    "Activate": [],
+                    "Deactivate": []
+                }
+            },
+            "statusEffects": [
+                {
+                    "durationData": {
+                        "duration": -1,
+                        "stackLimit": -1
+                    },
+                    "targetingData": {
+                        "effectTriggerType": "Passive",
+                        "effectTargetType": "Creator",
+                        "showInStatusPanel": true
+                    },
+                    "effectType": "StatisticEffect",
+                    "Description": {
+                        "Id": "BM-Damage",
+                        "Name": "The Spirit Is Awake",
+                        "Details": "The Spirit of the Black Marauder has been awakened, allowing the Black Marauder to ignore 2 evasion and generating +20% heat.",
+                        "Icon": "specter"
+                    },
+                    "nature": "Buff",
+                    "statisticData": {
+                        "statName": "EvasivePipsIgnored",
+						"operation": "Float_Add",
+						"modValue": "2.0",
+						"modType": "System.Single",
+						"targetCollection": "Weapon"
+					}
+                },
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInTargetPreview": false,
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "BM-Heat",
+						"Name": "The Spirit Is Awake II",
+						"Details": "Alpha Strike circuitry has been engaged, increasing heat generated.",
+						"Icon": "specter"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName" : "HeatGenerated",
+						"operation" : "Float_Multiply",
+						"modValue" : "1.2",
+						"modType" : "System.Single",
+						"targetCollection": "Weapon"
+					}
+				}
+            ],
+            "offlineStatusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInTargetPreview": false,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "BM-DamageReduction",
+						"Name": "The Spirit Sleeps",
+						"Details": "The Spirit of the Black Marauder slumbers, providing a flat 10% damage reduction against incoming damage.",
+						"Icon": "specter"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamageReductionMultiplierAll",
+						"operation": "Float_Multiply",
+						"modValue": "0.9",
+						"modType": "System.Single"
+					}
+				}
+			]
+        }
+    },
+    "StatName" : null,
+    "RelativeModifier" : 0,
+    "AbsoluteModifier" : 0,
+    "Description" : {
+        "Cost" : 4000000,
+        "Rarity" : 99,
+        "Purchasable" : false,
+        "Manufacturer" : "Inferno",
+        "Model" : "Soul of Night",
+        "UIName" : "Spirit of the Black Marauder",
+        "Id" : "Gear_Black_Marauder",
+        "Name" : "Spirit of the Black Marauder",
+        "Details" : "There's no explanation for this mass of circuitry beyond 'this is the spirit of the machine'. When active, this circuitry provides a moderate damage boost to the Black Marauder's weapons fire. However, when inactive the circuits energize the mech's armor plating and help to dissipate incoming damage. How it works, why it works, what it even really is, all of this is unknown, it just does what it does.",
+        "Icon" : "specter"
+    },
+    "BonusValueA" : "",
+    "BonusValueB" : "",
+    "ComponentType" : "Upgrade",
+    "ComponentSubType" : "NotSet",
+    "PrefabIdentifier" : "",
+    "BattleValue" : 0,
+    "InventorySize" : 2,
+    "Tonnage" : 3.5,
+    "AllowedLocations" : "CenterTorso",
+    "DisallowedLocations" : "All",
+    "CriticalComponent" : false,
+    "statusEffects" : [],
+    "ComponentTags" : {
+        "items" : [
+			"BLACKLISTED"
+        ],
+        "tagSetSourceFile" : ""
+    }
+}
