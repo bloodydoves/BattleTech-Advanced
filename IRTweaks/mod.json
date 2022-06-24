@@ -2,7 +2,7 @@
 	"Name": "IRTweaks",
 	"Enabled": true,
 	"Hidden": true,
-	"Version": "0.9.5.8",
+	"Version": "0.9.6.5",
 	"Description": "Miscellaneous Tweaks and Fixes",
 	"Author": "IceRaptor",
 	"Website": "https://github.com/IceRaptor/IRTweaks",
@@ -11,6 +11,9 @@
 	"DependsOn": [
 		"IRBTModUtils",
 		"Custom Ammo Categories"
+	],
+	"OptionallyDependsOn": [
+		"CBTBehaviorsEnhanced"
 	],
 	"Settings": {
 		"Debug": true,
@@ -241,6 +244,12 @@
 					"Mod": 0,
 					"Multi": 1.0
 				},
+				"ContractScaling": {},
+				"StoryScale": {
+					"Mod": 0,
+					"Multi": 1.0
+				},
+				"UseStoryScale": false,
 				"DifficultyScaling": {
 					"1": {
 						"Mod": 5,
@@ -327,7 +336,14 @@
 				"SelfKnockdownTonnageFactor": 0.01,
 				"SelfKnockdownTonnageBonusThreshold": 100.0,
 				"SelfKnockdownTonnageBonusFactor": 0.05,
-				"SelfKnockdownBracedFactor": 100.0
+				"SelfKnockdownBracedFactor": 100.0,
+				"SelfInstabilityStatName": "SelfInstability_OnFire",
+				"IgnoreSelfInstabilityTag": "big_chungus",
+				"SelfInstabilityPilotingFactor": 1.5,
+				"SelfInstabilityTonnageFactor": 0.25,
+				"SelfInstabilityTonnageBonusThreshold": 100.0,
+				"SelfInstabilityTonnageBonusFactor": 0.05,
+				"SelfInstabilityBracedFactor": 100.0
 			},
 			"OnWeaponHitOpts": {
 				"ForceShutdownOnHitStat": "OnHitShutdownChance",
