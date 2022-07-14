@@ -28,6 +28,8 @@
 		},
 		"BonusDescriptions": {
 			"Bonuses": [
+				"Defense: +1",
+				"360Twist",
 				"IsGyro"
 			]
 		},
@@ -44,13 +46,13 @@
 		"Purchasable": false,
 		"Manufacturer": "Quirk",
 		"Model": "Blitzkrieg",
-		"UIName": "Blitzkrieg 360 Degree Field of Fire",
+		"UIName": "Blitzkrieg 360 Narrow Profile",
 		"Id": "Gear_Quirk_360Twist_Blitzkrieg",
-		"Name": "Blitzkrieg 360 Degree Field of Fire",
-		"Details": "This piece of gear represents the Blitzkrieg's inherent 360 Degree Field of Fire quirk. This means the Blitzkrieg can fire in any direction regardless of its facing.",
+		"Name": "Blitzkrieg 360 Narrow Profile",
+		"Details": "This piece of gear represents the Blitzkrieg's inherent 360 Narrow Profile quirk. This means the Blitzkrieg can fire in any direction regardless of its facing and also has a defense bonus for its narrow frame.",
 		"Icon": "uixSvgIcon_equipment_Gyro"
 	},
-	"BonusValueA": "360 Degree Field of Fire",
+	"BonusValueA": "",
 	"BonusValueB": "",
 	"ComponentType": "Upgrade",
 	"ComponentSubType": "NotSet",
@@ -86,6 +88,57 @@
 				"modType": "System.Single"
 			},
 			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": -1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "NarrowProfileDefense",
+				"Name": "HARDER TO HIT",
+				"Details": "Provides a penalty to all attacks against this unit.",
+				"Icon": "uixSvgIcon_equipment_Gyro"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "ToHitThisActor",
+				"operation": "Float_Add",
+				"modValue": "1.0",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "NotSet",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
 		}
 	],
 	"ComponentTags": {
