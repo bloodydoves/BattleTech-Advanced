@@ -1,0 +1,89 @@
+{
+	"Description": {
+		"Id": "3067-01-07",
+		"Name": "MercNews Broadcast",
+		"Details": "FEDCOM CIVIL WAR UPDATE!\r\n\n\nOutreach, Federated Commonwealth:  Even as the conflicts on New Avalon and Tharkhad reach their decisive phases, Allied and Loyalist forces continue to struggle on the remaining hotspots.  The Third Crucis Lancers, Blackwind Lancers and 244th Com Guards followed the Loyalist Third Republican and Fifteenth Deneb Light Cavalry's to Marlette.  Though heavily outnumbered, the remaining Loyalists are determined to follow Archon-Princess Katrina Steiner-Davion's directive to tie up as many troops as possible from fighting on New Avalon.\n\nIn a similar situation, Allied forces on Cavanaugh are closing in on the last Loyalist stronghold in the city of Caerleon.  General Richard Steiner, commander of the Loyalist forces on the planet, have exhorted his troops to \"fight to the last soldier\", hoping to buy time for both reinforcements, and to tie up Allied troops as long as possible from the conflict on Tharkhad.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "TIMBIQUI DARK: Brew of the IlKhan\r\n\n\nBefore you head out on your next contract, remember to stock up on the favorite constitutional among mercenaries everywhere, Timbiqui Dark!\n\nBrewed with a chocolate malt as far back as the Star League era by the Raasch Brewhaus on Timbiqui, Timbiqui Dark is a medium-bodied beer with low bitterness and a pleasant caramel aroma. Timbiqui Dark is THE prestige beer among mercenary troops across the Inner Sphere.  Popular amongst the cadets of famed Nagelring on Tharkad, served in famous sports bars like Thor's Shieldhall on the Game World of Solaris VII, and sought after even the amongst the warriors of the dreaded Clan menace, break open a case of Timbiqui Dark after the successful completion your next contract.\n\nTimbiqui Dark, the most popular prestige beer in the Inner Sphere and beyond.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+							"WIIC_give_starsystemdef_Marlette_to_Steiner",
+							"WIIC_give_starsystemdef_Cavanaugh_to_Steiner",
+							"WIIC_Davion_attacks_starsystemdef_Cavanaugh",
+							"WIIC_Davion_attacks_starsystemdef_Marlette",
+							"WIIC_set_starsystemdef_Cavanaugh_defender_strength_20",
+							"WIIC_set_starsystemdef_Cavanaugh_attacker_strength_40",
+							"WIIC_set_starsystemdef_Marlette_defender_strength_15",
+							"WIIC_set_starsystemdef_Marlette_attacker_strength_35"
+							],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

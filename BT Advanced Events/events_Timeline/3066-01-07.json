@@ -1,0 +1,83 @@
+{
+	"Description": {
+		"Id": "3066-01-07",
+		"Name": "MercNews Broadcast",
+		"Details": "VICTOR REAPPEARS ON THORIN!\r\n\n\nOutreach, [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]: After months of intense speculation regarding his whereabouts, Victor Steiner-Davion has arrived on Thorin to relieve the beleaguered troops there.  After brief consultations with Duke Morgan Kell and his sister, Princess Yvonne Steiner-Davion, the Allied forces have pulled off of Thorin.  Rumours have already circulated that Victor has pushed deeper into the Commonwealth, while Morgan Kell returned to the Lyran Alliance.  With the reappearance of the former Prince, the war is expected to take on a new intensity.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "FIGHTING ENDS ON GIAUSAR!\r\n\n\nGiausar, [[DM.BaseDescriptionDefs[LoreLyranAlliance],Lyran Alliance]]: On 11 December 3065, General Caesar Steiner -former CO of Loyalist unit Second Donegal and the LAAF's liason with the [[DM.BaseDescriptionDefs[LoreWalmartStarLeague2],SLDF]]- arrived on Giausar and called on the combatants to cease fire.  To his surprise, they did and in the calm that ensure the 62-year-old doyen of the Lyran military et with both surviving Loyalist commanders.  Acknowledging the bravery of both units, General Steiner announced his intention to resume command of the Second Donegal and to move against the Free Skye rebellion, while the Seventh limped back to Launam.  After twenty-two months of fighting, the Lancers-now permanently including the survivors of the Comguard's 167th who had been disavowed by Precentor-Martial-Pro-Tem, Gavin Dow- remained in control of Giausar, ending one of the most savage conflicts of the Civil War.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+							"WIIC_give_starsystemdef_Giausar_to_Davion",
+							"WIIC_give_starsystemdef_Thorin_to_Steiner"
+							],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}
