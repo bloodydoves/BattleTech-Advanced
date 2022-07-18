@@ -1,0 +1,89 @@
+{
+	"Description": {
+		"Id": "3066-12-07",
+		"Name": "MercNews Broadcast",
+		"Details": "CEASAR STEINER REINFORCES HESPERUS DEFENDERS!\r\n\n\nHesperus, Lyran Alliance:  Despite several daring raids by General Maria Esteban's Free Skye task force, all signs point to the end of the campaign on the planet in favour of the Lyran Alliance.  In the past month, previously neutral Thirty-Sixth Lyran Guard announced their participation in the campaign with a HALO drop which broke the Seventeenth Skye Rangers.  Even now, General Ceasar Steiner, travelling from Giasaur and leading the Second Donegal Guard, are en-route to reinforce the planet's Lyran defenders and to put an end General Esteban and her surviving Free Skye invaders.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "MORE WORLDS JOIN THE CALDERON PROTECTORATE!\r\n\n\nTaurus, Taurian Concordant: The Calderon Protectorate continues to grow in the face of Protector Grover Shraplen's assault on the breakaway Protectorate.  After a powerful broadcast from the Calderon Protectorate's de facto leader, Marshal Baron Cham Kithrong, calling for the secession of more planets from the Concordant, the worlds of Diik, Gaul, Lastpost and Oscar have all announced their intention to join the Protectorate.\n\nRepresentatives of these worlds highlight their growing distrust Protector Shraplen's leadership, the Taurian Concordant's involvement in the \"pro-Liao wars\" of the Trinity Alliance, the refusal of Shraplen to recognize Erik Martens-Calderon as the true heir of the Concordant, and Shraplen's obession with the Pleiades Cluster as reasons for seceding from the Concordant.\n\nProtector Shraplen however has vowed to bring these worlds back into line.  Fighting continues on Mirfak, and the mercenary company The Black Angus Boys are expected to support future Taurian invasions into the newly formed Protectorate.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+							"WIIC_give_starsystemdef_Hesperus_to_Steiner",
+							"WIIC_give_starsystemdef_Diik_to_Locals",
+							"WIIC_give_starsystemdef_Gaul_to_Locals",
+							"WIIC_give_starsystemdef_Lastpost_to_Locals",
+							"WIIC_give_starsystemdef_Oscar_to_Locals",
+							"WIIC_Locals_attacks_starsystemdef_Hesperus",
+							"WIIC_set_starsystemdef_Hesperus_defender_strength_45",
+							"WIIC_set_starsystemdef_Hesperus_attacker_strength_15"
+							],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

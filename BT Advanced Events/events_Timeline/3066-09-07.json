@@ -1,0 +1,99 @@
+{
+	"Description": {
+		"Id": "3066-09-07",
+		"Name": "MercNews Broadcast",
+		"Details": "PETER STEINER-DAVION LEADS ASSAULT ON THARKAD!\r\n\n\nTharkad, Lyran Alliance:  Prince Peter Steiner-Davion remerged from seclusion at the behest of Archduke Morgan Kell to rally and lead a pan-Lyran Alliance against his sister's regent, Peter's own great-aunt Duchess Nondi Steiner.  On August 20th, after an initial parlay, forces from the Kell Hounds, Blue Star Irregulars, Twentieth Arcturan Guard and Clan-Wolf-in-Exile's Fourth Wolf Guards arrived in-system to assault the planet.  Meanwhile, the First and Second Royal Guard regiments, backed by the Alarion Guard and Comstar's Sixty-Sixth Division have hunkered down in positions around Tharkad City as Peter's invasion force move closer.\n\nReinforcements are being called in by both sides from around the Lyran Alliance.  Loyalists are reportedly en-route to add to Nondi Steiner's strength, followed closely by the Fourth Skye Rangers to support Peter.  Even now, battle formations are closing together in what most observers believe will determine the future of the Lyran Alliance.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "CALDERON PROTECTORATE PROCLAIMED\r\n\n\nTaurus, Taurian Concordant: Led by Marshal Baron Cham Kithrong, four worlds of the Concordant have announced the formation of a new star nation.  Called the Calderon Protectorate, the worlds of Belle Isle, Erod's Escape, Marknick and Mirfak have posted a litany of complaints against Protector Grover Shraplen's leadership, and vowing not to return to the Concordant \"unless a Calderon sat on the throne\".  Protector Shraplen however has already ordered the Taurian V Corps into action, and invasion contracts for Belle Isle and Mirfak are posted in the MRBC database.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+							"WIIC_give_starsystemdef_Cavanaugh_to_Steiner",
+							"WIIC_give_starsystemdef_BelleIsle_to_Locals",
+							"WIIC_give_starsystemdef_ErodsEscape_to_Locals",
+							"WIIC_give_starsystemdef_Mirfak_to_Locals",
+							"WIIC_give_starsystemdef_Marknick_to_Locals",
+							"WIIC_give_starsystemdef_Dalkeith_to_Locals",
+							"WIIC_give_starsystemdef_Tharkad_to_Steiner",
+							"WIIC_Davion_attacks_starsystemdef_Cavanaugh",
+							"WIIC_Steiner_attacks_starsystemdef_Dalkeith",
+							"WIIC_Davion_attacks_starsystemdef_Tharkad",
+							"WIIC_TaurianConcordat_attacks_starsystemdef_BelleIsle",
+							"WIIC_TaurianConcordat_attacks_starsystemdef_Mirfak",
+							"WIIC_set_starsystemdef_Cavanaugh_defender_strength_15",
+							"WIIC_set_starsystemdef_Cavanaugh_attacker_strength_30",
+							"WIIC_set_starsystemdef_Dalkeith_defender_strength_15",
+							"WIIC_set_starsystemdef_Dalkeith_attacker_strength_40",
+							"WIIC_set_starsystemdef_Tharkad_defender_strength_50",
+							"WIIC_set_starsystemdef_Tharkad_attacker_strength_75"
+							],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

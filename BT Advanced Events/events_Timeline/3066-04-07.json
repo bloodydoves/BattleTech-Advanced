@@ -1,0 +1,99 @@
+{
+	"Description": {
+		"Id": "3066-04-07",
+		"Name": "MercNews Broadcast",
+		"Details": "FEDERATED COMMONWEALTH-DRACONIS COMBINE BORDER WAR ENDS!\r\n\n\nRobinson, Federated Commonwealth:  As conflicts along the entire border wound down, and both sides exhausted from the massive conflict, Duke James Sandoval bartered a deal with Coordinator Theodore Kurita to end hostilities.  The Combine would keep the worlds of Breed and Kesai IV-worlds the Combine had already secured-while both sides committed to withdrawing from the other contested border worlds.  This frees up Sandoval's forces for participation in on-going Federated Commonwealth Civil War.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "MRBC FEDCOM CIVIL WAR UPDATE!\r\n\n\nOutreach, Federated Commonwealth: The fighting continues to wind down into hotspots as Loyalist and Allied commanders reorient their strategies in the face of both success and failure.  On Dalkeith, the Allied forces were routed after an avalanche drop by the Twenty-sixth Lyran Guard, leading to an Allied evacuation of that planet.  On Tsamma, the Allied First and Third Crucis Lancers cornered and then forced the surrender of the Loyalst First Royal Cavaliers.  Allied forces also landed on the worlds of Achernar and New Valenica to drive off Loyalist forces.  Meanwhile, the meat-grinder of Cavanaugh II continues, as both sides received reinforcements in the form of the Allied Forty-Second Avalon Hussars and the Loyalist Penobscot CTM.  Pro-Katrina and pro-Victor contracts are available via the MRBC.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+							"WIIC_give_starsystemdef_Breed_to_Kurita",
+							"WIIC_give_starsystemdef_Kesai(Kasai)_to_Kurita",
+							"WIIC_give_starsystemdef_Proserpina_to_Kurita",
+							"WIIC_give_starsystemdef_Kentares_to_Davion",
+							"WIIC_give_starsystemdef_Dalkeith_to_Steiner",
+							"WIIC_give_starsystemdef_Tsamma_to_Davion",
+							"WIIC_give_starsystemdef_Cavanaugh_to_Steiner",
+							"WIIC_give_starsystemdef_NewValencia_to_Steiner",
+							"WIIC_give_starsystemdef_AlphaEridani(Achernar)_to_Steiner",
+							"WIIC_Davion_attacks_starsystemdef_Cavanaugh",
+							"WIIC_Davion_attacks_starsystemdef_NewValencia",
+							"WIIC_Davion_attacks_starsystemdef_AlphaEridani(Achernar)",
+							"WIIC_set_starsystemdef_Cavanaugh_defender_strength_20",
+							"WIIC_set_starsystemdef_Cavanaugh_attacker_strength_25",
+							"WIIC_set_starsystemdef_NewValencia_defender_strength_15",
+							"WIIC_set_starsystemdef_NewValencia_attacker_strength_25",
+							"WIIC_set_starsystemdef_AlphaEridani(Achernar)_defender_strength_15",
+							"WIIC_set_starsystemdef_AlphaEridani(Achernar)_attacker_strength_25"
+							],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

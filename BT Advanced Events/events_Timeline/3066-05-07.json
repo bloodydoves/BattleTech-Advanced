@@ -1,0 +1,86 @@
+{
+	"Description": {
+		"Id": "3066-05-07",
+		"Name": "MercNews Broadcast",
+		"Details": "HASEK VICTORY ON NEW SYRTIS!\r\n\n\nNew Syrtis, Federated Commonwealth:  Duke George Michael Hasek's forces have declared victory against the pro-Katrina Loyalists sent to subdue the planet. The combined Eighth Syrtis Fusiliers, Davion Light Guard, and Vanguard Legion won a bitter struggle against the Fourth Donegal Guards and the Eleventh Avalon Hussars at a very heavy price. The capital city, Saso, lies in complete ruin, along with the much beloved Morgan Hasek-Davion Glacier Memorial. The Duke made clear his intention to stay out of the continued civil war between Archon Princess Katrina Steiner's and Prince Victor Davion's supporters.\r\n\nMany accounts note that the mercenary Vanguard Legion proved pivotal in putting down the invaders. As more and more regular military units find themselves split over the political issues behind this civil war, it may well be mercenaries who decide the fate of the beleaguered Federated Commonwealth.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "VICTOR REINFORCES TIKONOV OFFENSIVE!\r\n\n\nTikonov, Federated Commonwealth: After months of low-grade, three-sided warfare between the loyalist Fifteenth Deneb Light Cavalary, the Free Tikonov Movements's First and Third Republican and the pro-Victor Sixth Crucis Lancers, First NAIS Cadre and Valexa CMM, the scales changed once again with the reappearance of former Prince Victor Steiner-Davion on the world.  Leading the elite Tenth Lyran Guards and the 244th Com Guards Division, has begun to grind away at both the Loyalist and Free Tikonov defences.  While an Allied victory is expected, both sides are seeking mercenary support.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+							"WIIC_give_starsystemdef_NewSyrtis_to_Davion",
+							"WIIC_give_starsystemdef_Tikonov_to_Steiner",
+							"WIIC_Davion_attacks_starsystemdef_Tikonov",
+							"WIIC_set_starsystemdef_Tikonov_defender_strength_20",
+							"WIIC_set_starsystemdef_Tikonov_attacker_strength_35"
+							],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}
