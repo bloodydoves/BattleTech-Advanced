@@ -431,8 +431,7 @@
 				"ClanWolf",
 				"ClanJadeFalcon",
 				"ClanGhostBear",
-				"ClanNovaCat",
-				"DarkCaste"
+				"ClanNovaCat"
 			],
 			"description": "This pilot is an expert at fighting Clan Wolf, and does 5% increased damage to all Clan forces.",
 			"effectDataJO": [
@@ -502,8 +501,7 @@
 				"ClanWolf",
 				"ClanJadeFalcon",
 				"ClanGhostBear",
-				"ClanNovaCat",
-				"DarkCaste"
+				"ClanNovaCat"
 			],
 			"description": "This pilot is an expert at fighting Clan Jade Falcon, and does 5% increased damage to all Clan forces.",
 			"effectDataJO": [
@@ -573,8 +571,7 @@
 				"ClanWolf",
 				"ClanJadeFalcon",
 				"ClanGhostBear",
-				"ClanNovaCat",
-				"DarkCaste"
+				"ClanNovaCat"
 			],
 			"description": "This pilot is an expert at fighting Clan Ghost Bear, and does 5% increased damage to all Clan forces.",
 			"effectDataJO": [
@@ -644,8 +641,7 @@
 				"ClanWolf",
 				"ClanJadeFalcon",
 				"ClanGhostBear",
-				"ClanNovaCat",
-				"DarkCaste"
+				"ClanNovaCat"
 			],
 			"description": "This pilot is an expert at fighting Clan Nova Cat, and does 5% increased damage to all Clan forces.",
 			"effectDataJO": [
@@ -707,6 +703,27 @@
 			]
 		},
 		{
+			"OpForSpecID": "DC_OnceAPirate",
+			"OpForSpecName": "Dark Caste: Once a Pirate, Always a Pirate",
+			"killsRequired": 12,
+			"factionID": "DarkCaste",
+			"applyToFaction": [
+				"ClanWolf",
+				"ClanJadeFalcon",
+				"ClanGhostBear",
+				"ClanNovaCat",
+				"DarkCaste"
+			],
+			"description": "This pilot is an expert at fighting the Dark Caste and even though they're Clanners, they're also pirates. Gain 15% bonus cash from your employer when fighting the Dark Caste as well as a 1500 cash bounty per kill.",
+			"cashMult": {
+				"{EMPLOYER}": 0.15
+			},
+			"killBounty": {
+				"{EMPLOYER}": 1500
+			},
+			"effectDataJO": []
+		},
+		{
 			"OpForSpecID": "Ives_StIvesBlues",
 			"OpForSpecName": "St. Ives: Gonna Give Them The St. Ives Blues",
 			"killsRequired": 12,
@@ -761,9 +778,9 @@
 			"OpForSpecID": "IP_CantBelieve",
 			"OpForSpecName": "Illyrian Palatinate: I Can't Believe It's Not Slavery!",
 			"killsRequired": 12,
-			"factionID": "Lothian",
+			"factionID": "Illyrian",
 			"applyToFaction": [
-				"Lothian"
+				"Illyrian"
 			],
 			"description": "This pilot has decided the Marian Hegemony was right and the Illyrians make good slaves. Each successful contract against the Illyrian Palatinate gives bonus reputation with the Marian Hegemony and gain a 15% discount in Marian Hegemony stores.",
 			"repMod": {
@@ -772,6 +789,23 @@
 			"storeDiscount": {
 				"Marian": -0.15
 			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "Merc_ItsNotPersonal",
+			"OpForSpecName": "Mercenaries: It's Not Personal, It's Just Business",
+			"killsRequired": 12,
+			"factionID": "Mercenaries",
+			"applyToFaction": [
+				"Mercenaries"
+			],
+			"description": "Nothin' personal, kid, it's just business. Gain bonus reputation with the Mercenary Review Board for your professionalism when fighting Mercenaries as well as 10% bonus cash from your employer.",
+			"repMod": {
+				"{EMPLOYER}": 0.15
+			},
+			"repMod": { 
+				"MercenaryReviewBoard": 20
+			},`
 			"effectDataJO": []
 		}
 	],
