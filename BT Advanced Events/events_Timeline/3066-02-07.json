@@ -1,0 +1,101 @@
+{
+	"Description": {
+		"Id": "3066-02-07",
+		"Name": "MercNews Broadcast",
+		"Details": "FIGHTING RAGES ON NEW SYRTIS!\r\n\n\nNew Syrtis, [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]: In a recent battle across the Bowerton Glacier on New Syrtis, the New Syrtis March Militia was completely annihilated in a well-laid ambush by holdouts from the Eleventh Avalon Hussars and the Fourth Donegal Guards.  Many wonder how a seasoned warrior such as Major Tia Carruthers could have fallen into such a complete and overwhelming ambush. The revitalized Loyalists are now driving on the planetary capital, Saso.  Both Duke George and Loyalist commanders are offering campaign contracts to aid their goals.  Even now, noted mercenary regiment the Vanguard Legion is en-route to aid Duke George.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "DCMS REPRISALS CONTINUE!\r\n\n\nRobinson, Federated Commonwealth: While new attacks have ceased, fighting still rages along boths sides of the Federated Commonwealth-Draconis Combine border.  On the Draconis Combine regional capital of Prosperina, the once welcoming population have risen up against their so-called AFFC \"liberators\".  On Kesai IV, DCMS 12th Galedon Regulars and First Amphigean Light Assault hound the defending First Ceti Hussars.  Meanwhile Fedcom forces on Addicks and Cassias are mounting final pushes to drive Draconis invaders off-world.  Please stay tuned for more announcements.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+							"WIIC_give_starsystemdef_Proserpina_to_Davion",
+							"WIIC_give_starsystemdef_Addicks_to_Davion",
+							"WIIC_give_starsystemdef_Cassias_to_Davion",
+							"WIIC_give_starsystemdef_Kesai(Kasai)_to_Davion",
+							"WIIC_give_starsystemdef_NewSyrtis_to_Davion",
+							"WIIC_Steiner_attacks_starsystemdef_NewSyrtis",
+							"WIIC_Kurita_attacks_starsystemdef_Proserpina",
+							"WIIC_Kurita_attacks_starsystemdef_Addicks",
+							"WIIC_Kurita_attacks_starsystemdef_Cassias",
+							"WIIC_Kurita_attacks_starsystemdef_Kesai(Kasai)",
+							"WIIC_set_starsystemdef_Proserpina_defender_strength_10",
+							"WIIC_set_starsystemdef_Proserpina_attacker_strength_20",
+							"WIIC_set_starsystemdef_Kesai(Kasai)_defender_strength_10",
+							"WIIC_set_starsystemdef_Kesai(Kasai)_attacker_strength_20",
+							"WIIC_set_starsystemdef_Addicks_defender_strength_25",
+							"WIIC_set_starsystemdef_Addicks_attacker_strength_10",
+							"WIIC_set_starsystemdef_Cassias_defender_strength_25",
+							"WIIC_set_starsystemdef_Cassias_attacker_strength_10",
+							"WIIC_set_starsystemdef_NewSyrtis_defender_strength_30",
+							"WIIC_set_starsystemdef_NewSyrtis_attacker_strength_30"
+							],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

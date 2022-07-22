@@ -1,0 +1,86 @@
+{
+	"Description": {
+		"Id": "3067-03-07",
+		"Name": "MercNews Broadcast",
+		"Details": "PRINCE VICTOR ADVANCES ON AVALON CITY\r\n\n\nNew Avalon, Federated Commonwealth:  Prince Victor Steiner-Davion has begun a drive on the capital city of the Federated Commonwealth!  After the Davion Assault Guards and First Crucis Lancers made the initial landings on the main continent of Albion, they were quickly reinforced by the rest of the Allied task force which included the Twenty-Third Arcturan Guards, Sixth Crucis Lancers and the Tenth Lyran Guard.  Loyalist forces, lead by Marshal of the Armies Jackson Davion, have heavily fortified the approaches to the city, and in some places are turning Victor's advance into a grueling crawl.\n\nIn Avalon City, Archon-Princess Katrina Steiner has called for New Avalon's people to resist the Allied troops in any way they could, and for all available Loyalist forces to reinforce the capital.  Despite Loyalist efforts, the battle for Avalon City appears imminent.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "TIKONOV DECLARES INDEPENDENCE\r\n\n\nTikonov, Capellan Confederation:  After a swift and brutal uprising backed by the Capellan House Dai Da Chi, the Free Tikonov movement has declared the planet's independence from the Federated Commonwealth.  Chanceller Sun-Tzu Liao has already recognized the Free Tikonov movement's leadership of the planet and claimed the system as a Capellan protectorate.  These moves, which form part of a recognized Capellan strategy of expansion in the Chaos March worlds, have denied an ancient enemy an extremely important world and furthers the Chanceller's own standing by returning a traditional Capellan capital world to Confederation control.\n\nIn response, Duke George Hasek II, already fighting off Capellan moves into the Chaos March and the Taurian invasion of the Pleiades Cluster, has sent naval forces to blockade the planet, seeking to deny Tikonov's military output from reaching the Confederation.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+							"WIIC_give_starsystemdef_Tikonov_to_Liao",
+							"WIIC_give_starsystemdef_NewAvalon_to_Steiner",
+							"WIIC_Davion_attacks_starsystemdef_NewAvalon",
+							"WIIC_set_starsystemdef_NewAvalon_defender_strength_10",
+							"WIIC_set_starsystemdef_NewAvalon_attacker_strength_30"
+							],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

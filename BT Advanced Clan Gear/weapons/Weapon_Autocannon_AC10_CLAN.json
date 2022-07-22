@@ -9,7 +9,7 @@
 			"Bonuses": [
 				"VariableBurstCount: 2",
 				"WpnRecoil: 3",
-				"WeaponJAMFlat: 10"
+				"WeaponJAMFlat: 15"
 			]
 		}
 	},
@@ -25,7 +25,7 @@
 	],
 	"AmmoCategory": "UAC10",
 	"StartingAmmoCapacity": 0,
-	"HeatGenerated": 19,
+	"HeatGenerated": 15,
 	"Damage": 60,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
@@ -37,11 +37,11 @@
 	"AOECapable": false,
 	"IndirectFireCapable": false,
 	"RefireModifier": 3,
-	"ShotsWhenFired": 2,
+	"ShotsWhenFired": 1,
 	"ProjectilesPerShot": 1,
 	"AttackRecoil": 3,
 	"Instability": 15,
-	"FireDelayMultiplier": 0.2,
+	"FireDelayMultiplier": 0.1,
 	"FireTerrainChance": 0,
 	"WeaponEffectID": "WeaponEffect-Weapon_AC10_Single",
 	"Description": {
@@ -56,8 +56,8 @@
 		"Details": "One of the most powerful and efficient weapons mounted in combat, AC/10s are known for their heavy damage and ability to stagger opponents. Like all Autocannon weaponry, AC/10s suffer from recoil effects from continuous fire. \n\n<b><color=#ffcc00>Uses UAC10 Ammo.</color></b> \n\n <b><color=#00ffff>Left Click on Chance to hit during battle to switch firing mode</color> </b>",
 		"Icon": "uixSvgIcon_weapon_Ballistic"
 	},
-	"BonusValueA": "+3 Recoil",
-	"BonusValueB": "Ultra",
+	"BonusValueA": "",
+	"BonusValueB": "",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",
 	"PrefabIdentifier": "AC10",
@@ -72,15 +72,15 @@
 		{
 			"Id": "x1",
 			"UIName": "x1",
-			"isBaseMode": false,
-			"ShotsWhenFired": -1,
-			"HeatGenerated": -9
+			"isBaseMode": true
 		},
 		{
 			"Id": "x2",
 			"UIName": "x2",
-			"isBaseMode": true,
-			"FlatJammingChance": 0.1
+			"isBaseMode": false,
+			"FlatJammingChance": 0.15,
+			"ShotsWhenFired": 1,
+			"HeatGenerated": 15
 		}
 	],
 	"statusEffects": [],

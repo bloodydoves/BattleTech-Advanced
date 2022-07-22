@@ -1,0 +1,138 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/e/p/erppc"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"PPCDEBUFF: 2"
+			]
+		}
+	},
+	"Category": "Energy",
+	"Type": "PPC",
+	"WeaponSubType": "PPC",
+	"MinRange": 0,
+	"MaxRange": 720,
+	"RangeSplit": [
+		180,
+		360,
+		540
+	],
+	"AmmoCategory": "NotSet",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 48,
+	"Damage": 50,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 0,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": 0,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 1,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 0,
+	"Instability": 15,	
+	"FireDelayMultiplier": 0.06,
+	"ProjectileSpeedMultiplier": 1.6,
+	"WeaponEffectID": "WeaponEffect-Weapon_PPC",
+	"Description": {
+		"Cost": 1393000,
+		"Rarity": 10,
+		"Purchasable": true,
+		"Manufacturer": "CLAN",
+		"Model": "Extended-Range Rotary PPC",
+		"UIName": "ER Rotary PPC (C)",
+		"Id": "Weapon_PPC_PPCERR_CLAN",
+		"Name": "ER Rotary PPC (C)",
+		"Details": "This highly experimental PPC operates similarly to its rotary ballistics cousins, allowing it to fire up to three times the rate of fire of a standard Clan ER PPC. It does however produce a truly ridiculous amount of recoil and heat at those firing rates however, as well as dealing decreased amounts of damage per projectile. Use with caution",
+		"Icon": "particle"
+	},
+	"BonusValueA": "Rotary",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "PPC",
+	"BattleValue": 0,
+	"InventorySize": 3,
+	"Tonnage": 6,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"Modes": [
+		{
+			"Id": "x1",
+			"UIName": "x1",
+			"isBaseMode": true,
+			"ShotsWhenFired": 0
+		},
+		{
+			"Id": "x2",
+			"UIName": "x2",
+			"isBaseMode": false,
+			"ShotsWhenFired": 1,
+			"RefireModifier": 1,
+			"HeatGenerated": 48
+		},
+		{
+			"Id": "x3",
+			"UIName": "x3",
+			"isBaseMode": false,
+			"ShotsWhenFired": 2,
+			"RefireModifier": 2,
+			"HeatGenerated": 96
+		}
+	],
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": 2,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "NotSet",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDefPPC",
+				"Name": "SENSORS IMPAIRED",
+				"Details": "[AMT] Difficulty to all of this unit's attacks until its next activation.",
+				"Icon": "uixSvgIcon_status_sensorsImpaired"
+			},
+			"nature": "Debuff",
+			"statisticData": {
+				"statName": "AccuracyModifier",
+				"operation": "Float_Add",
+				"modValue": "2.0",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_extreme"
+		],
+		"tagSetSourceFile": ""
+	}
+}

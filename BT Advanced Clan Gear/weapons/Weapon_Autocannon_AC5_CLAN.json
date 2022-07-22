@@ -12,7 +12,7 @@
 			"Bonuses": [
 				"VariableBurstCount: 2",
 				"WpnRecoil: 2",
-				"WeaponJAMFlat: 10",
+				"WeaponJAMFlat: 15",
 				"NoFireInMelee"
 			]
 		}
@@ -29,7 +29,7 @@
 	],
 	"AmmoCategory": "UAC5",
 	"StartingAmmoCapacity": 0,
-	"HeatGenerated": 15,
+	"HeatGenerated": 10,
 	"Damage": 45,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
@@ -41,11 +41,11 @@
 	"AOECapable": false,
 	"IndirectFireCapable": false,
 	"RefireModifier": 2,
-	"ShotsWhenFired": 2,
+	"ShotsWhenFired": 1,
 	"ProjectilesPerShot": 1,
 	"AttackRecoil": 2,
 	"Instability": 8,
-	"FireDelayMultiplier": 2,
+	"FireDelayMultiplier": 0.1,
 	"FireTerrainChance": 0,
 	"WeaponEffectID": "WeaponEffect-Weapon_AC5",
 	"Description": {
@@ -60,8 +60,8 @@
 		"Details": "Ultra Autocannons boast double the rate of fire of a regular Autocannon, with only moderate increases in weight, size, and heat. The UAC/5 is a reliable long range weapon.  \n\n<b><color=#ffcc00>Uses UAC5 Ammo.</color></b> \n\n <b><color=#00ffff>Left Click on Chance to hit during battle to switch firing mode</color> </b>",
 		"Icon": "uixSvgIcon_weapon_Ballistic"
 	},
-	"BonusValueA": "+2 Recoil",
-	"BonusValueB": "Ultra",
+	"BonusValueA": "",
+	"BonusValueB": "",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",
 	"PrefabIdentifier": "AC5",
@@ -76,15 +76,15 @@
 		{
 			"Id": "x1",
 			"UIName": "x1",
-			"isBaseMode": false,
-			"ShotsWhenFired": -1,
-			"HeatGenerated": -7
+			"isBaseMode": true
 		},
 		{
 			"Id": "x2",
 			"UIName": "x2",
-			"isBaseMode": true,
-			"FlatJammingChance": 0.1
+			"isBaseMode": false,
+			"ShotsWhenFired": 1,
+			"HeatGenerated": 10,
+			"FlatJammingChance": 0.15
 		}
 	],
 	"statusEffects": [],

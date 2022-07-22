@@ -1,16 +1,24 @@
 {
+	"Custom": {
+		"VAssemblyVariant": {
+			"PrefabID": "Fury",
+			"Exclude": false,
+			"Include": true
+		}
+	},
 	"CustomParts": {
 		"CustomParts": []
 	},
 	"YangsThoughts": "It's a tank, Boss, they all look the same to me.",
 	"Description": {
+		"Cost": 1000000,
+		"Rarity": 0,
+		"Purchasable": false,
+		"UIName": "Fury Command Tank",
 		"Id": "vehiclechassisdef_FURY",
 		"Name": "Fury Command Tank",
-		"Details": "",
-		"Icon": "Fury",
-		"Cost": 993,
-		"Rarity": 0,
-		"Purchasable": false
+		"Details": "The production version of the Kalki is a complete redesign of the failed experimental version. Many components from the SturmFeur are re-used, but the chassis has been updated to 150 tons. The Kalki is now powered by a Fuel Cell engine, which reduces cost. It also mounts a pair of Magshots for protection. The Cruise Missile 50 launcher still only has one reload, but engineers were able to upgrade the armor protection to seven tons.\n\n <b><color=#ffcc00>Tracked: High traction, agile turning.</color></b>\n\n \n\n <b><color=#ffcc00>Movement: 4/6 Hex: 120/180 Meters.</color></b>\n\n<b>Armor:</b> Armor\n<b>Structure:</b> Structure\n<b>Values       A        S  </b>\n<b>Front</b>       300     40\n<b>Left</b>         195     40\n<b>Right</b>       195     40\n<b>Rear</b>        180     40\n<b>Turret</b>      290     40\n\n<b>Total</b>      1160    200\n",
+		"Icon": "Fury"
 	},
 	"MovementCapDefID": "movedef_4-6cv",
 	"PathingCapDefID": "pathingdef_assault_tracked",
@@ -70,12 +78,7 @@
 	"Locations": [
 		{
 			"Location": "Front",
-			"Hardpoints": [
-				{
-					"WeaponMount": "Missile",
-					"Omni": false
-				}
-			],
+			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 0,
 			"MaxArmor": 320,
@@ -109,19 +112,7 @@
 			"Location": "Turret",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "Missile",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "Energy",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "Energy",
+					"WeaponMount": "Ballistic",
 					"Omni": false
 				}
 			],

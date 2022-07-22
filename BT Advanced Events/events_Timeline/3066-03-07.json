@@ -1,0 +1,97 @@
+{
+	"Description": {
+		"Id": "3066-03-07",
+		"Name": "MercNews Broadcast",
+		"Details": "THIRD SKYE REBELLION UPDATES!\r\n\n\nSkye, Isle of Skye: Free Skye attacks continue to grind down the pro-Lyran defenders on multiple planets.  On Freedom, the arrival of Maria Esteban has signalled a new surge of attacks against the 5th Lyran Guard, now considered by all to be desperately holding on.  On Eaton, governor Jonathan Thayer has declared for the separatist movement.  Meanwhile, the Loyalist Eleventh Arcturan Guard and the Alarion Jaegers landed on Skye itself, defended by the Skye Jaegers and the planetary militia.  Most importantly however, on Hesperus the 4th Skye landed to reinforce the Separatist 17th Skye Rangers and 14th and 32nd Lyran Guards already onplanet against the defenders, which include a now decimated Gray Death Legion.  This signals a new round of fighting in the region, and all sides are calls for mercenaries to fill their ranks.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "WORD OF BLAKE PROTECTORATE FORMED!\r\n\n\nOutreach, Federated Commonwealth: On February 18th,  the planetary governments five Chaos March worlds of Caph, Keid, New Home, Bryant and Epsilon Eridani that banded together under the protection of Terra and the Word of Blake.  While a de facto situation has been present for a number of years, this now formalizes the transfer of these planets to the techno-theocratic Word of Blake.  Observers believe with this announcement, the Word of Blake will look to upon the rest of the Chaos March as an area to expand.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+							"WIIC_give_starsystemdef_Hesperus_to_Steiner",
+							"WIIC_give_starsystemdef_Freedom_to_Locals",
+							"WIIC_give_starsystemdef_Skye_to_Locals",
+							"WIIC_give_starsystemdef_Eaton_to_Steiner",
+							"WIIC_Steiner_attacks_starsystemdef_Skye",
+							"WIIC_Steiner_attacks_starsystemdef_Freedom",
+							"WIIC_Locals_attacks_starsystemdef_Eaton",
+							"WIIC_Locals_attacks_starsystemdef_Hesperus",
+							"WIIC_set_starsystemdef_Hesperus_defender_strength_15",
+							"WIIC_set_starsystemdef_Hesperus_attacker_strength_25",
+							"WIIC_set_starsystemdef_Freedom_defender_strength_20",
+							"WIIC_set_starsystemdef_Freedom_attacker_strength_10",
+							"WIIC_set_starsystemdef_Skye_defender_strength_15",
+							"WIIC_set_starsystemdef_Skye_attacker_strength_25",
+							"WIIC_set_starsystemdef_Eaton_defender_strength_15",
+							"WIIC_set_starsystemdef_Eaton_attacker_strength_15"
+							],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

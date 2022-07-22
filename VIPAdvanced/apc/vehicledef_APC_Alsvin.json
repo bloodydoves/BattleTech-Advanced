@@ -7,7 +7,7 @@
 		"UIName": "Alsvin APC",
 		"Id": "vehicledef_APC_Alsvin",
 		"Name": "Alsvin APC",
-		"Details": "The Alsvin APC carries two Machine Guns and a Medium Laser in a turret, but these are carried usually only for defense against other infantry units. The machine guns have a half ton of ammunition available. The main feature of the Alsvin is the infantry bay located in the body as well as a C3 Slave and TAG unit for supporting heavier units during unit deployment. It is protected by seven tons of armor.\n\n <b><color=#ffcc00>Wheeled: Fast in open ground, slow in rough terrain.\n\n <b><color=#ffcc00>Movement: 4/6 Hex: 120/180 Meters.</color></b>\n\n<b>Armor:</b> Armor\n<b>Structure:</b> Structure\n<b>Values       A        S  </b>\n<b>Front</b>       150     25\n<b>Left</b>         125     25\n<b>Right</b>       125     25\n<b>Rear</b>        115     25\n<b>Turret</b>      125     25\n\n<b>Total</b>      640    125\n",
+		"Details": "The Alsvin APC carries two Machine Guns and a Medium Laser in a turret, but these are carried usually only for defense against other infantry units. The machine guns have a half ton of ammunition available. The main feature of the Alsvin is the infantry bay located in the body as well as a C3 Slave and TAG unit for supporting heavier units during unit deployment. It is protected by seven tons of armor.\n\n <b><color=#ffcc00>Wheeled: Fast in open ground, slow in rough terrain.\n\n <b><color=#ffcc00>Has Battle Armor Firing Ports.</b>\n\n <b><color=#ffcc00>Movement: 4/6 Hex: 120/180 Meters.</color></b>\n\n<b>Armor:</b> Armor\n<b>Structure:</b> Structure\n<b>Values       A        S  </b>\n<b>Front</b>       150     25\n<b>Left</b>         125     25\n<b>Right</b>       125     25\n<b>Rear</b>        115     25\n<b>Turret</b>      125     25\n\n<b>Total</b>      640    125\n",
 		"Icon": "Vargr"
 	},
 	"ChassisID": "vehiclechassisdef_APC_Alsvin",
@@ -36,6 +36,8 @@
 			"Rasalhague",
 			"Ives",
 			"Marian",
+			"Illyrian",
+			"Lothian",
 			"Hanse",
 			"Rim",
 			"Outworld",
@@ -277,6 +279,13 @@
 			"ComponentDefID": "emod_armorslots_standard",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1
+		},
+		{
+		  "MountedLocation": "Rear",
+		  "ComponentDefID": "Tank_BattleArmorFiringPorts",
+		  "ComponentDefType": "Upgrade",
+		  "HardpointSlot": -1,
+		  "DamageLevel": "Functional"
 		}
 	]
 }
