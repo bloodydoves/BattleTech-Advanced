@@ -6,7 +6,33 @@
     "Icon": "raining-martian"
   },
   "targetabilityModifier": 2,
+  "heatSinkMultiplier": 0.85,
   "visibilityMultiplier": 0.6,
   "signatureMultiplier": 0.6,
-  "stabilityDamageMultiplier": 1.2
+  "stickyEffect": {
+    "durationData": {
+      "duration": -1,
+      "stackLimit": 1
+    },
+    "targetingData": {
+      "effectTriggerType": "Passive",
+        "effectTargetType": "Creator",
+        "showInStatusPanel": false,
+        "showInTargetPreview": false
+    },
+    "effectType": "StatisticEffect",
+    "Description": {
+      "Id": "DustStormStability",
+      "Name": "Dust Storm Stability Damage",
+      "Details": "",
+      "Icon": ""
+    },
+    "statisticData": {
+		"statName": "ReceivedInstabilityMultiplier",
+		"operation": "Float_Multiply",
+		"modValue": "1.2",
+		"modType": "System.Single"
+    },
+    "nature": "Buff"
+  }
 }

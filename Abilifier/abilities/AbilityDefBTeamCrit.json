@@ -1,0 +1,47 @@
+{
+	"Description": {
+		"Id": "AbilityDefBTeamCrit",
+		"Name": "BEGINNER'S LUCK",
+		"Details": "ACTION: Pray to the gods of luck to gain their favor, granting +50% critical damage chance for one turn. 3 turn cooldown. <b><color=#099ff2>Costs 15 Resolve to use!</color></b>",
+		"Icon": "coinflip"
+	},
+	"DisplayParams": "ShowInMWTRay",
+	"ActivationTime": "ConsumedByFiring",
+	"ActivationCooldown": 2,
+	"Targeting": "ActorSelf",
+	"ResolveCost": 15,
+	"EffectData": [
+		{
+			"durationData": {
+				"duration": 1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-BeginnersLuckCritChance",
+				"Name": "Blessed By The Gods of Luck",
+				"Details": "+50% Crit Chance",
+				"Icon": "coinflip"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CriticalChanceMultiplier",
+				"operation": "Float_Multiply",
+				"modValue": "1.5",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			}
+		}
+	],
+	"Priority": 7
+}

@@ -1,0 +1,460 @@
+{
+	"Custom": {
+		"AssemblyVariant": {
+		  "PrefabID": "Scorpion",
+		  "Exclude": false,
+		  "Include": true
+		},
+		"ArmActuatorSupport": {
+		  "LeftLimit": "Hand",
+		  "RightLimit": "Hand",
+		  "LeftDefaultShoulder": "Quad_Front_leg_hip",
+		  "RightDefaultShoulder": "Quad_Front_leg_hip",
+		  "LeftDefaultUpper": "Quad_Front_leg_upper",
+		  "RightDefaultUpper": "Quad_Front_leg_upper",
+		  "LeftDefaultLower": "Quad_Front_leg_lower",
+		  "RightDefaultLower": "Quad_Front_leg_lower",
+		  "LeftDefaultHand": "Quad_Front_leg_foot",
+		  "RightDefaultHand": "Quad_Front_leg_foot"
+		},
+		"ChassisDefaults": [
+		  {
+			"Location": "LeftLeg",
+			"CategoryID": "LegHip",
+			"DefID": "Quad_Hind_leg_hip",
+			"Type": "Upgrade"
+		  },
+		  {
+			"Location": "LeftLeg",
+			"CategoryID": "LegUpperActuator",
+			"DefID": "Quad_Hind_leg_upper",
+			"Type": "Upgrade"
+		  },
+		  {
+			"Location": "LeftLeg",
+			"CategoryID": "LegLowerActuator",
+			"DefID": "Quad_Hind_leg_lower",
+			"Type": "Upgrade"
+		  },
+		  {
+			"Location": "LeftLeg",
+			"CategoryID": "LegFootActuator",
+			"DefID": "Quad_Hind_leg_foot",
+			"Type": "Upgrade"
+		  },
+		  {
+			"Location": "RightLeg",
+			"CategoryID": "LegHip",
+			"DefID": "Quad_Hind_leg_hip",
+			"Type": "Upgrade"
+		  },
+		  {
+			"Location": "RightLeg",
+			"CategoryID": "LegUpperActuator",
+			"DefID": "Quad_Hind_leg_upper",
+			"Type": "Upgrade"
+		  },
+		  {
+			"Location": "RightLeg",
+			"CategoryID": "LegLowerActuator",
+			"DefID": "Quad_Hind_leg_lower",
+			"Type": "Upgrade"
+		  },
+		  {
+			"Location": "RightLeg",
+			"CategoryID": "LegFootActuator",
+			"DefID": "Quad_Hind_leg_foot",
+			"Type": "Upgrade"
+		  }
+		]
+	},
+	"CustomParts": {
+		"MeleeWeaponOverride": {
+		  "DefaultWeapon": "Weapon_MeleeAttackEx"
+		},
+		"FiringArc": 90,
+		"Unaffected": {
+		  "DesignMasks": "false",
+		  "Pathing": "false",
+		  "Fire": "false",
+		  "Landmines": "false"
+		},
+		"ArmsCountedAsLegs": true,
+		"MoveCostModPerBiome": {
+		  "DesignMaskBiomeMartianVacuum": 1.0,
+		  "DesignMaskBiomeLunarVacuum": 1.0
+		}
+    },
+	"Description": {
+		"Cost": 5200000,
+		"Rarity": 1,
+		"Purchasable": true,
+		"Manufacturer": "",
+		"Model": "",
+		"UIName": "Scorpion",
+		"Id": "chassisdef_scorpion_SCP-14K",
+		"Name": "Scorpion",
+		"Details": "This Scorpion is one of a lance-worth of semi-unique 'Mechs designed by the Draconis Combine for ultimate blackop uses. Called the Tsuchigumo, it uses a combination of CLPS and NullSignature stealth systems to be virtually invisible. Armed with a pair of Light PPCs with a PPC Capacitor as well as a TAG, the Tsuchigumo is the ultimate harassment unit. A Supercharger provides excellent maneuverability while an ECM suite combines with the stealth systems for maximum defensive boosts.",
+		"Icon": "uixTxrIcon_scorpion"
+	},
+	"MovementCapDefID": "movedef_griffin_GRF-1N",
+	"PathingCapDefID": "pathingdef_medium",
+	"HardpointDataDefID": "hardpointdatadef_scorpionmech",
+	"PrefabIdentifier": "chrprfmech_scorpionmechbase-001",
+	"PrefabBase": "scorpionmech",
+	"Tonnage": 55,
+	"InitialTonnage": 5.5,
+	"weightClass": "MEDIUM",
+	"BattleValue": 6088000,
+	"Heatsinks": 0,
+	"TopSpeed": 80,
+	"TurnRadius": 90,
+	"MaxJumpjets": 30,
+	"Stability": 130,
+	"StabilityDefenses": [
+		0,
+		0,
+		0,
+		0,
+		0,
+		0
+	],
+	"SpotterDistanceMultiplier": 1,
+	"VisibilityMultiplier": 1,
+	"SensorRangeMultiplier": 1,
+	"Signature": 0,
+	"Radius": 5,
+	"PunchesWithLeftArm": false,
+	"MeleeDamage": 65,
+	"MeleeInstability": 30,
+	"MeleeToHitModifier": 0,
+	"DFADamage": 65,
+	"DFAToHitModifier": 0,
+	"DFASelfDamage": 65,
+	"DFAInstability": 30,
+	"Locations": [
+		{
+			"Location": "Head",
+			"Hardpoints": [
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 6,
+			"MaxArmor": 45,
+			"MaxRearArmor": -1,
+			"InternalStructure": 16
+		},
+		{
+			"Location": "LeftArm",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 6,
+			"MaxArmor": 130,
+			"MaxRearArmor": -1,
+			"InternalStructure": 65
+		},
+		{
+			"Location": "LeftTorso",
+			"Hardpoints": [
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 13,
+			"MaxArmor": 130,
+			"MaxRearArmor": 65,
+			"InternalStructure": 65
+		},
+		{
+			"Location": "CenterTorso",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 15,
+			"MaxArmor": 180,
+			"MaxRearArmor": 90,
+			"InternalStructure": 90
+		},
+		{
+			"Location": "RightTorso",
+			"Hardpoints": [
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 13,
+			"MaxArmor": 130,
+			"MaxRearArmor": 65,
+			"InternalStructure": 65
+		},
+		{
+			"Location": "RightArm",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 6,
+			"MaxArmor": 130,
+			"MaxRearArmor": -1,
+			"InternalStructure": 65
+		},
+		{
+			"Location": "LeftLeg",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 6,
+			"MaxArmor": 130,
+			"MaxRearArmor": -1,
+			"InternalStructure": 65
+		},
+		{
+			"Location": "RightLeg",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 6,
+			"MaxArmor": 130,
+			"MaxRearArmor": -1,
+			"InternalStructure": 65
+		}
+	],
+	"LOSSourcePositions": [
+		{
+			"x": 0,
+			"y": 15,
+			"z": 0
+		},
+		{
+			"x": 4,
+			"y": 15,
+			"z": 0
+		},
+		{
+			"x": -4,
+			"y": 15,
+			"z": 0
+		}
+	],
+	"LOSTargetPositions": [
+		{
+			"x": 0,
+			"y": 15,
+			"z": 0
+		},
+		{
+			"x": 4,
+			"y": 15,
+			"z": 0
+		},
+		{
+			"x": -4,
+			"y": 15,
+			"z": 0
+		},
+		{
+			"x": 3,
+			"y": 5,
+			"z": 0
+		},
+		{
+			"x": -3,
+			"y": 5,
+			"z": 0
+		}
+	],
+	"VariantName": "SCP-14K",
+	"ChassisTags": {
+		"items": [
+			"QuadMech"
+		],
+		"tagSetSourceFile": ""
+	},
+	"StockRole": "Quad Flanker",
+	"YangsThoughts": "This Scorpion is one of a lance-worth of semi-unique 'Mechs designed by the Draconis Combine for ultimate blackop uses. Called the Tsuchigumo, it uses a combination of CLPS and NullSignature stealth systems to be virtually invisible. Armed with a pair of Light PPCs with a PPC Capacitor as well as a TAG, the Tsuchigumo is the ultimate harassment unit. A Supercharger provides excellent maneuverability while an ECM suite combines with the stealth systems for maximum defensive boosts.",
+	"FixedEquipment": [
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "Gear_Gyro_Quad",
+			"SimGameUID": "",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "emod_structureslots_endocomposite",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional",
+			"prefabName": "",
+			"hasPrefabName": true
+		},
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "Gear_ChameleonLightPolarizationShield",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional",
+			"prefabName": "",
+			"hasPrefabName": true
+		},
+		{
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "Gear_Chameleon_Linked",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftLeg",
+			"ComponentDefID": "Gear_Chameleon_Linked",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftArm",
+			"ComponentDefID": "Gear_Chameleon_Linked",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "Gear_Chameleon_Linked",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightLeg",
+			"ComponentDefID": "Gear_Chameleon_Linked",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightArm",
+			"ComponentDefID": "Gear_Chameleon_Linked",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "Gear_NullSignatureSystem",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional",
+			"prefabName": "",
+			"hasPrefabName": true
+		},
+		{
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "Gear_NullSig_Linked",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftLeg",
+			"ComponentDefID": "Gear_NullSig_Linked",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftArm",
+			"ComponentDefID": "Gear_NullSig_Linked",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "Gear_NullSig_Linked",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightLeg",
+			"ComponentDefID": "Gear_NullSig_Linked",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightArm",
+			"ComponentDefID": "Gear_NullSig_Linked",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		}
+	],
+	"CustomParts": {
+		"CustomParts": []
+	}
+}

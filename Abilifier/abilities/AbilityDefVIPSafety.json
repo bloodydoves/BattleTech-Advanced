@@ -1,0 +1,72 @@
+{
+	"Description": {
+		"Id": "AbilityDefVIPSafety",
+		"Name": "TAKING COVER",
+		"Details": "ACTION: Focus on defense while giving up on offense, gaining 90% damage reduction but suffering a -20 penalty to attacks for the turn. 2 turn cooldown. <b><color=#099ff2>Costs 15 Resolve to use!</color></b>",
+		"Icon": "healing-shield"
+	},
+	"DisplayParams": "ShowInMWTRay",
+	"ActivationTime": "ConsumedByFiring",
+	"ActivationCooldown": 2,
+	"Targeting": "ActorSelf",
+	"ResolveCost": 15,
+	"EffectData": [
+		{
+			"durationData": {
+				"duration": 1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-VIPSafetyDR",
+				"Name": "Increased DR",
+				"Details": "+90% Damage Reduction",
+				"Icon": "healing-shield"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "DamageReductionMultiplierAll",
+				"operation": "Float_Multiply",
+				"modValue": "0.1",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": 1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-VIPSafetyAccuracy",
+				"Name": "Neutralized Targeting",
+				"Details": "-20 Accuracy",
+				"Icon": "healing-shield"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "AccuracyModifier",
+				"operation": "Float_Add",
+				"modValue": "20",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			}
+		}
+	],
+	"Priority": 7
+}

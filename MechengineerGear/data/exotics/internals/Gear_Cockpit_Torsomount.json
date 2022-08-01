@@ -22,6 +22,7 @@
 				"TorsoMount",
 				"Initiative: +1",
 				"Health: +10",
+				"NoBleedout",
 				"IsCockpit"
 			]
 		},
@@ -141,6 +142,31 @@
 			"nature": "Debuff",
 			"statisticData": {
 				"statName": "isTorsoMount",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-Torso_Cockpit-NoBleed",
+				"Name": "No Bleedout",
+				"Details": "This unit cannot bleed out from injuries.",
+				"Icon": "layeredarmor"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "DisablesBleeding",
 				"operation": "Set",
 				"modValue": "true",
 				"modType": "System.Boolean"
