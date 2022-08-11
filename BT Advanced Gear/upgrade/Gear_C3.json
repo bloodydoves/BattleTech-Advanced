@@ -13,44 +13,8 @@
 				"C3Radius: 90"
 			]
 		},
-		"ActivatableComponent": {
-			"ButtonName": "C3 Network",
-			"CanNotBeActivatedManualy": true,
-			"ActiveByDefault": true,
-			"FailFlatChance": 0.0,
-			"SafeActivation": true,
-			"statusEffects": [
-				{
-					"durationData": {
-						"duration": -1,
-						"stackLimit": -1
-					},
-					"targetingData": {
-						"effectTriggerType": "Passive",
-						"specialRules": "NotSet",
-						"effectTargetType": "Creator",
-						"range": 0.0,
-						"forcePathRebuild": false,
-						"forceVisRebuild": false,
-						"showInTargetPreview": false,
-						"showInStatusPanel": false
-					},
-					"effectType": "StatisticEffect",
-					"Description": {
-						"Id": "C3Slave_Network_Engagement",
-						"Name": "C3 Network - Slave",
-						"Details": "PASSIVE: Can be part of C3 network.",
-						"Icon": ""
-					},
-					"statisticData": {
-						"statName": "ADD_ENCOUNTER_TAG_C3_Slave",
-						"operation": "Float_Add",
-						"modValue": "1",
-						"modType": "System.Single"
-					},
-					"nature": "Buff"
-				}
-			]
+		"InventorySorter": {
+			"SortKey": "00024"
 		}
 	},
 	"StatName": null,
@@ -66,7 +30,7 @@
 		"Id": "Gear_C3",
 		"Name": "C3 Network Slave unit",
 		"Details": "The C3 Slave Unit is the second part of a C3 Network. Weighing a single ton and carried by a member of a lance or company, the C3 Slave provides a minor sensor and sight increase for the carrying unit.",
-		"Icon": "mesh-network"
+		"Icon": "circuitry"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
@@ -79,6 +43,60 @@
 	"AllowedLocations": "All",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
+	"Auras": [
+		{
+			"Id": "Gear_C3",
+			"Name": "C3",
+			"ReticleColor": "#00e600",
+			"Range": 90,
+			"RemoveOnSensorLock": false,
+			"State": "Persistent",
+			"ApplySelf": false,
+			"AllyStealthAffection": "None",
+			"EnemyStealthAffection": "None",
+			"IsPositiveToAlly": false,
+			"IsNegativeToEnemy": true,
+			"ownerVFX": [],
+			"targetVFX": [],
+			"removeOwnerVFX": [],
+			"removeTargetVFX": [],
+			"ownerSFX": [],
+			"targetSFX": [],
+			"removeOwnerSFX": [],
+			"removeTargetSFX": [],
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"specialRules": "NotSet",
+						"effectTargetType": "EnemiesWithinRange",
+						"range": 0.0,
+						"showInTargetPreview": true,
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "C3-TargetInfo",
+						"Name": "C3 Targeting Information",
+						"Details": "Shares targeting information on nearby enemies, +1 to hit enemies in radius",
+						"Icon": "circuitry"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "AccuracyModifier",
+						"operation": "Float_Add",
+						"modValue": "-1.0",
+						"modType": "System.Single",
+						"targetCollection": "Weapon"
+					}
+				}
+			]
+		}
+	],
 	"statusEffects": [
 		{
 			"durationData": {
@@ -87,7 +105,7 @@
 			},
 			"targetingData": {
 				"effectTriggerType": "Passive",
-				"effectTargetType": "Creator",
+				"effectTargetType": "AllLanceMates",
 				"showInTargetPreview": false,
 				"showInStatusPanel": false
 			},
@@ -113,7 +131,7 @@
 			},
 			"targetingData": {
 				"effectTriggerType": "Passive",
-				"effectTargetType": "Creator",
+				"effectTargetType": "AllLanceMates",
 				"showInTargetPreview": false,
 				"showInStatusPanel": false
 			},

@@ -15,45 +15,6 @@
 				"C3iRadius: 120",
 				"C3Radius: 120"
 			]
-		},
-		"ActivatableComponent": {
-			"ButtonName": "C3i Network",
-			"CanNotBeActivatedManualy": false,
-			"ActiveByDefault": true,
-			"FailFlatChance": 0.0,
-			"SafeActivation": true,
-			"statusEffects": [
-				{
-					"durationData": {
-						"duration": -1,
-						"stackLimit": -1
-					},
-					"targetingData": {
-						"effectTriggerType": "Passive",
-						"specialRules": "NotSet",
-						"effectTargetType": "Creator",
-						"range": 0.0,
-						"forcePathRebuild": false,
-						"forceVisRebuild": false,
-						"showInTargetPreview": false,
-						"showInStatusPanel": false
-					},
-					"effectType": "StatisticEffect",
-					"Description": {
-						"Id": "C3i_Network_Engagement",
-						"Name": "C3i Network",
-						"Details": "PASSIVE: Can be part of C3i network.",
-						"Icon": ""
-					},
-					"statisticData": {
-						"statName": "ADD_ENCOUNTER_TAG_C3i_Network",
-						"operation": "Float_Add",
-						"modValue": "1",
-						"modType": "System.Single"
-					},
-					"nature": "Buff"
-				}
-			]
 		}
 	},
 	"StatName": null,
@@ -69,7 +30,7 @@
 		"Id": "Gear_C3i",
 		"Name": "Improved C3 Computer",
 		"Details": "The Improved C3 Computer is a broad-spectrum upgrade of the standard C3 network units. Acting much like a combination of a C3 slave unit and a Guardian ECM unit, the C3i is capable of a wide variety of lance benefits (though it does not count as an ECM for purposes of something like Stealth Armor). However, the unit is fairly expensive and rare due to its fragility and complexity of construction. Still, the unit is used by elite ComStar forces for unit cohesion.",
-		"Icon": "mesh-network"
+		"Icon": "circuitry"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
@@ -86,8 +47,8 @@
 		{
 			"Id": "Gear_C3i",
 			"Name": "C3i",
-			"ReticleColor": "#00f2ff",
-			"Range": 90,
+			"ReticleColor": "#ffffff",
+			"Range": 120,
 			"RemoveOnSensorLock": false,
 			"State": "Persistent",
 			"ApplySelf": false,
@@ -95,7 +56,6 @@
 			"EnemyStealthAffection": "None",
 			"IsPositiveToAlly": true,
 			"IsNegativeToEnemy": true,
-			"neededTags": [ "C3i_Network" ],
 			"ownerVFX": [],
 			"targetVFX": [],
 			"removeOwnerVFX": [],
@@ -113,7 +73,7 @@
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"specialRules": "NotSet",
-						"effectTargetType": "AlliesWithinRange",
+						"effectTargetType": "EnemiesWithinRange",
 						"range": 0.0,
 						"showInTargetPreview": true,
 						"showInStatusPanel": false
@@ -123,7 +83,7 @@
 						"Id": "C3i-TargetInfo",
 						"Name": "C3i Targeting Information",
 						"Details": "Shares targeting information on nearby enemies, +1 to hit enemies in radius",
-						"Icon": "mesh-network"
+						"Icon": "circuitry"
 					},
 					"nature": "Buff",
 					"statisticData": {
@@ -148,7 +108,6 @@
 			"EnemyStealthAffection": "None",
 			"IsPositiveToAlly": true,
 			"IsNegativeToEnemy": false,
-			"neededTags": [ "C3i_Network" ],
 			"ownerVFX": [],
 			"targetVFX": [],
 			"removeOwnerVFX": [],
@@ -175,10 +134,10 @@
 					},
 					"effectType": "StatisticEffect",
 					"Description": {
-						"Id": "C3i-ECM",
+						"Id": "GECMInterference",
 						"Name": "C3i Interference",
 						"Details": "C3i making this unit harder to hit, +1 penalty to enemy attacks.",
-						"Icon": "mesh-network"
+						"Icon": "circuitry"
 					},
 					"statisticData": {
 						"statName": "ToHitThisActor",
