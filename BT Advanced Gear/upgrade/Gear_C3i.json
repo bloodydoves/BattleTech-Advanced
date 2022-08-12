@@ -7,13 +7,13 @@
 		],
 		"BonusDescriptions": {
 			"Bonuses": [
-				"LanceSensors: +10%",
-				"LanceSight: +10%",
-				"LanceResolve: +1",
-				"C3Accuracy: +1",
-				"Defense: +1",
-				"C3iRadius: 120",
-				"C3Radius: 120"
+				"C3i",
+				"C3iUnit",
+				"C3iECMHardened",
+				"Sensors: +10%",
+				"Sight: +10%",
+				"C3iResolve: 120, +2",
+				"C3iTargeting: 120, +1"
 			]
 		},
 		"ActivatableComponent": {
@@ -87,7 +87,7 @@
 			"Id": "Gear_C3i",
 			"Name": "C3i",
 			"ReticleColor": "#00f2ff",
-			"Range": 90,
+			"Range": 120,
 			"RemoveOnSensorLock": false,
 			"State": "Persistent",
 			"ApplySelf": false,
@@ -116,7 +116,7 @@
 						"effectTargetType": "AlliesWithinRange",
 						"range": 0.0,
 						"showInTargetPreview": true,
-						"showInStatusPanel": false
+						"showInStatusPanel": true
 					},
 					"effectType": "StatisticEffect",
 					"Description": {
@@ -133,31 +133,7 @@
 						"modType": "System.Single",
 						"targetCollection": "Weapon"
 					}
-				}
-			]
-		},
-		{
-			"Id": "Gear_C3i_ECM",
-			"Name": "C3i ECM",
-			"ReticleColor": "#ffffff",
-			"Range": 120,
-			"RemoveOnSensorLock": false,
-			"State": "Persistent",
-			"ApplySelf": true,
-			"AllyStealthAffection": "None",
-			"EnemyStealthAffection": "None",
-			"IsPositiveToAlly": true,
-			"IsNegativeToEnemy": false,
-			"neededTags": [ "C3i_Network" ],
-			"ownerVFX": [],
-			"targetVFX": [],
-			"removeOwnerVFX": [],
-			"removeTargetVFX": [],
-			"ownerSFX": [],
-			"targetSFX": [],
-			"removeOwnerSFX": [],
-			"removeTargetSFX": [],
-			"statusEffects": [
+				},
 				{
 					"durationData": {
 						"duration": -1,
@@ -167,26 +143,23 @@
 						"effectTriggerType": "Passive",
 						"specialRules": "NotSet",
 						"effectTargetType": "AlliesWithinRange",
-						"range": 0.0,
-						"forcePathRebuild": false,
-						"forceVisRebuild": false,
-						"showInTargetPreview": false,
+						"showInTargetPreview": true,
 						"showInStatusPanel": true
 					},
 					"effectType": "StatisticEffect",
 					"Description": {
-						"Id": "C3i-ECM",
-						"Name": "C3i Interference",
-						"Details": "C3i making this unit harder to hit, +1 penalty to enemy attacks.",
+						"Id": "StatusEffect-C3iResolve",
+						"Name": "C3i Resolve Gain",
+						"Details": "Provides a +2 bonus to Resolve",
 						"Icon": "mesh-network"
 					},
+					"nature": "Buff",
 					"statisticData": {
-						"statName": "ToHitThisActor",
-						"operation": "Float_Add",
-						"modValue": "1.0",
-						"modType": "System.Single"
-					},
-					"nature": "Buff"
+						"statName": "MoraleBonusGain",
+						"operation": "Int_Add",
+						"modValue": "2",
+						"modType": "System.Int32"
+					}
 				}
 			]
 		}
@@ -199,7 +172,7 @@
 			},
 			"targetingData": {
 				"effectTriggerType": "Passive",
-				"effectTargetType": "AllLanceMates",
+				"effectTargetType": "Creator",
 				"showInTargetPreview": false,
 				"showInStatusPanel": false
 			},
@@ -225,7 +198,7 @@
 			},
 			"targetingData": {
 				"effectTriggerType": "Passive",
-				"effectTargetType": "AllLanceMates",
+				"effectTargetType": "Creator",
 				"showInTargetPreview": false,
 				"showInStatusPanel": false
 			},
@@ -243,57 +216,6 @@
 				"modValue": "1.1",
 				"modType": "System.Single"
 			}
-		},
-		{
-			"durationData": {
-				"duration": -1,
-				"ticksOnActivations": false,
-				"useActivationsOfTarget": false,
-				"ticksOnEndOfRound": false,
-				"ticksOnMovements": false,
-				"stackLimit": 1,
-				"clearedWhenAttacked": false
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"triggerLimit": 0,
-				"extendDurationOnTrigger": 0,
-				"specialRules": "NotSet",
-				"effectTargetType": "AllLanceMates",
-				"range": 0,
-				"forcePathRebuild": false,
-				"forceVisRebuild": false,
-				"showInTargetPreview": true,
-				"showInStatusPanel": true
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "StatusEffect-C3MasterResolve",
-				"Name": "C3i Unit",
-				"Details": "Provides a +1 bonus to Resolve",
-				"Icon": "uixSvgIcon_equipment_Cockpit"
-			},
-			"nature": "Buff",
-			"statisticData": {
-				"appliesEachTick": false,
-				"effectsPersistAfterDestruction": false,
-				"statName": "MoraleBonusGain",
-				"operation": "Int_Add",
-				"modValue": "1",
-				"modType": "System.Int32",
-				"additionalRules": "NotSet",
-				"targetCollection": "NotSet",
-				"targetWeaponCategory": "NotSet",
-				"targetWeaponType": "NotSet",
-				"targetAmmoCategory": "NotSet",
-				"targetWeaponSubType": "NotSet"
-			},
-			"tagData": null,
-			"floatieData": null,
-			"actorBurningData": null,
-			"vfxData": null,
-			"instantModData": null,
-			"poorlyMaintainedEffectData": null
 		}
 	],
 	"ComponentTags": {
