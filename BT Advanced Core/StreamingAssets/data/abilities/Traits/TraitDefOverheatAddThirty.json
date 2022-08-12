@@ -2,7 +2,7 @@
 	"Description": {
 		"Id": "TraitDefOverheatAddThirty",
 		"Name": "Increased Heat Efficiency",
-		"Details": "PASSIVE: 'Mechs piloted by this MechWarrior can gain another 3% improved heat Efficiency.",
+		"Details": "PASSIVE: 'Mechs piloted by this MechWarrior can gain another 3% improved heat Efficiency with weapons.",
 		"Icon": "uixSvgIcon_ability_mastertactician"
 	},
 	"Type": "HeatGenerated",
@@ -29,7 +29,8 @@
 				"statName": "HeatGenerated",
 				"operation": "Float_Multiply",
 				"modValue": "0.97",
-				"modType": "System.Int32"
+				"modType": "System.Single",
+				"targetCollection": "Weapon"
 			},
 			"nature": "Buff"
 		}
