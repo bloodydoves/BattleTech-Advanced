@@ -15,7 +15,8 @@
 			"Bonuses": [
 				"Defense: +1",
 				"AntiMissileDefense: +4",
-				"ECMRadius: 120"
+				"ECMRadius: 150",
+				"C3Jamming: 120"
 			]
 		},
 		"InventorySorter": {
@@ -53,7 +54,7 @@
 			"Id": "Gear_GECM_ECM",
 			"Name": "ECM",
 			"ReticleColor": "#ffffff",
-			"Range": 120,
+			"Range": 150,
 			"RemoveOnSensorLock": false,
 			"State": "Persistent",
 			"ApplySelf": true,
@@ -99,7 +100,30 @@
 						"modType": "System.Single"
 					},
 					"nature": "Buff"
-				},
+				}
+			]
+		},
+		{
+			"Id": "Gear_AntiMissile_ECM_MissleScramble",
+			"Name": "Missile Scrambling",
+			"ReticleColor": "#ffffff",
+			"Range": 150,
+			"RemoveOnSensorLock": false,
+			"State": "Persistent",
+			"ApplySelf": true,
+			"AllyStealthAffection": "None",
+			"EnemyStealthAffection": "None",
+			"IsPositiveToAlly": true,
+			"IsNegativeToEnemy": false,
+			"ownerVFX": [],
+			"targetVFX": [],
+			"removeOwnerVFX": [],
+			"removeTargetVFX": [],
+			"ownerSFX": [],
+			"targetSFX": [],
+			"removeOwnerSFX": [],
+			"removeTargetSFX": [],
+			"statusEffects": [
 				{
 					"durationData": {
 						"duration": -1,
@@ -132,6 +156,112 @@
 						"targetWeaponCategory": "Missile",
 						"targetWeaponSubType": "NotSet",
 						"targetWeaponType": "NotSet"
+					},
+					"nature": "Buff"
+				}
+			]
+		},
+		{
+			"Id": "Gear_GECM_ECM_C3",
+			"Name": "C3 Jamming",
+			"ReticleColor": "#1a91ea",
+			"Range": 120,
+			"RemoveOnSensorLock": false,
+			"State": "Persistent",
+			"ApplySelf": true,
+			"AllyStealthAffection": "None",
+			"EnemyStealthAffection": "None",
+			"IsPositiveToAlly": true,
+			"IsNegativeToEnemy": false,
+			"ownerVFX": [],
+			"targetVFX": [],
+			"removeOwnerVFX": [],
+			"removeTargetVFX": [],
+			"ownerSFX": [],
+			"targetSFX": [],
+			"removeOwnerSFX": [],
+			"removeTargetSFX": [],
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"specialRules": "NotSet",
+						"effectTargetType": "EnemiesWithinRange",
+						"range": 0.0,
+						"forcePathRebuild": false,
+						"forceVisRebuild": false,
+						"showInTargetPreview": false,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect_ECM-C3-Jamming",
+						"Name": "C3 Jamming",
+						"Details": "Guardian ECM is jamming C3 networks near it, disabling them for as long as they remain in the area.",
+						"Icon": "circuitry"
+					},
+					"statisticData": {
+						"statName": "ADD_ENCOUNTER_TAG_C3_Network",
+						"operation": "Float_Add",
+						"modValue": "-2",
+						"modType": "System.Single"
+					},
+					"nature": "Buff"
+				}
+			]
+		},
+		{
+			"Id": "Gear_GECM_ECM_C3_Ally",
+			"Name": "C3 Jamming",
+			"ReticleColor": "#1a91ea",
+			"Range": 120,
+			"RemoveOnSensorLock": false,
+			"State": "Persistent",
+			"ApplySelf": true,
+			"AllyStealthAffection": "None",
+			"EnemyStealthAffection": "None",
+			"IsPositiveToAlly": true,
+			"IsNegativeToEnemy": false,
+			"ownerVFX": [],
+			"targetVFX": [],
+			"removeOwnerVFX": [],
+			"removeTargetVFX": [],
+			"ownerSFX": [],
+			"targetSFX": [],
+			"removeOwnerSFX": [],
+			"removeTargetSFX": [],
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"specialRules": "NotSet",
+						"effectTargetType": "AlliesWithinRange",
+						"range": 0.0,
+						"forcePathRebuild": false,
+						"forceVisRebuild": false,
+						"showInTargetPreview": false,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect_ECM-C3-Jamming-Allies",
+						"Name": "C3 Jamming",
+						"Details": "Guardian ECM is jamming C3 networks near it, disabling them for as long as they remain in the area.",
+						"Icon": "circuitry"
+					},
+					"statisticData": {
+						"statName": "ADD_ENCOUNTER_TAG_C3_Network",
+						"operation": "Float_Add",
+						"modValue": "-2",
+						"modType": "System.Single"
 					},
 					"nature": "Buff"
 				}

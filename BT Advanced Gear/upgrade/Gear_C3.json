@@ -7,21 +7,58 @@
 		],
 		"BonusDescriptions": {
 			"Bonuses": [
-				"LanceSensors: +3%",
-				"LanceSight: +3%",
-				"C3Accuracy: +1",
-				"C3Radius: 90"
+				"C3",
+				"C3Slave",
+				"C3ECMWeakness",
+				"Sensors: +3%",
+				"Sight: +3%"
 			]
 		},
-		"InventorySorter": {
-			"SortKey": "00024"
+		"ActivatableComponent": {
+			"ButtonName": "C3 Network",
+			"CanNotBeActivatedManualy": false,
+			"ActiveByDefault": true,
+			"FailFlatChance": 0.0,
+			"SafeActivation": true,
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"specialRules": "NotSet",
+						"effectTargetType": "Creator",
+						"range": 0.0,
+						"forcePathRebuild": false,
+						"forceVisRebuild": false,
+						"showInTargetPreview": false,
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "C3Slave_Network_Engagement",
+						"Name": "C3 Network - Slave",
+						"Details": "PASSIVE: Can be part of C3 network.",
+						"Icon": ""
+					},
+					"statisticData": {
+						"statName": "ADD_ENCOUNTER_TAG_C3_Network",
+						"operation": "Float_Add",
+						"modValue": "1",
+						"modType": "System.Single"
+					},
+					"nature": "Buff"
+				}
+			]
 		}
 	},
 	"StatName": null,
 	"RelativeModifier": 0,
 	"AbsoluteModifier": 0,
 	"Description": {
-		"Cost": 560000,
+		"Cost": 100000,
 		"Rarity": 4,
 		"Purchasable": true,
 		"Manufacturer": "Tanadi",
@@ -29,8 +66,8 @@
 		"UIName": "C3 Slave",
 		"Id": "Gear_C3",
 		"Name": "C3 Network Slave unit",
-		"Details": "The C3 Slave Unit is the second part of a C3 Network. Weighing a single ton and carried by a member of a lance or company, the C3 Slave provides a minor sensor and sight increase for the carrying unit.",
-		"Icon": "circuitry"
+		"Details": "The C3 Slave Unit is the second part of a C3 Network. Weighing a single ton and carried by a member of a lance or company, the C3 Slave serves to connect the carrying unit into a C3 network, as well as providing a minor sensor and sight bonus to the carrying unit.",
+		"Icon": "mesh-network"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
@@ -43,60 +80,6 @@
 	"AllowedLocations": "All",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
-	"Auras": [
-		{
-			"Id": "Gear_C3",
-			"Name": "C3",
-			"ReticleColor": "#00e600",
-			"Range": 90,
-			"RemoveOnSensorLock": false,
-			"State": "Persistent",
-			"ApplySelf": false,
-			"AllyStealthAffection": "None",
-			"EnemyStealthAffection": "None",
-			"IsPositiveToAlly": false,
-			"IsNegativeToEnemy": true,
-			"ownerVFX": [],
-			"targetVFX": [],
-			"removeOwnerVFX": [],
-			"removeTargetVFX": [],
-			"ownerSFX": [],
-			"targetSFX": [],
-			"removeOwnerSFX": [],
-			"removeTargetSFX": [],
-			"statusEffects": [
-				{
-					"durationData": {
-						"duration": -1,
-						"stackLimit": 1
-					},
-					"targetingData": {
-						"effectTriggerType": "Passive",
-						"specialRules": "NotSet",
-						"effectTargetType": "EnemiesWithinRange",
-						"range": 0.0,
-						"showInTargetPreview": true,
-						"showInStatusPanel": false
-					},
-					"effectType": "StatisticEffect",
-					"Description": {
-						"Id": "C3-TargetInfo",
-						"Name": "C3 Targeting Information",
-						"Details": "Shares targeting information on nearby enemies, +1 to hit enemies in radius",
-						"Icon": "circuitry"
-					},
-					"nature": "Buff",
-					"statisticData": {
-						"statName": "AccuracyModifier",
-						"operation": "Float_Add",
-						"modValue": "-1.0",
-						"modType": "System.Single",
-						"targetCollection": "Weapon"
-					}
-				}
-			]
-		}
-	],
 	"statusEffects": [
 		{
 			"durationData": {
@@ -105,7 +88,7 @@
 			},
 			"targetingData": {
 				"effectTriggerType": "Passive",
-				"effectTargetType": "AllLanceMates",
+				"effectTargetType": "Creator",
 				"showInTargetPreview": false,
 				"showInStatusPanel": false
 			},
@@ -131,7 +114,7 @@
 			},
 			"targetingData": {
 				"effectTriggerType": "Passive",
-				"effectTargetType": "AllLanceMates",
+				"effectTargetType": "Creator",
 				"showInTargetPreview": false,
 				"showInStatusPanel": false
 			},

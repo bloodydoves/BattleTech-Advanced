@@ -2,7 +2,7 @@
 	"Name": "StrategicOperations",
 	"DLL": "StrategicOperations.dll",
 	"Hidden": true,
-	"Version": "3.0.4.2",
+	"Version": "3.0.4.4",
 	"Description": "",
 	"Author": "T-Bone",
 	"Website": "https://github.com/ajkroeg/StrategicOperations",
@@ -557,36 +557,28 @@
 			{
 				"FactionIDs": [
 					"ClanGhostBear",
+					"ClanDiamondShark",
+					"ClanJadeFalcon",
+					"ClanNovaCat",
 					"ClanWolf"
 				],
-				"SpawnChanceBase": 0.0,
-				"SpawnChanceDiffMod": 0.0,
-				"MaxSquadsPerContract": 0,
+				"SpawnChanceBase": 0.3,
+				"SpawnChanceDiffMod": 0.05,
+				"MaxSquadsPerContract": 3,
 				"InternalBattleArmorWeight": {
-					"mechdef_ba_is_standard": 15,
-					"mechdef_ba_marauder": 2
+					"mechdef_ba_elemental": 6,
+					"mechdef_ba_salamander": 3,
+					"BA_EMPTY": 2
 				},
 				"MountedBattleArmorWeight": {
-					"mechdef_ba_is_standard": 5,
-					"mechdef_ba_infiltratormkii": 5,
-					"BA_EMPTY": 2
+					"mechdef_ba_elemental": 6,
+					"mechdef_ba_salamander": 4,
+					"mechdef_ba_gnome": 3,
+					"mechdef_ba_golem": 2
 				},
 				"HandsyBattleArmorWeight": {
-					"mechdef_ba_marauder": 10,
-					"BA_EMPTY": 2
+					"BA_EMPTY": 1
 				}
-			},
-			{
-				"FactionIDs": [
-					"Locals"
-				],
-				"SpawnChanceBase": 0.0,
-				"SpawnChanceDiffMod": 0.0,
-				"InternalBattleArmorWeight": {
-					"mechdef_ba_is_standard": 1
-				},
-				"MountedBattleArmorWeight": {},
-				"HandsyBattleArmorWeight": {}
 			}
 		],
 		"AttackOnSwarmSuccess": true,
@@ -653,7 +645,8 @@
 		"ShowAmmoInVehicleTooltips": true,
 		"EnforceIFFForAmmoTooltips": true,
 		"EnableQuickReserve": true,
-		"SBI_HesitationMultiplier": 0
+		"SBI_HesitationMultiplier": 0,
+		"EquipmentButtonsHotkey": "N"
 	},
 	"Manifest": [
 		{
