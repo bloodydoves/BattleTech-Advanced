@@ -1,0 +1,55 @@
+{
+  "id": "AffinityDef_tagged_Battle_Brother",
+  "affinityType": "Tag",
+  "affinityData": {
+    "tag": "Affinity_Webb_BA",
+    "chassisNames": [
+      "Kanazuchi_8",
+      "IS Standard_4",
+      "Raiden_4",
+      "Infiltrator_4",
+      "Grenadier_8",
+      "Void_4"
+    ],
+    "idType": "AssemblyVariant",
+    "altMaps": [],
+    "affinityLevels": [
+      {
+        "id": "Battle_Brother",
+        "missionsRequired": 10,
+        "levelName": "Battle Brother",
+        "decription": "Star Seed knows the secret of taking a solid punch in a Battle Armor suit, gaining 35% bonus damage reduction in his suits.",
+        "affinities": [],
+        "effectData": [
+          {
+            "Description": {
+              "Details": "Star Seed's skill in a BA suit gives him a major bonus to damage reduction against all attacks.",
+              "Icon": "UixSvgIcon_specialEquip_System",
+              "Id": "StatusEffect-Affinity-WebbBA",
+              "Name": "Star Seed Affinity Damage Reduction"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": -1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "statName": "DamageReductionMultiplierAll",
+              "operation": "Float_Multiply",
+              "modValue": "0.65",
+              "modType": "System.Single"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "hideApplicationFloatie": true,
+              "showInStatusPanel": false,
+              "showInTargetPreview": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

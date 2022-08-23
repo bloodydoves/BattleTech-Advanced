@@ -1,0 +1,77 @@
+{
+  "id": "AffinityDef_chassis_Goomba_Stomper",
+  "affinityType": "Chassis",
+  "affinityData": {
+    "chassisNames": [
+      "Highlander_90",
+      "chrprfmech_turkinabase-001_95"
+    ],
+    "idType": "AssemblyVariant",
+    "altMaps": [],
+    "affinityLevels": [
+      {
+        "id": "Goomba_Stomper",
+        "missionsRequired": 15,
+        "levelName": "Goomba Stomper",
+        "decription": "Improved DFA skill, taking 20% less stab damage when performing a DFA and dealing 20% more regular damage when performing a DFA.",
+        "affinities": [],
+        "effectData": [
+          {
+            "Description": {
+              "Details": "DFA Self-Stab Reduced",
+              "Icon": "UixSvgIcon_specialEquip_System",
+              "Id": "StatusEffect-Affinity-DFAStabReduction",
+              "Name": "DFA Stab Damage Reduced"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": -1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "statName": "CBTBE_DFA_Attacker_Instability_Multi",
+              "operation": "Float_Multiply",
+              "modValue": "0.8",
+              "modType": "System.Single"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "hideApplicationFloatie": true,
+              "showInStatusPanel": false,
+              "showInTargetPreview": false
+            }
+          },
+          {
+            "Description": {
+              "Details": "DFA Damage Increased",
+              "Icon": "UixSvgIcon_specialEquip_System",
+              "Id": "StatusEffect-Affinity-DFADmgIncrease",
+              "Name": "DFA Damage Increased"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": -1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "statName": "CBTBE_DFA_Target_Damage_Multi",
+              "operation": "Float_Multiply",
+              "modValue": "1.2",
+              "modType": "System.Single"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "hideApplicationFloatie": true,
+              "showInStatusPanel": false,
+              "showInTargetPreview": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

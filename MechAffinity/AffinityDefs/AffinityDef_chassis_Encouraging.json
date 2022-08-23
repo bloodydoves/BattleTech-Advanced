@@ -1,0 +1,72 @@
+{
+  "id": "AffinityDef_chassis_Encouraging",
+  "affinityType": "Chassis",
+  "affinityData": {
+    "chassisNames": [
+      "chrprfmech_valkyriehotd-001_30",
+      "chrprfmech_valkyriehotd-001_35",
+      "chrprfmech_hussarbase-001_30",
+      "chrprfmech_torobase-001_35",
+      "chrprfmech_phawklammechbase-001_50",
+      "chrPrfMech_crabBase-001_50",
+      "chrPrfMech_quickdrawBase-001_60",
+      "chrprfmech_mackiebase-001_100",
+      "chrPrfMech_vaporeagleBase-001_55",
+      "chrprfmech_nightgyrbase-001_75",
+      "chrprfmech_warhammeriicbase-001_80",
+      "chrprfmech_raptorbase-001_25",
+      "chrprfmech_hazardbase-001_45",
+      "chrprfmech_vanquisherbase-001_100",
+      "chrprfmech_sentinelbase-001_40",
+      "chrprfmech_nighthawkbase-001_35",
+      "chrprfmech_toyamabase-001_75",
+      "chrprfmech_iondevabase-001_70"
+    ],
+    "idType": "AssemblyVariant",
+    "altMaps": [],
+    "affinityLevels": [
+      {
+        "id": "Encouraging",
+        "missionsRequired": 15,
+        "levelName": "Encouraging",
+        "decription": "+2 resolve whenever resolve is gained",
+        "affinities": [],
+        "effectData": [
+          {
+            "Description": {
+              "Details": "The pilot's incredible skill with this mech improves its resolve boost by 2.",
+              "Icon": "UixSvgIcon_specialEquip_System",
+              "Id": "StatusEffect-Affinity-ResolveBoost",
+              "Name": "Mech Affinity Resolve Boost"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": 1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "additionalRules": "NotSet",
+              "modType": "System.Int32",
+              "modValue": "2",
+              "operation": "Int_Add",
+              "statName": "MoraleBonusGain",
+              "targetAmmoCategory": "NotSet",
+              "targetCollection": "NotSet",
+              "targetWeaponCategory": "NotSet",
+              "targetWeaponSubType": "NotSet",
+              "targetWeaponType": "NotSet"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "hideApplicationFloatie": true,
+              "showInStatusPanel": false,
+              "showInTargetPreview": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

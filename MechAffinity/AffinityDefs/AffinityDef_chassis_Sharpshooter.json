@@ -1,0 +1,57 @@
+{
+  "id": "AffinityDef_chassis_Sharpshooter",
+  "affinityType": "Chassis",
+  "affinityData": {
+    "chassisNames": [
+      "chrprfmech_clintbase-001_40",
+      "chrPrfMech_jagermechBase-001_65",
+      "chrPrfMech_jagermechBase-001_70",
+      "Rifleman_60",
+      "Rifleman_50",
+      "RiflemanII_80",
+      "chrprfmech_curifleman3base-001_90",
+      "chrPrfMech_assassinBase-001_40",
+      "Ymir_90"
+    ],
+    "idType": "AssemblyVariant",
+    "altMaps": [],
+    "affinityLevels": [
+      {
+        "id": "Sharpshooter",
+        "missionsRequired": 15,
+        "levelName": "Sharpshooter",
+        "decription": "Ignores 1 enemy evasion.",
+        "affinities": [],
+        "effectData": [
+          {
+            "Description": {
+              "Details": "The pilot's incredible skill with this mech improves its targeting by 1.",
+              "Icon": "UixSvgIcon_specialEquip_System",
+              "Id": "StatusEffect-Affinity-EvasionIgnore",
+              "Name": "Mech Affinity Targeting Boost"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": -1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "statName": "EvasivePipsIgnored",
+              "operation": "Float_Add",
+              "modValue": "1.0",
+              "modType": "System.Single"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "hideApplicationFloatie": true,
+              "showInStatusPanel": false,
+              "showInTargetPreview": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

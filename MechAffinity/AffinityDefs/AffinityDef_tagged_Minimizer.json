@@ -1,0 +1,53 @@
+{
+  "id": "AffinityDef_tagged_Minimizer",
+  "affinityType": "Tag",
+  "affinityData": {
+    "tag": "Affinity_Virago_BA",
+    "chassisNames": [
+      "Gnome_7.5",
+      "Golem_10",
+      "Salamander_5",
+      "Elemental_5"
+    ],
+    "idType": "AssemblyVariant",
+    "altMaps": [],
+    "affinityLevels": [
+      {
+        "id": "Minimizer",
+        "missionsRequired": 10,
+        "levelName": "Minimizer",
+        "decription": "Virago knows how to be small, gaining a +4 defensive bonus against all attacks. This stacks with the Squirrelly Bastard affinity.",
+        "affinities": [],
+        "effectData": [
+          {
+            "Description": {
+              "Details": "Virago's skill in a BA suit gives her a major bonus to defense against all attacks.",
+              "Icon": "UixSvgIcon_specialEquip_System",
+              "Id": "StatusEffect-Affinity-ViragoBA",
+              "Name": "Virage Affinity Defense Boost"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": -1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "statName": "ToHitThisActor",
+              "operation": "Float_Add",
+              "modValue": "4.0",
+              "modType": "System.Single"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "hideApplicationFloatie": true,
+              "showInStatusPanel": true,
+              "showInTargetPreview": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

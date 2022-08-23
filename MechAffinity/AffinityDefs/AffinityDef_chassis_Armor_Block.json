@@ -1,0 +1,57 @@
+{
+  "id": "AffinityDef_chassis_Armor_Block",
+  "affinityType": "Chassis",
+  "affinityData": {
+    "chassisNames": [
+      "Sloth_6",
+      "Achilles_6",
+      "Krupp_8",
+      "Golem_10",
+      "Kanazuchi_8",
+      "BA Marauder_9",
+      "Phalanx_6",
+      "BA Ravager_10",
+      "Grenadier_8"
+    ],
+    "idType": "AssemblyVariant",
+    "altMaps": [],
+    "affinityLevels": [
+      {
+        "id": "Armor_Block",
+        "missionsRequired": 15,
+        "levelName": "Armor Block",
+        "decription": "You may be small but you're beefy for your size, resisting even the most determined efforts to squish you. Gain 35% damage reduction at all times.",
+        "affinities": [],
+        "effectData": [
+          {
+            "Description": {
+              "Details": "BA Damage Reduction",
+              "Icon": "UixSvgIcon_specialEquip_System",
+              "Id": "StatusEffect-Affinity-BattleArmorDamageReduction",
+              "Name": "BA Damage Reduction"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": -1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "statName": "DamageReductionMultiplierAll",
+              "operation": "Float_Multiply",
+              "modValue": "0.65",
+              "modType": "System.Single"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "hideApplicationFloatie": true,
+              "showInStatusPanel": false,
+              "showInTargetPreview": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

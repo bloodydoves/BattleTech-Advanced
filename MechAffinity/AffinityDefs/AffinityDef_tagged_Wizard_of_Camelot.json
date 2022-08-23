@@ -1,0 +1,50 @@
+{
+  "id": "AffinityDef_tagged_Wizard_of_Camelot",
+  "affinityType": "Tag",
+  "affinityData": {
+    "tag": "Affinity_LeFay_Merlin",
+    "chassisNames": [
+      "chrprfmech_merlinbase-001_60"
+    ],
+    "idType": "AssemblyVariant",
+    "altMaps": [],
+    "affinityLevels": [
+      {
+        "id": "Wizard_of_Camelot",
+        "missionsRequired": 10,
+        "levelName": "Wizard of Camelot",
+        "decription": "LeFay's sensor signature is reduced by 40% in her Merlin, making her less likely to take enemy fire.",
+        "affinities": [],
+        "effectData": [
+          {
+            "Description": {
+              "Details": "LeFay gains 40% sensor reduction in her Merlin at all times.",
+              "Icon": "layeredarmor",
+              "Id": "StatusEffect-Affinity-LeFayMerlin",
+              "Name": "LeFay Affinity Sensor Signature Reduction"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": -1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "statName": "SpottingVisibilityMultiplier",
+              "operation": "Float_Multiply",
+              "modValue": "0.6",
+              "modType": "System.Single"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "hideApplicationFloatie": true,
+              "showInStatusPanel": false,
+              "showInTargetPreview": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

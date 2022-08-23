@@ -1,0 +1,77 @@
+{
+  "id": "AffinityDef_chassis_Evasive",
+  "affinityType": "Chassis",
+  "affinityData": {
+    "chassisNames": [
+      "chrprfmech_hornetbase-001_20",
+      "chrPrfMech_commandoBase-001_25",
+      "chrprfmech_urbiebase-001_30",
+      "Urbie-LAM_30",
+      "UrbanLord_70",
+      "chrPrfMech_ravenBase-001_35",
+      "chrprfmech_owensbase-001_35",
+      "chrPrfMech_vulcanBase-001_40",
+      "chrprfmech_bushwackerbase-001_55",
+      "chrprfmech_ostrochotd-001_60",
+      "chrPrfMech_warhammerBase-001_70",
+      "chrprfmech_supernovabase-001_100",
+      "chrprfmech_piranhabase-001_20",
+      "chrprfmech_locustiicbase-001_25",
+      "chrprfmech_jenneriicbase-001_35",
+      "chrprfmech_stormcrowbase-001_55",
+      "chrprfmech_blackpythonbase-001_75",
+      "chrprfmech_ionphantombase-001_40",
+      "chrprfmech_fireflybase-001_30",
+      "HermesII_40",
+      "chrprfmech_conjurerbase-001_50",
+      "chrprfmech_vonrohrsbase-001_65",
+      "chrprfmech_genericsh3base-001_60"
+    ],
+    "idType": "AssemblyVariant",
+    "altMaps": [],
+    "affinityLevels": [
+      {
+        "id": "Evasive",
+        "missionsRequired": 15,
+        "levelName": "Evasive",
+        "decription": "+2 bonus against being hit",
+        "affinities": [],
+        "effectData": [
+          {
+            "Description": {
+              "Details": "The pilot's incredible skill with this mech makes it even harder to hit the mech.",
+              "Icon": "UixSvgIcon_specialEquip_System",
+              "Id": "StatusEffect-Affinity-NarrowProfile",
+              "Name": "Mech Affinity Defensive Boost"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": -1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "additionalRules": "NotSet",
+              "modType": "System.Single",
+              "modValue": "2.0",
+              "operation": "Float_Add",
+              "statName": "ToHitThisActor",
+              "targetAmmoCategory": "NotSet",
+              "targetCollection": "NotSet",
+              "targetWeaponCategory": "NotSet",
+              "targetWeaponSubType": "NotSet",
+              "targetWeaponType": "NotSet"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "hideApplicationFloatie": true,
+              "showInStatusPanel": false,
+              "showInTargetPreview": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

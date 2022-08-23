@@ -1,0 +1,77 @@
+{
+  "id": "AffinityDef_chassis_Resistant",
+  "affinityType": "Chassis",
+  "affinityData": {
+    "chassisNames": [
+      "chrprfmech_striderbase-001_40",
+      "chrPrfMech_vindicatorBase-001_45",
+      "chrprfmech_bombardbase-001_50",
+      "chrPrfMech_kintaroBase-001_55",
+      "chrPrfMech_griffinBase-001_55",
+      "chrPrfMech_griffinBase-001_60",
+      "chrprfmech_ostwarhotd-001_65",
+      "chrprfmech_merlinbase-001_60",
+      "chrprfmech_roughneckbase-001_65",
+      "Corsair_55",
+      "Corsair_75",
+      "Corsair_95",
+      "chrprfmech_titaniibase-001_100",
+      "chrPrfMech_novacatbase-001_70",
+      "chrprfmech_ionkingfisherbase-001_90",
+      "chrprfmech_monsterbase-001_150",
+      "chrprfmech_shayubase-001_40",
+      "chrprfmech_minskbase-001_70",
+      "chrprfmech_gunslingerbase-001_85",
+      "chrprfmech_shootistbase-001_70",
+      "chrprfmech_archangelbase-001_100",
+      "CelestialChampion_30",
+      "UrbanKing_120"
+    ],
+    "idType": "AssemblyVariant",
+    "altMaps": [],
+    "affinityLevels": [
+      {
+        "id": "Resistant",
+        "missionsRequired": 15,
+        "levelName": "Resistant",
+        "decription": "50% less chance to suffer critical hits",
+        "affinities": [],
+        "effectData": [
+          {
+            "Description": {
+              "Details": "The pilot's incredible skill with this mech improves its resistant to critical damage by 50%.",
+              "Icon": "UixSvgIcon_specialEquip_System",
+              "Id": "StatusEffect-Affinity-CritResist",
+              "Name": "Mech Affinity Critical Hit Resistance Boost"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": -1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "additionalRules": "NotSet",
+              "modType": "System.Single",
+              "modValue": "0.5",
+              "operation": "Float_Multiply",
+              "statName": "CriticalHitChanceReceivedMultiplier",
+              "targetAmmoCategory": "NotSet",
+              "targetCollection": "NotSet",
+              "targetWeaponCategory": "NotSet",
+              "targetWeaponSubType": "NotSet",
+              "targetWeaponType": "NotSet"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "hideApplicationFloatie": true,
+              "showInStatusPanel": false,
+              "showInTargetPreview": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
