@@ -7,9 +7,10 @@
 		],
 		"BonusDescriptions": {
 			"Bonuses": [
-				"Sensors: +20%",
-				"Sight: +20%",
-				"ProbeBubble: 250"
+				"Sensors: +30%",
+				"Sight: +30%",
+				"ProbeBubble: 350",
+				"Signature: +35%"
 			]
 		},
 		"InventorySorter": {
@@ -23,16 +24,16 @@
 		"Cost": 420000,
 		"Rarity": 5,
 		"Purchasable": true,
-		"Manufacturer": "Achernar",
-		"Model": "BBAP",
+		"Manufacturer": "Imstar",
+		"Model": "B-BAP",
 		"UIName": "Boosted BAP",
 		"Id": "Gear_Boosted_BAP",
 		"Name": "Boosted Active Probe",
-		"Details": "The Boosted Beagle Active Probe removes the limiters from a Generic BAP and increases the scanning power of any unit it is attached to, but turning it on might as well be blaring ''SHOOT ME BRO I'M LOOKING FOR YOU'' on a loudspeaker.",
+		"Details": "The Boosted Active Probe removes the limiters from a Generic BAP and increases the scanning power of any unit it is attached to, but turning it on might as well be blaring ''SHOOT ME BRO I'M LOOKING FOR YOU'' on a loudspeaker thanks to the massive visibility on sensors it provides to the enemy.",
 		"Icon": "radar-sweep"
 	},
-	"BonusValueA": "Active Probe Ping|Increased Visibility",
-	"BonusValueB": "+30% Sensors/Sight",
+	"BonusValueA": "",
+	"BonusValueB": "",
 	"ComponentType": "Upgrade",
 	"ComponentSubType": "NotSet",
 	"PrefabIdentifier": "",
@@ -65,7 +66,7 @@
 			"statisticData": {
 				"statName": "SensorDistanceMultiplier",
 				"operation": "Float_Multiply",
-				"modValue": "1.2",
+				"modValue": "1.3",
 				"modType": "System.Single"
 			}
 		},
@@ -81,10 +82,10 @@
 				"Id": "ActiveProbe_Ping",
 				"Name": "ACTIVE PROBE PING",
 				"Details": "Activated ability (uses Firing action). Performs a Sensor Lock against all enemies within its radius, as indicated by the spinning gold ring. Will go into cooldown state after use.",
-				"Icon": "uixSvgIcon_action_sensorlock"
+				"Icon": "radar-sweep"
 			},
 			"activeAbilityEffectData": {
-				"abilityName": "AbilityDef_ActiveProbe_Ping"
+				"abilityName": "AbilityDef_Boosted_Ping"
 			}
 		},
 		{
@@ -107,7 +108,32 @@
 			"statisticData": {
 				"statName": "SpotterDistanceMultiplier",
 				"operation": "Float_Multiply",
-				"modValue": "1.2",
+				"modValue": "1.3",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect_BoostedBAPVisibility",
+				"Name": "Boosted AP Visibility",
+				"Details": "Provides massively increased sensor signature to the enemy, making it easier to be seen on sensors.",
+				"Icon": "radar-sweep"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "SensorVisibilityMultiplier",
+				"operation": "Float_Multiply",
+				"modValue": "1.35",
 				"modType": "System.Single"
 			}
 		}
