@@ -13,14 +13,74 @@
 		},
 		"BonusDescriptions": {
 			"Bonuses": [
-				"Defense: +1",
-				"AntiMissileDefense: +4",
+				"AntiMissileDefense: +6",
 				"ECMRadius: 150",
-				"C3Jamming: 120"
+				"SensorLockImmune"
 			]
 		},
-		"InventorySorter": {
-			"SortKey": "00024"
+		"ActivatableComponent": {
+			"ButtonName": "Anti-Missile ECM",
+			"CanNotBeActivatedManualy": false,
+			"ActiveByDefault": true,
+			"FailFlatChance": 0.0,
+			"SafeActivation": true,
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"specialRules": "NotSet",
+						"effectTargetType": "Creator",
+						"range": 0.0,
+						"forcePathRebuild": false,
+						"forceVisRebuild": false,
+						"showInTargetPreview": false,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect_ECM-C3-Jamming",
+						"Name": "C3 Jamming",
+						"Details": "Guardian ECM is jamming C3 networks, preventing this unit from joining them as long as it is active.",
+						"Icon": "circuitry"
+					},
+					"statisticData": {
+						"statName": "ADD_ENCOUNTER_TAG_C3_Network",
+						"operation": "Float_Add",
+						"modValue": "-2",
+						"modType": "System.Single"
+					},
+					"nature": "Buff"
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect_ECM-SensorLockImmunity",
+						"Name": "Sensor Lock Immunity",
+						"Details": "This unit is immune to sensor lock.",
+						"Icon": "circuitry"
+					},
+					"statisticData": {
+						"statName": "EvasiveSafeFromSensorLock",
+						"operation": "Set",
+						"modValue": "true",
+						"modType": "System.Boolean"
+					},
+					"nature": "Buff"
+				}
+			]
 		}
 	},
 	"StatName": null,
@@ -50,59 +110,6 @@
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
 	"Auras": [
-		{
-			"Id": "Gear_GECM_ECM",
-			"Name": "ECM",
-			"ReticleColor": "#ffffff",
-			"Range": 150,
-			"RemoveOnSensorLock": false,
-			"State": "Persistent",
-			"ApplySelf": true,
-			"AllyStealthAffection": "None",
-			"EnemyStealthAffection": "None",
-			"IsPositiveToAlly": true,
-			"IsNegativeToEnemy": false,
-			"ownerVFX": [],
-			"targetVFX": [],
-			"removeOwnerVFX": [],
-			"removeTargetVFX": [],
-			"ownerSFX": [],
-			"targetSFX": [],
-			"removeOwnerSFX": [],
-			"removeTargetSFX": [],
-			"statusEffects": [
-				{
-					"durationData": {
-						"duration": -1,
-						"stackLimit": 1
-					},
-					"targetingData": {
-						"effectTriggerType": "Passive",
-						"specialRules": "NotSet",
-						"effectTargetType": "AlliesWithinRange",
-						"range": 0.0,
-						"forcePathRebuild": false,
-						"forceVisRebuild": false,
-						"showInTargetPreview": false,
-						"showInStatusPanel": true
-					},
-					"effectType": "StatisticEffect",
-					"Description": {
-						"Id": "GECMInterference",
-						"Name": "GECM Interference",
-						"Details": "Guardian ECM making this unit harder to hit, +1 penalty to enemy attacks.",
-						"Icon": "circuitry"
-					},
-					"statisticData": {
-						"statName": "ToHitThisActor",
-						"operation": "Float_Add",
-						"modValue": "1.0",
-						"modType": "System.Single"
-					},
-					"nature": "Buff"
-				}
-			]
-		},
 		{
 			"Id": "Gear_AntiMissile_ECM_MissleScramble",
 			"Name": "Missile Scrambling",
@@ -147,120 +154,9 @@
 						"Icon": "circuitry"
 					},
 					"statisticData": {
-						"statName": "ToHitThisActor",
+						"statName": "ToHitThisActorMissile",
 						"operation": "Float_Add",
-						"modValue": "4.0",
-						"modType": "System.Single",
-						"targetAmmoCategory": "NotSet",
-						"targetCollection": "Weapon",
-						"targetWeaponCategory": "Missile",
-						"targetWeaponSubType": "NotSet",
-						"targetWeaponType": "NotSet"
-					},
-					"nature": "Buff"
-				}
-			]
-		},
-		{
-			"Id": "Gear_GECM_ECM_C3",
-			"Name": "C3 Jamming",
-			"ReticleColor": "#1a91ea",
-			"Range": 120,
-			"RemoveOnSensorLock": false,
-			"State": "Persistent",
-			"ApplySelf": true,
-			"AllyStealthAffection": "None",
-			"EnemyStealthAffection": "None",
-			"IsPositiveToAlly": true,
-			"IsNegativeToEnemy": false,
-			"ownerVFX": [],
-			"targetVFX": [],
-			"removeOwnerVFX": [],
-			"removeTargetVFX": [],
-			"ownerSFX": [],
-			"targetSFX": [],
-			"removeOwnerSFX": [],
-			"removeTargetSFX": [],
-			"statusEffects": [
-				{
-					"durationData": {
-						"duration": -1,
-						"stackLimit": -1
-					},
-					"targetingData": {
-						"effectTriggerType": "Passive",
-						"specialRules": "NotSet",
-						"effectTargetType": "EnemiesWithinRange",
-						"range": 0.0,
-						"forcePathRebuild": false,
-						"forceVisRebuild": false,
-						"showInTargetPreview": false,
-						"showInStatusPanel": true
-					},
-					"effectType": "StatisticEffect",
-					"Description": {
-						"Id": "StatusEffect_ECM-C3-Jamming",
-						"Name": "C3 Jamming",
-						"Details": "Guardian ECM is jamming C3 networks near it, disabling them for as long as they remain in the area.",
-						"Icon": "circuitry"
-					},
-					"statisticData": {
-						"statName": "ADD_ENCOUNTER_TAG_C3_Network",
-						"operation": "Float_Add",
-						"modValue": "-2",
-						"modType": "System.Single"
-					},
-					"nature": "Buff"
-				}
-			]
-		},
-		{
-			"Id": "Gear_GECM_ECM_C3_Ally",
-			"Name": "C3 Jamming",
-			"ReticleColor": "#1a91ea",
-			"Range": 120,
-			"RemoveOnSensorLock": false,
-			"State": "Persistent",
-			"ApplySelf": true,
-			"AllyStealthAffection": "None",
-			"EnemyStealthAffection": "None",
-			"IsPositiveToAlly": true,
-			"IsNegativeToEnemy": false,
-			"ownerVFX": [],
-			"targetVFX": [],
-			"removeOwnerVFX": [],
-			"removeTargetVFX": [],
-			"ownerSFX": [],
-			"targetSFX": [],
-			"removeOwnerSFX": [],
-			"removeTargetSFX": [],
-			"statusEffects": [
-				{
-					"durationData": {
-						"duration": -1,
-						"stackLimit": -1
-					},
-					"targetingData": {
-						"effectTriggerType": "Passive",
-						"specialRules": "NotSet",
-						"effectTargetType": "AlliesWithinRange",
-						"range": 0.0,
-						"forcePathRebuild": false,
-						"forceVisRebuild": false,
-						"showInTargetPreview": false,
-						"showInStatusPanel": true
-					},
-					"effectType": "StatisticEffect",
-					"Description": {
-						"Id": "StatusEffect_ECM-C3-Jamming-Allies",
-						"Name": "C3 Jamming",
-						"Details": "Guardian ECM is jamming C3 networks near it, disabling them for as long as they remain in the area.",
-						"Icon": "circuitry"
-					},
-					"statisticData": {
-						"statName": "ADD_ENCOUNTER_TAG_C3_Network",
-						"operation": "Float_Add",
-						"modValue": "-2",
+						"modValue": "6.0",
 						"modType": "System.Single"
 					},
 					"nature": "Buff"
