@@ -9,7 +9,7 @@
 			"Bonuses": [
 				"Defense: +2",
 				"SensorLockImmune",
-				"C3Jamming"
+				"C3Jamming: 120"
 			]
 		},
 		"ActivatableComponent": {
@@ -19,66 +19,6 @@
 			"FailFlatChance": 0.0,
 			"SafeActivation": true,
 			"statusEffects": [
-				{
-					"durationData": {
-						"duration": -1,
-						"stackLimit": 1
-					},
-					"targetingData": {
-						"effectTriggerType": "Passive",
-						"specialRules": "NotSet",
-						"effectTargetType": "Creator",
-						"range": 0.0,
-						"forcePathRebuild": false,
-						"forceVisRebuild": false,
-						"showInTargetPreview": false,
-						"showInStatusPanel": true
-					},
-					"effectType": "StatisticEffect",
-					"Description": {
-						"Id": "GECMInterference",
-						"Name": "AECM Interference",
-						"Details": "Angel ECM is making this unit harder to hit, +2 penalty to enemy attacks.",
-						"Icon": "circuitry"
-					},
-					"statisticData": {
-						"statName": "ToHitThisActor",
-						"operation": "Float_Add",
-						"modValue": "2.0",
-						"modType": "System.Single"
-					},
-					"nature": "Buff"
-				},
-				{
-					"durationData": {
-						"duration": -1,
-						"stackLimit": -1
-					},
-					"targetingData": {
-						"effectTriggerType": "Passive",
-						"specialRules": "NotSet",
-						"effectTargetType": "Creator",
-						"range": 0.0,
-						"forcePathRebuild": false,
-						"forceVisRebuild": false,
-						"showInTargetPreview": false,
-						"showInStatusPanel": true
-					},
-					"effectType": "StatisticEffect",
-					"Description": {
-						"Id": "StatusEffect_ECM-C3-Jamming",
-						"Name": "C3 Jamming",
-						"Details": "Guardian ECM is jamming C3 networks, preventing this unit from joining them as long as it is active.",
-						"Icon": "circuitry"
-					},
-					"statisticData": {
-						"statName": "ADD_ENCOUNTER_TAG_C3_Network",
-						"operation": "Float_Add",
-						"modValue": "-2",
-						"modType": "System.Single"
-					},
-					"nature": "Buff"
-				},
 				{
 					"durationData": {
 						"duration": -1,
@@ -133,6 +73,144 @@
 	"AllowedLocations": "All",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
+	"Auras": [
+		{
+			"Id": "Gear_Angel_ECM_WeaponScramble",
+			"Name": "Weapon Scrambling",
+			"ReticleColor": "#ffffff",
+			"Range": 150,
+			"RemoveOnSensorLock": false,
+			"State": "Online",
+			"ApplySelf": true,
+			"AllyStealthAffection": "None",
+			"EnemyStealthAffection": "None",
+			"IsPositiveToAlly": true,
+			"IsNegativeToEnemy": false,
+			"ownerVFX": [],
+			"targetVFX": [],
+			"removeOwnerVFX": [],
+			"removeTargetVFX": [],
+			"ownerSFX": [],
+			"targetSFX": [],
+			"removeOwnerSFX": [],
+			"removeTargetSFX": [],
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"specialRules": "NotSet",
+						"effectTargetType": "Creator",
+						"range": 0.0,
+						"forcePathRebuild": false,
+						"forceVisRebuild": false,
+						"showInTargetPreview": false,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "GECMInterference",
+						"Name": "AECM Interference",
+						"Details": "Angel ECM is making this unit harder to hit, +2 penalty to enemy attacks.",
+						"Icon": "circuitry"
+					},
+					"statisticData": {
+						"statName": "ToHitThisActor",
+						"operation": "Float_Add",
+						"modValue": "2.0",
+						"modType": "System.Single"
+					},
+					"nature": "Buff"
+				}
+			]
+		},
+		{
+			"Id": "Gear_Angel_ECM_C3Scramble",
+			"Name": "C3 Scrambling",
+			"ReticleColor": "#ffffff",
+			"Range": 120,
+			"RemoveOnSensorLock": false,
+			"State": "Online",
+			"ApplySelf": true,
+			"AllyStealthAffection": "None",
+			"EnemyStealthAffection": "None",
+			"IsPositiveToAlly": true,
+			"IsNegativeToEnemy": false,
+			"ownerVFX": [],
+			"targetVFX": [],
+			"removeOwnerVFX": [],
+			"removeTargetVFX": [],
+			"ownerSFX": [],
+			"targetSFX": [],
+			"removeOwnerSFX": [],
+			"removeTargetSFX": [],
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"specialRules": "NotSet",
+						"effectTargetType": "AlliesWithinRange",
+						"range": 0.0,
+						"forcePathRebuild": false,
+						"forceVisRebuild": false,
+						"showInTargetPreview": false,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect_ECM-C3-Jamming",
+						"Name": "C3 Jamming",
+						"Details": "Guardian ECM is jamming C3 networks, preventing C3 networks from functioning within 120 meters.",
+						"Icon": "circuitry"
+					},
+					"statisticData": {
+						"statName": "ADD_ENCOUNTER_TAG_C3_Network",
+						"operation": "Float_Add",
+						"modValue": "-2",
+						"modType": "System.Single"
+					},
+					"nature": "Buff"
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"specialRules": "NotSet",
+						"effectTargetType": "EnemiesWithinRange",
+						"range": 0.0,
+						"forcePathRebuild": false,
+						"forceVisRebuild": false,
+						"showInTargetPreview": false,
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect_ECM-C3-Enemy-Jamming",
+						"Name": "C3 Enemy Jamming",
+						"Details": "Guardian ECM is jamming C3 networks, preventing C3 networks from functioning within 120 meters.",
+						"Icon": "circuitry"
+					},
+					"statisticData": {
+						"statName": "ADD_ENCOUNTER_TAG_C3_Network",
+						"operation": "Float_Add",
+						"modValue": "-2",
+						"modType": "System.Single"
+					},
+					"nature": "Buff"
+				}
+			]
+		}
+	],
 	"statusEffects": [],
 	"ComponentTags": {
 		"items": [
