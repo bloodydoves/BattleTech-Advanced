@@ -7,7 +7,7 @@
 		],
 		"BonusDescriptions": {
 			"Bonuses": [
-				"Defense: +2",
+				"Defense: +1",
 				"SensorLockImmune",
 				"C3Jamming: 120"
 			]
@@ -103,7 +103,7 @@
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"specialRules": "NotSet",
-						"effectTargetType": "Creator",
+						"effectTargetType": "AlliesWithinRange",
 						"range": 0.0,
 						"forcePathRebuild": false,
 						"forceVisRebuild": false,
@@ -114,13 +114,13 @@
 					"Description": {
 						"Id": "GECMInterference",
 						"Name": "AECM Interference",
-						"Details": "Angel ECM is making this unit harder to hit, +2 penalty to enemy attacks.",
+						"Details": "Angel ECM is making this unit harder to hit, +1 penalty to enemy attacks.",
 						"Icon": "circuitry"
 					},
 					"statisticData": {
 						"statName": "ToHitThisActor",
 						"operation": "Float_Add",
-						"modValue": "2.0",
+						"modValue": "1.0",
 						"modType": "System.Single"
 					},
 					"nature": "Buff"
@@ -130,7 +130,7 @@
 		{
 			"Id": "Gear_Angel_ECM_C3Scramble",
 			"Name": "C3 Scrambling",
-			"ReticleColor": "#ffffff",
+			"ReticleColor": "#1a91ea",
 			"Range": 120,
 			"RemoveOnSensorLock": false,
 			"State": "Online",
