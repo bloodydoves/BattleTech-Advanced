@@ -1,0 +1,58 @@
+{
+  "id": "AffinityDef_tagged_On_the_Wings_of_Angels",
+  "affinityType": "Tag",
+  "affinityData": {
+    "tag": "Affinity_Ridgeline_LAM",
+    "chassisNames": [
+      "Wasplam_30",
+      "Stingerlam_30",
+      "MonsterLamOmni_150",
+      "chrprfmech_phawklegacylambase-001_55",
+      "chrprfmech_shawklambase-001_80",
+      "Urbie-LAM_30",
+      "chrprfmech_screamerbase-001_55",
+      "chrprfmech_screamermechbase-001_55",
+      "chrprfmech_phawklammechbase-001_50"
+    ],
+    "idType": "AssemblyVariant",
+    "altMaps": [],
+    "affinityLevels": [
+      {
+        "id": "On_the_Wings_of_Angels",
+        "missionsRequired": 10,
+        "levelName": "On the Wings of Angels",
+        "decription": "Ridgeline's dream came true, he's driving a LAM! He gets +2 bonus accurascy in Wasp LAMs, Stinger LAMs, and Phoenix Hawk LAMs.",
+        "affinities": [],
+        "effectData": [
+          {
+            "Description": {
+              "Details": "Ridgeline gains +2 bonus accurascy in Wasp LAMs, Stinger LAMs, and Phoenix Hawk LAMs.",
+              "Icon": "layeredarmor",
+              "Id": "StatusEffect-Affinity-RidgelineLAM",
+              "Name": "Ridgeline Affinity LAM Accuracy"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": -1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "modType": "System.Single",
+              "modValue": "-2.0",
+              "operation": "Float_Add",
+              "statName": "AccuracyModifier"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "hideApplicationFloatie": true,
+              "showInStatusPanel": false,
+              "showInTargetPreview": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

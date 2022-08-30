@@ -1,0 +1,56 @@
+{
+  "id": "AffinityDef_tagged_Speed_King",
+  "affinityType": "Tag",
+  "affinityData": {
+    "tag": "Affinity_Wulf_Commando",
+    "chassisNames": [
+      "chrPrfMech_commandoBase-001_25"
+    ],
+    "idType": "AssemblyVariant",
+    "altMaps": [],
+    "affinityLevels": [
+      {
+        "id": "Speed_King",
+        "missionsRequired": 10,
+        "levelName": "Speed King",
+        "decription": "Wulf gains +15% sprint speed with his Commandos.",
+        "affinities": [],
+        "effectData": [
+          {
+            "Description": {
+              "Details": "Wulf's incredible skill with this mech improves its sprinting speed by 15%.",
+              "Icon": "UixSvgIcon_specialEquip_System",
+              "Id": "StatusEffect-Affinity-WulfCommando",
+              "Name": "Wulf Affinity Sprint Boost"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": -1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "additionalRules": "NotSet",
+              "modType": "System.Single",
+              "modValue": "0.15",
+              "operation": "Float_Add",
+              "statName": "CBTBE_RunMultiMod",
+              "targetAmmoCategory": "NotSet",
+              "targetCollection": "NotSet",
+              "targetWeaponCategory": "NotSet",
+              "targetWeaponSubType": "NotSet",
+              "targetWeaponType": "NotSet"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "hideApplicationFloatie": true,
+              "showInStatusPanel": false,
+              "showInTargetPreview": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

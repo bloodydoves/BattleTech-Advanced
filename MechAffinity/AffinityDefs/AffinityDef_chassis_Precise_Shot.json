@@ -1,0 +1,83 @@
+{
+  "id": "AffinityDef_chassis_Precise_Shot",
+  "affinityType": "Chassis",
+  "affinityData": {
+    "chassisNames": [
+      "chrprfmech_valiantbase-001_30",
+      "chrPrfMech_pantherBase-001_35",
+      "Hollander_35",
+      "HollanderII_45",
+      "chrprfmech_icarusiibase-001_40",
+      "chrPrfMech_blackjackBase-001_45",
+      "chrPrfMech_blackjackBase-001_50",
+      "BlackjackOmni_50",
+      "Centurion_50",
+      "Centurion_55",
+      "MonsterLamOmni_150",
+      "chrPrfMech_cataphractBase-001_70",
+      "chrprfmech_fafnirbase-001_100",
+      "chrprfmech_fafnir2base-001_100",
+      "chrPrfMech_kingcrabBase-001_100",
+      "chrprfmech_hellfirebase-001_60",
+      "chrprfmech_lupusbase-001_60",
+      "chrprfmech_sunspiderbase-001_70",
+      "chrprfmech_marauderiicbase-001_85",
+      "chrprfmech_osteonbase-001_85",
+      "chrprfmech_swdbase-001_40",
+      "chrprfmech_penbase-001_75",
+      "chrprfmech_whitworthbase-001_40",
+      "chrprfmech_hermesbase-001_30",
+      "chrprfmech_screamerbase-001_55",
+      "chrprfmech_screamermechbase-001_55",
+      "chrprfmech_falconbase-001_30",
+      "chrprfmech_seraphbase-001_85",
+      "chrprfmech_crabshasapultbase-001_75"
+    ],
+    "idType": "AssemblyVariant",
+    "altMaps": [],
+    "affinityLevels": [
+      {
+        "id": "Precise_Shot",
+        "missionsRequired": 15,
+        "levelName": "Precise Shot",
+        "decription": "+1 bonus on weapon attacks",
+        "affinities": [],
+        "effectData": [
+          {
+            "Description": {
+              "Details": "The pilot's incredible skill with this mech improves its targeting by 1.",
+              "Icon": "UixSvgIcon_specialEquip_System",
+              "Id": "StatusEffect-Affinity-Targeting",
+              "Name": "Mech Affinity Targeting Boost"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": -1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "additionalRules": "NotSet",
+              "modType": "System.Single",
+              "modValue": "-1.0",
+              "operation": "Float_Add",
+              "statName": "AccuracyModifier",
+              "targetAmmoCategory": "NotSet",
+              "targetCollection": "NotSet",
+              "targetWeaponCategory": "NotSet",
+              "targetWeaponSubType": "NotSet",
+              "targetWeaponType": "NotSet"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "hideApplicationFloatie": true,
+              "showInStatusPanel": false,
+              "showInTargetPreview": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

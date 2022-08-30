@@ -1,0 +1,56 @@
+{
+  "id": "AffinityDef_tagged_Choppy_Choppy",
+  "affinityType": "Tag",
+  "affinityData": {
+    "tag": "Affinity_Loki_Hatchetman",
+    "chassisNames": [
+      "chrPrfMech_hatchetmanBase-001_45"
+    ],
+    "idType": "AssemblyVariant",
+    "altMaps": [],
+    "affinityLevels": [
+      {
+        "id": "Choppy_Choppy",
+        "missionsRequired": 10,
+        "levelName": "Choppy Choppy",
+        "decription": "Loki gains +30% physical weapon damage with his Hatchetman's hatchet.",
+        "affinities": [],
+        "effectData": [
+          {
+            "Description": {
+              "Details": "Loki's incredible skill with this mech improves its hatchet damage by 30%.",
+              "Icon": "UixSvgIcon_specialEquip_System",
+              "Id": "StatusEffect-Affinity-LokiHatchet",
+              "Name": "Loki Affinity Physical Weapon Damage Boost"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": -1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "additionalRules": "NotSet",
+              "modType": "System.Single",
+              "modValue": "1.3",
+              "operation": "Float_Multiply",
+              "statName": "CBTBE_Physical_Weapon_Target_Damage_Multi",
+              "targetAmmoCategory": "NotSet",
+              "targetCollection": "Weapon",
+              "targetWeaponCategory": "NotSet",
+              "targetWeaponSubType": "Melee",
+              "targetWeaponType": "NotSet"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "hideApplicationFloatie": true,
+              "showInStatusPanel": false,
+              "showInTargetPreview": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -62,6 +62,87 @@
 				"modType": "System.Single"
 			},
 			"nature": "Debuff"
+		},
+		"NumSensorLockSteps": 1,
+		"SensorLockSingleStepEffect": {
+		  "durationData": {
+			"duration": 1,
+			"ticksOnEndOfRound": true,
+			"stackLimit": 1
+		  },
+		  "targetingData": {
+			"effectTargetType": "SingleTarget",
+			"forceVisRebuild": true
+		  },
+		  "effectType": "StatisticEffect",
+		  "Description": {
+			"Id": "AbilityDefT6A",
+			"Name": "SENSOR LOCK",
+			"Details": "SIGNATURE BOOSTED",
+			"Icon": "uixSvgIcon_action_sensorlock"
+		  },
+		  "statisticData": {
+			"statName": "ToHitThisActorDirectFire",
+			"operation": "Float_Add",
+			"modValue": "0.0",
+			"modType": "System.Single"
+		  },
+		  "nature": "Debuff"
+		},
+		"NumSensorLockImpairedEffects": 1,
+		"SensorsImpairedEffect": {
+		  "durationData": {
+			"duration": 1,
+			"ticksOnActivations": true,
+			"useActivationsOfTarget": true,
+			"stackLimit": 2
+		  },
+		  "targetingData": {
+			"effectTargetType": "SingleTarget",
+			"showInTargetPreview": true,
+			"showInStatusPanel": true
+		  },
+		  "effectType": "StatisticEffect",
+		  "Description": {
+			"Id": "AbilityDefPPC",
+			"Name": "SENSORS IMPAIRED",
+			"Details": "[AMT] Difficulty to all of this unit's attacks until its next activation.",
+			"Icon": "uixSvgIcon_status_sensorsImpaired"
+		  },
+		  "nature": "Debuff",
+		  "statisticData": {
+			"statName": "AccuracyModifier",
+			"operation": "Float_Add",
+			"modValue": "1.0",
+			"modType": "System.Single"
+		  }
+		},
+		"SensorLockAntiStealthEffect": {
+		  "durationData": {
+			"duration": 1,
+			"ticksOnEndOfRound": true,
+			"stackLimit": 1
+		  },
+		  "targetingData": {
+			"effectTargetType": "SingleTarget",
+			"forceVisRebuild" : true,
+			"showInTargetPreview": false,
+			"showInStatusPanel": false
+		  },
+		  "effectType": "StatisticEffect",
+		  "Description": {
+			"Id": "SensorLockAntiStealthEffect",
+			"Name": "SENSOR LOCK: STEALTH SUPPRESSED",
+			"Details": "Sensor Lock suppresses Stealth on this unit for 1 Round.",
+			"Icon": "uixSvgIcon_status_sensorsImpaired"
+		  },
+		  "nature": "Debuff",
+		  "statisticData": {
+			"statName": "GhostEffectStacks",
+			"operation": "Int_Add",
+			"modValue": "-999",
+			"modType": "System.Int32"
+		  }
 		}
 	},
 	"ToHit": {

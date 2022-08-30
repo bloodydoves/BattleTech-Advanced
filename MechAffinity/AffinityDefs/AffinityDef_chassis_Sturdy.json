@@ -1,0 +1,75 @@
+{
+  "id": "AffinityDef_chassis_Sturdy",
+  "affinityType": "Chassis",
+  "affinityData": {
+    "chassisNames": [
+      "chrprfmech_wolfhoundbase-001_35",
+      "Shadowhawk_55",
+      "chrprfmech_dervishbase-001_55",
+      "chrPrfMech_dragonBase-001_60",
+      "Perseus_75",
+      "chrPrfMech_hatamotochiBase-001_80",
+      "chrprfmech_emperorbase-001_90",
+      "chrprfmech_juggernautbase-001_90",
+      "chrPrfMech_adderbase-001_35",
+      "chrprfmech_iceferretbase-001_45",
+      "chrprfmech_ebonjaguarbase-001_65",
+      "chrprfmech_highlanderiicbase-001_90",
+      "chrprfmech_kodiakbase-001_100",
+      "chrprfmech_masonvikingbase-001_90",
+      "chrprfmech_crkbase-001_85",
+      "chrprfmech_hectorbase-001_70",
+      "chrprfmech_hoplitebase-001_55",
+      "chrprfmech_hectorbase-001_80",
+      "chrprfmech_shawklambase-001_80",
+      "chrprfmech_omegabase-001_150",
+      "chrprfmech_reptarbase-001_35"
+    ],
+    "idType": "AssemblyVariant",
+    "altMaps": [],
+    "affinityLevels": [
+      {
+        "id": "Sturdy",
+        "missionsRequired": 15,
+        "levelName": "Sturdy",
+        "decription": "Gains 2 extra pilot hits",
+        "affinities": [],
+        "effectData": [
+          {
+            "Description": {
+              "Details": "The pilot's incredible skill with this mech improves its life support systems by 2, reducing pilot hits even further.",
+              "Icon": "UixSvgIcon_specialEquip_System",
+              "Id": "StatusEffect-Affinity-PilotHits",
+              "Name": "Mech Affinity Pilot Damage Boost"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": -1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "additionalRules": "NotSet",
+              "modType": "System.Int32",
+              "modValue": "2",
+              "operation": "Int_Add",
+              "statName": "BonusHealth",
+              "targetAmmoCategory": "NotSet",
+              "targetCollection": "NotSet",
+              "targetWeaponCategory": "NotSet",
+              "targetWeaponSubType": "NotSet",
+              "targetWeaponType": "NotSet"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "hideApplicationFloatie": true,
+              "showInStatusPanel": false,
+              "showInTargetPreview": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

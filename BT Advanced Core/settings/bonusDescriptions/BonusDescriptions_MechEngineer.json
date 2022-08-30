@@ -1008,6 +1008,12 @@
 			"Full": "Enables the Battlemech to use Prototype Heatsinks"
 		},
 		{
+			"Bonus": "CoolingSystemSDHS",
+			"Short": "(S)DHS Kit",
+			"Long": "(S)DHS Kit",
+			"Full": "Enables the Battlemech to use Sanctuary Double Heat Sinks"
+		},
+		{
 			"Bonus": "BonusAmmo",
 			"Short": "{0} Ammo",
 			"Long": "{0} Extra Ammo",
@@ -1683,7 +1689,7 @@
 			"Bonus": "C3Jamming",
 			"Short": "C3 Jammer",
 			"Long": "C3 Jammer",
-			"Full": "C3 networks are fragile and are vulnerable to jamming. ECM effects jam any C3 units within {0} meters until the C3 is outside the range of the ECM's jamming effect."
+			"Full": "C3 networks are fragile and are vulnerable to jamming. ECM effects jam C3 effects within {0} meters when activated, preventing any unit in the area from being part of any C3 networks."
 		},
 		{
 			"Bonus": "C3ECMWeakness",
@@ -1750,6 +1756,12 @@
 			"Short": "C3i Targeting",
 			"Long": "C3i Targeting Bonus",
 			"Full": "C3i provides all C3i-equipped units within {0} meters with {1} accuracy on weapon attacks."
+		},
+		{
+			"Bonus": "DroneNetwork",
+			"Short": "Drone Network",
+			"Long": "Drone Network",
+			"Full": "Drone Networks provide all drone-equipped units with the best possible range accuracy to enemy targets based on the closest drone-equipped unit in the network to the target."
 		},
 		{
 			"Bonus": "NovaCEWS",
@@ -1852,6 +1864,24 @@
 			"Short": "Volatile",
 			"Long": "Pressurized Coolant",
 			"Full": "Pressurized Coolant can explode for {0} Heat, Damage and Stability"
+		},
+		{
+			"Bonus": "DmgIncrease",
+			"Short": "Dmg Increase",
+			"Long": "Damage Increase",
+			"Full": "Weapon damage increases to {0} of its starting value at long range."
+		},
+		{
+			"Bonus": "DmgIncreaseStart",
+			"Short": "Dmg Increase Start",
+			"Long": "Damage Increase Starting Distance",
+			"Full": "Weapon damage begins to increasing starting at {0} meters."
+		},
+		{
+			"Bonus": "DmgIncreaseEnd",
+			"Short": "Dmg Increase End",
+			"Long": "Damage Increase End Distance",
+			"Full": "Weapon damage stops increasing starting at {0} meters."
 		},
 		{
 			"Bonus": "DmgFallOff",
@@ -2308,6 +2338,12 @@
 			"Short": "CASEII {0}",
 			"Long": "CASEII {0}",
 			"Full": "CASE II reduces Ammo Explosion Damage to only {0} points of Damage."
+		},
+		{
+			"Bonus": "SHIELD",
+			"Short": "SHIELD {0}",
+			"Long": "SHIELD {0}",
+			"Full": "SHIELD reduces Ammo Explosion Damage to only {0} points of Damage."
 		},
 		{
 			"Bonus": "CASED",
@@ -3405,13 +3441,13 @@
 			"Bonus": "Visibility",
 			"Short": "{0} Vis",
 			"Long": "{0} Visibility",
-			"Full": "{0} reduced Visibility"
+			"Full": "This unit has {0} visibility to the enemy (negative is good, positive is bad)."
 		},
 		{
 			"Bonus": "Signature",
 			"Short": "{0} Sig",
 			"Long": "{0} Signature",
-			"Full": "{0} Reduced Signature on Enemy Sensors"
+			"Full": "This unit has {0} sensor signature to the enemy (negative is good, positive is bad)."
 		},
 		{
 			"Bonus": "Evasion",
@@ -3831,13 +3867,37 @@
 			"Bonus": "ElecLaser",
 			"Short": "Elec-Laser Debuff",
 			"Long": "Elec-Laser Debuff {0}",
-			"Full": "Elec-Laser scrambles Target's systems for {0} Accuracy"
+			"Full": "Elec-Lasers scramble the target's systems for {0} accuracy."
 		},
 		{
 			"Bonus": "DBAC",
 			"Short": "DB/AC",
 			"Long": "Double Barrel Autocannon",
 			"Full": "Double Barrel Autocannons fire a pair of shells at once with no risk of jamming."
+		},
+		{
+			"Bonus": "MassDriver",
+			"Short": "Mass Driver",
+			"Long": "Mass Driver Restrictions",
+			"Full": "Mass Drivers are heavy and bulky but also come with electronic restrictions on their mis-use, which prevents mounting more than 1 on a unit at any time."
+		},
+		{
+			"Bonus": "NPCDEBUFF",
+			"Short": "NPC Debuff",
+			"Long": "NPC Debuff {0}",
+			"Full": "The NPC scrambles the target's systems for {0} accuracy."
+		},
+		{
+			"Bonus": "DRMMoveDebuff",
+			"Short": "DRM Move",
+			"Long": "DRM Movement Debuff",
+			"Full": "DRMs inflict a {0} movement penalty, which stacks up to {1} times with itself."
+		},
+		{
+			"Bonus": "DRMHeatDebuff",
+			"Short": "DRM Heat",
+			"Long": "DRM Heat Debuff",
+			"Full": "DRMs inflict a {0} heat generation penalty, which stacks up to {1} times with itself."
 		},
 		{
 			"Bonus": "IsCannon",
@@ -4642,6 +4702,24 @@
 			"Short": "{0} Damage Reduction",
 			"Long": "{0} Damage Reduction",
 			"Full": "This component provides a flat {0} Damage Reduction"
+		},
+		{
+			"Bonus": "BallisticDamageReduction",
+			"Short": "{0} Ballistic Damage Reduction",
+			"Long": "{0} Ballistic Damage Reduction",
+			"Full": "This component provides a flat {0} Damage Reduction to Ballistic weapon damage."
+		},
+		{
+			"Bonus": "MissileDamageReduction",
+			"Short": "{0} Missile Damage Reduction",
+			"Long": "{0} Missile Damage Reduction",
+			"Full": "This component provides a flat {0} Damage Reduction to Missile weapon damage."
+		},
+		{
+			"Bonus": "EnergyDamageReduction",
+			"Short": "{0} Energy Damage Reduction",
+			"Long": "{0} Energy Damage Reduction",
+			"Full": "This component provides a flat {0} Damage Reduction to Energy weapon damage."
 		},
 		{
 			"Bonus": "JumpHeat",

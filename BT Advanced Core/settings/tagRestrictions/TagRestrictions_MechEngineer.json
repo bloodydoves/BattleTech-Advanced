@@ -207,7 +207,6 @@
 			"IncompatibleTags": [
 				"C3Master",
 				"C3i",
-				"ECM",
 				"NullSig",
 				"CLPS"
 			]
@@ -217,7 +216,6 @@
 			"IncompatibleTags": [
 				"C3Slave",
 				"C3i",
-				"ECM",
 				"NullSig",
 				"CLPS"
 			]
@@ -293,13 +291,40 @@
 		{
 			"Tag": "Freezer",
 			"RequiredTags": [
-				"SHSKit"
+				"SDHSKit"
 			],
 			"IncompatibleTags": [
 				"DHSKit",
 				"LHSKit",
 				"CDHSKit",
-				"PDHSKit"
+				"PDHSKit",
+				"SHSKit"
+			]
+		},
+		{
+			"Tag": "Negator",
+			"RequiredTags": [
+				"SDHSKit"
+			],
+			"IncompatibleTags": [
+				"DHSKit",
+				"LHSKit",
+				"CDHSKit",
+				"PDHSKit",
+				"SHSKit"
+			]
+		},
+		{
+			"Tag": "Controller",
+			"RequiredTags": [
+				"SDHSKit"
+			],
+			"IncompatibleTags": [
+				"DHSKit",
+				"LHSKit",
+				"CDHSKit",
+				"PDHSKit",
+				"SHSKit"
 			]
 		},
 		{
@@ -311,7 +336,8 @@
 				"CDHSKit",
 				"LHSKit",
 				"PDHSKit",
-				"SHSKit"
+				"SHSKit",
+				"SDHSKit"
 			]
 		},
 		{
@@ -323,7 +349,8 @@
 				"DHSKit",
 				"PDHSKit",
 				"CDHSKit",
-				"LHSKit"
+				"LHSKit",
+				"SDHSKit"
 			]
 		},
 		{
@@ -335,7 +362,8 @@
 				"DHSKit",
 				"PDHSKit",
 				"SHSKit",
-				"LHSKit"
+				"LHSKit",
+				"SDHSKit"
 			]
 		},
 		{
@@ -347,7 +375,8 @@
 				"DHSKit",
 				"CDHSKit",
 				"PDHSKit",
-				"SHSKit"
+				"SHSKit",
+				"SDHSKit"
 			]
 		},
 		{
@@ -359,7 +388,21 @@
 				"DHSKit",
 				"CDHSKit",
 				"SHSKit",
-				"LHSKit"
+				"LHSKit",
+				"SDHSKit"
+			]
+		},
+		{
+			"Tag": "SDHS",
+			"RequiredTags": [
+				"SDHSKit"
+			],
+			"IncompatibleTags": [
+				"DHSKit",
+				"CDHSKit",
+				"SHSKit",
+				"LHSKit",
+				"PDHSKit"
 			]
 		}
 	]

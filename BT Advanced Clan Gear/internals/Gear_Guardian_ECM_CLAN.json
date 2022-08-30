@@ -7,13 +7,44 @@
 		],
 		"BonusDescriptions": {
 			"Bonuses": [
-				"Defense: +1",
-				"ECMRadius: 150",
+				"MissileDefense: +2",
+				"SensorLockImmune",
 				"C3Jamming: 120"
 			]
 		},
-		"InventorySorter": {
-			"SortKey": "00024"
+		"ActivatableComponent": {
+			"ButtonName": "Guardian ECM",
+			"CanNotBeActivatedManualy": false,
+			"ActiveByDefault": true,
+			"FailFlatChance": 0.0,
+			"SafeActivation": true,
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect_ECM-SensorLockImmunity",
+						"Name": "Sensor Lock Immunity",
+						"Details": "This unit is immune to sensor lock.",
+						"Icon": "circuitry"
+					},
+					"statisticData": {
+						"statName": "EvasiveSafeFromSensorLock",
+						"operation": "Set",
+						"modValue": "true",
+						"modType": "System.Boolean"
+					},
+					"nature": "Buff"
+				}
+			]
 		}
 	},
 	"StatName": null,
@@ -23,15 +54,15 @@
 		"Cost": 441000,
 		"Rarity": 3,
 		"Purchasable": true,
-		"Manufacturer": "Johnston",
+		"Manufacturer": "CLAN",
 		"Model": "Guardian ECM",
-		"UIName": "Guardian ECM (C)",
+		"UIName": "ECM Suite (C)",
 		"Id": "Gear_Guardian_ECM_CLAN",
-		"Name": "Guardian ECM (C)",
-		"Details": "The Guardian ECM Suite was introduced in 2597 by Johnston Industries of the Terran Hegemony. Designed to interfere with guided weaponry, targeting computers, and communication systems, the Guardian was typically used to shield allied units from such equipment by emitting a broad-band signal meant to confuse radar, infrared, ultraviolet, magscan and sonar sensors.",
+		"Name": "ECM Suite (C)",
+		"Details": "The Clans never lost the technology for the Guardian ECM as developed by the Star League. While their ECM Suite works much the same as the older Guardian ECM, the Clans did succeed in reducing its weight by 33%, making it easier to work into OmniMech loadouts on the fly. The ECM Suite helps counter enemy missile attacks and makes the user immune to precise sensor locks while the ECM Suite is activated while also excluding the user from joining any C3 networks while the ECM Suite is activated.",
 		"Icon": "circuitry"
 	},
-	"BonusValueA": "+2 Defense.",
+	"BonusValueA": "",
 	"BonusValueB": "",
 	"ComponentType": "Upgrade",
 	"ComponentSubType": "Prototype_ElectronicWarfare",
@@ -44,12 +75,12 @@
 	"CriticalComponent": false,
 	"Auras": [
 		{
-			"Id": "Gear_GECM_ECM",
-			"Name": "ECM",
+			"Id": "Gear_Guardian_ECM_MissleScramble",
+			"Name": "Missile Scrambling",
 			"ReticleColor": "#ffffff",
 			"Range": 150,
 			"RemoveOnSensorLock": false,
-			"State": "Persistent",
+			"State": "Online",
 			"ApplySelf": true,
 			"AllyStealthAffection": "None",
 			"EnemyStealthAffection": "None",
@@ -67,7 +98,7 @@
 				{
 					"durationData": {
 						"duration": -1,
-						"stackLimit": -1
+						"stackLimit": 1
 					},
 					"targetingData": {
 						"effectTriggerType": "Passive",
@@ -83,13 +114,13 @@
 					"Description": {
 						"Id": "GECMInterference",
 						"Name": "GECM Interference",
-						"Details": "Guardian ECM making this unit harder to hit",
+						"Details": "Guardian ECM is making this unit harder to hit, +2 penalty to enemy missile attacks.",
 						"Icon": "circuitry"
 					},
 					"statisticData": {
-						"statName": "ToHitThisActor",
+						"statName": "ToHitThisActorMissile",
 						"operation": "Float_Add",
-						"modValue": "1.0",
+						"modValue": "2.0",
 						"modType": "System.Single"
 					},
 					"nature": "Buff"
@@ -97,65 +128,12 @@
 			]
 		},
 		{
-			"Id": "Gear_GECM_ECM_C3",
-			"Name": "C3 Jamming",
+			"Id": "Gear_Guardian_ECM_C3Scramble",
+			"Name": "C3 Scrambling",
 			"ReticleColor": "#1a91ea",
 			"Range": 120,
 			"RemoveOnSensorLock": false,
-			"State": "Persistent",
-			"ApplySelf": true,
-			"AllyStealthAffection": "None",
-			"EnemyStealthAffection": "None",
-			"IsPositiveToAlly": true,
-			"IsNegativeToEnemy": false,
-			"ownerVFX": [],
-			"targetVFX": [],
-			"removeOwnerVFX": [],
-			"removeTargetVFX": [],
-			"ownerSFX": [],
-			"targetSFX": [],
-			"removeOwnerSFX": [],
-			"removeTargetSFX": [],
-			"statusEffects": [
-				{
-					"durationData": {
-						"duration": -1,
-						"stackLimit": -1
-					},
-					"targetingData": {
-						"effectTriggerType": "Passive",
-						"specialRules": "NotSet",
-						"effectTargetType": "EnemiesWithinRange",
-						"range": 0.0,
-						"forcePathRebuild": false,
-						"forceVisRebuild": false,
-						"showInTargetPreview": false,
-						"showInStatusPanel": true
-					},
-					"effectType": "StatisticEffect",
-					"Description": {
-						"Id": "StatusEffect_ECM-C3-Jamming",
-						"Name": "C3 Jamming",
-						"Details": "Guardian ECM is jamming C3 networks near it, disabling them for as long as they remain in the area.",
-						"Icon": "circuitry"
-					},
-					"statisticData": {
-						"statName": "ADD_ENCOUNTER_TAG_C3_Network",
-						"operation": "Float_Add",
-						"modValue": "-2",
-						"modType": "System.Single"
-					},
-					"nature": "Buff"
-				}
-			]
-		},
-		{
-			"Id": "Gear_GECM_ECM_C3_Ally",
-			"Name": "C3 Jamming",
-			"ReticleColor": "#1a91ea",
-			"Range": 120,
-			"RemoveOnSensorLock": false,
-			"State": "Persistent",
+			"State": "Online",
 			"ApplySelf": true,
 			"AllyStealthAffection": "None",
 			"EnemyStealthAffection": "None",
@@ -187,9 +165,39 @@
 					},
 					"effectType": "StatisticEffect",
 					"Description": {
-						"Id": "StatusEffect_ECM-C3-Jamming-Allies",
+						"Id": "StatusEffect_ECM-C3-Jamming",
 						"Name": "C3 Jamming",
-						"Details": "Guardian ECM is jamming C3 networks near it, disabling them for as long as they remain in the area.",
+						"Details": "Guardian ECM is jamming C3 networks, preventing C3 networks from functioning within 120 meters.",
+						"Icon": "circuitry"
+					},
+					"statisticData": {
+						"statName": "ADD_ENCOUNTER_TAG_C3_Network",
+						"operation": "Float_Add",
+						"modValue": "-2",
+						"modType": "System.Single"
+					},
+					"nature": "Buff"
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"specialRules": "NotSet",
+						"effectTargetType": "EnemiesWithinRange",
+						"range": 0.0,
+						"forcePathRebuild": false,
+						"forceVisRebuild": false,
+						"showInTargetPreview": false,
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect_ECM-C3-Enemy-Jamming",
+						"Name": "C3 Enemy Jamming",
+						"Details": "Guardian ECM is jamming C3 networks, preventing C3 networks from functioning within 120 meters.",
 						"Icon": "circuitry"
 					},
 					"statisticData": {

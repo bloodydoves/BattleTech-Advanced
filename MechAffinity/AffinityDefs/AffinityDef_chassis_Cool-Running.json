@@ -1,0 +1,68 @@
+{
+  "id": "AffinityDef_chassis_Cool-Running",
+  "affinityType": "Chassis",
+  "affinityData": {
+    "chassisNames": [
+      "chrprfmech_firebeebase-001_35",
+      "chrPrfMech_jennerBase-001_35",
+      "chrPrfMech_enforcerBase-001_50",
+      "chrprfmech_kitfoxbase-001_30",
+      "chrprfmech_cougarbase-001_35",
+      "chrPrfMech_shadowcatbase-001_45",
+      "chrprfmech_novabase-001_50",
+      "chrprfmech_enfieldbase-001_50",
+      "Wasplam_30",
+      "Stingerlam_30",
+      "chrprfmech_foxbase-001_50",
+      "Hephaestus_55",
+	  "ChampionLAM_60",
+	  "chrprfmech_cuflashmanbase-001_75"
+    ],
+    "idType": "AssemblyVariant",
+    "altMaps": [],
+    "affinityLevels": [
+      {
+        "id": "Cool-Running",
+        "missionsRequired": 15,
+        "levelName": "Cool-Running",
+        "decription": "Adds 6 bonus heat sinking, effectively one extra double heat sink.",
+        "affinities": [],
+        "effectData": [
+          {
+            "Description": {
+              "Details": "The pilot's incredible skill with this mech improves its heat sinking systems, increasing dissipation by 3.",
+              "Icon": "UixSvgIcon_specialEquip_System",
+              "Id": "StatusEffect-Affinity-Dissipation",
+              "Name": "Mech Affinity Heat Dissipation Boost"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": -1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "additionalRules": "NotSet",
+              "modType": "System.Int32",
+              "modValue": "6",
+              "operation": "Int_Add",
+              "statName": "HeatSinkCapacity",
+              "targetAmmoCategory": "NotSet",
+              "targetCollection": "NotSet",
+              "targetWeaponCategory": "NotSet",
+              "targetWeaponSubType": "NotSet",
+              "targetWeaponType": "NotSet"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "hideApplicationFloatie": true,
+              "showInStatusPanel": false,
+              "showInTargetPreview": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

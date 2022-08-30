@@ -1,0 +1,76 @@
+{
+  "id": "AffinityDef_chassis_Nimble",
+  "affinityType": "Chassis",
+  "affinityData": {
+    "chassisNames": [
+      "chrPrfMech_waspHotD-001_20",
+      "chrPrfMech_waspHotD-001_25",
+      "Javelin_30",
+      "chrPrfMech_stingerHotD-001_20",
+      "chrPrfMech_spiderBase-001_30",
+      "chrPrfMech_firestarterBase-001_35",
+      "FirestarterOmni_45",
+      "chrprfmech_chimerabase-001_40",
+      "chrPrfMech_catapultBase-001_65",
+      "chrPrfMech_grasshopperBase-001_70",
+      "chrprfmech_mistlynxbase-001_25",
+      "chrPrfMech_hellhoundBase-001_50",
+      "chrprfmech_executionerbase-001_95",
+      "chrprfmech_wraithbase-001_55",
+      "chrprfmech_gltbase-001_70",
+      "chrprfmech_anvilbase-001_60",
+      "chrprfmech_wyvernbase-001_45",
+      "chrprfmech_phoenixbase-001_50",
+      "chrprfmech_brigandbase-001_25",
+      "chrprfmech_vossieostscoutbase-001_35",
+      "chrPrfMech_phoenixhawkBase-001_45",
+      "chrprfmech_legacybase-001_80"
+    ],
+    "idType": "AssemblyVariant",
+    "altMaps": [],
+    "affinityLevels": [
+      {
+        "id": "Nimble",
+        "missionsRequired": 15,
+        "levelName": "Nimble",
+        "decription": "15% more jumping distance",
+        "affinities": [],
+        "effectData": [
+          {
+            "Description": {
+              "Details": "The pilot's incredible skill with this mech makes it extremely mobile with its jump jets.",
+              "Icon": "UixSvgIcon_specialEquip_System",
+              "Id": "StatusEffect-Affinity-NimbleJumper",
+              "Name": "Mech Affinity Jumping Boost"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": -1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "additionalRules": "NotSet",
+              "modType": "System.Single",
+              "modValue": "1.15",
+              "operation": "Float_Multiply",
+              "statName": "JumpDistanceMultiplier",
+              "targetAmmoCategory": "NotSet",
+              "targetCollection": "NotSet",
+              "targetWeaponCategory": "NotSet",
+              "targetWeaponSubType": "NotSet",
+              "targetWeaponType": "NotSet"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "hideApplicationFloatie": true,
+              "showInStatusPanel": false,
+              "showInTargetPreview": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

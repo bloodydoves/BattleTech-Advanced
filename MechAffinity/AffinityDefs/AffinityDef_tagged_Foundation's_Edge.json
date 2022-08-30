@@ -1,0 +1,81 @@
+{
+  "id": "AffinityDef_tagged_Foundation's_Edge",
+  "affinityType": "Tag",
+  "affinityData": {
+    "tag": "Affinity_Raza_Mongoose",
+    "chassisNames": [
+      "chrprfmech_mongoosebase-001_25"
+    ],
+    "idType": "AssemblyVariant",
+    "altMaps": [],
+    "affinityLevels": [
+      {
+        "id": "Foundation's_Edge",
+        "missionsRequired": 10,
+        "levelName": "Foundation's Edge",
+        "decription": "Raza gains +10% energy damage and ignores 1 evasion with energy weapons in his Mongoose.",
+        "affinities": [],
+        "effectData": [
+          {
+            "Description": {
+              "Details": "Raza's incredible skill with this mech improves its energy weapon damage by 10%.",
+              "Icon": "laser-blast",
+              "Id": "StatusEffect-Affinity-RazaEnergyDamage",
+              "Name": "Mech Affinity Energy Damage Boost"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": -1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "additionalRules": "NotSet",
+              "modType": "System.Single",
+              "modValue": "1.1",
+              "operation": "Float_Multiply",
+              "statName": "DamagePerShot",
+              "targetCollection": "Weapon",
+              "targetWeaponCategory": "Energy"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "showInStatusPanel": false,
+              "showInTargetPreview": false
+            }
+          },
+          {
+            "Description": {
+              "Details": "Raza's incredible skill with this mech improves its energy weapon damage by 10%.",
+              "Icon": "laser-blast",
+              "Id": "StatusEffect-Affinity-RazaEnergyEvasionIgnore",
+              "Name": "Mech Affinity Energy Damage Boost"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": -1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "additionalRules": "NotSet",
+              "modType": "System.Single",
+              "modValue": "1.0",
+              "operation": "Float_Add",
+              "statName": "EvasivePipsIgnored",
+              "targetCollection": "Weapon",
+              "targetWeaponCategory": "Energy"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "showInStatusPanel": false,
+              "showInTargetPreview": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

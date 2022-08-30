@@ -1,0 +1,58 @@
+{
+  "id": "AffinityDef_tagged_Warfighter",
+  "affinityType": "Tag",
+  "affinityData": {
+    "tag": "Affinity_tbone_Corsair",
+    "chassisNames": [
+      "Corsair_55",
+      "Corsair_75",
+      "Corsair_95"
+    ],
+    "idType": "AssemblyVariant",
+    "altMaps": [],
+    "affinityLevels": [
+      {
+        "id": "Warfighter",
+        "missionsRequired": 10,
+        "levelName": "Warfighter",
+        "decription": "t-bone gains +10% ballistic damage with his Corsair.",
+        "affinities": [],
+        "effectData": [
+          {
+            "Description": {
+              "Details": "t-bone's incredible skill with this mech improves its ballistic damage by 10%.",
+              "Icon": "UixSvgIcon_specialEquip_System",
+              "Id": "StatusEffect-Affinity-tboneCorsair",
+              "Name": "t-bone Affinity Damage Boost"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": -1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "additionalRules": "NotSet",
+              "modType": "System.Single",
+              "modValue": "1.1",
+              "operation": "Float_Multiply",
+              "statName": "DamagePerShot",
+              "targetAmmoCategory": "NotSet",
+              "targetCollection": "Weapon",
+              "targetWeaponCategory": "Ballistic",
+              "targetWeaponSubType": "NotSet",
+              "targetWeaponType": "NotSet"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "hideApplicationFloatie": true,
+              "showInStatusPanel": false,
+              "showInTargetPreview": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

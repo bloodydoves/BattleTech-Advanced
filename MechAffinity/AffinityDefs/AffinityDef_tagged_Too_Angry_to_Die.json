@@ -1,0 +1,56 @@
+{
+  "id": "AffinityDef_tagged_Too_Angry_to_Die",
+  "affinityType": "Tag",
+  "affinityData": {
+    "tag": "Affinity_Tex_Awesome",
+    "chassisNames": [
+      "chrPrfMech_awesomeBase-001_80"
+    ],
+    "idType": "AssemblyVariant",
+    "altMaps": [],
+    "affinityLevels": [
+      {
+        "id": "Too_Angry_to_Die",
+        "missionsRequired": 10,
+        "levelName": "Too Angry to Die",
+        "decription": "Tex gains +10% energy damage with his Awesome.",
+        "affinities": [],
+        "effectData": [
+          {
+            "Description": {
+              "Details": "Tex's incredible skill with this mech improves its energy damage by 10%.",
+              "Icon": "UixSvgIcon_specialEquip_System",
+              "Id": "StatusEffect-Affinity-TexAwesome",
+              "Name": "Tex Affinity Damage Boost"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": -1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "additionalRules": "NotSet",
+              "modType": "System.Single",
+              "modValue": "1.1",
+              "operation": "Float_Multiply",
+              "statName": "DamagePerShot",
+              "targetAmmoCategory": "NotSet",
+              "targetCollection": "Weapon",
+              "targetWeaponCategory": "Energy",
+              "targetWeaponSubType": "NotSet",
+              "targetWeaponType": "NotSet"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "hideApplicationFloatie": true,
+              "showInStatusPanel": false,
+              "showInTargetPreview": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

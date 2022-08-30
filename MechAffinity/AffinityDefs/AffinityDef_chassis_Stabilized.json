@@ -1,0 +1,53 @@
+{
+  "id": "AffinityDef_chassis_Stabilized",
+  "affinityType": "Chassis",
+  "affinityData": {
+    "chassisNames": [
+      "Barghest_70",
+      "Goliath_80",
+      "Sirocco_95",
+      "Scorpion_55"
+    ],
+    "idType": "AssemblyVariant",
+    "altMaps": [],
+    "affinityLevels": [
+      {
+        "id": "Stabilized",
+        "missionsRequired": 15,
+        "levelName": "Stabilized",
+        "decription": "Reduces stability damage taken by 50%.",
+        "affinities": [],
+        "effectData": [
+          {
+            "Description": {
+              "Details": "The pilot's incredible skill with this mech reduces stability damage taken by 50%.",
+              "Icon": "UixSvgIcon_specialEquip_System",
+              "Id": "StatusEffect-Affinity-StabDmgReduction",
+              "Name": "Mech Affinity Stab Damage Reduction"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": -1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "additionalRules": "NotSet",
+              "statName": "ReceivedInstabilityMultiplier",
+              "operation": "Float_Multiply",
+              "modValue": "0.5",
+              "modType": "System.Single"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "hideApplicationFloatie": true,
+              "showInStatusPanel": false,
+              "showInTargetPreview": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
