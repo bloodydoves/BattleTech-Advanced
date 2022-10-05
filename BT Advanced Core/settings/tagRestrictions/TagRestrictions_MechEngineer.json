@@ -58,7 +58,9 @@
 			"Tag": "ImprovedJJ",
 			"IncompatibleTags": [
 				"StandardJJ",
+				"Avionics",
 				"SHJJ",
+				"JumpTurbine",
 				"MechanicalJJ",
 				"DirectionalJJ"
 			]
@@ -66,6 +68,21 @@
 		{
 			"Tag": "StandardJJ",
 			"IncompatibleTags": [
+				"Avionics",
+				"ImprovedJJ",
+				"SHJJ",
+				"JumpTurbine",
+				"MechanicalJJ",
+				"DirectionalJJ"
+			]
+		},
+		{
+			"Tag": "JumpTurbine",
+			"RequiredTags": [
+				"Avionics"
+			],
+			"IncompatibleTags": [
+				"StandardJJ",
 				"ImprovedJJ",
 				"SHJJ",
 				"MechanicalJJ",
@@ -128,6 +145,7 @@
 				"emod_kit_cdhs",
 				"emod_kit_chs",
 				"emod_kit_lhs",
+				"emod_kit_sdhs",
 				"emod_kit_battlearmor"
 			]
 		},
@@ -165,6 +183,13 @@
 			]
 		},
 		{
+			"Tag": "TarComp",
+			"IncompatibleTags": [
+				"AESArm",
+				"AESLeg"
+			]
+		},
+		{
 			"Tag": "CLANTTS",
 			"IncompatibleTags": [
 				"Gear_FCS_Athena",
@@ -178,6 +203,8 @@
 			"Tag": "TSM",
 			"IncompatibleTags": [
 				"MASC",
+				"AESArm",
+				"AESLeg",
 				"ProtoTSM"
 			]
 		},
@@ -185,7 +212,27 @@
 			"Tag": "MASC",
 			"IncompatibleTags": [
 				"TSM",
+				"AESArm",
+				"AESLeg",
 				"Supercharger",
+				"ProtoTSM"
+			]
+		},
+		{
+			"Tag": "AESArm",
+			"IncompatibleTags": [
+				"TSM",
+				"MASC",
+				"TarComp",
+				"ProtoTSM"
+			]
+		},
+		{
+			"Tag": "AESLeg",
+			"IncompatibleTags": [
+				"TSM",
+				"MASC",
+				"TarComp",
 				"ProtoTSM"
 			]
 		},
@@ -199,7 +246,8 @@
 			"Tag": "ProtoTSM",
 			"IncompatibleTags": [
 				"MASC",
-				"TSM"
+				"TSM",
+				"AES"
 			]
 		},
 		{
@@ -236,7 +284,8 @@
 		{
 			"Tag": "CLPS",
 			"IncompatibleTags": [
-				"ECM"
+				"ECM",
+				"ProtoMech"
 			]
 		},
 		{
