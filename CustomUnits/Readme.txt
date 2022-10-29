@@ -5,9 +5,44 @@ this mod allows you next things
 4. Add custom animated hardpoints
 
 main settings in mod.json
+	"SortBy": {
+		"orderByCbillValue":false,
+		"orderByNickname":false,
+		"orderByTonnage":false
+	},                                        - sorting order settings
+	"PartialMovementOnlyWalkByDefault": true, - if true and AllowPartialSprint is not overridden via value in Unaffected section or CUAllowPartialSprint stat value, 
+	                                            units allow partial movement only walk not sprint
+	"AllowRotateWhileJumpByDefault": true, - if false and player units will not be able to rotate while normal jumping unless overridden by unit CUAllowRotateWhileJump stat value 
+												or Unaffected.AllowRotateWhileJump
+											if true player unit will be able to rotate while normal jumping  unless overridden by unit CUAllowRotateWhileJump stat value 
+												or Unaffected.AllowRotateWhileJump
 	"ConvoyRouteBeaconVFX":"vfxPrfPrtl_artillerySmokeSignal_loop", - VFX for convoy route points
 	"ConvoyRouteBeaconVFXScale":{"x":1,"y":1,"z":1}, - VFX scale for convoy route points
+	"IntelShowMiniMap": false - if true contract details accessible from lance configuration screen will show minimap
+	"IntelShowMood": false - if true contract details accessible from lance configuration screen will show contract mood
+	"IntelCompanyStatShowMiniMap": "Intel_Show_Minimap" - if this boolean company stat is true contract details accessible from 
+	                                                      lance configuration screen will show minimap even if IntelShowMiniMap is false
+	"IntelCompanyStatShowMood": "Intel_Show_Mood" - if this boolean company stat is true contract details accessible from 
+	                                                      lance configuration screen will show contract mood even if IntelShowMood is false
+	"IntelShowMood": false - if true contract details accessible from lance configuration screen will show contract mood
+	"timerObjectiveChange": {  - for certain contract types game logic timers can be altered. Timers eg. reinforcements arrival etc.
+		"DefendBase":{         - contract type name
+			"autoDeployAdvice":1,   - timer change for auto deploy
+			"manualDeployAdvice":2  - timer change for manual deploy
+		}
+	}
 	"DeployManual": true, - allowing manual deploy in random contract.
+	"DeployManualSpawnProtection": true - if true spawn protection will be used on manual deploy. How is it working:
+	                                      on player deploy all units on battle fields gain spawn protection flag
+										  this flag is been removed on unit activation end (reserve does not affects this flag).
+										  if either attacker either target have this flag attack is always miss
+										  So you have deployed your units, AI takes turn - they can't hit you cause both you and AI have flag
+										  AI got its turn - yours turn now. Even if AI units choose to act (not reserve) and loose protection flag,
+										  you can't hit cause your units have flag but you can move. When you've done AI units chooses to reserve act 
+										  and still can't hit cause they have flag. Next round both yours and AI units loose protection flag and can shoot normally
+	"DeployAutoSpawnProtection": true - if true on first round begin all units gain spawn protection 
+	"AskForDeployManual": true - if true and manual deployment is allowed will ask if player wants to set deploy position. 
+	                             if false and manual deployment is allowed - deploy will be manual. 
 	"ManualDeployForbidContractTypes": [] - list of contract types names, for listed contract types manual deploy will be forbidden
 	"DeployMaxDistanceFromOriginal": 30 - max distance from original deploy position
 	"DeployMinDistanceFromEnemy": 300 - min distance form enemy unit
@@ -154,6 +189,16 @@ VehicleChassis/Chassis
 		"additionalEncounterTags": [ "unit_vtol" ],                     - encounter tags list will be applied to actor. Note: you should be careful with this option, 
 																		  tags in this list should not be equal to tags in contracts definitions otherwise you can break 
 																		  objectives logic. 
+		"NoJumpjetsBlock": false,                                       - if true mech in airmech mode do not have restriction on jumping regardless flying height 
+																		  but it still can't use DFA attack
+		"MoveClamp": 0,                                                 - move clamp, same rules as for Unaffected section, but per representation
+		                                                                  0 - counted as not set. Example on math: clamp = 0.5, speed = 100
+																		  at start unit will be able to move 0-50 distance
+																		  if previous turn move distance was 50 it will be able to move 25-75
+																		  at maximum speed it will be able to move 50-100
+		"MinJumpDistance": 0,                                           - min jump distance. Effective value will be <JumpDistance> * <MinJumpDistance>. 
+		                                                                  Unit in this mode can't jump distance less than this. 
+																		  Value less or equal 0 or greater or equal 1 counted as unset
         "FlyHeight": 15.0,                                              - Flying height
         "AirMechVerticalJets":[                                         - list of jump jets
           {
@@ -210,10 +255,26 @@ VehicleChassis/Chassis
     "FiringArc":60, - if set and > 10 means vehicle firing arc in degrees and vehicle have to rotate toward target to fire. 
                       Working for mechs too, but you should note - direction decal will not been changed. 
     "Unaffected":{  
-      "MoveClamp": 0.3,       - this value controls inertia of unit. Unit move distance can't be greater [move distance prev. round] + MoveClamp*Speed 
+      "AllowPartialMovement": true - if true partial movement for this unit is allowed. Default value true, corresponding stat name "CUAllowPartialMovement"
+	                                 NOTE: partial movement means if you holding left shift while setting move destination point,
+									 it will place waypoint this position instead of destination point allowing you set more complicated trajectory
+									 i strongly suggest you to forbid partial movement for VTOLs and LAMs in airmech mode
+									 NOTE: it would not be able to set new waypoint if you have less than PartialMovementGuardDistance (default 15.0) movepoints left
+      "AllowPartialSprint": true - if true partial movement for this unit is allowed while sprinting. Default value <!PartialMovementOnlyWalkByDefault>,
+									corresponding stat name "CUAllowPartialSprint".
+									NOTE: if AllowPartialSprint is false and AllowPartialMovement is true unit allowed to partial move only while walking
+									if AllowPartialSprint is not set and PartialMovementOnlyWalkByDefault is true allowed to partial move only while walking
+									if AllowPartialSprint is not set and PartialMovementOnlyWalkByDefault is false allowed to partial move only while walking and sprinting
+      "AllowRotateWhileJump": true - if true unit is allowed to rotate while jumping. Default value <AllowRotateWhileJumpByDefault>,
+									corresponding stat name "CUAllowRotateWhileJump".
+	  "MoveClamp": 0.3,       - this value controls inertia of unit. Unit move distance can't be greater [move distance prev. round] + MoveClamp*Speed 
                                 and less [move distance prev. round] - MoveClamp*Speed. Only for AI. For Pathing: true value should be between 0.2 and 0.5. 
                                 For Pathing: true default value 0.2. For others  default 0 (mean not apply at all).
-      "DesignMasks":"true",   - if true chassis will be unaffected to all terrain design masks effects except move cost. Can be altered runtime via CUDesignMasksUnaffected actor's statistic value (boolean)
+      "DesignMasks":"true",   - if true chassis will be unaffected to all terrain design masks effects except move cost. 
+								Can be altered runtime via CUDesignMasksUnaffected actor's statistic value (boolean)
+								Note! when CUDesignMasksUnaffected becomes true unit looses all design mask sticky effects previously applied
+								and its current occupied design mask counted as empty, that is why changing CUDesignMasksUnaffected in design mask is very foolish move
+								CUDesignMasksUnaffected becomes false only design mask effects from current position is applied. 
       "Pathing":"true",       - if true chassis will be unaffected by pathing limitations 
 							(eg can climb vertical surface, other actors collisions, not cause filmsy objects destruction on impact). 
 							If choosed as melee target attacker melee (NOT AP) weapon always miss. Ignore terrain move cost.

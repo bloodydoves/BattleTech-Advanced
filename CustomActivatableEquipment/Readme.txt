@@ -43,6 +43,13 @@ AI related mod settings
   "unaffectedByHeadHitStatName": "unaffectedByHeadHit" - unit statistic names if this value is set true at runtime mech will be unaffected by head hits
   "equipmentFlashFailChance": 0.1 if component is active currently and its fail chance more than this value its slot will flash red.
   "C3NetworkEncounterTags": [ "C3_network" ] - if any of this tags exists in unit's encounter tags it will be target of C3 calculations. See C3 implementation section
+  "AdditionalInjuryReasonsTable": { <int>:"<string>" } - you can use this table to override InjuryReason to string evaluation. 
+                                  example: 
+								    settings:
+								      "AdditionalInjuryReasonsTable": { 10: "Component Fail" }
+								    component:
+									  "InjuryReasonInt": 10
+									on fail in floatie message will be "Component Fail" instead of "Error NotSet"
 -----------------------------------------------------------------------------------------------------------------------                              
   NOT NEEDED ANY MORE. KEEPED FOR HISTORICAL REASONS.
   "auraUpdateFix": "Position" - type of fixing updating aura while unit movement.
@@ -61,7 +68,12 @@ AI related mod settings
   "auraUpdateMinPosDelta": 20 - position delta for Position aura update fix strategy
   "auraUpdateMinTimeDelta": 2 - time delta for Time aura update fix strategy
 ------------------------------------------------------------------------------------------------------------------------
-    "Custom":{
+    if StatisticEffectDataInjector is installed (ModTek 3.0+ Mods/ModTek/Injectors/StatisticEffectDataInjector.dll)
+	you can define Location field in statisticData
+	if this field is set components from other locations can't be target for this statistic effect
+	works for passive and activatable effects (not working for auras, abilities and weapon impact/on-fire effects)
+	Location:"{current}" means location where component is installed
+	"Custom":{
 		"Category" : [ {"CategoryID" : "Activatable"}, {"CategoryID" : "MASC"}], 
 		"ActivatableComponent":{
 			"SwitchOffOnFall": false, - if true component will be switched off on mech knockdown. You should set it to true if you want your LAM animations working properly. 
@@ -83,6 +95,9 @@ AI related mod settings
 			"FailISDamage":10,  - Damage to inner structure on fail
 			"FailCrit":true, - if true fail inflicts critical rolls.
 			"SelfCrit": false - if true make crit hit to self.
+			"ShutdownOnFail": true, - if true on component fail it will be deactivated, if false component will continue to work after fail.
+			                          Note: it does not affects manual activation. If component failed on manual activation it remains offline regardless this setting
+			"FailCheckOnActivationEnd": false - if true fail check will be performed on activation end instead of move end
 			"FailDamageLocations":["LeftLeg","RightLeg"], - list of locations to damage. 
 			                              Available values Head,LeftArm, LeftTorso, CenterTorso, RightTorso,RightArm,LeftLeg,RightLeg. ONLY this values.
 			"FailDamageVehicleLocations":["Front","Left"], - list of locations to damage. Used if component installed on vehicle
@@ -96,6 +111,8 @@ AI related mod settings
 										  will be targeted. Eg. if FailDamageLocations array contains three locations three crit roll will be preformed
 										  But if FailCritComponents is true, fail results only one crit roll. It will list all components from FailCritLocations
 										  and than choose one to crit.
+			"FailDamageToInstalledLocation": false - if true location component is installed will be added to FailDamageLocations/FailDamageVehicleLocations
+			"FailCritToInstalledLocation": false - if true location component is installed will be added to FailCritLocations/FailCritVehicleLocations
 			"FailCritExcludeComponentsTags" : [], - if component have one of tag from this list it will be excluded from fail damage crit roll both (FailCrit and FailCritComponents) methods
 			"FailCritOnlyComponentsTags" : [], - if not empty only component having at least one tag from this list will be used to drit roll crit roll both (FailCrit and FailCritComponents) methods
 			"MechTonnageWeightMult" : 20 - installed chassis tonnage restriction multiplier. Tonnage restriction from (Component.Tonnage-1)*(MechTonnageWeightMult)+1 to (Component.Tonnage)*(MechTonnageWeightMult)
@@ -302,7 +319,7 @@ AI related mod settings
         "statusEffectsCollectionActorStat": "EngineExplodeStatusEffects", - unit's statistic name to control from other components
         "statusEffectsCollectionName": "NuclearExplosion", - name for status effect list in statusEffects list
          "statusEffects" : [] - status effect on component explosion
-        NOTE! look in Gear_EngineCore, Gear_EngineType example to realise how component's AoE explosion status effects can be controlled 
+        NOTE! look in Gear_EngineCore, Gear_EngineType example to get an inspiration how component's AoE explosion status effects can be controlled 
          
 			}, 			
 							NOTE: parent unit owner of component is not affected. Only other combatants. So component owner is not have to be destroyed or damaged at all. On other modders concern.
@@ -311,12 +328,23 @@ AI related mod settings
 			"ExplodeOnDamage": false - if true Explode will be activated on component destruction
 			"ActiveByDefault": false - if true component will be activated on combat start with no fail roll
 			"ExplodeOnSuccess": false - if true component will explode on success activation
-			"EjectOnFail": false - if true pilot will eject BEFORE damage applience on fail activation roll
-			"EjectOnSuccess": false - if true pilot will eject BEFORE effects applience on success activation roll
+			"EjectOnFail": false - if true pilot will be ejected BEFORE damage appliance on fail activation roll
+			"EjectOnSuccess": false - if true pilot will be ejected BEFORE effects appliance on success activation roll
 			"EjectOnActivationTry": false - if true pilot will be ejected before roll check
-								NOTE: Please keep in mind that all status efeects will be canseled on unit destruction. Ejection counts as destruction too.
+			"InjuryOnFail": false - if true pilot will be injured BEFORE damage appliance on fail activation roll
+			"InjuryOnSuccess": false - if true pilot will be injured BEFORE effects appliance on success activation roll (use with caution)
+			"InjuryOnActivationTry": false - if true pilot will be injured before roll check  (use with caution)
+			"InjuryReason": "ComponentExplosion" - injury reason. Possible values NotSet, ActorDestroyed, HeadHit, AmmoExplosion, Knockdown, SideTorsoDestroyed, ComponentExplosion
+			"InjuryReasonInt": -1, - you can use this value instead of InjuryReason. If greater than 0 this value is used instead.  
+			"KillPilotOnFail": false - if true pilot will be killed BEFORE damage appliance on fail activation roll
+			"KillPilotOnSuccess": false - if true pilot will be killed BEFORE effects appliance on success activation roll (use with caution)
+			"KillPilotOnActivationTry": false - if true pilot will be killed before roll check  (use with caution)
+			"KillPilotDamageType": "ComponentExplosion" - kill pilot damage type. Possible values NOT_SET, Unknown, HeadShot, HeadShotMelee, Melee, DFA, DFASelf, Overheat, OverheatSelf, KnockdownSelf, Knockdown, AmmoExplosion, Weapon, Enemy, Combat, Artillery, SideTorso, DropShip, OverrideString, DropPod, ComponentExplosion
+			"CheckPilotStatusFromAttack_reason": "Component fail" - string for CheckPilotStatusFromAttack invocation
+								NOTE: Please keep in mind that all status effects will be canceled on unit destruction. Ejection counts as destruction too.
 								If you want to keep unit statistic after component/mech destruction you have to set "effectsPersistAfterDestruction" : true
-								It is really neaded by components altering explosion stats cause do mech destruction they returned to default state which is usualy unwanted
+								It is really needed by components altering explosion stats cause do mech destruction they returned to default state which is usually unwanted
+								NOTE: Injury<..> and KillPilot<..> settings are not applied to squads
       "offlineStatusEffects": [], - effects applying on component switch off. They removed if component will be switched on. If component have no ActiveByDefault - applying on combat start
 			"AutoActivateOnIncomingHeat":0, - if > 0 component will be activated on incoming heat
 			"incomingHeatActivationType": "Threshhold", - type of activation, controls how AutoActivateOnIncomingHeat will be processed 
@@ -540,6 +568,10 @@ COMPOPNENT
       "IsPositiveToEnemy": false,
 	  "neededTags": [ "C3_slave" ],              - list of encounter tags unit should have for aura to be applied. 
 	                                               See Encounter tags by statistic effect section for more detail and notes
+	  "neededOwnerTags": [ "fancy_tag_name" ],   - list of encounter tags owner unit should have for aura to be working.
+	                                               if owner does not have needed tags aura's effective radius counted as 0
+												   once owner get all tags from list aura's effective radius stars to grow up to Range
+												   if aura carrier state and source component state allow it. 
       "onlineVFX": [                             - static aura effects. Playing if aura active. Linked to aura carrier.
         {
           "VFXname": "vfxPrfPrtl_ECM_loop",      - vfx name
