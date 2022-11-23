@@ -1,77 +1,128 @@
 {
-	"SearchModsInSubDirectories": true,
-	"DelayPrewarmToMainMenu": true,
 	"Logging": {
-		"PrefixesToIgnore": [
-			"ModTek",
-			"Unity [ERROR] Desired shader compiler platform",
-			"Unity [LOG] Look rotation viewing vector is zero",
-			"Unity [ERROR] Material doesn't have a color property",
-			"Unity [WARNING] Parent of RectTransform is being set with parent property",
-			"Unity [WARNING] The referenced script",
-			"Unity [WARNING] Rejecting unit",
-			"Unity [WARNING] Parent of RectTransform is being set with parent property",
-			"Unity [WARNING] No DefaultCombatLeaderCastDefId specified for faction [Player1sMercUnit]",
-			"Unity [WARNING] No DefaultCombatLeaderCastDefId specified for faction [Player2sMercUnit]",
-			"Unity [ERROR] Bones do not match bindpose.",
-			"Unity [ERROR] ================== ERROR! Found missing transforms",
-			"Unity [WARNING] ERROR! Couldn't auto-setup",
-			"Unity [WARNING] Could not retrieve member",
-			"Unity [WARNING] TerrainCollider: MeshCollider is not supported on terrain at the moment.",
-			"Unity [WARNING] Destroying 'HBS.DebugConsole.DebugConsole' because it duplicates existing HBS.DebugConsole.DebugConsole singleton named DebugConsole",
-			"MapExport [ERROR] Out of bounds",
-			"CombatLog.Hit [LOG] ???????? DIRECTION:",
-			"Unity [WARNING] BoxColliders does not support negative scale or size",
-			"AudioEvents [DEBUG] Audio Engine",
-			"MechEngineer [LOG] Auto fixing chassisDef",
-			"AudioEvents [DEBUG] OnApplicationFocus",
-			"NetworkRandomValues [DEBUG] Seed",
-			"NetworkRandomCallstacks [DEBUG] Seed",
-			"UserSettings [DEBUG] Using existing cloud settings from save manager",
-			"BattleTech.Services [DEBUG] [BattleTechParadoxAPI]",
-			"Network.Client [LOG] Connection",
-			"GameInfo [LOG] DEVELOPMENT FLAG NOT SET",
-			"MechEngineer [LOG] settings loaded",
-			"GameInfo [LOG] ProductName: BATTLETECH",
-			"GameInfo [LOG] RELEASE FLAG SET",
-			"DebugBridge",
-			"CustomComponents [LOG] [CC]SimpleCustom",
-			"LoginManager [LOG] Successfully authenticated with OPS. Moving onto ComStar connection proper.",
-			"Data.AssetBundleManager [LOG] Trying to load AssetBundle:",
-			"UserSettings [LOG] [LOG] User settings saved",
-			"MechLab [WARNING] GetWeaponPrefabName failed to find a prefab name for unit",
-			"Analytics [WARNING] Analytics Event requested with invalid IP",
-			"Analytics [WARNING] Request next called but no servers have been found",
-			"Analytics [WARNING] Request next called but reporting is disabled",
-			"UI [WARNING] Singleton UIManagerFader",
-			"CombatLog.Initialization [WARNING] Turret",
-			"MechEngineer [WARNING] Unsupported weapon category for 667",
-			"MechEngineer [WARNING] Unsupported weapon category for 666",
-			"CustomComponents [DEBUG] [CC]Mech validation for NULL return",
-			"CustomComponents [DEBUG] [CC]-- CustomComponents.Flags",
-			"CustomComponents [DEBUG] [CC]-- CustomComponents.AutoLinked",
-			"Data.DataManager [WARNING] LoadRequest for",
-			"LewdableTanks [DEBUG] [LTMod]Fixing cost of",
-			"CombatLog.Initialization [ERROR] Error instantiating VFX",
-			"PilotDef [WARNING] PilotDef already did Init From Save!",
-			"Achievements [LOG]",
-			"CombatLog.Hit [LOG] ????????",
-			"MechEngineer [ERROR] Can't find critical effect id",
-			"MechEngineer [ERROR] Could not find bonus description",
-			"CombatLog.Attacking [ERROR] ERROR!!! breakdown of Universal Modifier",
-			"MechEngineer [LOG] Auto fixing"
-		],
-		"PreserveFullLog": true,
-		"LogUncaughtExceptions": false,
+		"LogUncaughtExceptions": true,
 		"LogExceptionInitializations": false,
 		"LogSqlQueryInitializations": false,
 		"LogThreadStarts": false,
+		"LogThreadStarts_Description": "Logs who starts threads.",
+		"IgnoreLoggerLogLevel": false,
+		"DebugLogLevelSetters": false,
 		"SkipOriginalLoggers": true,
-		"BattleTechLogFormatting": {
-			"UseAbsoluteTime": true
-		},
 		"IgnoreSkipForLoggers": [
 			"ModTek"
-		]
+		],
+		"MainLog": {
+			"Includes_Description": "If set, matching log statements matching are written to the log. Exclusion has precedence over inclusion.",
+			"Includes": null,
+			"Excludes_Description": "If set, matching log statements are ignored. Exclusion has precedence over inclusion.",
+			"Excludes": [
+				{
+					"LoggerNames": [
+						"ModTek"
+					]
+				}
+			],
+			"PrefixesToIgnore_Description": "Ignore any lines starting with any of the listed prefixes, internally will be converted to Excludes.",
+			"PrefixesToIgnore": null,
+			"IndentNewLines_Description": "If a log message with newlines inside is being logged, prefix every line with a tab character.",
+			"IndentNewLines": true,
+			"NormalizeNewLines_Description": "Makes sure all newline characters ([\\r\\n]) are converted to the OS preferred newline style.",
+			"NormalizeNewLines": true,
+			"MessageSanitizerRegex_Description": "The characters to remove from the log message before writing to the disk.",
+			"MessageSanitizerRegex": "[\\p{C}-[\\r\\n\\t]]+",
+			"UseAbsoluteTime_Description": "Use the absolute time format instead of the relative time format. Absolute time is useful when using mods that do not use HBS logging and use absolute time for their logging.",
+			"UseAbsoluteTime": true,
+			"AbsoluteTimeUseUtc_Description": "Use UTC instead of local time.",
+			"AbsoluteTimeUseUtc": false
+		},
+		"MainLogFilePath": "battletech_log.txt",
+		"Logs_Description": "Allows to define logs, the `key` specifies the log file path relative to `.modtek`.",
+		"Logs": {
+			"ModTek.log": {
+				"Includes": [
+					{
+						"LoggerNames": [
+							"ModTek"
+						]
+					}
+				],
+				"IndentNewLines": true,
+				"NormalizeNewLines": true,
+				"UseAbsoluteTime": false,
+				"AbsoluteTimeUseUtc": false
+			},
+			"battletech_log_cleaned.txt": {
+				"Excludes": [
+					{
+						"LoggerNames": [
+							"ModTek"
+						]
+					}
+				],
+				"PrefixesToIgnore": [
+					"ModTek",
+					"Unity [ERROR] Desired shader compiler platform",
+					"Unity [LOG] Look rotation viewing vector is zero",
+					"Unity [ERROR] Material doesn't have a color property",
+					"Unity [WARNING] Parent of RectTransform is being set with parent property",
+					"Unity [WARNING] The referenced script",
+					"Unity [WARNING] Rejecting unit",
+					"Unity [WARNING] Parent of RectTransform is being set with parent property",
+					"Unity [WARNING] No DefaultCombatLeaderCastDefId specified for faction [Player1sMercUnit]",
+					"Unity [WARNING] No DefaultCombatLeaderCastDefId specified for faction [Player2sMercUnit]",
+					"Unity [ERROR] Bones do not match bindpose.",
+					"Unity [ERROR] ================== ERROR! Found missing transforms",
+					"Unity [WARNING] ERROR! Couldn't auto-setup",
+					"Unity [WARNING] Could not retrieve member",
+					"MapExport [ERROR] Out of bounds",
+					"CombatLog.Hit [LOG] ???????? DIRECTION:",
+					"Unity [WARNING] BoxColliders does not support negative scale or size",
+					"AudioEvents [DEBUG] Audio Engine",
+					"MechEngineer [LOG] Auto fixing chassisDef",
+					"AudioEvents [DEBUG] OnApplicationFocus",
+					"NetworkRandomValues [DEBUG] Seed",
+					"NetworkRandomCallstacks [DEBUG] Seed",
+					"UserSettings [DEBUG] Using existing cloud settings from save manager",
+					"BattleTech.Services [DEBUG] [BattleTechParadoxAPI]",
+					"Network.Client [LOG] Connection",
+					"GameInfo [LOG] DEVELOPMENT FLAG NOT SET",
+					"MechEngineer [LOG] settings loaded",
+					"GameInfo [LOG] ProductName: BATTLETECH",
+					"GameInfo [LOG] RELEASE FLAG SET",
+					"DebugBridge",
+					"CustomComponents [LOG] [CC]SimpleCustom",
+					"LoginManager [LOG] Successfully authenticated with OPS. Moving onto ComStar connection proper.",
+					"Data.AssetBundleManager [LOG] Trying to load AssetBundle:",
+					"UserSettings [LOG] [LOG] User settings saved",
+					"MechLab [WARNING] GetWeaponPrefabName failed to find a prefab name for unit",
+					"Analytics [WARNING] Analytics Event requested with invalid IP",
+					"Analytics [WARNING] Request next called but no servers have been found",
+					"Analytics [WARNING] Request next called but reporting is disabled",
+					"UI [WARNING] Singleton UIManagerFader",
+					"CombatLog.Initialization [WARNING] Turret",
+					"MechEngineer [WARNING] Unsupported weapon category for 667",
+					"MechEngineer [WARNING] Unsupported weapon category for 666",
+					"CustomComponents [DEBUG] [CC]Mech validation for NULL return",
+					"CustomComponents [DEBUG] [CC]-- CustomComponents.Flags",
+					"CustomComponents [DEBUG] [CC]-- CustomComponents.AutoLinked",
+					"Data.DataManager [WARNING] LoadRequest for",
+					"LewdableTanks [DEBUG] [LTMod]Fixing cost of",
+					"CombatLog.Initialization [ERROR] Error instantiating VFX",
+					"PilotDef [WARNING] PilotDef already did Init From Save!",
+					"Achievements [LOG]",
+					"CombatLog.Hit [LOG] ????????",
+					"MechEngineer [ERROR] Can't find critical effect id",
+					"MechEngineer [ERROR] Could not find bonus description",
+					"CombatLog.Attacking [ERROR] ERROR!!! breakdown of Universal Modifier",
+					"MechEngineer [LOG] Auto fixing",
+					"DataLoader [DEBUG] Loading:",
+					"Save.Core.SaveSystem [DEBUG]"
+				],
+				"IndentNewLines": true,
+				"NormalizeNewLines": true,
+				"UseAbsoluteTime": true,
+				"AbsoluteTimeUseUtc": false
+			}
+		}
 	}
 }
