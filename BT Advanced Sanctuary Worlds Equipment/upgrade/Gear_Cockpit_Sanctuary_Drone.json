@@ -1,7 +1,6 @@
 {
-
 	"Custom": {
-		"Category" : [
+		"Category": [
 			{
 				"CategoryID": "Cockpit"
 			},
@@ -73,195 +72,195 @@
 			]
 		}
 	},
-    "StatName" : null,
-    "RelativeModifier" : 0,
-    "AbsoluteModifier" : 0,
-    "Description" : {
-        "Cost" : 870000,
-        "Rarity" : 5,
-        "Purchasable" : true,
-        "Manufacturer" : "Sanctuary Droneworks",
-        "Model" : "Drone",
-        "UIName" : "Sanctuary Drone Interface",
-        "Id" : "Gear_Cockpit_Sanctuary_Drone",
-        "Name" : "Sanctuary Drone Interface",
-        "Details" : "The Sanctuary Worlders do not use human pilots in mechs for normal combat. Instead, they developed a remote-control drone interface that humans pilot from the safety of a home base. The drone cockpit provides many benefits, such as sensor and sight range bonuses, excellent protection against pilot feedback injuries, a small defensive ECM field, and even link together into an overlapping sensor network that offers improved targeting numbers for all units in the network.",
-        "Icon" : "satellite-communication"
-    },
-    "BonusValueA" : "",
-    "BonusValueB" : "",
-    "ComponentType" : "Upgrade",
-    "ComponentSubType" : "NotSet",
-    "PrefabIdentifier" : "",
-    "BattleValue" : 0,
-    "InventorySize" : 1,
-    "Tonnage" : 2,
-    "AllowedLocations" : "Head",
-    "DisallowedLocations" : "All",
-    "CriticalComponent" : false
-    "statusEffects" : [
-        {
-            "durationData" : {
-                "duration" : -1,
-                "ticksOnActivations" : false,
-                "useActivationsOfTarget" : false,
-                "ticksOnEndOfRound" : false,
-                "ticksOnMovements" : false,
-                "stackLimit" : 3,
-                "clearedWhenAttacked" : false
-            },
-            "targetingData" : {
-                "effectTriggerType" : "Passive",
-                "triggerLimit" : 0,
-                "extendDurationOnTrigger" : 0,
-                "specialRules" : "NotSet",
-                "effectTargetType" : "Creator",
-                "range" : 0,
-                "forcePathRebuild" : false,
-                "forceVisRebuild" : false,
-                "showInTargetPreview" : false,
-                "showInStatusPanel" : true
-            },
-            "effectType" : "StatisticEffect",
-            "Description" : {
-                "Id" : "Drone-MoraleBoost",
-                "Name" : "Drone Cockpit Effects",
-                "Details" : "Drone pilots generate higher resolve for their controllers, provide defense against violent feedback, provide significant sensor and sight range bonuses, and also link together into a sensor network for better targeting.",
-                "Icon" : "satellite-communication"
-            },
-            "nature" : "Buff",
-            "statisticData" : {
-                "appliesEachTick" : false,
-                "effectsPersistAfterDestruction" : false,
-                "statName" : "MoraleBonusGain",
-                "operation" : "Int_Add",
-                "modValue" : "2",
-                "modType" : "System.Int32",
-                "additionalRules" : "NotSet",
-                "targetCollection" : "NotSet",
-                "targetWeaponCategory" : "NotSet",
-                "targetWeaponType" : "NotSet",
-                "targetAmmoCategory" : "NotSet",
-                "targetWeaponSubType" : "NotSet"
-            },
-            "tagData" : null,
-            "floatieData" : null,
-            "actorBurningData" : null,
-            "vfxData" : null,
-            "instantModData" : null,
-            "poorlyMaintainedEffectData" : null
-        },
-        {
-            "durationData" : {
-                "duration" : -1,
-                "ticksOnActivations" : false,
-                "useActivationsOfTarget" : false,
-                "ticksOnEndOfRound" : false,
-                "ticksOnMovements" : false,
-                "stackLimit" : -1,
-                "clearedWhenAttacked" : false
-            },
-            "targetingData" : {
-                "effectTriggerType" : "Passive",
-                "triggerLimit" : 0,
-                "extendDurationOnTrigger" : 0,
-                "specialRules" : "NotSet",
-                "effectTargetType" : "Creator",
-                "range" : 0,
-                "forcePathRebuild" : false,
-                "forceVisRebuild" : false,
-                "showInTargetPreview" : false,
-                "showInStatusPanel" : false
-            },
-            "effectType" : "StatisticEffect",
-            "Description" : {
-                "Id" : "Drone-PilotHits",
-                "Name" : "Max Injuries Boosted",
-                "Details" : "Drone cockpits absorb pilot feedback, preventing 12 injuries.",
-                "Icon" : "uixSvgIcon_equipment_Cockpit"
-            },
-            "nature" : "Buff",
-            "statisticData" : {
-                "appliesEachTick" : false,
-                "effectsPersistAfterDestruction" : false,
-                "statName" : "BonusHealth",
-                "operation" : "Int_Add",
-                "modValue" : "12",
-                "modType" : "System.Int32",
-                "additionalRules" : "NotSet",
-                "targetCollection" : "Pilot",
-                "targetWeaponCategory" : "NotSet",
-                "targetWeaponType" : "NotSet",
-                "targetAmmoCategory" : "NotSet",
-                "targetWeaponSubType" : "NotSet"
-            },
-            "tagData" : null,
-            "floatieData" : null,
-            "actorBurningData" : null,
-            "vfxData" : null,
-            "instantModData" : null,
-            "poorlyMaintainedEffectData" : null
-        }
-    ],
-	"Auras": [
-        {
-            "Id": "Gear_Drone_ECM",
-            "Name": "ECM",
-            "ReticleColor": "#ffffff",
-            "Range": 30,
-            "RemoveOnSensorLock": false,
-            "State": "Persistent",
-            "ApplySelf": true,
-            "AllyStealthAffection": "None",
-            "EnemyStealthAffection": "None",
-            "IsPositiveToAlly": true,
-            "IsNegativeToEnemy": false,
-            "ownerVFX": [],
-            "targetVFX": [],
-            "removeOwnerVFX": [],
-            "removeTargetVFX": [],
-            "ownerSFX": [],
-            "targetSFX": [],
-            "removeOwnerSFX": [],
-            "removeTargetSFX": [],
-            "statusEffects": [
-                {
-                    "durationData": {
-                        "duration": -1,
-                        "stackLimit": -1
-                    },
-                    "targetingData": {
-                        "effectTriggerType": "Passive",
-                        "specialRules": "NotSet",
-                        "effectTargetType": "AlliesWithinRange",
-                        "range": 0.0,
-                        "forcePathRebuild": false,
-                        "forceVisRebuild": false,
-                        "showInTargetPreview": false,
-                        "showInStatusPanel": true
-                    },
-                    "effectType": "StatisticEffect",
-                    "Description": {
-                        "Id": "Drone-ECM",
-                        "Name": "Drone System Interference",
-                        "Details": "The Drone system makes this unit harder to hit, +1 penalty to enemy attacks.",
-                        "Icon": "satellite-communication"
-                    },
-                    "statisticData": {
-                        "statName": "ToHitThisActor",
-                        "operation": "Float_Add",
-                        "modValue": "1.0",
-                        "modType": "System.Single"
-                    },
-                    "nature": "Buff"
-                }
-            ]
-        }
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 870000,
+		"Rarity": 5,
+		"Purchasable": true,
+		"Manufacturer": "Sanctuary Droneworks",
+		"Model": "Drone",
+		"UIName": "Sanctuary Drone Interface",
+		"Id": "Gear_Cockpit_Sanctuary_Drone",
+		"Name": "Sanctuary Drone Interface",
+		"Details": "The Sanctuary Worlders do not use human pilots in mechs for normal combat. Instead, they developed a remote-control drone interface that humans pilot from the safety of a home base. The drone cockpit provides many benefits, such as sensor and sight range bonuses, excellent protection against pilot feedback injuries, a small defensive ECM field, and even link together into an overlapping sensor network that offers improved targeting numbers for all units in the network.",
+		"Icon": "satellite-communication"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 2,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 3,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Drone-MoraleBoost",
+				"Name": "Drone Cockpit Effects",
+				"Details": "Drone pilots generate higher resolve for their controllers, provide defense against violent feedback, provide significant sensor and sight range bonuses, and also link together into a sensor network for better targeting.",
+				"Icon": "satellite-communication"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "MoraleBonusGain",
+				"operation": "Int_Add",
+				"modValue": "2",
+				"modType": "System.Int32",
+				"additionalRules": "NotSet",
+				"targetCollection": "NotSet",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": -1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Drone-PilotHits",
+				"Name": "Max Injuries Boosted",
+				"Details": "Drone cockpits absorb pilot feedback, preventing 12 injuries.",
+				"Icon": "uixSvgIcon_equipment_Cockpit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "BonusHealth",
+				"operation": "Int_Add",
+				"modValue": "12",
+				"modType": "System.Int32",
+				"additionalRules": "NotSet",
+				"targetCollection": "Pilot",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
+		}
 	],
-    "ComponentTags" : {
-        "items" : [
-            "component_type_stock"
-        ],
-        "tagSetSourceFile" : ""
-    }
+	"Auras": [
+		{
+			"Id": "Gear_Drone_ECM",
+			"Name": "ECM",
+			"ReticleColor": "#ffffff",
+			"Range": 30,
+			"RemoveOnSensorLock": false,
+			"State": "Persistent",
+			"ApplySelf": true,
+			"AllyStealthAffection": "None",
+			"EnemyStealthAffection": "None",
+			"IsPositiveToAlly": true,
+			"IsNegativeToEnemy": false,
+			"ownerVFX": [],
+			"targetVFX": [],
+			"removeOwnerVFX": [],
+			"removeTargetVFX": [],
+			"ownerSFX": [],
+			"targetSFX": [],
+			"removeOwnerSFX": [],
+			"removeTargetSFX": [],
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"specialRules": "NotSet",
+						"effectTargetType": "AlliesWithinRange",
+						"range": 0.0,
+						"forcePathRebuild": false,
+						"forceVisRebuild": false,
+						"showInTargetPreview": false,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "Drone-ECM",
+						"Name": "Drone System Interference",
+						"Details": "The Drone system makes this unit harder to hit, +1 penalty to enemy attacks.",
+						"Icon": "satellite-communication"
+					},
+					"statisticData": {
+						"statName": "ToHitThisActor",
+						"operation": "Float_Add",
+						"modValue": "1.0",
+						"modType": "System.Single"
+					},
+					"nature": "Buff"
+				}
+			]
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
 }
