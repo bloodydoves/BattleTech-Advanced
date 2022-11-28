@@ -1,0 +1,120 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/s/a/ams"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"AMS",
+				"OLAMSAttacks",
+				"AMSShots: 10",
+				"AMSAcc: 35%",
+				"OLAMSHeat: 4",
+				"OLAMSJam: 40%",
+				"OLAMSShots: 20",
+				"AMSDamage: 2"
+			]
+		}
+	},
+	"Category": "AntiPersonnel",
+	"Type": "MachineGun",
+	"WeaponSubType": "MachineGun",
+	"MinRange": 0,
+	"MaxRange": 100,
+	"RangeSplit": [
+		70,
+		80,
+		90
+	],
+	"AmmoCategory": "AntiMissile",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 3,
+	"Damage": 0,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 0,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": 0,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 0,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 0,
+	"Instability": 0,
+	"IsAMS": true,
+	"IsAAMS": true,
+	"NotUseInMelee": true,
+	"AMSDamage": 2,
+	"WeaponEffectID": "WeaponEffect-Weapon_MachineGun",
+	"Description": {
+		"Cost": 100000,
+		"Rarity": 2,
+		"Purchasable": true,
+		"Manufacturer": "Sacellum Munitions",
+		"Model": "Robust Defense",
+		"UIName": "AMS (S)",
+		"Id": "Weapon_AMS_Sanctuary",
+		"Name": "Anti-Missile System (S)",
+		"Details": "The Sacellum independently developed AMS technology based on very old Terran designs from the Age of War for small-scale systems. The Sacellum AMS fires fewer shots than its IS cousin but is generally more powerful and more effective at shooting down missiles. It also has the side effect of being ammo-expenditure friendly. Finally, Sacellum AMS can be used as an impromptu Machine Gun if desired. \n\n<b><color=#ffcc00>Uses AMS Ammo.</color></b> \n\n <b><color=#00ffff>Left Click on chance to hit during battle to switch firing mode</color> </b>",
+		"Icon": "uixSvgIcon_equipment_TTS"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "MachineGun",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0.5,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"Modes": [
+		{
+			"Id": "On",
+			"UIName": "On",
+			"isBaseMode": true,
+			"AMSShootsEveryAttack": true,
+			"ShotsWhenFired": 10,
+			"AMSHitChance": 0.35
+		},
+		{
+			"Id": "Overload",
+			"UIName": "Overload",
+			"isBaseMode": false,
+			"AMSShootsEveryAttack": true,
+			"ShotsWhenFired": 20,
+			"AMSHitChance": 0.35,
+			"FlatJammingChance": 0.4,
+			"HeatGenerated": 4
+		},
+		{
+			"Id": "Off",
+			"UIName": "Off",
+			"isBaseMode": false,
+			"ShotsWhenFired": 0,
+			"AMSHitChance": 0.0
+		},
+        {
+            "Id": "MG",
+            "UIName": "MG",
+            "isBaseMode": false,
+            "DamagePerShot": 1.0,
+            "HeatGenerated": 2,
+            "ShotsWhenFired": 5
+        }
+	],
+	"statusEffects": [],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_close"
+		],
+		"tagSetSourceFile": ""
+	}
+}

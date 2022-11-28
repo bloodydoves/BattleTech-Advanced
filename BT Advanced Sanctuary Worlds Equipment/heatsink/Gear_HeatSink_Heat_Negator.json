@@ -1,0 +1,102 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "Heatsink"
+			},
+			{
+				"CategoryID": "Negator"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"HeatNegator",
+				"EndMoveHeat: -4"
+			]
+		}
+	},
+	"DissipationCapacity": 0,
+	"Description": {
+		"Cost": 160000,
+		"Rarity": 2,
+		"Purchasable": true,
+		"Manufacturer": "Generic",
+		"Model": "Heat Negator",
+		"UIName": "Heat Negator (S)",
+		"Id": "Gear_HeatSink_Heat_Negator",
+		"Name": "Heat Negator (S)",
+		"Details": "Essentially a complex bank of radiators and vents, the Heat Negator is a computer-aided system for mech heat control developed by the Sanctuary Worlds to cope with the high heat of some of their weapons. Thanks to the power of the Heat Negator combined with the Sanctuary's heat sink systems, Sanctuary mechs rarely suffer heat concerns in combat. Interestingly, unlike similar Inner Sphere systems, the Heat Negator's effects can be stacked together, as long as it is used with Sanctuary heat sink systems",
+		"Icon": "uixSvgIcon_equipment_HeatBank"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "HeatSink",
+	"ComponentSubType": "Heatsink",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 1,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+            "durationData": {
+                "duration": -1,
+                "ticksOnActivations": false,
+                "useActivationsOfTarget": false,
+                "ticksOnEndOfRound": false,
+                "ticksOnMovements": false,
+                "stackLimit": -1,
+                "clearedWhenAttacked": false
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "triggerLimit": 0,
+                "extendDurationOnTrigger": 0,
+                "specialRules": "NotSet",
+                "effectTargetType": "Creator",
+                "range": 0,
+                "forcePathRebuild": false,
+                "forceVisRebuild": false,
+                "showInTargetPreview": false,
+                "showInStatusPanel": false
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "StatusEffect_SanctuaryHeatNegator",
+                "Name": "Heat Negator",
+                "Details": "Heat Negator system venting 5 heat",
+                "Icon": "uixSvgIcon_equipment_ThermalExchanger"
+            },
+            "nature": "Buff",
+            "statisticData": {
+                "appliesEachTick": false,
+                "effectsPersistAfterDestruction": false,
+                "statName": "EndMoveHeat",
+                "operation": "Int_Add",
+                "modValue": "-4",
+                "modType": "System.Int32",
+                "additionalRules": "NotSet",
+                "targetCollection": "NotSet",
+                "targetWeaponCategory": "NotSet",
+                "targetWeaponType": "NotSet",
+                "targetAmmoCategory": "NotSet",
+                "targetWeaponSubType": "NotSet"
+            },
+            "tagData": null,
+            "floatieData": null,
+            "actorBurningData": null,
+            "vfxData": null,
+            "instantModData": null,
+            "poorlyMaintainedEffectData": null
+        }
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_variant",
+			"component_type_variant1"
+		],
+		"tagSetSourceFile": ""
+	}
+}

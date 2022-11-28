@@ -1,0 +1,118 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/a/g/massdriver"
+			},
+			{
+				"CategoryID": "NeverMelee"
+			}
+		],
+		"ComponentExplosion": {
+			"ExplosionDamage": 200,
+			"StabilityDamage": 40
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"MassDriver",
+				"NoFireInMelee",
+				"Knockdown",
+				"KnockdownChance: 85%",
+				"WpnAccuracy: +2",
+				"WpnRecoil: 2",
+				"WpnCooldown: 1",
+				"WeaponBoom: 200"
+			]
+		}
+	},
+	"Category": "Ballistic",
+	"Type": "Gauss",
+	"WeaponSubType": "Gauss",
+	"MinRange": 90,
+	"MaxRange": 900,
+	"RangeSplit": [
+		210,
+		450,
+		660
+	],
+	"AmmoCategory": "MDRIVER",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 40,
+	"Damage": 200,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 0,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": -2,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 2,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 3,
+	"Instability": 80,
+	"Cooldown": 1,
+	"ProjectileSpeedMultiplier": 2.5,
+	"ImprovedBallistic": true,
+	"WeaponEffectID": "WeaponEffect-Weapon_GaussRifle",
+	"Description": {
+		"Cost": 1800000,
+		"Rarity": 20,
+		"Purchasable": false,
+		"Manufacturer": "Sanctuary Engineering",
+		"Model": "Coilgun",
+		"UIName": "Medium Mass Driver (S)",
+		"Id": "Weapon_MassDriver_Medium",
+		"Name": "Medium Mass Driver (S)",
+		"Details": "Developed from ancient civilian sector technology, the Mass Driver is essentially a gigantic magnetic cannon that hurls a heavy metallic slug at targets, dealing incredible damage. However, Mass Drivers are heavy and restrictive, limiting how many can be mounted at once. The Medium Mass Driver is the 'standard' Mass Driver and can easily obliterate light units in a single strike, much less repeated strikes. <b><color=#099ff2>VOLATILE!</color></b>",
+		"Icon": "FerroMag"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "Gauss",
+	"BattleValue": 0,
+	"InventorySize": 10,
+	"Tonnage": 18,
+	"AllowedLocations": "CenterTorso,LeftTorso,RightTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": 1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnWeaponFire",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "WeaponEffect-SelfknockdownCheck_OnFire",
+				"Name": "self knockdown check",
+				"Details": "self knockdown check.",
+				"Icon": "uixSvgIcon_run_n_gun"
+			},
+			"statisticData": {
+				"statName": "SelfknockdownCheck_OnFire",
+				"operation": "Float_Add",
+				"modValue": "0.85",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"component_type_lostech",
+			"range_extreme"
+		],
+		"tagSetSourceFile": ""
+	}
+}

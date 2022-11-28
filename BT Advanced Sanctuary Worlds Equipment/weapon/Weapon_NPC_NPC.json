@@ -1,0 +1,121 @@
+{
+	"Custom": {
+        "Category": [
+			{
+				"CategoryID": "w/e/p/npc"
+			}
+		],
+        "BonusDescriptions": {
+            "Bonuses": [
+				"WpnCrits: +25%",
+				"NPCDEBUFF: -1, 2",
+				"WpnAccuracy: +1",
+				"PipsIgnored: 1"
+            ]
+        }
+    },
+    "Category" : "Energy",
+    "Type" : "Laser",
+    "WeaponSubType" : "LargeLaser",
+    "MinRange" : 0,
+    "MaxRange" : 720,
+    "RangeSplit" : [
+        180,
+        360,
+        540
+    ],
+    "AmmoCategory" : "NotSet",
+    "StartingAmmoCapacity" : 0,
+    "HeatGenerated" : 25,
+    "Damage" : 15,
+    "OverheatedDamageMultiplier" : 0,
+    "EvasiveDamageMultiplier" : 0,
+    "EvasivePipsIgnored" : 1,
+    "DamageVariance" : 0,
+    "HeatDamage" : 0,
+    "AccuracyModifier" : -1,
+    "CriticalChanceMultiplier" : 1.25,
+    "AOECapable" : false,
+    "IndirectFireCapable" : false,
+    "RefireModifier" : 0,
+    "ShotsWhenFired" : 4,
+    "ProjectilesPerShot" : 1,
+    "AttackRecoil" : 0,
+    "Instability" : 0,
+	"ColorsTable": [
+		{
+		  "C": "#c10000",
+		  "I": 5
+		}
+	],
+	"ImprovedBallistic": true,
+	"HitGenerator": "Cluster",
+	"ColorSpeedChange": 1,
+	"ColorChangeRule": "Linear",
+	"FireDelayMultiplier": 0.01,
+    "WeaponEffectID" : "WeaponEffect-Weapon_Laser_Large",
+    "Description" : {
+        "Cost" : 350000,
+        "Rarity" : 0,
+        "Purchasable" : true,
+        "Manufacturer" : "Sanctuary Electronics",
+        "Model" : "Neutrino Projector Cannon",
+        "UIName" : "NPC (S)",
+        "Id" : "Weapon_NPC_NPC",
+        "Name" : "NPC (S)",
+        "Details" : "The Neutrino Projector Cannon fires a series of quick neutrino bursts that scatter and blast through anything they encounter. The neutrinos also debilitate the target and interfere with delicate electronics used for targeting systems, forcing a small but increasing targeting impairment for energy weapons based on how many neutrinos hit the target. The NPC is known inside the Sanctuary Worlds for being a savage weapon, rarely unleashed on their battlefields, but all technology is required now that they have rediscovered the Inner Sphere and so the NPC has been put into service again.",
+        "Icon" : "particle"
+    },
+    "BonusValueA" : "",
+    "BonusValueB" : "",
+    "ComponentType" : "Weapon",
+    "ComponentSubType" : "Weapon",
+    "PrefabIdentifier" : "PPC",
+    "BattleValue" : 0,
+    "InventorySize" : 3,
+    "Tonnage" : 7,
+    "AllowedLocations" : "All",
+    "DisallowedLocations" : "All",
+    "CriticalComponent" : false,
+    "statusEffects" : [
+        {
+            "durationData" : {
+                "duration" : 1,
+                "ticksOnActivations" : true,
+                "useActivationsOfTarget" : true,
+                "stackLimit" : 2
+            },
+            "targetingData" : {
+                "effectTriggerType" : "OnHit",
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "AbilityDef-NPCDebuff",
+                "Name" : "Electronics Impaired",
+                "Details" : "[AMT] Difficulty to all of this unit's attacks until its next activation.",
+                "Icon" : "uixSvgIcon_status_sensorsImpaired"
+            },
+            "nature" : "Debuff",
+            "statisticData" : {
+                "statName" : "AccuracyModifier",
+                "operation" : "Float_Add",
+                "modValue" : "1.0",
+                "modType" : "System.Single",
+                "additionalRules" : "NotSet",
+                "targetCollection" : "NotSet",
+                "targetWeaponCategory" : "Energy",
+                "targetWeaponType" : "NotSet",
+                "targetAmmoCategory" : "NotSet",
+                "targetWeaponSubType" : "NotSet"
+            }
+        }
+    ],
+    "ComponentTags" : {
+        "items" : [
+            "component_type_stock",
+            "range_very-long"
+        ],
+        "tagSetSourceFile" : ""
+    }
+}

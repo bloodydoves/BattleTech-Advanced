@@ -1,0 +1,134 @@
+{
+  "Custom": {
+    "Category": [
+      {
+        "CategoryID": "PartialWing"
+      }
+    ],
+    "BonusDescriptions": {
+      "Bonuses": [
+        "HeatPerTurn: -5",
+        "JumpDistance: +20%"
+      ]
+    },
+    "Flags": {
+      "flags": [
+        "not_broken",
+		"no_salvage"
+      ]
+    },
+    "Linked": {
+      "Links": [
+        {
+          "ComponentDefId": "emod_battlemechwing_linked",
+          "Location": "LeftTorso",
+          "ComponentDefType": "Upgrade"
+        },
+		{
+          "ComponentDefId": "emod_battlemechwing_linked",
+          "Location": "RightTorso",
+          "ComponentDefType": "Upgrade"
+        }
+      ]
+    },
+    "TonnageLimit": {
+      "Min": 80,
+      "Max": 100
+    }
+  },
+  "Description": {
+    "Cost": 350000,
+    "Rarity": 5,
+    "Purchasable": true,
+    "Manufacturer": "Sanctuary Engineering",
+    "Model": "Swooping Hawk",
+    "UIName": "BattleMech Wing System (Assault)",
+    "Id": "Gear_Sanctuary_Mech_Wing_Assault",
+    "Name": "BattleMech Wing System (Assault)",
+    "Details": "The BattleMech Wing System was designed to provide extra lift to BattleMechs during jumping maneuvers. Composed of a brace of flexible yet strong metallic 'wing' structures, the system was shown in testing to increase jump effectiveness by 20%. The wing structures also had an unexpected side benefit of providing excess cooling to the carrying unit as heat radiated out through the structures. These benefits were deemed worth pursuit and the wing system was put into wide production for a variety of mech chassis in the Sanctuary Worlds.",
+    "Icon": "steelwing-emblem"
+  },
+  "BonusValueA": "",
+  "BonusValueB": "",
+  "ComponentType": "Upgrade",
+  "ComponentSubType": "NotSet",
+  "PrefabIdentifier": "",
+  "BattleValue": 0,
+  "InventorySize": 2,
+  "Tonnage": 3,
+  "AllowedLocations": "CenterTorso",
+  "DisallowedLocations": "All",
+  "CriticalComponent": false,
+  "statusEffects": [
+    {
+      "durationData": {
+        "duration": -1,
+        "ticksOnActivations": false,
+        "useActivationsOfTarget": false,
+        "ticksOnEndOfRound": false,
+        "ticksOnMovements": false,
+        "stackLimit": 1,
+        "clearedWhenAttacked": false
+      },
+      "targetingData": {
+        "effectTriggerType": "Passive",
+        "triggerLimit": 0,
+        "extendDurationOnTrigger": 0,
+        "specialRules": "NotSet",
+        "effectTargetType": "Creator",
+        "range": 0,
+        "forcePathRebuild": false,
+        "forceVisRebuild": false,
+        "showInTargetPreview": false,
+        "showInStatusPanel": true
+      },
+      "effectType": "StatisticEffect",
+      "Description": {
+        "Id": "StatusEffect-MechWing-Cooling",
+        "Name": "BattleMech Wing System",
+        "Details": "The BattleMech Wing System's large surface area efficiently radiates excess heat while also boosting jump distance by 20%.",
+        "Icon": "steelwing-emblem"
+      },
+      "statisticData": {
+        "statName": "HeatSinkCapacity",
+        "operation": "Int_Add",
+        "modValue": "5",
+        "modType": "System.Int32"
+      },
+      "nature": "Buff"
+    },
+    {
+      "durationData": {
+        "duration": -1,
+        "stackLimit": 1
+      },
+      "targetingData": {
+        "effectTriggerType": "Passive",
+        "effectTargetType": "Creator",
+        "showInTargetPreview": false,
+        "showInStatusPanel": false
+      },
+      "effectType": "StatisticEffect",
+      "Description": {
+        "Id": "StatusEffect-MechWing-JumpDistance",
+        "Name": "JUMP DISTANCE INCREASED",
+        "Details": "The BattleMech Wing System increases Jump Jet jump distance by 20%",
+        "Icon": "steelwing-emblem"
+      },
+      "nature": "Buff",
+      "statisticData": {
+        "statName": "JumpDistanceMultiplier",
+        "operation": "Float_Multiply",
+        "modValue": "1.2",
+        "modType": "System.Single"
+      }
+    }
+  ],
+  "ComponentTags": {
+    "items": [
+      "component_type_stock",
+      "ProtoIncompatible"
+    ],
+    "tagSetSourceFile": ""
+  }
+}

@@ -1,0 +1,122 @@
+{
+	"Custom": {	
+		"Category": [
+			{
+				"CategoryID": "w/e/l/lmodal"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"ModalLaser",
+				"ModalBase",
+				"ModalDmg",
+				"ModalAcc",
+				"ModalRange",
+				"WpnAccuracy: +1"
+			]
+		}
+	},
+    "Category" : "Energy",
+    "Type" : "Laser",
+    "WeaponSubType" : "LargeLaser",
+    "MinRange" : 0,
+    "MaxRange" : 480,
+    "RangeSplit" : [
+        120,
+        240,
+        360
+    ],
+    "AmmoCategory" : "NotSet",
+    "StartingAmmoCapacity" : 0,
+    "HeatGenerated" : 25,
+    "Damage" : 50,
+    "OverheatedDamageMultiplier" : 0,
+    "EvasiveDamageMultiplier" : 0,
+    "EvasivePipsIgnored" : 0,
+    "DamageVariance" : 0,
+    "HeatDamage" : 0,
+    "AccuracyModifier" : -1,
+    "CriticalChanceMultiplier" : 1,
+    "AOECapable" : false,
+    "IndirectFireCapable" : false,
+    "RefireModifier" : 0,
+    "ShotsWhenFired" : 1,
+    "ProjectilesPerShot" : 1,
+    "AttackRecoil" : 1,
+    "Instability" : 0,
+	"ColorsTable": [
+		{
+		  "C": "#663cd1",
+		  "I": 5
+		}
+	],
+	"ImprovedBallistic": true,
+	"ColorSpeedChange": 1,
+	"ColorChangeRule": "Linear",
+    "WeaponEffectID" : "WeaponEffect-Weapon_Laser_Large",
+    "Description" : {
+        "Cost" : 255000,
+        "Rarity" : 0,
+        "Purchasable" : true,
+        "Manufacturer" : "Sanctuary Electronics",
+        "Model" : "Large Modal Laser",
+        "UIName" : "L Modal Laser (S)",
+        "Id" : "Weapon_Laser_LargeLaserModal",
+        "Name" : "L Modal Laser (S)",
+        "Details" : "The workhorse of the modal laser family, the Large Modal Laser is specially calibrated to provide four distinct firing modes for maximum combat effectiveness. Between an accuracy mode, a damage mode, a range-boosting mode, and the default balanced mode, the Large Modal Laser is effective in all circumstances.",
+        "Icon" : "uixSvgIcon_weapon_Energy"
+    },
+    "BonusValueA" : "",
+    "BonusValueB" : "",
+    "ComponentType" : "Weapon",
+    "ComponentSubType" : "Weapon",
+    "PrefabIdentifier" : "Laser",
+    "BattleValue" : 0,
+    "InventorySize" : 2,
+    "Tonnage" : 6,
+    "AllowedLocations" : "All",
+    "DisallowedLocations" : "All",
+    "CriticalComponent" : false,
+	"Modes": [
+		{
+			"Id": "lv1",
+			"UIName": "Base",
+			"isBaseMode": true
+		},
+		{
+			"Id": "lv2",
+			"UIName": "Dmg",
+			"isBaseMode": false,
+			"DamagePerShot": 15,
+			"HeatGenerated": 10,
+			"AccuracyModifier": 1
+		},
+		{
+			"Id": "lv3",
+			"UIName": "Acc",
+			"isBaseMode": false,
+			"DamagePerShot": -10,
+			"HeatGenerated": 10,
+			"AccuracyModifier": -1,
+			"EvasivePipsIgnored" : 1
+		},
+		{
+			"Id": "lv4",
+			"UIName": "Range",
+			"DamagePerShot": -10,
+			"AccuracyModifier": 1,
+			"ShortRange": 60.0,
+			"MediumRange": 120.0,
+			"LongRange": 180.0,
+			"MaxRange": 240.0
+		}
+	],
+    "statusEffects" : [],
+    "ComponentTags" : {
+        "items" : [
+            "component_type_stock",
+            "range_long"
+        ],
+        "tagSetSourceFile" : ""
+    }
+}

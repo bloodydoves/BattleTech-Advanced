@@ -1,0 +1,102 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "Heatsink"
+			},
+			{
+				"CategoryID": "Controller"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"HeatController",
+				"TEHeatgen: -4%"
+			]
+		}
+	},
+	"DissipationCapacity": 0,
+	"Description": {
+		"Cost": 160000,
+		"Rarity": 2,
+		"Purchasable": true,
+		"Manufacturer": "Generic",
+		"Model": "Heat Controller",
+		"UIName": "Heat Controller (S)",
+		"Id": "Gear_HeatSink_Heat_Controller",
+		"Name": "Heat Controller (S)",
+		"Details": "Essentially a complex computer-aided system for mech heat control developed by the Sanctuary Worlds to cope with the high heat of some of their weapons, the Heat Controller functions to manage heat generation during prolonged combat. Thanks to the controller, as well as the Sanctuary's native heat sink system, Sanctuary mechs often have excellent heat management. Interestingly, unlike similar Inner Sphere systems, the Heat Controller's effects can be stacked together, as long as it is used with Sanctuary heat sink systems.",
+		"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "HeatSink",
+	"ComponentSubType": "Heatsink",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 1,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": -1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect_SanctuaryHeatController",
+				"Name": "Heat Controller",
+				"Details": "Heat Controller reduced heat generation by 2%.",
+				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "HeatGenerated",
+				"operation": "Float_Multiply",
+				"modValue": "0.96",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_variant",
+			"component_type_variant1"
+		],
+		"tagSetSourceFile": ""
+	}
+}

@@ -1,0 +1,78 @@
+{
+	"Custom": {
+		"Category": {
+			"CategoryID": "ModularArmor"
+		},
+		"Flags": {
+			"flags": [
+				"ignore_damage",
+				"ignore_shutdown",
+				"not_broken"
+			]
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"ModularArmor: +30"
+			]
+		}
+	},
+	"StatName": null,
+	"Description": {
+		"Cost": 42500,
+		"Rarity": 5,
+		"Purchasable": true,
+		"Manufacturer": "Sanctuary Manufacturing",
+		"Model": "Generic",
+		"UIName": "Modular Plating Mk. 2 (S)",
+		"Id": "Gear_Modular_Plating_Mk2",
+		"Name": "Modular Plating Mk. 2 (S)",
+		"Details": "The Sanctuary Worlds took an unusual road to developing their BattleMech technology. Due to their low population in the early days, their technology led them down the road of durability and nothing is as emblematic of that mindset then Modular Plating is. Essentially just a series of weight-balanced Ferro-Fibrous armor plates bolted onto a mech's body, Modular Plating provides a modest armor boost in the location it is installed in. There are four ranks of Modular Armor, Mk. 1 through Mk. 4, with Mk. 1 being the lightest and Mk. 4 being the heaviest.",
+		"Icon": "layeredarmor"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0.5,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			  "durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			  },
+			  "targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			  },
+			  "effectType": "StatisticEffect",
+			  "Description": {
+				"Id": "Status-ModularArmor-{location}",
+				"Name": "Reinforced Armor",
+				"Details": "Reinforced Armor",
+				"Icon": "uixSvgIcon_equipment_ActuatorArm"
+			  },
+			  "nature": "Buff",
+			  "statisticData": {
+				"effectsPersistAfterDestruction": true,
+				"statName": "{location}.Armor",
+				"operation": "Float_Add",
+				"modValue": "30",
+				"modType": "System.Single"
+			  }
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}
