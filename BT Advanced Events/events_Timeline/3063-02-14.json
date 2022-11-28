@@ -1,0 +1,99 @@
+{
+	"Description": {
+		"Id": "3063-02-14",
+		"Name": "MercNews Broadcast",
+	"Details": "SANCTUARY ALLIANCE RAIDS AURIGAN COALITION!\r\n\n\nCoromodir, [[DM.Factions[faction_AuriganRestoration],Aurigan Coalition]]: In an unexpected move, Aurigan Coalition officials report that Sanctuary Alliance units have been seen raiding several of their worlds along the Taurian border. The Alliance units are making no efforts to conceal their presence nor are they looking to seize control over the area. In fact, in an unusual move, their units seem to be uncoordinated and acting somewhat erratically, attacking targets seemingly at random and simply burning and destroying as they go. The [[DM.BaseDescriptionDefs[LoreACM],Aurigan Coalition Military]] has been scrambled and [[DM.BaseDescriptionDefs[LoreKameaArano],High Lady Kamea Arano]] has issued a call for peace with the Sanctuary Alliance.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "WHAT WE KNOW SO FAR:\r\n\n\nThe High Lady's call for peace has apparently been answered: the Sanctuary Alliance has released an official statement disavowing these raids and claiming they are rogue actors. It has issued orders to the rogue units to stand down lest they face termination at the hands of the [[DM.BaseDescriptionDefs[LoreACM],ACM]]. [[DM.BaseDescriptionDefs[LoreKameaArano],High Lady Arano]] has accepted the Alliance's assurances and has directed the [[DM.BaseDescriptionDefs[LoreACM],ACM]] to destroy the rogue units forthwith. MercNews will continute reporting as the situation develops.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_SanctuaryAlliance_raids_starsystemdef_Qalzi",
+									"WIIC_set_starsystemdef_Qalzi_defender_strength_20",
+									"WIIC_set_starsystemdef_Qalzi_attacker_strength_10",
+									"WIIC_SanctuaryAlliance_raids_starsystemdef_RegisRoost",
+									"WIIC_set_starsystemdef_RegisRoost_defender_strength_20",
+									"WIIC_set_starsystemdef_RegisRoost_attacker_strength_10",
+									"WIIC_SanctuaryAlliance_raids_starsystemdef_Katinka",
+									"WIIC_set_starsystemdef_Katinka_defender_strength_20",
+									"WIIC_set_starsystemdef_Katinka_attacker_strength_10",
+									"WIIC_SanctuaryAlliance_raids_starsystemdef_Gangtok",
+									"WIIC_set_starsystemdef_Gangtok_defender_strength_20",
+									"WIIC_set_starsystemdef_Gangtok_attacker_strength_10",
+									"WIIC_SanctuaryAlliance_raids_starsystemdef_Heliat",
+									"WIIC_set_starsystemdef_Heliat_defender_strength_20",
+									"WIIC_set_starsystemdef_Heliat_attacker_strength_10",
+									"WIIC_SanctuaryAlliance_raids_starsystemdef_Artru",
+									"WIIC_set_starsystemdef_Artru_defender_strength_20",
+									"WIIC_set_starsystemdef_Artru_attacker_strength_10"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}
