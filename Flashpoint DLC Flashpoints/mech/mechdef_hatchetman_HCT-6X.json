@@ -6,48 +6,24 @@
 			"unit_role_brawler",
 			"unit_jumpOK",
 			"unit_release",
-			"unit_rarity_4",
+			"unit_rarity_1",
 			"unit_dlc",
-			"Steiner",
-			"Davion",
-			"Locals",
-			"AuriganMercenaries",
-			"Mercenaries",
-			"LocalsBrockwayRefugees",
-			"MasonsMarauders",
-			"SteelBeast",
-			"KellHounds",
-			"RazorbackMercs",
-			"HostileMercenaries",
-			"RedHareRegiment",
-			"EdCorbu",
-			"SecuritySolutionsInc",
-			"PaladinProtectionLLC",
-			"Wolfs_Dragoons",
-			"LoneStarRegiment",
-			"KnightsOfCaerbannog",
-			"GraysGhosts",
-			"BroadswordLegion",
-			"Moderbjorn",
-			"BountyHunterAssociates",
-			"BaumannGroup",
-			"BlackWidowCompany",
 			"unit_legal"
 		],
 		"tagSetSourceFile": ""
 	},
-	"ChassisID": "chassisdef_hatchetman_HCT-6D",
+	"ChassisID": "chassisdef_hatchetman_HCT-6X",
 	"Description": {
 		"Cost": 4300000,
-		"Details": "The 6D Hatchetman is a variant with a decidedly Davion flair. Created by Johnston Industries in 3062 the 6D is powered by a VOX 225 extralight engine that propels the 'Mech up to speeds of up to 86.4 km/h and can jump up to one hundred and fifty meters thanks to an extra jump jet. The 'Mech is armed with a Rotary Autocannon/5 as its primary weapon backed up by a trio of ER Medium Lasers and, for protection against electronic warfare systems, it has a Guardian ECM Suite. Finally the 6D is protected by nine tons of armor and mounts ten double heat sinks.",
+		"Details": "Developed by the Lyran Commonwealth as an experimental refit of the Hatchetman, the HCT-6X was designed around using TSM for maximum effectiveness with its hatchet. Built around a XL 225-rated engine for a ground speed of 81 kph (which is boosted by TSM) and equipped with five jump jets for clearing obstacles, the -6X can rapidly close the distance to bring the hatchet to bear. For firepower, the -6X carries an all-energy loadout of two Snub-Nose PPCs and an ER Medium Laser, giving it a brutal close-range payload. Rounding out the loadout is a Boosted Active Probe to lock enemy forces.",
 		"Icon": "uixTxrIcon_hatchetman",
-		"Id": "mechdef_hatchetman_HCT-6D",
+		"Id": "mechdef_hatchetman_HCT-6X",
 		"Manufacturer": null,
 		"Model": null,
 		"Name": "Hatchetman",
 		"Purchasable": true,
 		"Rarity": 1,
-		"UIName": "Hatchetman HCT-6D"
+		"UIName": "Hatchetman HCT-6X"
 	},
 	"simGameMechPartCost": 440000,
 	"HeraldryID": null,
@@ -379,12 +355,12 @@
 			"hasPrefabName": false
 		},
 		{
-			"ComponentDefID": "Gear_Guardian_ECM",
+			"ComponentDefID": "Gear_Boosted_BAP",
 			"ComponentDefType": "Upgrade",
 			"DamageLevel": "Functional",
 			"GUID": null,
 			"HardpointSlot": 0,
-			"MountedLocation": "LeftTorso",
+			"MountedLocation": "RightTorso",
 			"SimGameUID": null,
 			"hasPrefabName": false,
 			"prefabName": null
@@ -401,18 +377,7 @@
 			"prefabName": null
 		},
 		{
-			"ComponentDefID": "Weapon_Laser_MediumLaserER_0-STOCK",
-			"ComponentDefType": "Weapon",
-			"DamageLevel": "Functional",
-			"GUID": null,
-			"HardpointSlot": 0,
-			"MountedLocation": "LeftArm",
-			"SimGameUID": null,
-			"hasPrefabName": false,
-			"prefabName": null
-		},
-		{
-			"ComponentDefID": "Weapon_Laser_MediumLaserER_0-STOCK",
+			"ComponentDefID": "Weapon_PPC_PPC_SNUBNOSE",
 			"ComponentDefType": "Weapon",
 			"DamageLevel": "Functional",
 			"GUID": null,
@@ -423,12 +388,12 @@
 			"prefabName": null
 		},
 		{
-			"ComponentDefID": "Weapon_Autocannon_RAC5_0-Mydron",
+			"ComponentDefID": "Weapon_PPC_PPC_SNUBNOSE",
 			"ComponentDefType": "Weapon",
 			"DamageLevel": "Functional",
 			"GUID": null,
 			"HardpointSlot": 0,
-			"MountedLocation": "RightTorso",
+			"MountedLocation": "LeftTorso",
 			"SimGameUID": null,
 			"hasPrefabName": false,
 			"prefabName": null
@@ -445,8 +410,8 @@
 			"prefabName": null
 		},
 		{
-			"ComponentDefID": "Ammo_AmmunitionBox_Rotary_AC5",
-			"ComponentDefType": "AmmunitionBox",
+			"ComponentDefID": "Gear_HeatSink_Generic_Double",
+			"ComponentDefType": "HeatSink",
 			"DamageLevel": "Functional",
 			"GUID": null,
 			"HardpointSlot": -1,
@@ -456,8 +421,8 @@
 			"prefabName": null
 		},
 		{
-			"ComponentDefID": "Ammo_AmmunitionBox_Rotary_AC5",
-			"ComponentDefType": "AmmunitionBox",
+			"ComponentDefID": "Gear_HeatSink_Generic_Double",
+			"ComponentDefType": "HeatSink",
 			"DamageLevel": "Functional",
 			"GUID": null,
 			"HardpointSlot": -1,
@@ -469,6 +434,17 @@
 		{
 			"ComponentDefID": "Gear_JumpJet_Generic_Standard",
 			"ComponentDefType": "JumpJet",
+			"DamageLevel": "Functional",
+			"GUID": null,
+			"HardpointSlot": -1,
+			"MountedLocation": "CenterTorso",
+			"SimGameUID": null,
+			"hasPrefabName": false,
+			"prefabName": null
+		},
+		{
+			"ComponentDefID": "Gear_TSM",
+			"ComponentDefType": "Upgrade",
 			"DamageLevel": "Functional",
 			"GUID": null,
 			"HardpointSlot": -1,
