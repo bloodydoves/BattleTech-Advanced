@@ -1,0 +1,157 @@
+{
+	"Custom": {
+		"Weights": {
+			"EngineFactor": 1.25
+		},
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "[[Chassis.Tonnage]]/6",
+				"CBillCost": "[[Chassis.Tonnage]]*200"
+			}
+		},
+		"Category": [
+			{
+				"CategoryID": "EngineShield"
+			},
+			{
+				"CategoryID": "EnginePart"
+			}
+		],
+		"Flags": {
+			"flags": [
+				"engine_part",
+				"vital",
+				"not_broken"
+			]
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"WalkSpeed: +15%",
+				"EngineWeight: +25%",
+				"EndMoveHeat: -4",
+				"Dissipation: 5"
+			]
+		}
+	},
+	"DissipationCapacity" : 5,
+	"Description": {
+		"Cost": 1000000,
+		"Rarity": 5,
+		"Purchasable": true,
+		"Manufacturer": "Sanctuary Manufacturing",
+		"Model": "Dense",
+		"UIName": "Engine Dense (S)",
+		"Id": "emod_engineslots_dense_center",
+		"Name": "Dense Engine (S)",
+		"Details": "The Sanctuary Worlds are not without their innovations and though fusion engine technology has long been considered a solved technology by the Inner Sphere the Sanctuary Worlders kept tinkering with it. Eventually, they discovered that by incorporating a heat sink and a heat negator into the engine block and by compacting the reactor they could develop a unique engine that boosted engine power as well as provided some cursory heat management benefits. Naming it the Dense Engine, the Sanctuary Worlders began using it on various combat units to great effect.",
+		"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "HeatSink",
+	"ComponentSubType": "Heatsink",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 2,
+	"Tonnage": 0,
+	"AllowedLocations": "CenterTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-CompactWalkSpeed",
+				"Name": "Compact Engine",
+				"Details": "Compact engines focus power generation, increasing walk speed.",
+				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+			},
+			"statisticData": {
+				"statName": "WalkSpeed",
+				"operation": "Float_Multiply",
+				"modValue": "1.15",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+            "durationData": {
+                "duration": -1,
+                "ticksOnActivations": false,
+                "useActivationsOfTarget": false,
+                "ticksOnEndOfRound": false,
+                "ticksOnMovements": false,
+                "stackLimit": -1,
+                "clearedWhenAttacked": false
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "triggerLimit": 0,
+                "extendDurationOnTrigger": 0,
+                "specialRules": "NotSet",
+                "effectTargetType": "Creator",
+                "range": 0,
+                "forcePathRebuild": false,
+                "forceVisRebuild": false,
+                "showInTargetPreview": false,
+                "showInStatusPanel": false
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "StatusEffect_SanctuaryHeatNegator",
+                "Name": "Heat Negator",
+                "Details": "Heat Negator system venting 5 heat",
+                "Icon": "uixSvgIcon_equipment_ThermalExchanger"
+            },
+            "nature": "Buff",
+            "statisticData": {
+                "appliesEachTick": false,
+                "effectsPersistAfterDestruction": false,
+                "statName": "EndMoveHeat",
+                "operation": "Int_Add",
+                "modValue": "-4",
+                "modType": "System.Int32",
+                "additionalRules": "NotSet",
+                "targetCollection": "NotSet",
+                "targetWeaponCategory": "NotSet",
+                "targetWeaponType": "NotSet",
+                "targetAmmoCategory": "NotSet",
+                "targetWeaponSubType": "NotSet"
+            },
+            "tagData": null,
+            "floatieData": null,
+            "actorBurningData": null,
+            "vfxData": null,
+            "instantModData": null,
+            "poorlyMaintainedEffectData": null
+        }
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"BLACKLISTED"
+		],
+		"tagSetSourceFile": ""
+	}
+}

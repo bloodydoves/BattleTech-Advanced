@@ -1,0 +1,140 @@
+{
+	"Custom": {	
+		"Category": [
+			{
+				"CategoryID": "w/e/l/lelec"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"Streak",
+				"ElecLaser: -2",
+				"WpnAccuracy: +1",
+				"PipsIgnored: 1"
+			]
+		}
+	},
+    "Category" : "Energy",
+    "Type" : "Laser",
+    "WeaponSubType" : "LargeLaser",
+    "MinRange" : 0,
+    "MaxRange" : 360,
+    "RangeSplit" : [
+        120,
+        240,
+        360
+    ],
+    "AmmoCategory" : "NotSet",
+    "StartingAmmoCapacity" : 0,
+    "HeatGenerated" : 27,
+    "Damage" : 50,
+    "OverheatedDamageMultiplier" : 0,
+    "EvasiveDamageMultiplier" : 0,
+    "EvasivePipsIgnored" : 1,
+    "DamageVariance" : 0,
+    "HeatDamage" : 0,
+    "AccuracyModifier" : -1,
+    "CriticalChanceMultiplier" : 1,
+    "AOECapable" : false,
+    "IndirectFireCapable" : false,
+    "RefireModifier" : 0,
+    "ShotsWhenFired" : 1,
+    "ProjectilesPerShot" : 1,
+    "AttackRecoil" : 1,
+    "Instability" : 0,
+	"Streak": true,
+	"HitGenerator": "Streak",
+	"ColorsTable": [
+    {
+      "C": "#663cd1",
+      "I": 5
+    }
+	],
+	"ImprovedBallistic": true,
+	"ColorSpeedChange": 1,
+	"ColorChangeRule": "Linear",
+    "WeaponEffectID" : "WeaponEffect-Weapon_Laser_Large",
+    "Description" : {
+        "Cost" : 175000,
+        "Rarity" : 0,
+        "Purchasable" : true,
+        "Manufacturer" : "Sanctuary Electronics",
+        "Model" : "Large Electro-Laser",
+        "UIName" : "L Elec-Laser (S)",
+        "Id" : "Weapon_Laser_LargeLaserElectro",
+        "Name" : "L Elec-Laser (S)",
+        "Details" : "The workhorse of the electro-laser family, the Large Electro-Laser fires a thin targeting beam that acts as a conduit for a huge blast of electricity that fries the target alive and scrambles electronics. The electro-laser family has extreme heat and very short range but do more damage than their Inner-Sphere counterparts.",
+        "Icon" : "uixSvgIcon_weapon_Energy"
+    },
+    "BonusValueA" : "",
+    "BonusValueB" : "",
+    "ComponentType" : "Weapon",
+    "ComponentSubType" : "Weapon",
+    "PrefabIdentifier" : "Laser",
+    "BattleValue" : 0,
+    "InventorySize" : 2,
+    "Tonnage" : 4,
+    "AllowedLocations" : "All",
+    "DisallowedLocations" : "All",
+    "CriticalComponent" : false,
+    "statusEffects" : [
+        {
+            "durationData" : {
+                "duration" : 2,
+                "ticksOnActivations" : true,
+                "useActivationsOfTarget" : true,
+                "ticksOnEndOfRound" : false,
+                "ticksOnMovements" : false,
+                "stackLimit" : 1,
+                "clearedWhenAttacked" : false
+            },
+            "targetingData" : {
+                "effectTriggerType" : "OnHit",
+                "triggerLimit" : 0,
+                "extendDurationOnTrigger" : 0,
+                "specialRules" : "NotSet",
+                "effectTargetType" : "NotSet",
+                "range" : 0,
+                "forcePathRebuild" : false,
+                "forceVisRebuild" : false,
+                "showInTargetPreview" : false,
+                "showInStatusPanel" : true
+            },
+            "effectType" : "StatisticEffect",
+            "Description" : {
+                "Id" : "ElectroLaser-Debuff",
+                "Name" : "SENSORS IMPAIRED",
+                "Details" : "2 Difficulty to all of this unit's attacks.",
+                "Icon" : "uixSvgIcon_status_sensorsImpaired"
+            },
+            "nature" : "Debuff",
+            "statisticData" : {
+                "appliesEachTick" : false,
+                "effectsPersistAfterDestruction" : false,
+                "statName" : "AccuracyModifier",
+                "operation" : "Float_Add",
+                "modValue" : "2.0",
+                "modType" : "System.Single",
+                "additionalRules" : "NotSet",
+                "targetCollection" : "NotSet",
+                "targetWeaponCategory" : "NotSet",
+                "targetWeaponType" : "NotSet",
+                "targetAmmoCategory" : "NotSet",
+                "targetWeaponSubType" : "NotSet"
+            },
+            "tagData" : null,
+            "floatieData" : null,
+            "actorBurningData" : null,
+            "vfxData" : null,
+            "instantModData" : null,
+            "poorlyMaintainedEffectData" : null
+        }
+    ],
+    "ComponentTags" : {
+        "items" : [
+            "component_type_stock",
+            "range_long"
+        ],
+        "tagSetSourceFile" : ""
+    }
+}

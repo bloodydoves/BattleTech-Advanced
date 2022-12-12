@@ -24,6 +24,20 @@
 					"valueConstant": null
 				}
 			]
+		},
+		{
+			"Scope": "Company",
+			"RequirementTags": {
+				"items": [],
+				"tagSetSourceFile": ""
+			},
+			"ExclusionTags": {
+				"items": [
+					"mystery_machine_completed"
+				],
+				"tagSetSourceFile": ""
+			},
+			"RequirementComparisons": []
 		}
 	],
 	"OnContractSuccessResults": [],
@@ -148,7 +162,27 @@
 			"title": "Destroy Target's Mech",
 			"description": "",
 			"isPrimary": true,
-			"OnSuccessResults": [],
+			"OnSuccessResults": [
+				{
+					"Scope": "Company",
+					"Requirements": null,
+					"AddedTags": {
+						"items": [
+							"mystery_machine_completed"
+						],
+						"tagSetSourceFile": ""
+					},
+					"RemovedTags": {
+						"items": [],
+						"tagSetSourceFile": ""
+					},
+					"Stats": [],
+					"Actions": [],
+					"ForceEvents": [],
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				}
+			],
 			"OnFailureResults": [],
 			"OnSuccessDialogueGUID": null,
 			"OnFailureDialogueGUID": null

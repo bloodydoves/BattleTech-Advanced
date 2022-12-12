@@ -1,0 +1,118 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/a/g/massdriver"
+			},
+			{
+				"CategoryID": "NeverMelee"
+			}
+		],
+		"ComponentExplosion": {
+			"ExplosionDamage": 250,
+			"StabilityDamage": 60
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"MassDriver",
+				"NoFireInMelee",
+				"Knockdown",
+				"KnockdownChance: 115%",
+				"WpnAccuracy: +2",
+				"WpnRecoil: 3",
+				"WpnCooldown: 1",
+				"WeaponBoom: 250"
+			]
+		}
+	},
+	"Category": "Ballistic",
+	"Type": "Gauss",
+	"WeaponSubType": "Gauss",
+	"MinRange": 90,
+	"MaxRange": 900,
+	"RangeSplit": [
+		210,
+		450,
+		660
+	],
+	"AmmoCategory": "HDRIVER",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 50,
+	"Damage": 250,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 0,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": -2,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 3,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 3,
+	"Instability": 120,
+	"Cooldown": 1,
+	"ProjectileSpeedMultiplier": 2.5,
+	"ImprovedBallistic": true,
+	"WeaponEffectID": "WeaponEffect-Weapon_GaussRifle",
+	"Description": {
+		"Cost": 2400000,
+		"Rarity": 20,
+		"Purchasable": false,
+		"Manufacturer": "Sanctuary Engineering",
+		"Model": "Coilgun",
+		"UIName": "Heavy Mass Driver (S)",
+		"Id": "Weapon_MassDriver_Heavy",
+		"Name": "Heavy Mass Driver (S)",
+		"Details": "Developed from ancient civilian sector technology, the Mass Driver is essentially a gigantic magnetic cannon that hurls a heavy metallic slug at targets, dealing incredible damage. However, Mass Drivers are heavy and restrictive, limiting how many can be mounted at once. The Heavy Mass Driver is the largest of the Mass Drivers and is the most powerful single weapon that the Sanctuary Worlders can deploy. The Heavy Mass Driver is so devastating that the Sanctuary Worlds heavily restrict its deployment out of fear of misuse. <b><color=#099ff2>VOLATILE!</color></b>",
+		"Icon": "FerroMag"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "Gauss",
+	"BattleValue": 0,
+	"InventorySize": 12,
+	"Tonnage": 20,
+	"AllowedLocations": "CenterTorso,LeftTorso,RightTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": 1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnWeaponFire",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "WeaponEffect-SelfknockdownCheck_OnFire",
+				"Name": "self knockdown check",
+				"Details": "self knockdown check.",
+				"Icon": "uixSvgIcon_run_n_gun"
+			},
+			"statisticData": {
+				"statName": "SelfknockdownCheck_OnFire",
+				"operation": "Float_Add",
+				"modValue": "1.15",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"component_type_lostech",
+			"range_extreme"
+		],
+		"tagSetSourceFile": ""
+	}
+}

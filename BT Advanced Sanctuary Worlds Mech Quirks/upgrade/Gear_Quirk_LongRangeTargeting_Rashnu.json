@@ -1,0 +1,121 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "SensorsA"
+			},
+			{
+				"CategoryID": "Quirk"
+			}
+		],
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "[[Chassis.Tonnage]]/10",
+				"CBillCost": "[[Chassis.Tonnage]] * 1.15"
+			}
+		},
+		"Flags": {
+			"flags": [
+				"default",
+				"not_broken",
+				"no_salvage",
+				"autorepair"
+			]
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"IsSensorsA",
+				"LongRangeAcc: +1",
+				"ExtremeRangeAcc: +2"
+			]
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 500000,
+		"Rarity": 99,
+		"Purchasable": false,
+		"Manufacturer": "Quirk",
+		"Model": "Rashnu",
+		"UIName": "Rashnu Long-Range Targeting",
+		"Id": "Gear_Quirk_LongRangeTargeting_Rashnu",
+		"Name": "Rashnu Long-Range Targeting",
+		"Details": "This piece of gear represents the Rashnu's inherent Long-Range Targeting quirk. This gives the Rashnu strongly improved accuracy at long and extreme weapon ranges.",
+		"Icon": "uixSvgIcon_equipment_Rangefinder"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "AllLanceMates",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "RangeBracketBonusAccER",
+				"Name": "Bonus Accuracy at Long and Extreme Range",
+				"Details": "The Rashnu gains +1 accuracy at Long Range and +2 accuracy at Extreme Range.",
+				"Icon": "uixSvgIcon_equipment_Rangefinder"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CACExtraLongRangeAccuracyMod",
+				"operation": "Float_Add",
+				"modValue": "-2.0",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "RangeBracketBonusAccLR",
+				"Name": "Bonus Accuracy at range",
+				"Details": "range bracket bonus accuracy",
+				"Icon": "uixSvgIcon_equipment_Rangefinder"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				 "statName": "CACLongRangeAccuracyMod",
+              "operation": "Float_Add",
+              "modValue": "-1.0",
+              "modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"BLACKLISTED",
+			"component_type_stock",
+			"lv-shares-sensors"
+		],
+		"tagSetSourceFile": ""
+	}
+}

@@ -72,7 +72,11 @@
 		"Ives",
 		"Lothian",
 		"Mercenaries",
-		"Illyrian"
+		"Illyrian",
+		"SanctuaryAlliance",
+		"MallardRepublic",
+		"JacobsonHaven",
+		"DaneSacellum"
 	],
 	"WhiteListMissions": [
 		"SimpleBattle",
@@ -747,7 +751,7 @@
 		},
 		{
 			"OpForSpecID": "WoB_Toasters",
-			"OpForSpecName": "Word of Blake: Damn Toaster Worshippers",
+			"OpForSpecName": "Word of Blake: Damn Toaster Worshipers",
 			"killsRequired": 12,
 			"factionID": "WordOfBlake",
 			"applyToFaction": [
@@ -810,6 +814,67 @@
 			},
 			"repMod": { 
 				"MercenaryReviewBoard": 20
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "SA_InvadersFromBeyondTimeAndSpace",
+			"OpForSpecName": "Sanctuary Alliance: Invaders From Beyond Time And Space",
+			"killsRequired": 12,
+			"factionID": "SanctuaryAlliance",
+			"applyToFaction": [
+				"SanctuaryAlliance"
+			],
+			"description": "Who are they? Where do they come from? Literally no one knows. However, we do know that the Taurians hate them and pay a healthy bounty for killing them. Gain bonus reputation with the Taurian Concordat when fighting the Sanctuary Alliance as well as a ¢50000 bonus per kill.",
+			"killBounty": {
+				"{EMPLOYER}": 5000
+			},
+			"repMod": { 
+				"TaurianConcordat": 2
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "DS_PlayingTheFiddle",
+			"OpForSpecName": "Dane Sacellum: Playing The Fiddle While Rome Burns",
+			"killsRequired": 12,
+			"factionID": "DaneSacellum",
+			"applyToFaction": [
+				"DaneSacellum"
+			],
+			"description": "The Daners claim their religion descends from ancient Rome so let's show them what happened to ancient Rome. Gain bonus reputation with the Mallard Republic and the Jacobson Haven when fighting the Dane Sacellum.",
+			"repMod": { 
+				"JacobsonHaven": 5,
+				"MallardRepublic": 5
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "JH_CrimeNeverPays",
+			"OpForSpecName": "Jacobson Haven: Crime Never Pays",
+			"killsRequired": 12,
+			"factionID": "JacobsonHaven",
+			"applyToFaction": [
+				"JacobsonHaven"
+			],
+			"description": "The Haven is really just a haven for criminals and black markets and we don't cotton to that around these parts. Gain a ¢10000 bonus for each kill when fighting the Jacobson Haven as the other Sanctuary Worlds powers appreciate your efforts.",
+			"killBounty": {
+				"{EMPLOYER}": 10000
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "MR_ScrewPaperwork",
+			"OpForSpecName": "Mallard Republic: Screw Paperwork",
+			"killsRequired": 12,
+			"factionID": "MallardRepublic",
+			"applyToFaction": [
+				"MallardRepublic"
+			],
+			"description": "The Mallard Republic is mired in paperwork to a ridiculous degree and literally everyone hates dealing with them because of it. Gain bonus reputation with their enemies, the Dane Sacellum and the Jacobson Haven, when fighting the Mallard Republic thanks to making them suffer with more paperwork.",
+			"repMod": { 
+				"JacobsonHaven": 5,
+				"DaneSacellum": 5
 			},
 			"effectDataJO": []
 		}

@@ -1,0 +1,125 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/e/l/smodal"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"ModalLaser",
+				"ModalBase",
+				"ModalDmg",
+				"ModalAcc",
+				"ModalRange",
+				"WpnAccuracy: +1",
+				"PipsIgnored: 3",
+				"AntiBA: 25%"
+			]
+		}
+	},
+    "Category" : "AntiPersonnel",
+    "Type" : "Laser",
+    "WeaponSubType" : "SmallLaser",
+    "MinRange" : 0,
+    "MaxRange" : 120,
+    "RangeSplit" : [
+        30,
+        60,
+        90
+    ],
+    "AmmoCategory" : "NotSet",
+    "StartingAmmoCapacity" : 0,
+    "HeatGenerated" : 6,
+    "Damage" : 15,
+    "OverheatedDamageMultiplier" : 0,
+    "EvasiveDamageMultiplier" : 0,
+    "EvasivePipsIgnored" : 3,
+    "DamageVariance" : 0,
+    "HeatDamage" : 0,
+    "AccuracyModifier" : -1,
+    "CriticalChanceMultiplier" : 1,
+    "AOECapable" : false,
+    "IndirectFireCapable" : false,
+    "RefireModifier" : 0,
+    "ShotsWhenFired" : 1,
+    "ProjectilesPerShot" : 1,
+    "AttackRecoil" : 0,
+    "Instability" : 0,
+	"ColorsTable": [
+		{
+		  "C": "#ffd966",
+		  "I": 5
+		}
+	],
+	"ImprovedBallistic": true,
+	"ColorSpeedChange": 1,
+	"ColorChangeRule": "Linear",
+	"TrooperSquadDamageModifier": 1.25,
+    "WeaponEffectID" : "WeaponEffect-Weapon_Laser_Small",
+    "Description" : {
+        "Cost" : 55000,
+        "Rarity" : 0,
+        "Purchasable" : true,
+        "Manufacturer" : "Sanctuary Electronics",
+        "Model" : "Small Modal Laser",
+        "UIName" : "S Modal Laser (S)",
+        "Id" : "Weapon_Laser_SmallLaserModal",
+        "Name" : "S Modal Laser (S)",
+        "Details" : "The smallest of the modal lasers, the Small Modal Laser is specially calibrated to provide four distinct firing modes for maximum combat effectiveness. Between an accuracy mode, a damage mode, a range-boosting mode, and the default balanced mode, the Small Modal Laser is effective in all circumstances.",
+        "Icon" : "uixSvgIcon_weapon_Support"
+    },
+    "BonusValueA" : "",
+    "BonusValueB" : "",
+    "ComponentType" : "Weapon",
+    "ComponentSubType" : "Weapon",
+    "PrefabIdentifier" : "Laser",
+    "BattleValue" : 0,
+    "InventorySize" : 1,
+    "Tonnage" : 1,
+    "AllowedLocations" : "All",
+    "DisallowedLocations" : "All",
+    "CriticalComponent" : false,
+	"Modes": [
+		{
+			"Id": "lv1",
+			"UIName": "Base",
+			"isBaseMode": true
+		},
+		{
+			"Id": "lv2",
+			"UIName": "Dmg",
+			"isBaseMode": false,
+			"DamagePerShot": 7,
+			"HeatGenerated": 7,
+			"AccuracyModifier": 1
+		},
+		{
+			"Id": "lv3",
+			"UIName": "Acc",
+			"isBaseMode": false,
+			"DamagePerShot": -4,
+			"HeatGenerated": 4,
+			"AccuracyModifier": -1,
+			"EvasivePipsIgnored" : 1
+		},
+		{
+			"Id": "lv4",
+			"UIName": "Range",
+			"DamagePerShot": -3,
+			"AccuracyModifier": 1,
+			"ShortRange": 15.0,
+			"MediumRange": 30.0,
+			"LongRange": 45.0,
+			"MaxRange": 60.0
+		}
+	],
+    "statusEffects" : [],
+    "ComponentTags" : {
+        "items" : [
+            "component_type_stock",
+            "range_close"
+        ],
+        "tagSetSourceFile" : ""
+    }
+}

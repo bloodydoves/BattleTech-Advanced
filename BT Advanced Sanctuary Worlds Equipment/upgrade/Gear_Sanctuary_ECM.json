@@ -1,0 +1,223 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "ECM"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"Defense: +1",
+				"ECMRadius: 150",
+				"ECMStacking",
+				"SensorLockImmune",
+				"C3Jamming"
+			]
+		},
+		"ActivatableComponent": {
+			"ButtonName": "Sanctuary ECM",
+			"CanNotBeActivatedManualy": false,
+			"ActiveByDefault": true,
+			"FailFlatChance": 0.0,
+			"SafeActivation": true,
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1
+				},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+				},
+				"effectType": "StatisticEffect",
+				"Description": {
+					"Id": "SanctuaryECM_SafeEvasive",
+					"Name": "Sensor Lock Immunity",
+					"Details": "This unit is immune to sensor lock.",
+					"Icon": "circuitry"
+				},
+				"statisticData": {
+					"statName": "EvasiveSafeFromSensorLock",
+					"operation": "Set",
+					"modValue": "true",
+					"modType": "System.Boolean"
+				},
+				"nature": "Buff"
+			}
+			]
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 930000,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "Sanctuary Electronics",
+		"Model": "Sanctuary ECM",
+		"UIName": "ECM Suite (S)",
+		"Id": "Gear_Sanctuary_ECM",
+		"Name": "ECM Suite (S)",
+		"Details": "Given the Sanctuary's tendancy to use widespread wireless controlled drones in combat, the Sanctuary Worlds quickly learned a great deal about ECM technology, including how to harden drones against it. A side benefit is that they learned a lot about hardening their normal mechs and tanks even further against enemy ECM effects. The end result is this, the standard Sanctuary ECM equipment. While not as powerful as the best ECM the Inner Sphere can muster. Sanctuary ECM comes with the side benefit of reinforcing nearby ECM fields instead of overriding them like Inner Sphere ECM does and granting the carrying unit virtual immunity to enemy sensor locks.",
+		"Icon": "circuitry"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 2,
+	"Tonnage": 2,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"Auras": [
+        {
+            "Id": "Gear_Sanctuary_ECM",
+            "Name": "ECM",
+            "ReticleColor": "#ffffff",
+            "Range": 150,
+            "RemoveOnSensorLock": false,
+            "State": "Persistent",
+            "ApplySelf": true,
+            "AllyStealthAffection": "None",
+            "EnemyStealthAffection": "None",
+            "IsPositiveToAlly": true,
+            "IsNegativeToEnemy": false,
+            "ownerVFX": [],
+            "targetVFX": [],
+            "removeOwnerVFX": [],
+            "removeTargetVFX": [],
+            "ownerSFX": [],
+            "targetSFX": [],
+            "removeOwnerSFX": [],
+            "removeTargetSFX": [],
+            "statusEffects": [
+                {
+                    "durationData": {
+                        "duration": -1,
+                        "stackLimit": -1
+                    },
+                    "targetingData": {
+                        "effectTriggerType": "Passive",
+                        "specialRules": "NotSet",
+                        "effectTargetType": "AlliesWithinRange",
+                        "range": 0.0,
+                        "forcePathRebuild": false,
+                        "forceVisRebuild": false,
+                        "showInTargetPreview": false,
+                        "showInStatusPanel": true
+                    },
+                    "effectType": "StatisticEffect",
+                    "Description": {
+                        "Id": "Sanctuary-ECM",
+                        "Name": "Sanctuary ECM Interference",
+                        "Details": "Sanctuary ECM making this unit harder to hit, +1 penalty to enemy attacks.",
+                        "Icon": "circuitry"
+                    },
+                    "statisticData": {
+                        "statName": "ToHitThisActor",
+                        "operation": "Float_Add",
+                        "modValue": "1.0",
+                        "modType": "System.Single"
+                    },
+                    "nature": "Buff"
+                }
+            ]
+        },
+		{
+			"Id": "Gear_Sanctuary_ECM_C3Scramble",
+			"Name": "C3 Scrambling",
+			"ReticleColor": "#1a91ea",
+			"Range": 120,
+			"RemoveOnSensorLock": false,
+			"State": "Online",
+			"ApplySelf": true,
+			"AllyStealthAffection": "None",
+			"EnemyStealthAffection": "None",
+			"IsPositiveToAlly": true,
+			"IsNegativeToEnemy": false,
+			"ownerVFX": [],
+			"targetVFX": [],
+			"removeOwnerVFX": [],
+			"removeTargetVFX": [],
+			"ownerSFX": [],
+			"targetSFX": [],
+			"removeOwnerSFX": [],
+			"removeTargetSFX": [],
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"specialRules": "NotSet",
+						"effectTargetType": "AlliesWithinRange",
+						"range": 0.0,
+						"forcePathRebuild": false,
+						"forceVisRebuild": false,
+						"showInTargetPreview": false,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect_ECM-C3-Jamming",
+						"Name": "C3 Jamming",
+						"Details": "Sanctuary ECM is jamming C3 networks, preventing Inner Sphere C3 networks from functioning within 120 meters.",
+						"Icon": "circuitry"
+					},
+					"statisticData": {
+						"statName": "ADD_ENCOUNTER_TAG_C3_Network",
+						"operation": "Float_Add",
+						"modValue": "-2",
+						"modType": "System.Single"
+					},
+					"nature": "Buff"
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"specialRules": "NotSet",
+						"effectTargetType": "EnemiesWithinRange",
+						"range": 0.0,
+						"forcePathRebuild": false,
+						"forceVisRebuild": false,
+						"showInTargetPreview": false,
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect_ECM-C3-Enemy-Jamming",
+						"Name": "C3 Enemy Jamming",
+						"Details": "Sanctuary ECM is jamming C3 networks, preventing Inner Sphere C3 networks from functioning within 120 meters.",
+						"Icon": "circuitry"
+					},
+					"statisticData": {
+						"statName": "ADD_ENCOUNTER_TAG_C3_Network",
+						"operation": "Float_Add",
+						"modValue": "-2",
+						"modType": "System.Single"
+					},
+					"nature": "Buff"
+				}
+			]
+		}
+	],
+	"statusEffects": [],
+	"ComponentTags": {
+		"items": [
+			"ElectronicCounterMeasures",
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}

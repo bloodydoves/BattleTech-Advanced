@@ -14,7 +14,8 @@
 		"BonusDescriptions": {
 			"Bonuses": [
 				"Health: +1",
-				"ArmoredCowl: 10",
+				"ArmoredCowl: 15",
+				"PilotRecovery",
 				"IsCockpit"
 			]
 		},
@@ -30,11 +31,11 @@
 		"Rarity": 2,
 		"Purchasable": true,
 		"Manufacturer": "Ceres Metals",
-		"Model": "Reinforced",
-		"UIName": "Armored Cowl +",
+		"Model": "Homing",
+		"UIName": "Homing Cockpit",
 		"Id": "Gear_Cockpit_Ceres_Metals_Reinforced",
-		"Name": "Ceres Metals Reinforced Cockpit Mod",
-		"Details": "All 'Mechs come equipped with a stock cockpit configuration, which can be upgraded for improved performance. Cockpit Mods upgrade the structure of the area the MechWarrior occupies during combat, granting increased protection from mortal injuries.",
+		"Name": "Ceres Metals Homing Cockpit Mod",
+		"Details": "The Ceres Metals Homing Cockpit is a plug-and-play replacement of the cowling that surrounds a 'Mech's cockpit that is intended to improve both the armor plating and the internal structure of the head region of a BattleMech. Additionally, specialized padding and plating exists to ensure that pilots are somewhat protected from injuries. Finally, the Homing Cockpit also includes a homing beacon that, when an ejection is triggered, ensures that the pilot is easily retrieved after combat ends.",
 		"Icon": "uixSvgIcon_equipment_Cockpit"
 	},
 	"BonusValueA": "",
@@ -122,7 +123,7 @@
 			"statisticData": {
 				"statName": "{location}.Structure",
 				"operation": "Float_Add",
-				"modValue": "10",
+				"modValue": "15",
 				"modType": "System.Single"
 			}
 		},
@@ -148,7 +149,33 @@
 			"statisticData": {
 				"statName": "{location}.Armor",
 				"operation": "Float_Add",
-				"modValue": "10",
+				"modValue": "15",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Status-SARRecoveryChance",
+				"Name": "Armoured Cowl",
+				"Details": "Improved Head Armor",
+				"Icon": "uixSvgIcon_equipment_ActuatorArm"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "SAR_RecoveryChanceMult",
+				"operation": "Float_Multiply",
+				"modValue": "2.0",
 				"modType": "System.Single"
 			}
 		}

@@ -1,0 +1,97 @@
+{
+	"Description": {
+		"Id": "3063-09-14",
+		"Name": "MercNews Broadcast",
+	"Details": "SANCTUARY ALLIANCE BORDERS OPEN!\r\n\n\nAegis, [[DM.Factions[faction_SanctuaryAlliance],Sanctuary Alliance]] Shield Worlds: Three months have passed since the [[DM.BaseDescriptionDefs[LoreTreatyofMicros],Treaty of Micros]] that ended the conflict between the Taurian Concordat and the Sanctuary Alliance and now, at last, the Alliance's borders have opened to visitors and traders. Of the ten worlds that compose the Alliance's so-called Shield Worlds, essentially all of them are inhospitable planets used as military bases, manufacturing hubs, and resource gathering worlds. None sport a high population, which has given rise to a question: where does the civilian population live? Alliance officials have refused to give a straight answer, saying only that they live, quote, in the Sanctuary. Still, trade between the [[DM.Factions[faction_TaurianConcordat],Taurian Concordat]] and [[DM.Factions[faction_SanctuaryAlliance],Sanctuary Alliance]] has proven lucrative and merchants and mercenaries can be found in the Shield Worlds regularly.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "ALLIANCE-TDF REFIT PROGRAM COMPLETE:\r\n\n\nThough the process was frought with difficulty and disagreements on specifics, the Alliance's treaty-mandated rearmament program for the [[DM.BaseDescriptionDefs[LoreTDF],TDF]] has been completed. Among the models that were refit were classic Taurian mechs such as the [[DM.BaseDescriptionDefs[LoreToro],Toro]] and [[DM.BaseDescriptionDefs[LoreTalos],Talos]], as well as some other locally-produced chassis such as the Marauder and the Stalker. With this completed, the Alliance's official obligations to the Concordat are complete and the two powers can now begin to interact as equals instead of enemies. Tensions remain high, even with the mandated peace, but analysts believe peace will remain the going concern.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"REMOVE_LiS__NavReq__ShieldWorldHider__starsystemdef_JumpPoint272__HIDDEN",
+									"REMOVE_LiS__NavReq__ShieldWorldHider__starsystemdef_JumpPoint273__HIDDEN",
+									"REMOVE_LiS__NavReq__ShieldWorldHider__starsystemdef_JumpPoint274__HIDDEN",
+									"REMOVE_LiS__NavReq__ShieldWorldHider__starsystemdef_JumpPoint275__HIDDEN",
+									"REMOVE_LiS__NavReq__ShieldWorldHider__starsystemdef_JumpPoint276__HIDDEN",
+									"REMOVE_LiS__NavReq__ShieldWorldHider__starsystemdef_JumpPoint277__HIDDEN",
+									"REMOVE_LiS__NavReq__ShieldWorldHider__starsystemdef_Aegis__HIDDEN",
+									"REMOVE_LiS__NavReq__ShieldWorldHider__starsystemdef_Ancilia__HIDDEN",
+									"REMOVE_LiS__NavReq__ShieldWorldHider__starsystemdef_Glagwa__HIDDEN",
+									"REMOVE_LiS__NavReq__ShieldWorldHider__starsystemdef_Hoplon__HIDDEN",
+									"REMOVE_LiS__NavReq__ShieldWorldHider__starsystemdef_Jaivardhan__HIDDEN",
+									"REMOVE_LiS__NavReq__ShieldWorldHider__starsystemdef_Mantle__HIDDEN",
+									"REMOVE_LiS__NavReq__ShieldWorldHider__starsystemdef_Pelta__HIDDEN",
+									"REMOVE_LiS__NavReq__ShieldWorldHider__starsystemdef_Qauata__HIDDEN",
+									"REMOVE_LiS__NavReq__ShieldWorldHider__starsystemdef_Srivatsa__HIDDEN",
+									"REMOVE_LiS__NavReq__ShieldWorldHider__starsystemdef_Yetholm__HIDDEN"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

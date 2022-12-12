@@ -1,0 +1,145 @@
+{
+    "Custom": {
+        "Category": [
+			{
+				"CategoryID": "a/m/s/drm"
+			}
+		],
+		"Flags": {
+            "flags": [
+                "not_broken"
+            ]
+        },
+        "ComponentExplosion": {
+            "ExplosionDamagePerAmmo": 4,
+            "StabilityDamagePerAmmo": 1
+        },
+        "BonusDescriptions": {
+            "Bonuses": [
+				"CostPerShot: 60",
+				"AmmoCount: 100"
+            ]
+        },
+		"AmmoCost": {
+			"PerUnitCost": 60
+		}
+    },
+    "AmmoID": "Ammunition_DRM",
+    "Capacity": 100,
+    "Description": {
+        "Cost": 20000,
+        "Rarity": 1,
+        "Purchasable": true,
+        "Manufacturer": "Generic",
+        "Model": "DRM",
+        "UIName": "Ammo DRM",
+        "Id": "Ammo_AmmunitionBox_Generic_DRM",
+        "Name": "DRM Ammo",
+        "Details": "Ammo Bins contain the rounds needed for projectile-based weaponry, with at least one bin required per weapon type. Upon receiving a Critical Hit, any remaining ammunition stored inside an Ammo Bin will explode dealing damage to the install location. Risk can be mitigated with the use of SHIELD.",
+        "Icon": "uixSvgIcon_ammoBox_Missile"
+    },
+    "BonusValueA": "",
+    "BonusValueB": "",
+    "ComponentType": "AmmunitionBox",
+    "ComponentSubType": "Ammunition",
+    "PrefabIdentifier": "",
+    "BattleValue": 0,
+    "InventorySize": 1,
+    "Tonnage": 1,
+    "AllowedLocations": "All",
+    "DisallowedLocations": "All",
+    "CriticalComponent": false,
+    "statusEffects": [
+		{
+			"durationData": {
+				"duration": 2,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 10
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"effectTargetType": "SingleTarget",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-DRMWalkSlow",
+				"Name": "Movement Impaired",
+				"Details": "The unit's walking and running speed is reduced by [AMT].",
+				"Icon": "nuclear"
+			},
+			"nature": "Debuff",
+			"statisticData": {
+				"statName": "WalkSpeed",
+				"operation": "Float_Multiply",
+				"modValue": "0.99",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": 2,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 10
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"effectTargetType": "SingleTarget",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-DRMRunSlow",
+				"Name": "Sprint Impaired",
+				"Details": "The Mech's Movement is reduced.",
+				"Icon": "nuclear"
+			},
+			"nature": "Debuff",
+			"statisticData": {
+				"statName": "CBTBE_RunMultiMod",
+				"operation": "Float_Add",
+				"modValue": "-0.01",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": 2,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 10
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"effectTargetType": "SingleTarget",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-DRMHeatGen",
+				"Name": "Heat Impaired",
+				"Details": "The mech's heat generation has been impaired by [AMT].",
+				"Icon": "nuclear"
+			},
+			"nature": "Debuff",
+			"statisticData": {
+				"statName": "HeatGenerated",
+				"operation": "Float_Multiply",
+				"modValue": "1.01",
+				"modType": "System.Single",
+				"targetCollection": "Weapon"
+			}
+		}
+	],
+    "ComponentTags": {
+        "items": [
+            "component_type_stock"
+        ],
+        "tagSetSourceFile": ""
+    }
+}

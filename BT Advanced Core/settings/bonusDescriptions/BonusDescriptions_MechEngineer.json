@@ -2406,6 +2406,36 @@
 			"Full": "{0} Weapon Heat Generated"
 		},
 		{
+			"Bonus": "MinRangeAcc",
+			"Short": "{0} MinRangeAcc",
+			"Long": "{0} Accuracy in Min Range",
+			"Full": "{0} Accuracy to Weapons Fire Inside Minimum Range"
+		},
+		{
+			"Bonus": "ShortRangeAcc",
+			"Short": "{0} ShortRangeAcc",
+			"Long": "{0} Accuracy at Short Range",
+			"Full": "{0} Accuracy to Weapons Fire at Short Range"
+		},
+		{
+			"Bonus": "MediumRangeAcc",
+			"Short": "{0} MediumRangeAcc",
+			"Long": "{0} Accuracy at Medium Range",
+			"Full": "{0} Accuracy to Weapons Fire at Medium Range"
+		},
+		{
+			"Bonus": "LongRangeAcc",
+			"Short": "{0} LongRangeAcc",
+			"Long": "{0} Accuracy at Long Range",
+			"Full": "{0} Accuracy to Weapons Fire at Long Range"
+		},
+		{
+			"Bonus": "ExtremeRangeAcc",
+			"Short": "{0} ExtremeRangeAcc",
+			"Long": "{0} Accuracy at Extreme Range",
+			"Full": "{0} Accuracy to Weapons Fire at Extreme Range"
+		},
+		{
 			"Bonus": "MinRange",
 			"Short": "{0} MinRange",
 			"Long": "{0} Minimum Range",
@@ -3861,7 +3891,25 @@
 			"Bonus": "VRMScale",
 			"Short": "VRM Scaling",
 			"Long": "Variable Range Missile Scaling",
-			"Full": "Variable Range Missiles increase damage the further away the target is."
+			"Full": "Variable Range Missiles have variable damage modes that shift their range bands and increase damage and accuracy the further away the target is. The default mode for the VRM is medium range, which is reflected in the MechBay."
+		},
+		{
+			"Bonus": "VRMClose",
+			"Short": "VRM Close Range",
+			"Long": "Variable Range Missile Close Range",
+			"Full": "The Variable Range Missile close range band is below 300 meters, at which the VRM suffers an accuracy penalty and deals half damage."
+		},
+		{
+			"Bonus": "VRMMedium",
+			"Short": "VRM Medium Range",
+			"Long": "Variable Range Missile Medium Range",
+			"Full": "The Variable Range Missile medium range band is between 300 and 600 meters, at which the VRM does standard damage with standard accuracy."
+		},
+		{
+			"Bonus": "VRMLong",
+			"Short": "VRM Long Range",
+			"Long": "Variable Range Long Range",
+			"Full": "The Variable Range Missile long range band is between 600 and 1000 meters, at which the VRM does 50% more damage and has an accuracy bonus."
 		},
 		{
 			"Bonus": "ElecLaser",
@@ -3885,7 +3933,7 @@
 			"Bonus": "NPCDEBUFF",
 			"Short": "NPC Debuff",
 			"Long": "NPC Debuff {0}",
-			"Full": "The NPC scrambles the target's systems for {0} accuracy."
+			"Full": "The NPC scrambles the target's systems for {0} accuracy. This effect stacks with itself up to {1} times."
 		},
 		{
 			"Bonus": "DRMMoveDebuff",
@@ -3909,7 +3957,7 @@
 			"Bonus": "ModalBase",
 			"Short": "Modal Laser Base Mode",
 			"Long": "Modal Laser Base Mode",
-			"Full": "Modal Lasers base mode is a balance between accuracy, heat, damage, and range. The base mode has standard laser accuracy bonuses."
+			"Full": "Modal Lasers base mode is a balance between accuracy, damage, and range. The base mode has standard laser accuracy bonuses."
 		},
 		{
 			"Bonus": "ModalDmg",
@@ -3928,6 +3976,36 @@
 			"Short": "Modal Laser Range Mode",
 			"Long": "Modal Laser Range Mode",
 			"Full": "Modal Lasers range mode increases the weapon's range but reduced the damage per trigger pull and slightly decreases accuracy."
+		},
+		{
+			"Bonus": "APM",
+			"Short": "APM",
+			"Long": "Alternative Payload Missiles",
+			"Full": "Alternative Payload Missiles have very poor base damage but are capable of firing many munition types. They also are very resistant to AMS and are good at securing critical damage."
+		},
+		{
+			"Bonus": "DXRHeatDebuff",
+			"Short": "DXR Debuff",
+			"Long": "Directed X-Ray Cannon Debuff",
+			"Full": "The Directed X-Ray Cannon, in addition to dealing respectable heat damage, also inflicts a lingering heat penalty that afflicts the target with extra heat during their next activation."
+		},
+		{
+			"Bonus": "DBACModes",
+			"Short": "DBAC Modes",
+			"Long": "Double-Barrel Autocannon Modes",
+			"Full": "The Double-Barrel Autocannon has two firing modes. In base mode, it does high damage but no stability damage. In stability mode, it does high stability damage but no regular damage."
+		},
+		{
+			"Bonus": "DBACStab",
+			"Short": "DBAC Stability",
+			"Long": "Double-Barrel Autocannon Stability Mode Damage",
+			"Full": "In stability mode, this DBAC deals {0} stability damage per shell while dealing 0 regular damage."
+		},
+		{
+			"Bonus": "DroneInterface",
+			"Short": "Drone Interface",
+			"Long": "Drone Interface",
+			"Full": "The Sanctuary Drone Interface replaces a human in the cockpit with a remote-controlled drone. This insulates the pilot against feedback injuries while providing numerous benefits. However, it is not fool-proof. If the drone is destroyed, such as through cockpit destruction, lethal feedback can occur to the pilot controlling it from afar."
 		},
 		{
 			"Bonus": "IsCannon",
@@ -4882,6 +4960,36 @@
 			"Short": "Reserved Slots {0}",
 			"Long": "Reserved Critical Slots {0}",
 			"Full": "This piece of equipment occupies {0} additional slots in a mech's critical locations."
+		},
+		{
+			"Bonus": "Knockdown",
+			"Short": "Self-Knockdown",
+			"Long": "Self-Knockdown",
+			"Full": "This weapon, when fired, forces a check that, when failed, knocks down the firing unit automatically from the immense recoil effect. This check is resisted by a combination of the firing unit's Piloting skill and base tonnage (more is better in both cases)."
+		},
+		{
+			"Bonus": "KnockdownChance",
+			"Short": "Self-Knockdown Chance",
+			"Long": "Self-Knockdown Chance {0}",
+			"Full": "The base self-knockdown chance on this weapon is {0}."
+		},
+		{
+			"Bonus": "PilotRecovery",
+			"Short": "Pilot Recovery",
+			"Long": "Pilot Recovery",
+			"Full": "This piece of gear guarantees your pilot is safely recovered after an ejection, removing any chance for them to be captured and thus require a rescue mission."
+		},
+		{
+			"Bonus": "HeatController",
+			"Short": "Heat Controller",
+			"Long": "Heat Controller",
+			"Full": "This heatsink-like equipment is a Heat Controller. It functions similarly to Inner Sphere-spec Thermal Exchangers. However, unlike Exchangers, Heat Controllers can be stacked together for more effectiveness."
+		},
+		{
+			"Bonus": "HeatNegator",
+			"Short": "Heat Negator",
+			"Long": "Heat Negator",
+			"Full": "This heatsink-like equipment is a Heat Negator. It functions similarly to Inner Sphere-spec Heat Banks. However, unlike Heat Banks, Heat Negators can be stacked together for more effectiveness."
 		}
 	]
 }

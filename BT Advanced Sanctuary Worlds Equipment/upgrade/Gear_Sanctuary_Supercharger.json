@@ -1,0 +1,139 @@
+{
+	"Custom": {
+		"Category": {
+			"CategoryID": "Supercharger"
+		},
+		"ComponentExplosion": {
+			"StabilityDamage": 100
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"RunSpeed: +0.3",
+				"HeatGenerated: +10%",
+				"UpgradeWeight: 25%"
+			]
+		},
+		"Weights": {
+			"StructureFactor": 1.25
+		},
+		"Linked": {
+			"Links": [
+				{
+					"ComponentDefId": "emod_sanctuarysupercharger_linked",
+					"Location": "LeftLeg"
+				},
+				{
+					"ComponentDefId": "emod_sanctuarysupercharger_linked",
+					"Location": "RightLeg"
+				}
+			]
+		}
+	},
+	"Description": {
+		"Cost": 280000,
+		"Rarity": 5,
+		"Purchasable": true,
+		"Manufacturer": "Sanctuary Electronics",
+		"Model": "Sanctuary Supercharger",
+		"UIName": "Supercharger (S)",
+		"Id": "Gear_Sanctuary_Supercharger",
+		"Name": "Supercharger (S)",
+		"Details": "Developed independently by the Sanctuary Worlds powers, the Sanctuary Supercharger works on similar principles to the Inner Sphere one. By exceeding standard engine output, the Sanctuary Supercharger boosts movement speed. However, where the Inner Sphere Supercharger increases walk speed, the Sanctuary one increases sprint speed. Additionally, the Sanctuary Supercharger takes one slot in each leg as the Sanctuary engineers required wiring it into the leg actuators for smooth movement across difficult terrain such as 'Mechs often traverse. <b><color=#099ff2>Automatically activated, works continuously.</color></b>",
+		"Icon": "offroad-racer"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0,
+	"AllowedLocations": "CenterTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "MASCSprint",
+				"Name": "ChargerSprint",
+				"Details": "MORE SPEED.",
+				"Icon": "uixSvgIcon_run_n_gun"
+			},
+			"statisticData": {
+				"statName": "CBTBE_RunMultiMod",
+				"operation": "Float_Add",
+				"modValue": "0.4",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-Heat_Supercharger_Sanctuary",
+				"Name": "Increased Heat",
+				"Details": "Heat generation increased by 10%.",
+				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "HeatGenerated",
+				"operation": "Float_Multiply",
+				"modValue": "1.1",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}

@@ -1,0 +1,97 @@
+{
+	"Description": {
+		"Id": "3063-06-14",
+		"Name": "MercNews Broadcast",
+	"Details": "TREATY OF MICROS SIGNED, PEACE IN THE CONCORDAT!\r\n\n\nMicros, [[DM.Factions[faction_TaurianConcordat],Taurian Concordat]]: After several months of quiet negotiation, the [[DM.Factions[faction_SanctuaryAlliance],Sanctuary Alliance]] and the Taurian Concordat have signed the [[DM.BaseDescriptionDefs[LoreTreatyofMicros],Treaty of Micros]], formally ending the Alliance's invasion of the Concordat. Included in the treaty are stipulations that the Sanctuary Alliance must halt its offensive into the Concordat. Additionally, it must share starmaps with the Concordat for its home systems so that official trade and military reparations can begin. Finally, the Alliance has agreed to assist the Concordat in building up the [[DM.BaseDescriptionDefs[LoreTDF],TDF]] using surplus Alliance military material to refit Concordat BattleMechs. The Alliance has issued a formal apology to the Concordat for the invasion, claiming they anticipated an attack from the Inner Sphere and struck first to put the Inner Sphere off-balance. While the story seems somewhat unbelievable, [[DM.BaseDescriptionDefs[LoreGroverShraplen],Protector Shraplen]] reportedly commented that he understood their position and would have done the same.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "WHAT COMES NEXT:\r\n\n\nWhile the treaty does stipulate that some of the captured planets are to be returned to the Concordat, it did not stipulate that all of them were to be returned. The Alliance will maintain control over several worlds they captured during the invasion. According to an unnamed [[DM.BaseDescriptionDefs[LoreTDF],TDF]] official, the Concordat is unwilling to provoke the matter further, stating that the [[DM.BaseDescriptionDefs[LoreTDF],TDF]] is depleted and unable to successfully wage a war against the prepared positions on those worlds. Additionally, the Concordat has promised no official retaliation against the [[DM.Factions[faction_SanctuaryAlliance],Sanctuary Alliance's]] home systems, presumably for the same reason as permitting them to keep several of their captured worlds.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_give_starsystemdef_Paf_to_TaurianConcordat",
+									"WIIC_give_starsystemdef_Spitz_to_TaurianConcordat",
+									"WIIC_give_starsystemdef_Pyrrhus_to_TaurianConcordat",
+									"WIIC_give_starsystemdef_Carthage_to_TaurianConcordat",
+									"WIIC_give_starsystemdef_Argos_to_TaurianConcordat",
+									"WIIC_give_starsystemdef_Mystras_to_TaurianConcordat",
+									"WIIC_give_starsystemdef_Ahlat_to_TaurianConcordat",
+									"WIIC_give_starsystemdef_Hellespont_to_TaurianConcordat",
+									"WIIC_give_starsystemdef_Celano_to_TaurianConcordat",
+									"WIIC_give_starsystemdef_Gant_to_TaurianConcordat",
+									"WIIC_give_starsystemdef_Davetal_to_TaurianConcordat",
+									"WIIC_give_starsystemdef_Micros_to_TaurianConcordat",
+									"WIIC_give_starsystemdef_Charleston_to_TaurianConcordat",
+									"WIIC_give_starsystemdef_Dicallus_to_TaurianConcordat",
+									"WIIC_give_starsystemdef_Cadiz(TC)_to_TaurianConcordat",
+									"WIIC_give_starsystemdef_Orkney(TC)_to_TaurianConcordat"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}
