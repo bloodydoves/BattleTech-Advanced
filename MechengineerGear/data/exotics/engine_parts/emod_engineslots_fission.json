@@ -4,7 +4,7 @@
 			"HeatSinkDefId": "Gear_HeatSink_Generic_Standard"
 		},
 		"Weights": {
-			"EngineFactor": 1.2
+			"EngineFactor": 1.8
 		},
 		"WorkOrderCosts": {
 			"Install": {
@@ -18,6 +18,9 @@
 			},
 			{
 				"CategoryID": "EnginePart"
+			},
+			{
+				"CategoryID": "EngineFission"
 			}
 		],
 		"Flags": {
@@ -29,9 +32,10 @@
 		},
 		"BonusDescriptions": {
 			"Bonuses": [
-				"FuelCellSHS",
-				"EngineWeight: +60%",
-				"HeatPerTurn: -20"
+				"FissionSHS",
+				"FissionDamage",
+				"EngineWeight: +80%",
+				"HeatPerTurn: -10"
 			]
 		}
 	},
@@ -40,11 +44,11 @@
 		"Rarity": 1,
 		"Purchasable": false,
 		"Manufacturer": "Vlar",
-		"Model": "Fuel Cell",
-		"UIName": "Engine Fuel Cell",
-		"Id": "emod_engineslots_FuelCell",
-		"Name": "Fuel Cell Engine",
-		"Details": "Fuel Cell engines are primarily used in civilian applications like rail systems, personal transport, and IndustrialMechs. Fuel Cell engines generate electrical power that is then used by the vehicle to operate its propulsion system. A Fuel Cell engine has several advantages over the typical Internal Combustion Engine. While they require an oxidizer to operate, they are readily able to accept a stored oxidizer along with their fuel, making it a good choice for submarines, satellites, and naval applications. As most fuel cells run on hydrogen and oxygen, they have no exhaust other than water vapor so Fuel Cells are also used as generators for buildings and other large structures.",
+		"Model": "Fission",
+		"UIName": "Engine Fission",
+		"Id": "emod_engineslots_fission",
+		"Name": "Fission Engine",
+		"Details": "Fission engines are a rarely seen piece of engine technology. Originally the predecessor to the much more widely accepted fusion engine, the fission engine is extremely fuel efficient and relatively inexpensive to both fabricate and operate, making them fairly popular for support vehicles and the occassional IndustrialMech. Compared to fusion however, the fission engine has few advantages and many downsides, such as high doses of dangerous radiation, making them rarely seen on combat units such as BattleMechs.",
 		"Icon": "uixSvgIcon_equipment_ThermalExchanger"
 	},
 	"BonusValueA": "",
@@ -72,16 +76,16 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "StatusEffect-FuelCellHeatReduction",
+				"Id": "StatusEffect-FissionHeatReduction",
 				"Name": "Reduced Heat",
-				"Details": "Fuel Cell Engines are highly heat efficient, wicking away 20 heat each turn.",
+				"Details": "Fission Engines are mildly more heat efficient, wicking away 10 heat each turn.",
 				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
 			},
 			"nature": "Buff",
 			"statisticData": {
 				"statName": "HeatSinkCapacity",
 				"operation": "Int_Add",
-				"modValue": "20",
+				"modValue": "10",
 				"modType": "System.Int32"
 			}
 		}
@@ -89,7 +93,7 @@
 	"ComponentTags": {
 		"items": [
 			"component_type_stock",
-			"FuelCell",
+			"Fission",
 			"BLACKLISTED"
 		],
 		"tagSetSourceFile": ""
