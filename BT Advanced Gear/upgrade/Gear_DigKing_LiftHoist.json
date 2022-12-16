@@ -1,0 +1,83 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "Handhold"
+			}
+		],
+		"BonusDescriptions": {
+			"Bonuses": [
+				"BAMounts"
+			]
+		},
+		"Flags": {
+			"flags": [
+				"default",
+				"not_broken",
+				"no_salvage",
+				"autorepair",
+				"ignore_damage"
+			]
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 85000,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "Achernar",
+		"Model": "SteelTek Cargo",
+		"UIName": "Lift Hoist",
+		"Id": "Gear_DigKing_LiftHoist",
+		"Name": "Lift Hoist",
+		"Details": "This is an industrial-scale lift hoist, intended for installation on IndustrialMechs to facilitate their normal functions. However, in times of need the lift hoist can be repurposed as an ad-hoc method to carry around infantry units such as Battle Armor. Though slow and not very effective, the lift hoist still manages to get the job done.",
+		"Icon": "cargo-crate"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 3,
+	"Tonnage": 3,
+	"AllowedLocations": "CenterTorso,LeftTorso,RightTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-getHasBattleArmorMounts",
+				"Name": "getHasBattleArmorMounts",
+				"Details": "getHasBattleArmorMounts",
+				"Icon": "uixSvgIcon_ability_precisionstrike"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "HasBattleArmorMounts",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"lv-shares-sensors"
+		],
+		"tagSetSourceFile": ""
+	}
+}
