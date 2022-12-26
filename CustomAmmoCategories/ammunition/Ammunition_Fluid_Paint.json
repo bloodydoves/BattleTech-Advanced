@@ -45,7 +45,7 @@
 				"Id": "AbilityDef_PaintSensorImpair",
 				"Name": "OBSCURING PAINT",
 				"Details": "This unit's vision is obscured by paint. Its base vision range is reduced by 50% and it suffers +2 Difficulty to all attacks until its next activation.",
-				"Icon": "uixSvgIcon_status_sensorsImpaired"
+				"Icon": "paint-roller"
 			},
 			"nature": "Debuff",
 			"statisticData": {
@@ -119,6 +119,35 @@
 			"vfxData": null,
 			"instantModData": null,
 			"poorlyMaintainedEffectData": null
-		}
+		},
+		{
+          "durationData": {},
+          "targetingData": {
+              "effectTriggerType": "OnHit",
+              "triggerLimit": 0,
+              "extendDurationOnTrigger": 0,
+              "specialRules": "NotSet",
+              "effectTargetType": "NotSet",
+              "range": 0,
+              "forcePathRebuild": false,
+              "forceVisRebuild": false,
+              "showInTargetPreview": false,
+              "showInStatusPanel": false
+          },
+          "effectType": "StatisticEffect",
+          "Description": {
+              "Id": "Effect_PaintJobber",
+              "Name": "HAHAH",
+              "Details": "mech change color look dumb",
+              "Icon": "paint-roller"
+          },
+          "nature": "Debuff",
+          "statisticData": {
+              "statName": "MSPainted",
+              "operation": "Set",
+              "modValue": "true",
+              "modType": "System.Boolean"
+          }
+      }
 	]
 }

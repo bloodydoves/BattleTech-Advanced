@@ -1,0 +1,78 @@
+{
+	"Custom": {
+		"BonusDescriptions": {
+			"Bonuses": [
+				"StabThreshhold: 35"
+			]
+		},
+		"Flags": {
+			"flags": [
+				"default",
+				"not_broken",
+				"no_salvage",
+				"autorepair",
+				"ignore_damage"
+			]
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 85000,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "GENERIC",
+		"Model": "GENERIC",
+		"UIName": "Cargo Space",
+		"Id": "Gear_DigKing_CargoSpace",
+		"Name": "Cargo Space",
+		"Details": "The Dig King is equipped with a small amount of storage space for carrying particularly interesting rocks back from its mining duties. However, in a pinch, those same rocks can provide the Dig King with additional stability during a pitched battle by acting similarly to a stability gyro. Of course, it's a rather low-tech solution to the issue, but hey, if it works, it works.",
+		"Icon": "cargo-crate"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 2,
+	"Tonnage": 1.5,
+	"AllowedLocations": "CenterTorso,LeftTorso,RightTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "CargoSpaceGenericThreshhold",
+				"Name": "Cargo Space",
+				"Details": "The heavy cargo stored in the Dig King's storage compartment provides it with additional stability during pitched combat situations, increasing its stability threshold.",
+				"Icon": "uixSvgIcon_equipment_Gyro"
+			},
+			"statisticData": {
+				"statName": "UnsteadyThreshold",
+				"operation": "Float_Add",
+				"modValue": "35.0",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"lv-shares-sensors"
+		],
+		"tagSetSourceFile": ""
+	}
+}
