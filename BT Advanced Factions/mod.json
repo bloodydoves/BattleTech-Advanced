@@ -2,14 +2,20 @@
 	"Name": "BT Advanced Factions",
 	"Enabled": true,
 	"Hidden": true,
-	"Version": "0.1.0 beta",
+	"Version": "1.1",
 	"Description": "Module adding new Factions to BTA",
-	"Author": "Necromis and the BTA Team",
+	"Author": "The BTA Team",
 	"DependsOn": [
 		"CAB-Misc",
 		"CAB-Clan Mech",
 		"CAB-IS Mech",
 		"CAB-Tanks"
+	],
+	"DataAddendumEntries": [
+		{
+			"name": "BattleTech.FactionEnumeration",
+			"path": "Faction.json"
+		}
 	],
 	"ConflictsWith": [],
 	"Manifest": [
@@ -20,6 +26,11 @@
 		{
 			"Type": "FactionDef",
 			"Path": "factions",
+			"ShouldMergeJSON": false
+		},
+		{
+			"Type": "FactionDef",
+			"Path": "SPAM factions",
 			"ShouldMergeJSON": false
 		},
 		{
@@ -36,12 +47,24 @@
 		},
 		{
 			"Type": "Texture2D",
+			"Path": "Emblems"
+		},
+		{
+			"Type": "Texture2D",
 			"Path": "sprites"
 		},
 		{
 			"Type": "Texture2D",
 			"Path": "portrait",
 			"AddToAddendum": "ConversationTexture"
+		},
+		{
+			"Type": "Sprite",
+			"Path": "Logos"
+		},
+		{
+			"Type": "Sprite",
+			"Path": "Emblems"
 		}
 	]
 }
