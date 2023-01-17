@@ -14,7 +14,7 @@
 		"UIName": "Behemoth",
 		"Id": "chassisdef_behemoth_BM-1",
 		"Name": "Behemoth",
-		"Details": "Unique among Wolf's Dragoons, this is apparently a downgraded Stone Rhino equipped with locally made Inner Sphere technology. The sole known example was lost at the battle of Misery and the Dragoon's have been unusally reticent about the mech or it's origins, refusing to confirm where the mech came from or whether they posses anymore.",
+		"Details": "The Behemoth was first spotted amongst the Wolf's Dragoons after their arrival in the Inner Sphere. The unusual chassis was unlike anything previously seen and baffled observers. Eventually, it was revealed to be a special 'downgraded' Stone Rhino from Clan stockpiles that Jamie Wolf brought with for some unknown reason. The Behemoth was believed lost at the Battle of Misery, but clearly at least one example survived. The Behemoth is equipped with all Inner Sphere Succession Wars technology: a pair each of AC/10s and PPCs provide punch while jump jets give it a little extra maneuverability despite the 200-rated engine.",
 		"Icon": "uixTxrIcon_stonerhino"
 	},
 	"MovementCapDefID": "movedef_stonerhino_300",
@@ -55,7 +55,12 @@
 	"Locations": [
 		{
 			"Location": "Head",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 6,
 			"MaxArmor": 45,
@@ -100,16 +105,7 @@
 		},
 		{
 			"Location": "CenterTorso",
-			"Hardpoints": [
-				{
-					"WeaponMount": "AntiPersonnel",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "AntiPersonnel",
-					"Omni": false
-				}
-			],
+			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 15,
 			"MaxArmor": 235,
@@ -215,19 +211,41 @@
 			"z": 1
 		}
 	],
-	"VariantName": "BM-1",
+	"VariantName": "BNH-6H",
 	"ChassisTags": {
 		"items": [],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "Juggernaut",
-	"YangsThoughts": "Unique among Wolf's Dragoons, this is apparently a downgraded Stone Rhino equipped with locally made Inner Sphere technology. The sole known example was lost at the battle of Misery and the Dragoon's have been unusally reticent about the mech or it's origins, refusing to confirm where the mech came from or whether they posses anymore.",
+	"StockRole": "Unique Juggernaut",
+	"YangsThoughts": "The Behemoth was first spotted amongst the Wolf's Dragoons after their arrival in the Inner Sphere. The unusual chassis was unlike anything previously seen and baffled observers. Eventually, it was revealed to be a special 'downgraded' Stone Rhino from Clan stockpiles that Jamie Wolf brought with for some unknown reason. The Behemoth was believed lost at the Battle of Misery, but clearly at least one example survived. The Behemoth is equipped with all Inner Sphere Succession Wars technology: a pair each of AC/10s and PPCs provide punch while jump jets give it a little extra maneuverability despite the 200-rated engine.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",
 			"ComponentDefID": "emod_structureslots_standard",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftArm",
+			"ComponentDefID": "Gear_Quirk_BarrelFist_Behemoth",
+			"SimGameUID": "",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightArm",
+			"ComponentDefID": "Gear_Quirk_BarrelFist_Behemoth",
+			"SimGameUID": "",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": 0,
+			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": null,
 			"hasPrefabName": false
