@@ -109,9 +109,9 @@
 		"Manufacturer": "",
 		"Model": "",
 		"UIName": "Hellbringer",
-		"Id": "chassisdef_hellbringer_HBR-F",
+		"Id": "chassisdef_hellbringer_HBR-J",
 		"Name": "Hellbringer",
-		"Details": "The Hellbringer is a very widespread design developed by Clan Hell's Horses. However, due to its poor armor, the Hellbringer is often passed over for more robust OmniMechs. This variant carries a pair of LB 10-X's, one in each arm, supported by an ER Medium Laser. Another pair of ER Medium Lasers and a single SRM-6 launcher round out the weapons.",
+		"Details": "The Hellbringer is a very widespread design developed by Clan Hell's Horses. However, due to its poor armor, the Hellbringer is often passed over for more robust OmniMechs. This variant carries as its main firepower an ER PPC combined with an Ultra AC/5 with one ton of ammo. Four ER Medium Lasers and a Streak SRM-4 round out the firepower, while an AMS keeps the mech protected. A quintet of jump jets keep the Hellbringer J mobile in any circumstance.",
 		"Icon": "uixTxrIcon_hellbringer"
 	},
 	"MovementCapDefID": "movedef_hellbringer",
@@ -152,7 +152,12 @@
 	"Locations": [
 		{
 			"Location": "Head",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 6,
 			"MaxArmor": 45,
@@ -164,10 +169,6 @@
 			"Hardpoints": [
 				{
 					"WeaponMount": "Energy",
-					"Omni": true
-				},
-				{
-					"WeaponMount": "AntiPersonnel",
 					"Omni": true
 				}
 			],
@@ -208,11 +209,15 @@
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMount": "Energy",
 					"Omni": true
 				},
 				{
 					"WeaponMount": "Missile",
+					"Omni": true
+				},
+				{
+					"WeaponMount": "Energy",
 					"Omni": true
 				}
 			],
@@ -226,11 +231,7 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
-					"Omni": true
-				},
-				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMount": "Ballistic",
 					"Omni": true
 				}
 			],
@@ -303,7 +304,7 @@
 			"z": 0
 		}
 	],
-	"VariantName": "HBR-F",
+	"VariantName": "HBR-J",
 	"ChassisTags": {
 		"items": [
 			"ClanMech",
@@ -312,7 +313,7 @@
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Heavy Cavalry",
-	"YangsThoughts": "The Hellbringer is a very widespread design developed by Clan Hell's Horses. However, due to its poor armor, the Hellbringer is often passed over for more robust OmniMechs. This variant carries a pair of LB 10-X's, one in each arm, supported by an ER Medium Laser. Another pair of ER Medium Lasers and a single SRM-6 launcher round out the weapons.",
+	"YangsThoughts": "The Hellbringer is a very widespread design developed by Clan Hell's Horses. However, due to its poor armor, the Hellbringer is often passed over for more robust OmniMechs. This variant carries as its main firepower an ER PPC combined with an Ultra AC/5 with one ton of ammo. Four ER Medium Lasers and a Streak SRM-4 round out the firepower, while an AMS keeps the mech protected. A quintet of jump jets keep the Hellbringer J mobile in any circumstance.",
 	"CustomParts": {
 		"CustomParts": []
 	}
