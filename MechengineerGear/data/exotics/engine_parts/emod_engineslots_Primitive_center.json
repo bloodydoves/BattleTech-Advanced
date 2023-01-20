@@ -30,6 +30,7 @@
 		},
 		"BonusDescriptions": {
 			"Bonuses": [
+				"EvaPips: +1",
 				"EngineWeight: +20%",
 				"ArmorTPCost: -10%",
 				"ArmorCBCost: -10%"
@@ -48,10 +49,10 @@
 		"UIName": "Engine Primitive",
 		"Id": "emod_engineslots_Primitive_center",
 		"Name": "Primitive Engine",
-		"Details": "Compared to their Star League and Succession War-era counterparts, Primitive Engines are larger and less efficient; typically, modern engines are 80% the size of these early engines for the same amount of power.",
+		"Details": "Compared to their Star League and Succession War-era counterparts, Primitive Engines are larger and less efficient; typically, modern engines are 80% the size of these early engines for the same amount of power. However, Primitive Engines do encourage a little extra oomph in the user's movements, which grants an extra evasion pip from movement.",
 		"Icon": "uixSvgIcon_equipment_ThermalExchanger"
 	},
-	"BonusValueA": "20% Increased Weight",
+	"BonusValueA": "",
 	"BonusValueB": "",
 	"ComponentType": "HeatSink",
 	"ComponentSubType": "Heatsink",
@@ -62,7 +63,32 @@
 	"AllowedLocations": "CenterTorso",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
-	"statusEffects": null,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-PrimitiveEngineEvasivePipGained",
+				"Name": "Primitive Engine Evasive Pip Gained",
+				"Details": "This unit generates an extra evasive pip from normal movement actions (can exceed the unit's maximum).",
+				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+			},
+			"statisticData": {
+				"statName": "EvasivePipsGainedAdditional",
+				"operation": "Int_Add",
+				"modValue": "1",
+				"modType": "System.Int32"
+			},
+			"nature": "Buff"
+		}
+	],
 	"ComponentTags": {
 		"items": [
 			"component_type_stock",
