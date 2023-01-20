@@ -2,7 +2,7 @@
 	"Custom": {
 		"BonusDescriptions": {
 			"Bonuses": [
-				"StabThreshhold: 35"
+				"LanceResolve: +2"
 			]
 		},
 		"Flags": {
@@ -25,9 +25,9 @@
 		"Manufacturer": "GENERIC",
 		"Model": "GENERIC",
 		"UIName": "Cargo Space",
-		"Id": "Gear_DigKing_CargoSpace",
+		"Id": "Gear_ShadowHawk_CargoSpace",
 		"Name": "Cargo Space",
-		"Details": "The Dig King is equipped with a small amount of storage space for carrying particularly interesting rocks back from its mining duties. However, in a pinch, those same rocks can provide the Dig King with additional stability during a pitched battle by acting similarly to a stability gyro. Of course, it's a rather low-tech solution to the issue, but hey, if it works, it works.",
+		"Details": "This specific Shadow Hawk, the SHD-5S, is equipped with half a ton of 'cargo space'. Given the -5S's general use as a long-term deep raider into enemy territory, this space is typically used for supplies and storage. In a mercenary context though, this space is typically given over to storage of special trophies and/or personalizations of the 'Mech, which gives a small boost to in-combat morale.",
 		"Icon": "cargo-crate"
 	},
 	"BonusValueA": "",
@@ -36,36 +36,37 @@
 	"ComponentSubType": "NotSet",
 	"PrefabIdentifier": "",
 	"BattleValue": 0,
-	"InventorySize": 2,
-	"Tonnage": 1.5,
-	"AllowedLocations": "CenterTorso,LeftTorso,RightTorso",
+	"InventorySize": 1,
+	"Tonnage": 0.5,
+	"AllowedLocations": "Head",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
 	"statusEffects": [
 		{
 			"durationData": {
-				"duration": -1
+				"duration": -1,
+				"stackLimit": 1
 			},
 			"targetingData": {
 				"effectTriggerType": "Passive",
-				"effectTargetType": "Creator",
+				"effectTargetType": "AllLanceMates",
 				"showInTargetPreview": false,
 				"showInStatusPanel": false
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "CargoSpaceGenericThreshhold",
-				"Name": "Cargo Space",
-				"Details": "The heavy cargo stored in the Dig King's storage compartment provides it with additional stability during pitched combat situations, increasing its stability threshold.",
-				"Icon": "uixSvgIcon_equipment_Gyro"
+				"Id": "StatusEffect-ShadowHawkCargoSpace",
+				"Name": "Cargo Space Resolve Gain",
+				"Details": "Provides a +2 bonus to actions that generate Morale.",
+				"Icon": "uixSvgIcon_equipment_Rangefinder"
 			},
+			"nature": "Buff",
 			"statisticData": {
-				"statName": "UnsteadyThreshold",
-				"operation": "Float_Add",
-				"modValue": "35.0",
-				"modType": "System.Single"
-			},
-			"nature": "Buff"
+				"statName": "MoraleBonusGain",
+				"operation": "Int_Add",
+				"modValue": "2",
+				"modType": "System.Int32"
+			}
 		}
 	],
 	"ComponentTags": {
