@@ -1,0 +1,127 @@
+{
+	"Name": "SoldiersPiratesAssassinsMercs",
+	"DLL": "SoldiersPiratesAssassinsMercs.dll",
+	"Hidden": true,
+	"Version": "1.1.0.1",
+	"Description": "",
+	"Author": "T-Bone",
+	"Website": "https://github.com/ajkroeg/SoldiersPiratesAssassinsMercs",
+	"ConflictsWith": [],
+	"DependsOn": [],
+	"CustomResourceTypes": [],
+	"Settings": {
+		"enableDebug": true,
+		"enableTrace": true,
+		"BlacklistedContractTypesAndIDs": [
+			"SoloDuel",
+			"DuoDuel",
+			"Blackout"
+		],
+		"OpforReplacementConfig": {
+			"BaseReplaceChance": 0.0,
+			"FactionsReplaceOverrides": {
+				"Locals": 0.9,
+				"Mercenaries": 0.9
+			}
+		},
+		"MercLanceAdditionConfig": {
+			"BaseReplaceChance": 0.0,
+			"FactionsReplaceOverrides": {
+				"Locals": 0.4,
+				"Mercenaries": 0.3
+			},
+			"MercFactionReputationFactor": 0.5
+		},
+		"AlternateFactionConfigs": {
+			"ClanWolf": {
+				"FactionReplaceChance": 0.3,
+				"FactionMCAdditionalLanceReplaceChance": 0.3,
+				"AlternateOpforWeights": [
+					{
+						"FactionName": "CW Epsilon Galaxy",
+						"FactionWeight": 1,
+						"FactionFallback": "ClanWolf"
+					}
+				]
+			},
+			"ClanNovaCat": {
+				"FactionReplaceChance": 0.3,
+				"FactionMCAdditionalLanceReplaceChance": 0.3,
+				"AlternateOpforWeights": [
+					{
+						"FactionName": "CNC Omicron Galaxy",
+						"FactionWeight": 1,
+						"FactionFallback": "ClanNovaCat"
+					}
+				]
+			},
+			"ClanJadeFalcon": {
+				"FactionReplaceChance": 0.3,
+				"FactionMCAdditionalLanceReplaceChance": 0.3,
+				"AlternateOpforWeights": [
+					{
+						"FactionName": "CJF Iota Galaxy",
+						"FactionWeight": 1,
+						"FactionFallback": "ClanJadeFalcon"
+					}
+				]
+			},
+			"ClanGhostBear": {
+				"FactionReplaceChance": 0.3,
+				"FactionMCAdditionalLanceReplaceChance": 0.3,
+				"AlternateOpforWeights": [
+					{
+						"FactionName": "CGB Theta Galaxy",
+						"FactionWeight": 1,
+						"FactionFallback": "ClanGhostBear"
+					}
+				]
+			},
+			"WordOfBlake": {
+				"FactionReplaceChance": 0.4,
+				"FactionMCAdditionalLanceReplaceChance": 0.3,
+				"AlternateOpforWeights": [
+					{
+						"FactionName": "WoB Protectorate Militia",
+						"FactionWeight": 1,
+						"FactionFallback": "WordOfBlake"
+					}
+				]
+			}
+		},
+		"PlanetFactionConfigs": {
+			"starsystemdef_Ichlangis": {
+				"FactionReplaceChance": 0.0,
+				"FactionMCAdditionalLanceReplaceChance": 0.0,
+				"AlternateOpforWeights": [
+					{
+						"FactionName": "EmeraldDawn",
+						"FactionWeight": 10,
+						"FactionFallback": "Liao"
+					}
+				]
+			}
+		},
+		"MercFactionConfigs": {
+			"KellHounds": {
+				"MercFactionFallbackTag": "ClanJadeFalcon",
+				"AppearanceWeight": 1,
+				"EmployerBlacklist": [
+					"Liao"
+				],
+				"UnitRating": 1,
+				"PersonalityAttributes": [
+					"PROFESSIONAL"
+				]
+			}
+		},
+		"FallbackUnitFactionTag": "mercenaries",
+		"BribeCostBaselineMulti": 0.01
+	},
+	"Manifest": [
+		{
+			"Type": "AbilityDef",
+			"Path": "Ability"
+		}
+	]
+}
