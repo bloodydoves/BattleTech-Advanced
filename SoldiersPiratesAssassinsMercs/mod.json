@@ -18,17 +18,17 @@
 			"Blackout"
 		],
 		"OpforReplacementConfig": {
-			"BaseReplaceChance": 0.0,
+			"BaseReplaceChance": 0.35,
 			"FactionsReplaceOverrides": {
 				"Locals": 0.9,
 				"Mercenaries": 0.9
 			}
 		},
 		"MercLanceAdditionConfig": {
-			"BaseReplaceChance": 0.0,
+			"BaseReplaceChance": 0.25,
 			"FactionsReplaceOverrides": {
-				"Locals": 0.4,
-				"Mercenaries": 0.3
+				"Locals": 0.5,
+				"Mercenaries": 0.4
 			},
 			"MercFactionReputationFactor": 0.5
 		},
@@ -38,7 +38,7 @@
 				"FactionMCAdditionalLanceReplaceChance": 0.3,
 				"AlternateOpforWeights": [
 					{
-						"FactionName": "CW Epsilon Galaxy",
+						"FactionName": "CWEpsilonGalaxy",
 						"FactionWeight": 1,
 						"FactionFallback": "ClanWolf"
 					}
@@ -49,7 +49,7 @@
 				"FactionMCAdditionalLanceReplaceChance": 0.3,
 				"AlternateOpforWeights": [
 					{
-						"FactionName": "CNC Omicron Galaxy",
+						"FactionName": "CNCOmicronGalaxy",
 						"FactionWeight": 1,
 						"FactionFallback": "ClanNovaCat"
 					}
@@ -60,7 +60,7 @@
 				"FactionMCAdditionalLanceReplaceChance": 0.3,
 				"AlternateOpforWeights": [
 					{
-						"FactionName": "CJF Iota Galaxy",
+						"FactionName": "CJFIotaGalaxy",
 						"FactionWeight": 1,
 						"FactionFallback": "ClanJadeFalcon"
 					}
@@ -71,7 +71,7 @@
 				"FactionMCAdditionalLanceReplaceChance": 0.3,
 				"AlternateOpforWeights": [
 					{
-						"FactionName": "CGB Theta Galaxy",
+						"FactionName": "CGBThetaGalaxy",
 						"FactionWeight": 1,
 						"FactionFallback": "ClanGhostBear"
 					}
@@ -82,7 +82,7 @@
 				"FactionMCAdditionalLanceReplaceChance": 0.3,
 				"AlternateOpforWeights": [
 					{
-						"FactionName": "WoB Protectorate Militia",
+						"FactionName": "WoBProtectorateMilitia",
 						"FactionWeight": 1,
 						"FactionFallback": "WordOfBlake"
 					}
@@ -103,14 +103,268 @@
 			}
 		},
 		"MercFactionConfigs": {
-			"KellHounds": {
-				"MercFactionFallbackTag": "ClanJadeFalcon",
+			"BroadswordLegion": {
+				"MercFactionFallbackTag": "Mercenaries",
+				"AppearanceWeight": 5,
+				"RestrictionIsWhitelist": true,
+				"EmployerRestrictions": [
+					"WordOfBlake",
+					"Locals",
+					"Mercenaries"
+				],
+				"UnitRating": 6,
+				"PersonalityAttributes": [
+					"PROFESSIONAL"
+				]
+			},
+			"BurrsBlackCobras": {
+				"MercFactionFallbackTag": "Mercenaries",
+				"AppearanceWeight": 4,
+				"RestrictionIsWhitelist": true,
+				"EmployerRestrictions": [
+					"WordOfBlake",
+					"Locals",
+					"Mercenaries"
+				],
+				"UnitRating": 6,
+				"PersonalityAttributes": [
+					"PROFESSIONAL"
+				]
+			},
+			"51stDarkPanzerJaegers": {
+				"MercFactionFallbackTag": "Mercenaries",
+				"AppearanceWeight": 6,
+				"RestrictionIsWhitelist": true,
+				"EmployerRestrictions": [
+					"WordOfBlake",
+					"Locals",
+					"Mercenaries"
+				],
+				"UnitRating": 8,
+				"PersonalityAttributes": [
+					"PROFESSIONAL"
+				]
+			},
+			"FistOfMokal": {
+				"MercFactionFallbackTag": "Mercenaries",
+				"AppearanceWeight": 2,
+				"RestrictionIsWhitelist": true,
+				"EmployerRestrictions": [
+					"WordOfBlake",
+					"Locals",
+					"Mercenaries"
+				],
+				"UnitRating": 8,
+				"PersonalityAttributes": [
+					"PROFESSIONAL"
+				]
+			},
+			"HsienHotheads": {
+				"MercFactionFallbackTag": "Mercenaries",
+				"AppearanceWeight": 3,
+				"RestrictionIsWhitelist": true,
+				"EmployerRestrictions": [
+					"WordOfBlake",
+					"Locals",
+					"Mercenaries"
+				],
+				"UnitRating": 6,
+				"PersonalityAttributes": [
+					"PROFESSIONAL"
+				]
+			},
+			"SimonsonsCutthroats": {
+				"MercFactionFallbackTag": "Mercenaries",
 				"AppearanceWeight": 1,
 				"RestrictionIsWhitelist": true,
 				"EmployerRestrictions": [
-					"Liao"
+					"WordOfBlake",
+					"Locals",
+					"Mercenaries"
 				],
-				"UnitRating": 1,
+				"UnitRating": 2,
+				"PersonalityAttributes": [
+					"PROFESSIONAL"
+				]
+			},
+			"AlwaysFaithful": {
+				"MercFactionFallbackTag": "Mercenaries",
+				"AppearanceWeight": 3,
+				"RestrictionIsWhitelist": true,
+				"EmployerRestrictions": [
+					"Liao",
+					"Locals",
+					"Mercenaries"
+				],
+				"UnitRating": 8,
+				"PersonalityAttributes": [
+					"PROFESSIONAL"
+				]
+			},
+			"LangendorfLancers": {
+				"MercFactionFallbackTag": "Mercenaries",
+				"AppearanceWeight": 4,
+				"RestrictionIsWhitelist": true,
+				"EmployerRestrictions": [
+					"Liao",
+					"Locals",
+					"Mercenaries"
+				],
+				"UnitRating": 10,
+				"PersonalityAttributes": [
+					"PROFESSIONAL"
+				]
+			},
+			"LethalInjection": {
+				"MercFactionFallbackTag": "Mercenaries",
+				"AppearanceWeight": 1,
+				"RestrictionIsWhitelist": true,
+				"EmployerRestrictions": [
+					"Liao",
+					"Locals",
+					"Mercenaries"
+				],
+				"UnitRating": 3,
+				"PersonalityAttributes": [
+					"PROFESSIONAL"
+				]
+			},
+			"OlsonsRangers": {
+				"MercFactionFallbackTag": "Mercenaries",
+				"AppearanceWeight": 2,
+				"RestrictionIsWhitelist": true,
+				"EmployerRestrictions": [
+					"Liao",
+					"Locals",
+					"Mercenaries"
+				],
+				"UnitRating": 3,
+				"PersonalityAttributes": [
+					"PROFESSIONAL"
+				]
+			},
+			"TheArcadians": {
+				"MercFactionFallbackTag": "Mercenaries",
+				"AppearanceWeight": 1,
+				"RestrictionIsWhitelist": true,
+				"EmployerRestrictions": [
+					"Davion",
+					"Locals",
+					"Mercenaries"
+				],
+				"UnitRating": 3,
+				"PersonalityAttributes": [
+					"PROFESSIONAL"
+				]
+			},
+			"BlueStarIrregulars": {
+				"MercFactionFallbackTag": "Mercenaries",
+				"AppearanceWeight": 1,
+				"RestrictionIsWhitelist": true,
+				"EmployerRestrictions": [
+					"Davion",
+					"Locals",
+					"Mercenaries"
+				],
+				"UnitRating": 3,
+				"PersonalityAttributes": [
+					"ULTRA-PROFESSIONAL"
+				]
+			},
+			"12thVeganRangers": {
+				"MercFactionFallbackTag": "Mercenaries",
+				"AppearanceWeight": 1,
+				"RestrictionIsWhitelist": true,
+				"EmployerRestrictions": [
+					"Davion",
+					"Locals",
+					"Mercenaries"
+				],
+				"UnitRating": 3,
+				"PersonalityAttributes": [
+					"PROFESSIONAL"
+				]
+			},
+			"Dioscuri": {
+				"MercFactionFallbackTag": "Mercenaries",
+				"AppearanceWeight": 1,
+				"RestrictionIsWhitelist": true,
+				"EmployerRestrictions": [
+					"Davion",
+					"Locals",
+					"Mercenaries"
+				],
+				"UnitRating": 3,
+				"PersonalityAttributes": [
+					"PROFESSIONAL"
+				]
+			},
+			"FederatedFreemen": {
+				"MercFactionFallbackTag": "Mercenaries",
+				"AppearanceWeight": 1,
+				"RestrictionIsWhitelist": true,
+				"EmployerRestrictions": [
+					"Davion",
+					"Locals",
+					"Mercenaries"
+				],
+				"UnitRating": 3,
+				"PersonalityAttributes": [
+					"PROFESSIONAL"
+				]
+			},
+			"HarlocksWarriors": {
+				"MercFactionFallbackTag": "Mercenaries",
+				"AppearanceWeight": 1,
+				"RestrictionIsWhitelist": true,
+				"EmployerRestrictions": [
+					"Davion",
+					"Locals",
+					"Mercenaries"
+				],
+				"UnitRating": 3,
+				"PersonalityAttributes": [
+					"PROFESSIONAL"
+				]
+			},
+			"ScreamingEagles": {
+				"MercFactionFallbackTag": "Mercenaries",
+				"AppearanceWeight": 1,
+				"RestrictionIsWhitelist": true,
+				"EmployerRestrictions": [
+					"Davion",
+					"Locals",
+					"Mercenaries"
+				],
+				"UnitRating": 3,
+				"PersonalityAttributes": [
+					"PROFESSIONAL"
+				]
+			},
+			"SmithsonsChineseBandits": {
+				"MercFactionFallbackTag": "Mercenaries",
+				"AppearanceWeight": 1,
+				"RestrictionIsWhitelist": true,
+				"EmployerRestrictions": [
+					"Davion",
+					"Locals",
+					"Mercenaries"
+				],
+				"UnitRating": 3,
+				"PersonalityAttributes": [
+					"PROFESSIONAL"
+				]
+			},
+			"VanguardLegion": {
+				"MercFactionFallbackTag": "Mercenaries",
+				"AppearanceWeight": 1,
+				"RestrictionIsWhitelist": true,
+				"EmployerRestrictions": [
+					"Davion",
+					"Locals",
+					"Mercenaries"
+				],
+				"UnitRating": 3,
 				"PersonalityAttributes": [
 					"PROFESSIONAL"
 				]

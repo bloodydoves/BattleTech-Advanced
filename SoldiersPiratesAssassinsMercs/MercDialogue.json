@@ -1,45 +1,107 @@
 {
-	"PROFESSIONAL": [
+	"ULTRA-PROFESSIONAL": [
 		{
 			"Dialogue": [
-				"words words words. also fart noises",
-				"Ah, fellow mercs. Nothing personal, just business. You understand."
+				"Enemy mercenary commander, because we are brothers I am offering you this chance to withdraw peacefully. Leave immediately.",
+				"Commander of {COMPANY.CompanyName}, withdraw your forces at once before we come to blows."
 			],
 			"BribeSuccessDialogue": [
-				"On second thought, your money spends just as good as theirs. Initiating evac."
+				"After consideration, your offer is acceptable. We will withdraw immediately. Good hunting, {Commander.Callsign}."
 			],
 			"BribeFailureDialogue": [
-				"A contract is a contract, and we don't break ours."
+				"Our contract prevents me from accepting your offer. All allied forces, lock weapons!"
 			],
 			"MinTimesEncountered": 0,
-			"MaxTimesEncountered": -1,
+			"MaxTimesEncountered": 3,
 			"BribeAcceptanceMultiplier": 1.0
 		},
 		{
 			"Dialogue": [
-				"Oh good, it's {Commander.Callsign} and their band of merry assholes {COMPANY.CompanyName}. We lost some good people and a better payday on {RCNT_SYSTEM} thanks to you. Time for some revenge."
+				"It's been awhile, {COMPANY.CompanyName}. Can't say I'm glad to see you again after our last encounter on {RCNT_SYSTEM}."
 			],
 			"BribeSuccessDialogue": [
-				"You're an asshole, but I'd rather have money than revenge. For now."
+				"...fine. We'll withdraw this time. Don't push your luck though."
 			],
 			"BribeFailureDialogue": [
-				"Oh piss off."
+				"No deal this time. We've got a reputation to uphold, you understand. Don't worry, it'll be over quick."
 			],
-			"MinTimesEncountered": 1,
+			"MinTimesEncountered": 3,
 			"MaxTimesEncountered": -1,
-			"BribeAcceptanceMultiplier": 0.1
+			"BribeAcceptanceMultiplier": 0.4
+		}
+	],
+	"PROFESSIONAL": [
+		{
+			"Dialogue": [
+				"{COMPANY.CompanyName}, was it? Nothing personal, but how about you head back to your ship before we gotta shoot this out?",
+				"Always hate to fight fellow mercs, but it's the job. Just business, you understand."
+			],
+			"BribeSuccessDialogue": [
+				"Well, the MRBC won't be happy, but your c-bills spend perfectly well. Have at it, {Commander.Callsign}."
+			],
+			"BribeFailureDialogue": [
+				"Sorry, but a contract is a contract and we don't break contracts."
+			],
+			"MinTimesEncountered": 0,
+			"MaxTimesEncountered": 5,
+			"BribeAcceptanceMultiplier": 1.0
+		},
+		{
+			"Dialogue": [
+				"Oh hell, it's {COMPANY.CompanyName} again. We just keep running into each other. How about you turn around today and go back home instead of us fighting again?"
+			],
+			"BribeSuccessDialogue": [
+				"God dammit, that's just too good an offer to pass up. Fine, we'll pull out this time, but let's stop meeting this way in the future."
+			],
+			"BribeFailureDialogue": [
+				"No deal. Sorry to shoot it out, but some people just can't take a hint. Light 'em up, boys."
+			],
+			"MinTimesEncountered": 5,
+			"MaxTimesEncountered": -1,
+			"BribeAcceptanceMultiplier": 0.75
+		}
+	],
+	"PERIPHERY": [
+		{
+			"Dialogue": [
+				"Who are you clowns? Get the hell out of here mercs, this ain't your business.",
+				"Hey, mercs, go away, we don't gotta fight over this one, it ain't worth it for you."
+			],
+			"BribeSuccessDialogue": [
+				"Fuck, that's a lotta zeroes. Alright, we'll take it. Thanks for the cash, good luck with whatever you were here for."
+			],
+			"BribeFailureDialogue": [
+				"Can't let you do that, {Commander.Callsign}. Lads, light these jokers up."
+			],
+			"MinTimesEncountered": 0,
+			"MaxTimesEncountered": 5,
+			"BribeAcceptanceMultiplier": 1.0
+		},
+		{
+			"Dialogue": [
+				"Aw fuck it's you guys again. Look, about last time on {RCNT_SYSTEM}, it didn't go great for anyone and I'd rather not fight you again today. How about you bail this time?"
+			],
+			"BribeSuccessDialogue": [
+				"Sure, I can work with that. Good seeing you again, {Commander.Callsign}."
+			],
+			"BribeFailureDialogue": [
+				"Nah, that ain't gonna cut it this time. Guess we're shooting it out then. Sorry that it came to this but we're up against the wall here."
+			],
+			"MinTimesEncountered": 5,
+			"MaxTimesEncountered": -1,
+			"BribeAcceptanceMultiplier": 1.15
 		}
 	],
 	"PIRATE": [
 		{
 			"Dialogue": [
-				"AHOY SHITBIRDS"
+				"Hey, mercs, how about you fuck off today and we call this even? You don't need to be involved in this and I'd rather not have to kill you if I don't have to, so turn around and go home and we'll forget all about it."
 			],
 			"BribeSuccessDialogue": [
-				"You're an asshole, but I'd rather have money than revenge. For now."
+				"Hmm. You might be mercs but your money makes quite a few good points in your favor. All right, they're all yours, have fun. Boys, we're pulling out!"
 			],
 			"BribeFailureDialogue": [
-				"Oh piss off."
+				"That offer was pathetic, my grandma could do better. Boys, kill these fools and loot their corpses."
 			],
 			"MinTimesEncountered": 0,
 			"MaxTimesEncountered": -1,
