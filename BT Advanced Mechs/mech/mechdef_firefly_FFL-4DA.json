@@ -6,19 +6,16 @@
 			"unit_lance_vanguard",
 			"unit_role_scout",
 			"unit_release",
-			"unit_rarity_2",
+			"unit_rarity_4",
+			"unit_indirectFire",
 			"unit_range_medium",
 			"unit_speed_high",
-			"unit_indirectFire",
-			"ComStar",
-			"WordOfBlake",
-			"WoBProtectorateMilitia",
-			"DarkCaste",
+			"Wolfs_Dragoons",
 			"unit_legal"
 		],
 		"tagSetSourceFile": ""
 	},
-	"ChassisID": "chassisdef_firefly_FFL-3A",
+	"ChassisID": "chassisdef_firefly_FFL-4DA",
 	"HeraldryID": null,
 	"Description": {
 		"Cost": 3340000,
@@ -26,10 +23,10 @@
 		"Purchasable": true,
 		"Manufacturer": null,
 		"Model": null,
-		"UIName": "Firefly FFL-3A",
-		"Id": "mechdef_firefly_FFL-3A",
+		"UIName": "Firefly FFL-4DA",
+		"Id": "mechdef_firefly_FFL-4DA",
 		"Name": "Firefly",
-		"Details": "One of the reconnaissance mainstays of the SLDF, the Firefly was not as fast as its contemporaries but was often much more heavily armed. Unfortunately this lack of speed contributed to its downfall and the Firefly was thought extinct until the Wolf's Dragoons began using them in their forces. The FFL-3A is the original Firefly that served with the SLDF, and remains the rarest, with only a handful in ComGuard units. It is armed with three Medium Lasers, four Small Lasers, a TAG unit and an LRM-5 rack with two tons of ammunition in CASE'd bins. Somewhat mystifyingly however, the -3A is underweight at 29.5 tons.",
+		"Details": "One of the reconnaissance mainstays of the SLDF, the Firefly was not as fast as its contemporaries but was often much more heavily armed. Unfortunately this lack of speed contributed to its downfall and the Firefly was thought extinct until the Wolf's Dragoons began using them in their forces. A comparatively new variant that appeared with the Dragoons in the 3060s, the 4DA saves weight through the use of a light engine, endo steel, and ferro-fibrous armor. Like the 4C, this variant adds an Artemis IV FCS to the LRM-5, but also upgrades the lasers to ER medium lasers. Due to space constraints, the 4DA uses 12 single heat sinks that are sorely taxed. The 4DA also swaps the AMS of the 4D for a Guardian ECM suite.",
 		"Icon": "uixTxrIcon_firefly"
 	},
 	"simGameMechPartCost": 330000,
@@ -38,10 +35,10 @@
 		{
 			"DamageLevel": "Functional",
 			"Location": "Head",
-			"CurrentArmor": 45,
+			"CurrentArmor": 40,
 			"CurrentRearArmor": -1,
 			"CurrentInternalStructure": 16,
-			"AssignedArmor": 45,
+			"AssignedArmor": 40,
 			"AssignedRearArmor": -1
 		},
 		{
@@ -56,11 +53,11 @@
 		{
 			"DamageLevel": "Functional",
 			"Location": "LeftTorso",
-			"CurrentArmor": 55,
-			"CurrentRearArmor": 20,
+			"CurrentArmor": 65,
+			"CurrentRearArmor": 15,
 			"CurrentInternalStructure": 35,
-			"AssignedArmor": 55,
-			"AssignedRearArmor": 20
+			"AssignedArmor": 65,
+			"AssignedRearArmor": 15
 		},
 		{
 			"DamageLevel": "Functional",
@@ -74,11 +71,11 @@
 		{
 			"DamageLevel": "Functional",
 			"Location": "RightTorso",
-			"CurrentArmor": 55,
-			"CurrentRearArmor": 20,
+			"CurrentArmor": 65,
+			"CurrentRearArmor": 15,
 			"CurrentInternalStructure": 35,
-			"AssignedArmor": 55,
-			"AssignedRearArmor": 20
+			"AssignedArmor": 65,
+			"AssignedRearArmor": 15
 		},
 		{
 			"DamageLevel": "Functional",
@@ -131,7 +128,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_kit_dhs",
+			"ComponentDefID": "emod_kit_shs",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -153,18 +150,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engineslots_xl_center",
-			"SimGameUID": null,
-			"ComponentDefType": "HeatSink",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "RightTorso",
-			"ComponentDefID": "emod_engineslots_size3",
+			"ComponentDefID": "emod_engineslots_light_center",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -175,7 +161,18 @@
 		},
 		{
 			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "emod_engineslots_size3",
+			"ComponentDefID": "emod_engineslots_size2",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "emod_engineslots_size2",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -186,7 +183,7 @@
 		},
 		{
 			"MountedLocation": "Head",
-			"ComponentDefID": "Gear_Cockpit_Generic_Standard",
+			"ComponentDefID": "Gear_TargetingTrackingSystem_ARTEMISIV",
 			"SimGameUID": null,
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
@@ -329,7 +326,29 @@
 		},
 		{
 			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "Gear_HeatSink_Generic_Double",
+			"ComponentDefID": "Gear_HeatSink_Generic_Standard",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "Gear_HeatSink_Generic_Standard",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "Gear_HeatSink_Generic_Standard",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -340,7 +359,7 @@
 		},
 		{
 			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Gear_HeatSink_Generic_Double",
+			"ComponentDefID": "Gear_HeatSink_Generic_Standard",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -350,8 +369,8 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "LeftArm",
-			"ComponentDefID": "Gear_HeatSink_Generic_Double",
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "Gear_HeatSink_Generic_Standard",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -361,8 +380,8 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "RightArm",
-			"ComponentDefID": "Gear_HeatSink_Generic_Double",
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "Gear_HeatSink_Generic_Standard",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -373,18 +392,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "Weapon_Laser_MediumLaser_0-STOCK",
-			"SimGameUID": null,
-			"ComponentDefType": "Weapon",
-			"HardpointSlot": 0,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "Weapon_Laser_SmallLaser_0-STOCK",
+			"ComponentDefID": "Weapon_Laser_MediumLaserER_0-STOCK",
 			"SimGameUID": null,
 			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
@@ -395,18 +403,7 @@
 		},
 		{
 			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "Weapon_Laser_MediumLaser_0-STOCK",
-			"SimGameUID": null,
-			"ComponentDefType": "Weapon",
-			"HardpointSlot": 0,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "Weapon_Laser_SmallLaser_0-STOCK",
+			"ComponentDefID": "Weapon_Laser_MediumLaserER_0-STOCK",
 			"SimGameUID": null,
 			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
@@ -417,7 +414,7 @@
 		},
 		{
 			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Weapon_Laser_MediumLaser_0-STOCK",
+			"ComponentDefID": "Weapon_Laser_MediumLaserER_0-STOCK",
 			"SimGameUID": null,
 			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
@@ -438,8 +435,8 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Ammo_AmmunitionBox_Generic_LRM",
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "Ammo_AmmunitionBox_ArtemisIV_LRM",
 			"SimGameUID": null,
 			"ComponentDefType": "AmmunitionBox",
 			"HardpointSlot": -1,
@@ -449,8 +446,8 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Ammo_AmmunitionBox_Generic_LRM",
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "Ammo_AmmunitionBox_ArtemisIV_LRM",
 			"SimGameUID": null,
 			"ComponentDefType": "AmmunitionBox",
 			"HardpointSlot": -1,
@@ -460,7 +457,7 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "RightTorso",
+			"MountedLocation": "LeftTorso",
 			"ComponentDefID": "emod_case",
 			"SimGameUID": null,
 			"ComponentDefType": "Upgrade",
@@ -471,32 +468,10 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "LeftArm",
-			"ComponentDefID": "Weapon_Laser_SmallLaser_0-STOCK",
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "Gear_Guardian_ECM",
 			"SimGameUID": null,
-			"ComponentDefType": "Weapon",
-			"HardpointSlot": 0,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "LeftArm",
-			"ComponentDefID": "Weapon_Laser_TAG",
-			"SimGameUID": null,
-			"ComponentDefType": "Weapon",
-			"HardpointSlot": 0,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "RightArm",
-			"ComponentDefID": "Weapon_Laser_SmallLaser_0-STOCK",
-			"SimGameUID": null,
-			"ComponentDefType": "Weapon",
+			"ComponentDefType": "Upgrade",
 			"HardpointSlot": 0,
 			"GUID": null,
 			"DamageLevel": "Functional",
