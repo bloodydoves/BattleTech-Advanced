@@ -12,9 +12,9 @@
 		"Manufacturer": "",
 		"Model": "",
 		"UIName": "Firestarter",
-		"Id": "chassisdef_firestarter_FS9-P",
+		"Id": "chassisdef_firestarter_FS9-P-CANON",
 		"Name": "Firestarter",
-		"Details": "The Firestarter-Q is a rare variant that decides to up the mech's arsenal against other hardened military targets while maintaining its use against conventional forces. It carries a massive six Flamers for conventional work while against larger targets a PPC provides solid direct-fire capability. To pay for all this tonnage, the mech is powered by a XL engine and a brace of double heat sinks to keep the heat manageable.",
+		"Details": "Manufactured by the Circinus Federation and used to 'pacify' civilians, the FS9-P carries twin Medium and Small Lasers as well as four Flamers. While these weapons are normal Firestarter fare, the paired SRM-2s loaded with Inferno ammo are less normal and give the -P its surprise punch. The -P proved popular among the Circinian armed forces and was spread around the Periphery quickly, appearing among most larger nation's armies.",
 		"Icon": "uixTxrIcon_firestarter"
 	},
 	"MovementCapDefID": "movedef_firestarter_FS9-H",
@@ -66,6 +66,10 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
 					"WeaponMount": "AntiPersonnel",
 					"Omni": false
 				}
@@ -82,6 +86,14 @@
 				{
 					"WeaponMount": "AntiPersonnel",
 					"Omni": false
+				},
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Missile",
+					"Omni": false
 				}
 			],
 			"Tonnage": 0,
@@ -92,16 +104,7 @@
 		},
 		{
 			"Location": "CenterTorso",
-			"Hardpoints": [
-				{
-					"WeaponMount": "AntiPersonnel",
-					"Omni": false
-				},
-				{
-					"WeaponMount": "AntiPersonnel",
-					"Omni": false
-				}
-			],
+			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 16,
 			"MaxArmor": 110,
@@ -114,6 +117,14 @@
 				{
 					"WeaponMount": "AntiPersonnel",
 					"Omni": false
+				},
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Missile",
+					"Omni": false
 				}
 			],
 			"Tonnage": 0,
@@ -125,10 +136,6 @@
 		{
 			"Location": "RightArm",
 			"Hardpoints": [
-				{
-					"WeaponMount": "Energy",
-					"Omni": false
-				},
 				{
 					"WeaponMount": "Energy",
 					"Omni": false
@@ -207,13 +214,13 @@
 			"z": 0.5
 		}
 	],
-	"VariantName": "FS9-Q",
+	"VariantName": "FS9-P",
 	"ChassisTags": {
 		"items": [],
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Scout & Disabler",
-	"YangsThoughts": "The Firestarter-Q is a rare variant that decides to up the mech's arsenal against other hardened military targets while maintaining its use against conventional forces. It carries a massive six Flamers for conventional work while against larger targets a PPC provides solid direct-fire capability. To pay for all this tonnage, the mech is powered by a XL engine and a brace of double heat sinks to keep the heat manageable.",
+	"YangsThoughts": "Manufactured by the Circinus Federation and used to 'pacify' civilians, the FS9-P carries twin Medium and Small Lasers as well as four Flamers. While these weapons are normal Firestarter fare, the paired SRM-2s loaded with Inferno ammo are less normal and give the -P its surprise punch. The -P proved popular among the Circinian armed forces and was spread around the Periphery quickly, appearing among most larger nation's armies.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",
@@ -228,12 +235,14 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_structureslots_standard",
+			"ComponentDefID": "emod_structureslots_endosteel",
+			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
+			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": "",
-			"hasPrefabName": true
+			"hasPrefabName": false
 		}
 	],
 	"CustomParts": {
