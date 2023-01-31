@@ -11,9 +11,9 @@
 		"Manufacturer": "",
 		"Model": "",
 		"UIName": "Valkyrie",
-		"Id": "chassisdef_valkyrie_VLK-QQ",
+		"Id": "chassisdef_valkyrie_VLK-QD3",
 		"Name": "Valkyrie",
-		"Details": "Created by a Free Worlds League engineer who discovered the extinct Jackrabbit BattleMech and decided to resurrect it in spirit, the VLK-QQ carries an unusual loadout for a Valkyrie: an Ultra Autocannon/2 provides the long-range punch while a Streak SRM-2 gives some close-range defense. To carry the Ultra though, the -QQ was forced to carry an XL Engine, which combined with its low speed makes it rather fragile for a light mech. The FWL considered it an acceptable trade-off though and the QQ can be found in their armed forces in small numbers.",
+		"Details": "Introduced in the 3060s as part of the deal with Vicore Industries that led to the QD1, the QD3 upgrades the engine to a 210-rated fusion engine to boost the ground speed to 119km/h. Armed with twin ER Medium Lasers and a LRM-5 and equipped with ferro-fibrous armor and 6 jump jets, the QD3 proved an effective light skirmisher.",
 		"Icon": "uixTxrIcon_valkyrie"
 	},
 	"MovementCapDefID": "movedef_valkyrie_VLK-QA",
@@ -63,7 +63,20 @@
 		},
 		{
 			"Location": "LeftArm",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
 			"MaxArmor": 50,
@@ -73,10 +86,6 @@
 		{
 			"Location": "LeftTorso",
 			"Hardpoints": [
-				{
-					"WeaponMount": "Missile",
-					"Omni": false
-				},
 				{
 					"WeaponMount": "Missile",
 					"Omni": false
@@ -99,7 +108,16 @@
 		},
 		{
 			"Location": "RightTorso",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "Missile",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Missile",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
 			"MaxArmor": 70,
@@ -109,10 +127,6 @@
 		{
 			"Location": "RightArm",
 			"Hardpoints": [
-				{
-					"WeaponMount": "Ballistic",
-					"Omni": false
-				},
 				{
 					"WeaponMount": "AntiPersonnel",
 					"Omni": false
@@ -187,13 +201,13 @@
 			"z": 0.5
 		}
 	],
-	"VariantName": "VLK-QQ",
+	"VariantName": "VLK-QD3",
 	"ChassisTags": {
 		"items": [],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "Light Fire Support",
-	"YangsThoughts": "Created by a Free Worlds League engineer who discovered the extinct Jackrabbit BattleMech and decided to resurrect it in spirit, the VLK-QQ carries an unusual loadout for a Valkyrie: an Ultra Autocannon/2 provides the long-range punch while a Streak SRM-2 gives some close-range defense. To carry the Ultra though, the -QQ was forced to carry an XL Engine, which combined with its low speed makes it rather fragile for a light mech. The FWL considered it an acceptable trade-off though and the QQ can be found in their armed forces in small numbers.",
+	"StockRole": "Light Skirmisher",
+	"YangsThoughts": "Introduced in the 3060s as part of the deal with Vicore Industries that led to the QD1, the QD3 upgrades the engine to a 210-rated fusion engine to boost the ground speed to 119km/h. Armed with twin ER Medium Lasers and a LRM-5 and equipped with ferro-fibrous armor and 6 jump jets, the QD3 proved an effective light skirmisher.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "Head",
@@ -209,11 +223,13 @@
 		{
 			"MountedLocation": "CenterTorso",
 			"ComponentDefID": "emod_structureslots_endosteel",
+			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
+			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": "",
-			"hasPrefabName": true
+			"hasPrefabName": false
 		}
 	],
 	"CustomParts": {

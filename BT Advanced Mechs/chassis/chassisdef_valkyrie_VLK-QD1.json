@@ -11,9 +11,9 @@
 		"Manufacturer": "",
 		"Model": "",
 		"UIName": "Valkyrie",
-		"Id": "chassisdef_valkyrie_VLK-QQ",
+		"Id": "chassisdef_valkyrie_VLK-QD1",
 		"Name": "Valkyrie",
-		"Details": "Created by a Free Worlds League engineer who discovered the extinct Jackrabbit BattleMech and decided to resurrect it in spirit, the VLK-QQ carries an unusual loadout for a Valkyrie: an Ultra Autocannon/2 provides the long-range punch while a Streak SRM-2 gives some close-range defense. To carry the Ultra though, the -QQ was forced to carry an XL Engine, which combined with its low speed makes it rather fragile for a light mech. The FWL considered it an acceptable trade-off though and the QQ can be found in their armed forces in small numbers.",
+		"Details": "Developed in partnership with Vicore Industries and debuting in the 3060s, the VLK-QD1 is a substantial overhaul of the chassis. Powered with a 150-rated XL engine and built on an endo-steel skeleton, the QD1 manages to pack in an ER Medium Laser and a LRM-15. Both are connected to a Targeting Computer for maximum effectiveness. Double Heat Sinks keep it all chilly while 5 jump jets and 6 tons of armor provide plenty of staying power.",
 		"Icon": "uixTxrIcon_valkyrie"
 	},
 	"MovementCapDefID": "movedef_valkyrie_VLK-QA",
@@ -80,6 +80,10 @@
 				{
 					"WeaponMount": "Missile",
 					"Omni": false
+				},
+				{
+					"WeaponMount": "Missile",
+					"Omni": false
 				}
 			],
 			"Tonnage": 0,
@@ -110,7 +114,11 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMount": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMount": "Energy",
 					"Omni": false
 				},
 				{
@@ -187,13 +195,13 @@
 			"z": 0.5
 		}
 	],
-	"VariantName": "VLK-QQ",
+	"VariantName": "VLK-QD1",
 	"ChassisTags": {
 		"items": [],
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Light Fire Support",
-	"YangsThoughts": "Created by a Free Worlds League engineer who discovered the extinct Jackrabbit BattleMech and decided to resurrect it in spirit, the VLK-QQ carries an unusual loadout for a Valkyrie: an Ultra Autocannon/2 provides the long-range punch while a Streak SRM-2 gives some close-range defense. To carry the Ultra though, the -QQ was forced to carry an XL Engine, which combined with its low speed makes it rather fragile for a light mech. The FWL considered it an acceptable trade-off though and the QQ can be found in their armed forces in small numbers.",
+	"YangsThoughts": "Developed in partnership with Vicore Industries and debuting in the 3060s, the VLK-QD1 is a substantial overhaul of the chassis. Powered with a 150-rated XL engine and built on an endo-steel skeleton, the QD1 manages to pack in an ER Medium Laser and a LRM-15. Both are connected to a Targeting Computer for maximum effectiveness. Double Heat Sinks keep it all chilly while 5 jump jets and 6 tons of armor provide plenty of staying power.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "Head",
@@ -209,11 +217,13 @@
 		{
 			"MountedLocation": "CenterTorso",
 			"ComponentDefID": "emod_structureslots_endosteel",
+			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
+			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": "",
-			"hasPrefabName": true
+			"hasPrefabName": false
 		}
 	],
 	"CustomParts": {
