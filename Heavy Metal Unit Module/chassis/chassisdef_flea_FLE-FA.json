@@ -16,10 +16,10 @@
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Flea",
-		"Id": "chassisdef_flea_FLE-19",
-		"Name": "Flea",
-		"Details": "The newly-developed COIL system required a few testbed mechs so the designers dragged a few Fleas out of mothballs and built this, the Flea-19. Armed with only a single COIL and a backup Small Laser, the Flea looks lightly armed at first but those who faced it in trials and simulations quickly realized the incredible damage potential of the COIL. Capable of devastating mechs in a single salvo from the COIL, the Flea-19 is devastating to anything it can catch, with the only downside being the shutdown time from the prodigious generated heat.",
+		"UIName": "Fire Ant",
+		"Id": "chassisdef_flea_FLE-FA",
+		"Name": "Fire Ant",
+		"Details": "First seen in the Chaos March in the early 3060s, the 'Fire Ant' appears to be some kind of urban pacification design, though Earthwerks denies the design's existence. Only seen in Capellan company, the Fire Ant makes use of a trio of Flamers and a whopping six Machine Guns to decimate conventional forces. Even light and medium tanks are vulnerable to the Fire Ant as the Flamers make short work of such units and the Fire Ant's included MASC guarantees it can catch such vehicles.",
 		"Icon": "uixTxrIcon_flea"
 	},
 	"MovementCapDefID": "movedef_flea_FLE-15",
@@ -60,7 +60,12 @@
 	"Locations": [
 		{
 			"Location": "Head",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 6,
 			"MaxArmor": 45,
@@ -70,6 +75,10 @@
 		{
 			"Location": "LeftArm",
 			"Hardpoints": [
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				},
 				{
 					"WeaponMount": "AntiPersonnel",
 					"Omni": false
@@ -130,6 +139,10 @@
 		{
 			"Location": "RightArm",
 			"Hardpoints": [
+				{
+					"WeaponMount": "AntiPersonnel",
+					"Omni": false
+				},
 				{
 					"WeaponMount": "AntiPersonnel",
 					"Omni": false
@@ -208,13 +221,13 @@
 			"z": 0
 		}
 	],
-	"VariantName": "FLE-19",
+	"VariantName": "FLE-FA",
 	"ChassisTags": {
 		"items": [],
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Recon and Backstabber",
-	"YangsThoughts": "The newly-developed COIL system required a few testbed mechs so the designers dragged a few Fleas out of mothballs and built this, the Flea-19. Armed with only a single COIL and a backup Small Laser, the Flea looks lightly armed at first but those who faced it in trials and simulations quickly realized the incredible damage potential of the COIL. Capable of devastating mechs in a single salvo from the COIL, the Flea-19 is devastating to anything it can catch, with the only downside being the shutdown time from the prodigious generated heat.",
+	"YangsThoughts": "First seen in the Chaos March in the early 3060s, the 'Fire Ant' appears to be some kind of urban pacification design, though Earthwerks denies the design's existence. Only seen in Capellan company, the Fire Ant makes use of a trio of Flamers and a whopping six Machine Guns to decimate conventional forces. Even light and medium tanks are vulnerable to the Fire Ant as the Flamers make short work of such units and the Fire Ant's included MASC guarantees it can catch such vehicles.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",
@@ -229,7 +242,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_structureslots_standard",
+			"ComponentDefID": "emod_structureslots_endosteel",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,

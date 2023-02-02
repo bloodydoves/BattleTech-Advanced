@@ -5,37 +5,37 @@
 			"RightLimit": "Upper"
 		},
 		"AssemblyVariant": {
-			"PrefabID": "Flea",
+			"PrefabID": "Rifleman",
 			"Exclude": false,
 			"Include": true
 		}
 	},
 	"Description": {
-		"Cost": 1624000,
-		"Rarity": 0,
+		"Cost": 5900000,
+		"Rarity": 3,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Flea",
-		"Id": "chassisdef_flea_FLE-17",
-		"Name": "Flea",
-		"Details": "A post-Helm Core upgrade of the venerable FLE-15, the -17 keeps the originals speed and armor but upgrades the weapons to a pair of Medium Pulse Lasers backed up by the traditional Smalls and Flamer. To give it an unexpected edge, the FLE-17 carries a MASC system for a speed boost.",
-		"Icon": "uixTxrIcon_flea"
+		"UIName": "Rifleman",
+		"Id": "chassisdef_rifleman_RFL-8D",
+		"Name": "Rifleman",
+		"Details": "The definitive Project Phoenix model, the 8D is intended as more of a line unit. It mounts two Rotary Autocannon/5s with six tons of ammunition split between the arms, a pair of ER Medium Lasers also mounted in each arm, eleven double heat sinks and twelve tons of armor. The -8D is also one of very few Rifleman variants to mount jump jets, with two in either leg for a total jumping distance of 120 meters. To pay for all this weight, the -8D uses a 240-rated XL fusion engine and an Endo-Steel structure.",
+		"Icon": "uixTxrIcon_rifleman"
 	},
-	"MovementCapDefID": "movedef_flea_FLE-15",
-	"PathingCapDefID": "pathingdef_light",
-	"HardpointDataDefID": "hardpointdatadef_flea",
-	"PrefabIdentifier": "chrPrfMech_fleaBase-001",
-	"PrefabBase": "flea",
-	"Tonnage": 20,
-	"InitialTonnage": 2,
-	"weightClass": "LIGHT",
-	"BattleValue": 1642000,
+	"MovementCapDefID": "movedef_rifleman_RFL-3N",
+	"PathingCapDefID": "pathingdef_heavy",
+	"HardpointDataDefID": "hardpointdatadef_rifleman",
+	"PrefabIdentifier": "chrPrfMech_riflemanBase-001",
+	"PrefabBase": "rifleman",
+	"Tonnage": 60,
+	"InitialTonnage": 6,
+	"weightClass": "HEAVY",
+	"BattleValue": 5514000,
 	"Heatsinks": 0,
-	"TopSpeed": 210,
+	"TopSpeed": 120,
 	"TurnRadius": 90,
 	"MaxJumpjets": 30,
-	"Stability": 100,
+	"Stability": 160,
 	"StabilityDefenses": [
 		0,
 		0,
@@ -48,15 +48,15 @@
 	"VisibilityMultiplier": 1,
 	"SensorRangeMultiplier": 1,
 	"Signature": 0,
-	"Radius": 4,
+	"Radius": 8,
 	"PunchesWithLeftArm": false,
-	"MeleeDamage": 20,
-	"MeleeInstability": 5,
+	"MeleeDamage": 60,
+	"MeleeInstability": 30,
 	"MeleeToHitModifier": 0,
-	"DFADamage": 20,
+	"DFADamage": 60,
 	"DFAToHitModifier": 0,
-	"DFASelfDamage": 20,
-	"DFAInstability": 5,
+	"DFASelfDamage": 60,
+	"DFAInstability": 30,
 	"Locations": [
 		{
 			"Location": "Head",
@@ -75,19 +75,19 @@
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMount": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMount": "Ballistic",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 30,
+			"MaxArmor": 100,
 			"MaxRearArmor": -1,
-			"InternalStructure": 15
+			"InternalStructure": 50
 		},
 		{
 			"Location": "LeftTorso",
@@ -99,23 +99,18 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 50,
-			"MaxRearArmor": 25,
-			"InternalStructure": 25
+			"MaxArmor": 140,
+			"MaxRearArmor": 70,
+			"InternalStructure": 70
 		},
 		{
 			"Location": "CenterTorso",
-			"Hardpoints": [
-				{
-					"WeaponMount": "AntiPersonnel",
-					"Omni": false
-				}
-			],
+			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 16,
-			"MaxArmor": 60,
-			"MaxRearArmor": 30,
-			"InternalStructure": 30
+			"MaxArmor": 200,
+			"MaxRearArmor": 100,
+			"InternalStructure": 100
 		},
 		{
 			"Location": "RightTorso",
@@ -127,9 +122,9 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 50,
-			"MaxRearArmor": 25,
-			"InternalStructure": 25
+			"MaxArmor": 140,
+			"MaxRearArmor": 70,
+			"InternalStructure": 70
 		},
 		{
 			"Location": "RightArm",
@@ -139,94 +134,94 @@
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMount": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMount": "Ballistic",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 30,
+			"MaxArmor": 100,
 			"MaxRearArmor": -1,
-			"InternalStructure": 15
+			"InternalStructure": 50
 		},
 		{
 			"Location": "LeftLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 40,
+			"MaxArmor": 140,
 			"MaxRearArmor": -1,
-			"InternalStructure": 20
+			"InternalStructure": 70
 		},
 		{
 			"Location": "RightLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 40,
+			"MaxArmor": 140,
 			"MaxRearArmor": -1,
-			"InternalStructure": 20
+			"InternalStructure": 70
 		}
 	],
 	"LOSSourcePositions": [
 		{
 			"x": 0,
-			"y": 6.5,
-			"z": 0
+			"y": 14,
+			"z": 0.5
 		},
 		{
-			"x": 2,
-			"y": 6.5,
+			"x": 4.5,
+			"y": 13,
 			"z": -0.5
 		},
 		{
-			"x": -2,
-			"y": 6.5,
+			"x": -4.5,
+			"y": 13,
 			"z": -0.5
 		}
 	],
 	"LOSTargetPositions": [
 		{
 			"x": 0,
-			"y": 6.5,
-			"z": 0
+			"y": 14,
+			"z": 0.5
 		},
 		{
-			"x": 2,
-			"y": 6.5,
+			"x": 4.5,
+			"y": 13,
 			"z": -0.5
 		},
 		{
-			"x": -2,
-			"y": 6.5,
+			"x": -4.5,
+			"y": 13,
 			"z": -0.5
 		},
 		{
-			"x": 1.25,
-			"y": 3.5,
-			"z": 0
+			"x": 2.5,
+			"y": 5,
+			"z": 1.25
 		},
 		{
-			"x": -1.25,
-			"y": 3.5,
-			"z": 0
+			"x": -2.5,
+			"y": 5,
+			"z": 1.25
 		}
 	],
-	"VariantName": "FLE-17",
+	"VariantName": "RFL-8D",
 	"ChassisTags": {
 		"items": [],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "Recon and Backstabber",
-	"YangsThoughts": "A post-Helm Core upgrade of the venerable FLE-15, the -17 keeps the originals speed and armor but upgrades the weapons to a pair of Medium Pulse Lasers backed up by the traditional Smalls and Flamer. To give it an unexpected edge, the FLE-17 carries a MASC system for a speed boost.",
+	"StockRole": "Anti-Aircraft & Direct-Fire Support",
+	"YangsThoughts": "The definitive Project Phoenix model, the 8D is intended as more of a line unit. It mounts two Rotary Autocannon/5s with six tons of ammunition split between the arms, a pair of ER Medium Lasers also mounted in each arm, eleven double heat sinks and twelve tons of armor. The -8D is also one of very few Rifleman variants to mount jump jets, with two in either leg for a total jumping distance of 120 meters. To pay for all this weight, the -8D uses a 240-rated XL fusion engine and an Endo-Steel structure.",
 	"FixedEquipment": [
 		{
-			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "Gear_Quirk_NarrowProfile_Flea",
+			"MountedLocation": "Head",
+			"ComponentDefID": "Gear_Quirk_AntiAirTargeting_Rifleman",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
