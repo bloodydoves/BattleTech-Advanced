@@ -19,7 +19,8 @@
 				"IsPhysWeap",
 				"PhysWeapUnsteady",
 				"PhysWeapDamage: 0.8333333333",
-				"PhysWeapStab: 0.5"
+				"PhysWeapStab: 0.5",
+				"PhysWeapBonusHit: +1"
 			]
 		},
 		"Flags": {
@@ -199,6 +200,38 @@
 				"statName": "CBTBE_Physical_Weapon_Target_Instability_Per_Attacker_Ton",
 				"operation": "Set",
 				"modValue": "0.5",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-ClawMultiHit",
+				"Name": "Claw Multiple Hits",
+				"Details": "Claws clack rapidly during combat, hitting an extra time on each melee attack. Claws stack with themselves, multiple claws mean multiple bonus hits, +1 per Claw.",
+				"Icon": "barbed-nails"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Extra_Hits_Count",
+				"operation": "Float_Add",
+				"modValue": "1",
 				"modType": "System.Single"
 			}
 		}
