@@ -25,7 +25,7 @@
 		"BonusDescriptions": {
 			"Bonuses": [
 				"IsSensorsA",
-				"LanceResolve: +1",
+				"IndividualResolve: +1",
 				"MaxResolveIncrease: 15"
 			]
 		}
@@ -64,7 +64,7 @@
 			},
 			"targetingData": {
 				"effectTriggerType": "Passive",
-				"effectTargetType": "AllLanceMates",
+				"effectTargetType": "Creator",
 				"showInTargetPreview": false,
 				"showInStatusPanel": false
 			},
@@ -77,10 +77,10 @@
 			},
 			"nature": "Buff",
 			"statisticData": {
-				"statName": "MoraleBonusGain",
-				"operation": "Int_Add",
+				"statName": "resolveRoundBaseMod",
+				"operation": "Float_Add",
 				"modValue": "1",
-				"modType": "System.Int32"
+				"modType": "System.Single"
 			}
 		},
 		{

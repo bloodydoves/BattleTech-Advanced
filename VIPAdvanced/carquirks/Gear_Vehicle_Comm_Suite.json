@@ -2,7 +2,7 @@
 	"Custom": {
 		"BonusDescriptions": {
 			"Bonuses": [
-				"LanceResolve: +1"
+				"IndividualResolve: +2"
 			]
 		},
 		"Flags": {
@@ -53,7 +53,7 @@
 			},
 			"targetingData": {
 				"effectTriggerType": "Passive",
-				"effectTargetType": "AllLanceMates",
+				"effectTargetType": "Creator",
 				"showInTargetPreview": false,
 				"showInStatusPanel": false
 			},
@@ -66,10 +66,10 @@
 			},
 			"nature": "Buff",
 			"statisticData": {
-				"statName": "MoraleBonusGain",
-				"operation": "Int_Add",
-				"modValue": "1",
-				"modType": "System.Int32"
+				"statName": "resolveRoundBaseMod",
+				"operation": "Float_Add",
+				"modValue": "2",
+				"modType": "System.Single"
 			}
 		}
 	],

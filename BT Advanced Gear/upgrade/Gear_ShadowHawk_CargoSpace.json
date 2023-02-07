@@ -1,0 +1,79 @@
+{
+	"Custom": {
+		"BonusDescriptions": {
+			"Bonuses": [
+				"IndividualResolve: +2"
+			]
+		},
+		"Flags": {
+			"flags": [
+				"default",
+				"not_broken",
+				"no_salvage",
+				"autorepair",
+				"ignore_damage"
+			]
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 85000,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "GENERIC",
+		"Model": "GENERIC",
+		"UIName": "Cargo Space",
+		"Id": "Gear_ShadowHawk_CargoSpace",
+		"Name": "Cargo Space",
+		"Details": "This specific Shadow Hawk, the SHD-5S, is equipped with half a ton of 'cargo space'. Given the -5S's general use as a long-term deep raider into enemy territory, this space is typically used for supplies and storage. In a mercenary context though, this space is typically given over to storage of special trophies and/or personalizations of the 'Mech, which gives a small boost to in-combat morale.",
+		"Icon": "cargo-crate"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0.5,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-ShadowHawkCargoSpace",
+				"Name": "Cargo Space Resolve Gain",
+				"Details": "Provides a +2 bonus to actions that generate Morale.",
+				"Icon": "uixSvgIcon_equipment_Rangefinder"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "resolveRoundBaseMod",
+				"operation": "Float_Add",
+				"modValue": "2",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"lv-shares-sensors"
+		],
+		"tagSetSourceFile": ""
+	}
+}

@@ -1,0 +1,39 @@
+{
+	"Description": {
+		"Id": "TraitDefTac1",
+		"Name": "Tactics Resolve Boost",
+		"Details": "PASSIVE: Resolve generation boosted by 2%",
+		"Icon": "uixSvgIcon_action_evasivemove"
+	},
+	"Type": "Resolve",
+	"ShortDesc": "+2% Resolve Generation",
+	"DisplayParams": "ShowInPilotToolTip",
+	"ActivationTime": "Passive",
+	"EffectData": [
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "TraitDefTac1",
+				"Name": "Resolve Boost",
+				"Details": "Boost Resolve Gen By 2%",
+				"Icon": "uixSvgIcon_action_evasivemove"
+			},
+			"statisticData": {
+				"statName": "resolveGenBaseMult",
+				"operation": "Float_Add",
+				"modValue": "0.02",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	]
+}
