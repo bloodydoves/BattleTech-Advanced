@@ -9,71 +9,42 @@
 			"Bonuses": [
 				"IsPhysWeap",
 				"PhysWeapUnsteady",
-				"PhysWeapDamage: 0.5",
+				"PhysWeapDamage: 1",
 				"PhysWeapStab: 0.5",
-				"PhysWeapAccuracy: +2",
-				"PhysWeapBonusHit: +1"
+				"PhysWeapAccuracy: +1"
 			]
 		},
 		"Flags": {
 			"flags": [
-				"not_broken",
 				"no_salvage",
-				"autorepair"
+				"not_broken"
 			]
 		}
 	},
-	"Category": "AntiPersonnel",
-	"Type": "MachineGun",
-	"WeaponSubType": "MachineGun",
-	"MinRange": 0,
-	"MaxRange": 30,
-	"RangeSplit": [
-		30,
-		30,
-		30
-	],
-	"AmmoCategory": "NotSet",
-	"StartingAmmoCapacity": 0,
-	"HeatGenerated": 0,
-	"Damage": 0,
-	"OverheatedDamageMultiplier": 0,
-	"EvasiveDamageMultiplier": 0,
-	"EvasivePipsIgnored": 4,
-	"DamageVariance": 0,
-	"HeatDamage": 0,
-	"AccuracyModifier": 0,
-	"CriticalChanceMultiplier": 1,
-	"AOECapable": false,
-	"IndirectFireCapable": false,
-	"RefireModifier": 0,
-	"ShotsWhenFired": 1,
-	"ProjectilesPerShot": 1,
-	"AttackRecoil": 0,
-	"Instability": 0,
-	"NotUseInMelee": true,
-	"WeaponEffectID": "WeaponEffect-Weapon_MachineGun",
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
 	"Description": {
-		"Cost": 12000,
-		"Rarity": 4,
-		"Purchasable": true,
-		"Manufacturer": "Cyclone",
-		"Model": "Retractable Blade",
-		"UIName": "Retractable Blade",
-		"Id": "Weapon_Cyclone_RetractableBlade",
-		"Name": "Retractable Blade",
-		"Details": "This is a unique Retractable Blade, designed for the Cyclone. It cannot be removed or used elsewhere.",
-		"Icon": "broadsword"
+		"Cost": 480000,
+		"Rarity": 99,
+		"Purchasable": false,
+		"Manufacturer": "Buccaneer",
+		"Model": "Hatchet",
+		"UIName": "Hatchet",
+		"Id": "Gear_Actuator_Buccaneer_Hatchet",
+		"Name": "Hatchet",
+		"Details": "The Hatchet is a melee weapon equipped to the Ettin. This Hatchet is affixed permanently to the 'Mech's right arm. It may be damaged and disabled, but it can be repaired.",
+		"Icon": "battle-axe"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
-	"ComponentType": "Weapon",
-	"ComponentSubType": "Weapon",
-	"PrefabIdentifier": "blade",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
 	"BattleValue": 0,
-	"InventorySize": 3,
-	"Tonnage": 2,
-	"AllowedLocations": "RightArm",
+	"InventorySize": 4,
+	"Tonnage": 4,
+	"AllowedLocations": "Arms",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
 	"statusEffects": [
@@ -178,16 +149,16 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "StatusEffect-BladeBaseDamage",
-				"Name": "Blade Base Damage",
-				"Details": "Retractable Blades do 5 damage per 10 tons of the mech.",
-				"Icon": "broadsword"
+				"Id": "StatusEffect-HatchetBaseDamage",
+				"Name": "Hatchet Base Damage",
+				"Details": "Hatchets do 5 damage per 5 tons of the mech.",
+				"Icon": "battle-axe"
 			},
 			"nature": "Buff",
 			"statisticData": {
 				"statName": "CBTBE_Physical_Weapon_Target_Damage_Per_Attacker_Ton",
 				"operation": "Set",
-				"modValue": "0.5",
+				"modValue": "1.0",
 				"modType": "System.Single"
 			}
 		},
@@ -210,10 +181,10 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "StatusEffect-BladeBaseStabDamage",
-				"Name": "Blade Base Stab Damage",
-				"Details": "Retractable Blades do 5 stab damage per 10 tons of the mech.",
-				"Icon": "broadsword"
+				"Id": "StatusEffect-HatchetBaseStabDamage",
+				"Name": "Hatchet Base Stab Damage",
+				"Details": "Hatchets do 5 stab damage per 10 tons of the mech.",
+				"Icon": "battle-axe"
 			},
 			"nature": "Buff",
 			"statisticData": {
@@ -242,56 +213,23 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "StatusEffect-BladeBaseAcc",
-				"Name": "Blade Base Accuracy",
-				"Details": "Retractable Blades gain +2 accuracy on their attacks.",
-				"Icon": "broadsword"
+				"Id": "StatusEffect-HatchetBaseAcc",
+				"Name": "Hatchet Base Accuracy",
+				"Details": "Hatchets gain +1 accuracy on their attacks.",
+				"Icon": "battle-axe"
 			},
 			"nature": "Buff",
 			"statisticData": {
 				"statName": "CBTBE_Physical_Weapon_Attack_Mod",
 				"operation": "Int_Add",
-				"modValue": "-2",
+				"modValue": "-1",
 				"modType": "System.Int32"
-			}
-		},
-		{
-			"durationData": {
-				"duration": -1,
-				"stackLimit": -1
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"triggerLimit": 0,
-				"extendDurationOnTrigger": 0,
-				"specialRules": "NotSet",
-				"effectTargetType": "Creator",
-				"range": 0,
-				"forcePathRebuild": false,
-				"forceVisRebuild": false,
-				"showInTargetPreview": false,
-				"showInStatusPanel": true
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "StatusEffect-BladeMultiHit",
-				"Name": "Retractable Blade Multiple Hits",
-				"Details": "Retractable Blades stab rapidly during combat, hitting an extra time on each melee attack.",
-				"Icon": "broadsword"
-			},
-			"nature": "Buff",
-			"statisticData": {
-				"statName": "CBTBE_Physical_Weapon_Extra_Hits_Count",
-				"operation": "Float_Add",
-				"modValue": "1",
-				"modType": "System.Single"
 			}
 		}
 	],
 	"ComponentTags": {
 		"items": [
-			"component_type_stock",
-			"range_close"
+			"BLACKLISTED"
 		],
 		"tagSetSourceFile": ""
 	}
