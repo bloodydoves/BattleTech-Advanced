@@ -26,6 +26,9 @@
 				"ignore_damage"
 			]
 		},
+		"Weights": {
+			"StructureFactor": 1.4
+		},
 		"BonusDescriptions": {
 			"Bonuses": [
 				"IsGyro",
@@ -33,7 +36,8 @@
 				"RunSpeed: +10%",
 				"KickDamageBonus: +20",
 				"KickAccuracy: +1",
-				"GyroStab: 80",
+				"GyroStab: 120",
+				"GyroWeight: +40%",
 				"360Twist"
 			]
 		}
@@ -47,10 +51,10 @@
 		"Purchasable": false,
 		"Manufacturer": "Quirk",
 		"Model": "Quad",
-		"UIName": "Quad Mech Gyro",
-		"Id": "Gear_Gyro_Quad",
-		"Name": "Quad Mech Gyro",
-		"Details": "This piece of gear represents the inherently superior gyro that all quad mechs share. It provides a number of benefits to quads, such as bonus movement speed, a damage and accuracy bonus to kick attacks, and a higher unsteady threshold.",
+		"UIName": "Quad Mech Compact Gyro",
+		"Id": "Gear_Gyro_Quad_Compact",
+		"Name": "Quad Mech Compact Gyro",
+		"Details": "This piece of gear represents the inherently superior gyro that all quad mechs share. It provides a number of benefits to quads, such as bonus movement speed, a damage and accuracy bonus to kick attacks, and a higher unsteady threshold. This specific gyro is also a Compact Gyro, which trades increased weight for smaller size.",
 		"Icon": "uixSvgIcon_equipment_Gyro"
 	},
 	"BonusValueA": "",
@@ -59,7 +63,7 @@
 	"ComponentSubType": "NotSet",
 	"PrefabIdentifier": "",
 	"BattleValue": 0,
-	"InventorySize": 3,
+	"InventorySize": 2,
 	"Tonnage": 0,
 	"AllowedLocations": "CenterTorso",
 	"DisallowedLocations": "All",
@@ -86,7 +90,7 @@
 			"statisticData": {
 				"statName": "UnsteadyThreshold",
 				"operation": "Float_Add",
-				"modValue": "80.0",
+				"modValue": "120.0",
 				"modType": "System.Single"
 			},
 			"nature": "Buff"
