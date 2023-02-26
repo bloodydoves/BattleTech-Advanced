@@ -1,0 +1,50 @@
+{
+  "id": "AffinityDef_tagged_I_Am_a_God",
+  "affinityType": "Tag",
+  "affinityData": {
+    "tag": "Affinity_Dagoth_God",
+    "chassisNames": [
+      "Dagoth_65"
+    ],
+    "idType": "AssemblyVariant",
+    "altMaps": [],
+    "affinityLevels": [
+      {
+        "id": "I_Am_a_God",
+        "missionsRequired": 10,
+        "levelName": "I Am a God, How Can You Kill a God?",
+        "decription": "Sharmat gains +20% damage reduction from his belief in his own superiority.",
+        "affinities": [],
+        "effectData": [
+          {
+            "Description": {
+              "Details": "Sharmat gains +20% damage reduction from his belief in his own superiority.",
+              "Icon": "UixSvgIcon_specialEquip_System",
+              "Id": "StatusEffect-Affinity-SharmatDagoth",
+              "Name": "Sharmat Affinity Damage Reduction"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": -1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "statName": "DamageReductionMultiplierAll",
+              "operation": "Float_Multiply",
+              "modValue": "0.8",
+              "modType": "System.Single"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "hideApplicationFloatie": true,
+              "showInStatusPanel": false,
+              "showInTargetPreview": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
