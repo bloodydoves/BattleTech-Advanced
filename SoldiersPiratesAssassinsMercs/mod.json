@@ -42,17 +42,19 @@
 			"BaseReplaceChance": 0.4,
 			"FactionsReplaceOverrides": {
 				"Locals": 0.9,
-				"Mercenaries": 0.9,
+				"Mercenaries": 1.0,
 				"Liao": 1.0,
-				"AuriganPirates": 0.7
+				"Kurita": 1.0,
+				"Davion": 1.0,
+				"AuriganPirates": 0.8
 			}
 		},
 		"MercLanceAdditionConfig": {
 			"BaseReplaceChance": 0.75,
 			"FactionsReplaceOverrides": {
-				"Locals": 0.99,
-				"Mercenaries": 0.99,
-				"AuriganPirates": 0.99
+				"Locals": 1.0,
+				"Mercenaries": 1.0,
+				"AuriganPirates": 1.0
 			},
 			"MercFactionReputationFactor": 0.5
 		},
@@ -113,7 +115,7 @@
 				]
 			},
 			"Liao": {
-				"FactionReplaceChance": 1.0,
+				"FactionReplaceChance": 0.8,
 				"FactionMCAdditionalLanceReplaceChance": 0.7,
 				"AlternateOpforWeights": [
 					{
@@ -130,6 +132,48 @@
 						"FactionName": "6thConfederationReserveCavalry",
 						"FactionWeight": 2,
 						"FactionFallback": "Liao"
+					}
+				]
+			},
+			"Kurita": {
+				"FactionReplaceChance": 0.8,
+				"FactionMCAdditionalLanceReplaceChance": 0.7,
+				"AlternateOpforWeights": [
+					{
+						"FactionName": "1stSwordOfLight",
+						"FactionWeight": 3,
+						"FactionFallback": "Kurita"
+					},
+					{
+						"FactionName": "3rdNightStalkers",
+						"FactionWeight": 5,
+						"FactionFallback": "Kurita"
+					},
+					{
+						"FactionName": "2ndLegionOfVega",
+						"FactionWeight": 2,
+						"FactionFallback": "Kurita"
+					}
+				]
+			},
+			"Davion": {
+				"FactionReplaceChance": 0.8,
+				"FactionMCAdditionalLanceReplaceChance": 0.7,
+				"AlternateOpforWeights": [
+					{
+						"FactionName": "DavionAssaultGuards",
+						"FactionWeight": 3,
+						"FactionFallback": "Davion"
+					},
+					{
+						"FactionName": "2ndCrucisLancers",
+						"FactionWeight": 5,
+						"FactionFallback": "Davion"
+					},
+					{
+						"FactionName": "1stKitteryBorderers",
+						"FactionWeight": 2,
+						"FactionFallback": "Davion"
 					}
 				]
 			}
