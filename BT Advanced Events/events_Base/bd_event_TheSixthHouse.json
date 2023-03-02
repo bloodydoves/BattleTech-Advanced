@@ -1,0 +1,203 @@
+{
+	"Description": {
+		"Id": "bd_event_TheSixthHouse",
+		"Name": "Mysteries of The Sixth House",
+		"Details": "You'd come down planetside for a simple drink with Darius, figuring to escape work for an evening. However, you couldn't just have a quiet drink in peace and now there's... someone sitting across the table from you. You'd heard of him before, a rumor really, running around the various hiring halls in the region. That mask he wears is unmistakable after all. The firm and commanding voice coming from beneath it asks his question again. \"Well, Commander {COMMANDER.LastName}, you've heard my offer. I join your crew and I bring my 'Mech, Akulakhan, with me. In exchange, you don't ask any questions about me or my background.\" Darius leans over and whispers, \"This guy might be bad news, you sure we want him on board? Think carefully here, boss.\"",
+		"Icon": "uixTxrSpot_HiringHall.png"
+	},
+	"Scope": "Company",
+	"Weight": 50,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"tagSetSourceFile": "",
+			"items": []
+		},
+		"ExclusionTags": {
+			"tagSetSourceFile": "",
+			"items": [
+				"bd_event_TheSixthHouse_refused",
+				"bd_event_TheSixthHouse_accepted"
+			]
+		},
+		"RequirementComparisons": [
+			{
+				"obj": "Travel",
+				"op": "Equal",
+				"val": 0,
+				"valueConstant": "0"
+			},
+			{
+				"obj" : "Reputation.MercenaryReviewBoard",
+				"op" : "GreaterThanOrEqual",
+				"val" : 500,
+				"valueConstant" : "500"
+			}
+		]
+	},
+	"AdditionalRequirements": [
+		{
+			"Scope": "Commander",
+			"RequirementTags": {
+				"tagSetSourceFile": "",
+				"items": []
+			},
+			"ExclusionTags": {
+				"tagSetSourceFile": "",
+				"items": []
+			},
+			"RequirementComparisons": [
+				{
+					"obj": "Injuries",
+					"op": "Equal",
+					"val": 0,
+					"valueConstant": "0"
+				}
+			]
+		},
+		{
+			"Scope": "StarSystem",
+			"RequirementTags": {
+				"tagSetSourceFile": "",
+				"items": []
+			},
+			"ExclusionTags": {
+				"tagSetSourceFile": "",
+				"items": [
+					"planet_other_empty"
+				]
+			},
+			"RequirementComparisons": []
+		}
+	],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "outcome_0",
+				"Name": "Refuse him and his mysteries.",
+				"Details": "Hiring Hall",
+				"Icon": null
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "outcome_0_0",
+						"Name": "Refused",
+						"Details": "The mask keeps his reaction invisible, but you could swear you pick up a note of disappointment in his voice. \"I understand, Commander. I bid you good-bye, we will not meet again.\" As he rises and walks away from your table, Darius leans back in his chair and sighs. \"Good call, Commander, you can't trust anyone who wears a mask all day after all.\" While you return to your drinks, you can't help but wonder who Dagoth Ur really is and why he picked you out of the crowd to begin with...",
+						"Icon": null
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"tagSetSourceFile": "",
+								"items": [
+									"bd_event_TheSixthHouse_refused"
+								]
+							},
+							"RemovedTags": {
+								"tagSetSourceFile": "",
+								"items": []
+							},
+							"Stats": null,
+							"Actions": [],
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"ExclusionTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"RequirementComparisons": []
+			}
+		},
+		{
+			"Description": {
+				"Id": "outcome_1",
+				"Name": "Welcome him and his mysteries aboard.",
+				"Details": "Hire+Mech",
+				"Icon": null
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "outcome_1_0",
+						"Name": "Hired",
+						"Details": "\"You're an odd one but my company is made up of odd ones. Welcome aboard, Dagoth.\" He nods his head in approval, the dim light glinting off his golden three-eyed mask, and speaks with a slight hint of appreciation. \"A most wise decision, Commander. You may consider Dagoth Ur, Lord of the Sixth House at your service. I will make arrangements for delivery of Akulakhan to your vessel shortly.\" As he walks away, Darius speaks with some trepidation. \"You sure about this, Commander? We've all heard the stories about that guy, that he's on the run from something and that he brings bad omens to any ship he travels on. You're taking an awful chance with him here.\" You chuckle quietly. \"Darius, we're all on the run from something in the end, I'm alright taking a chance on a MechWarrior, even if he's a little weirder than most.\"",
+						"Icon": null
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"tagSetSourceFile": "",
+								"items": [
+									"bd_event_TheSixthHouse_accepted"
+								]
+							},
+							"RemovedTags": {
+								"tagSetSourceFile": "",
+								"items": []
+							},
+							"Stats": null,
+							"Actions": [
+								{
+									"Type": "MechWarrior_AddRoster",
+									"value": "pilot_bd_Dagoth",
+									"valueConstant": null,
+									"additionalValues": null
+								},
+								{
+									"Type": "Mech_AddRoster",
+									"value": "mechdef_dagoth_DGH-AK",
+									"valueConstant": null,
+									"additionalValues": null
+								}
+							],
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"ExclusionTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "NORMAL",
+	"OneTimeEvent": true,
+	"Tags": {
+		"tagSetSourceFile": "tags/EventTags",
+		"items": []
+	}
+}

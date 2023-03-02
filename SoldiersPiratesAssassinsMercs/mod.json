@@ -15,22 +15,52 @@
 		"BlacklistedContractTypesAndIDs": [
 			"SoloDuel",
 			"DuoDuel",
-			"Blackout"
+			"Blackout",
+			"StoryTime_1_Retreat_Default",
+			"StoryTime_2_ThreeYearsLater_Default",
+			"StoryTime_3_Axylus_Default",
+			"StoryTime_4a_LiberationOfWeldry_Default",
+			"StoryTime_4b_AttackPanzyr_Default",
+			"StoryTime_5_a_SmithonAttack_Default",
+			"StoryTime_5_b_ServedCold_Default",
+			"StoryTime_6_a_TreasureTrove_Default",
+			"StoryTime_6_b_TreasureTrove_Default",
+			"StoryTime_6b_SmithonDefense_Default",
+			"StoryTime_6c_a_ItromAttack_Default",
+			"StoryTime_6c_b_ItromDefense_Default",
+			"StoryTime_6d_PanzyrDefense_Default",
+			"StoryTime_7_GunboatDiplomacy_Default",
+			"StoryTime_7b_TyrlonAttack_Default",
+			"StoryTime_8_a_Locura_Default",
+			"StoryTime_8_b_Downfall_Default",
+			"Assassinate_Kringle",
+			"DuoDuel_MaxRevenge1",
+			"Rescue_MaxRevenge",
+			"SimpleBattle_BTAThrowdown"
 		],
 		"OpforReplacementConfig": {
 			"BaseReplaceChance": 0.4,
 			"FactionsReplaceOverrides": {
 				"Locals": 0.9,
-				"Mercenaries": 0.9,
-				"AuriganPirates": 0.7
+				"Mercenaries": 1.0,
+				"Liao": 1.0,
+				"Kurita": 1.0,
+				"Davion": 1.0,
+				"Steiner": 1.0,
+				"Marik": 1.0,
+				"Comstar": 1.0,
+				"WordOfBlake": 1.0,
+				"Rasalhague": 1.0,
+				"TaurianConcordat": 1.0,
+				"AuriganPirates": 0.8
 			}
 		},
 		"MercLanceAdditionConfig": {
 			"BaseReplaceChance": 0.75,
 			"FactionsReplaceOverrides": {
-				"Locals": 0.99,
-				"Mercenaries": 0.99,
-				"AuriganPirates": 0.99
+				"Locals": 1.0,
+				"Mercenaries": 1.0,
+				"AuriganPirates": 1.0
 			},
 			"MercFactionReputationFactor": 0.5
 		},
@@ -80,13 +110,201 @@
 				]
 			},
 			"WordOfBlake": {
-				"FactionReplaceChance": 0.4,
+				"FactionReplaceChance": 0.8,
 				"FactionMCAdditionalLanceReplaceChance": 0.7,
 				"AlternateOpforWeights": [
 					{
-						"FactionName": "WoBProtectorateMilitia",
-						"FactionWeight": 1,
+						"FactionName": "40thShadowDivision",
+						"FactionWeight": 3,
 						"FactionFallback": "WordOfBlake"
+					},
+					{
+						"FactionName": "9thDivisionWoB",
+						"FactionWeight": 5,
+						"FactionFallback": "WordOfBlake"
+					},
+					{
+						"FactionName": "WoBProtectorateMilitia",
+						"FactionWeight": 2,
+						"FactionFallback": "WordOfBlake"
+					}
+				]
+			},
+			"Liao": {
+				"FactionReplaceChance": 0.8,
+				"FactionMCAdditionalLanceReplaceChance": 0.7,
+				"AlternateOpforWeights": [
+					{
+						"FactionName": "DeathCommandos",
+						"FactionWeight": 3,
+						"FactionFallback": "Liao"
+					},
+					{
+						"FactionName": "WarriorHouseImarra",
+						"FactionWeight": 5,
+						"FactionFallback": "Liao"
+					},
+					{
+						"FactionName": "6thConfederationReserveCavalry",
+						"FactionWeight": 2,
+						"FactionFallback": "Liao"
+					}
+				]
+			},
+			"Kurita": {
+				"FactionReplaceChance": 0.8,
+				"FactionMCAdditionalLanceReplaceChance": 0.7,
+				"AlternateOpforWeights": [
+					{
+						"FactionName": "1stSwordOfLight",
+						"FactionWeight": 3,
+						"FactionFallback": "Kurita"
+					},
+					{
+						"FactionName": "3rdNightStalkers",
+						"FactionWeight": 5,
+						"FactionFallback": "Kurita"
+					},
+					{
+						"FactionName": "2ndLegionOfVega",
+						"FactionWeight": 2,
+						"FactionFallback": "Kurita"
+					}
+				]
+			},
+			"Davion": {
+				"FactionReplaceChance": 0.8,
+				"FactionMCAdditionalLanceReplaceChance": 0.7,
+				"AlternateOpforWeights": [
+					{
+						"FactionName": "DavionAssaultGuards",
+						"FactionWeight": 3,
+						"FactionFallback": "Davion"
+					},
+					{
+						"FactionName": "2ndCrucisLancers",
+						"FactionWeight": 5,
+						"FactionFallback": "Davion"
+					},
+					{
+						"FactionName": "1stKitteryBorderers",
+						"FactionWeight": 2,
+						"FactionFallback": "Davion"
+					},
+					{
+						"FactionName": "10thLyranGuards",
+						"FactionWeight": 3,
+						"FactionFallback": "Steiner"
+					}
+				]
+			},
+			"Steiner": {
+				"FactionReplaceChance": 0.8,
+				"FactionMCAdditionalLanceReplaceChance": 0.7,
+				"AlternateOpforWeights": [
+					{
+						"FactionName": "6thLyranGuards",
+						"FactionWeight": 3,
+						"FactionFallback": "Steiner"
+					},
+					{
+						"FactionName": "5thDonegalGuards",
+						"FactionWeight": 5,
+						"FactionFallback": "Steiner"
+					},
+					{
+						"FactionName": "15thLyranRegulars",
+						"FactionWeight": 2,
+						"FactionFallback": "Steiner"
+					},
+					{
+						"FactionName": "11thAvalonHussars",
+						"FactionWeight": 3,
+						"FactionFallback": "Davion"
+					}
+				]
+			},
+			"Marik": {
+				"FactionReplaceChance": 0.8,
+				"FactionMCAdditionalLanceReplaceChance": 0.7,
+				"AlternateOpforWeights": [
+					{
+						"FactionName": "1stKnightsOfTheInnerSphere",
+						"FactionWeight": 3,
+						"FactionFallback": "Marik"
+					},
+					{
+						"FactionName": "2ndFreeWorldsGuards",
+						"FactionWeight": 5,
+						"FactionFallback": "Marik"
+					},
+					{
+						"FactionName": "30thMarikMilitia",
+						"FactionWeight": 2,
+						"FactionFallback": "Marik"
+					}
+				]
+			},
+			"Comstar": {
+				"FactionReplaceChance": 0.8,
+				"FactionMCAdditionalLanceReplaceChance": 0.7,
+				"AlternateOpforWeights": [
+					{
+						"FactionName": "2ndArmyVMu",
+						"FactionWeight": 3,
+						"FactionFallback": "Comstar"
+					},
+					{
+						"FactionName": "11thArmyVEta",
+						"FactionWeight": 5,
+						"FactionFallback": "Comstar"
+					},
+					{
+						"FactionName": "7thArmyVIota",
+						"FactionWeight": 2,
+						"FactionFallback": "Comstar"
+					}
+				]
+			},
+			"Rasalhague": {
+				"FactionReplaceChance": 0.8,
+				"FactionMCAdditionalLanceReplaceChance": 0.7,
+				"AlternateOpforWeights": [
+					{
+						"FactionName": "1stTyr",
+						"FactionWeight": 3,
+						"FactionFallback": "Rasalhague"
+					},
+					{
+						"FactionName": "2ndFreemen",
+						"FactionWeight": 5,
+						"FactionFallback": "Rasalhague"
+					},
+					{
+						"FactionName": "4thKavalleri",
+						"FactionWeight": 2,
+						"FactionFallback": "Rasalhague"
+					}
+				]
+			},
+			"TaurianConcordat": {
+				"FactionReplaceChance": 0.8,
+				"FactionMCAdditionalLanceReplaceChance": 0.7,
+				"AlternateOpforWeights": [
+					{
+						"FactionName": "TaurianGuard",
+						"FactionWeight": 3,
+						"FactionFallback": "TaurianConcordat"
+					},
+					{
+						"FactionName": "PleiadesHussars",
+						"FactionWeight": 5,
+						"FactionFallback": "TaurianConcordat"
+					},
+					{
+						"FactionName": "3rdTaurianLancers",
+						"FactionWeight": 2,
+						"FactionFallback": "TaurianConcordat"
 					}
 				]
 			}
@@ -952,7 +1170,7 @@
 				],
 				"UnitRating": 13,
 				"PersonalityAttributes": [
-					"ULTRA-PROFESSIONAL"
+					"WOLFSDRAGOONS"
 				]
 			},
 			"BarrettsFusiliers": {
@@ -1396,6 +1614,19 @@
 				"UnitRating": 7,
 				"PersonalityAttributes": [
 					"PROFESSIONAL"
+				]
+			},
+			"SolarisVIIMercLeague": {
+				"MercFactionFallbackTag": "Mercenaries",
+				"AppearanceWeight": 3,
+				"RestrictionIsWhitelist": true,
+				"EmployerRestrictions": [
+					"Locals",
+					"Mercenaries"
+				],
+				"UnitRating": 10,
+				"PersonalityAttributes": [
+					"SOLARISVII"
 				]
 			},
 			"BandOfTheDamned": {
