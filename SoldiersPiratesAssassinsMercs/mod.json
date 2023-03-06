@@ -139,7 +139,12 @@
 				"AlternateOpforWeights": [
 					{
 						"FactionName": "DeathCommandos",
-						"FactionWeight": 3,
+						"FactionWeight": 2,
+						"FactionFallback": "Liao"
+					},
+					{
+						"FactionName": "1stMcCarronsArmoredCavalry",
+						"FactionWeight": 1,
 						"FactionFallback": "Liao"
 					},
 					{
@@ -784,6 +789,11 @@
 				"AlternateOpforWeights": [
 					{
 						"FactionName": "EridaniLightHorse",
+						"FactionWeight": 5,
+						"FactionFallback": "Mercenaries"
+					},
+					{
+						"FactionName": "GrimDetermination",
 						"FactionWeight": 5,
 						"FactionFallback": "Mercenaries"
 					}
@@ -1678,6 +1688,19 @@
 					"Mercenaries"
 				],
 				"UnitRating": 7,
+				"PersonalityAttributes": [
+					"PROFESSIONAL"
+				]
+			},
+			"GrimDetermination": {
+				"MercFactionFallbackTag": "Mercenaries",
+				"AppearanceWeight": 3,
+				"RestrictionIsWhitelist": true,
+				"EmployerRestrictions": [
+					"Locals",
+					"Mercenaries"
+				],
+				"UnitRating": 6,
 				"PersonalityAttributes": [
 					"PROFESSIONAL"
 				]
