@@ -1,0 +1,111 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "LandingGear"
+			}
+		],
+		"Flags": {
+			"flags": [
+				"not_broken",
+				"no_salvage"
+			]
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"LAMStabTaken: 5",
+				"LAMWalkSpeed: 5%"
+			]
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 20000,
+		"Rarity": 99,
+		"Purchasable": false,
+		"Manufacturer": "Alliance Aerospace",
+		"Model": "LAM",
+		"UIName": "Landing Gear",
+		"Id": "Gear_Landing_Gear",
+		"Name": "Landing Gear",
+		"Details": "This is Land-Air Mech Landing Gear, used for landing the LAM while in Aerospace Fighter mode. In BattleMech or AirMech modes, the Landing Gear does not serve much combat purpose, though it does help increased movement speed very slightly while also adjusting the stability of the unit slightly for the worse. Otherwise, it mostly serves to take up space outside of Aerospace Fighter mode.",
+		"Icon": "airplane-arrival"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0,
+	"AllowedLocations": "LeftTorso,RightTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"forcePathRebuild": true,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-LAM-AirMech-WalkSpeed",
+				"Name": "LAM Speed Boost",
+				"Details": "A LAM in AirMech Mode gains a substantial movement bonus.",
+				"Icon": "uixSvgIcon_equipment_Gyro"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"effectsPersistAfterDestruction": false,
+				"statName": "WalkSpeed",
+				"operation": "Float_Multiply",
+				"modValue": "1.05",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-LAMAirMech-UnsteadyPenalty",
+				"Name": "Gyroscopic Orientation",
+				"Details": "The gyro helps establish center-of-mass equilibrium for the BattleMech.",
+				"Icon": "uixSvgIcon_equipment_Gyro"
+			},
+			"statisticData": {
+				"statName": "UnsteadyThreshold",
+				"operation": "Float_Add",
+				"modValue": "-5.0",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_variant",
+			"component_type_variant3",
+			"cae_ai_speed",
+			"cae_ai_defence",
+			"cae_ai_offence"
+		],
+		"tagSetSourceFile": ""
+	}
+}
