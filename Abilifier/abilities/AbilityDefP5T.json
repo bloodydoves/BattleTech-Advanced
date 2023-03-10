@@ -2,7 +2,7 @@
 	"Description": {
 		"Id": "AbilityDefP5T",
 		"Name": "SIDESLIP",
-		"Details": "ACTION: For a single turn, this tank's movement ignores all terrain bonuses or penalties, letting it move through any terrain or landmines without issue. 3 turn cooldown. <b><color=#099ff2>Costs 10 Resolve to use!</color></b>",
+		"Details": "ACTION: For a single turn, this tank's movement ignores all terrain bonuses or penalties, letting it move through any terrain or landmines without issue. 3 turn cooldown. <b><color=#099ff2>Costs 10 Resolve to use!</color></b>\r\n\r\n <b><color=#099ff2>DOES NOT WORK FOR MECHS, DO NOT USE WITH MECHS!</color></b>",
 		"Icon": "journey"
 	},
 	"DisplayParams": "ShowInMWTRay",
@@ -97,6 +97,58 @@
 				"modValue": "True",
 				"modType": "System.Boolean"
 			}
+		},
+		{
+			"durationData": {
+				"duration": 1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"forcePathRebuild": true,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-SideslipAntiMechWalk",
+				"Name": "Sideslip No Mech Walk",
+				"Details": "Mechs are not supposed to use Sideslip.",
+				"Icon": "journey"
+			},
+			"statisticData": {
+				"statName": "WalkSpeed",
+				"operation": "Set",
+				"modValue": "1",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": 1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"forcePathRebuild": true,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-SideslipAntiMechRun",
+				"Name": "Sideslip No Mech Walk",
+				"Details": "Mechs are not supposed to use Sideslip.",
+				"Icon": "journey"
+			},
+			"statisticData": {
+				"statName": "CBTBE_RunMultiMod",
+				"operation": "Set",
+				"modValue": "-0.9",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
 		}
 	],
 	"IsPrimaryAbility": true,

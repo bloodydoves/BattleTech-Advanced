@@ -1,0 +1,131 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/a/g/gaussrifle"
+			},
+			{
+				"CategoryID": "NeverMelee"
+			}
+		],
+		"ComponentExplosion": {
+			"ExplosionDamage": 200,
+			"StabilityDamage": 60
+		},
+		"BonusDescriptions": {
+			"Bonuses": [
+				"Knockdown",
+				"KnockdownChance: 140%",
+				"DmgFallOff: 50%",
+				"DmgFallOffStart: 300",
+				"DmgFallOffEnd: 600",
+				"WpnRecoil: 4",
+				"NoFireInMelee",
+				"IsHeavyGauss",
+				"WpnAccuracy: +1",
+				"WpnCooldown: 1",
+				"WeaponBoom: 200"
+			]
+		},
+		"Flags": {
+			"flags": [
+				"no_salvage",
+				"not_broken"
+			]
+		}
+	},
+	"Category": "Ballistic",
+	"Type": "Gauss",
+	"WeaponSubType": "Gauss",
+	"MinRange": 120,
+	"MaxRange": 780,
+	"RangeSplit": [
+		180,
+		390,
+		600
+	],
+	"AmmoCategory": "HGAUSS",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 30,
+	"Damage": 200,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 1,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": -1,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 4,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 4,
+	"Instability": 60,
+	"DistantVariance": 0.5,
+	"DamageFalloffStartDistance": 300,
+	"DamageFalloffEndDistance": 600,
+	"DistantVarianceReversed": false,
+	"RangedDmgFalloffType": "Linear",
+	"Cooldown": 1,
+	"ProjectileSpeedMultiplier": 2.5,
+	"ImprovedBallistic": true,
+	"WeaponEffectID": "WeaponEffect-Weapon_GaussRifle",
+	"Description": {
+		"Cost": 5000000,
+		"Rarity": 20,
+		"Purchasable": true,
+		"Manufacturer": "VEST",
+		"Model": "Magnetic Cannon",
+		"UIName": "Experimental Assault Gauss",
+		"Id": "Weapon_Gauss_Experimental_0-STOCK",
+		"Name": "Experimental Assault Gauss",
+		"Details": "Designed as a siege weapon, the Experimental Assault Gauss Rifle was intended for battlefield work to destroy heavy fortifications. However, due to the power draw and the mounting restrictions, the weapon was ultimately abandoned by Defiance Industries in favor of the Heavy Gauss Rifle. However, Vining Engineering and Salvage Team (VEST) managed to get ahold of the plans and made use of them on an experiemental build of their upcoming Great Turtle arena design where the weapon's downsides had less relevance. \n\n <b><color=#ffcc00>Uses Heavy Gauss Ammo.</color></b> \n\n <b><color=#099ff2>VOLATILE!</color></b>",
+		"Icon": "FerroMag"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "railgun",
+	"BattleValue": 0,
+	"InventorySize": 10,
+	"Tonnage": 15,
+	"AllowedLocations": "LeftTorso",
+	"DisallowedLocations": "LeftArm,RightArm",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": 1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnWeaponFire",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "WeaponEffect-SelfknockdownCheck_OnFire",
+				"Name": "self knockdown check",
+				"Details": "self knockdown check.",
+				"Icon": "uixSvgIcon_run_n_gun"
+			},
+			"statisticData": {
+				"statName": "SelfknockdownCheck_OnFire",
+				"operation": "Float_Add",
+				"modValue": "1.4",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_standard"
+		],
+		"tagSetSourceFile": ""
+	}
+}

@@ -1,0 +1,92 @@
+{
+	"Description": {
+		"Id": "3065-02-21",
+		"Name": "MercNews Broadcast",
+		"Details": "MERCNEWS PIRACY SPOTLIGHT: [[DM.BaseDescriptionDefs[LoreNewColonyRegion],NEW COLONY REGION]] AND THE [[DM.Factions[faction_ShenSeTian],SHEN-SÉ TIAN]]:\r\n\n\nOutreach, [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:  Though some settlements within the Capellan Marches predate the New Colony Region, most worlds were jointly settled by [[DM.Factions[faction_MagistracyOfCanopus],Canopian]] and [[DM.Factions[faction_TaurianConcordat],Taurian]] interests in the 3050s, following the renewal of their political alliance.  Although the area was settled and developed by the two powers, the denziens of the New Colony Region did not feel much of a connection to either side and began itching for full independence from both of the realms.  In addition, the recent [[DM.Factions[faction_Liao],Capellan]]-[[DM.Factions[faction_Ives],St. Ives]] and [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]] Civil War conflicts have brought waves of refugees, deserters and unemployed Mechwarriors into the region, weakening the loyalties towards the Magistracy and Concordat even further.\n\n\nThe disruptions have also attracted the criminal elements and pirates.  The most notable of these is the Shen-sè Tian (\"Dark Days\") pirate band.  Led by the gifted and charismatic Colonel Tori Eskins and composed mainly of Capellan nationals and St. Ives deserters, the Shen-sè Tian maintain a regiment's worth of Battlemechs and have settled into a secret location near the center of the New Colony Region.  Using this as-yet-undiscovered pirate hold, the Shen-sè Tian launch attacks not only within the Region, but also prey upon the the neighbouring [[DM.BaseDescriptionDefs[LoreAuriganCoalition],Aurigan]], Capellan, Canopian and Taurian border worlds.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "[[DM.BaseDescriptionDefs[LoreMRBC],MERCENARY REVIEW AND BONDING COMMISSION]] PIRACY REPORT:\r\n\n\nOutreach, [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]: Attached are the latest reports of pirate activity throughout the Inner Sphere and Periphery.  Again, there are reports of the \"[[DM.Factions[faction_DarkCaste],Dark Caste]]\" attacking worlds not only in the Clan Occupation Zones, but also throughout the [[DM.BaseDescriptionDefs[LoreDeepPeriphery],Deep Periphery]].  Contracts to defend worlds under attack and to clean out pirate nests are now available via the [[DM.BaseDescriptionDefs[LoreMRBC],MRBC]] Database.\r\n\n\nMRBC OPEN PIRACY CONTRACTS: Andarmax, Renown, Carvajal, Charleston, Schwartz, Rockland, Son Hoa, Maxwell.\r\n\n\nMRBC DARK CASTE ACTIVITY: Kandis, Engadin.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+							"WIIC_DeathsConsorts_raids_starsystemdef_Andarmax",
+							"WIIC_ShenSeTian_raids_starsystemdef_Renown",
+							"WIIC_TortugaFusiliers_raids_starsystemdef_Charleston",
+							"WIIC_TortugaFusiliers_raids_starsystemdef_Carvajal",
+							"WIIC_NewBeltPirates_raids_starsystemdef_Kandis",
+							"WIIC_DarkCaste_raids_starsystemdef_Engadin",
+							"WIIC_BandOfTheDamned_raids_starsystemdef_Rockland",
+							"WIIC_BandOfTheDamned_raids_starsystemdef_Schwartz",
+							"WIIC_Tortuga_raids_starsystemdef_Rushaven",
+							"WIIC_MorrisonsExtractors_raids_starsystemdef_SonHoa",
+							"WIIC_Circinus_raids_starsystemdef_Maxwell"
+							],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

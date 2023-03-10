@@ -1,0 +1,49 @@
+{
+  "id": "AffinityDef_chassis_Indestructible",
+  "affinityType": "Chassis",
+  "affinityData": {
+    "chassisNames": [
+      "GreatTurtle_100"
+    ],
+    "idType": "AssemblyVariant",
+    "altMaps": [],
+    "affinityLevels": [
+      {
+        "id": "Indestructible",
+        "missionsRequired": 15,
+        "levelName": "Indestructible",
+        "decription": "Your mech has no next of kin because it can't actually die. Gain 30% damage reduction at all times",
+        "affinities": [],
+        "effectData": [
+          {
+            "Description": {
+              "Details": "Affinity Damage Reduction",
+              "Icon": "UixSvgIcon_specialEquip_System",
+              "Id": "StatusEffect-Affinity-IndestructibleDamageReduction",
+              "Name": "Affinity Damage Reduction"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": -1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "statName": "DamageReductionMultiplierAll",
+              "operation": "Float_Multiply",
+              "modValue": "0.7",
+              "modType": "System.Single"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "hideApplicationFloatie": true,
+              "showInStatusPanel": false,
+              "showInTargetPreview": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
