@@ -95,7 +95,7 @@
             },
             {
                 "Tags" : [
-                    "QuadMech"
+                    "Quad"
                 ],
                 "Template" : {
                     "Names" : [
@@ -124,7 +124,7 @@
             },
             {
                 "Tags" : [
-                    "ProtoMech"
+                    "Squad"
                 ],
                 "Template" : {
                     "Names" : [
@@ -273,24 +273,6 @@
                 }
             },
             {
-                "Location" : "LeftArm",
-                "Change" : {
-                    "From" : 8,
-                    "By" : 4,
-                    "FromIsMin" : false,
-                    "NewMin" : null
-                }
-            },
-            {
-                "Location" : "RightArm",
-                "Change" : {
-                    "From" : 8,
-                    "By" : 4,
-                    "FromIsMin" : false,
-                    "NewMin" : null
-                }
-            },
-            {
                 "Location" : "LeftLeg",
                 "Change" : {
                     "From" : 2,
@@ -313,24 +295,6 @@
                 "Change" : {
                     "From" : 3,
                     "By" : 3,
-                    "FromIsMin" : false,
-                    "NewMin" : null
-                }
-            },
-            {
-                "Location" : "LeftArm",
-                "Change" : {
-                    "From" : 11,
-                    "By" : 1,
-                    "FromIsMin" : false,
-                    "NewMin" : null
-                }
-            },
-            {
-                "Location" : "RightArm",
-                "Change" : {
-                    "From" : 11,
-                    "By" : 1,
                     "FromIsMin" : false,
                     "NewMin" : null
                 }
@@ -1075,7 +1039,7 @@
         "HideHelpButton" : true,
         "HideECMButton" : true,
         "ZoomMaximumScale" : 0.95,
-        "MechLabStatusLeftShift" : 0,
+        "MechLabStatusLeftShift" : 25,
         "MechLabMechRightShift" : 0,
         "MechLabArmTopPadding" : 120,
         "TopLeftWidget" : {
@@ -1201,13 +1165,13 @@
     "OverrideTonnage" : {
         "Enabled" : true,
         "EnabledDescription" : "Allows other features to override tonnage calculations.",
-        "PrecisionEpsilon" : 0.0001,
+        "PrecisionEpsilon" : 0.001,
         "PrecisionEpsilonDescription" : "The maximum tonnage two values can be apart to be viewed as being the same, vanilla uses 100 grams.",
-        "TonnageStandardPrecision" : 0.63,
+        "TonnageStandardPrecision" : 0.5,
         "TonnageStandardPrecisionDescription" : "Set to 0.001 for kg fractional accounting on BattleMechs, only modifies half-ton rounding operations as by rule",
         "KilogramStandardPrecision" : 0.001,
         "KilogramStandardPrecisionDescription" : "Used for Small Support Vehicles, ProtoMechs and battlesuits.",
-        "ArmorRoundingPrecision" : 0.63,
+        "ArmorRoundingPrecision" : 0.0125,
         "ArmorRoundingPrecisionDescription" : "If not set, default is ARMOR_PER_STEP * TONNAGE_PER_ARMOR_POINT",
         "MechLabMechInfoWidgetFormat" : "0.###",
         "MechLabMechInfoWidgetToolTipFormat" : "0.######",

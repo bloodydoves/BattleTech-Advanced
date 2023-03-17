@@ -1,130 +1,167 @@
 {
-	"Logging": {
-		"LogUncaughtExceptions": true,
-		"LogExceptionInitializations": false,
-		"LogSqlQueryInitializations": false,
-		"LogThreadStarts": false,
-		"LogThreadStarts_Description": "Logs who starts threads.",
-		"IgnoreLoggerLogLevel": false,
-		"DebugLogLevelSetters": false,
-		"SkipOriginalLoggers": true,
-		"IgnoreSkipForLoggers": [
-			"ModTek"
-		],
-		"MainLog": {
-			"Includes_Description": "If set, matching log statements matching are written to the log. Exclusion has precedence over inclusion.",
-			"Includes": null,
-			"Excludes_Description": "If set, matching log statements are ignored. Exclusion has precedence over inclusion.",
-			"Excludes": [
-				{
-					"LoggerNames": [
-						"ModTek"
-					]
-				}
-			],
-			"PrefixesToIgnore_Description": "Ignore any lines starting with any of the listed prefixes, internally will be converted to Excludes.",
-			"PrefixesToIgnore": null,
-			"IndentNewLines_Description": "If a log message with newlines inside is being logged, prefix every line with a tab character.",
-			"IndentNewLines": true,
-			"NormalizeNewLines_Description": "Makes sure all newline characters ([\\r\\n]) are converted to the OS preferred newline style.",
-			"NormalizeNewLines": true,
-			"MessageSanitizerRegex_Description": "The characters to remove from the log message before writing to the disk.",
-			"MessageSanitizerRegex": "[\\p{C}-[\\r\\n\\t]]+",
-			"UseAbsoluteTime_Description": "Use the absolute time format instead of the relative time format. Absolute time is useful when using mods that do not use HBS logging and use absolute time for their logging.",
-			"AbsoluteTimeEnabled": true,
-			"AbsoluteTimeUseUtc_Description": "Use UTC instead of local time.",
-			"AbsoluteTimeUseUtc": false
-		},
-		"MainLogFilePath": "battletech_log.txt",
-		"Logs_Description": "Allows to define logs, the `key` specifies the log file path relative to `.modtek`.",
-		"Logs": {
-			"ModTek.log": {
-				"Includes": [
-					{
-						"LoggerNames": [
-							"ModTek"
-						]
-					}
-				],
-				"IndentNewLines": true,
-				"NormalizeNewLines": true,
-				"AbsoluteTimeEnabled": false,
-				"AbsoluteTimeUseUtc": false
-			},
-			"battletech_log_cleaned.txt": {
-				"Excludes": [
-					{
-						"LoggerNames": [
-							"ModTek"
-						]
-					}
-				],
-				"PrefixesToIgnore": [
-					"ModTek",
-					"Unity [ERROR] Desired shader compiler platform",
-					"Unity [LOG] Look rotation viewing vector is zero",
-					"Unity [ERROR] Material doesn't have a color property",
-					"Unity [WARNING] Parent of RectTransform is being set with parent property",
-					"Unity [WARNING] The referenced script",
-					"Unity [WARNING] Rejecting unit",
-					"Unity [WARNING] Parent of RectTransform is being set with parent property",
-					"Unity [WARNING] No DefaultCombatLeaderCastDefId specified for faction [Player1sMercUnit]",
-					"Unity [WARNING] No DefaultCombatLeaderCastDefId specified for faction [Player2sMercUnit]",
-					"Unity [ERROR] Bones do not match bindpose.",
-					"Unity [ERROR] ================== ERROR! Found missing transforms",
-					"Unity [WARNING] ERROR! Couldn't auto-setup",
-					"Unity [WARNING] Could not retrieve member",
-					"MapExport [ERROR] Out of bounds",
-					"CombatLog.Hit [LOG] ???????? DIRECTION:",
-					"Unity [WARNING] BoxColliders does not support negative scale or size",
-					"AudioEvents [DEBUG] Audio Engine",
-					"MechEngineer [LOG] Auto fixing chassisDef",
-					"AudioEvents [DEBUG] OnApplicationFocus",
-					"NetworkRandomValues [DEBUG] Seed",
-					"NetworkRandomCallstacks [DEBUG] Seed",
-					"UserSettings [DEBUG] Using existing cloud settings from save manager",
-					"BattleTech.Services [DEBUG] [BattleTechParadoxAPI]",
-					"Network.Client [LOG] Connection",
-					"GameInfo [LOG] DEVELOPMENT FLAG NOT SET",
-					"MechEngineer [LOG] settings loaded",
-					"GameInfo [LOG] ProductName: BATTLETECH",
-					"GameInfo [LOG] RELEASE FLAG SET",
-					"DebugBridge",
-					"CustomComponents [LOG] [CC]SimpleCustom",
-					"LoginManager [LOG] Successfully authenticated with OPS. Moving onto ComStar connection proper.",
-					"Data.AssetBundleManager [LOG] Trying to load AssetBundle:",
-					"UserSettings [LOG] [LOG] User settings saved",
-					"MechLab [WARNING] GetWeaponPrefabName failed to find a prefab name for unit",
-					"Analytics [WARNING] Analytics Event requested with invalid IP",
-					"Analytics [WARNING] Request next called but no servers have been found",
-					"Analytics [WARNING] Request next called but reporting is disabled",
-					"UI [WARNING] Singleton UIManagerFader",
-					"CombatLog.Initialization [WARNING] Turret",
-					"MechEngineer [WARNING] Unsupported weapon category for 667",
-					"MechEngineer [WARNING] Unsupported weapon category for 666",
-					"CustomComponents [DEBUG] [CC]Mech validation for NULL return",
-					"CustomComponents [DEBUG] [CC]-- CustomComponents.Flags",
-					"CustomComponents [DEBUG] [CC]-- CustomComponents.AutoLinked",
-					"Data.DataManager [WARNING] LoadRequest for",
-					"LewdableTanks [DEBUG] [LTMod]Fixing cost of",
-					"CombatLog.Initialization [ERROR] Error instantiating VFX",
-					"PilotDef [WARNING] PilotDef already did Init From Save!",
-					"Achievements [LOG]",
-					"CombatLog.Hit [LOG] ????????",
-					"MechEngineer [ERROR] Can't find critical effect id",
-					"MechEngineer [ERROR] Could not find bonus description",
-					"CombatLog.Attacking [ERROR] ERROR!!! breakdown of Universal Modifier",
-					"MechEngineer [LOG] Auto fixing",
-					"DataLoader [DEBUG] Loading:",
-					"Save.Core.SaveSystem [DEBUG]",
-					"Unity [ERROR] Generating SIM GAME UID while still loading!",
-					"Unity [WARNING] HBS Tooltip on UI Element"
-				],
-				"IndentNewLines": true,
-				"NormalizeNewLines": true,
-				"AbsoluteTimeEnabled": true,
-				"AbsoluteTimeUseUtc": false
-			}
-		}
-	}
+  "_Description": "When changing any of the listed settings, copy the relevant parts into `game/Mods/ModTek/config.json`.",
+  "ShowLoadingScreenErrors": true,
+  "ShowLoadingScreenErrors_Description": "TODO",
+  "ShowErrorPopup": true,
+  "ShowErrorPopup_Description": "TODO",
+  "UseErrorWhiteList": true,
+  "UseErrorWhiteList_Description": "TODO",
+  "ErrorWhitelist": [
+    "Data.DataManager [ERROR] ManifestEntry is null"
+  ],
+  "SearchModsInSubDirectories": true,
+  "SearchModsInSubDirectories_Description": "Searches recursively all directories for mod.json instead only for directories directly found under Mods. Set to false for pre v2.0 behavior.",
+  "ImplicitManifestShouldMergeJSON": true,
+  "ImplicitManifestShouldMergeJSON_Description": "How JSONs in a mods implicit manifest (StreamingAssets) are being treated.",
+  "ImplicitManifestShouldAppendText": false,
+  "ImplicitManifestShouldAppendText_Description": "How CSVs in a mods implicit manifest (StreamingAssets) are being treated.",
+  "ReplaceResetsMerges": true,
+  "ReplaceResetsMerges_Description": "If enabled, once a manifest entry gets replaced, all previously queued merges will not apply.",
+  "NormalizeCsvIfAppending": true,
+  "NormalizeCsvIfAppending_Description": "Normalize CSV files when merging/appending. Filters out empty lines and adds newlines where appropiate. Duplicate title detection and removal from appending files.",
+  "DataManagerUnfreezeDelta": 2.0,
+  "DataManagerUnfreezeDelta_Description": "How often to refresh the UI during loading. Does this by skipping loads every specified amount of seconds.",
+  "DataManagerEverSpinnyDetectionTimespan": 30.0,
+  "DataManagerEverSpinnyDetectionTimespan_Description": "How long data is not being further processed until it is assumed to be stuck for good. Upon detection it dumps lots of data into the log, but nothing more.",
+  "DelayPrewarmToMainMenu": true,
+  "DelayPrewarmToMainMenu_Description": "Delays executing prewarm requests until entering the main menu and dlc packs are loaded. Prevents choppy intro video and makes sure to include dlc items during prewarm.",
+  "ShowDataManagerStatsInLoadingCurtain": true,
+  "ShowDataManagerStatsInLoadingCurtain_Description": "Adds DataManager stats when showing a loading curtain.",
+  "ProfilerEnabled": false,
+  "BlockedMods": [
+    "FYLS"
+  ],
+  "BlockedMods_Description": "Mods that should not be allowed to load. Useful in cases where those mods would (newly) interfere with ModTek.",
+  "IgnoreMissingMods": [
+    "FYLS"
+  ],
+  "IgnoreMissingMods_Description": "Ignore the dependency requirement of mods that depend on the listed mods. Useful if e.g. ModTek provides the same functionality as the ignored mods.",
+  "Logging": {
+        "LogUncaughtExceptions_Description": "Logs uncaught exceptions via AppDomain handler.",
+        "LogUncaughtExceptions": true,
+        "LogExceptionInitializations_Description": "Logs out any exceptions being initialized, even before they are thrown or ignored.",
+        "LogExceptionInitializations": false,
+        "LogSqlQueryInitializations_Description": "Logs out any sql queries being initialized, even before they are executed or ignored.",
+        "LogSqlQueryInitializations": false,
+        "LogThreadStarts": false,
+        "LogThreadStarts_Description": "Logs who starts threads.",
+        "IgnoreLoggerLogLevel_Description": "Each logger has a log level, and when logging below that level it won't be logged. That behavior can be ignored to a certain extend. Set to true for FYLS behavior, not recommended though.",
+        "IgnoreLoggerLogLevel": false,
+        "DebugLogLevelSetters_Description": "Log if a loggers log level changed and by whom.",
+        "DebugLogLevelSetters": false,
+        "SkipOriginalLoggers_Description": "If true, the original (HBS based) loggers and therefore their appenders and log files will be skipped.",
+        "SkipOriginalLoggers": true,
+        "IgnoreSkipForLoggers_Description": "Loggers defined here will never be skipped, meaning their log files will still be separately available.",
+        "IgnoreSkipForLoggers": [],
+        "MainLog_Description": "The main log.",
+        "MainLog": {
+            "Includes_Description": "If set, matching log statements matching are written to the log. Exclusion has precedence over inclusion.",
+            "Includes": null,
+            "Excludes_Description": "If set, matching log statements are ignored. Exclusion has precedence over inclusion.",
+                "Excludes": [
+                    {
+                        "LoggerNames": [
+                            "ModTek"
+                        ]
+                    }
+                ],
+            "PrefixesToIgnore_Description": "Ignore any lines starting with any of the listed prefixes, internally will be converted to Excludes.",
+            "PrefixesToIgnore": null,
+            "IndentNewLines_Description": "If a log message with newlines inside is being logged, prefix every line with a tab character.",
+            "IndentNewLines": true,
+            "NormalizeNewLines_Description": "Makes sure all newline characters ([\\r\\n]) are converted to the OS preferred newline style.",
+            "NormalizeNewLines": true,
+            "MessageSanitizerRegex_Description": "The characters to remove from the log message before writing to the disk.",
+            "MessageSanitizerRegex": "[\\p{C}-[\\r\\n\\t]]+",
+            "UseAbsoluteTime_Description": "Use the absolute time format instead of the relative time format. Absolute time is useful when using mods that do not use HBS logging and use absolute time for their logging.",
+            "UseAbsoluteTime": true,
+            "AbsoluteTimeUseUtc_Description": "Use UTC instead of local time.",
+            "AbsoluteTimeUseUtc": false
+        },
+        "MainLogFilePath": "battletech_log.txt",
+        "Logs_Description": "Allows to define logs, the `key` specifies the log file path relative to `.modtek`.",
+        "Logs": {
+            "ModTek.log": {
+                "Includes": [
+                    {
+                        "LoggerNames": [
+                            "ModTek"
+                        ]
+                    }
+                ],
+            "IndentNewLines": true,
+            "NormalizeNewLines": true,
+            "UseAbsoluteTime": false
+            },
+            "battletech_log_cleaned.txt": {
+                "Excludes": [
+                    {
+                        "LoggerNames": [
+                            "ModTek"
+                        ]
+                    }
+                ],
+                "PrefixesToIgnore": [
+      "ModTek",
+      "Unity [ERROR] Desired shader compiler platform",
+      "Unity [LOG] Look rotation viewing vector is zero",
+      "Unity [ERROR] Material doesn't have a color property",
+      "Unity [WARNING] Parent of RectTransform is being set with parent property",
+      "Unity [WARNING] The referenced script",
+      "Unity [WARNING] Rejecting unit",
+      "Unity [WARNING] Parent of RectTransform is being set with parent property",
+      "Unity [WARNING] No DefaultCombatLeaderCastDefId specified for faction [Player1sMercUnit]",
+      "Unity [WARNING] No DefaultCombatLeaderCastDefId specified for faction [Player2sMercUnit]",
+      "Unity [ERROR] Bones do not match bindpose.",
+      "Unity [ERROR] ================== ERROR! Found missing transforms",
+      "Unity [WARNING] ERROR! Couldn't auto-setup",
+      "Unity [WARNING] Could not retrieve member",
+      "MapExport [ERROR] Out of bounds",
+      "CombatLog.Hit [LOG] ???????? DIRECTION:",
+      "Unity [WARNING] BoxColliders does not support negative scale or size",
+      "AudioEvents [DEBUG] Audio Engine",
+      "MechEngineer [LOG] Auto fixing chassisDef",
+      "AudioEvents [DEBUG] OnApplicationFocus",
+      "NetworkRandomValues [DEBUG] Seed",
+      "NetworkRandomCallstacks [DEBUG] Seed",
+      "UserSettings [DEBUG] Using existing cloud settings from save manager",
+      "BattleTech.Services [DEBUG] [BattleTechParadoxAPI]",
+      "Network.Client [LOG] Connection",
+      "GameInfo [LOG] DEVELOPMENT FLAG NOT SET",
+      "MechEngineer [LOG] settings loaded",
+      "GameInfo [LOG] ProductName: BATTLETECH",
+      "GameInfo [LOG] RELEASE FLAG SET",
+      "DebugBridge",
+      "CustomComponents [LOG] [CC]SimpleCustom",
+      "LoginManager [LOG] Successfully authenticated with OPS. Moving onto ComStar connection proper.",
+      "Data.AssetBundleManager [LOG] Trying to load AssetBundle:",
+      "UserSettings [LOG] [LOG] User settings saved",
+      "MechLab [WARNING] GetWeaponPrefabName failed to find a prefab name for unit",
+      "Analytics [WARNING] Analytics Event requested with invalid IP",
+      "Analytics [WARNING] Request next called but no servers have been found",
+      "Analytics [WARNING] Request next called but reporting is disabled",
+      "UI [WARNING] Singleton UIManagerFader",
+      "CombatLog.Initialization [WARNING] Turret",
+      "MechEngineer [WARNING] Unsupported weapon category for 667",
+      "MechEngineer [WARNING] Unsupported weapon category for 666",
+      "CustomComponents [DEBUG] [CC]Mech validation for NULL return",
+      "CustomComponents [DEBUG] [CC]-- CustomComponents.Flags",
+      "CustomComponents [DEBUG] [CC]-- CustomComponents.AutoLinked",
+      "Data.DataManager [WARNING] LoadRequest for",
+      "LewdableTanks [DEBUG] [LTMod]Fixing cost of",
+      "CombatLog.Initialization [ERROR] Error instantiating VFX",
+      "PilotDef [WARNING] PilotDef already did Init From Save!",
+      "Achievements [LOG]",
+      "DataLoader [DEBUG] Loading:",
+      "Save.Core.SaveSystem [DEBUG]",
+      "Unity [ERROR] Generating SIM GAME UID while still loading!",
+      "Unity [WARNING] HBS Tooltip on UI Element"
+                ],
+            "IndentNewLines": true,
+            "NormalizeNewLines": true,
+            "UseAbsoluteTime": true,
+            "AbsoluteTimeUseUtc": false
+            }
+        }
+  }
 }

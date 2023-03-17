@@ -1,0 +1,267 @@
+{
+    "MechBay": {
+        "DefaultSortOrderDescription": "A list of sort order terms used for default sorting in the MechBay. Available terms: ChassisCost, ChassisId, ChassisName, ChassisTonnage, ChassisVariantName, MechCBillValue, MechName.",
+        "DefaultSortOrder": [
+            "!ChassisTonnage",
+            "ChassisName",
+            "MechName"
+        ]
+    },
+    "MechLab": {
+        "TabsConfigFileDescription": "Points to a file that contains a predefined set of inventory tabs to show in MechLab. See *Tab.json files for examples.",
+        "TabsConfigFile": "VanillaTabs.json",
+        "ShowDebugButtons": false,
+        "ShopPoolingFixEnabledDescription": "Fixes a vanilla memory leak where the shop in the MechLab does not get pooled.",
+        "ShopPoolingFixEnabled": true
+    },
+    "TagManager": {
+        "EnabledDescription": "Manipulates tags on Components, Mechs, Pilots and Lances by adding or removing BLACKLISTED: Blacklist is applied after Whitelist. Also allows filtering by tags when entering the skirmish mech lab: NotContainsAny has precedence over ContainsAny. Empty allow can be used to match nothing, while null means to allow everything.",
+        "Enabled": true,
+        "SimGameItemsMinCountDescription": "Set the owned minimum count of each mech component in SimGame.",
+        "SimGameItemsMinCount": 0,
+        "LostechStockWeaponVariantDescription": "Fixes lostech variant weapon tagging by checking if id ends with -STOCK.",
+        "LostechStockWeaponVariantFix": false,
+        "SkirmishOverloadWarningDescription": "Warn the user before loading into the SkirmishMechBay if too many 'Mech will be loaded.",
+        "SkirmishOverloadWarningCount": 500,
+        "SkirmishDefaultDescription": "The default settings used when no options panel is shown and the user enters the skirmish 'Mech bay directly.",
+        "SkirmishDefault": {
+            "Label": "Default",
+            "Components": {
+                "ContainsAny": [
+                    "component_type_stock"
+                ],
+                "NotContainsAny": [
+                    "BLACKLISTED"
+                ]
+            },
+            "Mechs": {
+                "ContainsAny": [
+                    "unit_release"
+                ],
+                "NotContainsAny": [
+                    "BLACKLISTED",
+                    "unit_unlocked"
+                ]
+            },
+            "Pilots": {
+                "ContainsAny": [
+                    "pilot_release_skirmish"
+                ],
+                "NotContainsAny": null
+            },
+            "Lances": {
+                "ContainsAny": [
+                    "lance_bracket_skirmish"
+                ],
+                "NotContainsAny": null
+            }
+        },
+        "SkirmishOptionsShowDescription": "Shows or hides the skirmish options panel before entering the skirmish 'Mech bay.",
+        "SkirmishOptionsShow": false,
+        "SkirmishPresetsDescription": "Presets allow to quickly select a custom filter-combination.",
+        "SkirmishOptionsPresets": [
+            {
+                "Label": "Stock",
+                "Components": {
+                    "ContainsAny": [
+                        "component_type_stock"
+                    ],
+                    "NotContainsAny": [
+                        "BLACKLISTED"
+                    ]
+                },
+                "Mechs": {
+                    "ContainsAny": [
+                        "unit_release"
+                    ],
+                    "NotContainsAny": [
+                        "BLACKLISTED",
+                        "unit_unlocked"
+                    ]
+                },
+                "Pilots": {
+                    "ContainsAny": null,
+                    "NotContainsAny": null
+                },
+                "Lances": {
+                    "ContainsAny": null,
+                    "NotContainsAny": null
+                }
+            },
+            {
+                "Label": "Variants",
+                "Components": {
+                    "ContainsAny": [
+                        "component_type_stock",
+                        "component_type_variant",
+                        "component_type_lostech"
+                    ],
+                    "NotContainsAny": [
+                        "BLACKLISTED"
+                    ]
+                },
+                "Mechs": {
+                    "ContainsAny": [
+                        "unit_release"
+                    ],
+                    "NotContainsAny": [
+                        "BLACKLISTED",
+                        "unit_unlocked"
+                    ]
+                },
+                "Pilots": {
+                    "ContainsAny": null,
+                    "NotContainsAny": null
+                },
+                "Lances": {
+                    "ContainsAny": null,
+                    "NotContainsAny": null
+                }
+            }
+        ],
+        "SkirmishOptionsDefaultDescription": "Filters that are always active regardless of what the user selects in the options panel.",
+        "SkirmishOptionsDefault": {
+            "Label": "<null>",
+            "Components": {
+                "ContainsAny": [],
+                "NotContainsAny": [
+                    "BLACKLISTED"
+                ]
+            },
+            "Mechs": {
+                "ContainsAny": [
+                    "unit_release"
+                ],
+                "NotContainsAny": [
+                    "BLACKLISTED",
+                    "unit_unlocked"
+                ]
+            },
+            "Pilots": {
+                "ContainsAny": [
+                    "pilot_release_skirmish"
+                ],
+                "NotContainsAny": null
+            },
+            "Lances": {
+                "ContainsAny": [
+                    "lance_bracket_skirmish"
+                ],
+                "NotContainsAny": null
+            }
+        },
+        "SkirmishOptionsComponentDescription": "Component options that can be selected in the options panel, they don't influence what is loaded into the 'Mech bay only what is shown later on in the 'Mech lab inventory. (Alpha) All active ContainsAny are combined with an OR, all active NotContainsAny are combined with an OR. Afterwards NotContainsAny has anything removed that exists in ContainsAny. Then anything from the defaults are added to each. Then the ContainsAny and NotContainsAny are combined with an AND.",
+        "SkirmishOptionsComponentGroup": {
+            "Label": "Components",
+            "Options": [
+                {
+                    "Label": "Stock",
+                    "ContainsAny": [
+                        "component_type_stock"
+                    ],
+                    "NotContainsAny": [
+                        "component_type_variant",
+                        "component_type_lostech"
+                    ],
+                    "OptionActive": true,
+                    "OptionBreakLineBefore": false
+                },
+                {
+                    "Label": "Variants & LosTech",
+                    "ContainsAny": [
+                        "component_type_variant",
+                        "component_type_lostech"
+                    ],
+                    "NotContainsAny": [
+                        "component_type_stock"
+                    ],
+                    "OptionActive": true,
+                    "OptionBreakLineBefore": false
+                }
+            ]
+        },
+        "SkirmishOptionsMechGroupsDescription": "Filter which 'Mech get loaded. Each group is combined with an AND, each toggle within a group is combined with an OR.",
+        "SkirmishOptionsMechGroups": [
+            {
+                "Label": "Tonnage",
+                "Options": [
+                    {
+                        "Label": "Light",
+                        "ContainsAny": [
+                            "unit_light"
+                        ],
+                        "NotContainsAny": null,
+                        "OptionActive": true,
+                        "OptionBreakLineBefore": false
+                    },
+                    {
+                        "Label": "Medium",
+                        "ContainsAny": [
+                            "unit_medium"
+                        ],
+                        "NotContainsAny": null,
+                        "OptionActive": true,
+                        "OptionBreakLineBefore": false
+                    },
+                    {
+                        "Label": "Heavy",
+                        "ContainsAny": [
+                            "unit_heavy"
+                        ],
+                        "NotContainsAny": null,
+                        "OptionActive": true,
+                        "OptionBreakLineBefore": true
+                    },
+                    {
+                        "Label": "Assault",
+                        "ContainsAny": [
+                            "unit_assault"
+                        ],
+                        "NotContainsAny": null,
+                        "OptionActive": true,
+                        "OptionBreakLineBefore": false
+                    }
+                ]
+            },
+            {
+                "Label": "Source",
+                "Options": [
+                    {
+                        "Label": "Base",
+                        "ContainsAny": null,
+                        "NotContainsAny": [
+                            "unit_dlc"
+                        ],
+                        "OptionActive": true,
+                        "OptionBreakLineBefore": false
+                    },
+                    {
+                        "Label": "DLC",
+                        "ContainsAny": [
+                            "unit_dlc"
+                        ],
+                        "NotContainsAny": null,
+                        "OptionActive": true,
+                        "OptionBreakLineBefore": false
+                    }
+                ]
+            }
+        ],
+        "Components": {
+            "Whitelist": [],
+            "Blacklist": []
+        },
+        "Mechs": {
+            "Whitelist": [],
+            "Blacklist": []
+        },
+        "Pilots": {
+            "Whitelist": [],
+            "Blacklist": []
+        },
+        "Lances": {
+            "Whitelist": [],
+            "Blacklist": []
+        }
+    }
+}
