@@ -4,13 +4,11 @@
 			"ReservedSlots": 4,
 			"EngineFactor": 0.5
 		},
-		"BonusDescriptions": {
-			"Bonuses": [
+		"BonusDescriptions": [
 				"EngineWeightReduction: 50%",
 				"ReservedSlots: 4",
 				"WalkSpeed: -10%"
-			]
-		},
+		]
 		"WorkOrderCosts": {
 			"Default": {
 				"TechCost": "0",
@@ -22,7 +20,9 @@
 			}
 		},
 		"Flags": [
-			"vital"
+			"vital",
+			"engine_part",
+			"no_salvage"
 		],
 		"Category" : [
 			{"CategoryID": "EngineShield"},
@@ -33,7 +33,7 @@
 				{ "ComponentDefId" : "emod_engineslots_size2", "Location" : "LeftTorso" },
 				{ "ComponentDefId" : "emod_engineslots_size2", "Location" : "RightTorso" }
 			]
-		}
+		}	
 	},
     "Description" : {
         "Cost" : 1000000,
