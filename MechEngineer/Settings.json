@@ -31,21 +31,11 @@
 	"ArmorStructureRatio": {
 		"Enabled": false
 	},
-	"ChassisDefInitialToTotalTonnageFactor": 0,
 	"AutoFixer": {
 		"Enabled": true,
 		"MechTagsAutoFixEnabled": [],
-		"MechDefSkip": [
-			"mechdef_urbanmech_UM-R50",
-			"mechdef_panther_TARGETDUMMY",
-			"mechdef_centurion_TARGETDUMMY"
-		],
-		"ChassisDefSkip": [
-			"chassisdef_urbanmech_UM-R50",
-			"chassisdef_panther_TARGETDUMMY",
-			"chassisdef_centurion_TARGETDUMMY",
-			"chassisdef_urbanmech_TARGETDUMMY"
-		],
+		"MechDefSkip": [],
+		"ChassisDefSkip": [],
 		"MechDefAutoFixAgainstMaxFreeTonnage": [],
 		"MechDefEngine": true,
 		"MechDefHeatBlockDef": "emod_engine_cooling",
@@ -59,24 +49,24 @@
 				"Template": {
 					"Names": [
 						{
-							"location": "LeftArm",
-							"text": "FRONT"
+							"Location": "LeftArm",
+							"Label": "FRONT"
 						},
 						{
-							"location": "RightArm",
-							"text": "REAR"
+							"Location": "RightArm",
+							"Label": "REAR"
 						},
 						{
-							"location": "LeftLeg",
-							"text": "LEFT SIDE"
+							"Location": "LeftLeg",
+							"Label": "LEFT SIDE"
 						},
 						{
-							"location": "RightLeg",
-							"text": "RIGHT SIDE"
+							"Location": "RightLeg",
+							"Label": "RIGHT SIDE"
 						},
 						{
-							"location": "Head",
-							"text": "TURRET"
+							"Location": "Head",
+							"Label": "TURRET"
 						}
 					]
 				}
@@ -88,20 +78,20 @@
 				"Template": {
 					"Names": [
 						{
-							"location": "LeftArm",
-							"text": "Front Left Leg"
+							"Location": "LeftArm",
+							"Label": "Front Left Leg"
 						},
 						{
-							"location": "RightArm",
-							"text": "Front Right Leg"
+							"Location": "RightArm",
+							"Label": "Front Right Leg"
 						},
 						{
-							"location": "LeftLeg",
-							"text": "Hind Left Leg"
+							"Location": "LeftLeg",
+							"Label": "Hind Left Leg"
 						},
 						{
-							"location": "RightLeg",
-							"text": "Hind Right Leg"
+							"Location": "RightLeg",
+							"Label": "Hind Right Leg"
 						}
 					]
 				}
@@ -113,36 +103,36 @@
 				"Template": {
 				  "Names": [
 					{
-					  "location": "LeftArm",
-					  "text": "Trooper 5"
+					  "Location": "LeftArm",
+					  "Label": "Trooper 5"
 					},
 					{
-					  "location": "RightArm",
-					  "text": "Trooper 6"
+					  "Location": "RightArm",
+					  "Label": "Trooper 6"
 					},
 					{
-					  "location": "LeftLeg",
-					  "text": "Trooper 7"
+					  "Location": "LeftLeg",
+					  "Label": "Trooper 7"
 					},
 					{
-					  "location": "RightLeg",
-					  "text": "Trooper 8"
+					  "Location": "RightLeg",
+					  "Label": "Trooper 8"
 					},
 					{
-					  "location": "CenterTorso",
-					  "text": "Trooper 2"
+					  "Location": "CenterTorso",
+					  "Label": "Trooper 2"
 					},
 					{
-					  "location": "RightTorso",
-					  "text": "Trooper 4"
+					  "Location": "RightTorso",
+					  "Label": "Trooper 4"
 					},
 					{
-					  "location": "LeftTorso",
-					  "text": "Trooper 3"
+					  "Location": "LeftTorso",
+					  "Label": "Trooper 3"
 					},
 					{
-					  "location": "Head",
-					  "text": "Trooper 1"
+					  "Location": "Head",
+					  "Label": "Trooper 1"
 					}
 				  ]
 				}
@@ -175,122 +165,18 @@
 			"Quad_Hind_leg_lower",
 			"Quad_Hind_leg_foot"
 		],
-		"GyroCategorizer": {
-			"Prefix": "Gear_Gyro_",
-			"AllowedLocations": "CenterTorso",
-			"ComponentType": "Upgrade",
-			"CategoryId": "Gyro",
-			"AutoAddCategoryIdIfMissing": true
-		},
-		"GyroSlotChange": {
-			"From": 3,
-			"By": 0,
-			"FromIsMin": false
-		},
-		"CockpitCategorizer": {
-			"Prefix": "Gear_Cockpit_",
-			"AllowedLocations": "Head",
-			"ComponentType": "Upgrade",
-			"CategoryId": "Cockpit",
-			"AutoAddCategoryIdIfMissing": true
-		},
-		"CockpitTonnageChange": {
-			"From": 0,
-			"By": 3,
-			"FromIsMin": false
-		},
-		"CockpitSlotChange": {
-			"From": 1,
-			"By": 0,
-			"FromIsMin": false
-		},
-		"LegUpgradesCategorizer": {
-			"AllowedLocations": "Legs",
-			"ComponentType": "Upgrade",
-			"CategoryId": "LegFootActuator",
-			"AutoAddCategoryIdIfMissing": false
-		},
-		"LegUpgradesSlotChange": {
-			"From": 3,
-			"By": -1,
-			"FromIsMin": true,
-			"NewMin": 1
-		},
-		"ChassisDefSlotsChanges": [
-			{
-				"Location": "LeftTorso",
-				"Change": {
-					"From": 10,
-					"By": 2,
-					"FromIsMin": false
-				}
-			},
-			{
-				"Location": "RightTorso",
-				"Change": {
-					"From": 10,
-					"By": 2,
-					"FromIsMin": false
-				}
-			},
-			{
-				"Location": "LeftLeg",
-				"Change": {
-					"From": 4,
-					"By": 2,
-					"FromIsMin": false
-				}
-			},
-			{
-				"Location": "RightLeg",
-				"Change": {
-					"From": 4,
-					"By": 2,
-					"FromIsMin": false
-				}
-			},
-			{
-				"Location": "Head",
-				"Change": {
-					"From": 1,
-					"By": 5,
-					"FromIsMin": false
-				}
-			},
-			{
-				"Location": "CenterTorso",
-				"Change": {
-					"From": 4,
-					"By": 11,
-					"FromIsMin": false
-				}
-			},
-			{
-				"Location": "LeftLeg",
-				"Change": {
-					"From": 2,
-					"By": 4,
-					"FromIsMin": false
-				}
-			},
-			{
-				"Location": "RightLeg",
-				"Change": {
-					"From": 2,
-					"By": 4,
-					"FromIsMin": false
-				}
-			},
-			{
-				"Location": "Head",
-				"Change": {
-					"From": 3,
-					"By": 3,
-					"FromIsMin": false
-				}
-			}
-		],
-		"ChassisDefInitialTonnage": true,
+		"GyroCategorizer": null,
+		"GyroSlotChange": null,
+		"CockpitCategorizer": null,
+		"CockpitTonnageChange": null,
+		"CockpitSlotChange": null,
+		"SensorsACategorizer": null,
+		"SensorsBCategorizer": null,
+		"SensorsBSlotChange": null,
+		"LegUpgradesCategorizer": null,
+		"LegUpgradesSlotChange": null,
+		"ChassisDefSlotsChanges": null,
+		"ChassisDefInitialTonnage": false,
 		"ChassisDefInitialToTotalTonnageFactor": 0.1,
 		"ChassisDefMaxJumpjets": false,
 		"ChassisDefMaxJumpjetsCount": 100,
