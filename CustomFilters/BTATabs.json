@@ -39,6 +39,8 @@
 						"w/a/a/lbx",
 						"w/a/a/rifle",
 						"w/a/a/mg",
+						"w/a/o/mortar",
+						"w/a/o/bombard",
 						"w/a/a/gatling",
 						"w/a/a/taser",
 						"w/a/a/dbac",
@@ -79,9 +81,7 @@
 					"Categories": [
 						"w/m/t/arrowiv",
 						"w/a/o/artillery",
-						"w/a/o/mortar",
 						"w/m/t/cruisemissile",
-						"w/a/o/bombard",
 						"w/m/t/sirocco"
 					],
 					"NotCategories": [
@@ -176,8 +176,7 @@
 						"w/m/t/thunderbolt",
 						"w/m/l/atm",
 						"w/m/l/iatm",
-						"w/m/t/vrm",
-						"w/m/t/bomb"
+						"w/m/t/vrm"
 					],
 					"NotCategories": [
 						"notused"
@@ -186,7 +185,7 @@
 			},
 			{
 				"Icon": "uixSvgIcon_weapon_Support",
-				"Tooltip": "Show Physical Support Weapons",
+				"Tooltip": "Show Physical Support weapons",
 				"Filter": {
 					"ComponentTypes": [
 						"Weapon"
@@ -197,6 +196,7 @@
 						"w/a/o/mg",
 						"w/e/p/flamer",
 						"w/e/p/aflamer",
+						"w/a/o/grenade",
 						"w/e/p/fluidgun"
 					],
 					"NotCategories": [
@@ -206,7 +206,7 @@
 			},
 			{
 				"Icon": "laser-burst",
-				"Tooltip": "Show Energy Support Weapons",
+				"Tooltip": "Show Energy Support weapons",
 				"Filter": {
 					"ComponentTypes": [
 						"Weapon"
@@ -240,6 +240,21 @@
 					"Categories": [
 						"w/s/a/ams",
 						"w/s/a/lams"
+					],
+					"NotCategories": [
+						"notused"
+					]
+				}
+			},
+			{
+				"Icon": "bombing-run",
+				"Tooltip": "Show Bomb weapons",
+				"Filter": {
+					"ComponentTypes": [
+						"Weapon"
+					],
+					"Categories": [
+						"w/m/t/bomb"
 					],
 					"NotCategories": [
 						"notused"
@@ -745,6 +760,23 @@
 						}
 					},
 					{
+						"Icon": "WeaponAttachment",
+						"Tag": "",
+						"Tooltip": "Show Weapon Attachments",
+						"Filter": {
+							"ComponentTypes": [
+								"Upgrade"
+							],
+							"Categories": [
+								"WeaponAttachment"
+							],
+							"NotCategories": [
+								"Quirk",
+								"notused"
+							]
+						}
+					},
+					{
 						"Icon": "uixSvgIcon_equipment_ActuatorLeg",
 						"Tag": "",
 						"Tooltip": "Show Leg Actuators",
@@ -817,7 +849,6 @@
 								"Misc",
 								"CombatShield",
 								"Handhold",
-								"PPCCAP",
 								"HarJel"
 							],
 							"NotCategories": [
