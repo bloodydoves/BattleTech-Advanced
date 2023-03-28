@@ -36,7 +36,7 @@
 		"UIName": "Timber Wolf TW-B",
 		"Id": "mechdef_timberwolf_TW-B",
 		"Name": "Timber Wolf",
-		"Details": "The Timber Wolf is a fast, heavy OmniMech. A signature design of the Clans' military might, it was arguably the first Clan OmniMech encountered by Inner Sphere forces on The Rock in 3049 by Phelan Kell. When first encountered by Inner Sphere forces the idea that a heavy 'Mech could move so swiftly while being as heavily armed and armored as the Timber Wolf was inconceivable. Armed to engage an enemy at either short or long ranges, the B configuration is an attempt to use the Timber Wolf in a workhorse role. For long range combat, a Gauss Rifle and an LRM-10 launcher gives the Timber Wolf B a powerful long range punch. For short to medium range engagements, a Large Pulse Laser is carried. Finally, for short ranges, a Small Pulse Laser and SRM-4 launcher are carried.",
+		"Details": "The Timber Wolf is a fast, heavy OmniMech. A signature design of the Clans' military might, it was arguably the first Clan OmniMech encountered by Inner Sphere forces on The Rock in 3049 by Phelan Kell. When first encountered by Inner Sphere forces the idea that a heavy 'Mech could move so swiftly while being as heavily armed and armored as the Timber Wolf was inconceivable. Armed to engage an enemy at either short or long ranges, the B configuration is an attempt to use the Timber Wolf in a workhorse role. For long range combat, a Gauss Rifle and an LRM-10 launcher gives the Timber Wolf B a powerful long range punch. For short to medium range engagements, a Large Pulse Laser is carried. Finally, for short ranges, a SRM-4 launcher is carried.",
 		"Icon": "uixTxrIcon_madcat"
 	},
 	"simGameMechPartCost": 2789359,
@@ -116,17 +116,6 @@
 		}
 	],
 	"inventory": [
-		{
-			"MountedLocation": "Head",
-			"ComponentDefID": "Gear_TargetingTrackingSystem_ARTEMISIV",
-			"SimGameUID": null,
-			"ComponentDefType": "Upgrade",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
 		{
 			"MountedLocation": "LeftArm",
 			"ComponentDefID": "emod_arm_part_shoulder",
@@ -293,17 +282,6 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "LeftArm",
-			"ComponentDefID": "Weapon_Laser_SmallLaserPulse_CLAN",
-			"SimGameUID": null,
-			"ComponentDefType": "Weapon",
-			"HardpointSlot": 1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
 			"MountedLocation": "RightArm",
 			"ComponentDefID": "Weapon_Gauss_Gauss_CLAN",
 			"SimGameUID": null,
@@ -323,7 +301,20 @@
 			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": null,
-			"hasPrefabName": false
+			"hasPrefabName": false,
+			"LocalGUID":"target_LRM_1"
+		},
+		{
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "Gear_Attachment_ArtemisIV",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false,
+			"TargetComponentGUID":"target_LRM_1"
 		},
 		{
 			"MountedLocation": "RightTorso",
@@ -334,7 +325,20 @@
 			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": null,
-			"hasPrefabName": false
+			"hasPrefabName": false,
+			"LocalGUID":"target_SRM_1"
+		},
+		{
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "Gear_Attachment_ArtemisIV",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false,
+			"TargetComponentGUID":"target_SRM_1"
 		},
 		{
 			"MountedLocation": "LeftTorso",
@@ -359,18 +363,7 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Ammo_AmmunitionBox_Generic_GAUSS",
-			"SimGameUID": null,
-			"ComponentDefType": "AmmunitionBox",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "RightTorso",
+			"MountedLocation": "RightArm",
 			"ComponentDefID": "Ammo_AmmunitionBox_Generic_GAUSS",
 			"SimGameUID": null,
 			"ComponentDefType": "AmmunitionBox",
