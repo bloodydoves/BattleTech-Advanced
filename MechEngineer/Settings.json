@@ -73,7 +73,7 @@
 			},
 			{
 				"Tags": [
-					"Quad"
+					"QuadMech"
 				],
 				"Template": {
 					"Names": [
@@ -98,7 +98,7 @@
 			},
 			{
 				"Tags": [
-				  "Squad"
+				  "ProtoMech"
 				],
 				"Template": {
 				  "Names": [
@@ -194,56 +194,7 @@
 			"BonusBText": "",
 			"BackgroundColor": null
 		},
-		"AutoFixWeaponDefSlotsChanges": [
-			{
-				"Type": "AC5",
-				"Change": {
-					"From": 2,
-					"By": 0,
-					"FromIsMin": false
-				}
-			},
-			{
-				"Type": "AC10",
-				"Change": {
-					"From": 3,
-					"By": 0,
-					"FromIsMin": false
-				}
-			},
-			{
-				"Type": "AC20",
-				"Change": {
-					"From": 8,
-					"By": 2,
-					"FromIsMin": false
-				}
-			},
-			{
-				"Type": "Gauss",
-				"Change": {
-					"From": 5,
-					"By": 0,
-					"FromIsMin": false
-				}
-			},
-			{
-				"Type": "LargeLaserPulse",
-				"Change": {
-					"From": 2,
-					"By": 0,
-					"FromIsMin": false
-				}
-			},
-			{
-				"Type": "LRM20",
-				"Change": {
-					"From": 4,
-					"By": 1,
-					"FromIsMin": false
-				}
-			}
-		]
+		"AutoFixWeaponDefSlotsChanges": []
 	},
 	"ComponentExplosions": {
 		"Enabled": true,
@@ -254,7 +205,7 @@
 		"EnabledDescription": "Compresses similar floatie messages to a single message with a multiplier. E.g. MEDIUM LASER DESTROYED x 4"
 	},
 	"CustomCapacities": {
-		"Enabled": false,
+		"Enabled": true,
 		"EnabledDescription": "Enables some carry rules.",
 		"CarryLeftOverTopOffDescription": "Non CBT mechanism. The value is multiplied by the chassis tonnage. Carry in hand might have left overs, `top off` - `carry in hand usage` = `carry left over capacity`. Modifiable via custom capacity collection 'CarryLeftOverTopOff'.",
 		"CarryLeftOverTopOff": 0.1,
@@ -351,7 +302,7 @@
 		"EnforceRulesForAdditionalInternalHeatSinksDescription": "Can't have those juicy ++ cooling systems with smaller fusion cores than the rules allow it.",
 		"AllowMixingHeatSinkTypes": false,
 		"AllowMixingHeatSinkTypesDescription": "Allow heat sinks patchwork.",
-		"EngineMissingFallbackHeatSinkCapacity": 0,
+		"EngineMissingFallbackHeatSinkCapacity": 30,
 		"EngineMissingFallbackHeatSinkCapacityDescription": "Heat sink capacity if no engine is detected.",
 		"AdditionalWalkSpeed": 0,
 		"AdditionalRunSpeed": 0,
@@ -889,7 +840,7 @@
 		"Enabled": false
 	},
 	"MechLabSlots": {
-		"MechLabStatusLeftShift" : 25,
+		"MechLabStatusLeftShift" : 0,
         "MechLabMechRightShift" : 0,
 		"MechLabArmTopPadding": 120,
 		"Enabled": true,
