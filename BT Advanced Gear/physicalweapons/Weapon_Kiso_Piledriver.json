@@ -1,0 +1,294 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/s/m/melee"
+			}
+		],
+		"BonusDescriptions": [
+				"IsPhysWeap",
+				"PhysWeapUnsteady",
+				"PhysWeapDamage: 1.5",
+				"PhysWeapStab: 1.5",
+				"PhysWeapAccuracy: -2"
+		],
+		"Flags": [
+				"default",
+				"not_broken",
+				"no_salvage",
+				"autorepair"
+		]
+	},
+	"weaponCategoryID": "MeleeWeapon",
+	"Type": "MachineGun",
+	"WeaponSubType": "MachineGun",
+	"MinRange": 0,
+	"MaxRange": 30,
+	"RangeSplit": [
+		30,
+		30,
+		30
+	],
+	"AmmoCategory": "NotSet",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 0,
+	"Damage": 0,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 4,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": 0,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 0,
+	"Instability": 0,
+	"NotUseInMelee": true,
+	"WeaponEffectID": "WeaponEffect-Weapon_MachineGun",
+	"Description": {
+		"Cost": 12000,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "Kiso",
+		"Model": "Pile-Driver",
+		"UIName": "Pile-Driver",
+		"Id": "Weapon_Kiso_Piledriver",
+		"Name": "Pile-Driver",
+		"Details": "This is a construction tool, a Heavy Duty Pile-Driver, designed for the Kiso ConstructionMech. Heavy Duty Pile-Drivers are essentially a gigantic pneumatic hammer meant to drive poles into the ground as a construction method. They can also be used during mining operations to drive metal spikes through solid rock. Though the Pile-Driver hits surprisingly hard, it is bulky and unwieldly in combat making it fairly rare to see on the battlefield.",
+		"Icon": "hammer-drop"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "piledriver",
+	"BattleValue": 0,
+	"InventorySize": 8,
+	"Tonnage": 10,
+	"AllowedLocations": "RightTorso,LeftTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "PunchIsPhysical",
+				"Name": "This is a Physical Weapon",
+				"Details": "This is a physical weapon and uses those melee rules."
+			},
+			"statisticData": {
+				"statName": "CBTBE_Punch_Is_Physical_Weapon",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0.0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "CBTBE_PHYSICAL_WEAPON_APPLY_UNSTEADY",
+				"Name": "Target will be Unsteady",
+				"Details": "Foo"
+			},
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Unsteady_Target_On_Hit",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0.0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "CBTBE_PHYSICAL_WEAPON_LOCATION_TABLE",
+				"Name": "Location table to use",
+				"Details": "Foo"
+			},
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Location_Table",
+				"operation": "Set",
+				"modValue": "STANDARD",
+				"modType": "System.String"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-PileDriverDamage",
+				"Name": "Pile-Driver Damage",
+				"Details": "Pile-Drivers do 7.5 damage per 5 tons of the mech.",
+				"Icon": "hammer-drop"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Target_Damage_Per_Attacker_Ton",
+				"operation": "Set",
+				"modValue": "1.5",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-PileDriverStabDamage",
+				"Name": "Pile-Driver Stab Damage",
+				"Details": "Pile-Drivers do 7.5 stab damage per 5 tons of the mech.",
+				"Icon": "hammer-drop"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Target_Instability_Per_Attacker_Ton",
+				"operation": "Set",
+				"modValue": "1.5",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-PileDriverAcc",
+				"Name": "Pile-Driver Base Accuracy",
+				"Details": "Pile-Drivers suffer a -2 accuracy penalty on their attacks.",
+				"Icon": "hammer-drop"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Attack_Mod",
+				"operation": "Int_Add",
+				"modValue": "2",
+				"modType": "System.Int32"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-PileDriverCanPhysical",
+				"Name": "Pile-Driver Can Physical",
+				"Details": "The Kiso's Pile-Driver can be used as a physical weapon, despite being a quad.",
+				"Icon": "hammer-drop"
+			},
+			"nature": "Buff",
+			"statisticData": {
+                "statName": "CBTBE_NonBiped_Physical_Weapon",
+                "operation": "Set",
+                "modValue": "true",
+                "modType": "System.Boolean"
+            }
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_close"
+		],
+		"tagSetSourceFile": ""
+	}
+}
