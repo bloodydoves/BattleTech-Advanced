@@ -1,0 +1,79 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "Misc"
+			}
+		],
+		"BonusDescriptions": [
+				"Sight2: +25"
+		],
+		"Flags": [
+				"not_broken",
+				"no_salvage",
+				"autorepair",
+				"ignore_damage"
+		]
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 1000,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "Achernar",
+		"Model": "SteelTek Cargo",
+		"UIName": "Searchlight",
+		"Id": "Gear_Searchlight",
+		"Name": "Searchlight",
+		"Details": "This is a searchlight. It is essentially a high-powered light on a swivel, attached to a 'Mech or combat vehicle for the purposes of illuminating areas. While searchlights have very little practical purpose, they do improve visual spotting distance effectively enough, giving them a small combat benefit. A very small one.",
+		"Icon": "light-projector"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0.5,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-SpotlightSpottingDistance",
+				"Name": "SPOTTING DISTANCE INCREASED",
+				"Details": "Increases spotting distance by [AMT]m.",
+				"Icon": "light-projector"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "SpotterDistanceAbsolute",
+				"operation": "Float_Add",
+				"modValue": "25.0",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"lv-shares-sensors"
+		],
+		"tagSetSourceFile": ""
+	}
+}

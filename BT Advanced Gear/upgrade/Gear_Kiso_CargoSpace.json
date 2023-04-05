@@ -1,0 +1,78 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "Misc"
+			}
+		],
+		"BonusDescriptions": [
+				"StabThreshhold: 50"
+		],
+		"Flags": [
+				"not_broken",
+				"no_salvage",
+				"autorepair",
+				"ignore_damage"
+		]
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 5000,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "GENERIC",
+		"Model": "GENERIC",
+		"UIName": "Cargo Space",
+		"Id": "Gear_Kiso_CargoSpace",
+		"Name": "Cargo Space",
+		"Details": "The Kiso is equipped with a significant amount of storage space for construction equipment. However, in a pinch, that same equipment can provide the Kiso with additional stability during a pitched battle thanks to the sheer weight of the equipment keeping the Kiso balanced during combat. Of course, it's a rather low-tech solution to the issue, but hey, if it works, it works.",
+		"Icon": "cargo-crate"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 10,
+	"AllowedLocations": "CenterTorso,LeftTorso,RightTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "CargoSpaceGenericThreshhold",
+				"Name": "Cargo Space",
+				"Details": "The heavy cargo stored in the Dig King's storage compartment provides it with additional stability during pitched combat situations, increasing its stability threshold.",
+				"Icon": "uixSvgIcon_equipment_Gyro"
+			},
+			"statisticData": {
+				"statName": "UnsteadyThreshold",
+				"operation": "Float_Add",
+				"modValue": "50.0",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"lv-shares-sensors"
+		],
+		"tagSetSourceFile": ""
+	}
+}
