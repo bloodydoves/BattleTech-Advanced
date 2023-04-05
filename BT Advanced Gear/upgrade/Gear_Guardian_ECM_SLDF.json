@@ -1,0 +1,223 @@
+{
+	"Custom": {
+		"BonusDescriptions": [
+				"MissileDefense: +2",
+				"SensorLockImmune",
+				"C3Jamming: 120"
+		],
+		"Flags": [
+				"default",
+				"not_broken",
+				"no_salvage",
+				"autorepair",
+				"ignore_damage"
+		],
+		"ActivatableComponent": {
+			"ButtonName": "Guardian ECM",
+			"CanNotBeActivatedManualy": false,
+			"ActiveByDefault": true,
+			"FailFlatChance": 0.0,
+			"SafeActivation": true,
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect_ECM-SensorLockImmunity",
+						"Name": "Sensor Lock Immunity",
+						"Details": "This unit is immune to sensor lock.",
+						"Icon": "circuitry"
+					},
+					"statisticData": {
+						"statName": "EvasiveSafeFromSensorLock",
+						"operation": "Set",
+						"modValue": "true",
+						"modType": "System.Boolean"
+					},
+					"nature": "Buff"
+				}
+			]
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 430000,
+		"Rarity": 3,
+		"Purchasable": true,
+		"Manufacturer": "Johnston",
+		"Model": "Guardian ECM",
+		"UIName": "SLDF Guardian ECM",
+		"Id": "Gear_Guardian_ECM_SLDF",
+		"Name": "SLDF Guardian ECM",
+		"Details": "The Guardian ECM Suite was introduced in 2597 by Johnston Industries of the Terran Hegemony. Designed to interfere with guided weaponry, targeting computers, and communication systems, the Guardian was typically used to shield allied units from such equipment by emitting a broad-band signal meant to confuse radar, infrared, ultraviolet, magscan and sonar sensors. Guardian ECM helps counter enemy missile attacks and makes the user immune to precise sensor locks while activated, but comes at the cost of being functionally incompatible with C3 networks while active.\r\n\r\n This specific SLDF-spec Guardian ECM was specially designed for compatibility with the Star League's elite stealth technologies, the Chameleon Light Polarization Shield and Null-Signature System.",
+		"Icon": "circuitry"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 1.5,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"Auras": [
+		{
+			"Id": "Gear_Guardian_ECM_MissleScramble",
+			"Name": "Missile Scrambling",
+			"ReticleColor": "#ffffff",
+			"Range": 150,
+			"RemoveOnSensorLock": false,
+			"State": "Online",
+			"ApplySelf": true,
+			"AllyStealthAffection": "None",
+			"EnemyStealthAffection": "None",
+			"IsPositiveToAlly": true,
+			"IsNegativeToEnemy": false,
+			"ownerVFX": [],
+			"targetVFX": [],
+			"removeOwnerVFX": [],
+			"removeTargetVFX": [],
+			"ownerSFX": [],
+			"targetSFX": [],
+			"removeOwnerSFX": [],
+			"removeTargetSFX": [],
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"specialRules": "NotSet",
+						"effectTargetType": "AlliesWithinRange",
+						"range": 0.0,
+						"forcePathRebuild": false,
+						"forceVisRebuild": false,
+						"showInTargetPreview": false,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "GECMInterference",
+						"Name": "GECM Interference",
+						"Details": "Guardian ECM is making this unit harder to hit, +2 penalty to enemy missile attacks.",
+						"Icon": "circuitry"
+					},
+					"statisticData": {
+						"statName": "ToHitThisActorMissile",
+						"operation": "Float_Add",
+						"modValue": "2.0",
+						"modType": "System.Single"
+					},
+					"nature": "Buff"
+				}
+			]
+		},
+		{
+			"Id": "Gear_Guardian_ECM_C3Scramble",
+			"Name": "C3 Scrambling",
+			"ReticleColor": "#1a91ea",
+			"Range": 120,
+			"RemoveOnSensorLock": false,
+			"State": "Online",
+			"ApplySelf": true,
+			"AllyStealthAffection": "None",
+			"EnemyStealthAffection": "None",
+			"IsPositiveToAlly": true,
+			"IsNegativeToEnemy": false,
+			"ownerVFX": [],
+			"targetVFX": [],
+			"removeOwnerVFX": [],
+			"removeTargetVFX": [],
+			"ownerSFX": [],
+			"targetSFX": [],
+			"removeOwnerSFX": [],
+			"removeTargetSFX": [],
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"specialRules": "NotSet",
+						"effectTargetType": "AlliesWithinRange",
+						"range": 0.0,
+						"forcePathRebuild": false,
+						"forceVisRebuild": false,
+						"showInTargetPreview": false,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect_ECM-C3-Jamming",
+						"Name": "C3 Jamming",
+						"Details": "Guardian ECM is jamming C3 networks, preventing C3 networks from functioning within 120 meters.",
+						"Icon": "circuitry"
+					},
+					"statisticData": {
+						"statName": "ADD_ENCOUNTER_TAG_C3_Network",
+						"operation": "Float_Add",
+						"modValue": "-2",
+						"modType": "System.Single"
+					},
+					"nature": "Buff"
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"specialRules": "NotSet",
+						"effectTargetType": "EnemiesWithinRange",
+						"range": 0.0,
+						"forcePathRebuild": false,
+						"forceVisRebuild": false,
+						"showInTargetPreview": false,
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect_ECM-C3-Enemy-Jamming",
+						"Name": "C3 Enemy Jamming",
+						"Details": "Guardian ECM is jamming C3 networks, preventing C3 networks from functioning within 120 meters.",
+						"Icon": "circuitry"
+					},
+					"statisticData": {
+						"statName": "ADD_ENCOUNTER_TAG_C3_Network",
+						"operation": "Float_Add",
+						"modValue": "-2",
+						"modType": "System.Single"
+					},
+					"nature": "Buff"
+				}
+			]
+		}
+	],
+	"statusEffects": [],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"ElectronicCounterMeasures",
+			"lv-jammer_m2_r6"
+		],
+		"tagSetSourceFile": ""
+	}
+}
