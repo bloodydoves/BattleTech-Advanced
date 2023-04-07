@@ -2,7 +2,7 @@
 	"Description": {
 		"Id": "starsystemdef_Michtal",
 		"Name": "Michtal",
-		"Details": "Michtal was settled during the Star League era at some point after the end of the Reunification War but died out during the fighting in the Succession Wars.",
+		"Details": "Michtal was settled during the Star League era at some point after the end of the Reunification War but, as is the fate of many worlds in the Outworlds Wastes, fell off the maps during the Third Succession War. Some inhabitants lingered but the planet was beneath notice for even the Alliance's government.",
 		"Icon": ""
 	},
 	"Position": {
@@ -14,18 +14,21 @@
 		"items": [
 			"planet_name_michtal",
 			"planet_size_large",
-			"planet_climate_desert",
-			"planet_pop_none",
+			"planet_climate_terran",
+			"planet_pop_small",
 			"planet_civ_primitive",
 			"planet_industry_poor",
 			"planet_other_ruins",
-			"planet_faction_nofaction",
-			"planet_other_empty"
+			"planet_faction_nofaction"
 		],
 		"tagSetSourceFile": ""
 	},
 	"SupportedBiomes": [
-		"desertParched"
+		"highlandsSpring",
+		"highlandsFall",
+		"lowlandsSpring",
+		"lowlandsFall",
+		"lowlandsCoastal"
 	],
 	"MapRequiredTags": {
 		"items": [],
@@ -123,13 +126,13 @@
 	"UseMaxContractOverride": false,
 	"MaxContractOverride": 0,
 	"SystemShopItems": [
-		"itemCollection_major_TaurianConcordat",
+		"itemCollection_major_ClanWorld",
 		"itemCollection_shop_chemicalsProgression",
 		"itemCollection_shop_miningProgression"
 	],
 	"factionShopOwnerID": "NoFaction",
 	"FactionShopItems": [
-		"itemCollection_faction_TaurianConcordat"
+		"itemCollection_faction_ClanSnowRaven"
 	],
 	"BlackMarketShopItems": null,
 	"CoreSystemID": "starsystemdef_Michtal",
@@ -138,9 +141,18 @@
 		"CAREER",
 		"NONE"
 	],
-	"DefaultDifficulty": 6,
+	"DefaultDifficulty": 9,
 	"DifficultyList": [],
 	"DifficultyModes": [],
 	"contractEmployerIDs": [],
-	"contractTargetIDs": []
+	"contractTargetIDs": [
+		"Kurita",
+		"Davion",
+		"ComStar",
+		"DarkCaste",
+		"Tortuga",
+		"Locals",
+		"AuriganPirates",
+		"Mercenaries"
+	]
 }
