@@ -1,0 +1,133 @@
+{
+	"Description": {
+		"Id": "3065-05-14",
+		"Name": "MercNews Broadcast",
+		"Details": "[[DM.Factions[faction_ClanSnowRaven],CLAN SNOW RAVEN]] GRANTED DOMAIN IN THE OUTWORLD WASTES!\r\n\n\nAlpheratz: After an encounter last year where a Clan Snow Raven force engaged in a Trial of Possession for an Outworlds Alliance DropShip and was roundly defeated by Alliance ace pilots, Clan Snow Raven had opened talks with the Outworlds Alliance with an eye towards a mutual alliance though details were scarce until now, when President Mitchell Avellar announced a new strategic partnership between the Outworlds Alliance and Clan Snow Raven. Included in this partnership is effective ownership over several abandoned worlds in the so-called Outworlds Wastes, giving the Ravens a landhold in the Inner Sphere.\r\n\n\nWould you like to know more?",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Yes.",
+				"Details": "Broadcast continues.",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "Clan Snow Raven is known for their prowess in space engagements and their shrewd political dealings with the other Clans so their friendship with the Outworlds Alliance is fairly unsurprising, given the Alliance's proficiency with aerospace assets themselves. More questionable is the Alliance agreeing to grant the Clan territory since Clans are not known for their pacifism, which the Alliance is renown for. Only time can tell the results of this friendship, especially as Clan Snow Raven has had prior poor interactions with House Kurita and some enmity may linger there.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_give_starsystemdef_Twycross_to_ClanDiamondShark"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		},
+		{
+			"Description": {
+				"Id": "end",
+				"Name": "No.",
+				"Details": "Broadcast ends.",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "end1",
+						"Name": "MercNews Broadcast",
+						"Details": "Transmission terminated.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}
