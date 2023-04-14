@@ -1,0 +1,294 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/s/m/melee"
+			}
+		],
+		"BonusDescriptions": [
+				"IsPhysWeap",
+				"PhysWeapUnsteady",
+				"PhysWeapDamage: 1.5",
+				"PhysWeapStab: 1.5",
+				"PhysWeapAccuracy: -2"
+		],
+		"Flags": [
+				"default",
+				"not_broken",
+				"no_salvage",
+				"autorepair"
+		]
+	},
+	"weaponCategoryID": "MeleeWeapon",
+	"Type": "MachineGun",
+	"WeaponSubType": "MachineGun",
+	"MinRange": 0,
+	"MaxRange": 30,
+	"RangeSplit": [
+		30,
+		30,
+		30
+	],
+	"AmmoCategory": "NotSet",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 0,
+	"Damage": 0,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 4,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": 0,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 0,
+	"Instability": 0,
+	"NotUseInMelee": true,
+	"WeaponEffectID": "WeaponEffect-Weapon_MachineGun",
+	"Description": {
+		"Cost": 12000,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "Kiso",
+		"Model": "Rock Cutter",
+		"UIName": "Rock Cutter",
+		"Id": "Weapon_Kiso_RockCutter",
+		"Name": "Rock Cutter",
+		"Details": "This is a mining tool, a Rock Cutter, designed for the Kiso ConstructionMech. Rock Cutters are essentially gigantic Mech-scale chainsaws, equipped with diamond carbide teeth for sawing through stone and metal with brute force. It makes an unwieldy melee weapon but is moderately effective in a pinch. It cannot be removed or used elsewhere.",
+		"Icon": "circular-sawblade"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "chainsaw",
+	"BattleValue": 0,
+	"InventorySize": 5,
+	"Tonnage": 5,
+	"AllowedLocations": "RightTorso,LeftTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "PunchIsPhysical",
+				"Name": "This is a Physical Weapon",
+				"Details": "This is a physical weapon and uses those melee rules."
+			},
+			"statisticData": {
+				"statName": "CBTBE_Punch_Is_Physical_Weapon",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0.0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "CBTBE_PHYSICAL_WEAPON_APPLY_UNSTEADY",
+				"Name": "Target will be Unsteady",
+				"Details": "Foo"
+			},
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Unsteady_Target_On_Hit",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0.0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "CBTBE_PHYSICAL_WEAPON_LOCATION_TABLE",
+				"Name": "Location table to use",
+				"Details": "Foo"
+			},
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Location_Table",
+				"operation": "Set",
+				"modValue": "STANDARD",
+				"modType": "System.String"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-RockCutterDamage",
+				"Name": "Rock Cutter Damage",
+				"Details": "Rock Cutters do 7.5 damage per 5 tons of the mech.",
+				"Icon": "circular-sawblade"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Target_Damage_Per_Attacker_Ton",
+				"operation": "Set",
+				"modValue": "1.5",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-RockCutterStabDamage",
+				"Name": "Rock Cutter Stab Damage",
+				"Details": "Rock Cutters d0 7.5 stab damage per 5 tons of the mech.",
+				"Icon": "circular-sawblade"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Target_Instability_Per_Attacker_Ton",
+				"operation": "Set",
+				"modValue": "1.5",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-RockCutterAcc",
+				"Name": "Rock Cutter Base Accuracy",
+				"Details": "Rock Cutters suffer a -2 accuracy penalty on their attacks.",
+				"Icon": "circular-sawblade"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Attack_Mod",
+				"operation": "Int_Add",
+				"modValue": "2",
+				"modType": "System.Int32"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-RockCutterCanPhysical",
+				"Name": "Rock Cutter Can Physical",
+				"Details": "The Kiso's Rock Cutter can be used as a physical weapon, despite being a quad.",
+				"Icon": "circular-sawblade"
+			},
+			"nature": "Buff",
+			"statisticData": {
+                "statName": "CBTBE_NonBiped_Physical_Weapon",
+                "operation": "Set",
+                "modValue": "true",
+                "modType": "System.Boolean"
+            }
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_close"
+		],
+		"tagSetSourceFile": ""
+	}
+}

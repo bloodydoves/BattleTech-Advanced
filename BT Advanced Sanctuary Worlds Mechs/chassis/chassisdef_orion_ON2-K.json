@@ -1,9 +1,5 @@
 {
 	"Custom": {
-		"ArmActuatorSupport": {
-			"LeftLimit": "Lower",
-			"RightLimit": "Lower"
-		},
 		"AssemblyVariant": {
 			"PrefabID": "Orion",
 			"Exclude": false,
@@ -71,7 +67,7 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
@@ -85,11 +81,11 @@
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				}
 			],
@@ -112,11 +108,11 @@
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMountID": "Ballistic",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMountID": "Ballistic",
 					"Omni": false
 				}
 			],
@@ -130,11 +126,11 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -209,7 +205,10 @@
 	],
 	"VariantName": "ON2-K",
 	"ChassisTags": {
-		"items": [],
+		"items": [
+			"ArmLimitLowerRight",
+			"ArmLimitLowerLeft"
+		],
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Brawler & Close Assault",

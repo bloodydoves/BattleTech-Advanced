@@ -1,10 +1,4 @@
 {
-	"Custom": {
-		"ArmActuatorSupport": {
-			"LeftLimit": "Hand",
-			"RightLimit": "Lower"
-		}
-	},
 	"Description": {
 		"Cost": 1600000,
 		"Rarity": 1,
@@ -73,7 +67,12 @@
 		},
 		{
 			"Location": "LeftTorso",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
 			"MaxArmor": 50,
@@ -102,7 +101,7 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
@@ -178,7 +177,8 @@
 	"VariantName": "WSP-1",
 	"ChassisTags": {
 		"items": [
-			"PrimitiveMech"
+			"PrimitiveMech",
+			"ArmLimitLowerRight"
 		],
 		"tagSetSourceFile": ""
 	},

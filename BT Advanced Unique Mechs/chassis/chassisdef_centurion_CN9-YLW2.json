@@ -1,10 +1,4 @@
 {
-	"Custom": {
-		"ArmActuatorSupport": {
-			"LeftLimit": "Hand",
-			"RightLimit": "Lower"
-		}
-	},
 	"Description": {
 		"Cost": 4200000,
 		"Rarity": 2,
@@ -66,15 +60,15 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "MeleeWeapon",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
@@ -86,7 +80,16 @@
 		},
 		{
 			"Location": "LeftTorso",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
 			"MaxArmor": 120,
@@ -97,11 +100,11 @@
 			"Location": "CenterTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
@@ -124,11 +127,15 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMountID": "Ballistic",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMountID": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Ballistic",
 					"Omni": false
 				}
 			],
@@ -204,7 +211,8 @@
 	"VariantName": "CN9-YLW2",
 	"ChassisTags": {
 		"items": [
-			"HeroMech"
+			"HeroMech",
+			"ArmLimitLowerRight"
 		],
 		"tagSetSourceFile": ""
 	},

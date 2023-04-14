@@ -1,10 +1,4 @@
 {
-	"Custom": {
-		"ArmActuatorSupport": {
-			"LeftLimit": "Upper",
-			"RightLimit": "Lower"
-		}
-	},
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",
@@ -82,7 +76,10 @@
 	"DFASelfDamage": 100,
 	"DFAInstability": 50,
 	"ChassisTags": {
-		"items": [],
+		"items": [
+			"ArmLimitLowerRight",
+			"ArmLimitUpperLeft"
+		],
 		"tagSetSourceFile": ""
 	},
 	"MechPartMax": 0,
@@ -136,7 +133,7 @@
 			"Location": "Head",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
@@ -150,11 +147,11 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
@@ -168,11 +165,11 @@
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
@@ -186,11 +183,11 @@
 			"Location": "CenterTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
@@ -204,11 +201,11 @@
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
@@ -222,19 +219,19 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -246,7 +243,12 @@
 		},
 		{
 			"Location": "LeftLeg",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 6,
 			"MaxArmor": 210,
@@ -255,7 +257,12 @@
 		},
 		{
 			"Location": "RightLeg",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 6,
 			"MaxArmor": 210,

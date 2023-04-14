@@ -1,10 +1,4 @@
 {
-	"Custom": {
-		"ArmActuatorSupport": {
-			"LeftLimit": "Lower",
-			"RightLimit": "Lower"
-		}
-	},
 	"Description": {
 		"Cost": 6872000,
 		"Rarity": 2,
@@ -66,11 +60,11 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -84,7 +78,7 @@
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMountID": "Ballistic",
 					"Omni": false
 				}
 			],
@@ -98,11 +92,11 @@
 			"Location": "CenterTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				}
 			],
@@ -116,7 +110,7 @@
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
@@ -130,15 +124,15 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -214,7 +208,9 @@
 	"VariantName": "DRG-FLAME",
 	"ChassisTags": {
 		"items": [
-			"HeroMech"
+			"HeroMech",
+			"ArmLimitLowerRight",
+			"ArmLimitLowerLeft"
 		],
 		"tagSetSourceFile": ""
 	},
@@ -230,17 +226,6 @@
 			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "Head",
-			"ComponentDefID": "Gear_TargetingTrackingSystem_Kallon_A-C-P150+",
-			"SimGameUID": "",
-			"ComponentDefType": "Upgrade",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": "",
 			"hasPrefabName": false
 		},
 		{

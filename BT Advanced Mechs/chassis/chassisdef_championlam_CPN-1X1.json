@@ -1,9 +1,5 @@
 {
 	"Custom": {
-		"ArmActuatorSupport": {
-			"LeftLimit": "Upper",
-			"RightLimit": "Upper"
-		},
 		"AssemblyVariant": {
 			"PrefabID": "ChampionLAM",
 			"Exclude": false,
@@ -117,15 +113,19 @@
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "BombBay",
 					"Omni": false
 				}
 			],
@@ -139,11 +139,11 @@
 			"Location": "CenterTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -157,15 +157,19 @@
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "BombBay",
 					"Omni": false
 				}
 			],
@@ -249,7 +253,10 @@
 	],
 	"VariantName": "CPN-1X1",
 	"ChassisTags": {
-		"items": [],
+		"items": [
+			"ArmLimitUpperRight",
+			"ArmLimitUpperLeft"
+		],
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Experimental LAM",

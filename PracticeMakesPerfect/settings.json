@@ -60,6 +60,8 @@
 		"ClanJadeFalcon",
 		"ClanWolf",
 		"ClanNovaCat",
+		"ClanSnowRaven",
+		"DarkCaste",
 		"Delphi",
 		"Hanse",
 		"JarnFolk",
@@ -440,7 +442,8 @@
 				"ClanWolf",
 				"ClanJadeFalcon",
 				"ClanGhostBear",
-				"ClanNovaCat"
+				"ClanNovaCat",
+				"ClanSnowRaven"
 			],
 			"description": "This pilot is an expert at fighting Clan Wolf, and does 5% increased damage to all Clan forces.",
 			"effectDataJO": [
@@ -510,7 +513,8 @@
 				"ClanWolf",
 				"ClanJadeFalcon",
 				"ClanGhostBear",
-				"ClanNovaCat"
+				"ClanNovaCat",
+				"ClanSnowRaven"
 			],
 			"description": "This pilot is an expert at fighting Clan Jade Falcon, and does 5% increased damage to all Clan forces.",
 			"effectDataJO": [
@@ -580,7 +584,8 @@
 				"ClanWolf",
 				"ClanJadeFalcon",
 				"ClanGhostBear",
-				"ClanNovaCat"
+				"ClanNovaCat",
+				"ClanSnowRaven"
 			],
 			"description": "This pilot is an expert at fighting Clan Ghost Bear, and does 5% increased damage to all Clan forces.",
 			"effectDataJO": [
@@ -650,7 +655,8 @@
 				"ClanWolf",
 				"ClanJadeFalcon",
 				"ClanGhostBear",
-				"ClanNovaCat"
+				"ClanNovaCat",
+				"ClanSnowRaven"
 			],
 			"description": "This pilot is an expert at fighting Clan Nova Cat, and does 5% increased damage to all Clan forces.",
 			"effectDataJO": [
@@ -664,7 +670,7 @@
 					"effectType": "StatisticEffect",
 					"Description": {
 						"Id": "CNC_BadTripDmgPassive",
-						"Name": "Loaded For Bear",
+						"Name": "Bad Trip",
 						"Details": "This pilot is an expert at fighting Clan Nova Cat, and does 5% increased damage to all Clan forces.",
 						"Icon": "allied-star"
 					},
@@ -690,9 +696,80 @@
 					},
 					"effectType": "StatisticEffect",
 					"Description": {
-						"Id": "CNC_BadTripBearDmg",
-						"Name": "Loaded For Bear Damage",
+						"Id": "CNC_BadTripNovaCatDmg",
+						"Name": "Bad Trip Damage",
 						"Details": "This pilot is an expert at fighting Clan Nova Cat, and does 5% increased damage to all Clan forces.",
+						"Icon": "allied-star"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamagePerShot",
+						"operation": "Float_Multiply",
+						"modValue": "1.05",
+						"modType": "System.Single",
+						"additionalRules": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponType": "NotSet",
+						"targetAmmoCategory": "NotSet",
+						"targetWeaponSubType": "NotSet"
+					}
+				}
+			]
+		},
+		{
+			"OpForSpecID": "CSR_Unkindness",
+			"OpForSpecName": "Clan Snow Raven: Unkindness of Ravens",
+			"killsRequired": 12,
+			"factionID": "ClanSnowRaven",
+			"applyToFaction": [
+				"ClanWolf",
+				"ClanJadeFalcon",
+				"ClanGhostBear",
+				"ClanNovaCat",
+				"ClanSnowRaven"
+			],
+			"description": "This pilot is an expert at fighting Clan Snow Raven, and does 5% increased damage to all Clan forces.",
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "CNC_UnkindnessDmgPassive",
+						"Name": "Unkindness of Ravens",
+						"Details": "This pilot is an expert at fighting Clan Snow Raven, and does 5% increased damage to all Clan forces.",
+						"Icon": "allied-star"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "dummyOpForStat",
+						"operation": "Set",
+						"modValue": "true",
+						"modType": "System.Boolean"
+					}
+				},
+				{
+					"durationData": {
+						"duration": 1,
+						"ticksOnEndOfRound": true,
+						"useActivationsOfTarget": true,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "OnWeaponFire",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "CNC_UnkindnessBearDmg",
+						"Name": "Unkindness of Ravens",
+						"Details": "This pilot is an expert at fighting Clan Snow Raven, and does 5% increased damage to all Clan forces.",
 						"Icon": "allied-star"
 					},
 					"nature": "Buff",
@@ -717,10 +794,6 @@
 			"killsRequired": 12,
 			"factionID": "DarkCaste",
 			"applyToFaction": [
-				"ClanWolf",
-				"ClanJadeFalcon",
-				"ClanGhostBear",
-				"ClanNovaCat",
 				"DarkCaste"
 			],
 			"description": "This pilot is an expert at fighting the Dark Caste and even though they're Clanners, they're also pirates. Gain 15% bonus cash from your employer when fighting the Dark Caste as well as a 1500 cash bounty per kill.",
@@ -810,9 +883,9 @@
 			],
 			"description": "Nothin' personal, kid, it's just business. Gain bonus reputation with the Mercenary Review Board for your professionalism when fighting Mercenaries as well as 10% bonus cash from your employer.",
 			"cashMult": {
-				"{EMPLOYER}": 0.10
+				"{EMPLOYER}": 0.1
 			},
-			"repMod": { 
+			"repMod": {
 				"MercenaryReviewBoard": 20
 			},
 			"effectDataJO": []
@@ -829,7 +902,7 @@
 			"killBounty": {
 				"{EMPLOYER}": 5000
 			},
-			"repMod": { 
+			"repMod": {
 				"TaurianConcordat": 2
 			},
 			"effectDataJO": []
@@ -843,7 +916,7 @@
 				"DaneSacellum"
 			],
 			"description": "The Daners claim their religion descends from ancient Rome so let's show them what happened to ancient Rome. Gain bonus reputation with the Mallard Republic and the Jacobson Haven when fighting the Dane Sacellum.",
-			"repMod": { 
+			"repMod": {
 				"JacobsonHaven": 5,
 				"MallardRepublic": 5
 			},
@@ -872,7 +945,7 @@
 				"MallardRepublic"
 			],
 			"description": "The Mallard Republic is mired in paperwork to a ridiculous degree and literally everyone hates dealing with them because of it. Gain bonus reputation with their enemies, the Dane Sacellum and the Jacobson Haven, when fighting the Mallard Republic thanks to making them suffer with more paperwork.",
-			"repMod": { 
+			"repMod": {
 				"JacobsonHaven": 5,
 				"DaneSacellum": 5
 			},
@@ -2012,5 +2085,158 @@
 	"argoUpgradeToReset": "argo_trainingModule2",
 	"dummyOpForStat": "dummyOpForStat",
 	"removeDeprecated": true,
-	"DebugCleaning": false
+	"DebugCleaning": false,
+	"OpforSubfactionsMap": {
+		"ClanWolf": [
+			"CWEpsilonGalaxy"
+		],
+		"ClanNovaCat": [
+			"CNCOmicronGalaxy"
+		],
+		"ClanJadeFalcon": [
+			"CJFIotaGalaxy"
+		],
+		"ClanGhostBear": [
+			"CGBThetaGalaxy"
+		],
+		"ClanSnowRaven": [
+			"CSRDeltaGalaxy"
+		],
+		"WordOfBlake": [
+			"40thShadowDivision",
+			"9thDivisionWoB",
+			"WoBProtectorateMilitia"
+		],
+		"Liao": [
+			"DeathCommandos",
+			"1stMcCarronsArmoredCavalry",
+			"WarriorHouseImarra",
+			"6thConfederationReserveCavalry"
+		],
+		"Kurita": [
+			"1stSwordOfLight",
+			"3rdNightStalkers",
+			"2ndLegionOfVega"
+		],
+		"Davion": [
+			"DavionAssaultGuards",
+			"2ndCrucisLancers",
+			"1stKitteryBorderers",
+			"10thLyranGuards",
+			"FederatedFreemen"
+		],
+		"Steiner": [
+			"6thLyranGuards",
+			"5thDonegalGuards",
+			"15thLyranRegulars",
+			"11thAvalonHussars"
+		],
+		"Marik": [
+			"1stKnightsOfTheInnerSphere",
+			"2ndFreeWorldsGuards",
+			"30thMarikMilitia"
+		],
+		"Comstar": [
+			"2ndArmyVMu",
+			"11thArmyVEta",
+			"7thArmyVIota"
+		],
+		"Rasalhague": [
+			"1stTyr",
+			"2ndFreemen",
+			"4thKavalleri"
+		],
+		"TaurianConcordat": [
+			"TaurianGuard",
+			"PleiadesHussars",
+			"3rdTaurianLancers"
+		],
+		"MagistracyOfCanopus": [
+			"RaventhirsIronHand",
+			"2ndCanopianFusiliers",
+			"MagistracyCavaliers"
+		],
+		"Outworld": [
+			"1stAllianceAirWing",
+			"3rdAllianceAirWing",
+			"4thAllianceAirWing"
+		],
+		"Marian": [
+			"ILegioMartiaVictrix",
+			"VLegioRipariensis",
+			"CohorsMorituri"
+		],
+		"Mercenaries": [
+			"BroadswordLegion",
+			"BurrsBlackCobras",
+			"51stDarkPanzerJaegers",
+			"FistOfMokal",
+			"HsienHotheads",
+			"SimonsonsCutthroats",
+			"AlwaysFaithful",
+			"LangendorfLancers",
+			"LethalInjection",
+			"OlsonsRangers",
+			"TheArcadians",
+			"BlueStarIrregulars",
+			"12thVeganRangers",
+			"Dioscuri",
+			"HarlocksWarriors",
+			"ScreamingEagles",
+			"SmithsonsChineseBandits",
+			"VanguardLegion",
+			"AvantisAngels",
+			"KellHounds",
+			"KnightsOfStCameron",
+			"MobileFire",
+			"SnordsIrregulars",
+			"CamachosCaballeros",
+			"GreenburgsGodzillas",
+			"NarhalsRaiders",
+			"NorthwindHighlanders",
+			"Wolfs_Dragoons",
+			"BarrettsFusiliers",
+			"Blackhearts",
+			"TheKrushers",
+			"RomanovsCrusaders",
+			"BannockburnsBandits",
+			"CleanKill",
+			"LoneStarRegiment",
+			"LongwoodsBluecoats",
+			"CaesarsCohorts",
+			"CanopianHighlanders",
+			"DismalDisinherited",
+			"Dragonslayers",
+			"HarcourtsDestructors",
+			"RamiliesRaiders",
+			"ThermoPolice",
+			"BronsonsHorde",
+			"BullardsArmoredCavalry",
+			"QuintsOlympianGroundpounders",
+			"GraysGhosts",
+			"BlackOutlaws",
+			"21stCentauriLancers",
+			"RubinskysLightHorse",
+			"KhorsakovsCossacks",
+			"EridaniLightHorse",
+			"IrukjandiCompany",
+			"AntianLanciarii",
+			"BlackCaravel",
+			"KnightsOfCaerbannog",
+			"WinfieldsRegiment",
+			"ToothOfYmir",
+			"JacobsJuggernauts",
+			"LindonsBattalion",
+			"GrimDetermination",
+			"SolarisVIIMercLeague"
+		],
+		"AuriganPirates": [
+			"BandOfTheDamned",
+			"DeathsConsorts",
+			"MorrisonsExtractors",
+			"NewBeltPirates",
+			"TortugaFusiliers",
+			"ShenSeTian"
+		]
+	}
 }

@@ -1,0 +1,92 @@
+{
+	"Custom": {
+		"ComponentExplosion": {
+			"StabilityDamage": 100
+		},
+		"Category": [
+			{
+				"CategoryID": "Gyro"
+			},
+			{
+				"CategoryID": "Quirk"
+			}
+		],
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "[[Chassis.Tonnage]]/10",
+				"CBillCost": "[[Chassis.Tonnage]] * 1.15"
+			}
+		},
+		"Flags": [
+				"default",
+				"not_broken",
+				"no_salvage",
+				"autorepair",
+				"ignore_damage"
+		],
+		"BonusDescriptions": [
+				"360Twist",
+				"IsGyro"
+		]
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 500000,
+		"Rarity": 99,
+		"Purchasable": false,
+		"Manufacturer": "Quirk",
+		"Model": "Cossack",
+		"UIName": "Cossack 360 Torso Twist",
+		"Id": "Gear_Quirk_360Twist_Cossack",
+		"Name": "Cossack 360 Torso Twist",
+		"Details": "This piece of gear represents the Cossack's inherent 360 Torso Twist quirk. This means the Cossack can fire in any direction regardless of its facing thanks to its extending torso actuators.",
+		"Icon": "uixSvgIcon_equipment_Gyro"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 3,
+	"Tonnage": 0,
+	"AllowedLocations": "CenterTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "GyroGenericThreshhold",
+				"Name": "Gyroscopic Orientation",
+				"Details": "The gyro helps establish center-of-mass equilibrium for the BattleMech.",
+				"Icon": "uixSvgIcon_equipment_Gyro"
+			},
+			"statisticData": {
+				"statName": "UnsteadyThreshold",
+				"operation": "Float_Add",
+				"modValue": "20.0",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"BLACKLISTED",
+			"component_type_variant"
+		],
+		"tagSetSourceFile": ""
+	}
+}

@@ -1,0 +1,86 @@
+{
+	"Description": {
+		"Id": "3066-03-21",
+		"Name": "MercNews Broadcast",
+		"Details": "[[DM.Factions[faction_Marian],MARIAN]] INVASION UPDATE:  [[DM.Factions[faction_Circinus],CIRCINIAN]] RESISTANCE HEAVIER THAN EXPECTED!\r\n\n\nCircinus, [[DM.Factions[faction_Circinus],Circinus Federation]]:  After weeks of combat, the Marian invasion of the Circinus Federation capital has met far stronger than expected resistance.  [[DM.BaseDescriptionDefs[LoreMRBC],MRBC]] observers report that the [[DM.BaseDescriptionDefs[LoreMcHG],McIntyre House Guard]], the [[DM.BaseDescriptionDefs[LoreBlackWarriors],Black Warriors]] and supporting mercenaries are deploying at least eight reinforced battalions of Battlemechs plus armour and infantry support, over three times the previous estimates of Circinus strength.  The Circinian forces also seem to be equiped with newer and more advanced Battlemechs than they were previously known to possess.  As a result, the [[DM.BaseDescriptionDefs[LoreMHAF],MHAF]] advance has slowed to a crawl.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "[[DM.Factions[faction_Circinus],CIRCINUS]] COUNTER-ATTACKS, [[DM.BaseDescriptionDefs[LoreBlackWarriors],BLACK WARRIORS]] INVADE [[DM.Factions[faction_Marian],MARIAN]] CAPITAL:\r\n\n\nAlphard, Marian Hegemony: While primarily on the defensive, the Circinus Federation has also assigned some of these extra forces on to the attack.  Smaller mercenary commands, hired by the Circinians, have been fed into the combat on Blantleff and Maximillian.  By prolonging the conflicts there, the Circinians are preventing Marian forces on these relatively unimportant planets from joining the fight on Circinus.\n\n\nAnd more surprisingly, an entire battalion of [[DM.BaseDescriptionDefs[LoreBlackWarriors],Black Warriors]] have landed on the Marian Hegemony capital of Alphard.  The planet's defenders, consisting of the [[DM.Factions[faction_CohorsMorituri],Cohors Morituri]] and planetary milita, are being pressed hard by the Black Warrior attack.  Even now Caesar O'Rielly is reportedly considering pulling more forces away from the main invasion to fend off the attack on his capital.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_give_starsystemdef_Circinus_to_Circinus",
+									"WIIC_Marian_attacks_starsystemdef_Circinus",
+									"WIIC_Circinus_raids_starsystemdef_Alphard(MH)",
+									"WIIC_set_starsystemdef_Circinus_defender_strength_60",
+									"WIIC_set_starsystemdef_Circinus_attacker_strength_20"
+								],	
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

@@ -1,10 +1,4 @@
 {
-	"Custom": {
-		"ArmActuatorSupport": {
-			"LeftLimit": "Hand",
-			"RightLimit": "Lower"
-		}
-	},
 	"Description": {
 		"Cost": 2556000,
 		"Rarity": 2,
@@ -66,7 +60,11 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -80,11 +78,11 @@
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				}
 			],
@@ -98,7 +96,7 @@
 			"Location": "CenterTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				}
 			],
@@ -112,11 +110,11 @@
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				}
 			],
@@ -130,11 +128,11 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
@@ -209,7 +207,9 @@
 	],
 	"VariantName": "FRB-2E",
 	"ChassisTags": {
-		"items": [],
+		"items": [
+			"ArmLimitLowerRight"
+		],
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Flanker and Harasser",

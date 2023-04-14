@@ -1,10 +1,4 @@
 {
-	"Custom": {
-		"ArmActuatorSupport": {
-			"LeftLimit": "Upper",
-			"RightLimit": "Upper"
-		}
-	},
 	"CustomParts": {
 		"FiringArc": 360
 	},
@@ -69,11 +63,11 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
@@ -114,11 +108,11 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
@@ -226,7 +220,10 @@
 	],
 	"VariantName": "UM-R29",
 	"ChassisTags": {
-		"items": [],
+		"items": [
+			"ArmLimitUpperRight",
+			"ArmLimitUpperLeft"
+		],
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Ambusher",

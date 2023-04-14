@@ -5,14 +5,14 @@
 				"CategoryID": "w/s/l/er"
 			}
 		],
-		"BonusDescriptions": {
-			"Bonuses": [
+		"BonusDescriptions": [
 				"WpnCrits: +20%",
 				"WpnAccuracy: +2",
 				"Multilaser",
-				"PipsIgnored: 3"
+				"PipsIgnored: 3",
+				"WeaponAttachmentCompatible: Laser Insulator",
+				"WeaponAttachmentCompatible: Laser FCS"
 			]
-		}
 	},
 	"Category": "AntiPersonnel",
 	"Type": "Laser",
@@ -55,7 +55,7 @@
 		"Id": "Weapon_Laser_SmallLaserER_2-BlazeFire",
 		"Name": "Rotary ER S Laser",
 		"Details": "An improvement upon standard Small Lasers, Extended-Range Small Lasers extend their effective range at the cost of more heat generation. This laser has been calibrated to fire a cluster of three quick shots instead of one sustained beam, which gives it a much higher chance to hit in general.",
-		"Icon": "uixSvgIcon_weapon_Support"
+		"Icon": "laser-burst"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
@@ -74,7 +74,9 @@
 			"component_type_stock",
 			"component_type_lostech",
 			"range_close",
-			"BLACKLISTED"
+			"LaserInsulatorAttachable.{location}",
+			"LaserInsulatorSupported-SingleShot",
+			"LaserFCSSupported-SingleShot"
 		],
 		"tagSetSourceFile": ""
 	}

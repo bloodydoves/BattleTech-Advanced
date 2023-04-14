@@ -5,14 +5,14 @@
 				"CategoryID": "w/s/l/pulse"
 			}
 		],
-		"BonusDescriptions": {
-			"Bonuses": [
+		"BonusDescriptions": [
 				"WpnAccuracy: +2",
 				"PipsIgnored: 4",
 				"Acid: 5%",
-				"AntiBA: 50%"
+				"AntiBA: 50%",
+				"WeaponAttachmentCompatible: Laser Insulator",
+				"WeaponAttachmentCompatible: Laser FCS"
 			]
-		}
 	},
 	"Category": "AntiPersonnel",
 	"Type": "Laser",
@@ -54,7 +54,7 @@
 		"Id": "Weapon_Laser_SmallLaserPulse_1-Maxell",
 		"Name": "Dissolving S Pulse",
 		"Details": "An improvement upon standard Small Lasers, Small Pulse Lasers use pulses of light instead of a single beam. This results in better accuracy and damage output but with greatly increased heat and weight. This pulse laser has been calibrated to cascade over enemy armor, weakening it for further attacks for a short period of time.",
-		"Icon": "uixSvgIcon_weapon_Support"
+		"Icon": "laser-burst"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
@@ -111,7 +111,9 @@
 			"component_type_stock",
 			"component_type_lostech",
 			"range_close",
-			"BLACKLISTED"
+			"LaserInsulatorAttachable.{location}",
+			"LaserInsulatorSupported-SingleShot",
+			"LaserFCSSupported-SingleShot"
 		],
 		"tagSetSourceFile": ""
 	}

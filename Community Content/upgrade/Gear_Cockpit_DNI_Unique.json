@@ -14,25 +14,21 @@
 				"CBillCost": "[[Chassis.Tonnage]] * 1.15"
 			}
 		},
-		"BonusDescriptions": {
-			"Bonuses": [
+		"BonusDescriptions": [
 				"Initiative: +1",
 				"LanceIndirectAcc: +1",
 				"LanceDirectAcc: +1",
 				"Health: 2",
 				"NoBleedout",
 				"IsCockpit"
-			]
-		},
-		"Flags": {
-			"flags": [
+			],
+		"Flags": [
 				"default",
 				"not_broken",
 				"no_salvage",
 				"autorepair",
 				"ignore_damage"
-			]
-		}
+		]
 	},
 	"StatName": null,
 	"RelativeModifier": 0,
@@ -109,7 +105,8 @@
 				"statName": "BonusHealth",
 				"operation": "Int_Add",
 				"modValue": "2",
-				"modType": "System.Int32"
+				"modType": "System.Int32",
+				"targetCollection": "Pilot"
 			}
 		},
 		{

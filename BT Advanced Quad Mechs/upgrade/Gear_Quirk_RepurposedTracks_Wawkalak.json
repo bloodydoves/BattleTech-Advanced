@@ -1,0 +1,75 @@
+{
+	"Custom": {
+		"Category": {
+			"CategoryID": "LegLowerActuator"
+		},
+		"BonusDescriptions": [
+			"ModularArmor: 30"
+		],
+		"Flags": [
+			"default",
+			"not_broken",
+			"no_salvage",
+			"ignore_shutdown",
+			"autorepair"
+		]
+	},
+	"Description": {
+		"Cost": 30000,
+		"Rarity": 0,
+		"Purchasable": true,
+		"Manufacturer": "Quirk",
+		"Model": "Wawkalak",
+		"UIName": "Repurposed Tracks",
+		"Id": "Gear_Quirk_RepurposedTracks_Wawkalak",
+		"Name": "Repurposed Tracks",
+		"Details": "These are repurposed experimental Mech Tracks, intended for use on the Wawkalak when it transformed into a traditional Combat Vehicle. However, since the transformational gear proved non-viable, the tracks were repurposed to serve as additional leg armor. Though the tracks aren't perfect as far as armor goes, they do provide some extra defense for the Wawkalak's legs, helping it stick around in combat longer than it might otherwise.",
+		"Icon": "uixSvgIcon_equipment_ActuatorLeg"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0,
+	"AllowedLocations": "Legs,Arms",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Status-Quirk-RepurposedTracks-{location}",
+				"Name": "Reinforced Armor",
+				"Details": "Reinforced Armor",
+				"Icon": "uixSvgIcon_equipment_ActuatorLeg"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"effectsPersistAfterDestruction": true,
+				"statName": "{location}.Armor",
+				"operation": "Float_Add",
+				"modValue": "30",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}

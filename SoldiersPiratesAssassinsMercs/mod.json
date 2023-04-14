@@ -2,7 +2,7 @@
 	"Name": "SoldiersPiratesAssassinsMercs",
 	"DLL": "SoldiersPiratesAssassinsMercs.dll",
 	"Hidden": true,
-	"Version": "1.1.0.8",
+	"Version": "1.1.0.9",
 	"Description": "",
 	"Author": "T-Bone",
 	"Website": "https://github.com/ajkroeg/SoldiersPiratesAssassinsMercs",
@@ -10,12 +10,10 @@
 	"DependsOn": [],
 	"CustomResourceTypes": [],
 	"Settings": {
+		"dumpSubFactions": false,
 		"enableDebug": true,
 		"enableTrace": true,
 		"BlacklistedContractTypesAndIDs": [
-			"SoloDuel",
-			"DuoDuel",
-			"Blackout",
 			"StoryTime_1_Retreat_Default",
 			"StoryTime_2_ThreeYearsLater_Default",
 			"StoryTime_3_Axylus_Default",
@@ -33,6 +31,14 @@
 			"StoryTime_7b_TyrlonAttack_Default",
 			"StoryTime_8_a_Locura_Default",
 			"StoryTime_8_b_Downfall_Default",
+			"DuoDuel_GameworldDuoAssault",
+			"DuoDuel_GameworldDuoHeavy",
+			"DuoDuel_GameworldDuoLight",
+			"DuoDuel_GameworldDuoMedium",
+			"DuoDuel_GameworldSoloAssault",
+			"DuoDuel_GameworldSoloHeavy",
+			"DuoDuel_GameworldSoloLight",
+			"DuoDuel_GameworldSoloMedium",
 			"Assassinate_Kringle",
 			"DuoDuel_MaxRevenge1",
 			"Rescue_MaxRevenge",
@@ -48,7 +54,7 @@
 				"Davion": 1.0,
 				"Steiner": 1.0,
 				"Marik": 1.0,
-				"Comstar": 1.0,
+				"ComStar": 1.0,
 				"WordOfBlake": 1.0,
 				"Rasalhague": 1.0,
 				"TaurianConcordat": 1.0,
@@ -109,6 +115,17 @@
 						"FactionName": "CGBThetaGalaxy",
 						"FactionWeight": 1,
 						"FactionFallback": "ClanGhostBear"
+					}
+				]
+			},
+			"ClanSnowRaven": {
+				"FactionReplaceChance": 0.3,
+				"FactionMCAdditionalLanceReplaceChance": 0.6,
+				"AlternateOpforWeights": [
+					{
+						"FactionName": "CSRDeltaGalaxy",
+						"FactionWeight": 1,
+						"FactionFallback": "ClanSnowRaven"
 					}
 				]
 			},
@@ -253,24 +270,24 @@
 					}
 				]
 			},
-			"Comstar": {
+			"ComStar": {
 				"FactionReplaceChance": 0.8,
 				"FactionMCAdditionalLanceReplaceChance": 0.7,
 				"AlternateOpforWeights": [
 					{
 						"FactionName": "2ndArmyVMu",
 						"FactionWeight": 3,
-						"FactionFallback": "Comstar"
+						"FactionFallback": "ComStar"
 					},
 					{
 						"FactionName": "11thArmyVEta",
 						"FactionWeight": 5,
-						"FactionFallback": "Comstar"
+						"FactionFallback": "ComStar"
 					},
 					{
 						"FactionName": "7thArmyVIota",
 						"FactionWeight": 2,
-						"FactionFallback": "Comstar"
+						"FactionFallback": "ComStar"
 					}
 				]
 			},
@@ -459,7 +476,7 @@
 					}
 				]
 			},
-			"starsystemdef_Elgin": {
+			"starsystemdef_Chisholm(Elgin2878+)": {
 				"FactionReplaceChance": 0.4,
 				"FactionMCAdditionalLanceReplaceChance": 0.6,
 				"AlternateOpforWeights": [
@@ -589,7 +606,7 @@
 					}
 				]
 			},
-			"starsystemdef_Liberty": {
+			"starsystemdef_Carver(Liberty3063+)": {
 				"FactionReplaceChance": 0.4,
 				"FactionMCAdditionalLanceReplaceChance": 0.6,
 				"AlternateOpforWeights": [
@@ -667,7 +684,7 @@
 					}
 				]
 			},
-			"starsystemdef_Fletcher": {
+			"starsystemdef_Fletcher(CC)": {
 				"FactionReplaceChance": 0.4,
 				"FactionMCAdditionalLanceReplaceChance": 0.6,
 				"AlternateOpforWeights": [
@@ -1534,7 +1551,7 @@
 				"AppearanceWeight": 4,
 				"RestrictionIsWhitelist": true,
 				"EmployerRestrictions": [
-					"Comstar",
+					"ComStar",
 					"Locals",
 					"Mercenaries"
 				],

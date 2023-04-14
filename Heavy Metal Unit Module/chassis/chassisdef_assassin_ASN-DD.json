@@ -1,9 +1,4 @@
 {
-	"Custom": {
-		"ArmActuatorSupport": {
-			"RightLimit": "Lower"
-		}
-	},
 	"Description": {
 		"Cost": 3731952,
 		"Rarity": 6,
@@ -56,7 +51,11 @@
 			"Location": "Head",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -79,7 +78,7 @@
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
@@ -102,11 +101,11 @@
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				}
 			],
@@ -120,7 +119,11 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMountID": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -196,7 +199,8 @@
 	"VariantName": "ASN-DD",
 	"ChassisTags": {
 		"items": [
-			"HeroMech"
+			"HeroMech",
+			"ArmLimitLowerRight"
 		],
 		"tagSetSourceFile": ""
 	},

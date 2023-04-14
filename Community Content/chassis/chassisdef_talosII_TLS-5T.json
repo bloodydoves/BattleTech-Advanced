@@ -1,10 +1,6 @@
 {
 	"Custom": {
-		"ArmActuatorSupport": {
-			"LeftLimit": "Hand",
-			"RightLimit": "Lower"
-		},
-            "AssemblyVariant": {
+		"AssemblyVariant": {
             "PrefabID": "TalosII",
             "Exclude": false,
             "Include": true
@@ -19,12 +15,12 @@
 		"UIName": "Talos II",
 		"Id": "chassisdef_talosII_TLS-5T",
 		"Name": "Talos II",
-		"Details": "In need of a symbol of national pride to rally around in the face of invasion, the Taurian military command ordered the venerable and proven Talos design to be fully reworked into a new 70 ton heavy trooper mech. To ensure the mechs could be deployed as quickly as possible, Vandenberg MilTech used as many commonly available and battle tested technologies as possible. The Talos II -5T was the first, carrying an AC/10, an LRM-10, two SRM-4's, and two small lasers. 12 single heat sinks, a 280 standard engine, and 13 tons of armor make this mech a cheap and dependable general purpose design.\n\n <b><color=#e51717>COMMUNITY CONTENT</color></b>",
+		"Details": "In need of a symbol of national pride to rally around in the face of invasion, the Taurian military command ordered the venerable and proven Talos design to be fully reworked into a new 70 ton heavy trooper mech. To ensure the mechs could be deployed as quickly as possible, Vandenberg MilTech used as many commonly available and battle tested technologies as possible. The Talos II -5T was the first, carrying an AC/10, an LRM-10, two SRM-4's, and two small lasers. 12 single heat sinks, a 280 standard engine, and 13 tons of armor make this mech a cheap and dependable general purpose design.",
 		"Icon": "uixTxrIcon_talos"
 	},
 	"VariantName": "TLS-5T",
 	"StockRole": "Heavy Trooper",
-	"YangsThoughts": "The Talos is an extremely old but reliable Taurian design. The original became a staple for a reason, and the Talos II is just that mech but bigger. An LRM-10, two SRM-4s, two small lasers and the trusty AC/10 make this a cheap and effective line trooper.\n\n <b><color=#e51717>COMMUNITY CONTENT</color></b>",
+	"YangsThoughts": "The Talos is an extremely old but reliable Taurian design. The original became a staple for a reason, and the Talos II is just that mech but bigger. An LRM-10, two SRM-4s, two small lasers and the trusty AC/10 make this a cheap and effective line trooper.",
 	"PrefabIdentifier": "chrprfmech_talosbase-001",
 	"PrefabBase": "talos",
 	"Tonnage": 70,
@@ -59,7 +55,10 @@
 	"DFASelfDamage": 55,
 	"DFAInstability": 25,
 	"ChassisTags": {
-		"items": ["mr-resize-1.15-1.15-1.15"],
+		"items": [
+			"mr-resize-1.15-1.15-1.15",
+			"ArmLimitLowerRight"
+		],
 		"tagSetSourceFile": ""
 	},
 	"MechPartMax": 0,
@@ -125,11 +124,11 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -143,11 +142,11 @@
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				}
 			],
@@ -170,11 +169,11 @@
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				}
 			],
@@ -188,15 +187,15 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMountID": "Ballistic",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMountID": "Ballistic",
 					"Omni": false
 				}
 			],

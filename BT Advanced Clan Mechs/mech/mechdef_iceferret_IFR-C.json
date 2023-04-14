@@ -11,6 +11,7 @@
 			"unit_indirectFire",
 			"unit_bracket_low",
 			"ClanWolf",
+			"ClanSnowRaven",
 			"ClanJadeFalcon",
 			"ClanGhostBear",
 			"ClanNovaCat",
@@ -35,7 +36,7 @@
 		"UIName": "Ice Ferret IFR-C",
 		"Id": "mechdef_iceferret_IFR-C",
 		"Name": "Ice Ferret",
-		"Details": "The Ice Ferret is a very capable medium scout OmniMech, which is well armored and fast, and can be configured as a headhunter or as a fire-support 'Mech. The Ice Ferret is built on a lightweight Endo Steel chassis that saves weight and is powered by a massive 360 XL engine that gives the Ice Ferret a top speed of 129.6 km/h. A fire support configuration of the Ice Ferret, the C configuration has a pair of LRM-5 launchers and a LRM-15 launcher, each linked to an Artemis IV fire control system for increased missile accuracy. For close range defense, the 'Mech has a pair of ER Small Lasers.",
+		"Details": "The Ice Ferret is a very capable medium scout OmniMech, which is well armored and fast, and can be configured as a headhunter or as a fire-support 'Mech. The Ice Ferret is built on a lightweight Endo Steel chassis that saves weight and is powered by a massive 360 XL engine that gives the Ice Ferret a top speed of 129.6 km/h. A fire support configuration of the Ice Ferret, the C configuration has a trio of LRM-5 launchers launcher, each linked to an Artemis IV fire control system for increased missile accuracy. For close range defense, the 'Mech has an ER Small Laser.",
 		"Icon": "uixTxrIcon_iceferret"
 	},
 	"simGameMechPartCost": 490000,
@@ -116,17 +117,6 @@
 	],
 	"inventory": [
 		{
-			"MountedLocation": "Head",
-			"ComponentDefID": "Gear_TargetingTrackingSystem_ARTEMISIV",
-			"SimGameUID": null,
-			"ComponentDefType": "Upgrade",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
 			"MountedLocation": "LeftArm",
 			"ComponentDefID": "emod_arm_part_shoulder",
 			"SimGameUID": "",
@@ -172,7 +162,7 @@
 		},
 		{
 			"MountedLocation": "RightArm",
-			"ComponentDefID": "emod_arm_omni_lower",
+			"ComponentDefID": "emod_arm_part_lower",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": 0,
@@ -183,7 +173,7 @@
 		},
 		{
 			"MountedLocation": "RightArm",
-			"ComponentDefID": "emod_arm_omni_hand",
+			"ComponentDefID": "emod_arm_part_hand",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": 0,
@@ -289,18 +279,20 @@
 			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": null,
-			"hasPrefabName": false
+			"hasPrefabName": false,
+			"LocalGUID":"target_LRM_1"
 		},
 		{
 			"MountedLocation": "RightArm",
-			"ComponentDefID": "Weapon_Laser_SmallLaserER_CLAN",
+			"ComponentDefID": "Gear_Attachment_ArtemisIV",
 			"SimGameUID": null,
-			"ComponentDefType": "Weapon",
+			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
 			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": null,
-			"hasPrefabName": false
+			"hasPrefabName": false,
+			"TargetComponentGUID":"target_LRM_1"
 		},
 		{
 			"MountedLocation": "RightArm",
@@ -333,18 +325,44 @@
 			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": null,
-			"hasPrefabName": false
+			"hasPrefabName": false,
+			"LocalGUID":"target_LRM_2"
+		},
+		{
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "Gear_Attachment_ArtemisIV",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false,
+			"TargetComponentGUID":"target_LRM_2"
 		},
 		{
 			"MountedLocation": "LeftArm",
-			"ComponentDefID": "Weapon_LRM_LRM15_CLAN",
+			"ComponentDefID": "Weapon_LRM_LRM5_CLAN",
 			"SimGameUID": null,
 			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
 			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": null,
-			"hasPrefabName": false
+			"hasPrefabName": false,
+			"LocalGUID":"target_LRM_3"
+		},
+		{
+			"MountedLocation": "LeftArm",
+			"ComponentDefID": "Gear_Attachment_ArtemisIV",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false,
+			"TargetComponentGUID":"target_LRM_3"
 		},
 		{
 			"MountedLocation": "LeftTorso",

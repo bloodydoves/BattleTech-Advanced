@@ -1,8 +1,5 @@
 {
 	"Custom": {
-		"ArmActuatorSupport": {
-			"RightLimit": "Lower"
-		},
 		"AssemblyVariant": {
 			"PrefabID": "Highlander",
 			"Exclude": false,
@@ -24,7 +21,7 @@
 	"MovementCapDefID": "movedef_highlander_HGN-733",
 	"PathingCapDefID": "pathingdef_assault",
 	"HardpointDataDefID": "hardpointdatadef_highlander",
-	"PrefabIdentifier": "chrPrfMech_highlander_SLDFBase-001",
+	"PrefabIdentifier": "chrPrfMech_highlanderBase-001",
 	"PrefabBase": "highlander",
 	"Tonnage": 90,
 	"InitialTonnage": 9,
@@ -70,15 +67,15 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
@@ -92,11 +89,11 @@
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				}
 			],
@@ -128,11 +125,11 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMountID": "Ballistic",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMountID": "Ballistic",
 					"Omni": false
 				}
 			],
@@ -208,7 +205,8 @@
 	"VariantName": "HGN-HM",
 	"ChassisTags": {
 		"items": [
-			"HeroMech"
+			"HeroMech",
+			"ArmLimitLowerRight"
 		],
 		"tagSetSourceFile": ""
 	},
@@ -258,7 +256,7 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "RightTorso",
+			"MountedLocation": "RightLeg",
 			"ComponentDefID": "Gear_JumpJet_Improved_HeavyMetal",
 			"SimGameUID": "",
 			"ComponentDefType": "JumpJet",
@@ -280,7 +278,7 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "LeftTorso",
+			"MountedLocation": "LeftLeg",
 			"ComponentDefID": "Gear_JumpJet_Improved_HeavyMetal",
 			"SimGameUID": "",
 			"ComponentDefType": "JumpJet",

@@ -1,10 +1,4 @@
 {
-	"Custom": {
-		"ArmActuatorSupport": {
-			"LeftLimit": "Lower",
-			"RightLimit": "Lower"
-		}
-	},
 	"Description": {
 		"Cost": 8300000,
 		"Rarity": 999,
@@ -23,7 +17,7 @@
 	"PrefabIdentifier": "chrPrfMech_zeusBase-001",
 	"PrefabBase": "zeus",
 	"Tonnage": 80,
-	"InitialTonnage": 37.5,
+	"InitialTonnage": 8,
 	"weightClass": "ASSAULT",
 	"BattleValue": 7814000,
 	"Heatsinks": 0,
@@ -57,7 +51,7 @@
 			"Location": "Head",
 			"Hardpoints": [],
 			"Tonnage": 0,
-			"InventorySlots": 1,
+			"InventorySlots": 6,
 			"MaxArmor": 45,
 			"MaxRearArmor": -1,
 			"InternalStructure": 16
@@ -66,12 +60,12 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMountID": "Ballistic",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
-			"InventorySlots": 8,
+			"InventorySlots": 12,
 			"MaxArmor": 130,
 			"MaxRearArmor": -1,
 			"InternalStructure": 65
@@ -80,20 +74,20 @@
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
-			"InventorySlots": 10,
+			"InventorySlots": 12,
 			"MaxArmor": 170,
 			"MaxRearArmor": 85,
 			"InternalStructure": 85
@@ -102,12 +96,12 @@
 			"Location": "CenterTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
-			"InventorySlots": 4,
+			"InventorySlots": 16,
 			"MaxArmor": 250,
 			"MaxRearArmor": 125,
 			"InternalStructure": 125
@@ -116,7 +110,7 @@
 			"Location": "RightTorso",
 			"Hardpoints": [],
 			"Tonnage": 0,
-			"InventorySlots": 10,
+			"InventorySlots": 12,
 			"MaxArmor": 170,
 			"MaxRearArmor": 85,
 			"InternalStructure": 85
@@ -125,16 +119,16 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
-			"InventorySlots": 8,
+			"InventorySlots": 12,
 			"MaxArmor": 130,
 			"MaxRearArmor": -1,
 			"InternalStructure": 65
@@ -143,7 +137,7 @@
 			"Location": "LeftLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
-			"InventorySlots": 4,
+			"InventorySlots": 6,
 			"MaxArmor": 170,
 			"MaxRearArmor": -1,
 			"InternalStructure": 85
@@ -152,7 +146,7 @@
 			"Location": "RightLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
-			"InventorySlots": 4,
+			"InventorySlots": 6,
 			"MaxArmor": 170,
 			"MaxRearArmor": -1,
 			"InternalStructure": 85
@@ -205,7 +199,9 @@
 	"VariantName": "ZEU-SK",
 	"ChassisTags": {
 		"items": [
-			"HeroMech"
+			"HeroMech",
+			"ArmLimitLowerRight",
+			"ArmLimitLowerLeft"
 		],
 		"tagSetSourceFile": ""
 	},

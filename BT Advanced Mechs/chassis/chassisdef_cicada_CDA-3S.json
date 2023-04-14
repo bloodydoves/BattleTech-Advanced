@@ -1,10 +1,4 @@
 {
-	"Custom": {
-		"ArmActuatorSupport": {
-			"LeftLimit": "Upper",
-			"RightLimit": "Upper"
-		}
-	},
 	"Description": {
 		"Cost": 3400000,
 		"Rarity": 1,
@@ -14,7 +8,7 @@
 		"UIName": "Cicada",
 		"Id": "chassisdef_cicada_CDA-3S",
 		"Name": "Cicada",
-		"Details": "A somewhat unusual design produced by Gibson Federated, this fire support variant is a favoured choice of many mercenary commands. Refitting a standard 2A with a smaller 280 rated XL Engine, Gibson Federated managed to mount a pair of Artemis IV enhanced LRM Launchers with 3 tons of ammunition. Should an enemy get close enough to return fire, the mech carries an advanced Guardian ECM suite and a full ton of additional armour, dramatically increasing it's survival chances.",
+		"Details": "A somewhat unusual design produced by Gibson Federated, this fire support variant is a favoured choice of many mercenary commands. Refitting a standard 2A with a smaller 280 rated XL Engine, Gibson Federated managed to mount a pair of Artemis IV enhanced LRM Launchers with 4 tons of ammunition. Should an enemy get close enough to return fire, the mech carries an advanced Guardian ECM suite and a full ton of additional armour, dramatically increasing it's survival chances.",
 		"Icon": "uixTxrIcon_cicada"
 	},
 	"MovementCapDefID": "movedef_cicada_CDA-3C",
@@ -64,7 +58,12 @@
 		},
 		{
 			"Location": "LeftArm",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
 			"MaxArmor": 60,
@@ -75,11 +74,11 @@
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				}
 			],
@@ -102,11 +101,11 @@
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				}
 			],
@@ -191,12 +190,14 @@
 	"VariantName": "CDA-3S",
 	"ChassisTags": {
 		"items": [
-			"IgnoreEngineLimit"
+			"IgnoreEngineLimit",
+			"ArmLimitUpperRight",
+			"ArmLimitUpperLeft"
 		],
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Scout & Sniper",
-	"YangsThoughts": "A somewhat unusual design produced by Gibson Federated, this fire support variant is a favoured choice of many mercenary commands. Refitting a standard 2A with a smaller 280 rated XL Engine, Gibson Federated managed to mount a pair of Artemis IV enhanced LRM Launchers with 3 tons of ammunition. Should an enemy get close enough to return fire, the mech carries an advanced Guardian ECM suite and a full ton of additional armour, dramatically increasing it's survival chances.",
+	"YangsThoughts": "A somewhat unusual design produced by Gibson Federated, this fire support variant is a favoured choice of many mercenary commands. Refitting a standard 2A with a smaller 280 rated XL Engine, Gibson Federated managed to mount a pair of Artemis IV enhanced LRM Launchers with 4 tons of ammunition. Should an enemy get close enough to return fire, the mech carries an advanced Guardian ECM suite and a full ton of additional armour, dramatically increasing it's survival chances.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",

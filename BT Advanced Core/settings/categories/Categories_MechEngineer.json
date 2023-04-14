@@ -3,17 +3,15 @@
 		{
 			"Name": "LifeSupportA",
 			"DisplayName": "Life Support",
-			"MaxEquiped": 1,
-			"MinEquiped": 1,
-			"AutoReplace": true,
-			"ReplaceAnyLocation": true,
+			"BaseLimits": [
+				{
+					"Max": 1,
+					"Min": 1
+				}
+			],
 			"DefaultCustoms": {
-				"InventorySorter": {
-					"SortKey": "Cockpit0"
-				},
-				"Sorter": {
-					"Order": 0
-				},
+				"InventorySorter": "0",
+				"Sorter": 0,
 				"CriticalEffects": {
 					"LinkedStatisticName": "LifeSupport",
 					"OnDestroyedEffectIDs": [
@@ -26,16 +24,16 @@
 		{
 			"Name": "SensorsA",
 			"DisplayName": "Sensors",
-			"MaxEquiped": 1,
-			"MinEquiped": 1,
+			"BaseLimits": [
+				{
+					"Max": 1,
+					"Min": 1
+				}
+			],
 			"AutoReplace": true,
 			"DefaultCustoms": {
-				"InventorySorter": {
-					"SortKey": "Cockpit1"
-				},
-				"Sorter": {
-					"Order": 1
-				},
+				"InventorySorter": "1",
+				"Sorter": 1,
 				"CriticalEffects": {
 					"LinkedStatisticName": "Sensors",
 					"PenalizedEffectIDs": [
@@ -52,17 +50,16 @@
 		{
 			"Name": "Cockpit",
 			"DisplayName": "Cockpit",
-			"MaxEquiped": 1,
-			"MinEquiped": 1,
-			"AutoReplace": true,
+			"BaseLimits": [
+				{
+					"Max": 1,
+					"Min": 1
+				}
+			],
 			"ReplaceAnyLocation": true,
 			"DefaultCustoms": {
-				"InventorySorter": {
-					"SortKey": "Cockpit2"
-				},
-				"Sorter": {
-					"Order": 2
-				},
+				"InventorySorter": "2",
+				"Sorter": 2,
 				"CriticalEffects": {
 					"DeathMethod": "PilotKilled"
 				}
@@ -71,16 +68,15 @@
 		{
 			"Name": "SensorsB",
 			"DisplayName": "Sensors",
-			"MaxEquiped": 1,
-			"MinEquiped": 1,
-			"AutoReplace": true,
+			"BaseLimits": [
+				{
+					"Max": 1,
+					"Min": 1
+				}
+			],
 			"DefaultCustoms": {
-				"InventorySorter": {
-					"SortKey": "Cockpit3"
-				},
-				"Sorter": {
-					"Order": 3
-				},
+				"InventorySorter": "3",
+				"Sorter": 3,
 				"CriticalEffects": {
 					"LinkedStatisticName": "Sensors",
 					"PenalizedEffectIDs": [
@@ -97,17 +93,15 @@
 		{
 			"Name": "LifeSupportB",
 			"DisplayName": "Life Support",
-			"MaxEquiped": 1,
-			"MinEquiped": 1,
-			"AutoReplace": true,
-			"ReplaceAnyLocation": true,
+			"BaseLimits": [
+				{
+					"Max": 1,
+					"Min": 1
+				}
+			],
 			"DefaultCustoms": {
-				"InventorySorter": {
-					"SortKey": "Cockpit4"
-				},
-				"Sorter": {
-					"Order": 4
-				},
+				"InventorySorter": "4",
+				"Sorter": 4,
 				"CriticalEffects": {
 					"LinkedStatisticName": "LifeSupport",
 					"OnDestroyedEffectIDs": [
@@ -120,88 +114,77 @@
 		{
 			"Name": "Armor",
 			"DisplayName": "Armor",
-			"MaxEquiped": 1,
-			"MinEquiped": 1,
-			"AutoReplace": true,
-			"DefaultCustoms": {
-				"MechConfiguration": {},
-				"InventorySorter": {
-					"SortKey": "CzOrder0"
-				},
-				"Color": {
-					"UIColor": "ArmorDamaged"
-				},
-				"Sorter": {
-					"Order": 0
-				},
-				"Flags": {
-					"Flags": [
-						"ignore_damage",
-						"no_salvage"
-					]
+			"BaseLimits": [
+				{
+					"Max": 1,
+					"Min": 1
 				}
+			],
+			"DefaultCustoms": {
+				"CustomWidget": "TopLeft",
+				"MechConfiguration": {},
+				"InventorySorter": "0",
+				"Sorter": 0,
+				"Color": "ArmorDamaged",
+				"Flags": [
+					"ignore_damage",
+					"no_salvage"
+				]
 			}
 		},
 		{
 			"Name": "Structure",
 			"DisplayName": "Structure",
-			"MaxEquiped": 1,
-			"MinEquiped": 1,
-			"AutoReplace": true,
-			"DefaultCustoms": {
-				"MechConfiguration": {},
-				"Color": {
-					"UIColor": "OrangeHalf"
-				},
-				"InventorySorter": {
-					"SortKey": "CzOrder1"
-				},
-				"Sorter": {
-					"Order": 1
-				},
-				"Flags": {
-					"Flags": [
-						"ignore_damage",
-						"no_salvage"
-					]
+			"BaseLimits": [
+				{
+					"Max": 1,
+					"Min": 1
 				}
+			],
+			"DefaultCustoms": {
+				"CustomWidget": "TopLeft",
+				"MechConfiguration": {},
+				"Color": "OrangeHalf",
+				"InventorySorter": "1",
+				"Sorter": 1,
+				"Flags": [
+					"ignore_damage",
+					"no_salvage"
+				]
 			}
 		},
 		{
 			"Name": "Cooling",
 			"DisplayName": "Cooling System",
-			"MaxEquiped": 1,
-			"MinEquiped": 1,
-			"AutoReplace": true,
-			"DefaultCustoms": {
-				"MechConfiguration": {},
-				"InventorySorter": {
-					"SortKey": "CzOrder2"
-				},
-				"Sorter": {
-					"Order": 2
-				},
-				"Flags": {
-					"Flags": [
-						"ignore_damage",
-						"no_salvage"
-					]
+			"BaseLimits": [
+				{
+					"Max": 1,
+					"Min": 1
 				}
+			],
+			"DefaultCustoms": {
+				"CustomWidget": "TopLeft",
+				"MechConfiguration": {},
+				"InventorySorter": "2",
+				"Sorter": 2,
+				"Flags": [
+					"ignore_damage",
+					"no_salvage"
+				]
 			}
 		},
 		{
 			"Name": "Gyro",
 			"DisplayName": "Gyro",
-			"MaxEquiped": 1,
-			"MinEquiped": 1,
-			"AutoReplace": true,
+			"BaseLimits": [
+				{
+					"Max": 1,
+					"Min": 1
+				}
+			],
 			"DefaultCustoms": {
-				"InventorySorter": {
-					"SortKey": "CzOrder3"
-				},
-				"Sorter": {
-					"Order": 3
-				},
+				"InventorySorter": "0",
+				"Sorter": 0,
 				"CriticalEffects": {
 					"PenalizedEffectIDs": [
 						[
@@ -246,76 +229,62 @@
 		{
 			"Name": "EngineShield",
 			"DisplayName": "Engine Shielding",
-			"MaxEquiped": 1,
-			"MinEquiped": 1,
-			"AutoReplace": true,
-			"DefaultCustoms": {
-				"InventorySorter": {
-					"SortKey": "CzOrder4"
-				},
-				"Sorter": {
-					"Order": 4
+			"BaseLimits": [
+				{
+					"Max": 1,
+					"Min": 1
 				}
+			],
+			"DefaultCustoms": {
+				"InventorySorter": "1",
+				"Sorter": 1
 			}
 		},
 		{
 			"Name": "EngineHeatBlock",
 			"DisplayName": "Engine Cooling",
-			"MaxEquiped": 1,
-			"MinEquiped": 1,
-			"AutoReplace": true,
-			"DefaultCustoms": {
-				"InventorySorter": {
-					"SortKey": "CzOrder5"
-				},
-				"Sorter": {
-					"Order": 5
+			"BaseLimits": [
+				{
+					"Max": 1,
+					"Min": 1
 				}
+			],
+			"DefaultCustoms": {
+				"InventorySorter": "2",
+				"Sorter": 2
 			}
 		},
 		{
 			"Name": "EngineCore",
 			"DisplayName": "Engine Core",
-			"MaxEquiped": 1,
-			"MinEquiped": 1,
-			"AutoReplace": true,
-			"DefaultCustoms": {
-				"InventorySorter": {
-					"SortKey": "CzOrder6"
-				},
-				"Sorter": {
-					"Order": 6
+			"BaseLimits": [
+				{
+					"Max": 1,
+					"Min": 1
 				}
+			],
+			"DefaultCustoms": {
+				"InventorySorter": "3",
+				"Sorter": 3
 			}
 		},
 		{
 			"Name": "EngineSlots",
 			"DisplayName": "Engine Slots",
 			"DefaultCustoms": {
-				"Sorter": {
-					"Order": 0
-				},
-				"Flags": {
-					"Flags": [
-						"not_broken",
-						"default"
-					]
-				}
+				"Sorter": 0,
+				"Flags": [
+					"not_broken",
+					"default"
+				]
 			}
 		},
 		{
 			"Name": "LegHip",
 			"DisplayName": "Hip",
-			"MaxEquipedPerLocation": 1,
-			"MinEquiped": 2,
-			"AutoReplace": true,
 			"DefaultCustoms": {
-				"InventorySorter": {
-					"SortKey": "ActuatorLeg0"
-				},
-				"Sorter": {
-					"Order": 0
-				},
+				"InventorySorter": "0",
+				"Sorter": 0,
 				"CriticalEffects": {
 					"DestroyedFloatieMessage": "Actuator DESTROYED",
 					"OnDestroyedEffectIDs": [
@@ -331,21 +300,63 @@
 						"CriticalEffect-LegFootDestroyed-{location}-pilot-pen"
 					]
 				}
-			}
+			},
+			"BaseLimits": [
+				{
+					"Location": "RightLeg",
+					"Min": 1,
+					"Max": 1
+				},
+				{
+					"Location": "LeftLeg",
+					"Min": 1,
+					"Max": 1
+				},
+				{
+					"Location": "LeftArm",
+					"Min": 0,
+					"Max": 0
+				},
+				{
+					"Location": "RightArm",
+					"Min": 0,
+					"Max": 0
+				}
+			],
+			"UnitLimits": [
+				{
+					"UnitType": "Quad",
+					"Limits": [
+						{
+							"Location": "LeftLeg",
+							"Min": 1,
+							"Max": 1
+						},
+						{
+							"Location": "RightLeg",
+							"Min": 1,
+							"Max": 1
+						},
+						{
+							"Location": "LeftArm",
+							"Min": 1,
+							"Max": 1
+						},
+						{
+							"Location": "RightArm",
+							"Min": 1,
+							"Max": 1
+						}
+					]
+				}
+			]
 		},
 		{
 			"Name": "LegUpperActuator",
 			"DisplayName": "Upper Leg Actuator",
-			"MaxEquipedPerLocation": 1,
-			"MinEquiped": 2,
-			"AutoReplace": true,
 			"DefaultCustoms": {
-				"InventorySorter": {
-					"SortKey": "ActuatorLeg1"
-				},
-				"Sorter": {
-					"Order": 1
-				},
+				"InventorySorter": "1",
+				"Sorter": 1,
 				"CriticalEffects": {
 					"DestroyedFloatieMessage": "Actuator DESTROYED",
 					"OnDestroyedEffectIDs": [
@@ -353,21 +364,63 @@
 						"CriticalEffect-LegUpperDestroyed-{location}-pilot-pen"
 					]
 				}
-			}
+			},
+			"BaseLimits": [
+				{
+					"Location": "RightLeg",
+					"Min": 1,
+					"Max": 1
+				},
+				{
+					"Location": "LeftLeg",
+					"Min": 1,
+					"Max": 1
+				},
+				{
+					"Location": "LeftArm",
+					"Min": 0,
+					"Max": 0
+				},
+				{
+					"Location": "RightArm",
+					"Min": 0,
+					"Max": 0
+				}
+			],
+			"UnitLimits": [
+				{
+					"UnitType": "Quad",
+					"Limits": [
+						{
+							"Location": "LeftLeg",
+							"Min": 1,
+							"Max": 1
+						},
+						{
+							"Location": "RightLeg",
+							"Min": 1,
+							"Max": 1
+						},
+						{
+							"Location": "LeftArm",
+							"Min": 1,
+							"Max": 1
+						},
+						{
+							"Location": "RightArm",
+							"Min": 1,
+							"Max": 1
+						}
+					]
+				}
+			]
 		},
 		{
 			"Name": "LegLowerActuator",
 			"DisplayName": "Lower Leg Actuator",
-			"MaxEquipedPerLocation": 1,
-			"MinEquiped": 2,
-			"AutoReplace": true,
 			"DefaultCustoms": {
-				"InventorySorter": {
-					"SortKey": "ActuatorLeg2"
-				},
-				"Sorter": {
-					"Order": 2
-				},
+				"InventorySorter": "2",
+				"Sorter": 2,
 				"CriticalEffects": {
 					"DestroyedFloatieMessage": "Actuator DESTROYED",
 					"OnDestroyedEffectIDs": [
@@ -375,21 +428,63 @@
 						"CriticalEffect-LegLowerDestroyed-{location}-pilot-pen"
 					]
 				}
-			}
+			},
+			"BaseLimits": [
+				{
+					"Location": "RightLeg",
+					"Min": 1,
+					"Max": 1
+				},
+				{
+					"Location": "LeftLeg",
+					"Min": 1,
+					"Max": 1
+				},
+				{
+					"Location": "LeftArm",
+					"Min": 0,
+					"Max": 0
+				},
+				{
+					"Location": "RightArm",
+					"Min": 0,
+					"Max": 0
+				}
+			],
+			"UnitLimits": [
+				{
+					"UnitType": "Quad",
+					"Limits": [
+						{
+							"Location": "LeftLeg",
+							"Min": 1,
+							"Max": 1
+						},
+						{
+							"Location": "RightLeg",
+							"Min": 1,
+							"Max": 1
+						},
+						{
+							"Location": "LeftArm",
+							"Min": 1,
+							"Max": 1
+						},
+						{
+							"Location": "RightArm",
+							"Min": 1,
+							"Max": 1
+						}
+					]
+				}
+			]
 		},
 		{
 			"Name": "LegFootActuator",
 			"DisplayName": "Foot Actuator",
-			"MaxEquipedPerLocation": 1,
-			"MinEquiped": 2,
-			"AutoReplace": true,
 			"DefaultCustoms": {
-				"InventorySorter": {
-					"SortKey": "ActuatorLeg3"
-				},
-				"Sorter": {
-					"Order": 3
-				},
+				"InventorySorter": "3",
+				"Sorter": 3,
 				"CriticalEffects": {
 					"DestroyedFloatieMessage": "Actuator DESTROYED",
 					"OnDestroyedEffectIDs": [
@@ -397,49 +492,171 @@
 						"CriticalEffect-LegFootDestroyed-{location}-pilot-pen"
 					]
 				}
-			}
+			},
+			"BaseLimits": [
+				{
+					"Location": "RightLeg",
+					"Min": 1,
+					"Max": 1
+				},
+				{
+					"Location": "LeftLeg",
+					"Min": 1,
+					"Max": 1
+				},
+				{
+					"Location": "LeftArm",
+					"Min": 0,
+					"Max": 0
+				},
+				{
+					"Location": "RightArm",
+					"Min": 0,
+					"Max": 0
+				}
+			],
+			"UnitLimits": [
+				{
+					"UnitType": "Quad",
+					"Limits": [
+						{
+							"Location": "LeftLeg",
+							"Min": 1,
+							"Max": 1
+						},
+						{
+							"Location": "RightLeg",
+							"Min": 1,
+							"Max": 1
+						},
+						{
+							"Location": "LeftArm",
+							"Min": 1,
+							"Max": 1
+						},
+						{
+							"Location": "RightArm",
+							"Min": 1,
+							"Max": 1
+						}
+					]
+				}
+			]
 		},
 		{
 			"Name": "CASE",
 			"DisplayName": "CASE",
-			"MaxEquipedPerLocation": 1,
-			"DefaultCustoms": {
-				"InventorySorter": {
-					"SortKey": "CASE"
+			"BaseLimits": [
+				{
+					"Location": "LeftArm",
+					"Min": 0,
+					"Max": 1
 				},
-				"CASE": {},
-				"Flags": {
-					"Flags": [
-						"ignore_damage"
-					]
+				{
+					"Location": "LeftTorso",
+					"Min": 0,
+					"Max": 1
+				},
+				{
+					"Location": "LeftLeg",
+					"Min": 0,
+					"Max": 1
+				},
+				{
+					"Location": "Head",
+					"Min": 0,
+					"Max": 1
+				},
+				{
+					"Location": "CenterTorso",
+					"Min": 0,
+					"Max": 1
+				},
+				{
+					"Location": "RightTorso",
+					"Min": 0,
+					"Max": 1
+				},
+				{
+					"Location": "RightLeg",
+					"Min": 0,
+					"Max": 1
+				},
+				{
+					"Location": "RightArm",
+					"Min": 0,
+					"Max": 1
 				}
+			],
+			"DefaultCustoms": {
+				"InventorySorter": "CASE",
+				"CASE": {},
+				"Flags": [
+					"ignore_damage"
+				]
 			}
 		},
 		{
 			"Name": "CASE2",
 			"DisplayName": "CASE II",
-			"MaxEquipedPerLocation": 1,
-			"DefaultCustoms": {
-				"InventorySorter": {
-					"SortKey": "CASE"
+			"BaseLimits": [
+				{
+					"Location": "LeftArm",
+					"Min": 0,
+					"Max": 1
 				},
+				{
+					"Location": "LeftTorso",
+					"Min": 0,
+					"Max": 1
+				},
+				{
+					"Location": "LeftLeg",
+					"Min": 0,
+					"Max": 1
+				},
+				{
+					"Location": "Head",
+					"Min": 0,
+					"Max": 1
+				},
+				{
+					"Location": "CenterTorso",
+					"Min": 0,
+					"Max": 1
+				},
+				{
+					"Location": "RightTorso",
+					"Min": 0,
+					"Max": 1
+				},
+				{
+					"Location": "RightLeg",
+					"Min": 0,
+					"Max": 1
+				},
+				{
+					"Location": "RightArm",
+					"Min": 0,
+					"Max": 1
+				}
+			],
+			"DefaultCustoms": {
+				"InventorySorter": "CASE",
 				"CASE": {
 					"MaximumDamage": 3
 				},
-				"Flags": {
-					"Flags": [
-						"ignore_damage"
-					]
-				}
+				"Flags": [
+					"ignore_damage"
+				]
 			}
 		},
 		{
 			"Name": "ArmShoulder",
 			"DisplayName": "Shoulder",
 			"DefaultCustoms": {
-				"InventorySorter": {
-					"SortKey": "ActuatorArm0"
-				},
+				"InventorySorter": "0",
+				"Sorter": 0,
 				"CriticalEffects": {
 					"DestroyedFloatieMessage": "Actuator DESTROYED",
 					"OnDestroyedEffectIDs": [
@@ -451,545 +668,407 @@
 						"CriticalEffect-ArmHandActuatorDestroyed-{location}"
 					]
 				}
-			}
+			},
+			"BaseLimits": [
+				{
+					"Location": "LeftArm",
+					"Max": 1,
+					"Min": 1
+				},
+				{
+					"Location": "RightArm",
+					"Max": 1,
+					"Min": 1
+				}
+			],
+			"UnitLimits": [
+				{
+					"UnitType": "Quad",
+					"Limits": [
+						{
+							"Location": "All",
+							"Max": 0
+						}
+					]
+				},
+				{
+					"UnitType": "Vehicle",
+					"Limits": [
+						{
+							"Location": "All",
+							"Max": 0
+						}
+					]
+				},
+				{
+					"UnitType": "Squad",
+					"Limits": [
+						{
+							"Location": "All",
+							"Max": 0
+						}
+					]
+				}
+			]
 		},
 		{
 			"Name": "ArmUpperActuator",
 			"DisplayName": "Upper Arm Actuator",
 			"DefaultCustoms": {
-				"InventorySorter": {
-					"SortKey": "ActuatorArm1"
-				},
+				"InventorySorter": "1",
+				"Sorter": 1,
 				"CriticalEffects": {
 					"DestroyedFloatieMessage": "Actuator DESTROYED",
 					"OnDestroyedEffectIDs": [
 						"CriticalEffect-ArmUpperActuatorDestroyed-{location}"
 					]
 				}
-			}
+			},
+			"BaseLimits": [
+				{
+					"Location": "LeftArm",
+					"Max": 1,
+					"Min": 1
+				},
+				{
+					"Location": "RightArm",
+					"Max": 1,
+					"Min": 1
+				}
+			],
+			"UnitLimits": [
+				{
+					"UnitType": "Quad",
+					"Limits": [
+						{
+							"Location": "All",
+							"Max": 0
+						}
+					]
+				},
+				{
+					"UnitType": "Vehicle",
+					"Limits": [
+						{
+							"Location": "All",
+							"Max": 0
+						}
+					]
+				},
+				{
+					"UnitType": "Squad",
+					"Limits": [
+						{
+							"Location": "All",
+							"Max": 0
+						}
+					]
+				}
+			]
 		},
 		{
 			"Name": "ArmLowerActuator",
 			"DisplayName": "Lower Arm Actuator",
 			"DefaultCustoms": {
-				"InventorySorter": {
-					"SortKey": "ActuatorArm2"
-				},
+				"InventorySorter": "2",
+				"Sorter": 2,
 				"CriticalEffects": {
 					"DestroyedFloatieMessage": "Actuator DESTROYED",
 					"OnDestroyedEffectIDs": [
 						"CriticalEffect-ArmLowerActuatorDestroyed-{location}"
 					]
 				}
-			}
+			},
+			"BaseLimits": [
+				{
+					"Location": "LeftArm",
+					"Max": 1,
+					"Min": 0
+				},
+				{
+					"Location": "RightArm",
+					"Max": 1,
+					"Min": 0
+				}
+			],
+			"UnitLimits": [
+				{
+					"UnitType": "ArmLimitUpperLeft",
+					"PartialOverride": true,
+					"Limits": [
+						{
+							"Location": "LeftArm",
+							"Min": 0,
+							"Max": 0
+						}
+					]
+				},
+				{
+					"UnitType": "ArmLimitUpperRight",
+					"PartialOverride": true,
+					"Limits": [
+						{
+							"Location": "RightArm",
+							"Min": 0,
+							"Max": 0
+						}
+					]
+				},
+				{
+					"UnitType": "Quad",
+					"Limits": [
+						{
+							"Location": "All",
+							"Max": 0
+						}
+					]
+				},
+				{
+					"UnitType": "Vehicle",
+					"Limits": [
+						{
+							"Location": "All",
+							"Max": 0
+						}
+					]
+				},
+				{
+					"UnitType": "Squad",
+					"Limits": [
+						{
+							"Location": "All",
+							"Max": 0
+						}
+					]
+				}
+			]
 		},
 		{
 			"Name": "ArmHandActuator",
 			"DisplayName": "Hand Actuator",
 			"DefaultCustoms": {
-				"InventorySorter": {
-					"SortKey": "ActuatorArm3"
-				},
+				"InventorySorter": "3",
+				"Sorter": 3,
 				"CriticalEffects": {
 					"DestroyedFloatieMessage": "Actuator DESTROYED",
 					"OnDestroyedEffectIDs": [
 						"CriticalEffect-ArmHandActuatorDestroyed-{location}"
 					]
 				}
-			}
+			},
+			"BaseLimits": [
+				{
+					"Location": "LeftArm",
+					"Max": 1,
+					"Min": 0
+				},
+				{
+					"Location": "RightArm",
+					"Max": 1,
+					"Min": 0
+				}
+			],
+			"UnitLimits": [
+				{
+					"UnitType": "ArmLimitLowerLeft",
+					"PartialOverride": true,
+					"Limits": [
+						{
+							"Location": "LeftArm",
+							"Min": 0,
+							"Max": 0
+						}
+					]
+				},
+				{
+					"UnitType": "ArmLimitLowerRight",
+					"PartialOverride": true,
+					"Limits": [
+						{
+							"Location": "RightArm",
+							"Min": 0,
+							"Max": 0
+						}
+					]
+				},
+				{
+					"UnitType": "ArmLimitUpperLeft",
+					"PartialOverride": true,
+					"Limits": [
+						{
+							"Location": "LeftArm",
+							"Min": 0,
+							"Max": 0
+						}
+					]
+				},
+				{
+					"UnitType": "ArmLimitUpperRight",
+					"PartialOverride": true,
+					"Limits": [
+						{
+							"Location": "RightArm",
+							"Min": 0,
+							"Max": 0
+						}
+					]
+				},
+				{
+					"UnitType": "Quad",
+					"Limits": [
+						{
+							"Location": "All",
+							"Max": 0
+						}
+					]
+				},
+				{
+					"UnitType": "Vehicle",
+					"Limits": [
+						{
+							"Location": "All",
+							"Max": 0
+						}
+					]
+				},
+				{
+					"UnitType": "Squad",
+					"Limits": [
+						{
+							"Location": "All",
+							"Max": 0
+						}
+					]
+				}
+			]
 		},
 		{
 			"Name": "OmniLowerActuator",
 			"displayName": "OmniMech Lower",
-			"MaxEquipedPerLocation": "1",
-			"AutoReplace": "true",
 			"DefaultCustoms": {
+				"InventorySorter": "2",
+				"Sorter": 2,
 				"CriticalEffects": {
 					"DestroyedFloatieMessage": "Actuator DESTROYED",
 					"OnDestroyedEffectIDs": [
 						"CriticalEffect-ArmLowerActuatorDestroyed-{location}"
 					]
 				}
-			}
+			},
+			"BaseLimits": [
+				{
+					"Min": 0,
+					"Max": 0
+				}
+			],
+			"UnitLimits": [
+				{
+					"UnitType": "Quad",
+					"Limits": [
+						{
+							"Location": "All",
+							"Max": 0
+						}
+					]
+				},
+				{
+					"UnitType": "OmniMech",
+					"Limits": [
+						{
+							"Location": "RightArm",
+							"Min": 0,
+							"Max": 1
+						},
+						{
+							"Location": "LeftArm",
+							"Min": 0,
+							"Max": 1
+						}
+					]
+				},
+				{
+					"UnitType": "Vehicle",
+					"Limits": [
+						{
+							"Location": "All",
+							"Max": 0
+						}
+					]
+				},
+				{
+					"UnitType": "Squad",
+					"Limits": [
+						{
+							"Location": "All",
+							"Max": 0
+						}
+					]
+				}
+			]
 		},
 		{
 			"Name": "OmniHandActuator",
 			"displayName": "OmniMech Hand",
-			"MaxEquipedPerLocation": "1",
-			"AutoReplace": "true",
 			"DefaultCustoms": {
+				"InventorySorter": "3",
+				"Sorter": 3,
 				"CriticalEffects": {
 					"DestroyedFloatieMessage": "Actuator DESTROYED",
 					"OnDestroyedEffectIDs": [
-						"CriticalEffect-ArmLowerActuatorDestroyed-{location}"
+						"CriticalEffect-ArmHandActuatorDestroyed-{location}"
 					]
 				}
-			}
-		},
-		{
-			"Name": "Patchwork",
-			"displayName": "Patchwork Materials",
-			"MaxEquipedPerLocation": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "ModularArmor",
-			"displayName": "Modular Armor",
-			"MaxEquipedPerLocation": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "HarJel",
-			"displayName": "HarJel Self-Repair System",
-			"MaxEquipedPerLocation": "1"
-		},
-		{
-			"Name": "ModularRearArmor",
-			"displayName": "Modular Rear Armor",
-			"MaxEquipedPerLocation": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "Spikes",
-			"displayName": "Melee Spikes",
-			"MaxEquiped": "10",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "Supercharger",
-			"displayName": "Supercharger",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "HandHeld",
-			"displayName": "Hand Held",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "BlueShield",
-			"displayName": "Blue Shield Project",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "C3Slave",
-			"displayName": "C3 Slave",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "C3Master",
-			"displayName": "C3 Master",
-			"MaxEquiped": "2",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "C3i",
-			"displayName": "Improved C3 System",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "TSM",
-			"displayName": "Triple Strength Myomer",
-			"MaxEquiped": "1",
-			"AutoReplace": "true",
-			"AddMaximumReached": "Mech already has {1} of {0} installed"
-		},
-		{
-			"Name": "TSMOmni",
-			"displayName": "Triple Strength Myomer",
-			"MaxEquiped": "1",
-			"AutoReplace": "true",
-			"AddMaximumReached": "Mech already has {1} of {0} installed"
-		},
-		{
-			"Name": "EndoTSM",
-			"displayName": "Triple Strength Myomer",
-			"MaxEquiped": "1",
-			"AutoReplace": "false",
-			"AddMaximumReached": "Mech already has {1} of {0} installed"
-		},
-		{
-			"Name": "MASC",
-			"displayName": "MASC",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "MASCOmni",
-			"displayName": "MASC",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "AdvMASC",
-			"displayName": "Advanced MASC",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "Turret",
-			"displayName": "Turret Mount",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "Shock",
-			"displayName": "Shock Absorber",
-			"MaxEquipedPerLocation": "1",
-			"MaxEquiped": "2",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "MeleeWeapon",
-			"displayName": "Melee Weapon",
-			"MaxEquipedPerLocation": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "CombatShield",
-			"displayName": "Combat Shield",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "BACombatShield",
-			"displayName": "Battle Armor Combat Shield",
-			"MaxEquiped": "4",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "PPCCAP",
-			"displayName": "PPC Capacitor",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "ImprovedJJ",
-			"displayName": "Improved Jump Jets"
-		},
-		{
-			"Name": "StandardJJ",
-			"displayName": "Standard Jump Jets"
-		},
-		{
-			"Name": "QuadFrontLegJJ",
-			"displayName": "QuadMech Front Leg Jump Jet"
-		},
-		{
-			"Name": "JumpTurbine",
-			"displayName": "LAM Jump Turbines"
-		},
-		{
-			"Name": "PartialWing",
-			"displayName": "Partial Wing System",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "BoosterPack",
-			"displayName": "Booster Pack",
-			"MaxEquipedPerLocation": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "SHJJ",
-			"displayName": "Superheavy Jump Jet",
-			"MaxEquipedPerLocation": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "Articulated",
-			"displayName": "Articulated Jets",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "BattleComputer",
-			"displayName": "Battle Computer",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "ArtemisTTS",
-			"displayName": "Artemis IV System",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "LRMARTIVAmmo",
-			"displayName": "Artemis IV LRM",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "SRMARTIVAmmo",
-			"displayName": "Artemis IV SRM",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "MRMApolloAmmo",
-			"displayName": "Apollo MRM",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "ApolloTTS",
-			"displayName": "Apollo FCS",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "TarComp",
-			"displayName": "Targeting Computer",
-			"MaxEquiped": "1"
-		},
-		{
-			"Name": "CLANTTS",
-			"displayName": "CLAN TTS",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "TTSComp",
-			"displayName": "TTS Battle Computer",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "MeleeActuator",
-			"displayName": "Melee Actuator",
-			"MaxEquipedPerLocation": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "MeleeSTAB",
-			"displayName": "Melee Stab. Dmg. Actuator",
-			"MaxEquipedPerLocation": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "MeleeACC",
-			"displayName": "Melee Accuracy Actuator",
-			"MaxEquipedPerLocation": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "DFASelfDamage",
-			"displayName": "DFA Self-Dmg. Actuator",
-			"MaxEquipedPerLocation": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "DFADamage",
-			"displayName": "DFA Dmg. Actuator",
-			"MaxEquipedPerLocation": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "AMS",
-			"displayName": "Anti Missile System",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "ECM",
-			"displayName": "Electronic Countermeasure Suite",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "IFFJAMMER",
-			"displayName": "IFF Jammer",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "ADVZOOM",
-			"displayName": "Advanced Zoom",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "THERMAL",
-			"displayName": "Thermal Vision",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "UAV",
-			"displayName": "UAV Compartment",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "Probe",
-			"displayName": "Active Probe",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "AdvECM",
-			"displayName": "Advanced Warfare Systems",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "HeatBank",
-			"displayName": "Heatbank",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "Exchanger",
-			"displayName": "Thermal Exchanger",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "VirtualRealityPilotingPod",
-			"displayName": "Virtual Reality Piloting Pod",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "CGLauncher",
-			"displayName": "Coilgun Launcher"
-		},
-		{
-			"Name": "ChassisSupport",
-			"displayName": "Integral Chassis Systems",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "SensorsRefit",
-			"displayName": "Sensor Refit",
-			"MaxEquiped": "1",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "ProtoTSM",
-			"displayName": "TSM (P)",
-			"MaxEquiped": "2",
-			"AutoReplace": "true"
-		},
-		{
-			"Name": "Airdrop",
-			"displayName": "Airdrop Systems",
-			"MaxEquiped": "1"
-		},
-		{
-			"Name": "Strafe",
-			"displayName": "Strafing Systems",
-			"MaxEquiped": "1"
-		},
-		{
-			"Name": "NullSig",
-			"displayName": "Null-Signature System",
-			"MaxEquiped": "1"
-		},
-		{
-			"Name": "CLPS",
-			"displayName": "Chameleon Light Polarization Shield",
-			"MaxEquiped": "1"
-		},
-		{
-			"Name": "SHSKit",
-			"displayName": "Standard Heat Sink Kit",
-			"MaxEquiped": "1"
-		},
-		{
-			"Name": "SHS",
-			"displayName": "Standard Heat Sink"
-		},
-		{
-			"Name": "DHSKit",
-			"displayName": "Double Heat Sink Kit",
-			"MaxEquiped": "1"
-		},
-		{
-			"Name": "DHS",
-			"displayName": "Double Heat Sink"
-		},
-		{
-			"Name": "CDHSKit",
-			"displayName": "Clan Double Heat Sink Kit",
-			"MaxEquiped": "1"
-		},
-		{
-			"Name": "CDHS",
-			"displayName": "Clan Double Heat Sink"
-		},
-		{
-			"Name": "PDHSKit",
-			"displayName": "Prototype Double-Strength Heat Sink Kit",
-			"MaxEquiped": "1"
-		},
-		{
-			"Name": "PDHS",
-			"displayName": "Prototype Double-Strength Heat Sink"
-		},
-		{
-			"Name": "LHSKit",
-			"displayName": "Laser Heat Sink Kit",
-			"MaxEquiped": "1"
-		},
-		{
-			"Name": "LHS",
-			"displayName": "Laser Heat Sink"
-		},
-		{
-			"Name": "CHSKit",
-			"displayName": "Compact Heat Sink Kit",
-			"MaxEquiped": "1"
-		},
-		{
-			"Name": "CHS",
-			"displayName": "Compact Heat Sink"
-		},
-		{
-			"Name": "SDHSKit",
-			"displayName": "Sanctuary Double Heat Sink Kit",
-			"MaxEquiped": "1"
-		},
-		{
-			"Name": "SDHS",
-			"displayName": "Sanctuary Double Heat Sink"
-		},
-		{
-			"Name": "Negator",
-			"displayName": "Sanctuary Heat Negator"
-		},
-		{
-			"Name": "Controller",
-			"displayName": "Sanctuary Heat Controller"
-		},
-		{
-			"Name": "AESArm",
-			"displayName": "Actuator Enhancement System"
-		},
-		{
-			"Name": "AESLeg",
-			"displayName": "Actuator Enhancement System"
-		},
-		{
-			"Name": "Handhold",
-			"displayName": "Battle Armor Handhold",
-			"MaxEquiped": "1"
-		},
-		{
-			"Name": "EngineFission",
-			"displayName": "Fission Engine",
-			"DefaultCustoms": {
-				"MechCriticalEffects": {
-					"PenalizedEffectIDs": [
-						[
-							"CriticalEffect-EngineCritFission"
-						]
+			},
+			"BaseLimits": [
+				{
+					"Min": 0,
+					"Max": 0
+				}
+			],
+			"UnitLimits": [
+				{
+					"UnitType": "Quad",
+					"Limits": [
+						{
+							"Location": "All",
+							"Max": 0
+						}
+					]
+				},
+				{
+					"UnitType": "OmniMech",
+					"Limits": [
+						{
+							"Location": "RightArm",
+							"Min": 0,
+							"Max": 1
+						},
+						{
+							"Location": "LeftArm",
+							"Min": 0,
+							"Max": 1
+						}
+					]
+				},
+				{
+					"UnitType": "Vehicle",
+					"Limits": [
+						{
+							"Location": "All",
+							"Max": 0
+						}
+					]
+				},
+				{
+					"UnitType": "Squad",
+					"Limits": [
+						{
+							"Location": "All",
+							"Max": 0
+						}
 					]
 				}
-			}
+			]
 		}
 	]
 }

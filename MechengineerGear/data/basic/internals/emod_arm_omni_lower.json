@@ -3,19 +3,14 @@
 		"ArmActuator": {
 			"Type": "PartLower"
 		},
-		"BonusDescriptions": {
-			"Bonuses": [
-				"ArmAccuracy: +1"
-			]
-		},
-		"InventorySorter": {
-			"SortKey": "ActuatorArm2"
-		},
 		"CriticalEffects": {
 			"OnDestroyedEffectIDs": [
 				"CriticalEffect-ArmLowerActuatorDestroyed-{location}"
 			]
 		},
+		"BonusDescriptions": [
+				"DEPRECIATED"
+			],
 		"Category": [
 			{
 				"CategoryID": "OmniLowerActuator"
@@ -24,11 +19,9 @@
 				"CategoryID": "NonQuad"
 			}
 		],
-		"Flags": {
-			"flags": [
-				"not_broken"
-			]
-		}
+		"Flags": [
+			"not_broken"
+		]
 	},
 	"Description": {
 		"Cost": 40000,
@@ -36,10 +29,10 @@
 		"Purchasable": true,
 		"Manufacturer": "Generic",
 		"Model": "Standard",
-		"UIName": "OmniPod Lower Arm",
+		"UIName": "DEPRECIATED",
 		"Id": "emod_arm_omni_lower",
-		"Name": "Lower Arm Actuator",
-		"Details": "A Lower Arm Actuator specifically designed for the OmniPods of a OmniMech. Allows to add a Lower Arm Actuator.",
+		"Name": "DEPRECIATED",
+		"Details": "<b><color=#e51717>THIS GEAR IS DEPRECIATED AND NO LONGER FUNCTIONS, REPLACE IT AS SOON AS YOU CAN</color></b>\n\nA Lower Arm Actuator specifically designed for the OmniPods of a OmniMech. Allows to add a Lower Arm Actuator.",
 		"Icon": "uixSvgIcon_equipment_ActuatorArm"
 	},
 	"BonusValueA": "",
@@ -53,34 +46,7 @@
 	"AllowedLocations": "Arms",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
-	"statusEffects": [
-		{
-			"durationData": {
-				"duration": -1,
-				"stackLimit": -1
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"effectTargetType": "Creator",
-				"showInTargetPreview": false,
-				"showInStatusPanel": false
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "Status-LowerAccuracy-{location}",
-				"Name": "Lower Arm Accuracy",
-				"Details": "+1 Arm mounted accuracy.",
-				"Icon": "uixSvgIcon_equipment_ActuatorArm"
-			},
-			"nature": "Buff",
-			"statisticData": {
-				"statName": "{location}.Accuracy",
-				"operation": "Float_Add",
-				"modValue": "-1",
-				"modType": "System.Single"
-			}
-		}
-	],
+	"statusEffects": [],
 	"ComponentTags": {
 		"items": [
 			"OmniActuator.{location}",

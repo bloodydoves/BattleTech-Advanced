@@ -5,12 +5,12 @@
 				"CategoryID": "w/s/l/er"
 			}
 		],
-		"BonusDescriptions": {
-			"Bonuses": [
+		"BonusDescriptions": [
 				"WpnCrits: +20%",
-				"PipsIgnored: 3"
+				"PipsIgnored: 3",
+				"WeaponAttachmentCompatible: Laser Insulator",
+				"WeaponAttachmentCompatible: Laser FCS"
 			]
-		}
 	},
 	"Category": "AntiPersonnel",
 	"Type": "Laser",
@@ -51,7 +51,7 @@
 		"Id": "Weapon_Laser_SmallLaserER_0-STOCK",
 		"Name": "ER S Laser",
 		"Details": "An improvement upon standard Small Lasers, Extended-Range Small Lasers extend their effective range at the cost of more heat generation. Like all Lasers, ER Small Lasers enjoy a baseline accuracy bonus over other weapons.",
-		"Icon": "uixSvgIcon_weapon_Support"
+		"Icon": "laser-burst"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
@@ -69,7 +69,10 @@
 		"items": [
 			"component_type_stock",
 			"component_type_lostech",
-			"range_close"
+			"range_close",
+			"LaserInsulatorAttachable.{location}",
+			"LaserInsulatorSupported-SingleShot",
+			"LaserFCSSupported-SingleShot"
 		],
 		"tagSetSourceFile": ""
 	}
