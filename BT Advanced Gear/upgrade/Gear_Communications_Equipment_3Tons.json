@@ -1,0 +1,105 @@
+{
+	"Custom": {
+		"Flags": [
+				"not_broken",
+				"no_salvage",
+				"autorepair"
+		],
+		"BonusDescriptions": [
+				"Defense: +3",
+				"Tacticon: +1"
+		]
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 430000,
+		"Rarity": 3,
+		"Purchasable": true,
+		"Manufacturer": "Generic",
+		"Model": "Communications Equipment",
+		"UIName": "Communications Equipment",
+		"Id": "Gear_Communications_Equipment_3Tons",
+		"Name": "Communications Equipment",
+		"Details": "A tried and true technology as old as spaceflight, Communications Equipment permits a mech to perform much the same duties as a Command Console: command and control over a battlefield while in said battlefield. Comms Equipment comes in various sizes and tonnages, with heavier gear providing more powerful effects. At its most basic, Comms Equipment provides an ECM-like defensive bonus to the carrying 'Mech as well as an initiative bonus to all of their unit mates.",
+		"Icon": "circuitry"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 3,
+	"Tonnage": 3,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "AllLanceMates",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "CommsEquipment-Initiative",
+				"Name": "LANCE INITIATIVE INCREASED",
+				"Details": "Provides a [INVERSE_AMT] bonus to Lance Initiative.",
+				"Icon": "circuitry"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "BaseInitiative",
+				"operation": "Int_Add",
+				"modValue": "-1",
+				"modType": "System.Int32"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"specialRules": "NotSet",
+				"effectTargetType": "AlliesWithinRange",
+				"range": 0.0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "CommsEquipment-DefenseBonus",
+				"Name": "Comms Equipment Interference",
+				"Details": "Communications Equipment is making this unit harder to hit, +1 penalty to enemy attacks. Does stack with ECM.",
+				"Icon": "circuitry"
+			},
+			"statisticData": {
+				"statName": "ToHitThisActor",
+				"operation": "Float_Add",
+				"modValue": "3.0",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"ElectronicCounterMeasures",
+			"lv-jammer_m2_r6"
+		],
+		"tagSetSourceFile": ""
+	}
+}

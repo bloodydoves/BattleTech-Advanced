@@ -5,14 +5,14 @@
 				"CategoryID": "w/e/l/slance"
 			}
 		],
-		"BonusDescriptions": {
-			"Bonuses": [
+		"BonusDescriptions": [
 				"WpnAccuracy: +1",
 				"PipsIgnored: 3",
 				"StructureDmgMod: 5",
-				"AntiBA: 50%"
+				"AntiBA: 50%",
+				"WeaponAttachmentCompatible: Laser Insulator",
+				"WeaponAttachmentCompatible: Laser FCS"
 			]
-		}
 	},
     "Category" : "AntiPersonnel",
     "Type" : "Laser",
@@ -64,7 +64,7 @@
         "Id" : "Weapon_Lance_SmallLance",
         "Name" : "S Lance (S)",
         "Details" : "The Sanctuary Worlds developed laser technology in a different direction than the Inner Sphere. Where the Clans and the Inner Sphere developed extended range lasers, the Sanctuary Worlders developed the lance system. Essentially a high-powered and very precise laser scalpel, lances provide high armor penetration at longer range but do less traditional damage to armor itself. The Small Lance is the smallest of the lance weapons and has a fairly small effect on targets.",
-        "Icon" : "uixSvgIcon_weapon_Support"
+        "Icon" : "laser-burst"
     },
     "BonusValueA" : "",
     "BonusValueB" : "",
@@ -81,7 +81,10 @@
     "ComponentTags" : {
         "items" : [
             "component_type_stock",
-            "range_close"
+            "range_close",
+			"LaserInsulatorAttachable.{location}",
+			"LaserInsulatorSupported-SingleShot",
+			"LaserFCSSupported-SingleShot"
         ],
         "tagSetSourceFile" : ""
     }

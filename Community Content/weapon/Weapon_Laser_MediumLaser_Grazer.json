@@ -5,14 +5,14 @@
 				"CategoryID": "w/e/l/laser"
 			}
 		],
-		"BonusDescriptions": {
-			"Bonuses": [
+		"BonusDescriptions": [
 				"WpnAccuracy: +1",
 				"ModalWeapon: Medium Laser",
 				"ModalWeapon1: ER Medium Laser",
-				"ModalWeapon2: Medium Pulse Laser"
+				"ModalWeapon2: Medium Pulse Laser",
+				"WeaponAttachmentCompatible: Laser Insulator",
+				"WeaponAttachmentCompatible: Laser FCS"
 			]
-		}
 	},
 	"Category": "Energy",
 	"Type": "Laser",
@@ -68,12 +68,12 @@
 	"CriticalComponent": false,
 	"Modes": [
 		{
-			"Id": "ML",
+			"Id": "Standard",
 			"UIName": "Standard",
 			"isBaseMode": true
 		},
 		{
-			"Id": "ERML",
+			"Id": "ER",
 			"UIName": "ER",
 			"isBaseMode": false,
 			"DamagePerShot": 5,
@@ -84,7 +84,7 @@
 			"MaxRange": 240.0
 		},
 		{
-			"Id": "MPL",
+			"Id": "Pulse",
 			"UIName": "Pulse",
 			"isBaseMode": false,
 			"DamagePerShot": 7,
@@ -101,7 +101,10 @@
 	"ComponentTags": {
 		"items": [
 			"component_type_stock",
-			"range_standard"
+			"range_standard",
+			"LaserInsulatorAttachable.{location}",
+			"LaserInsulatorSupported-Grazer",
+			"LaserFCSSupported-Grazer"
 		],
 		"tagSetSourceFile": ""
 	}

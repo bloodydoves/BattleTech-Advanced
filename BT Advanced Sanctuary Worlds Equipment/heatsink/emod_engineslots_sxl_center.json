@@ -4,13 +4,11 @@
 			"ReservedSlots": 4,
 			"EngineFactor": 0.5
 		},
-		"BonusDescriptions": {
-			"Bonuses": [
-				"EngineWeightReduction: 50%",
-				"ReservedSlots: 4",
-				"WalkSpeed: -10%"
-			]
-		},
+		"BonusDescriptions": [
+			"EngineWeightReduction: 50%",
+			"ReservedSlots: 4",
+			"WalkSpeed: -10%"
+		],
 		"WorkOrderCosts": {
 			"Default": {
 				"TechCost": "0",
@@ -21,46 +19,56 @@
 				"CBillCost": "2000 * [[Chassis.Tonnage]] * [[Chassis.Tonnage]] / 40"
 			}
 		},
-		"Flags": {
-            "flags": [
-                    "vital"
-            ]
-        },
-		"Category" : [
-			{"CategoryID": "EngineShield"},
-			{"CategoryID": "EnginePart"}
+		"Flags": [
+			"vital",
+			"engine_part",
+			"no_salvage"
 		],
-		"Linked" : {
-			"Links" : [
-				{ "ComponentDefId" : "emod_engineslots_size2", "Location" : "LeftTorso" },
-				{ "ComponentDefId" : "emod_engineslots_size2", "Location" : "RightTorso" }
+		"Category": [
+			{
+				"CategoryID": "EngineShield"
+			},
+			{
+				"CategoryID": "EnginePart"
+			}
+		],
+		"Linked": {
+			"Links": [
+				{
+					"ComponentDefId": "emod_engineslots_size2",
+					"Location": "LeftTorso"
+				},
+				{
+					"ComponentDefId": "emod_engineslots_size2",
+					"Location": "RightTorso"
+				}
 			]
 		}
 	},
-    "Description" : {
-        "Cost" : 1000000,
-        "Rarity" : 0,
-        "Purchasable" : false,
-        "Manufacturer" : "Sanctuary Manufacturing",
-        "Model" : "Sanctuary Extra-Light",
-        "UIName" : "Engine XL (S)",
-        "Id" : "emod_engineslots_sxl_center",
-        "Name" : "XL Engine (S)",
-        "Details" : "The Sanctuary Worlders took Extra-Light Engine technology with them on their great journey out of the Inner Sphere. Over time, their reproductions of the technology changed into this, the Sanctuary XL Engine. More compact than an Inner Sphere XL engine, the Sanctuary XL can withstand more damage than the IS XL can. However, the engine spreads power out somewhat, reducing effective power to the motive systems which reduces the equipped unit's walk speed somewhat.",
-        "Icon" : "uixSvgIcon_equipment_ThermalExchanger"
-    },
-    "BonusValueA" : "",
-    "BonusValueB" : "",
-    "ComponentType" : "HeatSink",
-    "ComponentSubType" : "Heatsink",
-    "PrefabIdentifier" : "",
-    "BattleValue" : 0,
-    "InventorySize" : 3,
-    "Tonnage" : 0,
-    "AllowedLocations" : "CenterTorso",
-    "DisallowedLocations" : "All",
-    "CriticalComponent" : false,
-    "statusEffects" : [
+	"Description": {
+		"Cost": 1000000,
+		"Rarity": 0,
+		"Purchasable": false,
+		"Manufacturer": "Sanctuary Manufacturing",
+		"Model": "Sanctuary Extra-Light",
+		"UIName": "Engine XL (S)",
+		"Id": "emod_engineslots_sxl_center",
+		"Name": "XL Engine (S)",
+		"Details": "The Sanctuary Worlders took Extra-Light Engine technology with them on their great journey out of the Inner Sphere. Over time, their reproductions of the technology changed into this, the Sanctuary XL Engine. More compact than an Inner Sphere XL engine, the Sanctuary XL can withstand more damage than the IS XL can. However, the engine spreads power out somewhat, reducing effective power to the motive systems which reduces the equipped unit's walk speed somewhat.",
+		"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "HeatSink",
+	"ComponentSubType": "Heatsink",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 3,
+	"Tonnage": 0,
+	"AllowedLocations": "CenterTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
 		{
 			"durationData": {
 				"duration": -1,
@@ -88,10 +96,10 @@
 			"nature": "Buff"
 		}
 	],
-    "ComponentTags" : {
-        "items" : [
-            "component_type_stock"
-        ],
-        "tagSetSourceFile" : ""
-    }
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
 }

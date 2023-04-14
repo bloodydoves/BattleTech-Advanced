@@ -1,0 +1,91 @@
+{
+	"Description": {
+		"Id": "3066-01-21",
+		"Name": "MercNews Broadcast",
+		"Details": "[[DM.Factions[faction_Marian],MARIAN HEGEMONY]] ATTACKS [[DM.Factions[faction_Circinus],CIRCINUS FEDERATION]]:\r\n\n\nCircinus, Circinus Federation:  After years of rising tensions, Ceasar Julius O'Reilly has ordered the [[DM.BaseDescriptionDefs[LoreMHAF],Marian Hegemony Armed Forces]] to invade the Circinus Federation, with an eye toward conquering the entire pirate kingdom.  [[DM.BaseDescriptionDefs[LoreMHAF],MHAF]] Legios are currently burning toward the planets of Maximillian and Blantleff against light defences.  Meanwhile, reports from Circinus itself indicate the combined might of the I and II [[DM.BaseDescriptionDefs[LoreLegio],Legiones]] are invading the Circinus capital.\r\n\n\nCircinian President H. R. \"Little Bob\" McIntyre is mobilizing the [[DM.BaseDescriptionDefs[LoreMcHG],McIntyre House Guards]] and [[DM.BaseDescriptionDefs[LoreBlackWarriors],Black Warriors]], and has called for mercenary commands to assist in the Federation's defence.  While [[DM.Factions[faction_BullardsArmoredCavalry],Bullard's Armored Cavalry]] have already finalized their contract to defend the Federation, [[DM.Factions[faction_BronsonsHorde],Bronson's Horde]] have signed on to support the Marian invasion. Further attack and defend contracts are available via the MRBC Database.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "WHAT WE KNOW SO FAR:\r\n\n\nAlphard, [[DM.Factions[faction_Marian],Marian Hegemony]]: The invasion has come after years of rising tensions between the two Periphery realms, sparked by the Hegemony's Caesar Julius O'Reilly's famous execution of [[DM.Factions[faction_Circinus],Circinian]] emissaries and the return of their corpses to President McIntyre in body bags.  While Caesar O'Rielly has been seen as an internal reformer, deposing his father Sean and implementing societal changes in Marian culture, he has not changed the Hegemony's policy of aggressive expansion toward it's neigbhours, and in particular toward the Circinus Federation.\r\n\n\nThe Circinians however have made several spoiling moves to thwart the Hegemony's plans.  In the buildup to the current invasion, the Federation's [[DM.BaseDescriptionDefs[LoreBlackWarriors],Black Warriors]] have stepped up their raids on the Hegemony's core worlds, and reports have filtered out that the [[DM.Factions[faction_Lothian],Lothian]] rebellions in 3063 and the increased [[DM.Factions[faction_Illyrian],Illyrian]] resistance to the Marian invasion in 3062 were in part due to mercenaries hired by the Circinus Federation.  The effect of these spoiling moves seem to have limited the scale of invasion, as Ceasar O'Rielly has kept the the bulk of the IV and V Legio, and the [[DM.Factions[faction_CohorsMorituri],Cohors Morituri]] in the Hegemony protecting Marian worlds and out of the invasion.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [													
+									"WIIC_give_starsystemdef_Valerius_to_Marian",
+									"WIIC_Marian_attacks_starsystemdef_Dersidatz(Blantleff3025+)",
+									"WIIC_Marian_attacks_starsystemdef_Circinus",
+									"WIIC_Marian_attacks_starsystemdef_Maximillian",
+									"WIIC_set_starsystemdef_Dersidatz(Blantleff3025+)_defender_strength_10",
+									"WIIC_set_starsystemdef_Dersidatz(Blantleff3025+)_attacker_strength_25",
+									"WIIC_set_starsystemdef_Maximillian_defender_strength_10",
+									"WIIC_set_starsystemdef_Maximillian_attacker_strength_25",										
+									"WIIC_set_starsystemdef_Circinus_defender_strength_30",
+									"WIIC_set_starsystemdef_Circinus_attacker_strength_45"				
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

@@ -5,14 +5,13 @@
 				"CategoryID": "w/m/s/srm"
 			}
 		],
-		"BonusDescriptions": {
-			"Bonuses": [
-				"IsMelee",
-				"MissileHealth: 1"
+		"BonusDescriptions": [
+				"MissileHealth: 1",
+				"Clustering: 50%",
+				"WeaponAttachmentCompatible: SRM FCS"
 			]
-		}
 	},
-	"Category": "AntiPersonnel",
+	"Category": "Missile",
 	"Type": "SRM",
 	"WeaponSubType": "SRM6",
 	"MinRange": 0,
@@ -24,7 +23,7 @@
 	],
 	"AmmoCategory": "SRM",
 	"StartingAmmoCapacity": 0,
-	"HeatGenerated": 14,
+	"HeatGenerated": 12,
 	"Damage": 4,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
@@ -41,6 +40,7 @@
 	"AttackRecoil": 1,
 	"Instability": 2,
 	"MissileHealth": 1,
+	"ClusteringModifier": 1.5,
 	"WeaponEffectID": "WeaponEffect-Weapon_SRM6",
 	"Description": {
 		"Cost": 140000,
@@ -48,10 +48,10 @@
 		"Purchasable": true,
 		"Manufacturer": "Holly",
 		"Model": "Short-Range Missile Launcher",
-		"UIName": "Support SRM6",
+		"UIName": "Precision SRM6",
 		"Id": "Weapon_SRM_SRM6_1-Holly",
-		"Name": "Support SRM6",
-		"Details": "This rack of SRM 6s has been specially configured to work alongside mech physical attacks, at the cost of some amount of damage and stability. However, they are still normal SRMs otherwise, sharing the same base range, ammunition, and weight as their normal brethren.",
+		"Name": "Precision SRM6",
+		"Details": "This rack of SRMs has been reconfigured for maximum tactical precision, virtually guaranteeing that every missile strikes the same location on the target. However, to do this, they had their damage heavily reduced, making them a worse damaging option than standard SRMs. The SRM6 is the largest rack of SRMs, seeing use on many combat units throughout the ages.",
 		"Icon": "uixSvgIcon_weapon_Missile"
 	},
 	"BonusValueA": "Fires in Melee",
@@ -70,7 +70,8 @@
 		"items": [
 			"component_type_variant",
 			"component_type_variant1",
-			"range_standard"
+			"range_standard",
+			"SRMFCSSupported"
 		],
 		"tagSetSourceFile": ""
 	}

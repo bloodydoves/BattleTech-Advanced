@@ -5,14 +5,14 @@
 				"CategoryID": "w/s/l/er"
 			}
 		],
-		"BonusDescriptions": {
-			"Bonuses": [
+		"BonusDescriptions": [
 				"WpnCrits: +20%",
 				"WpnAccuracy: +1",
 				"MoveSpeed: 5",
-				"PipsIgnored: 3"
+				"PipsIgnored: 3",
+				"WeaponAttachmentCompatible: Laser Insulator",
+				"WeaponAttachmentCompatible: Laser FCS"
 			]
-		}
 	},
 	"Category": "AntiPersonnel",
 	"Type": "Laser",
@@ -53,7 +53,7 @@
 		"Id": "Weapon_Laser_SmallLaserER_1-Diverse_Optics",
 		"Name": "Static ER S Laser",
 		"Details": "An improvement upon standard Small Lasers, Extended-Range Small Lasers extend their effective range at the cost of more heat generation. This particular laser has been specially calibrated to apply a debilitating electrical charge to the target on contact that interferes with the movement functions of the target, slowing them somewhat.",
-		"Icon": "uixSvgIcon_weapon_Support"
+		"Icon": "laser-burst"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
@@ -175,7 +175,9 @@
 			"component_type_stock",
 			"component_type_lostech",
 			"range_close",
-			"BLACKLISTED"
+			"LaserInsulatorAttachable.{location}",
+			"LaserInsulatorSupported-SingleShot",
+			"LaserFCSSupported-SingleShot"
 		],
 		"tagSetSourceFile": ""
 	}

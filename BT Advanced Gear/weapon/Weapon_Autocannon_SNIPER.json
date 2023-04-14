@@ -8,8 +8,7 @@
 				"CategoryID": "NeverMelee"
 			}
 		],
-		"BonusDescriptions": {
-			"Bonuses": [
+		"BonusDescriptions": [
 				"IsArtillery",
 				"WpnCrits: +50%",
 				"DFAccuracy: -1",
@@ -18,14 +17,11 @@
 				"ScatterRadius: 50, 115",
 				"NoFireInMelee",
 				"Indirect",
-				"AMSImmune"
+				"AMSImmune",
+				"WeaponAttachmentCompatible: Artillery FCS"
 			]
-		},
-		"InventorySorter": {
-			"SortKey": "01331"
-		}
 	},
-	"Category": "Ballistic",
+	"weaponCategoryID": "Artillery",
 	"Type": "Autocannon",
 	"WeaponSubType": "AC20",
 	"MinRange": 120,
@@ -55,6 +51,8 @@
 	"FireTerrainChance": 0.0585,
 	"MinMissRadius": 50,
 	"MaxMissRadius": 115,
+	"AlwaysIndirectVisuals": true,
+	"IndirectFireCapable": true,
 	"WeaponEffectID": "WeaponEffect-Weapon_AC10_Single",
 	"Description": {
 		"Cost": 1650000,
@@ -80,34 +78,14 @@
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
 	"ImprovedBallistic": true,
-	"Modes": [
-		{
-			"Id": "directfire",
-			"UIName": "Direct",
-			"isBaseMode": false,
-			"AccuracyModifier": 1.0,
-			"IndirectFireCapable": false,
-			"ShortRange": -120.0,
-			"MediumRange": -460.0,
-			"LongRange": -790.0,
-			"MaxRange": -1020.0
-		},
-		{
-			"Id": "indirectfire",
-			"UIName": "Indirect",
-			"isBaseMode": true,
-			"AlwaysIndirectVisuals": true,
-			"IndirectFireCapable": true,
-			"ForbiddenRange": 120
-		}
-	],
 	"statusEffects": [],
 	"ComponentTags": {
 		"items": [
 			"OmniRestriction.{location}",
 			"component_type_stock",
 			"mr-resize-8",
-			"range_extreme"
+			"range_extreme",
+			"ArtilleryFCSSupported"
 		],
 		"tagSetSourceFile": ""
 	}

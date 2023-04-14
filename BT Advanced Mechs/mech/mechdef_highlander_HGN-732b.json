@@ -12,6 +12,7 @@
 			"unit_rarity_2",
 			"unit_royal",
 			"CGBThetaGalaxy",
+			"CSRDeltaGalaxy",
 			"CJFIotaGalaxy",
 			"CNCOmicronGalaxy",
 			"CWEpsilonGalaxy",
@@ -40,7 +41,6 @@
 		"Icon": "uixTxrIcon_highlander"
 	},
 	"ChassisID": "chassisdef_highlander_HGN-732b",
-	"prefabOverride": "chrPrfMech_highlander_SLDFBase-001",
 	"simGameMechPartCost": 1680000,
 	"Locations": [
 		{
@@ -289,7 +289,20 @@
 			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": null,
-			"hasPrefabName": false
+			"hasPrefabName": false,
+			"LocalGUID":"target_SRM_1"
+		},
+		{
+			"MountedLocation": "LeftArm",
+			"ComponentDefID": "Gear_Attachment_ArtemisIV",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false,
+			"TargetComponentGUID":"target_SRM_1"
 		},
 		{
 			"MountedLocation": "LeftTorso",
@@ -300,18 +313,20 @@
 			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": null,
-			"hasPrefabName": false
+			"hasPrefabName": false,
+			"LocalGUID":"target_LRM_1"
 		},
 		{
 			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "Ammo_AmmunitionBox_ArtemisIV_LRM",
-			"SimGameUID": "",
-			"ComponentDefType": "AmmunitionBox",
+			"ComponentDefID": "Gear_Attachment_ArtemisIV",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
 			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": null,
-			"hasPrefabName": false
+			"hasPrefabName": false,
+			"TargetComponentGUID":"target_LRM_1"
 		},
 		{
 			"MountedLocation": "LeftTorso",
@@ -439,28 +454,6 @@
 			"ComponentDefID": "Gear_JumpJet_Generic_Assault",
 			"SimGameUID": "",
 			"ComponentDefType": "JumpJet",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Gear_HeatSink_Generic_Double",
-			"SimGameUID": "",
-			"ComponentDefType": "HeatSink",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "Head",
-			"ComponentDefID": "Gear_TargetingTrackingSystem_ARTEMISIV",
-			"SimGameUID": "",
-			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
 			"GUID": null,
 			"DamageLevel": "Functional",

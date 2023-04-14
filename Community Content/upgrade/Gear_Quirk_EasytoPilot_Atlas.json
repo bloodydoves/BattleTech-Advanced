@@ -14,24 +14,18 @@
 				"CBillCost": "[[Chassis.Tonnage]] * 1.15"
 			}
 		},
-		"Flags": {
-			"flags": [
+		"Flags": [
 				"default",
 				"not_broken",
 				"no_salvage",
 				"autorepair",
 				"ignore_damage"
-			]
-		},
-		"BonusDescriptions": {
-			"Bonuses": [
-				"WalkSpeed: +10%",
+		],
+		"BonusDescriptions": [
+				"WalkSpeed: +20%",
+				"RunSpeed: +0.1",
 				"IsGyro"
 			]
-		},
-		"InventorySorter": {
-			"SortKey": "00202"
-		}
 	},
 	"StatName": null,
 	"RelativeModifier": 0,
@@ -48,8 +42,8 @@
 		"Details": "This piece of gear represents the Atlas's inherent Easy to Pilot quirk. This gives the Atlas a bonus to movement speed.\n\n <b><color=#e51717>COMMUNITY CONTENT</color></b>",
 		"Icon": "uixSvgIcon_equipment_Cockpit"
 	},
-	"BonusValueA": "",
-	"BonusValueB": "",
+	"BonusValueA": "+20% Walk Speed",
+	"BonusValueB": "+0.1 Sprint Multiplier",
 	"ComponentType": "Upgrade",
 	"ComponentSubType": "NotSet",
 	"PrefabIdentifier": "",
@@ -92,7 +86,32 @@
 			"statisticData": {
 				"statName": "WalkSpeed",
 				"operation": "Float_Multiply",
-				"modValue": "1.1",
+				"modValue": "1.2",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "EtPSprint",
+				"Name": "ChargerSprint",
+				"Details": "Increased sprint speed.",
+				"Icon": "uixSvgIcon_run_n_gun"
+			},
+			"statisticData": {
+				"modValue": "0.1",
+				"operation": "Float_Add",
+				"statName": "CBTBE_RunMultiMod",
 				"modType": "System.Single"
 			},
 			"nature": "Buff"

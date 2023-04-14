@@ -1,9 +1,4 @@
 {
-	"Custom": {
-		"ArmActuatorSupport": {
-			"RightLimit": "Lower"
-		}
-	},
 	"Description": {
 		"Cost": 3731952,
 		"Rarity": 6,
@@ -92,11 +87,15 @@
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMountID": "Ballistic",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMountID": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -110,15 +109,19 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMountID": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -193,7 +196,9 @@
 	],
 	"VariantName": "ASN-30",
 	"ChassisTags": {
-		"items": [],
+		"items": [
+			"ArmLimitLowerRight"
+		],
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Hunter-Killer & Ambusher",

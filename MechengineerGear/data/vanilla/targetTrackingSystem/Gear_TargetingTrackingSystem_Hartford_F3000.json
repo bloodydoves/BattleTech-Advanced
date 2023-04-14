@@ -5,7 +5,7 @@
 				"CategoryID": "SensorsB"
 			},
 			{
-				"CategoryID": "MissTTS"
+				"CategoryID": "TTS"
 			}
 		],
 		"WorkOrderCosts": {
@@ -14,15 +14,9 @@
 				"CBillCost": "[[Chassis.Tonnage]] * 1.15"
 			}
 		},
-		"BonusDescriptions": {
-			"Bonuses": [
-				"MissileEvasionIgnore: +1",
-				"IsSensorsB"
+		"BonusDescriptions": [
+				"DEPRECIATED"
 			]
-		},
-		"InventorySorter": {
-			"SortKey": "00201"
-		}
 	},
 	"StatName": null,
 	"RelativeModifier": 0,
@@ -33,13 +27,13 @@
 		"Purchasable": true,
 		"Manufacturer": "Hartford",
 		"Model": "F3000",
-		"UIName": "TTS Missile Evasion +",
+		"UIName": "DEPRECIATED",
 		"Id": "Gear_TargetingTrackingSystem_Hartford_F3000",
-		"Name": "Hartford F3000 TTS",
-		"Details": "All 'Mechs come equipped with a stock targeting and tracking system-or TTS-which can be upgraded for improved performance. Upgrades ignore some evasion when attacking with Ballistic, Energy, or Missile weaponry, depending on the type of TTS.",
+		"Name": "DEPRECIATED",
+		"Details": "<b><color=#e51717>THIS GEAR IS DEPRECIATED AND NO LONGER FUNCTIONS, REPLACE IT AS SOON AS YOU CAN</color></b>\n\nAll 'Mechs come equipped with a stock targeting and tracking system-or TTS-which can be upgraded for improved performance. Upgrades ignore some evasion when attacking with Ballistic, Energy, or Missile weaponry, depending on the type of TTS.",
 		"Icon": "AdvancedTC"
 	},
-	"BonusValueA": "+ 1 Evasion Ignore (Missile)",
+	"BonusValueA": "",
 	"BonusValueB": "",
 	"ComponentType": "Upgrade",
 	"ComponentSubType": "NotSet",
@@ -50,59 +44,7 @@
 	"AllowedLocations": "Head",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
-	"statusEffects": [
-		{
-			"durationData": {
-				"duration": -1,
-				"ticksOnActivations": false,
-				"useActivationsOfTarget": false,
-				"ticksOnEndOfRound": false,
-				"ticksOnMovements": false,
-				"stackLimit": -1,
-				"clearedWhenAttacked": false
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"triggerLimit": 0,
-				"extendDurationOnTrigger": 0,
-				"specialRules": "NotSet",
-				"effectTargetType": "Creator",
-				"range": 0,
-				"forcePathRebuild": false,
-				"forceVisRebuild": false,
-				"showInTargetPreview": false,
-				"showInStatusPanel": true
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "StatusEffect-Attack_ToHitMissile-T2",
-				"Name": "Missile WEAPON HIT CHANCE IMPROVED",
-				"Details": "Missile weapon attacks ignore [AMT] evasion.",
-				"Icon": "AdvancedTC"
-			},
-			"nature": "Buff",
-			"statisticData": {
-				"appliesEachTick": false,
-				"effectsPersistAfterDestruction": false,
-				"statName": "EvasivePipsIgnored",
-				"operation": "Float_Add",
-				"modValue": "1.0",
-				"modType": "System.Single",
-				"additionalRules": "NotSet",
-				"targetCollection": "Weapon",
-				"targetWeaponCategory": "Missile",
-				"targetWeaponType": "NotSet",
-				"targetAmmoCategory": "NotSet",
-				"targetWeaponSubType": "NotSet"
-			},
-			"tagData": null,
-			"floatieData": null,
-			"actorBurningData": null,
-			"vfxData": null,
-			"instantModData": null,
-			"poorlyMaintainedEffectData": null
-		}
-	],
+	"statusEffects": [],
 	"ComponentTags": {
 		"items": [
 			"component_type_variant",

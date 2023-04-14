@@ -5,15 +5,15 @@
 				"CategoryID": "w/e/l/laser"
 			}
 		],
-		"BonusDescriptions": {
-			"Bonuses": [
+		"BonusDescriptions": [
 				"WpnCrits: 25%",
 				"WpnAccuracy: +1",
 				"ModalWeapon: Large Laser",
 				"ModalWeapon1: ER Large Laser",
-				"ModalWeapon2: Large Pulse Laser"
+				"ModalWeapon2: Large Pulse Laser",
+				"WeaponAttachmentCompatible: Laser Insulator",
+				"WeaponAttachmentCompatible: Laser FCS"
 			]
-		}
 	},
 	"Category": "Energy",
 	"Type": "Laser",
@@ -51,7 +51,7 @@
 		"Purchasable": true,
 		"Manufacturer": "St. Ives",
 		"Model": "Grazer",
-		"UIName": "Large Grazer",
+		"UIName": "L Grazer",
 		"Id": "Weapon_Laser_LargeLaser_Grazer",
 		"Name": "Large Grazer",
 		"Details": "The Large Grazer, developed by St. Ives in self-defense against a Capellan invasion, is a blend of three different laser weapons, namely the Large Laser, ER Large Laser, and Large Pulse Laser. The Grazer is capable of swapping fire modes as it sees fit in combat, allowing it to always be useful and powerful, no matter the enemy or the range. \n\n <b><color=#00ffff>Left Click on Chance to hit during battle to switch firing mode</color></b>\n\n <b><color=#e51717>COMMUNITY CONTENT</color></b>",
@@ -70,12 +70,12 @@
 	"CriticalComponent": false,
 	"Modes": [
 		{
-			"Id": "LL",
+			"Id": "Standard",
 			"UIName": "Standard",
 			"isBaseMode": true
 		},
 		{
-			"Id": "ERLL",
+			"Id": "ER",
 			"UIName": "ER",
 			"isBaseMode": false,
 			"DamagePerShot": 5,
@@ -86,7 +86,7 @@
 			"MaxRange": 300.0
 		},
 		{
-			"Id": "LPL",
+			"Id": "Pulse",
 			"UIName": "Pulse",
 			"isBaseMode": false,
 			"DamagePerShot": 10,
@@ -103,7 +103,10 @@
 	"ComponentTags": {
 		"items": [
 			"component_type_stock",
-			"range_long"
+			"range_long",
+			"LaserInsulatorAttachable.{location}",
+			"LaserInsulatorSupported-Grazer",
+			"LaserFCSSupported-Grazer"
 		],
 		"tagSetSourceFile": ""
 	}

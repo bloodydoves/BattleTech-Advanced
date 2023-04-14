@@ -8,22 +8,22 @@
 				"CategoryID": "NeverMelee"
 			}
 		],
-		"BonusDescriptions": {
-			"Bonuses": [
+		"BonusDescriptions": [
 				"NoFireInMelee",
 				"PPCDEBUFF: 2",
 				"ModalWeapon: Paired Projectors",
 				"ModalWeapon1: Split Projectors",
 				"DmgFallOffMode: 40%",
 				"DmgFallOffStartMode: 185",
-				"DmgFallOffEndMode: 540"
+				"DmgFallOffEndMode: 540",
+				"WeaponAttachmentCompatible: PPC Capacitor",
+				"WeaponAttachmentCompatible: PPC FCS"
 			]
-		}
 	},
 	"Category": "Energy",
 	"Type": "PPC",
 	"WeaponSubType": "PPC",
-	"MinRange": 90,
+	"MinRange": 60,
 	"MaxRange": 720,
 	"RangeSplit": [
 		180,
@@ -32,8 +32,8 @@
 	],
 	"AmmoCategory": "NotSet",
 	"StartingAmmoCapacity": 0,
-	"HeatGenerated": 55,
-	"Damage": 110,
+	"HeatGenerated": 50,
+	"Damage": 90,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
 	"EvasivePipsIgnored": 0,
@@ -59,7 +59,7 @@
 		"Id": "Weapon_PPC_Binary_0-STOCK",
 		"Name": "Binary PPC",
 		"Details": "Modeled after the rare and mostly forgotten Binary Laser Cannon, the Binary Particle Projector Cannon is a pair of PPC projectors fused together into a single weapon. Able to fire either in concert or in sequence, the Bleeper, as it is affectionately known to its creators, has proven effective if unusual.\n\n <b><color=#e51717>COMMUNITY CONTENT</color></b>",
-		"Icon": "uixSvgIcon_weapon_Energy"
+		"Icon": "particle"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
@@ -107,7 +107,7 @@
 			"Id": "Split_Cores",
 			"UIName": "Split",
 			"isBaseMode": false,
-			"DamagePerShot": -50,
+			"DamagePerShot": -40,
 			"ShotsWhenFired": 1,
 			"DistantVariance": 0.4,
 			"DamageFalloffStartDistance": 185,
@@ -125,7 +125,10 @@
 	"ComponentTags": {
 		"items": [
 			"component_type_stock",
-			"range_very-long"
+			"range_very-long",
+			"PPCCapacitorAttachable.{location}",
+			"PPCCapacitorSupported-Binary",
+			"PPCFCSSupported-Binary"
 		],
 		"tagSetSourceFile": ""
 	}

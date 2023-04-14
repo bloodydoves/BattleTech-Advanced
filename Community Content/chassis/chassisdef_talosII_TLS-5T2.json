@@ -1,10 +1,6 @@
 {
 	"Custom": {
-		"ArmActuatorSupport": {
-			"LeftLimit": "Hand",
-			"RightLimit": "Lower"
-		},
-            "AssemblyVariant": {
+		"AssemblyVariant": {
             "PrefabID": "TalosII",
             "Exclude": false,
             "Include": true
@@ -19,12 +15,12 @@
 		"UIName": "Talos II",
 		"Id": "chassisdef_talosII_TLS-5T2",
 		"Name": "Talos II",
-		"Details": "In need of a symbol of national pride to rally around in the face of invasion, the Taurian military command ordered the venerable and proven Talos design to be fully reworked into a new 70 ton heavy trooper mech. As damaged -5Ts returned from the front for repair and maintenance, some were refit into -5T2 variants to aleviate the dependency on munitions based weaponry. To do so, it carries an ER large laser and a flamer in each arm, and replaces its missile compliment with four streak SRM-4s with two tons of ammo in C.A.S.E. protected bins. The mech is powered by a light 280 fusion engine and installs 15 double heat sinks.\n\n <b><color=#e51717>COMMUNITY CONTENT</color></b>",
+		"Details": "In need of a symbol of national pride to rally around in the face of invasion, the Taurian military command ordered the venerable and proven Talos design to be fully reworked into a new 70 ton heavy trooper mech. As damaged -5Ts returned from the front for repair and maintenance, some were refit into -5T2 variants to aleviate the dependency on munitions based weaponry. To do so, it carries an ER large laser and a flamer in each arm, and replaces its missile compliment with four streak SRM-4s with two tons of ammo in C.A.S.E. protected bins. The mech is powered by a light 280 fusion engine and installs 15 double heat sinks.",
 		"Icon": "uixTxrIcon_talos"
 	},
 	"VariantName": "TLS-5T2",
 	"StockRole": "Heavy Trooper",
-	"YangsThoughts": "The Talos is an extremely old but reliable Taurian design. The original became a staple for a reason, and the Talos II is a brand new rework. Two ER large lasers will be doing most of your work for you, and it backs that up wil 16 tubes of streak SRMs. It also has flamers if you're in to that kind of thing.\n\n <b><color=#e51717>COMMUNITY CONTENT</color></b>",
+	"YangsThoughts": "The Talos is an extremely old but reliable Taurian design. The original became a staple for a reason, and the Talos II is a brand new rework. Two ER large lasers will be doing most of your work for you, and it backs that up wil 16 tubes of streak SRMs. It also has flamers if you're in to that kind of thing.",
 	"PrefabIdentifier": "chrprfmech_talosbase-001",
 	"PrefabBase": "talos",
 	"Tonnage": 70,
@@ -59,7 +55,10 @@
 	"DFASelfDamage": 55,
 	"DFAInstability": 25,
 	"ChassisTags": {
-		"items": ["mr-resize-1.15-1.15-1.15"],
+		"items": [
+			"mr-resize-1.15-1.15-1.15",
+			"ArmLimitLowerRight"
+		],
 		"tagSetSourceFile": ""
 	},
 	"MechPartMax": 0,
@@ -125,11 +124,11 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -143,11 +142,11 @@
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				}
 			],
@@ -170,11 +169,11 @@
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Missile",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				}
 			],
@@ -188,11 +187,11 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				}
 			],

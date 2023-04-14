@@ -13,7 +13,7 @@
 	"VehicleTags": {
 		"items": [
 			"unit_noncontrollableTank",
-			"no_parts",
+			"NOSALVAGE",
 			"mr-resize-1.73",
 			"unit_vehicle",
 			"unit_assault",
@@ -27,6 +27,7 @@
 			"unit_bracket_high",
 			"unit_royal",
 			"CGBThetaGalaxy",
+			"CSRDeltaGalaxy",
 			"CJFIotaGalaxy",
 			"CNCOmicronGalaxy",
 			"CWEpsilonGalaxy",
@@ -85,21 +86,24 @@
 			"ComponentDefType": "Weapon",
 			"MountedLocation": "Front",
 			"HardpointSlot": 0,
-			"DamageLevel": "Functional"
+			"DamageLevel": "Functional",
+			"LocalGUID":"target_LRM_1"
 		},
 		{
 			"ComponentDefID": "Weapon_LRM_LRM20_0-STOCK",
 			"ComponentDefType": "Weapon",
 			"MountedLocation": "Turret",
 			"HardpointSlot": 0,
-			"DamageLevel": "Functional"
+			"DamageLevel": "Functional",
+			"LocalGUID":"target_LRM_2"
 		},
 		{
 			"ComponentDefID": "Weapon_LRM_LRM20_0-STOCK",
 			"ComponentDefType": "Weapon",
 			"MountedLocation": "Turret",
 			"HardpointSlot": 1,
-			"DamageLevel": "Functional"
+			"DamageLevel": "Functional",
+			"LocalGUID":"target_LRM_3"
 		},
 		{
 			"ComponentDefID": "Weapon_Laser_MediumLaserPulse_0-STOCK",
@@ -130,11 +134,28 @@
 			"DamageLevel": "Functional"
 		},
 		{
-			"ComponentDefID": "Gear_TargetingTrackingSystem_ARTEMISIV",
+			"ComponentDefID": "Gear_Attachment_ArtemisIV",
 			"ComponentDefType": "Upgrade",
 			"MountedLocation": "Front",
 			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
+			"DamageLevel": "Functional",
+			"TargetComponentGUID":"target_LRM_1"
+		},
+		{
+			"ComponentDefID": "Gear_Attachment_ArtemisIV",
+			"ComponentDefType": "Upgrade",
+			"MountedLocation": "Turret",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional",
+			"TargetComponentGUID":"target_LRM_2"
+		},
+		{
+			"ComponentDefID": "Gear_Attachment_ArtemisIV",
+			"ComponentDefType": "Upgrade",
+			"MountedLocation": "Turret",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional",
+			"TargetComponentGUID":"target_LRM_3"
 		},
 		{
 			"ComponentDefID": "Ammo_AmmunitionBox_ArtemisIV_LRM",

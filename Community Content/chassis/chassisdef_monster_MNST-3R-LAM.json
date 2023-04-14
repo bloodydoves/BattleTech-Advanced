@@ -3,6 +3,11 @@
 		"ArmActuatorSupport": {
 			"LeftLimit": "Lower",
 			"RightLimit": "Lower"
+		},
+		"AssemblyVariant": {
+			"PrefabID": "MonsterLam",
+			"Exclude": false,
+			"Include": true
 		}
 	},
 	"CustomParts": {
@@ -142,29 +147,7 @@
 		"DamageLevel": "Functional",
 		"prefabName": null,
 		"hasPrefabName": false
-	},
-		{
-			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "Gear_Landing_Gear",
-			"SimGameUID": null,
-			"ComponentDefType": "Upgrade",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Gear_Landing_Gear",
-			"SimGameUID": null,
-			"ComponentDefType": "Upgrade",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		}
+	}
   ],
   "Description": {
     "Cost": 35741070,
@@ -180,7 +163,10 @@
   },
   "VariantName": "MNST-3R-LAM",
   "ChassisTags": {
-    "items": [],
+    "items": [
+		"ArmLimitLowerRight",
+			"ArmLimitLowerLeft"
+	],
     "tagSetSourceFile": ""
   },
   "StockRole": "Superheavy... LAM?",
@@ -234,19 +220,19 @@
       "Location": "LeftArm",
       "Hardpoints": [
         {
-          "WeaponMount": "AntiPersonnel",
+          "WeaponMountID": "AntiPersonnel",
           "Omni": false
         },
 		{
-          "WeaponMount": "AntiPersonnel",
+          "WeaponMountID": "AntiPersonnel",
           "Omni": false
         },
 		{
-          "WeaponMount": "Missile",
+          "WeaponMountID": "Missile",
           "Omni": false
         },
 		{
-          "WeaponMount": "Missile",
+          "WeaponMountID": "Missile",
           "Omni": false
         }
       ],
@@ -260,32 +246,40 @@
       "Location": "LeftTorso",
       "Hardpoints": [
         {
-          "WeaponMount": "Ballistic",
+          "WeaponMountID": "Ballistic",
           "Omni": false
         },
 		{
-          "WeaponMount": "Ballistic",
+          "WeaponMountID": "Ballistic",
           "Omni": false
         },
 		{
-          "WeaponMount": "Ballistic",
+          "WeaponMountID": "Ballistic",
           "Omni": false
         },
 		{
-		  "WeaponMount": "Energy",
+		  "WeaponMountID": "Energy",
 		  "Omni": false
 		},
 		{
-		  "WeaponMount": "Energy",
+		  "WeaponMountID": "Energy",
 		  "Omni": false
 		},
 		{
-		  "WeaponMount": "Energy",
+		  "WeaponMountID": "Energy",
 		  "Omni": false
 		},
 		{
-		  "WeaponMount": "Energy",
+		  "WeaponMountID": "Energy",
 		  "Omni": false
+		},
+		{
+			"WeaponMountID": "BombBay",
+			"Omni": false
+		},
+		{
+			"WeaponMountID": "BombBay",
+			"Omni": false
 		}
       ],
       "Tonnage": 0,
@@ -298,11 +292,11 @@
       "Location": "CenterTorso",
       "Hardpoints": [
 		{
-          "WeaponMount": "AntiPersonnel",
+          "WeaponMountID": "AntiPersonnel",
           "Omni": false
         },
 		{
-          "WeaponMount": "AntiPersonnel",
+          "WeaponMountID": "AntiPersonnel",
           "Omni": false
         }
 	  ],
@@ -316,32 +310,40 @@
       "Location": "RightTorso",
       "Hardpoints": [
         {
-          "WeaponMount": "Ballistic",
+          "WeaponMountID": "Ballistic",
           "Omni": false
         },
 		{
-          "WeaponMount": "Ballistic",
+          "WeaponMountID": "Ballistic",
           "Omni": false
         },
 		{
-          "WeaponMount": "Ballistic",
+          "WeaponMountID": "Ballistic",
           "Omni": false
         },
 		{
-		  "WeaponMount": "Energy",
+		  "WeaponMountID": "Energy",
 		  "Omni": false
 		},
 		{
-		  "WeaponMount": "Energy",
+		  "WeaponMountID": "Energy",
 		  "Omni": false
 		},
 		{
-		  "WeaponMount": "Energy",
+		  "WeaponMountID": "Energy",
 		  "Omni": false
 		},
 		{
-		  "WeaponMount": "Energy",
+		  "WeaponMountID": "Energy",
 		  "Omni": false
+		},
+		{
+			"WeaponMountID": "BombBay",
+			"Omni": false
+		},
+		{
+			"WeaponMountID": "BombBay",
+			"Omni": false
 		}
       ],
       "Tonnage": 0,
@@ -354,19 +356,19 @@
       "Location": "RightArm",
       "Hardpoints": [
         {
-          "WeaponMount": "AntiPersonnel",
+          "WeaponMountID": "AntiPersonnel",
           "Omni": false
         },
 		{
-          "WeaponMount": "AntiPersonnel",
+          "WeaponMountID": "AntiPersonnel",
           "Omni": false
         },
 		{
-          "WeaponMount": "Missile",
+          "WeaponMountID": "Missile",
           "Omni": false
         },
 		{
-          "WeaponMount": "Missile",
+          "WeaponMountID": "Missile",
           "Omni": false
         }
       ],

@@ -60,6 +60,8 @@
 		"ClanJadeFalcon",
 		"ClanWolf",
 		"ClanNovaCat",
+		"ClanSnowRaven",
+		"DarkCaste",
 		"Delphi",
 		"Hanse",
 		"JarnFolk",
@@ -440,7 +442,8 @@
 				"ClanWolf",
 				"ClanJadeFalcon",
 				"ClanGhostBear",
-				"ClanNovaCat"
+				"ClanNovaCat",
+				"ClanSnowRaven"
 			],
 			"description": "This pilot is an expert at fighting Clan Wolf, and does 5% increased damage to all Clan forces.",
 			"effectDataJO": [
@@ -510,7 +513,8 @@
 				"ClanWolf",
 				"ClanJadeFalcon",
 				"ClanGhostBear",
-				"ClanNovaCat"
+				"ClanNovaCat",
+				"ClanSnowRaven"
 			],
 			"description": "This pilot is an expert at fighting Clan Jade Falcon, and does 5% increased damage to all Clan forces.",
 			"effectDataJO": [
@@ -580,7 +584,8 @@
 				"ClanWolf",
 				"ClanJadeFalcon",
 				"ClanGhostBear",
-				"ClanNovaCat"
+				"ClanNovaCat",
+				"ClanSnowRaven"
 			],
 			"description": "This pilot is an expert at fighting Clan Ghost Bear, and does 5% increased damage to all Clan forces.",
 			"effectDataJO": [
@@ -650,7 +655,8 @@
 				"ClanWolf",
 				"ClanJadeFalcon",
 				"ClanGhostBear",
-				"ClanNovaCat"
+				"ClanNovaCat",
+				"ClanSnowRaven"
 			],
 			"description": "This pilot is an expert at fighting Clan Nova Cat, and does 5% increased damage to all Clan forces.",
 			"effectDataJO": [
@@ -664,7 +670,7 @@
 					"effectType": "StatisticEffect",
 					"Description": {
 						"Id": "CNC_BadTripDmgPassive",
-						"Name": "Loaded For Bear",
+						"Name": "Bad Trip",
 						"Details": "This pilot is an expert at fighting Clan Nova Cat, and does 5% increased damage to all Clan forces.",
 						"Icon": "allied-star"
 					},
@@ -690,9 +696,80 @@
 					},
 					"effectType": "StatisticEffect",
 					"Description": {
-						"Id": "CNC_BadTripBearDmg",
-						"Name": "Loaded For Bear Damage",
+						"Id": "CNC_BadTripNovaCatDmg",
+						"Name": "Bad Trip Damage",
 						"Details": "This pilot is an expert at fighting Clan Nova Cat, and does 5% increased damage to all Clan forces.",
+						"Icon": "allied-star"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamagePerShot",
+						"operation": "Float_Multiply",
+						"modValue": "1.05",
+						"modType": "System.Single",
+						"additionalRules": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponType": "NotSet",
+						"targetAmmoCategory": "NotSet",
+						"targetWeaponSubType": "NotSet"
+					}
+				}
+			]
+		},
+		{
+			"OpForSpecID": "CSR_Unkindness",
+			"OpForSpecName": "Clan Snow Raven: Unkindness of Ravens",
+			"killsRequired": 12,
+			"factionID": "ClanSnowRaven",
+			"applyToFaction": [
+				"ClanWolf",
+				"ClanJadeFalcon",
+				"ClanGhostBear",
+				"ClanNovaCat",
+				"ClanSnowRaven"
+			],
+			"description": "This pilot is an expert at fighting Clan Snow Raven, and does 5% increased damage to all Clan forces.",
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "CNC_UnkindnessDmgPassive",
+						"Name": "Unkindness of Ravens",
+						"Details": "This pilot is an expert at fighting Clan Snow Raven, and does 5% increased damage to all Clan forces.",
+						"Icon": "allied-star"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "dummyOpForStat",
+						"operation": "Set",
+						"modValue": "true",
+						"modType": "System.Boolean"
+					}
+				},
+				{
+					"durationData": {
+						"duration": 1,
+						"ticksOnEndOfRound": true,
+						"useActivationsOfTarget": true,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "OnWeaponFire",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "CNC_UnkindnessBearDmg",
+						"Name": "Unkindness of Ravens",
+						"Details": "This pilot is an expert at fighting Clan Snow Raven, and does 5% increased damage to all Clan forces.",
 						"Icon": "allied-star"
 					},
 					"nature": "Buff",
@@ -717,10 +794,6 @@
 			"killsRequired": 12,
 			"factionID": "DarkCaste",
 			"applyToFaction": [
-				"ClanWolf",
-				"ClanJadeFalcon",
-				"ClanGhostBear",
-				"ClanNovaCat",
 				"DarkCaste"
 			],
 			"description": "This pilot is an expert at fighting the Dark Caste and even though they're Clanners, they're also pirates. Gain 15% bonus cash from your employer when fighting the Dark Caste as well as a 1500 cash bounty per kill.",
@@ -2025,6 +2098,9 @@
 		],
 		"ClanGhostBear": [
 			"CGBThetaGalaxy"
+		],
+		"ClanSnowRaven": [
+			"CSRDeltaGalaxy"
 		],
 		"WordOfBlake": [
 			"40thShadowDivision",

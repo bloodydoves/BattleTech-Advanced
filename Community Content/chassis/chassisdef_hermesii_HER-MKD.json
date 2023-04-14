@@ -1,8 +1,5 @@
 {
 	"Custom": {
-		"ArmActuatorSupport": {
-			"LeftLimit": "Lower"
-		},
 		"AssemblyVariant": {
 			"PrefabID": "HermesII",
 			"Exclude": false,
@@ -18,7 +15,7 @@
 		"UIName": "Hermes II",
 		"Id": "chassisdef_hermesii_HER-MKD",
 		"Name": "Hermes II",
-		"Details": "Built to deploy a variety of mortar munitions to an ever-changing battlefield, the Hermes II HER-MKD proved able and effective enough for limited production. Armed with a trio of Mortar/2s and three tons of specialty ammunition such as Glue, Acid, and Caltrop ammos, the HER-MKD can apply mortars anywhere. For ranged combat it carries a Clan-spec ER PPC to provide no-frills firepower. Double Heat Sinks provide adequate cooling and a MASC provides a speed boost for mobility.\n\n <b><color=#e51717>COMMUNITY CONTENT</color></b>",
+		"Details": "Built to deploy a variety of mortar munitions to an ever-changing battlefield, the Hermes II HER-MKD proved able and effective enough for limited production. Armed with a trio of Mortar/2s and three tons of specialty ammunition such as Glue, Acid, and Shock ammos, the HER-MKD can apply mortars anywhere. For ranged combat it carries a Clan-spec ER PPC to provide no-frills firepower. Double Heat Sinks provide adequate cooling and a MASC provides a speed boost for mobility.\n\n <b><color=#e51717>COMMUNITY CONTENT</color></b>",
 		"Icon": "uixTxrIcon_hermes"
 	},
 	"VariantName": "HER-MKD",
@@ -62,7 +59,8 @@
 	"DFAInstability": 20,
 	"ChassisTags": {
 		"items": [
-			"OmniMech"
+			"OmniMech",
+			"ArmLimitLowerLeft"
 		],
 		"tagSetSourceFile": ""
 	},
@@ -126,11 +124,11 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
@@ -162,15 +160,15 @@
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMountID": "Ballistic",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMountID": "Ballistic",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Ballistic",
+					"WeaponMountID": "Ballistic",
 					"Omni": false
 				}
 			],
@@ -184,11 +182,11 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],

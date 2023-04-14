@@ -1,10 +1,4 @@
 {
-	"Custom": {
-		"ArmActuatorSupport": {
-			"LeftLimit": "Upper",
-			"RightLimit": "Upper"
-		}
-	},
 	"CustomParts": {
 		"FiringArc": 360
 	},
@@ -29,7 +23,7 @@
 	"StockRole": "Heavy Defender",
 	"YangsThoughts": "Designed based on a pun about X-Mas and X-Pulse Lasers, the UM-XMAS is a traditionally festive gift between mercenary commanders. Enjoy, Commander, and Merry Christmas.",
 	"Tonnage": 30,
-	"InitialTonnage": 10,
+	"InitialTonnage": 3,
 	"weightClass": "LIGHT",
 	"Heatsinks": 0,
 	"TopSpeed": 85,
@@ -58,7 +52,10 @@
 	"DFASelfDamage": 30,
 	"DFAInstability": 10,
 	"ChassisTags": {
-		"items": [],
+		"items": [
+			"ArmLimitUpperRight",
+			"ArmLimitUpperLeft"
+		],
 		"tagSetSourceFile": ""
 	},
 	"Locations": [
@@ -75,11 +72,11 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
@@ -93,7 +90,7 @@
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
@@ -116,7 +113,7 @@
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
@@ -130,15 +127,15 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "Energy",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMount": "AntiPersonnel",
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				}
 			],

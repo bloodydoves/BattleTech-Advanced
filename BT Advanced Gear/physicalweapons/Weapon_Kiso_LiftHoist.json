@@ -1,0 +1,171 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/s/m/melee"
+			}
+		],
+		"BonusDescriptions": [
+				"PhysWeapDamageBonus: 15%",
+				"PhysWeapStabBonus: 15%",
+				"BAMounts"
+		],
+		"Flags": [
+				"default",
+				"not_broken",
+				"no_salvage",
+				"autorepair"
+		]
+	},
+	"weaponCategoryID": "MeleeWeapon",
+	"Type": "MachineGun",
+	"WeaponSubType": "MachineGun",
+	"MinRange": 0,
+	"MaxRange": 30,
+	"RangeSplit": [
+		30,
+		30,
+		30
+	],
+	"AmmoCategory": "NotSet",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 0,
+	"Damage": 0,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 4,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": 0,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 0,
+	"Instability": 0,
+	"NotUseInMelee": true,
+	"WeaponEffectID": "WeaponEffect-Weapon_MachineGun",
+	"Description": {
+		"Cost": 12000,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "Kiso",
+		"Model": "Lift Hoist",
+		"UIName": "Lift Hoist",
+		"Id": "Weapon_Kiso_LiftHoist",
+		"Name": "Lift Hoist",
+		"Details": "This is a construction tool, a Lift Hoist, designed for the Kiso ConstructionMech. Lift Hoists are exactly that: they're cranes, meant to pick up and carry things around. The Kiso generally uses its lift hoists during the course of its construction work, but on rare occasion it can make use of them to attack someone with. Lift hoists are not particularly effective weapons, but they make do in an emergency. Additionally, the lift hoist permits the carrying of Battle Armor in a pinch, though that is usually a desperation move.",
+		"Icon": "cargo-crate"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "crane",
+	"BattleValue": 0,
+	"InventorySize": 3,
+	"Tonnage": 3,
+	"AllowedLocations": "RightTorso,LeftTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-LiftHoistDamageMulti",
+				"Name": "Lift Hoist Damage",
+				"Details": "Lift Hoists increase physical weapon damage and stability damage by 15%.",
+				"Icon": "cargo-crate"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Target_Damage_Multi",
+				"operation": "Float_Multiply",
+				"modValue": "1.15",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-LiftHoistStabMulti",
+				"Name": "Lift Hoist Stab Damage",
+				"Details": "Lift Hoists do 2.5 stab damage per 5 tons of the mech.",
+				"Icon": "cargo-crate"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Target_Instability_Multi",
+				"operation": "Float_Multiply",
+				"modValue": "1.15",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-getHasBattleArmorMounts",
+				"Name": "getHasBattleArmorMounts",
+				"Details": "getHasBattleArmorMounts",
+				"Icon": "uixSvgIcon_ability_precisionstrike"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "HasBattleArmorMounts",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_close"
+		],
+		"tagSetSourceFile": ""
+	}
+}
