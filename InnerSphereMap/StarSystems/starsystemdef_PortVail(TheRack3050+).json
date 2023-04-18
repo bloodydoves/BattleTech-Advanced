@@ -2,7 +2,7 @@
 	"Description": {
 		"Id": "starsystemdef_PortVail(TheRack3050+)",
 		"Name": "Port Vail (The Rack 3050+)",
-		"Details": "Port Vail (The Rack 3050+) was settled during the Star League era at some point after the end of the Reunification War but died out during the fighting in the Succession Wars.",
+		"Details": "Port Vail (The Rack 3050+) was once a world in the Rim Worlds Republic during the Star League era. However, after that realm fell, Port Vail was lost and forgotten. Today, it endures as a pirate haven and a perpetual thorn in the side of the Lyran Commonwealth.",
 		"Icon": ""
 	},
 	"Position": {
@@ -15,11 +15,12 @@
 			"planet_name_portvail(therack3050+)",
 			"planet_size_medium",
 			"planet_climate_rocky",
-			"planet_pop_none",
+			"planet_pop_small",
 			"planet_civ_primitive",
 			"planet_industry_poor",
+			"planet_other_blackmarket",
 			"planet_other_ruins",
-			"planet_faction_locals"
+			"planet_faction_pirate"
 		],
 		"tagSetSourceFile": ""
 	},
@@ -37,7 +38,7 @@
 	},
 	"FuelingStation": false,
 	"JumpDistance": 5,
-	"ownerID": "Locals",
+	"ownerID": "AuriganPirates",
 	"ShopRefreshRate": 0,
 	"ShopMaxInventory": 0,
 	"ShopMaxSpecials": 9,
@@ -122,10 +123,17 @@
 	"RoninHiringChance": 0,
 	"UseMaxContractOverride": false,
 	"MaxContractOverride": 0,
-	"SystemShopItems": [],
-	"factionShopOwnerID": "Locals",
-	"FactionShopItems": [],
-	"BlackMarketShopItems": null,
+	"SystemShopItems": [
+		"itemCollection_shop_chemicalsProgression",
+		"itemCollection_shop_miningProgression"
+	],
+	"factionShopOwnerID": "AuriganPirates",
+	"FactionShopItems": [
+		"BTA_List_BlackMarket"
+	],
+	"BlackMarketShopItems": [
+		"itemCollection_faction_AuriganPirates"
+	],
 	"CoreSystemID": "starsystemdef_PortVail(TheRack3050+)",
 	"StartingSystemModes": [
 		"KAMEA_CAMPAIGN",
@@ -136,11 +144,13 @@
 	"DifficultyList": [],
 	"DifficultyModes": [],
 	"contractEmployerIDs": [
-		"Locals"
+		"AuriganPirates"
 	],
 	"contractTargetIDs": [
 		"Steiner",
-		"AuriganPirates",
+		"Locals",
+		"Hanse",
+		"Chainelane",
 		"Rim"
 	]
 }
