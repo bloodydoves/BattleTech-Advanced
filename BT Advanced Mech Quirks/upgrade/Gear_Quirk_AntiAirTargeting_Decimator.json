@@ -1,0 +1,141 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "SensorsA"
+			},
+			{
+				"CategoryID": "Quirk"
+			}
+		],
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "[[Chassis.Tonnage]]/10",
+				"CBillCost": "[[Chassis.Tonnage]] * 1.15"
+			}
+		},
+		"Flags": [
+				"default",
+				"not_broken",
+				"no_salvage",
+				"autorepair"
+		],
+		"BonusDescriptions": [
+				"IsSensorsA",
+				"AntiAirTargeting: +8"
+			]
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 500000,
+		"Rarity": 99,
+		"Purchasable": false,
+		"Manufacturer": "Quirk",
+		"Model": "Decimator",
+		"UIName": "Decimator Anti-Air Targeting",
+		"Id": "Gear_Quirk_AntiAirTargeting_Decimator",
+		"Name": "Decimator Anti-Air Targeting",
+		"Details": "This piece of gear represents the Decimator's inherent Anti-Air Targeting quirk. This gives the Decimator bonus hit chance against aerial units such as VTOLs and Land-Air Mechs.",
+		"Icon": "uixSvgIcon_equipment_Rangefinder"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Quirk_AAAccuracy",
+				"Name": "Targeting Computer",
+				"Details": "Improved overall accuracy.",
+				"Icon": "uixSvgIcon_ability_precisionstrike"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "ActorABSOLUTE_AeroUnit",
+				"operation": "Set",
+				"modValue": "-8",
+				"modType": "System.Single",
+				"targetCollection": "Weapon"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "FCS_AA_Counter",
+				"Name": "AA Strafe Counter Effect",
+				"Details": "AA Strafe Counter Effect.",
+				"Icon": "AdvancedTC"
+			},
+			"statisticData": {
+				"statName": "AAAFactor",
+				"operation": "Float_Add",
+				"modValue": "0.8",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "FCS_AA_Counter_On",
+				"Name": "AA Strafe Counter Effect",
+				"Details": "AA Strafe Counter Effect.",
+				"Icon": "AdvancedTC"
+			},
+			"statisticData": {
+				"statName": "UseAAAFactor",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			},
+			"nature": "Buff"
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"BLACKLISTED",
+			"component_type_stock",
+			"lv-shares-sensors"
+		],
+		"tagSetSourceFile": ""
+	}
+}

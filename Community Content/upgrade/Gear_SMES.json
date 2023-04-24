@@ -1,0 +1,232 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "SMES"
+			},
+			{
+				"CategoryID": "Misc"
+			}
+		],
+		"BonusDescriptions": [
+				"WalkSpeed: +40%",
+				"RunSpeed: +0.4",
+				"HeatGenerated: +10%",
+				"HeatPerTurn: 10",
+				"StabDamageTaken: +10%",
+				"UpgradeWeight: 25%"
+		],
+		"Weights": {
+			"StructureFactor": 1.25
+		},
+		"Linked": {
+			"Links": [
+				{
+					"ComponentDefId": "emod_smes_linked",
+					"Location": "LeftLeg"
+				},
+				{
+					"ComponentDefId": "emod_smes_linked",
+					"Location": "RightLeg"
+				}
+			]
+		}
+	},
+	"Description": {
+		"Cost": 280000,
+		"Rarity": 5,
+		"Purchasable": true,
+		"Manufacturer": "Obeedah",
+		"Model": "Superheavy Superspeed",
+		"UIName": "S.M.E.S.",
+		"Id": "Gear_SMES",
+		"Name": "S.M.E.S.",
+		"Details": "Developed, supposedly, to overcharge SuperHeavy BattleMech engines and increase their speed, the SuperHeavy Mobility Enhancement System (or S.M.E.S. for short) provides a large boost in mobility for such designs at a fairly heavy cost of tonnage and heat generation. The S.M.E.S. is generally considered worth the trade-off however and has found a quiet home among MechWarriors lucky enough to drive such a massive 'Mech. <b><color=#099ff2>Automatically activated, works continuously. RESTRICTED TO SUPERHEAVIES ONLY.</color></b>",
+		"Icon": "offroad-racer"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0,
+	"AllowedLocations": "CenterTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "MASCSprint",
+				"Name": "ChargerSprint",
+				"Details": "MORE SPEED.",
+				"Icon": "uixSvgIcon_run_n_gun"
+			},
+			"statisticData": {
+				"statName": "CBTBE_RunMultiMod",
+				"operation": "Float_Add",
+				"modValue": "0.4",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "SuperchargerWalk",
+				"Name": "Supercharged",
+				"Details": "Supercharged Engines",
+				"Icon": "uixSvgIcon_action_evasivemove"
+			},
+			"statisticData": {
+				"statName": "WalkSpeed",
+				"operation": "Float_Multiply",
+				"modValue": "1.4",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-Heat_Supercharger_Sanctuary",
+				"Name": "Increased Heat",
+				"Details": "Heat generation increased by 10%.",
+				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "HeatGenerated",
+				"operation": "Float_Multiply",
+				"modValue": "1.1",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "SMES-Heat_Geneartion",
+				"Name": "Increased Heat",
+				"Details": "The SMES produces substantial waste heat, generating a flat 10 heat per turn of use.",
+				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "HeatSinkCapacity",
+				"operation": "Int_Add",
+				"modValue": "-10",
+				"modType": "System.Int32"
+			}
+		},
+		{
+			  "durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			  },
+			  "targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			  },
+			  "effectType": "StatisticEffect",
+			  "Description": {
+				"Id": "StatusEffect-SMES-StabDamageTaken",
+				"Name": "INCOMING STABILITY DAMAGE INCREASED",
+				"Details": "Incoming stability damage reduced by [AMT].",
+				"Icon": "uixSvgIcon_equipment_Gyro"
+			  },
+			  "nature": "Buff",
+			  "statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "ReceivedInstabilityMultiplier",
+				"operation": "Float_Multiply",
+				"modValue": "1.1",
+				"modType": "System.Single"
+			  }
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}
