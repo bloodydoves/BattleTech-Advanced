@@ -2,55 +2,59 @@
 	"Custom": {
 		"Category": [
 			{
-				"CategoryID": "w/e/l/chemical"
+				"CategoryID": "w/s/l/laser"
 			}
 		],
 		"BonusDescriptions": [
 				"ChemicalLaser",
+				"WpnAccuracy: +1",
+				"PipsIgnored: 4",
+				"AntiBA: 50%",
 				"WeaponAttachmentCompatible: Laser Insulator",
 				"WeaponAttachmentCompatible: Laser FCS"
 			]
 	},
-	"Category": "Energy",
+	"Category": "AntiPersonnel",
 	"Type": "Laser",
-	"WeaponSubType": "LargeLaser",
+	"WeaponSubType": "SmallLaserPulse",
 	"MinRange": 0,
-	"MaxRange": 600,
+	"MaxRange": 150,
 	"RangeSplit": [
-		150,
-		300,
-		450
+		30,
+		70,
+		110
 	],
 	"AmmoCategory": "ChemLaser",
 	"StartingAmmoCapacity": 0,
-	"HeatGenerated": 12,
-	"Damage": 35,
+	"HeatGenerated": 4,
+	"Damage": 17,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
-	"EvasivePipsIgnored": 0,
+	"EvasivePipsIgnored": 4,
 	"DamageVariance": 0,
 	"HeatDamage": 0,
-	"AccuracyModifier": 0,
+	"AccuracyModifier": -1,
 	"CriticalChanceMultiplier": 1,
 	"AOECapable": false,
 	"IndirectFireCapable": false,
 	"RefireModifier": 0,
 	"ShotsWhenFired": 1,
 	"ProjectilesPerShot": 1,
-	"AttackRecoil": 1,
+	"AttackRecoil": 0,
 	"Instability": 0,
-	"WeaponEffectID": "WeaponEffect-Weapon_Laser_Large",
+	"TrooperSquadDamageModifier": 1.5,
+	"WeaponEffectID": "WeaponEffect-Weapon_LaserPulse_Small",
 	"Description": {
-		"Cost": 420000,
+		"Cost": 56000,
 		"Rarity": 0,
 		"Purchasable": true,
 		"Manufacturer": "Periphery Arms",
-		"Model": "Large Chem Laser",
-		"UIName": "L Chem Laser",
-		"Id": "Weapon_Laser_LargeLaser_Chemical_CLAN",
-		"Name": "L Chem Laser",
-		"Details": "Chemical Lasers are not a new invention but a rediscovering of pre-spaceflight Terran laser technology, wherein a fuel source was consumed in order to create the desired laser effect. That ammo is explosive and the chemical laser does less damage than a conventionally powered equivalent, but the chemical process generates very little heat and the laser mechanism itself can be smaller and lighter since it doesn't require heavy capacitors to work. The Large Chem Laser is the heaviest and most powerful of the chemical lasers. \n\n <b><color=#ffcc00>Uses Chem Laser Ammo.</color></b>",
-		"Icon": "uixSvgIcon_weapon_Energy"
+		"Model": "Small Chem Pulse Laser",
+		"UIName": "S Chem Pulse Laser",
+		"Id": "Weapon_Laser_SmallLaserPulse_Chemical_CLAN",
+		"Name": "S Chem Pulse Laser",
+		"Details": "Chemical Lasers are not a new invention but a rediscovering of pre-spaceflight Terran laser technology, wherein a fuel source was consumed in order to create the desired laser effect. That ammo is explosive and the chemical laser does less damage than a conventionally powered equivalent, but the chemical process generates very little heat. The Small Chem Pulse Laser is the smallest and lightest of the chemical pulse lasers. \n\n <b><color=#ffcc00>Uses Chem Laser Ammo.</color></b>",
+		"Icon": "laser-burst"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
@@ -59,7 +63,7 @@
 	"PrefabIdentifier": "Laser",
 	"BattleValue": 0,
 	"InventorySize": 1,
-	"Tonnage": 4,
+	"Tonnage": 1,
 	"AllowedLocations": "All",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
@@ -67,7 +71,7 @@
 	"ComponentTags": {
 		"items": [
 			"component_type_stock",
-			"range_long",
+			"range_close",
 			"LaserInsulatorAttachable.{location}",
 			"LaserInsulatorSupported-SingleShot",
 			"LaserFCSSupported-SingleShot"
