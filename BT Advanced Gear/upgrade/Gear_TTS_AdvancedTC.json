@@ -16,7 +16,7 @@
 		},
 		"BonusDescriptions": [
 				"Breaching",
-				"CalledShot",
+				"Recoil: -1",
 				"IsCockpit"
 			]
 	},
@@ -27,15 +27,15 @@
 		"Cost": 450000,
 		"Rarity": 4,
 		"Purchasable": true,
-		"Manufacturer": "NAIS",
-		"Model": "ADV TC",
-		"UIName": "FCS Adv TC",
+		"Manufacturer": "Mendham Electronics",
+		"Model": "PerfecTrac",
+		"UIName": "FCS Precision Computer",
 		"Id": "Gear_TTS_AdvancedTC",
-		"Name": "Targeting Computer",
-		"Details": "Targeting Computers are sophisticated pieces of electronics that, unlike normal targeting systems, physically help MechWarriors target their opponents. Complex stablizers and calculation algorithms permit much more precise weapons fire, even breaching enemy defensive stances and permitting the precise targeting of mech components. This allows for more surgical precision of weapons fire, especially with naturally accurate systems.",
+		"Name": "Precision Computer",
+		"Details": "This is an advanced targeting computer called the FCS Precision Computer. This system provides a MechWarrior with the ability to breach past any defense. In addition, the Precision Computer allows XXXX",
 		"Icon": "AdvancedTC"
 	},
-	"BonusValueA": "Breaching Shot",
+	"BonusValueA": "",
 	"BonusValueB": "",
 	"ComponentType": "Upgrade",
 	"ComponentSubType": "NotSet",
@@ -57,7 +57,7 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "TC-Breaching",
+				"Id": "PrecisionComputer-Breaching",
 				"Name": "BREACHING SHOT",
 				"Details": "PASSIVE: Attacking with a single weapon ignores COVER and GUARDED on the target.",
 				"Icon": "uixSvgIcon_ability_precisionstrike"
@@ -72,7 +72,8 @@
 		},
 		{
 			"durationData": {
-				"duration": -1
+				"duration": -1,
+				"stackLimit": -1
 			},
 			"targetingData": {
 				"effectTriggerType": "Passive",
@@ -80,25 +81,27 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "TC-CalledShot",
-				"Name": "True Called Shot",
-				"Details": "PASSIVE: Making a Precision Strike gives the Called Shot interface.",
-				"Icon": "uixSvgIcon_ability_precisionstrike"
+				"Id": "PrecisionComputer-Recoil",
+				"Name": "Stabilized Weapon",
+				"Details": "Reduced Weapon Recoil",
+				"Icon": "uixSvgIcon_equipment_TTS"
 			},
 			"statisticData": {
-				"statName": "IRTCalledShotAlwaysAllow",
-				"operation": "Set",
-				"modValue": "true",
-				"modType": "System.Boolean"
-			},
-			"nature": "Buff"
+				"statName": "RefireModifier",
+				"operation": "Int_Add",
+				"modValue": "-1",
+				"modType": "System.Int32",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			}
 		}
 	],
 	"ComponentTags": {
 		"items": [
-			"component_type_stock",
-			"lv-vismode-zoom_m0_c-3_s10",
-			"lv-vismode-heat_m1_d50"
+			"component_type_stock"
 		],
 		"tagSetSourceFile": ""
 	}
