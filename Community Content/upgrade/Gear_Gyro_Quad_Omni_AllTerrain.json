@@ -1,0 +1,256 @@
+{
+	"Custom": {
+		"ComponentExplosion": {
+			"StabilityDamage": 100
+		},
+		"Category": [
+			{
+				"CategoryID": "Gyro"
+			},
+			{
+				"CategoryID": "Quirk"
+			}
+		],
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "[[Chassis.Tonnage]]/10",
+				"CBillCost": "[[Chassis.Tonnage]] * 1.15"
+			}
+		},
+		"Flags": [
+			"default",
+			"not_broken",
+			"no_salvage",
+			"autorepair",
+			"ignore_damage"
+		],
+		"BonusDescriptions": [
+			"IsGyro",
+			"Omni",
+			"BAMounts",
+			"WalkSpeed: +10%",
+			"RunSpeed: +10%",
+			"KickDamageBonus: +20",
+			"KickAccuracy: +1",
+			"GyroStab: 80",
+			"360Twist"
+		]
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 500000,
+		"Rarity": 99,
+		"Purchasable": false,
+		"Manufacturer": "Quirk",
+		"Model": "Quad Omni",
+		"UIName": "Quad OmniMech All-Terrain Gyro",
+		"Id": "Gear_Gyro_Quad_Omni_AllTerrain",
+		"Name": "Quad OmniMech All-Terrain Gyro Gyro",
+		"Details": "This piece of gear represents the inherently superior gyro that all quad mechs share. It provides a number of benefits to quads, such as bonus movement speed, a damage and accuracy bonus to kick attacks, and a higher unsteady threshold. This specific gyro also contains the benefits inherent to OmniMechs and permits the equipped Quad to also function as an OmniMech. Additionally, this specific Gyro permits the equipped mech, a unique Wawkalak, to ignore all terrain penalties and travel over just about anything.",
+		"Icon": "uixSvgIcon_equipment_Gyro"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 3,
+	"Tonnage": 0,
+	"AllowedLocations": "CenterTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Gyro-Quad-Threshold",
+				"Name": "Gyroscopic Orientation",
+				"Details": "The gyro helps establish center-of-mass equilibrium for the BattleMech.",
+				"Icon": "uixSvgIcon_equipment_Gyro"
+			},
+			"statisticData": {
+				"statName": "UnsteadyThreshold",
+				"operation": "Float_Add",
+				"modValue": "80.0",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Gyro-Quad-Walk",
+				"Name": "Quad Gyro",
+				"Details": "Provides an increased walking and sprinting speed, bonus damage and accuracy to kicks, and an increased unsteady threshold.",
+				"Icon": "uixSvgIcon_action_evasivemove"
+			},
+			"statisticData": {
+				"statName": "WalkSpeed",
+				"operation": "Float_Multiply",
+				"modValue": "1.1",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Gyro-Quad-Sprint",
+				"Name": "ChargerSprint",
+				"Details": "Increased sprint speed.",
+				"Icon": "uixSvgIcon_run_n_gun"
+			},
+			"statisticData": {
+				"modValue": "0.1",
+				"operation": "Float_Add",
+				"statName": "CBTBE_RunMultiMod",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Gyro-Quad-Kick_Damage",
+				"Name": "Spikes Kick Damage",
+				"Details": "Kick attacks deal 20 more damage.",
+				"Icon": "uixSvgIcon_equipment_ActuatorArm"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CBTBE_Kick_Target_Damage_Mod",
+				"operation": "Int_Add",
+				"modValue": "20",
+				"modType": "System.Int32"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Gyro-Quad-Kick_Accuracy",
+				"Name": "Spikes Kick Accuracy",
+				"Details": "Kick attacks gain +1 accuracy.",
+				"Icon": "uixSvgIcon_equipment_ActuatorArm"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CBTBE_Kick_Attack_Mod",
+				"operation": "Int_Add",
+				"modValue": "-1",
+				"modType": "System.Int32"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-getHasBattleArmorMounts",
+				"Name": "getHasBattleArmorMounts",
+				"Details": "getHasBattleArmorMounts",
+				"Icon": "uixSvgIcon_ability_precisionstrike"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "HasBattleArmorMounts",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			}
+		},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"forcePathRebuild": true,
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect-LAM-AirMech-Pathing",
+						"Name": "AirMech mode",
+						"Details": "AirMech mode",
+						"Icon": "uixSvgIcon_equipment_Gyro"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"effectsPersistAfterDestruction": false,
+						"statName": "CUPathingUnaffected",
+						"operation": "Set",
+						"modValue": "True",
+						"modType": "System.Boolean"
+					}
+				}
+	],
+	"ComponentTags": {
+		"items": [
+			"BLACKLISTED",
+			"component_type_variant"
+		],
+		"tagSetSourceFile": ""
+	}
+}
