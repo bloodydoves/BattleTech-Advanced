@@ -1,21 +1,46 @@
 {
+	"Custom": {
+		"AssemblyVariant": {
+		"PrefabID": "Tarantula",
+		"Exclude": false,
+		"Include": true
+		},
+	"ChassisDefaults": []
+	},
+	"CustomParts": {
+		"MeleeWeaponOverride": {
+		  "DefaultWeapon": "Weapon_MeleeAttackEx"
+		},
+		"FiringArc": 360,
+		"Unaffected": {
+		  "DesignMasks": "false",
+		  "Pathing": "false",
+		  "Fire": "false",
+		  "Landmines": "false"
+		},
+		"ArmsCountedAsLegs": true,
+		"MoveCostModPerBiome": {
+		  "DesignMaskBiomeMartianVacuum": 1.0,
+		  "DesignMaskBiomeLunarVacuum": 1.0
+		}
+    },
 	"Description": {
-		"Cost": 450000,
+		"Cost": 2100000,
 		"Rarity": 0,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Commando",
-		"Id": "chassisdef_commando_COM-7X",
-		"Name": "Commando",
-		"Details": "Originally developed by a luckless mercenary unit named Team Venom, the COM-7X is a simple and efficient refit of the traditional Commando COM-2D. The -7X removes the -2D's SRM-4 and replaces it with an additional Medium Laser in each arm. While this increases the 'Mech's heat burden, the firepower boost is well worth it. The COM-7X is in service to many Periphery powerss and mercenary commands and serves with distinction.",
-		"Icon": "uixTxrIcon_commando"
+		"UIName": "Tarantula",
+		"Id": "chassisdef_tarantula_ZPH-AM",
+		"Name": "Tarantula",
+		"Details": "Normally, ancestral mechs are ancient relics. However, in the Free Rasalhague Republic, most of those ancient mechs were lost to the chaos of the Clan Invasion. Your family managed to survive the Invasion and acquired a fairly new Tarantula to carry on the family name with, making this a 'new' ancestral mech. Armed with twin ER Medium Lasers as well as twin Clan Small Pulse Lasers (scavenged off the battlefield as your family fled their original homes), the Ancestral Tarantula is ready to take revenge on the Clans that destroyed your home.",
+		"Icon": "uixTxrIcon_tarantula"
 	},
 	"MovementCapDefID": "movedef_commando_COM-2D",
 	"PathingCapDefID": "pathingdef_light",
-	"HardpointDataDefID": "hardpointdatadef_commando",
-	"PrefabIdentifier": "chrPrfMech_commandoBase-001",
-	"PrefabBase": "commando",
+	"HardpointDataDefID": "hardpointdatadef_cutarantula",
+	"PrefabIdentifier": "chrprfmech_cutarantulabase-001",
+	"PrefabBase": "cutarantulabase",
 	"Tonnage": 25,
 	"InitialTonnage": 2.5,
 	"weightClass": "LIGHT",
@@ -58,11 +83,16 @@
 		},
 		{
 			"Location": "LeftArm",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 6,
+			"MaxArmor": 60,
+			"MaxRearArmor": -1,
+			"InternalStructure": 30
+		},
+		{
+			"Location": "LeftTorso",
 			"Hardpoints": [
-				{
-					"WeaponMountID": "Energy",
-					"Omni": false
-				},
 				{
 					"WeaponMountID": "Energy",
 					"Omni": false
@@ -70,17 +100,12 @@
 				{
 					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
+				},
+				{
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": false
 				}
 			],
-			"Tonnage": 0,
-			"InventorySlots": 12,
-			"MaxArmor": 40,
-			"MaxRearArmor": -1,
-			"InternalStructure": 20
-		},
-		{
-			"Location": "LeftTorso",
-			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 12,
 			"MaxArmor": 60,
@@ -96,25 +121,20 @@
 				}
 			],
 			"Tonnage": 0,
-			"InventorySlots": 16,
+			"InventorySlots": 15,
 			"MaxArmor": 80,
 			"MaxRearArmor": 40,
 			"InternalStructure": 40
 		},
 		{
 			"Location": "RightTorso",
-			"Hardpoints": [],
-			"Tonnage": 0,
-			"InventorySlots": 12,
-			"MaxArmor": 60,
-			"MaxRearArmor": 30,
-			"InternalStructure": 30
-		},
-		{
-			"Location": "RightArm",
 			"Hardpoints": [
 				{
 					"WeaponMountID": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				},
 				{
@@ -124,9 +144,18 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 40,
+			"MaxArmor": 60,
+			"MaxRearArmor": 30,
+			"InternalStructure": 30
+		},
+		{
+			"Location": "RightArm",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 6,
+			"MaxArmor": 60,
 			"MaxRearArmor": -1,
-			"InternalStructure": 20
+			"InternalStructure": 30
 		},
 		{
 			"Location": "LeftLeg",
@@ -191,17 +220,20 @@
 			"z": 0.5
 		}
 	],
-	"VariantName": "COM-7X",
+	"VariantName": "ZPH-AM",
 	"ChassisTags": {
-		"items": [],
+		"items": [
+			"QuadMech",
+			"AncestralMech"
+		],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "Light Striker & Scout",
-	"YangsThoughts": "Originally developed by a luckless mercenary unit named Team Venom, the COM-7X is a simple and efficient refit of the traditional Commando COM-2D. The -7X removes the -2D's SRM-4 and replaces it with an additional Medium Laser in each arm. While this increases the 'Mech's heat burden, the firepower boost is well worth it. The COM-7X is in service to many Periphery powerss and mercenary commands and serves with distinction.",
+	"StockRole": "Ancestral Quad",
+	"YangsThoughts": "Normally, ancestral mechs are ancient relics. However, in the Free Rasalhague Republic, most of those ancient mechs were lost to the chaos of the Clan Invasion. Your family managed to survive the Invasion and acquired a fairly new Tarantula to carry on the family name with, making this a 'new' ancestral mech. Armed with twin ER Medium Lasers as well as twin Clan Small Pulse Lasers (scavenged off the battlefield as your family fled their original homes), the Ancestral Tarantula is ready to take revenge on the Clans that destroyed your home.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "Gear_Quirk_NarrowProfile_Commando",
+			"ComponentDefID": "Gear_Gyro_Quad",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
@@ -219,8 +251,5 @@
 			"prefabName": "",
 			"hasPrefabName": true
 		}
-	],
-	"CustomParts": {
-		"CustomParts": []
-	}
+	]
 }

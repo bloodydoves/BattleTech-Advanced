@@ -1,27 +1,27 @@
 {
 	"Description": {
-		"Cost": 450000,
-		"Rarity": 0,
+		"Cost": 1800000,
+		"Rarity": 1,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Commando",
-		"Id": "chassisdef_commando_COM-7X",
-		"Name": "Commando",
-		"Details": "Originally developed by a luckless mercenary unit named Team Venom, the COM-7X is a simple and efficient refit of the traditional Commando COM-2D. The -7X removes the -2D's SRM-4 and replaces it with an additional Medium Laser in each arm. While this increases the 'Mech's heat burden, the firepower boost is well worth it. The COM-7X is in service to many Periphery powerss and mercenary commands and serves with distinction.",
-		"Icon": "uixTxrIcon_commando"
+		"UIName": "Locust",
+		"Id": "chassisdef_locust_LCT-AM",
+		"Name": "Locust",
+		"Details": "This Locust has been modified and updated throughout the decades as the ancestral mech of your family in the Magistracy of Canopus. Armed now with a LRM-5 and SRM-2, as well as a Small Laser for close-range combat, the Ancestral Locust has a weapon for any situation. Clad in Ferro-Fibrous armor and powered by a 160-rated fusion engine, the Ancestral Locust is a simple buit effective machine.",
+		"Icon": "uixTxrIcon_locust"
 	},
-	"MovementCapDefID": "movedef_commando_COM-2D",
+	"MovementCapDefID": "movedef_locust_LCT-1V",
 	"PathingCapDefID": "pathingdef_light",
-	"HardpointDataDefID": "hardpointdatadef_commando",
-	"PrefabIdentifier": "chrPrfMech_commandoBase-001",
-	"PrefabBase": "commando",
-	"Tonnage": 25,
-	"InitialTonnage": 2.5,
+	"HardpointDataDefID": "hardpointdatadef_locust",
+	"PrefabIdentifier": "chrPrfMech_locustBase-001",
+	"PrefabBase": "locust",
+	"Tonnage": 20,
+	"InitialTonnage": 2,
 	"weightClass": "LIGHT",
-	"BattleValue": 2061000,
+	"BattleValue": 1642000,
 	"Heatsinks": 0,
-	"TopSpeed": 85,
+	"TopSpeed": 210,
 	"TurnRadius": 90,
 	"MaxJumpjets": 30,
 	"Stability": 100,
@@ -39,13 +39,13 @@
 	"Signature": 0,
 	"Radius": 4,
 	"PunchesWithLeftArm": false,
-	"MeleeDamage": 35,
-	"MeleeInstability": 10,
+	"MeleeDamage": 20,
+	"MeleeInstability": 5,
 	"MeleeToHitModifier": 0,
-	"DFADamage": 35,
+	"DFADamage": 20,
 	"DFAToHitModifier": 0,
-	"DFASelfDamage": 35,
-	"DFAInstability": 10,
+	"DFASelfDamage": 20,
+	"DFAInstability": 5,
 	"Locations": [
 		{
 			"Location": "Head",
@@ -60,11 +60,11 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMountID": "Energy",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				},
 				{
-					"WeaponMountID": "Energy",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				},
 				{
@@ -74,47 +74,55 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 40,
+			"MaxArmor": 30,
 			"MaxRearArmor": -1,
-			"InternalStructure": 20
+			"InternalStructure": 15
 		},
 		{
 			"Location": "LeftTorso",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 60,
-			"MaxRearArmor": 30,
-			"InternalStructure": 30
+			"MaxArmor": 50,
+			"MaxRearArmor": 25,
+			"InternalStructure": 25
 		},
 		{
 			"Location": "CenterTorso",
 			"Hardpoints": [
 				{
-					"WeaponMountID": "Missile",
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
-			"InventorySlots": 16,
-			"MaxArmor": 80,
-			"MaxRearArmor": 40,
-			"InternalStructure": 40
+			"InventorySlots": 15,
+			"MaxArmor": 60,
+			"MaxRearArmor": 30,
+			"InternalStructure": 30
 		},
 		{
 			"Location": "RightTorso",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 60,
-			"MaxRearArmor": 30,
-			"InternalStructure": 30
+			"MaxArmor": 50,
+			"MaxRearArmor": 25,
+			"InternalStructure": 25
 		},
 		{
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMountID": "Energy",
+					"WeaponMountID": "Missile",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Missile",
 					"Omni": false
 				},
 				{
@@ -124,84 +132,88 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 40,
+			"MaxArmor": 30,
 			"MaxRearArmor": -1,
-			"InternalStructure": 20
+			"InternalStructure": 15
 		},
 		{
 			"Location": "LeftLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 60,
+			"MaxArmor": 40,
 			"MaxRearArmor": -1,
-			"InternalStructure": 30
+			"InternalStructure": 20
 		},
 		{
 			"Location": "RightLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 60,
+			"MaxArmor": 40,
 			"MaxRearArmor": -1,
-			"InternalStructure": 30
+			"InternalStructure": 20
 		}
 	],
 	"LOSSourcePositions": [
 		{
 			"x": 0,
-			"y": 9.5,
-			"z": 0.5
+			"y": 8,
+			"z": 0
 		},
 		{
-			"x": -2.5,
-			"y": 8.5,
-			"z": -0.5
+			"x": 2,
+			"y": 8,
+			"z": -1
 		},
 		{
-			"x": 2.5,
-			"y": 8.5,
-			"z": -0.5
+			"x": -2,
+			"y": 8,
+			"z": -1
 		}
 	],
 	"LOSTargetPositions": [
 		{
 			"x": 0,
-			"y": 9.5,
-			"z": 0.5
+			"y": 8,
+			"z": 0
 		},
 		{
-			"x": -2.5,
-			"y": 8.5,
-			"z": -0.5
+			"x": 2,
+			"y": 8,
+			"z": -1
 		},
 		{
-			"x": 2.5,
-			"y": 8.5,
-			"z": -0.5
-		},
-		{
-			"x": -1.5,
-			"y": 3,
-			"z": 0.5
+			"x": -2,
+			"y": 8,
+			"z": -1
 		},
 		{
 			"x": 1.5,
 			"y": 3,
-			"z": 0.5
+			"z": 0
+		},
+		{
+			"x": -1.5,
+			"y": 3,
+			"z": 0
 		}
 	],
-	"VariantName": "COM-7X",
+	"VariantName": "LCT-AM",
 	"ChassisTags": {
-		"items": [],
+		"items": [
+			"ArmLimitUpperRight",
+			"ArmLimitUpperLeft",
+			"AncestralMech"
+		],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "Light Striker & Scout",
-	"YangsThoughts": "Originally developed by a luckless mercenary unit named Team Venom, the COM-7X is a simple and efficient refit of the traditional Commando COM-2D. The -7X removes the -2D's SRM-4 and replaces it with an additional Medium Laser in each arm. While this increases the 'Mech's heat burden, the firepower boost is well worth it. The COM-7X is in service to many Periphery powerss and mercenary commands and serves with distinction.",
+	"StockRole": "Ancestral Scout",
+	"YangsThoughts": "This Locust has been modified and updated throughout the decades as the ancestral mech of your family in the Magistracy of Canopus. Armed now with a LRM-5 and SRM-2, as well as a Small Laser for close-range combat, the Ancestral Locust has a weapon for any situation. Clad in Ferro-Fibrous armor and powered by a 160-rated fusion engine, the Ancestral Locust is a simple buit effective machine.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "Gear_Quirk_NarrowProfile_Commando",
+			"ComponentDefID": "Gear_Quirk_NarrowProfile_Locust",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,

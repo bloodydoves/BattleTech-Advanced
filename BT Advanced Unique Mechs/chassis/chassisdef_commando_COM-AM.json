@@ -1,14 +1,14 @@
 {
 	"Description": {
 		"Cost": 450000,
-		"Rarity": 1,
+		"Rarity": 0,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Primitive Commando",
-		"Id": "chassisdef_commando_COM-1A",
-		"Name": "Commando Primitive",
-		"Details": "The original Commando used prototype equipment that was similarly primitive to those found in the first BattleMech, the Mackie. This version was completely replaced by its successor. First constructed in 2463, the 'Mech was equipped with only an Odin Large Laser mounted in its right arm.",
+		"UIName": "Commando",
+		"Id": "chassisdef_commando_COM-AM",
+		"Name": "Commando",
+		"Details": "This Commando has been modified and updated throughout the decades as the ancestral mech of your family in the Lyran Commonwealth. Armed with a heavy loadout of four SRM-2 launchers as well as a Medium Pulse Laser and ER Small Laser, this Commando can easily bring its two tons of specialist ammo to bear against its enemies. Ferro-Fibrous armor provides moderate protection while the traditional 150-rated fusion engine keeps the mech cruising easily.",
 		"Icon": "uixTxrIcon_commando"
 	},
 	"MovementCapDefID": "movedef_commando_COM-2D",
@@ -41,7 +41,7 @@
 	"PunchesWithLeftArm": false,
 	"MeleeDamage": 35,
 	"MeleeInstability": 10,
-	"MeleeToHitModifier": -1,
+	"MeleeToHitModifier": 0,
 	"DFADamage": 35,
 	"DFAToHitModifier": 0,
 	"DFASelfDamage": 35,
@@ -58,7 +58,16 @@
 		},
 		{
 			"Location": "LeftArm",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMountID": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
 			"MaxArmor": 40,
@@ -67,7 +76,16 @@
 		},
 		{
 			"Location": "LeftTorso",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMountID": "Missile",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Missile",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
 			"MaxArmor": 60,
@@ -76,7 +94,12 @@
 		},
 		{
 			"Location": "CenterTorso",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMountID": "Missile",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 16,
 			"MaxArmor": 80,
@@ -85,7 +108,16 @@
 		},
 		{
 			"Location": "RightTorso",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMountID": "Missile",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Missile",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
 			"MaxArmor": 60,
@@ -96,7 +128,11 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMountID": "Energy",
+					"WeaponMountID": "Missile",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -169,21 +205,21 @@
 			"z": 0.5
 		}
 	],
-	"VariantName": "COM-1A",
+	"VariantName": "COM-AM",
 	"ChassisTags": {
 		"items": [
-			"PrimitiveMech"
+			"AncestralMech"
 		],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "Light Sniper & Scout",
-	"YangsThoughts": "The original Commando used prototype equipment that was similarly primitive to those found in the first BattleMech, the Mackie. This version was completely replaced by its successor. First constructed in 2463, the 'Mech was equipped with only an Odin Large Laser mounted in its right arm.",
+	"StockRole": "Ancestral Striker",
+	"YangsThoughts": "This Commando has been modified and updated throughout the decades as the ancestral mech of your family in the Lyran Commonwealth. Armed with a heavy loadout of four SRM-2 launchers as well as a Medium Pulse Laser and ER Small Laser, this Commando can easily bring its two tons of specialist ammo to bear against its enemies. Ferro-Fibrous armor provides moderate protection while the traditional 150-rated fusion engine keeps the mech cruising easily.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engineslots_Primitive_center",
+			"ComponentDefID": "Gear_Quirk_NarrowProfile_Commando",
 			"SimGameUID": "",
-			"ComponentDefType": "HeatSink",
+			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
 			"GUID": null,
 			"DamageLevel": "Functional",
@@ -192,24 +228,13 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "Gear_Quirk_PrimitiveRugged_Commando",
+			"ComponentDefID": "emod_structureslots_standard",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
 			"GUID": null,
 			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "Head",
-			"ComponentDefID": "Gear_Cockpit_Primitive",
-			"SimGameUID": "",
-			"ComponentDefType": "Upgrade",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
+			"prefabName": "",
 			"hasPrefabName": false
 		}
 	],
