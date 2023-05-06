@@ -6,9 +6,9 @@
 		"Manufacturer": "",
 		"Model": "",
 		"UIName": "Thorn",
-		"Id": "chassisdef_thorn_THE-N1",
+		"Id": "chassisdef_thorn_THE-F",
 		"Name": "Thorn",
-		"Details": "Developed in 3051 on the orders of Precentor Martial Anastasius Focht to try and close the gap between the Clans and Com Guards, the factory refit THE-N1 received its baptism of fire during the Battle of Tukayyid. Having reached a similar conclusion that resulted in the THE-Nb, the CASE was dropped and the standard engine was swapped for an XL Engine to allow the standard weaponry to be stripped for an all energy weapon array: a right arm mounted Kinslaughter H-Class ER PPC and a head-mounted Intek Small Laser. This new weapons array, enhanced by double heat sinks, added a level of lethality never seen before on the Thorn.",
+		"Details": "The Thorn is a light BattleMech which was originally intended to operate as a scout but was too slow for true scout work. Eventually it was rebuilt in 2549 to serve as a light support platform thanks to the first-ever use of Endo-Steel and CASE on a mech. However, that variant was the THE-N. The original Thorn was the THE-F and lacked the advanced Endo-Steel and CASE of its successor design. Still, the -F was effective enough to remain in service, though not production, and served as the basis for the THE-S given to the Draconis Combine by ComStar as part of Operation Rosebud.",
 		"Icon": "uixTxrIcon_thorn"
 	},
 	"MovementCapDefID": "movedef_locust_LCT-1V",
@@ -51,7 +51,7 @@
 			"Location": "Head",
 			"Hardpoints": [
 				{
-					"WeaponMountID": "AntiPersonnel",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
@@ -64,6 +64,10 @@
 		{
 			"Location": "LeftArm",
 			"Hardpoints": [
+				{
+					"WeaponMountID": "Energy",
+					"Omni": false
+				},
 				{
 					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
@@ -110,11 +114,11 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMountID": "Energy",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				},
 				{
-					"WeaponMountID": "Energy",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				}
 			],
@@ -187,7 +191,7 @@
 			"z": 0
 		}
 	],
-	"VariantName": "THE-N1",
+	"VariantName": "THE-F",
 	"ChassisTags": {
 		"items": [
 			"OmniMech",
@@ -196,7 +200,7 @@
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Pioneering Light Support",
-	"YangsThoughts": "Developed in 3051 on the orders of Precentor Martial Anastasius Focht to try and close the gap between the Clans and Com Guards, the factory refit THE-N1 received its baptism of fire during the Battle of Tukayyid. Having reached a similar conclusion that resulted in the THE-Nb, the CASE was dropped and the standard engine was swapped for an XL Engine to allow the standard weaponry to be stripped for an all energy weapon array: a right arm mounted Kinslaughter H-Class ER PPC and a head-mounted Intek Small Laser. This new weapons array, enhanced by double heat sinks, added a level of lethality never seen before on the Thorn.",
+	"YangsThoughts": "The Thorn is a light BattleMech which was originally intended to operate as a scout but was too slow for true scout work. Eventually it was rebuilt in 2549 to serve as a light support platform thanks to the first-ever use of Endo-Steel and CASE on a mech. However, that variant was the THE-N. The original Thorn was the THE-F and lacked the advanced Endo-Steel and CASE of its successor design. Still, the -F was effective enough to remain in service, though not production, and served as the basis for the THE-S given to the Draconis Combine by ComStar as part of Operation Rosebud.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",
@@ -211,7 +215,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_structureslots_endosteel",
+			"ComponentDefID": "emod_structureslots_standard",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional",
