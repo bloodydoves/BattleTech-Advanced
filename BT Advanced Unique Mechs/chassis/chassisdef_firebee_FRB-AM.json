@@ -1,25 +1,25 @@
 {
 	"Description": {
-		"Cost": 450000,
-		"Rarity": 0,
+		"Cost": 2556000,
+		"Rarity": 2,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Commando",
-		"Id": "chassisdef_commando_COM-4H",
-		"Name": "Commando",
-		"Details": "Designed by the Marian Hegemony, the Commando-4H was designed to bring an absurd punch for its weight. The -4H replaces the -2D's missile launchers with a whopping six Rocket Launcher 15s and a second Medium Laser. Beware of the -4H getting behind you.",
-		"Icon": "uixTxrIcon_commando"
+		"UIName": "Firebee",
+		"Id": "chassisdef_firebee_FRB-AM",
+		"Name": "Firebee",
+		"Details": "This Firebee has been modified and updated throughout the decades as the ancestral mech of your family in the Capellan Confederation. The Firebee is one of the original pride and joys of the Confederation and so it has served your family for generations. The Ancestral Firebee uses a quartet of LRM-5s for ranged harassment. Up close, it has a Large Pulse Laser to slice enemies apart. A 175-rated XL engine and Ferro-Fibrous armor provides the weight and protection for the design.",
+		"Icon": "uixTxrIcon_firebee"
 	},
-	"MovementCapDefID": "movedef_commando_COM-2D",
+	"MovementCapDefID": "movedef_firebee_FRB-2E",
 	"PathingCapDefID": "pathingdef_light",
-	"HardpointDataDefID": "hardpointdatadef_commando",
-	"PrefabIdentifier": "chrPrfMech_commandoBase-001",
-	"PrefabBase": "commando",
-	"Tonnage": 25,
-	"InitialTonnage": 2.5,
+	"HardpointDataDefID": "hardpointdatadef_firebee",
+	"PrefabIdentifier": "chrprfmech_firebeebase-001",
+	"PrefabBase": "firebee",
+	"Tonnage": 35,
+	"InitialTonnage": 3.5,
 	"weightClass": "LIGHT",
-	"BattleValue": 2061000,
+	"BattleValue": 3749000,
 	"Heatsinks": 0,
 	"TopSpeed": 85,
 	"TurnRadius": 90,
@@ -38,13 +38,13 @@
 	"SensorRangeMultiplier": 1,
 	"Signature": 0,
 	"Radius": 4,
-	"PunchesWithLeftArm": false,
-	"MeleeDamage": 35,
+	"PunchesWithLeftArm": true,
+	"MeleeDamage": 40,
 	"MeleeInstability": 10,
 	"MeleeToHitModifier": 0,
-	"DFADamage": 35,
+	"DFADamage": 40,
 	"DFAToHitModifier": 0,
-	"DFASelfDamage": 35,
+	"DFASelfDamage": 40,
 	"DFAInstability": 10,
 	"Locations": [
 		{
@@ -60,11 +60,7 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMountID": "Energy",
-					"Omni": false
-				},
-				{
-					"WeaponMountID": "Energy",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				},
 				{
@@ -74,9 +70,9 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 40,
+			"MaxArmor": 60,
 			"MaxRearArmor": -1,
-			"InternalStructure": 20
+			"InternalStructure": 30
 		},
 		{
 			"Location": "LeftTorso",
@@ -92,9 +88,9 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 60,
-			"MaxRearArmor": 30,
-			"InternalStructure": 30
+			"MaxArmor": 80,
+			"MaxRearArmor": 40,
+			"InternalStructure": 40
 		},
 		{
 			"Location": "CenterTorso",
@@ -106,9 +102,9 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 16,
-			"MaxArmor": 80,
-			"MaxRearArmor": 40,
-			"InternalStructure": 40
+			"MaxArmor": 110,
+			"MaxRearArmor": 55,
+			"InternalStructure": 55
 		},
 		{
 			"Location": "RightTorso",
@@ -124,109 +120,116 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 60,
-			"MaxRearArmor": 30,
-			"InternalStructure": 30
+			"MaxArmor": 80,
+			"MaxRearArmor": 40,
+			"InternalStructure": 40
 		},
 		{
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMountID": "Missile",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMountID": "Missile",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMountID": "Missile",
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 40,
+			"MaxArmor": 60,
 			"MaxRearArmor": -1,
-			"InternalStructure": 20
+			"InternalStructure": 30
 		},
 		{
 			"Location": "LeftLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 60,
+			"MaxArmor": 80,
 			"MaxRearArmor": -1,
-			"InternalStructure": 30
+			"InternalStructure": 40
 		},
 		{
 			"Location": "RightLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 60,
+			"MaxArmor": 80,
 			"MaxRearArmor": -1,
-			"InternalStructure": 30
+			"InternalStructure": 40
 		}
 	],
 	"LOSSourcePositions": [
 		{
 			"x": 0,
-			"y": 9.5,
+			"y": 12.5,
 			"z": 0.5
 		},
 		{
 			"x": -2.5,
-			"y": 8.5,
+			"y": 11.5,
 			"z": -0.5
 		},
 		{
 			"x": 2.5,
-			"y": 8.5,
+			"y": 11.5,
 			"z": -0.5
 		}
 	],
 	"LOSTargetPositions": [
 		{
 			"x": 0,
-			"y": 9.5,
+			"y": 12.5,
 			"z": 0.5
 		},
 		{
 			"x": -2.5,
-			"y": 8.5,
+			"y": 11.5,
 			"z": -0.5
 		},
 		{
 			"x": 2.5,
-			"y": 8.5,
+			"y": 11.5,
 			"z": -0.5
 		},
 		{
-			"x": -1.5,
+			"x": -2,
 			"y": 3,
 			"z": 0.5
 		},
 		{
-			"x": 1.5,
+			"x": 2,
 			"y": 3,
 			"z": 0.5
 		}
 	],
-	"VariantName": "COM-4H",
+	"VariantName": "FRB-AM",
 	"ChassisTags": {
-		"items": [],
+		"items": [
+			"ArmLimitLowerRight",
+			"AncestralMech"
+		],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "Light Striker & Scout",
-	"YangsThoughts": "Designed by the Marian Hegemony, the Commando-4H was designed to bring an absurd punch for its weight. The -4H replaces the -2D's missile launchers with a whopping six Rocket Launcher 15s and a second Medium Laser. Beware of the -4H getting behind you.",
+	"StockRole": "Ancestral Harasser",
+	"YangsThoughts": "This Firebee has been modified and updated throughout the decades as the ancestral mech of your family in the Capellan Confederation. The Firebee is one of the original pride and joys of the Confederation and so it has served your family for generations. The Ancestral Firebee uses a quartet of LRM-5s for ranged harassment. Up close, it has a Large Pulse Laser to slice enemies apart. A 175-rated XL engine and Ferro-Fibrous armor provides the weight and protection for the design.",
 	"FixedEquipment": [
 		{
-			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "Gear_Quirk_NarrowProfile_Commando",
+			"MountedLocation": "Head",
+			"ComponentDefID": "Gear_Quirk_ImprovedCoolingJacket_Firebee",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
-			"HardpointSlot": -1,
+			"HardpointSlot": 0,
 			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": null,

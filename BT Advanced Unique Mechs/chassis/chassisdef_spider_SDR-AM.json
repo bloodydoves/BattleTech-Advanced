@@ -1,25 +1,25 @@
 {
 	"Description": {
-		"Cost": 450000,
-		"Rarity": 0,
+		"Cost": 2224000,
+		"Rarity": 1,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Commando",
-		"Id": "chassisdef_commando_COM-7X",
-		"Name": "Commando",
-		"Details": "Originally developed by a luckless mercenary unit named Team Venom, the COM-7X is a simple and efficient refit of the traditional Commando COM-2D. The -7X removes the -2D's SRM-4 and replaces it with an additional Medium Laser in each arm. While this increases the 'Mech's heat burden, the firepower boost is well worth it. The COM-7X is in service to many Periphery powerss and mercenary commands and serves with distinction.",
-		"Icon": "uixTxrIcon_commando"
+		"UIName": "Spider",
+		"Id": "chassisdef_spider_SDR-AM",
+		"Name": "Spider",
+		"Details": "This Spider has been modified and updated throughout the decades as the ancestral mech of your family in the Free Worlds League. Built on an Endo-Steel frame and powered by a 240-rated XL engine, the Ancestral Spider brings its four Small Pulse Lasers to bear easily thanks to the traditional Spider jump jets. For long range firepower though it carries an ArtemisIV enabled LRM-5.",
+		"Icon": "uixTxrIcon_spider"
 	},
-	"MovementCapDefID": "movedef_commando_COM-2D",
+	"MovementCapDefID": "movedef_spider_SDR-5V",
 	"PathingCapDefID": "pathingdef_light",
-	"HardpointDataDefID": "hardpointdatadef_commando",
-	"PrefabIdentifier": "chrPrfMech_commandoBase-001",
-	"PrefabBase": "commando",
-	"Tonnage": 25,
-	"InitialTonnage": 2.5,
+	"HardpointDataDefID": "hardpointdatadef_spider",
+	"PrefabIdentifier": "chrPrfMech_spiderBase-001",
+	"PrefabBase": "spider",
+	"Tonnage": 30,
+	"InitialTonnage": 3,
 	"weightClass": "LIGHT",
-	"BattleValue": 2061000,
+	"BattleValue": 3907000,
 	"Heatsinks": 0,
 	"TopSpeed": 85,
 	"TurnRadius": 90,
@@ -39,12 +39,12 @@
 	"Signature": 0,
 	"Radius": 4,
 	"PunchesWithLeftArm": false,
-	"MeleeDamage": 35,
+	"MeleeDamage": 40,
 	"MeleeInstability": 10,
 	"MeleeToHitModifier": 0,
-	"DFADamage": 35,
+	"DFADamage": 40,
 	"DFAToHitModifier": 0,
-	"DFASelfDamage": 35,
+	"DFASelfDamage": 40,
 	"DFAInstability": 10,
 	"Locations": [
 		{
@@ -64,9 +64,19 @@
 					"Omni": false
 				},
 				{
-					"WeaponMountID": "Energy",
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
-				},
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 12,
+			"MaxArmor": 50,
+			"MaxRearArmor": -1,
+			"InternalStructure": 25
+		},
+		{
+			"Location": "LeftTorso",
+			"Hardpoints": [
 				{
 					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
@@ -74,18 +84,9 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 40,
-			"MaxRearArmor": -1,
-			"InternalStructure": 20
-		},
-		{
-			"Location": "LeftTorso",
-			"Hardpoints": [],
-			"Tonnage": 0,
-			"InventorySlots": 12,
-			"MaxArmor": 60,
-			"MaxRearArmor": 30,
-			"InternalStructure": 30
+			"MaxArmor": 70,
+			"MaxRearArmor": 35,
+			"InternalStructure": 35
 		},
 		{
 			"Location": "CenterTorso",
@@ -93,22 +94,31 @@
 				{
 					"WeaponMountID": "Missile",
 					"Omni": false
+				},
+				{
+					"WeaponMountID": "Missile",
+					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 16,
-			"MaxArmor": 80,
-			"MaxRearArmor": 40,
-			"InternalStructure": 40
+			"MaxArmor": 100,
+			"MaxRearArmor": 50,
+			"InternalStructure": 50
 		},
 		{
 			"Location": "RightTorso",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 60,
-			"MaxRearArmor": 30,
-			"InternalStructure": 30
+			"MaxArmor": 70,
+			"MaxRearArmor": 35,
+			"InternalStructure": 35
 		},
 		{
 			"Location": "RightArm",
@@ -124,84 +134,86 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 40,
+			"MaxArmor": 50,
 			"MaxRearArmor": -1,
-			"InternalStructure": 20
+			"InternalStructure": 25
 		},
 		{
 			"Location": "LeftLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 60,
+			"MaxArmor": 70,
 			"MaxRearArmor": -1,
-			"InternalStructure": 30
+			"InternalStructure": 35
 		},
 		{
 			"Location": "RightLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 60,
+			"MaxArmor": 70,
 			"MaxRearArmor": -1,
-			"InternalStructure": 30
+			"InternalStructure": 35
 		}
 	],
 	"LOSSourcePositions": [
 		{
 			"x": 0,
-			"y": 9.5,
-			"z": 0.5
+			"y": 11,
+			"z": 0
 		},
 		{
 			"x": -2.5,
-			"y": 8.5,
+			"y": 10.5,
 			"z": -0.5
 		},
 		{
 			"x": 2.5,
-			"y": 8.5,
+			"y": 10.5,
 			"z": -0.5
 		}
 	],
 	"LOSTargetPositions": [
 		{
 			"x": 0,
-			"y": 9.5,
-			"z": 0.5
+			"y": 11,
+			"z": 0
 		},
 		{
 			"x": -2.5,
-			"y": 8.5,
+			"y": 10.5,
 			"z": -0.5
 		},
 		{
 			"x": 2.5,
-			"y": 8.5,
+			"y": 10.5,
 			"z": -0.5
 		},
 		{
-			"x": -1.5,
-			"y": 3,
+			"x": -2,
+			"y": 4,
 			"z": 0.5
 		},
 		{
-			"x": 1.5,
-			"y": 3,
+			"x": 2,
+			"y": 4,
 			"z": 0.5
 		}
 	],
-	"VariantName": "COM-7X",
+	"VariantName": "SDR-AM",
 	"ChassisTags": {
-		"items": [],
+		"items": [
+			"AncestralMech"
+		],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "Light Striker & Scout",
-	"YangsThoughts": "Originally developed by a luckless mercenary unit named Team Venom, the COM-7X is a simple and efficient refit of the traditional Commando COM-2D. The -7X removes the -2D's SRM-4 and replaces it with an additional Medium Laser in each arm. While this increases the 'Mech's heat burden, the firepower boost is well worth it. The COM-7X is in service to many Periphery powerss and mercenary commands and serves with distinction.",
+	"StockRole": "Ancestral Scout",
+	"YangsThoughts": "This Spider has been modified and updated throughout the decades as the ancestral mech of your family in the Free Worlds League. Built on an Endo-Steel frame and powered by a 240-rated XL engine, the Ancestral Spider brings its four Small Pulse Lasers to bear easily thanks to the traditional Spider jump jets. For long range firepower though it carries an ArtemisIV enabled LRM-5.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "Gear_Quirk_NarrowProfile_Commando",
+			"ComponentDefID": "Gear_Quirk_NimbleJumper_Spider",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
@@ -212,12 +224,14 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_structureslots_standard",
+			"ComponentDefID": "emod_structureslots_endosteel",
+			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
+			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": "",
-			"hasPrefabName": true
+			"hasPrefabName": false
 		}
 	],
 	"CustomParts": {

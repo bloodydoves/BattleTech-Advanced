@@ -1,21 +1,21 @@
 {
 	"Description": {
-		"Cost": 1600000,
-		"Rarity": 0,
+		"Cost": 1800000,
+		"Rarity": 1,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Howler",
-		"Id": "chassisdef_howler_HOW-3",
-		"Name": "Howler",
-		"Details": "The original Howler was a Fire Mandrill mech but proliferated out into the other Clans fairly quickly given Fire Mandrill's fractious nature. Among the Clans to acquire the Howler was Clan Steel Viper, who redesigned the mech before their ejection from the Inner Sphere by Clan Jade Falcon. Jade Falcon then salvaged the Howler 2 and spread it through the other Inner Sphere Clans. The Howler 3 is a Snow Raven refit of the Howler 2 that was renamed the Devil by the Ravens. It swaps the ATM battery of the HOW-2 for an ER PPC and Targeting Computer.",
-		"Icon": "uixTxrIcon_howler"
+		"UIName": "Hornet",
+		"Id": "chassisdef_hornet_HNT-AM",
+		"Name": "Hornet",
+		"Details": "This Hornet has been modified and updated throughout the decades as the ancestral mech of your family in the Periphery. Though your family could only afford a much-maligned Hornet, they managed to make the best of it, even upgrading it with Endo-Steel bones and the best weapons possible: a Medium Pulse Laser and a Heavy Machine Gun, both tuned for excellent close-range effectiveness. Combined with its five jump jets, the HNT-AM is about as effective as a Hornet can be.",
+		"Icon": "uixTxrIcon_hornet"
 	},
-	"MovementCapDefID": "movedef_locust_LCT-1V",
+	"MovementCapDefID": "movedef_hornet",
 	"PathingCapDefID": "pathingdef_light",
-	"HardpointDataDefID": "hardpointdatadef_baboon",
-	"PrefabIdentifier": "chrprfmech_baboonbase-001",
-	"PrefabBase": "baboon",
+	"HardpointDataDefID": "hardpointdatadef_hornet",
+	"PrefabIdentifier": "chrprfmech_hornetbase-001",
+	"PrefabBase": "hornet",
 	"Tonnage": 20,
 	"InitialTonnage": 2,
 	"weightClass": "LIGHT",
@@ -23,7 +23,7 @@
 	"Heatsinks": 0,
 	"TopSpeed": 210,
 	"TurnRadius": 90,
-	"MaxJumpjets": 30,
+	"MaxJumpjets": 8,
 	"Stability": 100,
 	"StabilityDefenses": [
 		0,
@@ -40,16 +40,21 @@
 	"Radius": 4,
 	"PunchesWithLeftArm": false,
 	"MeleeDamage": 20,
-	"MeleeInstability": 5,
+	"MeleeInstability": 10,
 	"MeleeToHitModifier": 0,
 	"DFADamage": 20,
 	"DFAToHitModifier": 0,
 	"DFASelfDamage": 20,
-	"DFAInstability": 5,
+	"DFAInstability": 10,
 	"Locations": [
 		{
 			"Location": "Head",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 6,
 			"MaxArmor": 45,
@@ -58,7 +63,20 @@
 		},
 		{
 			"Location": "LeftArm",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMountID": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
 			"MaxArmor": 30,
@@ -70,8 +88,8 @@
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 40,
-			"MaxRearArmor": 10,
+			"MaxArmor": 50,
+			"MaxRearArmor": 25,
 			"InternalStructure": 25
 		},
 		{
@@ -79,37 +97,41 @@
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 15,
-			"MaxArmor": 45,
-			"MaxRearArmor": 15,
+			"MaxArmor": 60,
+			"MaxRearArmor": 30,
 			"InternalStructure": 30
 		},
 		{
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMountID": "Energy",
+					"WeaponMountID": "Ballistic",
 					"Omni": false
 				},
 				{
-					"WeaponMountID": "Energy",
+					"WeaponMountID": "Ballistic",
 					"Omni": false
 				},
 				{
-					"WeaponMountID": "Energy",
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 40,
-			"MaxRearArmor": 10,
+			"MaxArmor": 50,
+			"MaxRearArmor": 25,
 			"InternalStructure": 25
 		},
 		{
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMountID": "AntiPersonnel",
+					"WeaponMountID": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
@@ -128,7 +150,7 @@
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 35,
+			"MaxArmor": 40,
 			"MaxRearArmor": -1,
 			"InternalStructure": 20
 		},
@@ -137,7 +159,7 @@
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 35,
+			"MaxArmor": 40,
 			"MaxRearArmor": -1,
 			"InternalStructure": 20
 		}
@@ -186,19 +208,30 @@
 			"z": 0
 		}
 	],
-	"VariantName": "HOW-3",
+	"VariantName": "HNT-AM",
 	"ChassisTags": {
 		"items": [
-			"ClanMech"
+			"ArmLimitUpperRight",
+			"ArmLimitUpperLeft",
+			"AncestralMech"
 		],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "Second-Line Support",
-	"YangsThoughts": "The original Howler was a Fire Mandrill mech but proliferated out into the other Clans fairly quickly given Fire Mandrill's fractious nature. Among the Clans to acquire the Howler was Clan Steel Viper, who redesigned the mech before their ejection from the Inner Sphere by Clan Jade Falcon. Jade Falcon then salvaged the Howler 2 and spread it through the other Inner Sphere Clans. The Howler 3 is a Snow Raven refit of the Howler 2 that was renamed the Devil by the Ravens. It swaps the ATM battery of the HOW-2 for an ER PPC and Targeting Computer.",
+	"YangsThoughts": "This Hornet has been modified and updated throughout the decades as the ancestral mech of your family in the Periphery. Though your family could only afford a much-maligned Hornet, they managed to make the best of it, even upgrading it with Endo-Steel bones and the best weapons possible: a Medium Pulse Laser and a Heavy Machine Gun, both tuned for excellent close-range effectiveness. Combined with its five jump jets, the HNT-AM is about as effective as a Hornet can be.",
+	"StockRole": "Ancestral Striker",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_structureslots_clanendosteel",
+			"ComponentDefID": "emod_structureslots_endosteel",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"DamageLevel": "Functional",
+			"prefabName": "",
+			"hasPrefabName": true
+		},
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "Gear_Quirk_NarrowProfile_Hornet",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional",

@@ -1,0 +1,106 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "Quirk"
+			},
+			{
+				"CategoryID": "LifeSupportB"
+			}
+		],
+		"Flags": [
+				"default",
+				"not_broken",
+				"no_salvage",
+				"autorepair"
+		],
+		"BonusDescriptions": [
+				"Accuracy: +2",
+				"LanceResolve: +5"
+			]
+	},
+	"Description": {
+		"Cost": 0,
+		"Rarity": 0,
+		"Purchasable": false,
+		"Manufacturer": "History",
+		"Model": "Ancestor",
+		"UIName": "Ancestral Mech Quirk",
+		"Id": "Gear_Quirk_Ancestral_Mech",
+		"Name": "Ancestral Mech Quirk",
+		"Details": "This piece of equipment represents the inherent bonuses that your Ancestral Mech possesses. Due to its extended history with your family, it provides a large morale bonus to the pilot that drives it as well as being somewhat more accurate thanks to the fine-tuning of its targeting systems across the centuries.",
+		"Icon": "uixSvgIcon_equipment_Cockpit"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 1,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AncestralQuirk_Accuracy",
+				"Name": "Ancestral BattleMech Accuracy",
+				"Details": "Ancestral BattleMechs automatically gain +1 accuracy.",
+				"Icon": "uixSvgIcon_ability_precisionstrike"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "AccuracyModifier",
+				"operation": "Float_Add",
+				"modValue": "-2.0",
+				"modType": "System.Single",
+				"targetCollection": "Weapon"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "AllLanceMates",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AncestralQuirk_Resolve",
+				"Name": "Ancestral BattleMech Resolve Generation",
+				"Details": "Ancestral BattleMechs provide a +5 bonus to actions that generate Morale.",
+				"Icon": "uixSvgIcon_equipment_Cockpit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "MoraleBonusGain",
+				"operation": "Int_Add",
+				"modValue": "5",
+				"modType": "System.Int32"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}
