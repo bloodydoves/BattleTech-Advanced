@@ -5,7 +5,7 @@
 			"RightLimit": "Hand"
 		},
 		"AssemblyVariant": {
-			"PrefabID": "Wasplam",
+			"PrefabID": "Stingerlam",
 			"Exclude": false,
 			"Include": true
 		}
@@ -13,10 +13,10 @@
 	"CustomParts": {
 		"AlternateRepresentations": [
 			{
-				"PrefabIdentifier": "chrprfmech_wasplambase-001",
+				"PrefabIdentifier": "chrprfmech_stingerlambase-001",
 				"AdditionalPrefabs": [],
-				"PrefabBase": "wasplam",
-				"HardpointDataDef": "hardpointdatadef_wasplam",
+				"PrefabBase": "stingerlam",
+				"HardpointDataDef": "hardpointdatadef_stingerlam",
 				"Type": "AirMech",
 				"HoveringSoundStart": "jet_start",
 				"HoveringSoundEnd": "jet_end",
@@ -50,7 +50,7 @@
 	"FixedEquipment": [
 		{
 			"MountedLocation": "Head",
-			"ComponentDefID": "Gear_Avionics_WSP",
+			"ComponentDefID": "Gear_Avionics_STG",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional",
@@ -101,7 +101,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engine_175",
+			"ComponentDefID": "emod_engine_180",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -215,17 +215,17 @@
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Wasp LAM",
-		"Id": "chassisdef_wasp_WSP-105M",
-		"Name": "Wasp LAM",
-		"Details": "The Wasp LAM was a highly sought-after prize, and a jealously guarded commodity when most of the Wasp LAM production facilities were destroyed shortly after the start of the First Succession War. By the thirty-first century, the Wasp LAM was an exceedingly rare sight within the Inner Sphere. The WSP-105M is a minor variant, swapping the SRM-2 and a heat sink for a LRM-5.",
-		"Icon": "uixTxrIcon_wasplam"
+		"UIName": "Stinger LAM",
+		"Id": "chassisdef_stinger_STG-A7",
+		"Name": "Stinger LAM",
+		"Details": "In 2680, the Star League requested designers to develop 'Mechs which could fly as well as function as standard 'Mechs. The first viable LAM, the Stinger LAM was based on the old Stinger mech. LexaTech's reworking of the concept proved so successful, the Land-Air 'Mech became highly sought after, especially for operations on minor planets (asteroids, comets, dwarf planets, etc.). The STG-A7 is a simple and cheap refit of the -A5 that drops all the firepower in exchange for a Medium Pulse Laser and twin FASCAM Bombs which allows the -A7 to serve as a minelayer in tactical engagements.",
+		"Icon": "uixTxrIcon_stingerlam"
 	},
-	"MovementCapDefID": "movedef_wasplam",
+	"MovementCapDefID": "movedef_stingerlam",
 	"PathingCapDefID": "pathingdef_light",
-	"HardpointDataDefID": "hardpointdatadef_wasp",
-	"PrefabIdentifier": "chrPrfMech_waspHotD-001",
-	"PrefabBase": "wasp",
+	"HardpointDataDefID": "hardpointdatadef_stinger",
+	"PrefabIdentifier": "chrPrfMech_stingerHotD-001",
+	"PrefabBase": "stinger",
 	"Tonnage": 30,
 	"InitialTonnage": 3,
 	"weightClass": "LIGHT",
@@ -300,12 +300,7 @@
 		},
 		{
 			"Location": "CenterTorso",
-			"Hardpoints": [
-				{
-					"WeaponMountID": "Missile",
-					"Omni": false
-				}
-			],
+			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 16,
 			"MaxArmor": 100,
@@ -317,6 +312,10 @@
 			"Hardpoints": [
 				{
 					"WeaponMountID": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				},
 				{
@@ -411,7 +410,7 @@
 			"z": 0.5
 		}
 	],
-	"VariantName": "WSP-105M",
+	"VariantName": "STG-A7",
 	"ChassisTags": {
 		"items": [
 			"LightMech",
@@ -420,5 +419,5 @@
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "LAM",
-	"YangsThoughts": "The Wasp LAM was a highly sought-after prize, and a jealously guarded commodity when most of the Wasp LAM production facilities were destroyed shortly after the start of the First Succession War. By the thirty-first century, the Wasp LAM was an exceedingly rare sight within the Inner Sphere. The WSP-105M is a minor variant, swapping the SRM-2 and a heat sink for a LRM-5."
+	"YangsThoughts": "In 2680, the Star League requested designers to develop 'Mechs which could fly as well as function as standard 'Mechs. The first viable LAM, the Stinger LAM was based on the old Stinger mech. LexaTech's reworking of the concept proved so successful, the Land-Air 'Mech became highly sought after, especially for operations on minor planets (asteroids, comets, dwarf planets, etc.). The STG-A7 is a simple and cheap refit of the -A5 that drops all the firepower in exchange for a Medium Pulse Laser and twin FASCAM Bombs which allows the -A7 to serve as a minelayer in tactical engagements."
 }

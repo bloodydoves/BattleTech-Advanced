@@ -1,22 +1,11 @@
 {
-	"Custom": {
-		"ArmActuatorSupport": {
-			"LeftLimit": "Hand",
-			"RightLimit": "Hand"
-		},
-		"AssemblyVariant": {
-			"PrefabID": "Wasplam",
-			"Exclude": false,
-			"Include": true
-		}
-	},
 	"CustomParts": {
 		"AlternateRepresentations": [
 			{
-				"PrefabIdentifier": "chrprfmech_wasplambase-001",
+				"PrefabIdentifier": "chrprfmech_shawklambase-001",
 				"AdditionalPrefabs": [],
-				"PrefabBase": "wasplam",
-				"HardpointDataDef": "hardpointdatadef_wasplam",
+				"PrefabBase": "shawklam",
+				"HardpointDataDef": "hardpointdatadef_shawklam",
 				"Type": "AirMech",
 				"HoveringSoundStart": "jet_start",
 				"HoveringSoundEnd": "jet_end",
@@ -50,7 +39,7 @@
 	"FixedEquipment": [
 		{
 			"MountedLocation": "Head",
-			"ComponentDefID": "Gear_Avionics_WSP",
+			"ComponentDefID": "Gear_Avionics_HOR",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional",
@@ -101,7 +90,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engine_175",
+			"ComponentDefID": "emod_engine_320",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -133,18 +122,8 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "Gear_JumpJet_Generic_LAM",
-			"SimGameUID": "",
-			"ComponentDefType": "JumpJet",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional",
-			"prefabName": "",
-			"hasPrefabName": true
-		},
-		{
 			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "Gear_JumpJet_Generic_LAM",
+			"ComponentDefID": "Gear_JumpJet_Heavy_LAM",
 			"SimGameUID": null,
 			"ComponentDefType": "JumpJet",
 			"HardpointSlot": -1,
@@ -155,7 +134,7 @@
 		},
 		{
 			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "Gear_JumpJet_Generic_LAM",
+			"ComponentDefID": "Gear_JumpJet_Heavy_LAM",
 			"SimGameUID": null,
 			"ComponentDefType": "JumpJet",
 			"HardpointSlot": -1,
@@ -166,7 +145,7 @@
 		},
 		{
 			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Gear_JumpJet_Generic_LAM",
+			"ComponentDefID": "Gear_JumpJet_Heavy_LAM",
 			"SimGameUID": null,
 			"ComponentDefType": "JumpJet",
 			"HardpointSlot": -1,
@@ -177,7 +156,7 @@
 		},
 		{
 			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Gear_JumpJet_Generic_LAM",
+			"ComponentDefID": "Gear_JumpJet_Heavy_LAM",
 			"SimGameUID": null,
 			"ComponentDefType": "JumpJet",
 			"HardpointSlot": -1,
@@ -210,31 +189,31 @@
 		}
 	],
 	"Description": {
-		"Cost": 3400000,
-		"Rarity": 2,
+		"Cost": 15670000,
+		"Rarity": 3,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Wasp LAM",
-		"Id": "chassisdef_wasp_WSP-105M",
-		"Name": "Wasp LAM",
-		"Details": "The Wasp LAM was a highly sought-after prize, and a jealously guarded commodity when most of the Wasp LAM production facilities were destroyed shortly after the start of the First Succession War. By the thirty-first century, the Wasp LAM was an exceedingly rare sight within the Inner Sphere. The WSP-105M is a minor variant, swapping the SRM-2 and a heat sink for a LRM-5.",
-		"Icon": "uixTxrIcon_wasplam"
+		"UIName": "Hector LAM",
+		"Id": "chassisdef_hectorlam_HOR-6X",
+		"Name": "Hector LAM",
+		"Details": "Designed as an experiment during the FedCom Civil War to resurrect both the Hector and LAM technology, the Hector LAM is the only assault LAM ever designed. Even though the Hector LAM was deemed a failure by Corean Enterprises, it didn't stop them from tinkering with it and eventually issuing a field refit for the few Hector LAMs in service. Swapping the weapons loadout for a pair each of Rotary AC/2s and Rocket Pods, the HOR-6X proved slightly more effective than the -5X but not enough to warrant heavy investment.",
+		"Icon": "uixTxrIcon_shawklam"
 	},
-	"MovementCapDefID": "movedef_wasplam",
-	"PathingCapDefID": "pathingdef_light",
-	"HardpointDataDefID": "hardpointdatadef_wasp",
-	"PrefabIdentifier": "chrPrfMech_waspHotD-001",
-	"PrefabBase": "wasp",
-	"Tonnage": 30,
-	"InitialTonnage": 3,
-	"weightClass": "LIGHT",
-	"BattleValue": 3749000,
+	"MovementCapDefID": "movedef_shadowhawklam",
+	"PathingCapDefID": "pathingdef_assault",
+	"HardpointDataDefID": "hardpointdatadef_hector",
+	"PrefabIdentifier": "chrprfmech_hectorbase-001",
+	"PrefabBase": "hector",
+	"Tonnage": 80,
+	"InitialTonnage": 8,
+	"weightClass": "ASSAULT",
+	"BattleValue": 5514000,
 	"Heatsinks": 0,
-	"TopSpeed": 85,
+	"TopSpeed": 120,
 	"TurnRadius": 90,
 	"MaxJumpjets": 30,
-	"Stability": 100,
+	"Stability": 160,
 	"StabilityDefenses": [
 		0,
 		0,
@@ -247,15 +226,15 @@
 	"VisibilityMultiplier": 1,
 	"SensorRangeMultiplier": 1,
 	"Signature": 0,
-	"Radius": 4,
-	"PunchesWithLeftArm": true,
-	"MeleeDamage": 40,
-	"MeleeInstability": 10,
+	"Radius": 8,
+	"PunchesWithLeftArm": false,
+	"MeleeDamage": 90,
+	"MeleeInstability": 45,
 	"MeleeToHitModifier": 0,
-	"DFADamage": 40,
+	"DFADamage": 90,
 	"DFAToHitModifier": 0,
-	"DFASelfDamage": 40,
-	"DFAInstability": 10,
+	"DFASelfDamage": 90,
+	"DFAInstability": 45,
 	"Locations": [
 		{
 			"Location": "Head",
@@ -270,23 +249,27 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMountID": "Energy",
+					"WeaponMountID": "Ballistic",
 					"Omni": false
 				},
 				{
-					"WeaponMountID": "AntiPersonnel",
+					"WeaponMountID": "Ballistic",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 50,
+			"MaxArmor": 100,
 			"MaxRearArmor": -1,
-			"InternalStructure": 25
+			"InternalStructure": 50
 		},
 		{
 			"Location": "LeftTorso",
 			"Hardpoints": [
+				{
+					"WeaponMountID": "Energy",
+					"Omni": false
+				},
 				{
 					"WeaponMountID": "BombBay",
 					"Omni": false
@@ -294,23 +277,18 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 70,
-			"MaxRearArmor": 35,
-			"InternalStructure": 35
+			"MaxArmor": 140,
+			"MaxRearArmor": 70,
+			"InternalStructure": 70
 		},
 		{
 			"Location": "CenterTorso",
-			"Hardpoints": [
-				{
-					"WeaponMountID": "Missile",
-					"Omni": false
-				}
-			],
+			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 16,
-			"MaxArmor": 100,
-			"MaxRearArmor": 50,
-			"InternalStructure": 50
+			"MaxArmor": 200,
+			"MaxRearArmor": 100,
+			"InternalStructure": 100
 		},
 		{
 			"Location": "RightTorso",
@@ -326,15 +304,33 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 70,
-			"MaxRearArmor": 35,
-			"InternalStructure": 35
+			"MaxArmor": 140,
+			"MaxRearArmor": 70,
+			"InternalStructure": 70
 		},
 		{
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMountID": "Energy",
+					"WeaponMountID": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Ballistic",
+					"Omni": false
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 12,
+			"MaxArmor": 100,
+			"MaxRearArmor": -1,
+			"InternalStructure": 50
+		},
+		{
+			"Location": "LeftLeg",
+			"Hardpoints": [
+				{
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				},
 				{
@@ -343,82 +339,82 @@
 				}
 			],
 			"Tonnage": 0,
-			"InventorySlots": 12,
-			"MaxArmor": 50,
-			"MaxRearArmor": -1,
-			"InternalStructure": 25
-		},
-		{
-			"Location": "LeftLeg",
-			"Hardpoints": [],
-			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 70,
+			"MaxArmor": 140,
 			"MaxRearArmor": -1,
-			"InternalStructure": 35
+			"InternalStructure": 70
 		},
 		{
 			"Location": "RightLeg",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 70,
+			"MaxArmor": 140,
 			"MaxRearArmor": -1,
-			"InternalStructure": 35
+			"InternalStructure": 70
 		}
 	],
 	"LOSSourcePositions": [
 		{
 			"x": 0,
-			"y": 12.5,
-			"z": 0.5
+			"y": 14,
+			"z": 1
 		},
 		{
-			"x": -2.5,
-			"y": 11.5,
-			"z": -0.5
+			"x": 4,
+			"y": 13,
+			"z": 0
 		},
 		{
-			"x": 2.5,
-			"y": 11.5,
-			"z": -0.5
+			"x": -4,
+			"y": 13,
+			"z": 0
 		}
 	],
 	"LOSTargetPositions": [
 		{
 			"x": 0,
-			"y": 12.5,
-			"z": 0.5
+			"y": 14,
+			"z": 1
 		},
 		{
-			"x": -2.5,
-			"y": 11.5,
-			"z": -0.5
+			"x": 4,
+			"y": 13,
+			"z": 0
 		},
 		{
-			"x": 2.5,
-			"y": 11.5,
-			"z": -0.5
-		},
-		{
-			"x": -2,
-			"y": 3,
-			"z": 0.5
+			"x": -4,
+			"y": 13,
+			"z": 0
 		},
 		{
 			"x": 2,
-			"y": 3,
-			"z": 0.5
+			"y": 5,
+			"z": 0
+		},
+		{
+			"x": -2,
+			"y": 5,
+			"z": 0
 		}
 	],
-	"VariantName": "WSP-105M",
+	"VariantName": "HOR-6X",
 	"ChassisTags": {
 		"items": [
-			"LightMech",
+			"AssaultMech",
 			"LandAirMech"
 		],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "LAM",
-	"YangsThoughts": "The Wasp LAM was a highly sought-after prize, and a jealously guarded commodity when most of the Wasp LAM production facilities were destroyed shortly after the start of the First Succession War. By the thirty-first century, the Wasp LAM was an exceedingly rare sight within the Inner Sphere. The WSP-105M is a minor variant, swapping the SRM-2 and a heat sink for a LRM-5."
+	"StockRole": "Experimental Super-Heavy LAM",
+	"YangsThoughts": "Designed as an experiment during the FedCom Civil War to resurrect both the Hector and LAM technology, the Hector LAM is the only assault LAM ever designed. Even though the Hector LAM was deemed a failure by Corean Enterprises, it didn't stop them from tinkering with it and eventually issuing a field refit for the few Hector LAMs in service. Swapping the weapons loadout for a pair each of Rotary AC/2s and Rocket Pods, the HOR-6X proved slightly more effective than the -5X but not enough to warrant heavy investment."
 }
