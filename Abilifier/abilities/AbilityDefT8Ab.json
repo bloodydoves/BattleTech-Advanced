@@ -1,0 +1,169 @@
+{
+	"Description": {
+		"Id": "AbilityDefT8Ab",
+		"Name": "BOMBARDIER",
+		"Details": "PASSIVE: Gain a +33% boost to all bomb bay weapon range brackets as well as +10% damage with bomb bay weapons",
+		"Icon": "bombing-run"
+	},
+	"DisplayParams": "ShowInMWTRay",
+	"ReqSkill": "Tactics",
+	"ReqSkillLevel": 8,
+	"ActivationTime": "Passive",
+	"EffectData": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDefT8Ab_ShortRange",
+				"Name": "Bombardier",
+				"Details": "The range brackets on this mech's bomb bay weapons are increased by 33% and its bomb bay weapon damage is increased by 10%.",
+				"Icon": "bombing-run"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "ShortRange",
+				"operation": "Float_Multiply",
+				"modValue": "1.33",
+				"modType": "System.Single",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategoryId": "BombBay",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "NotSet"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDefT8Ab_MediumRange",
+				"Name": "Medium Range Increase",
+				"Details": "The Medium range brackets on this mech's support weapons are increased by 33%.",
+				"Icon": "bombing-run"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "MediumRange",
+				"operation": "Float_Multiply",
+				"modValue": "1.33",
+				"modType": "System.Single",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategoryId": "BombBay",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "NotSet"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDefT8Ab_LongRange",
+				"Name": "Long Range Increase",
+				"Details": "The Long range brackets on this mech's support weapons are increased by 33%.",
+				"Icon": "bombing-run"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "LongRange",
+				"operation": "Float_Multiply",
+				"modValue": "1.33",
+				"modType": "System.Single",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategoryId": "BombBay",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "NotSet"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDefT8Ab_MaxRange",
+				"Name": "Max Range Increase",
+				"Details": "The Max range brackets on this mech's support weapons are increased by 33%.",
+				"Icon": "bombing-run"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "MaxRange",
+				"operation": "Float_Multiply",
+				"modValue": "1.33",
+				"modType": "System.Single",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategoryId": "BombBay",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "NotSet"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDefT8Ab_BombDamage",
+				"Name": "Bomb Bay Weapon Damage Increased",
+				"Details": "Bomb Bay weapon attacks deal 10% more damage.",
+				"Icon": "bombing-run"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"modType": "System.Single",
+				"modValue": "1.1",
+				"operation": "Float_Multiply",
+				"statName": "DamagePerShot",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategoryId": "BombBay",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "NotSet"
+			}
+		}
+	],
+	"IsPrimaryAbility": true
+}

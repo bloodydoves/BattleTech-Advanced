@@ -1,0 +1,75 @@
+{
+	"Description": {
+		"Id": "AbilityDefG8d",
+		"Name": "BATTLE ARMOR MASTER",
+		"Details": "PASSIVE: Grants a 10% damage bonus and +1 accuracy to attacks with battle armor weapons.",
+		"Icon": "battle-amor-suit"
+	},
+	"DisplayParams": "ShowInMWTRay",
+	"ReqSkill": "Gunnery",
+	"ReqSkillLevel": 8,
+	"ActivationTime": "Passive",
+	"EffectData": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDefG8c_BADamage",
+				"Name": "Battle Armor Damage Increased",
+				"Details": "Battle armor weapon attacks deal [AMT] more damage.",
+				"Icon": "battle-amor-suit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"modType": "System.Single",
+				"modValue": "1.1",
+				"operation": "Float_Multiply",
+				"statName": "DamagePerShot",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategoryId": "BattleArmor",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "NotSet"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDefGU8c_BAAccuracy",
+				"Name": "Battle Armor Accuracy Increased",
+				"Details": "Battle armor weapon attacks gain +1 accuracy.",
+				"Icon": "battle-amor-suit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"modType": "System.Single",
+				"modValue": "-1.0",
+				"operation": "Float_Add",
+				"statName": "AccuracyModifier",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategoryId": "BattleArmor",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "NotSet"
+			}
+		}
+	],
+	"IsPrimaryAbility": true
+}
