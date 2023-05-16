@@ -12,10 +12,10 @@
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Juggernaut",
-		"Id": "chassisdef_juggernaut_JG-R9X1",
-		"Name": "Juggernaut",
-		"Details": "The JG-R9X1 is an attempt to bring the Juggernaut to a modern battlefield instead of an arena setting. Armed with a pair of cutting edge Plasma Rifles, the JG-R9X1 is capable of burning down pretty much anything in its path. For close-range, the JG-R9X1 has a traditionally Juggernaut flair, with 10 Small Lasers. An Endo-Steel chassis and Light Ferro-Fibrous allow for a large 360-rated fusion engine to power the Juggernaut at high speed and a battery of Double Heat Sinks keeps it all chilly. A Targeting Computer and ECM suite round out the design.",
+		"UIName": "Spray and Pray",
+		"Id": "chassisdef_juggernaut_JG-SNP",
+		"Name": "Spray and Pray",
+		"Details": "Martin 'The Janitor' Strausshoff started out as a hardcore environmentalist, smuggled onto Solaris to interrupt a major game in order to make a statement about industrial waste infesting his homeworld and other worlds around the Inner Sphere. Unfortunately for him, it turned out the crowds loved the interruption and turned him into a gladiator named The Janitor. Disowned by his environmentalist peers, Martin dove into the gladiator lifestyle to pay the bills and spread the message. His mech, Spray and Pray, uses a combination of Mech Tasers to shut enemies down and a battery of Fluid Guns, Sprayers, and Heavy AoE Flamers to melt the enemies to slag.",
 		"Icon": "uixTxrIcon_juggernaut"
 	},
 	"MovementCapDefID": "movedef_juggernaut_JG-R9T2",
@@ -56,7 +56,12 @@
 	"Locations": [
 		{
 			"Location": "Head",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMountID": "Energy",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 6,
 			"MaxArmor": 45,
@@ -103,6 +108,18 @@
 				{
 					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
+				},
+				{
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Ballistic",
+					"Omni": false
 				}
 			],
 			"Tonnage": 0,
@@ -113,7 +130,16 @@
 		},
 		{
 			"Location": "CenterTorso",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMountID": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Ballistic",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 15,
 			"MaxArmor": 290,
@@ -141,6 +167,18 @@
 				},
 				{
 					"WeaponMountID": "AntiPersonnel",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Ballistic",
 					"Omni": false
 				}
 			],
@@ -231,17 +269,18 @@
 			"z": 1
 		}
 	],
-	"VariantName": "JG-R9X1",
+	"VariantName": "JG-SNP",
 	"ChassisTags": {
 		"items": [
+			"HeroMech",
 			"ArmLimitLowerRight",
 			"ArmLimitLowerLeft",
 			"AssaultMech"
 		],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "Arena Brawler",
-	"YangsThoughts": "The JG-R9X1 is an attempt to bring the Juggernaut to a modern battlefield instead of an arena setting. Armed with a pair of cutting edge Plasma Rifles, the JG-R9X1 is capable of burning down pretty much anything in its path. For close-range, the JG-R9X1 has a traditionally Juggernaut flair, with 10 Small Lasers. An Endo-Steel chassis and Light Ferro-Fibrous allow for a large 360-rated fusion engine to power the Juggernaut at high speed and a battery of Double Heat Sinks keeps it all chilly. A Targeting Computer and ECM suite round out the design.",
+	"StockRole": "Gladiator",
+	"YangsThoughts": "Martin 'The Janitor' Strausshoff started out as a hardcore environmentalist, smuggled onto Solaris to interrupt a major game in order to make a statement about industrial waste infesting his homeworld and other worlds around the Inner Sphere. Unfortunately for him, it turned out the crowds loved the interruption and turned him into a gladiator named The Janitor. Disowned by his environmentalist peers, Martin dove into the gladiator lifestyle to pay the bills and spread the message. His mech, Spray and Pray, uses a combination of Mech Tasers to shut enemies down and a battery of Fluid Guns, Sprayers, and Heavy AoE Flamers to melt the enemies to slag.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "Head",
@@ -256,7 +295,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_structureslots_endosteel",
+			"ComponentDefID": "emod_structureslots_standard",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
