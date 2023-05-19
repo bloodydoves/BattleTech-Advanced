@@ -1,0 +1,71 @@
+{
+	"Custom": {
+		"Category": {
+			"CategoryID": "SensorsA"
+		},
+		"Flags": [
+			"not_broken",
+			"default"
+		],
+		"BonusDescriptions": [
+			"MinRangeAcc: +4"
+		]
+	},
+	"Description": {
+		"Cost": 0,
+		"Rarity": 0,
+		"Purchasable": false,
+		"Manufacturer": "Generic",
+		"Model": "Standard",
+		"UIName": "Min Range FCS",
+		"Id": "Gear_Cockpit_SensorsA_MinRangeFCS",
+		"Name": "Min Range FCS",
+		"Details": "This is a specialized fire control system for BattleMech weapon systems. Its only purpose is to reduce the fire penalty for attacking targets inside of a weapon's minimum range by a small amount to help offset that fire penalty.",
+		"Icon": "uixSvgIcon_equipment_Rangefinder"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0.5,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "SensorsA_MinRangeAcc",
+				"Name": "Sensors A Min Range Accuracy",
+				"Details": "Increased accuracy at minimum range",
+				"Icon": "uixSvgIcon_equipment_Cockpit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CACMinRangeAccuracyMod",
+				"operation": "Float_Add",
+				"modValue": "-4.0",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}
