@@ -5,7 +5,10 @@
 		},
 		"Flags": [
 			"not_broken",
-				"default"
+			"default"
+		],
+		"BonusDescriptions": [
+			"Sight: +2%"
 		]
 	},
 	"Description": {
@@ -31,7 +34,32 @@
 	"AllowedLocations": "Head",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
-	"statusEffects": null,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator"
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "SensorsA_SpottingRange",
+				"Name": "Sensors B Spotting Boost",
+				"Details": "Increases spotting distance by 2%.",
+				"Icon": "uixSvgIcon_equipment_Cockpit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "SpotterDistanceMultiplier",
+				"operation": "Float_Multiply",
+				"modValue": "1.02",
+				"modType": "System.Single"
+			}
+		}
+	],
 	"ComponentTags": {
 		"items": [
 			"component_type_stock"
