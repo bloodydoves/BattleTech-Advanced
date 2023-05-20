@@ -1,0 +1,96 @@
+{
+	"Custom": {
+		"Category": {
+			"CategoryID": "LifeSupportB"
+		},
+		"Flags": [
+			"not_broken"
+		],
+		"BonusDescriptions": [
+			"ArmoredCowl: +2"
+		]
+	},
+	"Description": {
+		"Cost": 0,
+		"Rarity": 0,
+		"Purchasable": false,
+		"Manufacturer": "Generic",
+		"Model": "Standard",
+		"UIName": "Hardened Life Support B",
+		"Id": "Gear_LifeSupportB_Hardened",
+		"Name": "Hardened Life Support B",
+		"Details": "A BattleMech's cockpit is sealed, pressurized and fitted with a lifesupport system. A limited supply of air and water is contained within the 'Mech. If air or water exists outside of the 'Mech, fresh oxygen can be supplied for an unlimited time through the filtration system. This component increases armor and structure of the head location by a small amount.",
+		"Icon": "caduceus"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 1.5,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "LifeSupportB_HardenedArmor",
+				"Name": "Life Support B: Armor Increase",
+				"Details": "Buffs Head Armor",
+				"Icon": "caduceus"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "{location}.Armor",
+				"operation": "Float_Add",
+				"modValue": "2",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "LifeSupportB_HardenedStructure",
+				"Name": "Life Support B: Structure Increase",
+				"Details": "Buffs Head Structure",
+				"Icon": "caduceus"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "{location}.Structure",
+				"operation": "Float_Add",
+				"modValue": "2",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}
