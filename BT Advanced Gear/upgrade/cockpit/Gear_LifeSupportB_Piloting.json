@@ -1,0 +1,71 @@
+{
+	"Custom": {
+		"Category": {
+			"CategoryID": "LifeSupportB"
+		},
+		"Flags": [
+			"not_broken"
+		],
+		"BonusDescriptions": [
+			"SkillPiloting: +1"
+		]
+	},
+	"Description": {
+		"Cost": 0,
+		"Rarity": 0,
+		"Purchasable": false,
+		"Manufacturer": "Generic",
+		"Model": "Standard",
+		"UIName": "Piloting Support B",
+		"Id": "Gear_LifeSupportB_Piloting",
+		"Name": "Piloting Support B",
+		"Details": "A BattleMech's cockpit is sealed, pressurized and fitted with a lifesupport system. A limited supply of air and water is contained within the 'Mech. If air or water exists outside of the 'Mech, fresh oxygen can be supplied for an unlimited time through the filtration system. This component increases the pilot's Piloting skill thanks to their faith in the Life Support to keep them hearty and hale.",
+		"Icon": "caduceus"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 1.5,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "LifeSupportB_PilotingBoost",
+				"Name": "Life Support B: Piloting Boost",
+				"Details": "Buffs Piloting Skill",
+				"Icon": "blood"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "Piloting",
+				"operation": "Int_Add",
+				"modValue": "1",
+				"modType": "System.Int32",
+				"targetCollection": "Pilot"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}

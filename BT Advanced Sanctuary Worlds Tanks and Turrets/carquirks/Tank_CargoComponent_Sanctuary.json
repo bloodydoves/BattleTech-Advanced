@@ -7,11 +7,12 @@
 		],
 		"Category": [
 			{
-				"CategoryID": "TankStuff"
+				"CategoryID": "notused"
 			}
 		],
 		"BonusDescriptions": [
-			"CritRes: 20%"
+			"CashPayment: 150000",
+			"Lootcrate"
 		]
 	},
 	"Description": {
@@ -23,8 +24,8 @@
 		"UIName": "Cargo Compartment",
 		"Id": "Tank_CargoComponent_Sanctuary",
 		"Name": "Cargo Compartment",
-		"Details": "This is where we stick all the random nuts and bolts that fall off the vehicle while out in the field. And any other cargo.",
-		"Icon": "uixSvgIcon_equipment_HeatBank"
+		"Details": "This is the cargo being carried by Sanctuary convoy trucks. It's usually not incredibly valuable but it still has some cash value. Salvaging it will give us a nice bonus payday and maybe a few military-grade components. Who knows, there might be mechparts in there, you never know with these convoys.",
+		"Icon": "treasure-chest"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
@@ -37,33 +38,7 @@
 	"AllowedLocations": "All",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
-	"statusEffects": [
-		{
-			"durationData": {
-				"duration": -1,
-				"stackLimit": -1
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"effectTargetType": "Creator",
-				"showInStatusPanel": false
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "TankCritPenalizedCrew",
-				"Name": "ChargerSprint",
-				"Details": "MORE SPEED.",
-				"Icon": "uixSvgIcon_run_n_gun"
-			},
-			"statisticData": {
-				"statName": "CriticalHitChanceReceivedMultiplier",
-				"operation": "Float_Multiply",
-				"modValue": "0.8",
-				"modType": "System.Single"
-			},
-			"nature": "Buff"
-		}
-	],
+	"statusEffects": [],
 	"ComponentTags": {
 		"items": [
 			"TanksOnly",

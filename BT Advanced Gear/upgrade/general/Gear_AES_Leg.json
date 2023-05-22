@@ -1,0 +1,117 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "AESLeg"
+			},
+			{
+				"CategoryID": "NonQuad"
+			}
+		],
+		"BonusDescriptions": [
+				"GyroStab: 50",
+				"StabDamageTaken: -15%",
+				"NonQuad",
+				"LinkedSlots: 2"
+		],
+		"Weights": {
+			"StructureFactor": 1.35
+		},
+		"Linked": {
+			"Links": [
+				{
+					"ComponentDefId": "Gear_AES_Leg_Linked",
+					"Location": "LeftLeg"
+				}
+			]
+		}
+	},
+	"StatName": null,
+	"Description": {
+		"Cost": 500000,
+		"Rarity": 5,
+		"Purchasable": true,
+		"Manufacturer": "Blackwell Corporation",
+		"Model": "Actuator Enhancement System",
+		"UIName": "AES (Leg)",
+		"Id": "Gear_AES_Leg",
+		"Name": "Actuator Enhancement System",
+		"Details": "Created by the Blackwell Corporation at the behest of the Wolf's Dragoons and later shared with both Clan Diamond Shark and the Kell Hounds, the Actuator Enhancement System is designed to amplify the effect of existing actuators in a given structural location. In this case, this AES is designed for the legs and increases stability threshold and reduces stability damage taken.",
+		"Icon": "uixSvgIcon_equipment_ActuatorLeg"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 2,
+	"Tonnage": 0,
+	"AllowedLocations": "RightLeg",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-AES_Leg_UnsteadyThresh",
+				"Name": "AES (Legs)",
+				"Details": "Increased unsteady threshold and reduced stability damage taken.",
+				"Icon": "uixSvgIcon_equipment_ActuatorLeg"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "UnsteadyThreshold",
+				"operation": "Float_Add",
+				"modValue": "50.0",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-AES_Leg_StabTaken",
+				"Name": "AES Stab Taken",
+				"Details": "Decreased stability damage taken.",
+				"Icon": "uixSvgIcon_equipment_ActuatorLeg"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "ReceivedInstabilityMultiplier",
+				"operation": "Float_Multiply",
+				"modValue": "0.85",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}

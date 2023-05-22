@@ -1,0 +1,137 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "AESArm"
+			},
+			{
+				"CategoryID": "NonQuad"
+			}
+		],
+		"BonusDescriptions": [
+				"ArmAccuracy: +2",
+				"PunchAccuracy: +2",
+				"NonQuad",
+				"PhysWeapAccuracy: +2"
+			],
+		"Weights": {
+			"StructureFactor": 1.35
+		}
+	},
+	"StatName": null,
+	"Description": {
+		"Cost": 500000,
+		"Rarity": 5,
+		"Purchasable": true,
+		"Manufacturer": "Blackwell Corporation",
+		"Model": "Actuator Enhancement System",
+		"UIName": "AES (Arm)",
+		"Id": "Gear_AES_Arm",
+		"Name": "Actuator Enhancement System",
+		"Details": "Created by the Blackwell Corporation at the behest of the Wolf's Dragoons and later shared with both Clan Diamond Shark and the Kell Hounds, the Actuator Enhancement System is designed to amplify the effect of existing actuators in a given structural location. In this case, this AES is designed for the arms and increases inherent arm weapon accuracy and increases punch and physical weapon accuracy.",
+		"Icon": "uixSvgIcon_equipment_ActuatorArm"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 2,
+	"Tonnage": 0,
+	"AllowedLocations": "LeftArm, RightArm",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-AES_Arm_WeaponAcc-{location}",
+				"Name": "AES (Arm)",
+				"Details": "Increased Arm Weapon, Punch, and Physical Weapon Accuracy.",
+				"Icon": "uixSvgIcon_equipment_ActuatorArm"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "{location}.Accuracy",
+				"operation": "Float_Add",
+				"modValue": "-2",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-AES_Arm_PunchAcc",
+				"Name": "AES Punch Accuracy",
+				"Details": "Increased Arm Weapon Accuracy.",
+				"Icon": "uixSvgIcon_equipment_ActuatorArm"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "CBTBE_Punch_Attack_Mod",
+				"operation": "Int_Add",
+				"modValue": "2",
+				"modType": "System.Int32"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-AES_Arm_PhysWeapAcc",
+				"Name": "AES PhysWeapon Accuracy",
+				"Details": "Increased Arm Weapon Accuracy.",
+				"Icon": "uixSvgIcon_equipment_ActuatorArm"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "CBTBE_Physical_Weapon_Attack_Mod",
+				"operation": "Int_Add",
+				"modValue": "2",
+				"modType": "System.Int32"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}

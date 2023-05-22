@@ -1,0 +1,85 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "SensorsB"
+			},
+			{
+				"CategoryID": "TarCompLightMech"
+			}
+		],
+		"BonusDescriptions": [
+				"Accuracy: +1",
+				"WordsWords: This component only works with Light or UltraLight Mechs.",
+				"IsSensorsB"
+		],
+		"Weights": {
+			"StructureFactor": 1.5
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 750000,
+		"Rarity": 7,
+		"Purchasable": true,
+		"Manufacturer": "Various",
+		"Model": "Generic",
+		"UIName": "Targeting Computer [Light]",
+		"Id": "Gear_TargetingTrackingSystem_TargetingComputer_Light",
+		"Name": "Light Mech Targeting Computer",
+		"Details": "This is a generic Targeting Computer system, calibrated for light mechs specifically. It provides a modest accuracy boost for all equipped weaponry.",
+		"Icon": "AdvancedTC"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "TarCompLight-AccuracyBoost",
+				"Name": "Light Targeting Computer Accuracy Boost",
+				"Details": "Weapon attacks gain +1 Accuracy.",
+				"Icon": "AdvancedTC"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"additionalRules": "NotSet",
+				"modType": "System.Single",
+				"modValue": "-1.0",
+				"operation": "Float_Add",
+				"statName": "AccuracyModifier",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "NotSet"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}

@@ -1,0 +1,100 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/s/l/binary"
+			}
+		],
+		"BonusDescriptions": [
+				"WpnAccuracy: +1",
+				"PipsIgnored: 3",
+				"WpnCrits: 10%",
+				"WeaponAttachmentCompatible: Laser Insulator",
+				"WeaponAttachmentCompatible: Laser FCS"
+			]
+	},
+	"Category": "AntiPersonnel",
+	"Type": "Laser",
+	"WeaponSubType": "SmallLaser",
+	"MinRange": 0,
+	"MaxRange": 120,
+	"RangeSplit": [
+		30,
+		60,
+		90
+	],
+	"AmmoCategory": "NotSet",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 11,
+	"Damage": 24,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 3,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": -1,
+	"CriticalChanceMultiplier": 1.1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 1,
+	"Instability": 0,
+	"WeaponEffectID": "WeaponEffect-Weapon_LaserPulse_Small",
+	"Description": {
+		"Cost": 78000,
+		"Rarity": 20,
+		"Purchasable": false,
+		"Manufacturer": "Defiance",
+		"Model": "Binary Laser Cannon",
+		"UIName": "Improved S Binary Laser",
+		"Id": "Weapon_Laser_BinaryLaserSmall_1-Defiance",
+		"Name": "Improved Small Binary Laser",
+		"Details": "Considered a dead end technology, the Small Binary Laser (nicknamed 'Small Blazers') fused two Small Laser cores together, allowing them to be fired together. While this increased penetration, the damage was still lower than firing two Small Lasers separately. This variant deals increased damage and can fire the cores separately improving damage even more at close range. \n\n <b><color=#00ffff>Can change fire mode between Split Cores and Linked Cores. Linked is default mode, Split does two shots at less damage per shot with damage falloff on each shot.</color> </b>",
+		"Icon": "laser-burst"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "Laser",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 1,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [],
+	"Modes": [
+		{
+			"Id": "Split_Cores",
+			"UIName": "Split",
+			"isBaseMode": false,
+			"DamagePerShot": -10,
+			"ShotsWhenFired": 1,
+			"DistantVariance": 0.3,
+			"DamageFalloffStartDistance": 31,
+			"DamageFalloffEndDistance": 91,
+			"DistantVarianceReversed": false,
+			"RangedDmgFalloffType": "Linear"
+		},
+		{
+			"Id": "Linked_Cores",
+			"UIName": "Linked",
+			"isBaseMode": true
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"component_type_lostech",
+			"range_close",
+			"LaserInsulatorAttachable.{location}",
+			"LaserInsulatorSupported-Binary",
+			"LaserFCSSupported-Binary",
+			"WebbTCSupported-Binary"
+		],
+		"tagSetSourceFile": ""
+	}
+}

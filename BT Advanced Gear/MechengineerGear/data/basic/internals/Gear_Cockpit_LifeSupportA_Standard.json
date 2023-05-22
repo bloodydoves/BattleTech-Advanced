@@ -1,0 +1,72 @@
+{
+	"Custom": {
+		"Category": {
+			"CategoryID": "LifeSupportA"
+		},
+		"Flags": [
+			"not_broken",
+			"default"
+		],
+		"BonusDescriptions": [
+			"BleedReduction: 5%"
+		]
+	},
+	"Description": {
+		"Cost": 0,
+		"Rarity": 0,
+		"Purchasable": false,
+		"Manufacturer": "Generic",
+		"Model": "Standard",
+		"UIName": "Life Support",
+		"Id": "Gear_Cockpit_LifeSupportA_Standard",
+		"Name": "Life Support A",
+		"Details": "A BattleMech's cockpit is sealed, pressurized and fitted with a lifesupport system. A limited supply of air and water is contained within the 'Mech. If air or water exists outside of the 'Mech, fresh oxygen can be supplied for an unlimited time through the filtration system.",
+		"Icon": "caduceus"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 1,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "LifeSupportA_BleedResist",
+				"Name": "Life Support A: Decreased Bleeding Rate",
+				"Details": "Bleed Rate x 0.95",
+				"Icon": "blood"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "BleedingRateMulti",
+				"operation": "Float_Multiply",
+				"modValue": "0.95",
+				"modType": "System.Single",
+				"targetCollection": "Pilot"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}
