@@ -1,0 +1,93 @@
+{
+	"Description": {
+		"Id": "3064-05-21",
+		"Name": "MercNews Broadcast",
+		"Details": "EMPEROR OF HALL CONSOLIDATING POWER!\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]], [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:  In the breakdown of the Sarna March in 3058, the world of Hall was divided into three territories; Emperor \"Bud\" Baranov and those of the [[DM.BaseDescriptionDefs[LoreRepublican],Fourth Republican Guard]] who followed him; a dissident group of the Fourth that chose to join Major Dick Cater and his [[DM.BaseDescriptionDefs[LoreCatersCobras],Cater's Cobras]]; and a third group under pro-[[DM.Factions[faction_Marik],Free Worlds League]] Count Radcliffe McNally with his supporting mercenaries [[DM.BaseDescriptionDefs[LoreBurtonsBrigade],Burton's Brigade]] and [[DM.BaseDescriptionDefs[LoreCritchleysCavs],Critchley's Cavaliers]].\r\n\n\nAfter years of stalemate, Emperor Baranov has gathered enough strength to make a move on Cater's Cohorts.  While Count McNally is no friend of Major Cater, it remains to be seen if the Count will take advantage of this situation for his own benefit.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "[[DM.BaseDescriptionDefs[LoreLyranGuard],LYRAN GUARDS]] GOES ROGUE ON KEID, NEW HOME!\r\n\n\nReports from the [[DM.BaseDescriptionDefs[LoreChaosMarch],Chaos March]] indicate neighbouring Lyran Guards units have failed to heed Archon-Princess [[DM.BaseDescriptionDefs[LoreKatherineSteiner],Katrina Steiner]]'s orders to move from their posts to support her [[DM.BaseDescriptionDefs[LoreLoyalist],Loyalist]] in the on-going [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]] Civil War.\r\n\n\nOn Keid, pro-Katrina Duchess Aris Hunsen appears to have successfully convinced the Thirteenth Lyran Guards to stay on planet.  While not openly making raids against other [[DM.BaseDescriptionDefs[LoreGreatHouses],Great House]] or even pro-[[DM.BaseDescriptionDefs[LoreVictorSD],Victor]] [[DM.BaseDescriptionDefs[LoreAllied],Allied]] commands, the Thirteenth is holding their own against various Chaos March raiders and pirates.  Still, their refusal to move has led the [[DM.BaseDescriptionDefs[LoreSteinerLAAF],LAAF]] to mark them as \"rogue\".\r\n\n\nMeanwhile on New Home, the Thirtieth Lyran Guard have returned to the planet despite Archon-Princess Katrina Steiner's recall orders.  The Lyrans found in their brief absence, the pro-[[DM.BaseDescriptionDefs[LoreXinSheng],Liao]] New Home Regulars have taken control of the planet, and the Thirtieth are now in the process of sweeping the Regulars out.  Rumours abound that the Thirtieth are seeking to claim New Home as their own independent fief, and the Lyrans are seeking further mercenary support.  Meanwhile the [[DM.BaseDescriptionDefs[LoreLiaoCCAF],CCAF]] continues to send reinforcements for the Regulars.\r\n\n\nContracts are available via the [[DM.BaseDescriptionDefs[LoreMRBC],MRBC]] database.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_give_starsystemdef_Hall_to_Marik",
+									"WIIC_give_starsystemdef_Keid_to_Steiner",
+									"WIIC_give_starsystemdef_NewHome_to_Liao",
+									"WIIC_Locals_attacks_starsystemdef_Hall",
+									"WIIC_AuriganPirates_attacks_starsystemdef_Keid",
+									"WIIC_Steiner_attacks_starsystemdef_NewHome",
+									"WIIC_set_starsystemdef_Keid_defender_strength_30",
+									"WIIC_set_starsystemdef_Keid_attacker_strength_20",
+									"WIIC_set_starsystemdef_NewHome_defender_strength_10",
+									"WIIC_set_starsystemdef_NewHome_attacker_strength_20",
+									"WIIC_set_starsystemdef_Hall_defender_strength_40",
+									"WIIC_set_starsystemdef_Hall_attacker_strength_40"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

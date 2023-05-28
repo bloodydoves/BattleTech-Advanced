@@ -2,7 +2,7 @@
 	"Description": {
 		"Id": "3063-04-21",
 		"Name": "MercNews Broadcast",
-		"Details": "MRBC NOTICE: BATTLE LINES BEING DRAWN!\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],OUTREACH]]: All across the [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]], units are clashing over the struggle between Archon Princess [[DM.BaseDescriptionDefs[LoreKatherineSteiner],Katrina Steiner-Davion]] and her brother, Prince [[DM.BaseDescriptionDefs[LoreVictorSD],Victor Steiner-Davion]]. Even before Victor’s call to arms against Katrina, brutal fighting was commonplace on the streets of notable planets such as [[DM.BaseDescriptionDefs[LoreSolaris7], Solaris VII]] and [[DM.BaseDescriptionDefs[LoreKathil], Kathil]]. Now, with the campaign to unseat [[DM.BaseDescriptionDefs[LoreKatherineSteiner],Katrina]] in full swing, once-allied units have turned against each other as the conflict of brother versus sister is played out on countless battlefields across the Inner Sphere.  In related news, the [[DM.BaseDescriptionDefs[LoreMRBC], Mercenary Review and Bonding Commission]] has begun trials of its new mercenary sponsorship program. Under this new initiative, previously independent mercenary commanders apply for sponsorship from a larger, more prestigious mercenary regiment. This relationship can give both a sense of political alignment and can lead to the inclusion of these smaller companies into their sponsor regiments. Current sponsors are the Kell Hounds, Wolf’s Dragoons, the Northwind Highlanders, and the recently reconstituted Gray Death Legion. Interested parties should contact the MRBC on Outreach.\r\n\n\nWould you like to know more?",
+		"Details": "[[DM.BaseDescriptionDefs[LoreMRBC],MRBC]] NOTICE: BATTLE LINES BEING DRAWN!\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]]: All across the [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]], units are clashing over the struggle between Archon Princess [[DM.BaseDescriptionDefs[LoreKatherineSteiner],Katrina Steiner-Davion]] and her brother, Prince [[DM.BaseDescriptionDefs[LoreVictorSD],Victor Steiner-Davion]]. Even before Victor’s call to arms against Katrina, brutal fighting was commonplace on the streets of notable planets such as [[DM.BaseDescriptionDefs[LoreSolaris7], Solaris VII]] and [[DM.BaseDescriptionDefs[LoreKathil], Kathil]]. Now, with the campaign to unseat [[DM.BaseDescriptionDefs[LoreKatherineSteiner],Katrina]] in full swing, once-allied units have turned against each other as the conflict of brother versus sister is played out on countless battlefields across the Inner Sphere.   Commanders with personal issues that may prevent uncompromised completion of a current contract should contact the MRBC on Outreach at once for mediation with their employers.\r\n\n\nWould you like to know more?",
 		"Icon": "uixTxrSpot_ComputerScreen.png"
 	},
 	"Scope": "Company",
@@ -35,7 +35,7 @@
 					"Description": {
 						"Id": "continue1",
 						"Name": "MercNews Broadcast",
-						"Details": "MRBC SPOTLIGHT: HALLORAN V!\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],OUTREACH]]: [[DM.BaseDescriptionDefs[LoreHalloran],Halloran V]] has seen its planetary militia plagued by fierce infighting, as battalion and regimental commands take sides over the FedCom Civil War. As the militia has split along factional lines, the mounting fighting has taken a terrible toll on local resources. Militia forces are imposing martial law and seizing supplies from local industrial complexes. The Halloran Mining & Excavation cartel has had enough of this semi-official banditry.  The Transpax Corporation of Halloran V, a member of the Halloran Mining & Excavation cartel, has instituted corporate security measures in the face of what corporate spokesmen claim to be wanton piracy and banditry by local militia commanders. Details are unclear, but it has been confirmed that Transpax is seeking to contract mercenary units for short-term defense along some of Transpax's coastal holdings.",
+						"Details": "MRBC SPOTLIGHTS: HALLORAN V, NANKING!\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]], Federated Commonwealth: [[DM.BaseDescriptionDefs[LoreHalloran],Halloran V]] has seen its planetary militia plagued by fierce infighting, as battalion and regimental commands take sides over the FedCom Civil War. The Transpax Corporation of Halloran V has instituted corporate security measures in the face of what corporate spokespeople claim to be wanton piracy and banditry by local militia commanders. Details are unclear, but it has been confirmed that Transpax is seeking to contract mercenary units for short-term defense for their mining operations as well as some of Transpax's coastal holdings.\r\n\n\nCIVIL WAR ESCALATES ON NANKING\r\n\n\nA [[DM.BaseDescriptionDefs[LoreChaosMarch],Chaos March]] world on the brink of conflict long before the start of the Fedcom Civil War, the attempt to seize the world by the [[DM.BaseDescriptionDefs[LoreLoyalist],Loyalist]] Nanking [[DM.BaseDescriptionDefs[LoreSMM],Sarna March Militia]] in November 3062 was foiled by the previously neutral [[DM.BaseDescriptionDefs[LoreFedcomCorps],First Federated Commonwealth Regiment]].  Now after months of low-intensity conflict, the First FedCom have had enough and called in the Capellan March's [[DM.BaseDescriptionDefs[LoreKestrelGren],First Kestrel Grenadiers]] from Zurich to crush the Nanking SMM.  While the Grenadiers are still en-route to the planet, Loyalist commanders have called for mercenaries to support the Nanking militia.",
 						"Icon": ""
 					},
 					"Weight": 100,
@@ -45,9 +45,14 @@
 							"Requirements": null,
 							"AddedTags": {
 								"items": [
-				"WIIC_Steiner_attacks_starsystemdef_Halloran",
-				"WIIC_set_starsystemdef_Halloran_defender_strength_15",
-				"WIIC_set_starsystemdef_Halloran_attacker_strength_15"
+							"WIIC_give_starsystemdef_Nanking_to_Steiner",
+							"WIIC_give_starsystemdef_Halloran_to_Davion",
+							"WIIC_Davion_attacks_starsystemdef_Nanking",
+							"WIIC_Steiner_attacks_starsystemdef_Halloran",
+							"WIIC_set_starsystemdef_Nanking_defender_strength_10",
+							"WIIC_set_starsystemdef_Nanking_attacker_strength_35",
+							"WIIC_set_starsystemdef_Halloran_defender_strength_15",
+							"WIIC_set_starsystemdef_Halloran_attacker_strength_15"
 									],
 								"tagSetSourceFile": ""
 							},
