@@ -37,7 +37,7 @@
         "MainLogFilePath": "battletech_log.txt",
         "Logs_Description": "Allows to define logs, the `key` specifies the log file path relative to `.modtek`.",
         "Logs": {
-            "ModTek.log": {
+            "ModTek_cleaned.log": {
                 "Includes": [{
                         "LoggerNames": [
                             "ModTek"
@@ -48,6 +48,18 @@
                 "NormalizeNewLines": true,
                 "AbsoluteTimeEnabled": false,
                 "AbsoluteTimeUseUtc": false
+            },
+            "ModTek.log": {
+                "Includes": [{
+                        "LoggerNames": [
+                            "ModTek"
+                        ]
+                    }
+                ],
+                "IndentNewLines": true,
+                "NormalizeNewLines": true,
+                "AbsoluteTimeEnabled": true,
+                "AbsoluteTimeUseUtc": true
             },
             "battletech_log_cleaned.txt": {
                 "Excludes": [{
