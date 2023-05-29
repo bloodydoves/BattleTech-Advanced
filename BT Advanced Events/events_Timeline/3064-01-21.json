@@ -1,0 +1,90 @@
+{
+	"Description": {
+		"Id": "3064-01-21",
+		"Name": "MercNews Broadcast",
+		"Details": "[[DM.BaseDescriptionDefs[LoreChaosMarch],CHAOS MARCH]] SPOTLIGHT - EPSILON INDI\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]], [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]: Reports from the region state that the [[DM.Factions[faction_ToothOfYmir],Tooth of Ymir]] are now on planet to support independence-minded Duke Benson Abraham's Irregulars against the pro-Liao Freedom Brigade and the [[DM.Factions[faction_LangendorfLancers],Langendorf Lancers]].  The Lancers, sent to Epsilon Indi in 3058 to support pro-[[DM.Factions[faction_Liao],Capellan]] factions trying to take control of the planetary government, have responded by hiring the mercenary fighter squadron the Night Things to become part of the Lancers.  Now relatively evenly matched, both mercenary units and their employers are looking for further support to break this uneasy stalemate.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "[[DM.BaseDescriptionDefs[LoreHouseLiao],LIAO]] ATTACKS ZURICH\r\n\n\nAnother round of violence has struck the world of Zurich, sparked by the arrival on-planet of more Liao-backed mercenaries in the name of the [[DM.BaseDescriptionDefs[LoreXinSheng],Xin Sheng]] movement.  The local Liao guerillas hoped to repeat their success in the aftermath of [[DM.BaseDescriptionDefs[LoreOpGuerrero],Operation GUERRERO]], but with the [[DM.BaseDescriptionDefs[LoreKestrelGren],First Kestrel Grenadiers]] also back on the planet after the campaign on nearby Nanking, and a sizeable faction of the population staunchly pro-[[DM.BaseDescriptionDefs[LoreFedCom],Fedcom]], the pro-Liao forces face an uphill battle.\r\n\n\nContracts for these and other [[DM.BaseDescriptionDefs[LoreChaosMarch],Chaos March]] worlds are available via the [[DM.BaseDescriptionDefs[LoreMRBC],MRBC]] database.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_give_starsystemdef_EpsilonIndi_to_Liao",
+									"WIIC_give_starsystemdef_Zurich_to_Davion",
+									"WIIC_ToothOfYmir_attacks_starsystemdef_EpsilonIndi",
+									"WIIC_Liao_attacks_starsystemdef_Zurich",
+									"WIIC_set_starsystemdef_EpsilonIndi_defender_strength_25",
+									"WIIC_set_starsystemdef_EpsilonIndi_attacker_strength_30",
+									"WIIC_set_starsystemdef_Zurich_defender_strength_35",
+									"WIIC_set_starsystemdef_Zurich_attacker_strength_20",
+									"WIIC_give_starsystemdef_EpsilonIndi_to_Locals_on_attacker_win"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}
