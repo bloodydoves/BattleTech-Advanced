@@ -1,130 +1,131 @@
 {
-    "Logging": {
-        "DefaultLogLevel": "Debug",
-        "TraceEnabled": true
-    },
-    "MechLab": {
-        "TabsConfigFile": "BTATabs.json"
-    },
-    "MechBay": {
-        "DefaultSortOrder": [
-            "!ChassisTonnage",
-            "ChassisVariantName",
-            "MechName",
-            "ChassisCost"
-        ]
-    },
-    "TagManager": {
-        "Enabled": true,
-        "LostechStockWeaponVariantFix": true,
-        "SkirmishOverloadWarningCount": 10000,
-        "SkirmishOptionsShow": false,
-        "SkirmishOptionsDefault": {
-            "Label": "<null>",
-            "Components": {
-                "ContainsAny": null,
-                "NotContainsAny": [
-                    "VanillaOverride"
-                ]
-            },
-            "Mechs": {
-                "ContainsAny": [
-                    "unit_release"
-                ],
-                "NotContainsAny": [
-                    "unit_override",
-                    "unit_vehicle"
-                ]
-            },
-            "Pilots": {
-                "ContainsAny": [
-                    "pilot_release_skirmish"
-                ],
-                "NotContainsAny": null
-            },
-            "Lances": {
-                "ContainsAny": [
-                    "lance_bracket_skirmish"
-                ],
-                "NotContainsAny": null
-            }
-        },
-        "SkirmishDefault": {
-            "Label": "Default",
-            "Components": {
-                "ContainsAny": [
-                    "component_type_stock",
-                    "component_type_variant",
-                    "component_type_lostech"
-                ],
-                "NotContainsAny": [
-                    "BLACKLISTED"
-                ]
-            },
-            "Mechs": {
-                "ContainsAny": [
-                    "unit_release"
-                ],
-                "NotContainsAny": [
-                    "BLACKLISTED",
-                    "unit_unlocked",
-                    "unit_custom"
-                ]
-            },
-            "Pilots": {
-                "ContainsAny": [
-                    "pilot_release_skirmish"
-                ],
-                "NotContainsAny": null
-            },
-            "Lances": {
-                "ContainsAny": [
-                    "lance_bracket_skirmish"
-                ],
-                "NotContainsAny": [
-                    "lance_type_custom"
-                ]
-            }
-        },
-        "SkirmishOptionsPresets": [],
-        "SkirmishOptionsComponentGroup": {
-            "Label": "Components",
-            "Options": [
-                {
-                    "Label": "None",
-                    "ContainsAny": [],
-                    "NotContainsAny": [],
-                    "OptionActive": false,
-                    "OptionBreakLineBefore": false
-                },
-                {
-                    "Label": "Normal",
-                    "ContainsAny": null,
-                    "NotContainsAny": [
-                        "BLACKLISTED",
-                        "VanillaOverride"
-                    ],
-                    "OptionActive": true,
-                    "OptionBreakLineBefore": false
-                }
-            ]
-        },
-        "SkirmishOptionsMechGroups": [],
-        "Components": {
-            "Whitelist": [],
-            "Blacklist": []
-        },
-        "Mechs": {
-            "Whitelist": [],
-            "Blacklist": []
-        },
-        "Pilots": {
-            "Whitelist": [],
-            "Blacklist": []
-        },
-        "Lances": {
-            "Whitelist": [],
-            "Blacklist": []
-        }
-    }
+	"Logging": {
+		"DefaultLogLevel": "Debug",
+		"TraceEnabled": true
+	},
+	"MechLab": {
+		"TabsConfigFile": "BTATabs.json"
+	},
+	"MechBay": {
+		"DefaultSortOrder": [
+			"!ChassisTonnage",
+			"ChassisVariantName",
+			"MechName",
+			"ChassisCost"
+		]
+	},
+	"TagManager": {
+		"Enabled": true,
+		"LostechStockWeaponVariantFix": true,
+		"SkirmishOverloadWarningCount": 10000,
+		"SkirmishOptionsShow": false,
+		"SkirmishMechDefQueryFilter": "(d.UnitTypeID = 1 OR d.UnitTypeID = 2)",
+		"SkirmishOptionsDefault": {
+			"Label": "<null>",
+			"Components": {
+				"ContainsAny": null,
+				"NotContainsAny": [
+					"VanillaOverride"
+				]
+			},
+			"Mechs": {
+				"ContainsAny": [
+					"unit_release"
+				],
+				"NotContainsAny": [
+					"unit_override",
+					"unit_vehicle"
+				]
+			},
+			"Pilots": {
+				"ContainsAny": [
+					"pilot_release_skirmish"
+				],
+				"NotContainsAny": null
+			},
+			"Lances": {
+				"ContainsAny": [
+					"lance_bracket_skirmish"
+				],
+				"NotContainsAny": null
+			}
+		},
+		"SkirmishDefault": {
+			"Label": "Default",
+			"Components": {
+				"ContainsAny": [
+					"component_type_stock",
+					"component_type_variant",
+					"component_type_lostech"
+				],
+				"NotContainsAny": [
+					"BLACKLISTED"
+				]
+			},
+			"Mechs": {
+				"ContainsAny": [
+					"unit_release"
+				],
+				"NotContainsAny": [
+					"BLACKLISTED",
+					"unit_unlocked",
+					"unit_custom"
+				]
+			},
+			"Pilots": {
+				"ContainsAny": [
+					"pilot_release_skirmish"
+				],
+				"NotContainsAny": null
+			},
+			"Lances": {
+				"ContainsAny": [
+					"lance_bracket_skirmish"
+				],
+				"NotContainsAny": [
+					"lance_type_custom"
+				]
+			}
+		},
+		"SkirmishOptionsPresets": [],
+		"SkirmishOptionsComponentGroup": {
+			"Label": "Components",
+			"Options": [
+				{
+					"Label": "None",
+					"ContainsAny": [],
+					"NotContainsAny": [],
+					"OptionActive": false,
+					"OptionBreakLineBefore": false
+				},
+				{
+					"Label": "Normal",
+					"ContainsAny": null,
+					"NotContainsAny": [
+						"BLACKLISTED",
+						"VanillaOverride"
+					],
+					"OptionActive": true,
+					"OptionBreakLineBefore": false
+				}
+			]
+		},
+		"SkirmishOptionsMechGroups": [],
+		"Components": {
+			"Whitelist": [],
+			"Blacklist": []
+		},
+		"Mechs": {
+			"Whitelist": [],
+			"Blacklist": []
+		},
+		"Pilots": {
+			"Whitelist": [],
+			"Blacklist": []
+		},
+		"Lances": {
+			"Whitelist": [],
+			"Blacklist": []
+		}
+	}
 }
