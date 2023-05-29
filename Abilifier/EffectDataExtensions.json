@@ -1,11 +1,64 @@
 {
 	"StatusEffect-PotatoAccuracy": {
-		"TargetCollectionForSearch": "Unit",
-		"TargetCollectionTagMatch": [
-			"ImADumbUnitTag"
-		],
+		"TargetCollectionsForSearch": {
+			"Component": {
+				"MustMatchAll": true,
+				"TargetCollectionTagMatch": [
+					"test_has_tag",
+					"test_has_also_tag"
+				],
+				"TargetCollectionNotMatch": [
+					"test_has_not_tag1",
+					"test_has_not_tag2"
+				]
+			},
+			"Unit": {
+				"MustMatchAll": false,
+				"TargetCollectionTagMatch": [
+					"test_unit_tag1",
+					"test_unit_tag2"
+				],
+				"TargetCollectionNotMatch": [
+					"test_unit_not_tag1",
+					"test_unit_not_tag2"
+				]
+			}
+		},
 		"TargetComponentTagMatch": [
-			"Potato_Gun"
-		]
+			"Potato_Gun",
+			"Tomato_Gun"
+		],
+		"MustMatchAllComponent": false
+	},
+	"AccMod1": {
+		"TargetCollectionsForSearch": {
+			"Component": {
+				"MustMatchAll": true,
+				"TargetCollectionTagMatch": [
+					"test_has_tag",
+					"test_has_also_tag"
+				],
+				"TargetCollectionNotMatch": [
+					"test_has_not_tag1",
+					"test_has_not_tag2"
+				]
+			},
+			"Unit": {
+				"MustMatchAll": false,
+				"TargetCollectionTagMatch": [
+					"test_unit_tag1",
+					"test_unit_tag2"
+				],
+				"TargetCollectionNotMatch": [
+					"test_unit_not_tag1",
+					"test_unit_not_tag2"
+				]
+			}
+		},
+		"TargetComponentTagMatch": [
+			"Potato_Gun",
+			"Tomato_Gun"
+		],
+		"MustMatchAllComponent": false
 	}
 }

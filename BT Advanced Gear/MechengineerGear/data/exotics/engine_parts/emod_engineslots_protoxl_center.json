@@ -1,0 +1,104 @@
+{
+	"Custom": {
+		"Weights": {
+			"ReservedSlots": 6,
+			"EngineFactor": 0.5
+		},
+		"BonusDescriptions": [
+			"EngineWeight: -50%",
+			"ReservedSlots: 6",
+			"HeatPerTurn: 8"
+		],
+		"WorkOrderCosts": {
+			"Default": {
+				"TechCost": "0",
+				"CBillCost": "0"
+			},
+			"Install": {
+				"TechCost": "1 * [[Chassis.Tonnage]] * [[Chassis.Tonnage]] / 40",
+				"CBillCost": "1000 * [[Chassis.Tonnage]] * [[Chassis.Tonnage]] / 40"
+			}
+		},
+		"Flags": [
+			"vital",
+			"engine_part",
+			"no_salvage"
+		],
+		"Category": [
+			{
+				"CategoryID": "EngineShield"
+			},
+			{
+				"CategoryID": "EnginePart"
+			}
+		],
+		"Linked": {
+			"Links": [
+				{
+					"ComponentDefId": "emod_engineslots_size3",
+					"Location": "LeftTorso"
+				},
+				{
+					"ComponentDefId": "emod_engineslots_size3",
+					"Location": "RightTorso"
+				}
+			]
+		}
+	},
+	"Description": {
+		"Cost": 500000,
+		"Rarity": 0,
+		"Purchasable": false,
+		"Manufacturer": "Periphery Armory, Inc.",
+		"Model": "Recovered Prototype",
+		"UIName": "Engine Prototype XL",
+		"Id": "emod_engineslots_protoxl_center",
+		"Name": "Prototype XL Engine",
+		"Details": "During the technology revival of the 3050s many technologies were rediscovered and put back into wide production. Among these was the Extra-Light Engine. However, the reactor shielding was complex on the XL and was beyond the capacity of many smaller manufacturers to make. Because of this issue, some smaller manufacturers put very early prototype engine designs into production instead due to ease of construction. These prototype XL engines were flawed and created extraneous waste heat, unlike the later perfected models, but were cheaper and easier to produce and install, meaning they found acceptance in Periphery militaries despite these limitations.",
+		"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "HeatSink",
+	"ComponentSubType": "Heatsink",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 4,
+	"Tonnage": 0,
+	"AllowedLocations": "CenterTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "ProtoXL_Engine-Heat_Generation",
+				"Name": "Increased Heat",
+				"Details": "The Prototype XL Engine produces extraneous waste heat, generating a flat 8 heat per turn of use.",
+				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "HeatSinkCapacity",
+				"operation": "Int_Add",
+				"modValue": "-8",
+				"modType": "System.Int32"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}

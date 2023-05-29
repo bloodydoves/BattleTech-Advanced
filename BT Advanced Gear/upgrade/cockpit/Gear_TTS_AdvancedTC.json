@@ -1,0 +1,108 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "TarComp"
+			},
+			{
+				"CategoryID": "Cockpit"
+			}
+		],
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "[[Chassis.Tonnage]]/10",
+				"CBillCost": "[[Chassis.Tonnage]] * 1.15"
+			}
+		},
+		"BonusDescriptions": [
+				"Breaching",
+				"Recoil: -1",
+				"IsCockpit"
+			]
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 450000,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "Mendham Electronics",
+		"Model": "PerfecTrac",
+		"UIName": "FCS Precision Computer",
+		"Id": "Gear_TTS_AdvancedTC",
+		"Name": "Precision Computer",
+		"Details": "This is an advanced targeting computer called the FCS Precision Computer. This system provides a MechWarrior with the ability to breach past any defense. In addition, the Precision Computer gives the equipped unit some extra recoil mitigation.",
+		"Icon": "AdvancedTC"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 2,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator"
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "PrecisionComputer-Breaching",
+				"Name": "BREACHING SHOT",
+				"Details": "PASSIVE: Attacking with a single weapon ignores COVER and GUARDED on the target.",
+				"Icon": "uixSvgIcon_ability_precisionstrike"
+			},
+			"statisticData": {
+				"statName": "PrecisionStrike",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator"
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "PrecisionComputer-Recoil",
+				"Name": "Stabilized Weapon",
+				"Details": "Reduced Weapon Recoil",
+				"Icon": "uixSvgIcon_equipment_TTS"
+			},
+			"statisticData": {
+				"statName": "RefireModifier",
+				"operation": "Int_Add",
+				"modValue": "-1",
+				"modType": "System.Int32",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}

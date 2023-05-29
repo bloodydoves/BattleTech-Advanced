@@ -2,7 +2,7 @@
 	"Name": "StrategicOperations",
 	"DLL": "StrategicOperations.dll",
 	"Hidden": true,
-	"Version": "3.1.0.2",
+	"Version": "3.1.1.2",
 	"Description": "",
 	"Author": "T-Bone",
 	"Website": "https://github.com/ajkroeg/StrategicOperations",
@@ -151,6 +151,10 @@
 		"strafeWaves": 2,
 		"commandAbilities_AI": [
 			{
+				"ContractBlacklist": [
+					"DuoDuel",
+					"SoloDuel"
+				],
 				"AbilityDefID": "AbilityDefCMD_Strafe_AI",
 				"FactionIDs": [
 					"ClanGhostBear",
@@ -570,7 +574,8 @@
 					"ClanDiamondShark",
 					"ClanJadeFalcon",
 					"ClanNovaCat",
-					"ClanWolf"
+					"ClanWolf",
+					"ClanSnowRaven"
 				],
 				"SpawnChanceBase": 0.3,
 				"SpawnChanceDiffMod": 0.05,
@@ -597,11 +602,20 @@
 			"SoloDuel"
 		],
 		"AI_BattleArmorExcludedContractIDs": [],
-		"BeaconExcludedContractTypes": [
-			"DuoDuel",
-			"SoloDuel"
-		],
-		"BeaconExcludedContractIDs": [],
+		"BeaconExclusionConfig": {
+			"DuoDuel": {
+				"ExcludedPlayerSpawn": true,
+				"ExcludedPlayerStrafe": true,
+				"ExcludedAISpawn": true,
+				"ExcludedAIStrafe": true
+			},
+			"SoloDuel": {
+				"ExcludedPlayerSpawn": true,
+				"ExcludedPlayerStrafe": true,
+				"ExcludedAISpawn": true,
+				"ExcludedAIStrafe": true
+			}
+		},
 		"DisableGarrisons": false,
 		"GarrisonBuildingArmorFactor": 0.5,
 		"UsingMechAffinityForSwarmBreach": true,

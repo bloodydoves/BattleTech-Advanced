@@ -33,7 +33,7 @@
 		"UIName": "Clan Quirk",
 		"Id": "Gear_LifeSupportA_Clan_Quirk",
 		"Name": "Clan Quirk",
-		"Details": "This piece of equipment represents the inherent bonuses and negatives that Clan mechs, both BattleMechs and OmniMechs, have over their Inner Sphere counterparts. It grants +1 accuracy with weapons, 6 bonus heat venting, and bonus movement speed as well as inflicting a major penalty to melee.",
+		"Details": "This piece of equipment represents the inherent bonuses and negatives that Clan mechs, both BattleMechs and OmniMechs, have over their Inner Sphere counterparts. It grants +1 accuracy with weapons, 6 bonus heat venting, and bonus movement speed as well as inflicting a major penalty to melee (except for DFAs).",
 		"Icon": "caduceus"
 	},
 	"BonusValueA": "",
@@ -239,52 +239,6 @@
 				"statName": "CBTBE_Charge_Attack_Mod",
 				"operation": "Int_Add",
 				"modValue": "40",
-				"modType": "System.Int32",
-				"additionalRules": "NotSet"
-			},
-			"tagData": null,
-			"floatieData": null,
-			"actorBurningData": null,
-			"vfxData": null,
-			"instantModData": null,
-			"poorlyMaintainedEffectData": null
-		},
-		{
-			"durationData": {
-				"duration": -1,
-				"ticksOnActivations": false,
-				"useActivationsOfTarget": false,
-				"ticksOnEndOfRound": false,
-				"ticksOnMovements": false,
-				"stackLimit": -1,
-				"clearedWhenAttacked": false
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"triggerLimit": 0,
-				"extendDurationOnTrigger": 0,
-				"specialRules": "NotSet",
-				"effectTargetType": "Creator",
-				"range": 0,
-				"forcePathRebuild": false,
-				"forceVisRebuild": false,
-				"showInTargetPreview": false,
-				"showInStatusPanel": true
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "ClanQuirkMelee",
-				"Name": "Clan Melee Penalty",
-				"Details": "DFA attacks have -30 Accuracy.",
-				"Icon": "uixSvgIcon_equipment_ActuatorArm"
-			},
-			"nature": "Buff",
-			"statisticData": {
-				"appliesEachTick": false,
-				"effectsPersistAfterDestruction": false,
-				"statName": "CBTBE_DFA_Attack_Mod",
-				"operation": "Int_Add",
-				"modValue": "30",
 				"modType": "System.Int32",
 				"additionalRules": "NotSet"
 			},

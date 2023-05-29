@@ -1,0 +1,91 @@
+{
+	"Description": {
+		"Id": "3064-09-21",
+		"Name": "MercNews Broadcast",
+		"Details": "WORD OF BLAKE MERCENARIES MOVE ON HSIEN, ALWAYS FAITHFUL HIRED TO DEFEND\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]], [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:  The [[DM.Factions[faction_WordOfBlake],Word of Blake's]] efforts to secure the [[DM.BaseDescriptionDefs[LoreHPG],HPG]] stations in the [[DM.BaseDescriptionDefs[LoreChaosMarch],Chaos March]] have born fruit when the planet Hsien signed a contract to replace [[DM.Factions[faction_ComStar],ComStar's]] technicians with those from the Word.  To the shock of all three of the planet's factions however, the Word of Blake sent not only a Level III from the [[DM.BaseDescriptionDefs[LoreWOBM],Word of Blake Militia's]] 4th Division to provide a garrison for the planet's HPG station, but also the [[DM.Factions[faction_HsienHotheads],Hsien Hotheads]] mercenary regiment.  The commander of the Hotheads, Colonel Brenn Twohy, is a direct descendant of Duke Robert Twohy, Hsien's last ruler of the Star League era, and the Hotheads have an openly stated long-term goal to return control of Hsien back to the Twohy family.  To the discomfort of Hsien's pro-[[DM.BaseDescriptionDefs[LoreHouseLiao],Liao]] and pro-Fedcom factions, Twohy's arrival was widely celebrated by the population.  In response the [[DM.Factions[faction_AlwaysFaithful],Always Faithful]], fresh from their stint on Caph, have been hired by the pro-[[DM.BaseDescriptionDefs[LoreFedCom],Fedcom]] factions of Baron Montong and the Dendeez Provice to watch both the incoming WoB garrisons as well as the pro-[[DM.Factions[faction_Liao],Capellan]] forces backed by [[DM.BaseDescriptionDefs[LoreGaelsGrinders],Gael's Grinders]].",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "CHAOS MARCH: GRIM DETERMINATION ARRIVES ON SHERATAN\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]], [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:  The long-troubled world of Sheratan will soon have a new mercenary force on planet.  Notable [[DM.BaseDescriptionDefs[LoreChaosMarch],Chaos March]] mercenaries [[DM.Factions[faction_GrimDetermination],Grim Determination]] are moving on to the planet to bring \"peace and order\" to the world.  Sheratan, once one of the most beautiful planets in the Sarna March, was shattered in the aftermath of [[DM.BaseDescriptionDefs[LoreOpGuerrero],Operation GUERRERO]] as the fighting between the pro-Fedcom [[DM.BaseDescriptionDefs[LoreSheratanKnights],Sheratan Knights]] and the [[DM.BaseDescriptionDefs[LoreHouseLiao],Liao]]-backed [[DM.Factions[faction_FistOfMokal],Fist of Mokal]] left the planet's government and environment in ruins.   While the Fist of Mokal are long since gone and the remaining Knights continue to hold the capital, roughly fifteen other factions ranging from petty nobles to outright pirate groups control the rest of the planet.  Grim Determination, with their focus on counter-insurgency and counter-terrorist actions and other small unit actions, will be well suited to Sheratan, where mysterious terrorist incidents and border skirmishes are occuring almost daily.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_give_starsystemdef_Hsien_to_Liao",
+									"WIIC_give_starsystemdef_Sheratan_to_Locals",
+									"WIIC_HsienHotheads_attacks_starsystemdef_Hsien",
+									"WIIC_GrimDetermination_attacks_starsystemdef_Sheratan",
+									"WIIC_set_starsystemdef_Hsien_defender_strength_20",
+									"WIIC_set_starsystemdef_Hsien_attacker_strength_30",
+									"WIIC_set_starsystemdef_Sheratan_defender_strength_10",
+									"WIIC_set_starsystemdef_Sheratan_attacker_strength_30",
+									"WIIC_give_starsystemdef_Hsien_to_WordofBlake_on_attacker_win",
+									"WIIC_give_starsystemdef_Sheratan_to_Locals_on_attacker_win"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}
