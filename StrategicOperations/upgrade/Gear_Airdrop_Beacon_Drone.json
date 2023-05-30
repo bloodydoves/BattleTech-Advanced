@@ -1,70 +1,68 @@
 {
-	"Custom": {
-		"Category": [
-			{
-				"CategoryID": "Airdrop"
-			}
-		],
-		"BonusDescriptions": {
-			"Bonuses": [
-				"Airdrop",
-				"AirdropDrone",
-				"AbilityResolveCost: 20",
-				"AbilityCBillCost: 75000",
-				"AirdropCount: 2",
-				"AirdropRange: 250"
-			]
-		}
-	},
-	"StatName": null,
-	"RelativeModifier": 0,
-	"AbsoluteModifier": 0,
-	"Description": {
-		"Cost": 750000,
-		"Rarity": 5,
-		"Purchasable": true,
-		"Manufacturer": "Gravity Industries",
-		"Model": "Beacon",
-		"UIName": "Drone Airdrop Beacon",
-		"Id": "Gear_Airdrop_Beacon_Drone",
-		"Name": "Drone Airdrop Beacon",
-		"Details": "This bulky and heavy communication equipment grants the carrying mech's pilot the ability to coordinate with the Argo and call in an airdropped VTOL drone. This robotic drone can provide battlefield support functions such as sensor locking targets, TAGing and NARCing enemies, and provides an ECM field for coverage as necessary.",
-		"Icon": "delivery-drone"
-	},
-	"BonusValueA": "",
-	"BonusValueB": "",
-	"ComponentType": "Upgrade",
-	"ComponentSubType": "NotSet",
-	"PrefabIdentifier": "",
-	"BattleValue": 0,
-	"InventorySize": 1,
-	"Tonnage": 1,
-	"AllowedLocations": "All",
-	"DisallowedLocations": "All",
-	"CriticalComponent": false,
-	"statusEffects": [
-		{
-			"targetingData": {
-				"effectTriggerType": "OnActivation",
-				"effectTargetType": "Creator",
-				"showInStatusPanel": true
-			},
-			"effectType": "ActiveAbility",
-			"Description": {
-				"Id": "Airdrop_Beacon_Drone",
-				"Name": "Drone Airdrop Beacon",
-				"Details": "Activated ability (uses Firing action). Calls in a Drone Airdrop.",
-				"Icon": "uixSvgIcon_action_sensorlock"
-			},
-			"activeAbilityEffectData": {
-				"abilityName": "AbilityDefCMD_VTOLDrop"
-			}
-		}
-	],
-	"ComponentTags": {
-		"items": [
-			"component_type_stock"
-		],
-		"tagSetSourceFile": ""
-	}
+    "Custom": {
+        "Category": [
+            {
+                "CategoryID": "Airdrop"
+            }
+        ],
+        "BonusDescriptions": [
+            "Airdrop",
+            "AirdropDrone",
+            "AbilityResolveCost: 20",
+            "AbilityCBillCost: 75000",
+            "AirdropCount: 2",
+            "AirdropRange: 250"
+        ]
+    },
+    "StatName": null,
+    "RelativeModifier": 0,
+    "AbsoluteModifier": 0,
+    "Description": {
+        "Cost": 750000,
+        "Rarity": 5,
+        "Purchasable": true,
+        "Manufacturer": "Gravity Industries",
+        "Model": "Beacon",
+        "UIName": "Drone Airdrop Beacon",
+        "Id": "Gear_Airdrop_Beacon_Drone",
+        "Name": "Drone Airdrop Beacon",
+        "Details": "This bulky and heavy communication equipment grants the carrying mech's pilot the ability to coordinate with the Argo and call in an airdropped VTOL drone. This robotic drone can provide battlefield support functions such as sensor locking targets, TAGing and NARCing enemies, and provides an ECM field for coverage as necessary.",
+        "Icon": "delivery-drone"
+    },
+    "BonusValueA": "",
+    "BonusValueB": "",
+    "ComponentType": "Upgrade",
+    "ComponentSubType": "NotSet",
+    "PrefabIdentifier": "",
+    "BattleValue": 0,
+    "InventorySize": 1,
+    "Tonnage": 1,
+    "AllowedLocations": "All",
+    "DisallowedLocations": "All",
+    "CriticalComponent": false,
+    "statusEffects": [
+        {
+            "targetingData": {
+                "effectTriggerType": "OnActivation",
+                "effectTargetType": "Creator",
+                "showInStatusPanel": true
+            },
+            "effectType": "ActiveAbility",
+            "Description": {
+                "Id": "Airdrop_Beacon_Drone",
+                "Name": "Drone Airdrop Beacon",
+                "Details": "Activated ability (uses Firing action). Calls in a Drone Airdrop.",
+                "Icon": "uixSvgIcon_action_sensorlock"
+            },
+            "activeAbilityEffectData": {
+                "abilityName": "AbilityDefCMD_VTOLDrop"
+            }
+        }
+    ],
+    "ComponentTags": {
+        "items": [
+            "component_type_stock"
+        ],
+        "tagSetSourceFile": ""
+    }
 }
