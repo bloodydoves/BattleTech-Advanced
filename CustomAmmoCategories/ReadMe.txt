@@ -51,6 +51,21 @@ CriticalHitChanceReceivedMultiplier can be locational
 {
 "debugLog":true, - enable debug log 
 "MapOnlineClientLink":"http://www.roguewar.org/playerlut?cId={0}" - link for an online client
+"ScaleWeaponHeat": 150, - if > 0 incoming heat from next sources (AoE, weapon hits, landmines, landmines AoE) is scaled
+                            scale modifier = 1 - (<target heat>/<ScaleWeaponHeat>)
+							Note! scale modifier for weapon damage calculates before attack. 
+"ExternalHeatLimit":149, - if > 0 all incoming heat from external sources (weapon hits, AoE, walk burning terrain, landmines,landmines AoE )
+                           can't make unit heat level exceed this value. Example 
+						   your attack inflicted 250 heat damage, 
+						   target have 50 unused heat sink capacity
+						   target have 75 current heat level
+						   on heat dissipation sequence your attack heat will be limited to 129 heat, 
+						   all heat sinks capacity will counted as used, target heat level will be 149
+						   Note! value is integer
+						   Note! overheat from internal sources (moving, jumping, weapon fire) 
+						   still can make heat level pass this value
+"AMSUseAttractiveness": true, - if true AMS calculation will try to shoot down missiles with higher attractiveness first
+"AMSDefaultInterceptedTrace": 2, - default value for weapon AMSInterceptedTrace
 "RestoreEjectedWeapons": true, - ejected weapon will not be counted as destroyed at the end of the battle
 "HexSizeForMods": 30 - hex size used for moved hexes modifiers calculations
 "SpawnProtectionAffectsCanFire": true - if true weapon can't fire if its owner under spawn protection
@@ -414,10 +429,12 @@ new fields
 						         VTOL is still vehicle, mech in air mech mode is still mech.
   "MinMissRadius": 5,
   "MaxMissRadius": 15,
-                        - min and max radius. Used only in ground attack and indirect attack. Additive for ammo/mode/weapon
+                        - min and max radius. Used ground attack, indirect attack and if weapon have effective MissInCircle true. Additive for ammo/mode/weapon
 						  If MinMissRadius less than target radius (for mechs in chassis definition, for vehicles and turrets 5) radius value will be used.
 						  If MaxMissRadius less or equal than MinMissRadius value MinMissRadius * 3 will be used.
 						  actual scatter radius = ((MaxMissRadius - MinMissRadius) * (hitRoll - toHitChance) / (1 - toHitChance) + MinMissRadius)
+  "MissInCircle": false, - explicitly force MinMissRadius/MaxMissRadius miss position calculation regardless weapon type and indirect status
+						   can be set for weapon, mode and ammo. Mode have priority, than ammo, than weapon. Default NotSet
   "evasivePipsMods": {  - list of modifiers for values by current evasive pips count. Additive per weapon/ammo/mode. 
                           Overall formula value = [base value] * ([evasive pips count]^[mod value]). Example base damage = 35, evasive pips count = 7, mod value = -1
                           damage = 35 * (7^-1) = 35 * 0.142857(142857) = 5.
@@ -570,6 +587,7 @@ new fields
 	8. lastFireSFX - (fireSFX if not set) SFX emitter is unit. Single shot. In vanilla used by missiles.
 
   Note! Empty SFX value (example "preFireSFX":"") means vanilla value should be cleared. If want to keep vanilla value parameter should be omitted.
+  Note! both AudioKenetik and CustomVoices audio samples string ids can be used, if used CustomVoices ones <stop> events have no meaning and should be omitted
   For mentioned values mode have priority, than ammo, than weapon.
 
   "blockWeaponsInMechLocations": [], - list of mech locations. all weapons installed in this locations can't fire if this weapon is functional.
@@ -658,6 +676,19 @@ new fields
 								  if not set weapon hit generator will be used.
 								  if not set hit generator will be choosed by weapon type.
 								  if weapon define has tag "wr-clustered_shots", "Cluster" hit generator will be forced. 
+  "RangeBonusDistance": 0, - if distance to target less than RangeBonusDistance - RangeBonusAccuracyMod is applied
+                             additive for weapon, mode and ammo. Can be altered runtime via component statistic values
+							 "CAC_RangeBonusDistance" and "CAC_RangeBonusDistance_Mod".
+							 "CAC_RangeBonusDistance" has default value from WeaponDef.RangeBonusDistance
+							 "CAC_RangeBonusDistance_Mod" has default value 1.0
+							 effective formula 
+							 (<weapon statistic CAC_RangeBonusDistance> + <ammo RangeBonusDistance> + <mode RangeBonusDistance>) * <weapon statistic CAC_RangeBonusDistance_Mod>
+  "RangeBonusAccuracyMod": 0, - additive for weapon, mode and ammo. Can be altered runtime via component statistic values
+							 "CAC_RangeBonusAccuracyMod" and "CAC_RangeBonusAccuracyMod_Mod".
+							 "CAC_RangeBonusAccuracyMod" has default value from WeaponDef.RangeBonusAccuracyMod
+							 "CAC_RangeBonusAccuracyMod_Mod" has default value 1.0
+							 effective formula 
+							 (<weapon statistic CAC_RangeBonusAccuracyMod> + <ammo RangeBonusAccuracyMod> + <mode RangeBonusAccuracyMod>) * <weapon statistic CAC_RangeBonusAccuracyMod_Mod>
   "DirectFireModifier" : -10.0, Accuracy modifier if weapon can strike directly
   "DamageVariance": 20, - Simple damage variance as implemented in WeaponRealizer
   "DamageFalloffStartDistance": 0, - distance where damage starts to change, additive per ammo/mode/weapon.
@@ -698,21 +729,49 @@ new fields
   "RecoilJammingChance": 0.0, - addition to  FlatJammingChance based on recoil. Adds RecoilJammingChance * <RefireModifier> to FlatJammingChance
                                 <RefireModifier> is effective weapon's RefireModifier if roundsSinceLastFire < 2 and 0 otherwise. 
 								Can be set for weapon, ammo and mode. Additive.
+  "UnsafeJamChance": 1.0, - if DamageOnJamming or DestroyOnJamming is true, performed random roll to unsafe jamm. If roll wins (bad)
+                            damage or destroying applied. If roll fail (good) weapon will be only jammed instead without damage or destruction
+							Additive per weapon, ammo, mode
+							Default value for weapondef - 1.0, for ammo and mode - 0
+							Can be controlled in runtime by weapon statistic values "CAC_UnsafeJamChance" and "CAC_UnsafeJamChance_Mod"
+							Effective formula (<weapon statistic.CAC_UnsafeJamChance> + <ammo.UnsafeJamChance> + <mode.UnsafeJamChance>) * <weapon statistic.CAC_UnsafeJamChance_Mod>
+							statistic CAC_UnsafeJamChance have default value from weapon definition
+							CAC_UnsafeJamChance_Mod default value 1.0f
+  "AIUnsafeJamChanceMod": 1.0 - if unit is under AI control additional modifier to UnsafeJamChance applied
+								Additive per weapon, ammo, mode
+								Default value for weapondef - 1.0, for ammo and mode - 0
+                                Modifier formula (<weapon statistic.CAC_AIUnsafeJamChanceMod> + <ammo.AIUnsafeJamChanceMod> + <mode.AIUnsafeJamChanceMod>) * <weapon statistic.CAC_AIUnsafeJamChanceMod_Mod> * <CAC setting AIUnsafeJamChance>
+								CAC setting AIUnsafeJamChance have default value 1.0
+								statistic CAC_AIUnsafeJamChance have default value from weapon definition
+							    CAC_AIUnsafeJamChance_Mod default value 1.0f
   "GunneryJammingBase": 5, - 
   "GunneryJammingMult": 0.05, - this values uses to alter flat jamming chance by pilot skills 
                                   formula effective jamming chance = FlatJammingChance + (GunneryJammingBase - Pilot Gunnery)* GunneryJammingMult
 								  if FlatJammingChance = 1.0, GunneryJammingBase = 6, GunneryJammingMult = 0.1, GunnerySkill = 10
 								  result = 1.0 + (6-10)*0.1 = 0.6
-								  GunneryJammingBase if ommited in weapon def., ammo def. and mode def. assumed as 5. 
+								  GunneryJammingBase if omitted in weapon def., ammo def. and mode def. assumed as 5. 
   "DisableClustering": true/false - if true ProjectilesPerShot > 1 will affect only visual nor damage. If omitted consider as true.
   (not used any more)"NotUseInMelee": true, - if true even AntiPersonel weapon type will not fire on melee attack, AI aware. 
   "AlternateDamageCalc": false, - if true alternate damage calc formula will be implemented 
                               DamagePerShot = (damage from weaponDef + (damage from ammo) + (damage from mode)*(damage multiplayer from ammo)*(damage multiplayer from mode)*(damage with effects)/(damage from weaponDef)
   "AlternateHeatDamageCalc": false, - same as  AlternateDamageCalc but for heat 
   "AlternateInstabilityCalc": false, - same as  AlternateDamageCalc but for instability 
+  "AMSAttractiveness": 0.0 - attractiveness of this particular missile for AMS, additive for weapon, ammo, mode
+                             can be altered runtime using statistic CAC_AMSAttractiveness and CAC_AMSAttractiveness_Mod
   "AMSHitChance": 0.0, - if this weapon is AMS, this value is AMS efficiency, 
                          if this weapon is missile launcher this value shows how difficult to intercept missile with AMS. Negative value - is harder, 
-						 positive is easer.
+						 positive is easer. Additive per mode, ammo, weapon
+						 can be altered on runtime via CAC_AMSHitChance and CAC_AMSHitChance_Mod statistic values
+						 effective ams-to-missile hit chance is sum on missile's and AMS's AMSHitChance values 
+  "AMSHitChanceMod": 1.0 - modifier for an AMSHitChance can be set for ONLY for mode and ammo
+                           multiplicative per ammo and mode, default 1.0
+  "AMSHitChanceMult": 1.0 - modifier for effective AMS hit chance (sum of missile.AMSHitChance and AMS.AMSHitChance)
+                           additive per weapon, ammo and mode, for weapon default 1.0, for mode and ammo 0.0
+						   can be altered on runtime via CAC_AMSHitChanceMult and CAC_AMSHitChanceMult_Mod statistic values
+  "AMSInterceptedTrace": -1, - if above 0 AMS will shoot missile after missile intercepted, for AMSInterceptedTrace shots
+							   additive per weapon, ammo and mode. For weapon have special processing - if AMSInterceptedTrace
+							   for weapon is less than 0 - AMSDefaultInterceptedTrace will be used instead.
+							   Note! only used if AMSUseAttractiveness enabled
   "IsAMS": false, - if true this weapon acts as AMS. It will not fire during normal attack. But tries to intercept incomming missiles.
                     rude model: every 10 meters of missile fly path there is check, if it in range of any AMS. 
 					If so, AMS have AMS.AMSHitChance + missile.AMSHitChance chance to shoot missile down. Avaible shoots count of AMS is decrementing.
