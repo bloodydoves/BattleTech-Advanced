@@ -40,6 +40,13 @@
 @Default:AmmunitionDef=1,WeaponDef=1,WeaponMode=1
 @Description:not documented yet
 
+@Name:AIUnsafeJamChanceMod
+@Type:float
+@AppliedTo:AmmunitionDef,WeaponDef,WeaponMode
+@Default:AmmunitionDef=0,WeaponDef=1,WeaponMode=0
+@Description:not documented yet
+Can be accessed via statistic value CAC_AIUnsafeJamChanceMod and modifier CAC_AIUnsafeJamChanceMod_Mod
+
 @Name:AlternateAPDamageCalc
 @Type:boolean
 @AppliedTo:WeaponDef
@@ -82,6 +89,19 @@
 @Default:AmmunitionDef=NotSet,WeaponDef=NotSet,WeaponMode=empty
 @Description:not documented yet
 
+@Name:AMSActivationsPerTurn
+@Type:integer
+@AppliedTo:WeaponDef,WeaponMode
+@Default:WeaponDef=0,WeaponMode=0
+@Description:not documented yet
+
+@Name:AMSAttractiveness
+@Type:float
+@AppliedTo:AmmunitionDef,WeaponDef,WeaponMode
+@Default:AmmunitionDef=0,WeaponDef=0,WeaponMode=0
+@Description:not documented yet
+Can be accessed via statistic value CAC_AMSAttractiveness and modifier CAC_AMSAttractiveness_Mod
+
 @Name:AMSDamage
 @Type:float
 @AppliedTo:AmmunitionDef,WeaponDef,WeaponMode
@@ -94,11 +114,31 @@ Can be accessed via statistic value CAC_AMSDamage and modifier CAC_AMSDamage_Mod
 @AppliedTo:AmmunitionDef,WeaponDef,WeaponMode
 @Default:AmmunitionDef=0,WeaponDef=0,WeaponMode=0
 @Description:not documented yet
+Can be accessed via statistic value CAC_AMSHitChance and modifier CAC_AMSHitChance_Mod
+
+@Name:AMSHitChanceMod
+@Type:float
+@AppliedTo:AmmunitionDef,WeaponMode
+@Default:AmmunitionDef=1,WeaponMode=1
+@Description:not documented yet
+
+@Name:AMSHitChanceMult
+@Type:float
+@AppliedTo:AmmunitionDef,WeaponDef,WeaponMode
+@Default:AmmunitionDef=0,WeaponDef=1,WeaponMode=0
+@Description:not documented yet
+Can be accessed via statistic value CAC_AMSHitChanceMult and modifier CAC_AMSHitChanceMult_Mod
 
 @Name:AMSImmune
 @Type:boolean
 @AppliedTo:AmmunitionDef,WeaponDef,WeaponMode
 @Default:AmmunitionDef=NotSet,WeaponDef=NotSet,WeaponMode=NotSet
+@Description:not documented yet
+
+@Name:AMSInterceptedTrace
+@Type:integer
+@AppliedTo:AmmunitionDef,WeaponDef,WeaponMode
+@Default:AmmunitionDef=0,WeaponDef=-1,WeaponMode=0
 @Description:not documented yet
 
 @Name:AMSShootsEveryAttack
@@ -121,8 +161,8 @@ Can be accessed via statistic value CAC_AMSDamage and modifier CAC_AMSDamage_Mod
 
 @Name:AOEDamage
 @Type:float
-@AppliedTo:EvasivePipsMods,AmmunitionDef,WeaponDef
-@Default:EvasivePipsMods=0,AmmunitionDef=0,WeaponDef=0
+@AppliedTo:EvasivePipsMods,AmmunitionDef,WeaponDef,WeaponMode
+@Default:EvasivePipsMods=0,AmmunitionDef=0,WeaponDef=0,WeaponMode=0
 @Description:not documented yet
 
 @Name:AoEDmgFalloffType
@@ -145,8 +185,8 @@ Can be accessed via statistic value CAC_AMSDamage and modifier CAC_AMSDamage_Mod
 
 @Name:AOEHeatDamage
 @Type:float
-@AppliedTo:EvasivePipsMods,AmmunitionDef,WeaponDef
-@Default:EvasivePipsMods=0,AmmunitionDef=0,WeaponDef=0
+@AppliedTo:EvasivePipsMods,AmmunitionDef,WeaponDef,WeaponMode
+@Default:EvasivePipsMods=0,AmmunitionDef=0,WeaponDef=0,WeaponMode=0
 @Description:not documented yet
 
 @Name:AoEInstability
@@ -157,8 +197,8 @@ Can be accessed via statistic value CAC_AMSDamage and modifier CAC_AMSDamage_Mod
 
 @Name:AOEInstability
 @Type:float
-@AppliedTo:EvasivePipsMods,AmmunitionDef,WeaponDef
-@Default:EvasivePipsMods=0,AmmunitionDef=0,WeaponDef=0
+@AppliedTo:EvasivePipsMods,AmmunitionDef,WeaponDef,WeaponMode
+@Default:EvasivePipsMods=0,AmmunitionDef=0,WeaponDef=0,WeaponMode=0
 @Description:not documented yet
 
 @Name:AoERange
@@ -169,8 +209,8 @@ Can be accessed via statistic value CAC_AMSDamage and modifier CAC_AMSDamage_Mod
 
 @Name:AOERange
 @Type:float
-@AppliedTo:EvasivePipsMods,AmmunitionDef,WeaponDef
-@Default:EvasivePipsMods=0,AmmunitionDef=0,WeaponDef=0
+@AppliedTo:EvasivePipsMods,AmmunitionDef,WeaponDef,WeaponMode
+@Default:EvasivePipsMods=0,AmmunitionDef=0,WeaponDef=0,WeaponMode=0
 @Description:not documented yet
 
 @Name:APArmorShardsMod
@@ -243,6 +283,12 @@ Can be accessed via statistic value CAC_AMSDamage and modifier CAC_AMSDamage_Mod
 @Type:List of mech chassis locations
 @AppliedTo:WeaponDef
 @Default:empty
+@Description:not documented yet
+
+@Name:BreachingShot
+@Type:boolean
+@AppliedTo:AmmunitionDef,WeaponDef,WeaponMode
+@Default:AmmunitionDef=NotSet,WeaponDef=NotSet,WeaponMode=NotSet
 @Description:not documented yet
 
 @Name:BuildingsDamageModifier
@@ -612,6 +658,12 @@ Can be accessed via statistic value CAC_DirectFireModifier and modifier CAC_Dire
 @Default:AmmunitionDef=1,WeaponMode=1
 @Description:not documented yet
 
+@Name:hexesMovedMod
+@Type:EvasivePipsMods structure
+@AppliedTo:AmmunitionDef,WeaponDef,WeaponMode
+@Default:AmmunitionDef=empty,WeaponDef=empty,WeaponMode=empty
+@Description:not documented yet
+
 @Name:HideIfOnlyVariant
 @Type:boolean
 @AppliedTo:AmmunitionDef
@@ -646,6 +698,12 @@ Can be accessed via statistic value CAC_DirectFireModifier and modifier CAC_Dire
 @Type:integer
 @AppliedTo:MineFieldDef
 @Default:1
+@Description:not documented yet
+
+@Name:IgnoreCover
+@Type:boolean
+@AppliedTo:AmmunitionDef,WeaponDef,WeaponMode
+@Default:AmmunitionDef=NotSet,WeaponDef=NotSet,WeaponMode=NotSet
 @Description:not documented yet
 
 @Name:ImprovedBallistic
@@ -712,6 +770,12 @@ Can be accessed via statistic value CAC_DirectFireModifier and modifier CAC_Dire
 @Type:boolean
 @AppliedTo:AmmunitionDef,WeaponDef,WeaponMode
 @Default:AmmunitionDef=NotSet,WeaponDef=True,WeaponMode=NotSet
+@Description:not documented yet
+
+@Name:isFromJson
+@Type:boolean
+@AppliedTo:WeaponMode
+@Default:false
 @Description:not documented yet
 
 @Name:isHeatVariation
@@ -891,6 +955,12 @@ Can be accessed via statistic value CAC_MissileHealth and modifier CAC_MissileHe
 @Default:AmmunitionDef=0,WeaponDef=0,WeaponMode=0
 @Description:not documented yet
 
+@Name:MissInCircle
+@Type:boolean
+@AppliedTo:AmmunitionDef,WeaponDef,WeaponMode
+@Default:AmmunitionDef=NotSet,WeaponDef=NotSet,WeaponMode=NotSet
+@Description:not documented yet
+
 @Name:Modes
 @Type:list of WeaponMode objects
 @AppliedTo:WeaponDef
@@ -993,10 +1063,30 @@ Can be accessed via statistic value CAC_MissileHealth and modifier CAC_MissileHe
 @Default:AmmunitionDef=1,WeaponDef=1,WeaponMode=1
 @Description:not documented yet
 
+@Name:RangeBonusAccuracyMod
+@Type:float
+@AppliedTo:AmmunitionDef,WeaponDef,WeaponMode
+@Default:AmmunitionDef=0,WeaponDef=0,WeaponMode=0
+@Description:not documented yet
+Can be accessed via statistic value CAC_RangeBonusAccuracyMod and modifier CAC_RangeBonusAccuracyMod_Mod
+
+@Name:RangeBonusDistance
+@Type:float
+@AppliedTo:AmmunitionDef,WeaponDef,WeaponMode
+@Default:AmmunitionDef=0,WeaponDef=0,WeaponMode=0
+@Description:not documented yet
+Can be accessed via statistic value CAC_RangeBonusDistance and modifier CAC_RangeBonusDistance_Mod
+
 @Name:RangedDmgFalloffType
 @Type:enum. Possible values: NotSet, Quadratic, Cubic, SquareRoot, Log10, LogE, Exp, Linear
 @AppliedTo:AmmunitionDef,WeaponDef,WeaponMode
 @Default:AmmunitionDef=NotSet,WeaponDef=Linear,WeaponMode=NotSet
+@Description:not documented yet
+
+@Name:RecoilJammingChance
+@Type:float
+@AppliedTo:AmmunitionDef,WeaponDef,WeaponMode
+@Default:AmmunitionDef=0,WeaponDef=0,WeaponMode=0
 @Description:not documented yet
 
 @Name:RefireModifier
@@ -1051,6 +1141,12 @@ Can be accessed via statistic value CAC_MissileHealth and modifier CAC_MissileHe
 @Type:boolean
 @AppliedTo:MineFieldDef
 @Default:false
+@Description:not documented yet
+
+@Name:SpecialHitTable
+@Type:string
+@AppliedTo:AmmunitionDef,WeaponDef,WeaponMode
+@Default:AmmunitionDef=empty,WeaponDef=empty,WeaponMode=empty
 @Description:not documented yet
 
 @Name:SpreadRange
@@ -1149,6 +1245,13 @@ Can be accessed via statistic value CAC_SpreadRange and modifier CAC_SpreadRange
 @AppliedTo:AmmunitionDef,WeaponDef,WeaponMode
 @Default:AmmunitionDef=NotSet,WeaponDef=NotSet,WeaponMode=NotSet
 @Description:not documented yet
+
+@Name:UnsafeJamChance
+@Type:float
+@AppliedTo:AmmunitionDef,WeaponDef,WeaponMode
+@Default:AmmunitionDef=0,WeaponDef=1,WeaponMode=0
+@Description:not documented yet
+Can be accessed via statistic value CAC_UnsafeJamChance and modifier CAC_UnsafeJamChance_Mod
 
 @Name:UnseparatedDamageMult
 @Type:float
