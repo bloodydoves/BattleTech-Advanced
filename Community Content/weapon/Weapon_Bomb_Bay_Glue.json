@@ -1,0 +1,157 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/m/t/bomb"
+			},
+			{
+				"CategoryID": "BombBay"
+			},
+			{
+				"CategoryID": "NeverMelee"
+			}
+		],
+		"ComponentExplosion": {
+			"ExplosionDamagePerAmmo": 50
+		},
+		"BonusDescriptions": [
+				"BombBay",
+				"WalkSpeed: -20%",
+				"HeatGenerated: +5%",
+				"AMSImmune",
+				"NoFireInMelee"
+			],
+		"InternalAmmoTonnage": {
+            "InternalAmmoTons": 0.5
+        },
+		"Flags": [
+			"not_broken"
+		]
+	},
+	"weaponCategoryID": "BombBay",
+	"Type": "LRM",
+	"WeaponSubType": "LRM5",
+	"MinRange": 0,
+	"MaxRange": 240,
+	"RangeSplit": [
+		60,
+		120,
+		180
+	],
+	"AmmoCategory": "BOMB",
+	"StartingAmmoCapacity": 1,
+	"HeatGenerated": 0,
+	"Damage": 50,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 0,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": 0,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": true,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 1,
+	"Instability": 10,
+	"MissileHealth": 6,
+	"AMSImmune": true,
+	"WeaponEffectID": "WeaponEffect-Weapon_LRM5",
+	"Description": {
+		"Cost": 200000,
+		"Rarity": 0,
+		"Purchasable": true,
+		"Manufacturer": "Alliance Munitions",
+		"Model": "Multi-Use Bomb Rack",
+		"UIName": "Glue Bomb",
+		"Id": "Weapon_Bomb_Bay_Glue",
+		"Name": "Glue Bomb Bay",
+		"Details": "This is an attached Bomb Bay, armed with a Glue warhead. Bomb bays are heavily used on aerospace fighters for target saturation. This Glue warhead does low damage but also slows targets on hit. \n\n <b><color=#ffcc00>Uses Internal Ammo.</color></b>",
+		"Icon": "bombing-run"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "arrow",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 1,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": 2,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"effectTargetType": "SingleTarget",
+				"showInTargetPreview": true,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-MortarGlue",
+				"Name": "Slowed By Glue",
+				"Details": "This unit is coated with sticky glue, slowing its movement speed by 20%.",
+				"Icon": "footcast"
+			},
+			"statisticData": {
+				"statName": "WalkSpeed",
+				"operation": "Float_Multiply",
+				"modValue": "0.8",
+				"modType": "System.Single"
+			},
+			"nature": "Debuff"
+		},
+		{
+			"durationData": {
+				"duration": 2,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"effectTargetType": "SingleTarget",
+				"showInTargetPreview": true,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Suppressant-Effect",
+				"Name": "Heat Vents Clogged",
+				"Details": "High energy residue reduces heat efficiency by 5%.",
+				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+			},
+			"nature": "Debuff",
+			"statisticData": {
+				"statName": "HeatGenerated",
+				"operation": "Float_Multiply",
+				"modValue": "1.05",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_extreme",
+			"WebbTCSupported-SingleShot"
+		],
+		"tagSetSourceFile": ""
+	}
+}
