@@ -1,0 +1,41 @@
+{
+  "key": "Start Conversation Custom",
+  "label": "Start conversation",
+  "view": ["label", "inputs"],
+  "scope": "action",
+  "category": "primary",
+  "tooltip": "This will immediately trigger a group conversation",
+  "inputs": [
+    {
+      "label": "Conversation Id",
+      "types": ["string"],
+      "viewLabel": "for conversation id {value}"
+    },
+    {
+      "label": "Conversation Header",
+      "types": ["string"]
+    },
+    {
+      "label": "Conversation Sub Header",
+      "types": ["string"]
+    },
+    {
+      "label": "Force Non-FP Conference Room",
+      "types": ["int"],
+      "tooltip": "If this is true, when a conversation is triggered it will force the non-FP version of the conference room",
+      "values": [
+        {
+          "viewlabel": "in the appropriate conference room (FP vs non-FP)",
+          "text": "False",
+          "value": 0
+        },
+        {
+          "viewlabel": "always in the non-FP conference room ",
+          "text": "True",
+          "value": 1
+        }
+      ],
+      "defaultValue": 0
+    }
+  ]
+}
