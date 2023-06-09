@@ -1,0 +1,36 @@
+{
+  "key": "Evaluate BattleTech String",
+  "label": "Evaluate a stat string",
+  "view": ["inputs"],
+  "scope": "condition",
+  "category": "primary",
+  "inputs": [
+    {
+      "label": "Type",
+      "types": ["int"],
+      "values": [
+        { "viewlabel": "Check if company stat", "text": "Company Stats", "value": 1 },
+        { "viewlabel": "Check if commander stat", "text": "Commander Stats", "value": 2 },
+        { "viewlabel": "Check if current system stat", "text": "Current System Stats", "value": 3 }
+      ]
+    },
+    {
+      "label": "Stat Key",
+      "types": ["string"],
+      "viewlabel": "'{value}'"
+    },
+    {
+      "label": "Operation",
+      "types": ["int"],
+      "values": [
+        { "viewlabel": "is equal to", "text": "Equal To", "value": 1 },
+        { "viewlabel": "is not equal to", "text": "Not Equal To", "value": 2 }
+      ]
+    },
+    {
+      "label": "Stat Value",
+      "types": ["string"],
+      "viewlabel": "the value '{value}'"
+    }
+  ]
+}
