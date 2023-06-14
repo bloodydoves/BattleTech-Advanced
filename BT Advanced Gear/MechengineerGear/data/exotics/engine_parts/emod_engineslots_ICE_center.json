@@ -1,5 +1,8 @@
 {
 	"Custom": {
+		"Cooling": {
+			"HeatSinkDefId": "Gear_HeatSink_Generic_Standard"
+		},
 		"Weights": {
 			"EngineFactor": 2
 		},
@@ -17,16 +20,30 @@
 				"CategoryID": "EnginePart"
 			}
 		],
+		"ActivatableComponent": {
+			"ExplodeOnDamage": false,
+			"CanNotBeActivatedManualy": true,
+			"NoUniqueCheck": true,
+			"presistantVFXOutOfLOSHide": true,
+			"presistantVFX": {
+				"VFXPrefab": "vfxPrfPrtl_smokeStackPlume_sm_loop",
+				"VFXScaleX": 0.5,
+				"VFXScaleY": 0.5,
+				"VFXScaleZ": 0.5
+			},
+			"statusEffects": []
+		},
 		"Flags": [
 			"engine_part",
-				"vital",
-				"no_salvage"
+			"vital",
+			"no_salvage"
 		],
 		"BonusDescriptions": [
-				"EngineWeight: X2",
-				"ICESpeed: 20%",
-				"HeatGenerated: +15%"
-			]
+			"ICESHS",
+			"EngineWeight: X2",
+			"ICESpeed: 20%",
+			"HeatGenerated: +15%"
+		]
 	},
 	"Description": {
 		"Cost": 250000,
