@@ -1,0 +1,89 @@
+{
+	"Description": {
+		"Id": "3066-06-21",
+		"Name": "MercNews Broadcast",
+		"Details": "WOB CLASHES WITH LYRAN GUARD ON KEID\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]], [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:  In one of the [[DM.Factions[faction_WordOfBlake],Word of Blake's]] most overt moves in the [[DM.BaseDescriptionDefs[LoreChaosMarch],Chaos March]] to date, the Word has used the recently signed [[DM.BaseDescriptionDefs[LoreHPG],HPG]] contract with Keid's Duchess Arice Hunsen to consolidate their control over the entire world.  Almost immediately after landing in late 3065, Blakist mercenaries [[DM.BaseDescriptionDefs[LoreCliftonsRangers],Clifton's Rangers]] and [[DM.BaseDescriptionDefs[LoreHannibalsHermits],Hannibal's Hermits]] began clashing with the [[DM.BaseDescriptionDefs[LoreLyranGuard],Thirtieth Lyran Guard]], outmaneuvering and ambushing the heavier Lyran unit at every turn.  After months of combat, the Lyran Guard are retreating to their base for a final stand, but are calling for any reinforcements to aid in their defence.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "FIGHTING ON ELGIN GRINDS ON\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]], [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:  The various Barons with their House Guards and supporting mercenaries continue to squabble amongst themselves for overall control of the planet.  Meanwhile, the remaining pro-[[DM.BaseDescriptionDefs[LoreFedCom],Fedcom]] members of the [[DM.BaseDescriptionDefs[LoreRepublican],Fifth Republican Guard]] continue to hole up in and around the planet's largest city and spaceport, and all sides have contracts via the [[DM.BaseDescriptionDefs[LoreMRBC],MRBC]] to support their operations.  Due to the continuing instability, many believe the world is prime for intervention by either the [[DM.Factions[faction_WordOfBlake],Word of Blake]], the [[DM.Factions[faction_Liao],Capellan Confederation]], or the [[DM.BaseDescriptionDefs[LoreAMC],Allied Mercenary Command]].",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_give_starsystemdef_Keid_to_Steiner",
+									"WIIC_give_starsystemdef_Elgin_to_Davion",
+									"WIIC_WordofBlake_attacks_starsystemdef_Keid",
+									"WIIC_Locals_attacks_starsystemdef_Elgin",
+									"WIIC_set_starsystemdef_Keid_defender_strength_15",
+									"WIIC_set_starsystemdef_Keid_attacker_strength_30",
+									"WIIC_set_starsystemdef_Elgin_defender_strength_20",
+									"WIIC_set_starsystemdef_Elgin_attacker_strength_20"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

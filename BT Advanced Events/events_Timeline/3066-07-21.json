@@ -1,0 +1,89 @@
+{
+	"Description": {
+		"Id": "3066-07-21",
+		"Name": "MercNews Broadcast",
+		"Details": "[[DM.Factions[faction_SarnaSupremacy],SARNA SUPREMACY]] REJOINS [[DM.Factions[faction_Liao],CAPELLAN CONFEDERATION]]\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]], [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:  After years of pressure, the three worlds of the Sarna Supremacy have agreed to officially rejoin the Capellan Confederation!  By using Warships to blockade the Supremacy worlds, denying them critical foodstuffs and choking off interstellar trade, the Supremacy was forced into protectorate status in 3062.  With the gradual replacement of Sarna's mercenary garrisons with those from the [[DM.BaseDescriptionDefs[LoreLiaoCCAF],CCAF]], and the lining the Supremacy's government with pro-[[DM.BaseDescriptionDefs[LoreHouseLiao],Liao]] officials, the formal absorption of the Sarna Supremacy into the Confederation was a long predicted outcome.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "FURTHER FIGHTING ON SHERATAN\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]], [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:  After years of effort, the [[DM.BaseDescriptionDefs[LoreAMC],AMC]]-aligned mercenaries [[DM.Factions[faction_GrimDetermination],Grim Determination]] have consolidated central government control over much of the planet.  The [[DM.BaseDescriptionDefs[LoreSheratanKnights],Sheratan Knights]], while wary of mercenaries due to their experience with the [[DM.Factions[faction_FistOfMokal],Fist of Mokal's]] excesses, have grown into Sheratan's planetary militia and continue to anchor Grim Determination's operations to pacify the planet's various barons, pirate groups, and remaining [[DM.BaseDescriptionDefs[LoreXinSheng],Liao]] guerillas.\r\n\n\nA new challenge however is close at hand.  Grim Determination's operations have been edging closer to the positions of the [[DM.Factions[faction_WordOfBlake],Word of Blake's]] Fifth Division who are obstensibly guarding Sheratan's [[DM.BaseDescriptionDefs[LoreHPG],HPG]] station, but are suspected of conducting their own operations and stirring conflict on the planet.  As the AMC and Word of Blake are aligning themselves against each other throughout the [[DM.BaseDescriptionDefs[LoreChaosMarch],Chaos March]], open conflict between the two on Sheratan seems likely.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_give_starsystemdef_Sheratan_to_WordOfBlake",
+									"WIIC_give_starsystemdef_Sarna_to_Liao",
+									"WIIC_give_starsystemdef_Kaifeng_to_Liao",
+									"WIIC_give_starsystemdef_Sakhalin(CC)_to_Liao",
+									"WIIC_GrimDetermination_attacks_starsystemdef_Sheratan",
+									"WIIC_set_starsystemdef_Sheratan_defender_strength_15",
+									"WIIC_set_starsystemdef_Sheratan_attacker_strength_30",
+									"WIIC_give_starsystemdef_Sheratan_to_Locals_on_attacker_win"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

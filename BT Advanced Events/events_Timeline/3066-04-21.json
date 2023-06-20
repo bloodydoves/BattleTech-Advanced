@@ -1,0 +1,89 @@
+{
+	"Description": {
+		"Id": "3066-04-21",
+		"Name": "MercNews Broadcast",
+		"Details": "TERRORIST ATTACKS ON TERRACAP CONFEDERATION\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]], [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:  The [[DM.Factions[faction_TerracapConfederation],Terracap Confederation]], long considered a [[DM.Factions[faction_WordOfBlake],Word of Blake]] protectorate, has been struck by pro-[[DM.Factions[faction_Liao],Liao]] guerillas and mercenaries.  Focusing their attacks on the Confederation's mercenary garrisons, the guerillas have succeeded in kidnapping and murdering Major Jeffreys, the commander of Jeffrey's Own, on Terra Firma and in poisoning the [[DM.Factions[faction_FistOfMokal],Fist of Mokal]]'s barracks on Capolla.  On Terra Firma, the Fist of Mokal have taken in the survivors of Jeffrey's Own and have begun to hunt down the Liao guerillas and their mercenary supports.\r\n\n\nOn Capolla however, Captain Delilah Finn, one of the few survivors of the barracks attack, has rallied Fist survivors, the planetary militia, and even a few members of the [[DM.BaseDescriptionDefs[LoreOneStar],One Star Faith]] to form a new command, Delilah's Gauntlet, and are standing ready to defend the planet.  The Word of Blake has also taken note, sending [[DM.BaseDescriptionDefs[LoreFuries],The Furies]] to support Delilah's Gauntlet in defending Capolla against the latest round of [[DM.BaseDescriptionDefs[LoreXinSheng],Xin Sheng]]-related attacks.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "ALLIED MERCENARY COMMAND CREATED\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]], [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:  In one of the strongest statements in response to the formation of the [[DM.Factions[faction_WordOfBlake],Word of Blake]] Protectorate, [[DM.Factions[faction_Wolfs_Dragoons],Wolf's Dragoons]] Colonel [[DM.BaseDescriptionDefs[LoreJaimeWolf],Jaime Wolf]] has announced the creation of the Allied Mercenary Command (AMC).  The AMC's stated goal is to provide aid to [[DM.BaseDescriptionDefs[LoreChaosMarch],Chaos March]] planets who wished to remain autonomous, but cannot afford the military forces or mercenaries to stop a determined invasion. While Colonel Wolf expressed that the formation of the AMC was not a declaration of war against the Word of Blake, it was clear that the AMC was created to oppose both Word and [[DM.BaseDescriptionDefs[LoreHouseLiao],House Liao]]'s [[DM.BaseDescriptionDefs[LoreXinSheng],Xin Sheng]] campaigns in the region.  AMC units are redeploying throughout the Chaos March, and include partial or full unit contributions from Wolf's Dragoons, the [[DM.Factions[faction_NorthwindHighlanders],Northwind Highlanders]], [[DM.Factions[faction_DismalDisinherited],Dismal Disinherited]], [[DM.Factions[faction_AlwaysFaithful],Always Faithful]], [[DM.Factions[faction_GrimDetermination],Grim Determination]], [[DM.Factions[faction_51stDarkPanzerJaegers],51st Dark Panzer Jaegers]], [[DM.BaseDescriptionDefs[LoreWildGeese],Wild Geese]], [[DM.Factions[faction_LindonsBattalion],Lindon's Battalion]], [[DM.Factions[faction_ToothOfYmir],Tooth of Ymir]], [[DM.BaseDescriptionDefs[LoreBurtonsBrigade],Burton's Brigade]], among many others.  Several prominent Chaos March mercenary groups have declined the AMC's invitation, particularly those working with the Word of Blake.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_give_starsystemdef_TerraFirma_to_TerracapConfederation",
+									"WIIC_give_starsystemdef_Capolla_to_TerracapConfederation",
+									"WIIC_Liao_attacks_starsystemdef_TerraFirma",
+									"WIIC_Liao_attacks_starsystemdef_Capolla",
+									"WIIC_set_starsystemdef_TerraFirma_defender_strength_25",
+									"WIIC_set_starsystemdef_TerraFirma_attacker_strength_10",
+									"WIIC_set_starsystemdef_Capolla_defender_strength_20",
+									"WIIC_set_starsystemdef_Capolla_attacker_strength_10"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

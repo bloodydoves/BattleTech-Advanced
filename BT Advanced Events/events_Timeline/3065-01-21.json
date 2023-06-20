@@ -1,0 +1,89 @@
+{
+	"Description": {
+		"Id": "3065-01-21",
+		"Name": "MercNews Broadcast",
+		"Details": "[[DM.BaseDescriptionDefs[LoreChaosMarch],CHAOS MARCH]]: [[DM.BaseDescriptionDefs[LoreXinSheng],XING SHENG]] REACHES NANKING\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]], [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:  While the world has been relatively quiet since the destruction of the [[DM.BaseDescriptionDefs[LoreLoyalist],Loyalist]] Nanking [[DM.BaseDescriptionDefs[LoreSMM],SMM]], House [[DM.BaseDescriptionDefs[LoreHouseLiao],Liao]] has been renewing their efforts in the the system.  Sparked by the arrival of as-yet-unidentified mercenaries, a new wave of Xin Sheng revolts and terrorist attacks have occurred on planet.  The planet's [[DM.BaseDescriptionDefs[LoreAllied],Allied]] garrision, the [[DM.BaseDescriptionDefs[LoreFedcomCorps],First Fedcom RCT]], have begun to move in to put down the disturbances.  Attack and defend contracts are available via the [[DM.BaseDescriptionDefs[LoreMRBC],MRBC]].",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "NEW HOME INVITES [[DM.Factions[faction_WordOfBlake],WORD OF BLAKE]] TO GARRISON [[DM.BaseDescriptionDefs[LoreHPG],HPG]]\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]], [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:  After years of combat between the [[DM.BaseDescriptionDefs[LoreLyranGuard],Thirtieth Lyran Guard]] and pro-[[DM.Factions[faction_Liao],Liao]] New Home Regulars have laid waste to much of the world, a new force under the Word of Blake has arrived to the planet.  Obstensibly on-planet to garrison the local HPG station, many believe this is a precursor of a larger seizure of the planet as has happened elsewhere in the [[DM.BaseDescriptionDefs[LoreChaosMarch],Chaos March]].  While some of the populace has had reservations about the incoming Blakist forces, a larger portion of the war-weary population have openly welcomed the new arrivals, considering the World of Blake a better alternative than the anarchy that has plagued their world.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_give_starsystemdef_Nanking_to_Davion",
+									"WIIC_give_starsystemdef_NewHome_to_Locals",
+									"WIIC_Liao_attacks_starsystemdef_Nanking",
+									"WIIC_WordOfBlake_attacks_starsystemdef_NewHome",
+									"WIIC_set_starsystemdef_Nanking_defender_strength_30",
+									"WIIC_set_starsystemdef_Nanking_attacker_strength_15",
+									"WIIC_set_starsystemdef_NewHome_defender_strength_15",
+									"WIIC_set_starsystemdef_NewHome_attacker_strength_30"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

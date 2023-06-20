@@ -1,0 +1,92 @@
+{
+	"Description": {
+		"Id": "3067-01-21",
+		"Name": "MercNews Broadcast",
+		"Details": "[[DM.Factions[faction_WordOfBlake],WORD OF BLAKE]] MOVES INTO [[DM.Factions[faction_SaiphTriumvirate],SAIPH TRIUMVIRATE]]\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]], [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:  In response to an almost endless series of insurgent attacks on all three worlds of the Saiph Triumvirate, Triumvirate leader Count Balantine has accepted military assistance from the Word of Blake!  In exchange for control of the planet's [[DM.BaseDescriptionDefs[LoreHPG],HPG]] stations, the Word of Blake have not only provided advice and weapons to the Triumvirate's military, but have also sent elements of the [[DM.BaseDescriptionDefs[LoreWOBM],Word of Blake Militia]] and mercenaries to support the Triumvirate in rooting out insurgents.  Concerned about the Word's true motives, and hoping to thwart any plans of expansion by either the Word of Blake or the [[DM.Factions[faction_Liao],Capellan Confederation]], the [[DM.BaseDescriptionDefs[LoreAMC],Allied Mercenary Command]] have responded by sending two regiments of the [[DM.Factions[faction_DismalDisinherited],Dismal Disinherited]] to take up their own positions on the Triumvirate worlds.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "CLASHES OVER [[DM.BaseDescriptionDefs[LoreLosTech],LOSTECH]] ON EPSILON ERIDANI\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]], [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:  A LosTech prospector's claim of finding a [[DM.BaseDescriptionDefs[LoreSLDF],SDLF]] depot with a [[DM.BaseDescriptionDefs[LoreStarLeague],Star League]]-era [[DM.BaseDescriptionDefs[LoreColossus],Colossus]] Dropship parked within sparked a race between two rival mercenary commands to find the invaluable treasure.  As the [[DM.Factions[faction_LoneStarRegiment],Lone Star Regiment]], hired by General Atomics to protect their Eridani interests, and the [[DM.BaseDescriptionDefs[LoreRedfieldRen],Redfield Renegades]], on-planet to protect Minroc Mining, scrambled to find the depot, clashes ensued and fighting escalated.  As combat throughout Epsilon Eridani's Shamus Mountain rages between the Lone Stars and the Renegades, some turn to the planetary government to impose order.  Epsilon Eridani's Duke Pierre Benton has stated however that since no Eridani citizens are being harmed, the matter arguably \"does not concern the government\".  Many observers feel that the Duke is more concerned with keeping positive relations with the mercenary garrisons than with getting drawn into the conflict.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_give_starsystemdef_EpsilonEridani_to_Locals",
+									"WIIC_give_starsystemdef_NewCanton_to_SaiphTriumvirate",
+									"WIIC_give_starsystemdef_TallTrees_to_SaiphTriumvirate",
+									"WIIC_give_starsystemdef_Saiph_to_SaiphTriumvirate",
+									"WIIC_LoneStarRegiment_attacks_starsystemdef_EpsilonEridani",
+									"WIIC_WordOfBlake_attacks_starsystemdef_NewCanton",
+									"WIIC_WordOfBlake_attacks_starsystemdef_TallTrees",
+									"WIIC_WordOfBlake_attacks_starsystemdef_Saiph",
+									"WIIC_set_starsystemdef_EpsilonEridani_defender_strength_10",
+									"WIIC_set_starsystemdef_EpsilonEridani_attacker_strength_10",
+									"WIIC_give_starsystemdef_EpsilonEridani_to_Locals_on_attacker_win"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

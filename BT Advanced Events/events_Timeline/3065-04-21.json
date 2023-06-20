@@ -1,0 +1,90 @@
+{
+	"Description": {
+		"Id": "3065-04-21",
+		"Name": "MercNews Broadcast",
+		"Details": "[[DM.BaseDescriptionDefs[LoreChaosMarch],CHAOS MARCH]]: SIX-SIDED WAR RAGES ON ELGIN\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]], [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:  Nine years After the unmasking of the CO of the [[DM.BaseDescriptionDefs[LoreRepublican],Fifth Tikonov Republican Guard]] as a [[DM.BaseDescriptionDefs[LoreMaskirovka],Maskirovka]] spy and the subsequent collapse of the Fifth, a six-sided fight still rages on the planet.  Various Barons and their supporting forces are vying for overall control of the planet, while the pro-Fedcom remnants of the Fifth preserve a foothold on the planet.  Minor mercenary and support forces include the Greyton Regulars, the Blue Guard, Haman Hussars, Kpay Lancers and the Second Daman Rangers.  All Barons and the Fifth have contracts listed on the MRBC database.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "FURTHER [[DM.BaseDescriptionDefs[LoreXinSheng],XIN SHENG]] ACTIVITY ON ZURICH\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]], [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:  In a similar situation to nearby Nanking, Liao guerillas have remounted efforts to topple the Fedcom government.  The planet's long-time garrison, the elite-rated [[DM.BaseDescriptionDefs[LoreKestrelGren],First Kestrel Grenadiers RCT]], have responded to the activity, crushing several revolts and rooting out terrorist cells.  Chancellor [[DM.BaseDescriptionDefs[LoreSunTzuLiao],Sun-Zhu Liao]] is calling for all loyal patriots to join the revolt, and is sending in mercenary reinforcements.  Attack and Defend contracts are available via the [[DM.BaseDescriptionDefs[LoreMRBC],MRBC]] database.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_give_starsystemdef_Zurich_to_Davion",
+									"WIIC_give_starsystemdef_Elgin_to_Locals",
+									"WIIC_Liao_attacks_starsystemdef_Zurich",
+									"WIIC_Davion_attacks_starsystemdef_Elgin",
+									"WIIC_set_starsystemdef_Zurich_defender_strength_30",
+									"WIIC_set_starsystemdef_Zurich_attacker_strength_15",
+									"WIIC_set_starsystemdef_Elgin_defender_strength_20",
+									"WIIC_set_starsystemdef_Elgin_attacker_strength_20",
+									"WIIC_give_starsystemdef_Elgin_to_Locals_on_attacker_win"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}
