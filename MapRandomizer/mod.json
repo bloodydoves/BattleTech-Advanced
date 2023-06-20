@@ -1,17 +1,25 @@
 {
 	"Name": "Map Randomizer",
 	"DLL": "MapRandomizer.dll",
-	"Enabled": true,
 	"Hidden": true,
-	"Version": "1.1.0.1",
+	"Version": "1.2.0.0",
 	"Description": "",
 	"Author": "T-Bone",
+	"DependsOn": [
+		"IRBTModUtils"
+	],
 	"Website": "https://github.com/ajkroeg/ContractGenerationFixes",
 	"ConflictsWith": [],
 	"CustomResourceTypes": [],
 	"Settings": {
 		"enableLogging": true,
-		"enableTravelFix": true
+		"enableTravelFix": true,
+		"ContractTimeoutIcon": "time"
 	},
-	"Manifest": []
+	"Manifest": [
+		{
+			"Type": "SVGAsset",
+			"Path": "SVGAssets"
+		}
+	]
 }
