@@ -1,0 +1,306 @@
+{
+	"FixedEquipment": [
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "emod_structureslots_standard",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"hasPrefabName": false,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "Head",
+			"ComponentDefID": "Gear_Quirk_ImprovedTargeting_Xerxes",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"hasPrefabName": false,
+			"DamageLevel": "Functional"
+		},
+		{
+			"MountedLocation": "LeftArm",
+			"ComponentDefID": "Weapon_ArrowIV_Ultra_CLAN",
+			"ComponentDefType": "Weapon",
+			"HardpointSlot": 0,
+			"hasPrefabName": false,
+			"DamageLevel": "Functional",
+			"LocalGUID":"target_AIV_1"
+		},
+		{
+			"MountedLocation": "LeftArm",
+			"ComponentDefID": "Gear_Attachment_ArtilleryFCS",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false,
+			"TargetComponentGUID":"target_AIV_1"
+		},
+		{
+			"MountedLocation": "RightArm",
+			"ComponentDefID": "Weapon_ArrowIV_Ultra_CLAN",
+			"ComponentDefType": "Weapon",
+			"HardpointSlot": 0,
+			"hasPrefabName": false,
+			"DamageLevel": "Functional",
+			"LocalGUID":"target_AIV_2"
+		},
+		{
+			"MountedLocation": "RightArm",
+			"ComponentDefID": "Gear_Attachment_ArtilleryFCS",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false,
+			"TargetComponentGUID":"target_AIV_2"
+		}
+	],
+	"Description": {
+		"Cost": 25000000,
+		"Rarity": 5,
+		"Purchasable": true,
+		"Manufacturer": "",
+		"Model": "",
+		"UIName": "Xerxes",
+		"Id": "chassisdef_xerxes_XER-4W",
+		"Name": "Xerxes",
+		"Details": "Reverse-engineered based on a captured Capellan XER-4S, the XER-4W is a dedicated artillery mech armed with prototype Ultra Arrow IV launchers able to fire twice as fast as the standard launcher, the prototype is also equipped with experimental heat sinking equipment and improved simultaneous multi-target capabilities based on captured Clan technology. The lack of medium and short-range weaponry makes the design dependent on spotters working alongside the XER-4W, but the design compensates it with the overwhelming amount of artillery firepower it can field.",
+		"Icon": "uixTxrIcon_xerxes"
+	},
+	"VariantName": "XER-4W",
+	"ChassisTags": {
+		"items": [
+			"SuperHeavyMech",
+			"ArmLimitUpperRight",
+			"ArmLimitUpperLeft",
+			"AssaultMech"
+		],
+		"tagSetSourceFile": ""
+	},
+	"StockRole": "Superheavy Missile Boat",
+	"YangsThoughts": "Reverse-engineered based on a captured Capellan XER-4S, the XER-4W is a dedicated artillery mech armed with prototype Ultra Arrow IV launchers able to fire twice as fast as the standard launcher, the prototype is also equipped with experimental heat sinking equipment and improved simultaneous multi-target capabilities based on captured Clan technology. The lack of medium and short-range weaponry makes the design dependent on spotters working alongside the XER-4W, but the design compensates it with the overwhelming amount of artillery firepower it can field.",
+	"MovementCapDefID": "movedef_annihilator_ANH-1A",
+	"PathingCapDefID": "pathingdef_assault",
+	"HardpointDataDefID": "hardpointdatadef_genericsh1",
+	"PrefabIdentifier": "chrprfmech_genericsh1base-001",
+	"PrefabBase": "genericsh1",
+	"Tonnage": 130,
+	"InitialTonnage": 13,
+	"weightClass": "ASSAULT",
+	"BattleValue": 10206000,
+	"Heatsinks": 0,
+	"TopSpeed": 105,
+	"TurnRadius": 290,
+	"MaxJumpjets": 20,
+	"Stability": 250,
+	"StabilityDefenses": [
+		0,
+		0,
+		0,
+		0,
+		0,
+		0
+	],
+	"SpotterDistanceMultiplier": 1,
+	"VisibilityMultiplier": 1,
+	"SensorRangeMultiplier": 1,
+	"Signature": 0,
+	"Radius": 8,
+	"PunchesWithLeftArm": false,
+	"MeleeDamage": 75,
+	"MeleeInstability": 38,
+	"MeleeToHitModifier": 0,
+	"DFADamage": 150,
+	"DFAToHitModifier": 0,
+	"DFASelfDamage": 150,
+	"DFAInstability": 75,
+	"Locations": [
+		{
+			"Location": "Head",
+			"Hardpoints": [
+				{
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": false
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 6,
+			"MaxArmor": 60,
+			"MaxRearArmor": -1,
+			"InternalStructure": 24
+		},
+		{
+			"Location": "LeftArm",
+			"Hardpoints": [
+				{
+					"WeaponMountID": "Missile",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Missile",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Missile",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Missile",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Artillery",
+					"Omni": false
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 13,
+			"MaxArmor": 210,
+			"MaxRearArmor": -1,
+			"InternalStructure": 110
+		},
+		{
+			"Location": "LeftTorso",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 15,
+			"MaxArmor": 255,
+			"MaxRearArmor": 120,
+			"InternalStructure": 135
+		},
+		{
+			"Location": "CenterTorso",
+			"Hardpoints": [
+				{
+					"WeaponMountID": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Artillery",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": false
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 18,
+			"MaxArmor": 330,
+			"MaxRearArmor": 150,
+			"InternalStructure": 195
+		},
+		{
+			"Location": "RightTorso",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 15,
+			"MaxArmor": 255,
+			"MaxRearArmor": 120,
+			"InternalStructure": 135
+		},
+		{
+			"Location": "RightArm",
+			"Hardpoints": [
+				{
+					"WeaponMountID": "Missile",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Missile",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Missile",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Missile",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Artillery",
+					"Omni": false
+				}
+			],
+			"Tonnage": 0,
+			"InventorySlots": 13,
+			"MaxArmor": 210,
+			"MaxRearArmor": -1,
+			"InternalStructure": 110
+		},
+		{
+			"Location": "LeftLeg",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 6,
+			"MaxArmor": 270,
+			"MaxRearArmor": -1,
+			"InternalStructure": 135
+		},
+		{
+			"Location": "RightLeg",
+			"Hardpoints": [],
+			"Tonnage": 0,
+			"InventorySlots": 6,
+			"MaxArmor": 270,
+			"MaxRearArmor": -1,
+			"InternalStructure": 135
+		}
+	],
+	"LOSSourcePositions": [
+		{
+			"x": 0,
+			"y": 14.5,
+			"z": 0
+		},
+		{
+			"x": 4,
+			"y": 15,
+			"z": -1
+		},
+		{
+			"x": -4,
+			"y": 15,
+			"z": -1
+		}
+	],
+	"LOSTargetPositions": [
+		{
+			"x": 0,
+			"y": 14.5,
+			"z": 0
+		},
+		{
+			"x": 4,
+			"y": 15,
+			"z": -1
+		},
+		{
+			"x": -4,
+			"y": 15,
+			"z": -1
+		},
+		{
+			"x": 3.5,
+			"y": 5.5,
+			"z": -1
+		},
+		{
+			"x": -3.5,
+			"y": 5.5,
+			"z": -1
+		}
+	],
+	"CustomParts": {
+		"CustomParts": []
+	}
+}
