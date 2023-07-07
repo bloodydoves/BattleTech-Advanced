@@ -1,0 +1,88 @@
+{
+	"Description": {
+		"Id": "3066-09-21",
+		"Name": "MercNews Broadcast",
+		"Details": "[[DM.BaseDescriptionDefs[LoreXinSheng],XIN SHENG]] REACHES LIBERTY[[DM.BaseDescriptionDefs[LoreAMC],ALLIED MERCENARY COMMAND]] RESPONDS\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]], [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:  Facing a rise in pro-[[DM.BaseDescriptionDefs[LoreHouseLiao],Liao]] guerillas attacks and raids from [[DM.BaseDescriptionDefs[LoreChaosMarch],Chaos March]] pirates, and fearing the [[DM.Factions[faction_WordOfBlake],Word of Blake's]] intervention, the independent world of Liberty has accepted an offer assistance from the Allied Mercenary Command.  From the moment AMC-aligned [[DM.Factions[faction_LindonsBattalion],Lindon's Battalion]] landed they too  however became targets of terrorist attacks.  All signs indicate that Chancellor [[DM.BaseDescriptionDefs[LoreSunTzuLiao],Sun-Zhu Liao]] is preparing his forces on and off planet to to seize the world for the [[DM.Factions[faction_Liao],Confederation]].",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "[[DM.Factions[faction_HsienHotheads],HSIEN HOTHEADS]] MAKE THEIR MOVE!\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]], [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:  Building on popular support and his family's legendary status on Hsien, Hsien Hotheads commanding officer Brenn Twohy has declared the return of Twohy rule to Hsien, roughly 275 years after the Twohys were forced into exile by the [[DM.Factions[faction_Liao],Capellan Confederation]]. Having worked to sideline the pro-Capellan government and [[DM.BaseDescriptionDefs[LoreGaelsGrinders],Gael's Grinders]] over the past year only the [[DM.BaseDescriptionDefs[LoreAMC],AMC]]-aligned [[DM.Factions[faction_AlwaysFaithful],Always Faithful]], hired by a coalition between pro-[[DM.BaseDescriptionDefs[LoreFedCom],Fedcom]] Baron Montong and the Dendeez Province, stand in the way of Twohy's ambitions.  The Word of Blake have supported Twohy's claim and have ordered elements of the [[DM.BaseDescriptionDefs[LoreWOBM],Word of Blake Militia's]] 4th Division to assist the Hotheads, and both formations are closing in on the Always Faithful positions.  The AMC and Word are both calling for additional mercenaries to assist their efforts.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_give_starsystemdef_Hsien_to_Davion",
+									"WIIC_give_starsystemdef_Carver(Liberty3063+)_to_Locals",
+									"WIIC_HsienHotheads_attacks_starsystemdef_Hsien",
+									"WIIC_Liao_attacks_starsystemdef_Carver(Liberty3063+)",
+									"WIIC_set_starsystemdef_Hsien_defender_strength_15",
+									"WIIC_set_starsystemdef_Hsien_attacker_strength_30",
+									"WIIC_give_starsystemdef_Hsien_to_WordOfBlake_on_attacker_win"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

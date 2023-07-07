@@ -1,0 +1,90 @@
+{
+	"Description": {
+		"Id": "3066-11-21",
+		"Name": "MercNews Broadcast",
+		"Details": "[[DM.BaseDescriptionDefs[LoreStealthyTigers],STEALTHY TIGERS]] ARRIVE ON HALL; FIGHTING INTENSIFIES\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]], [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:  After several years of stalemate between Emperor Baranov and Count McNally, the arrival of notable [[DM.BaseDescriptionDefs[LoreChaosMarch],Chaos March]] mercenaries the Stealthy Tigers have definitively tipped the balance towards Baranov. After months of pressure by Baranov's [[DM.BaseDescriptionDefs[LoreRepublican],Fourth Republican]] and the Stealthy Tigers, Count McNally's forces -McNally's House Guard, the mercenary groups [[DM.BaseDescriptionDefs[LoreBurtonsBrigade],Burton's Brigade]], [[DM.BaseDescriptionDefs[LoreCritchleysCavs],Critchley's Cavaliers]] and the remnants of [[DM.BaseDescriptionDefs[LoreCatersCobras],Cater's Cobras]]- are running out of options.  Rumours of McNally's next move range from reverting to guerilla warfare to continue the struggle to an all-out assault on the capital of Harney to end Baranov's rule once and for all.  MercNews will monitor the conflict provide updates as the situation unfolds, meanwhile contracts are available for both sides via the [[DM.BaseDescriptionDefs[LoreMRBC],MRBC]] Database.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "EPSILON INDI FACTIONS GEARING UP FOR MAJOR CAMPAIGN\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]], [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:  After a period of low-level conflict marked only by terrorist attacks and aerospace strikes the [[DM.BaseDescriptionDefs[LoreHouseLiao],Liao]]-aligned Epsilon Indi Freedom Brigade and [[DM.Factions[faction_LangendorfLancers],Langendorf Lancers]] are gearing up for a major offensive to conquer the world for the [[DM.Factions[faction_Liao],Confederation]].  The Epsilon Indi Irregulars under pro-[[DM.BaseDescriptionDefs[LoreFedCom],Fedcom]] Duke Abraham and the [[DM.BaseDescriptionDefs[LoreAMC],AMC]]-aligned [[DM.Factions[faction_ToothOfYmir],Tooth of Ymir]] are preparing their defences and launching their own spoiling raids to disrupt the upcoming Liao offensive.  Contracts for the upcoming Epsilon Indi campaign are available in the [[DM.BaseDescriptionDefs[LoreMRBC],MRBC]] Database.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_give_starsystemdef_EpsilonIndi_to_Locals",
+									"WIIC_give_starsystemdef_Hall_to_Marik",
+									"WIIC_LangendorfLancers_attacks_starsystemdef_EpsilonIndi",
+									"WIIC_Locals_attacks_starsystemdef_Hall",
+									"WIIC_set_starsystemdef_Hall_defender_strength_35",
+									"WIIC_set_starsystemdef_Hall_attacker_strength_15",
+									"WIIC_set_starsystemdef_EpsilonIndi_defender_strength_20",
+									"WIIC_set_starsystemdef_EpsilonIndi_attacker_strength_20",
+									"WIIC_give_starsystemdef_EpsilonIndi_to_Liao_on_attacker_win"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

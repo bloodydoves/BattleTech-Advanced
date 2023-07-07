@@ -1,0 +1,102 @@
+{
+	"Description": {
+		"Id": "3066-02-28",
+		"Name": "MercNews Broadcast",
+		"Details": "MAJOR NEWS IN THE PERIPHERY: [[DM.BaseDescriptionDefs[LoreNewColonyRegion],NEW COLONY REGION]] DECLARES INDEPENDENCE:\r\n\n\n After internal political pressures and much soul-searching, New Colony Region President Carver Trondel sent ambassadors to every Great House as well as the Magistracy of Canopus, Taurian Concordat, and Aurigan Reach to declare the creation of an independent interstellar nation, the [[DM.Factions[factions_FroncReaches],Fronc Reaches]]. [[DM.Factions[faction_ComStar],ComStar]], the [[DM.Factions[faction_Rasalhague],Free Rasalhague Republic]], the [[DM.Factions[faction_MagistracyOfCanopus],Magistracy of Canopus]], and the [[DM.Factions[Factions_AuriganReach],Aurigan Reach]] have already acknowledged the Reaches' sovereignty and have begun sending ambassadors to the Fronc Reaches with the intent to establish diplomatic ties. No [[DM.Factions[faction_TaurianConcordat],Taurian Concordat]] representatives could be reached for comment in time for this publication, though Protector [[DM.BaseDescriptionDefs[LoreGroverShraplen],Grover Shraplen]] is rumored to have snidely dismissed the Fronc ambassador.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "UNREST ON SANCTUARY ALLIANCE HOLDINGS!\r\n\n\nErod's Escape, [[DM.Factions[faction_SanctuaryAlliance],Sanctuary Alliance]] Occupation Zone:\r\n\n\n After several years of occupation by the still-enigmatic Sanctuary Alliance, it seems that the occupants of the once-Taurian worlds held by the Alliance in their Occupation Zone are finally rising against their occupiers. Word of what has been taking place on the occupied worlds is hard to come by but scattered reports indicate ragtag militia forces bearing [[DM.BaseDescriptionDefs[LoreHouseCalderon],House Calderon]] colors and being led by [[DM.BaseDescriptionDefs[LoreChamKithrong],Baron Cham Kithrong]] of the Taurian Defense Force's VI Corps are staging raids against Sanctuary Alliance forces on many of the held worlds. More on this story as it develops.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_give_starsystemdef_Spencer_to_FroncReaches",
+									"WIIC_give_starsystemdef_Cygnus_to_FroncReaches",
+									"WIIC_give_starsystemdef_Fronc_to_FroncReaches",
+									"WIIC_give_starsystemdef_Chandan_to_FroncReaches",
+									"WIIC_give_starsystemdef_Mantharaka_to_FroncReaches",
+									"WIIC_give_starsystemdef_Appian_to_FroncReaches",
+									"WIIC_give_starsystemdef_Sacromonte_to_FroncReaches",
+									"WIIC_give_starsystemdef_Rockwellawan_to_FroncReaches",
+									"WIIC_give_starsystemdef_Independence_to_FroncReaches",
+									"WIIC_give_starsystemdef_Tiverton_to_FroncReaches",
+									"WIIC_give_starsystemdef_Portland_to_FroncReaches",
+									"WIIC_give_starsystemdef_Tarragona_to_FroncReaches",
+									"WIIC_give_starsystemdef_McevansSacrifice_to_FroncReaches",
+									"WIIC_give_starsystemdef_UrCruinne_Career_to_FroncReaches",
+									"WIIC_Locals_raids_starsystemdef_Colchis",
+									"WIIC_Locals_raids_starsystemdef_Marknick",
+									"WIIC_Locals_raids_starsystemdef_Gaul",
+									"WIIC_Locals_raids_starsystemdef_Diik",
+									"WIIC_Locals_raids_starsystemdef_Oscar",
+									"WIIC_Locals_raids_starsystemdef_Lastpost",
+									"WIIC_Locals_raids_starsystemdef_ErodsEscape"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

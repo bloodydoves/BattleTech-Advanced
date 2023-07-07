@@ -1,0 +1,96 @@
+{
+	"Description": {
+		"Id": "3067-04-21",
+		"Name": "MercNews Broadcast",
+		"Details": "WOLVES ON THE PROWL IN [[DM.BaseDescriptionDefs[LoreChaosMarch],CHAOS MARCH]]\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]], [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:  After the recent fighting on Epsilon Eridani between the [[DM.BaseDescriptionDefs[LoreRedfieldRen],Redfield Renegades]] and the [[DM.Factions[faction_LoneStarRegiment],Lone Star Regiment]], both units left the world to rebuild.  In the power vacuum, Commander [[DM.BaseDescriptionDefs[LoreJaimeWolf],Jaime Wolf]] sent in the [[DM.Factions[faction_Wolfs_Dragoons],Wolf Dragoons's]] Beta Regiment to preserve the world's independence.  Unfortunately for the Dragoons, Duke Pierre Benton already accepted assistance from the [[DM.Factions[faction_WordOfBlake],Word of Blake]] to stabilize the planet.  Viewing the oncoming Dragoons as invaders, the Word of Blake's elite First [[DM.BaseDescriptionDefs[LoreWOBM],Militia]] Division destroyed two Dragoon Dropships outright as Beta Regiment attempted to land.  All-out fighting is now underway between the two forces, and the Word of Blake and Allied Mercenary Command are monitoring the situation closely should further reinforcements be necessary.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "WOLF's DRAGOON UNITS LAND ON HALL, EPSILON INDI\r\n\n\nIn the aftermath of the death of Count McNally and the defeat of his remaining forces, Emperor \"Bud\" Baranov's control of Hall appeared complete.  The arrival of two [[DM.BaseDescriptionDefs[LoreAMC],Allied Mercenary Command]] formations however completely changed the balance on the planet.  The Third [[DM.Factions[faction_DismalDisinherited],Dismal Disinherited]] landed and provided a refuge to the remnants of the anti-Baranov forces, including [[DM.BaseDescriptionDefs[LoreBurtonsBrigade],Burton's Brigade]].  Meanwhile the other AMC formation, the [[DM.Factions[faction_Wolfs_Dragoons],Wolf Dragoon's]] Wolf Spiders Battalion, landed and began to investigate suspicions that the [[DM.Factions[faction_WordOfBlake],Word of Blake]] were supporting Baranov.  The Wolf Spiders almost immediately began to skirmish with a terrorist organization known only as \"[[DM.BaseDescriptionDefs[LoreManeiDomini],The Bloody Hand]]\".\r\n\n\nIn a similar move, the Wolf Dragoons Zeta Battalion has landed on Epsilon Indi, where they began to clash with an unknown rebel force attempting to seize control of the world.  Both the pro-[[DM.BaseDescriptionDefs[LoreHouseLiao],Liao]] and pro-Fedcom factions on Epsilon Indi deny any ties with this rebel force, prompting even more speculation of it's origin.  Attack and defend contracts for all planets are available via the [[DM.BaseDescriptionDefs[LoreMRBC],Mercenary Review and Bonding Commission]].",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_give_starsystemdef_EpsilonEridani_to_WordOfBlake",
+									"WIIC_give_starsystemdef_Hall_to_WordOfBlake",
+									"WIIC_give_starsystemdef_EpsilonIndi_to_WordOfBlake",
+									"WIIC_Wolfs_Dragoons_attacks_starsystemdef_EpsilonEridani",
+									"WIIC_Wolfs_Dragoons_attacks_starsystemdef_Hall",
+									"WIIC_Wolfs_Dragoons_attacks_starsystemdef_EpsilonIndi",
+									"WIIC_set_starsystemdef_EpsilonEridani_defender_strength_35",
+									"WIIC_set_starsystemdef_EpsilonEridani_attacker_strength_35",
+									"WIIC_set_starsystemdef_Hall_defender_strength_15",
+									"WIIC_set_starsystemdef_Hall_attacker_strength_25",
+									"WIIC_set_starsystemdef_EpsilonIndi_defender_strength_15",
+									"WIIC_set_starsystemdef_EpsilonIndi_attacker_strength_25",
+									"WIIC_give_starsystemdef_EpsilonEridani_to_Locals_on_attacker_win",
+									"WIIC_give_starsystemdef_Hall_to_Locals_on_attacker_win",
+									"WIIC_give_starsystemdef_EpsilonIndi_to_Locals_on_attacker_win"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

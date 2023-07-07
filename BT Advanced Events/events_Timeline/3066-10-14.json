@@ -1,0 +1,119 @@
+{
+	"Description": {
+		"Id": "3066-10-14",
+		"Name": "MercNews Broadcast",
+		"Details": "SANCTUARY ALLIANCE INVADES CALDERON PROTECTORATE!\r\n\n\nErod's Escape, [[DM.Factions[factions_CalderonProtectorate],Calderon Protectorate]]: After last month's declaration of independence by the Calderon Protectorate, the [[DM.Factions[faction_SanctuaryAlliance],Sanctuary Alliance]] has struck back against the loss of their conquered worlds with simultaneous strikes against all three Protectorate worlds. [[DM.BaseDescriptionDefs[LoreChamKithrong],Baron Cham Kithrong]], apparently anticipating such an attack, has already mobilized VI Corps to defend the budding nation. However, in an unexpected move, the Baron has also called upon pro-Protectorate rebels on all nearby occupied Alliance worlds to rise up and strike against their occupiers. With the Alliance's supply lines cut off due to the Protectorate's position, Baron Kithrong appears to be gambling that the Alliance has limited forces available and they may have committed too much to the attack to be able to also hold their occupied worlds.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "REBELLION ON SANCTUARY ALLIANCE WORLDS!\r\n\n\nTyrrhenia, Sanctuary Alliance: Rebellion has been formenting on the [[DM.Factions[faction_SanctuaryAlliance],Sanctuary Alliance's]] occupied Taurian holdings for years, though it has only recently erupted into open violence. While the Sanctuary Alliance does not appear to be a particularly brutal occupier, the formerly Taurian civilians have resisted the Alliance's control through passive means consistently since the Alliance swept through the Concordat in 3062. However, with the [[DM.Factions[faction_CalderonProtectorate],Calderon Protectorate's]] declaration of independence last month the Alliance has cracked down on protestors and generally taken a harsher stance against their occupied populations. With the Protectorate and Alliance bursting into open warfare, the civilians have taken the opportunity to push the Alliance off their worlds once and for all. While some analysts believe the Alliance's technological edge will allow them to hold onto the worlds, wiser minds expect the locals to be able to retake their homes once and for all.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_give_starsystemdef_Genoa_to_Davion",
+									"WIIC_give_starsystemdef_Arboris_to_Davion",
+									"WIIC_give_starsystemdef_Acamar_to_Davion",
+									"WIIC_Liao_attacks_starsystemdef_Genoa",
+									"WIIC_Liao_attacks_starsystemdef_Arboris",
+									"WIIC_OlsonsRangers_attacks_starsystemdef_Acamar",
+									"WIIC_set_starsystemdef_Genoa_defender_strength_25",
+									"WIIC_set_starsystemdef_Genoa_attacker_strength_20",
+									"WIIC_set_starsystemdef_Arboris_defender_strength_25",
+									"WIIC_set_starsystemdef_Arboris_attacker_strength_20",
+									"WIIC_set_starsystemdef_Acamar_defender_strength_30",
+									"WIIC_set_starsystemdef_Acamar_attacker_strength_20",
+									"WIIC_give_starsystemdef_Acamar_to_Liao_on_attacker_win",
+									"WIIC_SanctuaryAlliance_attacks_starsystemdef_ErodsEscape",
+									"WIIC_SanctuaryAlliance_attacks_starsystemdef_Colchis",
+									"WIIC_SanctuaryAlliance_attacks_starsystemdef_Marknick",
+									"WIIC_set_starsystemdef_ErodsEscape_defender_strength_35",
+									"WIIC_set_starsystemdef_ErodsEscape_attacker_strength_20",
+									"WIIC_set_starsystemdef_Colchis_defender_strength_35",
+									"WIIC_set_starsystemdef_Colchis_attacker_strength_20",
+									"WIIC_set_starsystemdef_Marknick_defender_strength_35",
+									"WIIC_set_starsystemdef_Marknick_attacker_strength_20",
+									"WIIC_Locals_raids_starsystemdef_Gaul",
+									"WIIC_Locals_raids_starsystemdef_Diik",
+									"WIIC_Locals_raids_starsystemdef_Oscar",
+									"WIIC_Locals_raids_starsystemdef_Lastpost",
+									"WIIC_Locals_attacks_starsystemdef_Carvajal",
+									"WIIC_Locals_attacks_starsystemdef_Mirfak",
+									"WIIC_Locals_attacks_starsystemdef_Tyrrhenia",
+									"WIIC_Locals_attacks_starsystemdef_BelleIsle",
+									"WIIC_set_starsystemdef_Carvajal_attacker_strength_35",
+									"WIIC_set_starsystemdef_Mirfak_attacker_strength_35",
+									"WIIC_set_starsystemdef_Tyrrhenia_attacker_strength_35",
+									"WIIC_set_starsystemdef_BelleIsle_attacker_strength_35",
+									"WIIC_give_starsystemdef_Carvajal_to_CalderonProtectorate_on_attacker_win",
+									"WIIC_give_starsystemdef_Mirfak_to_CalderonProtectorate_on_attacker_win",
+									"WIIC_give_starsystemdef_Tyrrhenia_to_CalderonProtectorate_on_attacker_win",
+									"WIIC_give_starsystemdef_BelleIsle_to_CalderonProtectorate_on_attacker_win"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

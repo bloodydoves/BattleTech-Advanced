@@ -1,0 +1,91 @@
+{
+	"Description": {
+		"Id": "3065-09-21",
+		"Name": "MercNews Broadcast",
+		"Details": "[[DM.BaseDescriptionDefs[LoreChaosMarch],CHAOS MARCH]]: EMPEROR BARANOV MAKES MOVE ON HALL\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]], [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:  After years of stalemate, Emperor \"Bud\" Baranov and his [[DM.BaseDescriptionDefs[LoreRepublican],Fourth Republican Guards]] are making moves to further consolidate Baranov's control of the planet by pursuing an all-out offensive against Major Dick Cater and [[DM.BaseDescriptionDefs[LoreCatersCobras],Cater's Cobras]].  Cater's Cobras, who have long opposed Baranov's rule and hold several towns in the southern hemisphere, are gearing up to defend against Baranov's push by appealing for support from not only offworld mercenaries, but also from Count Radcliffe McNally.  McNally, while also opposed to Baranov's rule, is no friend to the Cobras as both sides have engaged in mutual tit-for-tat raids over the years.  Count McNally for his part is holding his personal guard and supporting mercenaries [[DM.BaseDescriptionDefs[LoreBurtonsBrigade],Burton's Brigade]] and [[DM.BaseDescriptionDefs[LoreCritchleysCavs],Critchley's Cavaliers]] out of the fighting, perhaps hoping that both the Baronov's and Cater's forces will leave each other vulnerable for the Count's own offensives.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "[[DM.Factions[faction_WordOfBlake],WORD OF BLAKE]] MERCENARIES SWEEP THROUGH BRYANT\r\n\n\n[[DM.BaseDescriptionDefs[LoreOutreach],Outreach]], [[DM.BaseDescriptionDefs[LoreFedCom],Federated Commonwealth]]:  The Word of Blake have sent in mercenaries to clean out piracy in the system!  While elements of the Word of Blake's 1st Militia Division have been on planet for some time to guard the local [[DM.BaseDescriptionDefs[LoreHPG],HPG]] station, [[DM.Factions[faction_BurrsBlackCobras],Burr's Black Cobras]] and [[DM.Factions[faction_JacobsJuggernauts],Jacob's Juggernauts]] have been sent in specifically for anti-piracy operations.  This action may put Bryant's leader, Viscount Dvensky, in an uncomfortable position.  Viscount Dvensky and his band of Bryant Regulars and supporting mercenaries have controlled the planet since [[DM.BaseDescriptionDefs[LoreOpGuerrero],Operation GUERRERO]], but there are persistent and mounting rumours that the loose-knit Regulars are responsible for dozens of pirate attacks throughout the Chaos March, and may very well be the target of the Word of Blake operations.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_give_starsystemdef_Hall_to_Locals",
+									"WIIC_give_starsystemdef_Bryant_to_Locals",
+									"WIIC_JacobsJuggernauts_attacks_starsystemdef_Bryant",
+									"WIIC_Marik_attacks_starsystemdef_Hall",
+									"WIIC_set_starsystemdef_Hall_defender_strength_15",
+									"WIIC_set_starsystemdef_Hall_attacker_strength_30",
+									"WIIC_set_starsystemdef_Bryant_defender_strength_15",
+									"WIIC_set_starsystemdef_Bryant_attacker_strength_30",
+									"WIIC_give_starsystemdef_Hall_to_Locals_on_attacker_win",
+									"WIIC_give_starsystemdef_Bryant_to_WordOfBlake_on_attacker_win"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

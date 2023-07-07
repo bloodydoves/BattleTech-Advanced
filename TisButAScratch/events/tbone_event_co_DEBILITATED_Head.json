@@ -1,8 +1,8 @@
 {
 	"Description": {
-		"Id": "tbone_event_co_DEBILITATED",
+		"Id": "tbone_event_co_DEBILITATED_Head",
 		"Name": "Advanced Prosthetics",
-		"Details": "[[DM.BaseDescriptionDefs[TBoneLoreDoc],Doc Cobble]] summons you to the medbay, where [[SCN_MW,{SCN_MW.Callsign}]] is laying on a bed.\r\n\r\n\n\"Commander, {SCN_MW.Callsign}'s rehabilitation is coming along, but with the advanced facilities aboard the <i>Argo</i>, we can certainly speed things up, <i>if</i> we want to pay the price. The newer prosthetics have almost no acclimatization time but we'll need a hefty chunk of change to get those pukes at [[DM.BaseDescriptionDefs[LoreNAIS],New Avalon]] to send us the specs for a replacement limb.\"\r\n\r\n\n\"What do you think?\"",
+		"Details": "[[DM.BaseDescriptionDefs[TBoneLoreDoc],Doc Cobble]] summons you to the medbay, where [[SCN_MW,{SCN_MW.Callsign}]] is laying on a bed.\r\n\r\n\n\"Commander, {SCN_MW.Callsign}'s rehabilitation is coming along, but with the advanced facilities aboard the <i>Argo</i>, we can certainly speed things up, <i>if</i> we want to pay the price. The newer prosthetics have almost no acclimatization time but we'll need a hefty chunk of change to get those pukes at [[DM.BaseDescriptionDefs[LoreNAIS],New Avalon]] to send us the specs.\"\r\n\r\n\n\"What do you think?\"",
 		"Icon": "uixTxrSpot_MedBayDoc.png"
 	},
 	"Scope": "Company",
@@ -30,12 +30,14 @@
 				"RequirementTags": {
 					"tagSetSourceFile": "",
 					"items": [
-						"DEBILITATED"
+						"DEBILITATED_Head"
 					]
 				},
 				"ExclusionTags": {
 					"tagSetSourceFile": "",
-					"items": []
+					"items": [
+						"disable_debilHeal"
+					]
 				},
 				"RequirementComparisons": [
 					{
@@ -105,7 +107,7 @@
 		{
 			"Description": {
 				"Id": "outcome_1",
-				"Name": "Buy the prosthetic [\u00a21000000]",
+				"Name": "Buy the prosthetic [¢1000000]",
 				"Details": "Buy the replacement.",
 				"Icon": null
 			},
@@ -130,7 +132,7 @@
 							"RemovedTags": {
 								"tagSetSourceFile": "",
 								"items": [
-									"DEBILITATED"
+									"DEBILITATED_Head"
 								]
 							},
 							"Stats": null,

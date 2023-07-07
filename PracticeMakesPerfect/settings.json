@@ -78,7 +78,9 @@
 		"SanctuaryAlliance",
 		"MallardRepublic",
 		"JacobsonHaven",
-		"DaneSacellum"
+		"DaneSacellum",
+		"FroncReaches",
+		"CalderonProtectorate"
 	],
 	"WhiteListMissions": [
 		"SimpleBattle",
@@ -221,9 +223,10 @@
 			"killsRequired": 12,
 			"factionID": "TaurianConcordat",
 			"applyToFaction": [
-				"TaurianConcordat"
+				"TaurianConcordat",
+				"CalderonProtectorate"
 			],
-			"description": "This pilot has made some connections with factions that are sick of hearing Taurians harp on about 'freedom'. Get a ¢10000 cash bounty for every Taurian unit the company destroys.",
+			"description": "This pilot has made some connections with factions that are sick of hearing Taurians harp on about 'freedom'. Get a ¢10000 cash bounty for every Taurian or Calderon unit the company destroys.",
 			"killBounty": {
 				"{EMPLOYER}": 10000
 			},
@@ -289,18 +292,21 @@
 				"Locals": 0.25
 			},
 			"effectDataJO": []
-		},
+		}
 		{
-			"OpForSpecID": "AD_TyrantBreaker",
-			"OpForSpecName": "Aurigan Directorate: Tyrant Breaker",
+			"OpForSpecID": "AD_SicSemperTyrannis",
+			"OpForSpecName": "Aurigan Directorate: Sic Semper Tyrannis",
 			"killsRequired": 12,
 			"factionID": "AuriganDirectorate",
 			"applyToFaction": [
 				"AuriganDirectorate"
 			],
-			"description": "Kamea is a beacon of hope for the oppressed peoples of the Reach. Gain bonus reputation with the Restoration when taking contracts against the Directorate.",
+			"description": "Kamea is a beacon of hope for the oppressed peoples of the Reach. Gain bonus reputation with the Restoration when taking contracts against the Directorate and bonus cash for kills against them.",
 			"repMod": {
 				"AuriganRestoration": 4
+			},
+			"killBounty": {
+				"{EMPLOYER}": 2500
 			},
 			"effectDataJO": []
 		},
@@ -870,6 +876,21 @@
 			},
 			"storeDiscount": {
 				"Marian": -0.15
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "FR_GiveUsOurWorldsBack",
+			"OpForSpecName": "Fronc Reaches: Give Us Our Worlds Back",
+			"killsRequired": 12,
+			"factionID": "FroncReaches",
+			"applyToFaction": [
+				"FroncReaches"
+			],
+			"description": "The Fronc Reaches might not be hurting anyone but that doesn't mean the Taurians and Canopians aren't mad about losing their colonies in the region. Gain bonus reputation with the Taurian Concordat and the Magistracy of Canopus for each successful contract against the Fronc Reaches.",
+			"repMod": {
+				"TaurianConcordat": 5,
+				"MagistracyOfCanopus": 5
 			},
 			"effectDataJO": []
 		},
