@@ -13,31 +13,33 @@
 			"StabilityDamage": 40
 		},
 		"BonusDescriptions": [
-				"DmgFallOff: 50%",
-				"DmgFallOffStart: 200",
-				"DmgFallOffEnd: 600",
-				"WpnRecoil: 3",
-				"NoFireInMelee",
 				"IsHeavyGauss",
+				"VariableShortMax: 180",
+				"VariableMedMin: 180",
+				"VariableMedMax: 390",
+				"VariableLongMin: 390",
+				"VariableLongMax: 780",
 				"WpnAccuracy: +1",
 				"WeaponBoom: 125",
+				"WpnRecoil: 3",
+				"NoFireInMelee",
 				"WeaponAttachmentCompatible: Gauss FCS"
 			]
 	},
 	"Category": "Ballistic",
 	"Type": "Gauss",
 	"WeaponSubType": "Gauss",
-	"MinRange": 120,
-	"MaxRange": 780,
+	"MinRange": 0,
+	"MaxRange": 390,
 	"RangeSplit": [
-		180,
 		390,
-		600
+		390,
+		390
 	],
 	"AmmoCategory": "HGAUSS",
 	"StartingAmmoCapacity": 0,
 	"HeatGenerated": 10,
-	"Damage": 125,
+	"Damage": 100,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
 	"EvasivePipsIgnored": 0,
@@ -52,11 +54,6 @@
 	"ProjectilesPerShot": 1,
 	"AttackRecoil": 4,
 	"Instability": 40,
-	"DistantVariance": 0.5,
-	"DamageFalloffStartDistance": 200,
-	"DamageFalloffEndDistance": 600,
-	"DistantVarianceReversed": false,
-	"RangedDmgFalloffType": "Linear",
 	"WeaponEffectID": "WeaponEffect-Weapon_GaussRifle",
 	"Description": {
 		"Cost": 1250000,
@@ -82,12 +79,46 @@
 	"DisallowedLocations": "LeftArm,RightArm",
 	"CriticalComponent": false,
 	"statusEffects": [],
+	"Modes": [
+		{
+			"Id": "short",
+			"UIName": "Close",
+			"isBaseMode": false,
+			"MinRange": 120.0,
+			"MaxRange": -210.0,
+			"ShortRange": -210.0,
+			"MediumRange": -210.0,
+			"LongRange": -210.0,
+			"DamagePerShot": 25.0,
+			"AccuracyModifier": -1
+		},
+		{
+			"Id": "mid",
+			"UIName": "Medium",
+			"isBaseMode": true,
+			"forbiddenRangeEnable": true,
+			"ForbiddenRange": 185
+		},
+		{
+			"Id": "long",
+			"UIName": "Long",
+			"isBaseMode": false,
+			"MaxRange": 390.0,
+			"ShortRange": 390.0,
+			"MediumRange": 390.0,
+			"LongRange": 390.0,
+			"DamagePerShot": -50.0,
+			"forbiddenRangeEnable": true,
+			"ForbiddenRange": 395,
+			"AccuracyModifier": 1
+		}
+	],
 	"ComponentTags": {
 		"items": [
 			"component_type_stock",
 			"range_standard",
-			"GaussFCSSupported-Standard",
-			"WebbTCSupported-SingleShot"
+			"GaussFCSSupported-Heavy",
+			"WebbTCSupported-VSPL"
 		],
 		"tagSetSourceFile": ""
 	}
