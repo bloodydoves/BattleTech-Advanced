@@ -21,10 +21,12 @@
 				"default",
 				"not_broken",
 				"no_salvage",
-				"autorepair"
+				"autorepair",
+				"ignore_damage"
 		],
 		"BonusDescriptions": [
-			"Recoil: -3",
+			"EasyToMaintain",
+			"GyroStab: 100",
 			"GyroWeight: +40%",
 			"IsGyro"
 		],
@@ -41,11 +43,11 @@
 		"Purchasable": false,
 		"Manufacturer": "Quirk",
 		"Model": "Annihilator",
-		"UIName": "Annihilator Compact Stabilized Weapon",
-		"Id": "Gear_Quirk_StableWeaponCompact_Annihilator",
-		"Name": "Annihilator Compact Stabilized Weapon",
-		"Details": "This piece of gear represents the Annihilator's inherent Compact Stabilized Weapon quirk. This gives the Annihilator reduced recoil penalties with all weapons and reduces the gyro's size, but increases its weight somewhat.",
-		"Icon": "uixSvgIcon_equipment_Cockpit"
+		"UIName": "Annihilator Compact Easy to Maintain",
+		"Id": "Gear_Quirk_EasytoMaintainCompact_Annihilator",
+		"Name": "Annihilator Compact Easy to Maintain",
+		"Details": "This piece of gear represents the Annihilator's inherent Compact Easy to Maintain quirk. This means the Annihilator's mechbay refits are extremely fast while also reducing the size of the Annihilator's gyro at the cost of increased gyro weight.",
+		"Icon": "uixSvgIcon_equipment_Gyro"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
@@ -61,37 +63,34 @@
 	"statusEffects": [
 		{
 			"durationData": {
-				"duration": -1,
-				"stackLimit": -1
+				"duration": -1
 			},
 			"targetingData": {
 				"effectTriggerType": "Passive",
-				"effectTargetType": "Creator"
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "ARMRecoilAC10",
-				"Name": "Stabilized Weapon AC10",
-				"Details": "Reduced AC10 Recoil",
-				"Icon": "uixSvgIcon_equipment_TTS"
+				"Id": "GyroGenericThreshhold",
+				"Name": "Gyroscopic Orientation",
+				"Details": "The gyro helps establish center-of-mass equilibrium for the BattleMech.",
+				"Icon": "uixSvgIcon_equipment_Gyro"
 			},
 			"statisticData": {
-				"statName": "RefireModifier",
-				"operation": "Int_Add",
-				"modValue": "-3",
-				"modType": "System.Int32",
-				"targetCollection": "Weapon",
-				"targetWeaponCategory": "NotSet",
-				"targetWeaponType": "NotSet",
-				"targetAmmoCategory": "NotSet",
-				"targetWeaponSubType": "NotSet"
-			}
+				"statName": "UnsteadyThreshold",
+				"operation": "Float_Add",
+				"modValue": "100.0",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
 		}
 	],
 	"ComponentTags": {
 		"items": [
-			"component_type_variant",
-			"BLACKLISTED"
+			"BLACKLISTED",
+			"component_type_variant"
 		],
 		"tagSetSourceFile": ""
 	}
