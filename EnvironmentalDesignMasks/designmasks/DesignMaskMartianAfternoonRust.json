@@ -1,0 +1,124 @@
+{
+  "Description": {
+    "Id": "DesignMaskMartianAfternoonRust",
+    "Name": "Martian Rust Storm",
+    "Details": "The dust storm reduces visual range to 80% of normal. The particulates are metallic and as they accumulate will amplify sensor signatures. Faster movement gathers more grains effectively limiting the benefits of evasion. Units in a partial vacuum sink only 75% of their normal Heat. Ballstic and missile weapons, as well as jump jets, gain 15% more max range thanks to reduced gravity.",
+    "Icon": "fog-martian"
+  },
+  "audioSwitchSurfaceType": "dirt",
+  "audioSwitchRainingSurfaceType": "dirt",
+  "vfxNameModifier": "_mars",
+  "heatSinkMultiplier": 0.75,
+  "visibilityMultiplier": 0.8,
+  "signatureMultiplier": 1.2,
+  "stickyEffect": {
+    "durationData": {
+      "duration": -1,
+      "stackLimit": 1
+    },
+    "targetingData": {
+      "effectTriggerType": "Passive",
+        "effectTargetType": "Creator",
+        "showInStatusPanel": false,
+        "showInTargetPreview": false
+    },
+    "effectType": "StatisticEffect",
+    "Description": {
+      "Id": "MartianVacuumBallistic",
+      "Name": "Martian Vacuum Ballistic",
+      "Details": "",
+      "Icon": ""
+    },
+    "statisticData": {
+      "statName": "MaxRange",
+      "operation": "Float_Multiply",
+      "modValue": "1.15",
+      "modType": "System.Single",
+      "targetCollection": "Weapon",
+      "targetWeaponCategory": "Ballistic"
+    },
+    "nature": "Buff"
+  },
+  "additionalStickyEffects": [
+    {
+      "durationData": {
+        "duration": -1,
+        "stackLimit": 1
+      },
+      "targetingData": {
+        "effectTriggerType": "Passive",
+          "effectTargetType": "Creator",
+          "showInStatusPanel": false,
+          "showInTargetPreview": false
+      },
+      "effectType": "StatisticEffect",
+      "Description": {
+        "Id": "MartianVacuumMissile",
+        "Name": "Martian Vacuum Missile",
+        "Details": "",
+        "Icon": ""
+      },
+      "statisticData": {
+        "statName": "MaxRange",
+        "operation": "Float_Multiply",
+        "modValue": "1.15",
+        "modType": "System.Single",
+        "targetCollection": "Weapon",
+        "targetWeaponCategory": "Missile"
+      },
+      "nature": "Buff"
+    },
+    {
+      "durationData": {
+        "duration": -1,
+        "stackLimit": 1
+      },
+      "targetingData": {
+        "effectTriggerType": "Passive",
+          "effectTargetType": "Creator",
+          "showInStatusPanel": false,
+          "showInTargetPreview": false
+      },
+      "effectType": "StatisticEffect",
+      "Description": {
+        "Id": "MartianVacuumJump",
+        "Name": "Martian Vacuum Jump",
+        "Details": "",
+        "Icon": ""
+      },
+      "statisticData": {
+        "statName": "JumpDistanceMultiplier",
+        "operation": "Float_Multiply",
+        "modValue": "1.15",
+        "modType": "System.Single"
+      },
+      "nature": "Buff"
+    },
+    {
+      "durationData": {
+        "duration": -1,
+        "stackLimit": 1
+      },
+      "targetingData": {
+        "effectTriggerType": "Passive",
+          "effectTargetType": "Creator",
+          "showInStatusPanel": false,
+          "showInTargetPreview": false
+      },
+      "effectType": "StatisticEffect",
+      "Description": {
+        "Id": "MartianRustStorm",
+        "Name": "Martian Rust Storm",
+        "Details": "",
+        "Icon": ""
+      },
+      "statisticData": {
+        "statName": "EvasivePipsGainedAdditional",
+        "operation": "Int_Add",
+        "modValue": "-1",
+        "modType": "System.Int32"
+      },
+      "nature": "Buff"
+    }
+  ]
+}
