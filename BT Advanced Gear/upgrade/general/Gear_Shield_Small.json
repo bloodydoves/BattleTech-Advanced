@@ -3,12 +3,10 @@
 		"Category": {
 			"CategoryID": "CombatShield"
 		},
-		"ArmorStructureChanges": {
-			"ArmorFactor": 1.1
-		},
 		"BonusDescriptions": [
-				"ArmorProtection: x1.1"
-			]
+			"ModularArmor: +55",
+			"ArmAccuracy: -1"
+		]
 	},
 	"StatName": null,
 	"Description": {
@@ -23,7 +21,7 @@
 		"Details": "Designed for the arenas of Solaris VII, BattleMech Shields are a mostly untested technology, though they're not terribly complex. Mountable only in the arms, a BattleMech Shield provides additional armor protection for the carrying mech as it uses the shield to soak incoming fire. The Small Shield is the smallest and lightest of the BattleMech Shields and provides the least protection of the three.",
 		"Icon": "shield-reflect"
 	},
-	"BonusValueA": "x1.1 Armor Protection",
+	"BonusValueA": "",
 	"BonusValueB": "",
 	"ComponentType": "Upgrade",
 	"ComponentSubType": "NotSet",
@@ -34,7 +32,62 @@
 	"AllowedLocations": "LeftArm, RightArm",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
-	"statusEffects": [],
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-Shield_Small-{location}",
+				"Name": "Bonus Arm Armor",
+				"Details": "The BattleMech Shield is providing extra armor to the equipped arm at the cost of impairing that arm's accuracy with weaponry.",
+				"Icon": "shield-reflect"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "{location}.Armor",
+				"operation": "Float_Add",
+				"modValue": "55",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-Shield_AccuracyPenalty-{location}",
+				"Name": "Shield Acc Penalty",
+				"Details": "Reduced Arm Weapon Accuracy.",
+				"Icon": "uixSvgIcon_equipment_ActuatorArm"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "{location}.Accuracy",
+				"operation": "Float_Add",
+				"modValue": "1",
+				"modType": "System.Single"
+			}
+		}
+	],
 	"ComponentTags": {
 		"items": [
 			"component_type_stock"
