@@ -1,0 +1,97 @@
+{
+	"Custom": {
+		"ComponentExplosion": {
+			"StabilityDamage": 100
+		},
+		"Category": [
+			{
+				"CategoryID": "Gyro"
+			},
+			{
+				"CategoryID": "Quirk"
+			}
+		],
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "[[Chassis.Tonnage]]/10",
+				"CBillCost": "[[Chassis.Tonnage]] * 1.15"
+			}
+		},
+		"Flags": [
+				"default",
+				"not_broken",
+				"no_salvage",
+				"autorepair",
+				"ignore_damage"
+		],
+		"BonusDescriptions": [
+			"EasyToMaintain",
+			"GyroStab: 100",
+			"GyroWeight: +40%",
+			"IsGyro"
+		],
+		"Weights": {
+			"StructureFactor": 1.4
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 500000,
+		"Rarity": 99,
+		"Purchasable": false,
+		"Manufacturer": "Quirk",
+		"Model": "Annihilator",
+		"UIName": "Annihilator Compact Easy to Maintain",
+		"Id": "Gear_Quirk_EasytoMaintainCompact_Annihilator",
+		"Name": "Annihilator Compact Easy to Maintain",
+		"Details": "This piece of gear represents the Annihilator's inherent Compact Easy to Maintain quirk. This means the Annihilator's mechbay refits are extremely fast while also reducing the size of the Annihilator's gyro at the cost of increased gyro weight.",
+		"Icon": "uixSvgIcon_equipment_Gyro"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 2,
+	"Tonnage": 0,
+	"AllowedLocations": "CenterTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "GyroGenericThreshhold",
+				"Name": "Gyroscopic Orientation",
+				"Details": "The gyro helps establish center-of-mass equilibrium for the BattleMech.",
+				"Icon": "uixSvgIcon_equipment_Gyro"
+			},
+			"statisticData": {
+				"statName": "UnsteadyThreshold",
+				"operation": "Float_Add",
+				"modValue": "100.0",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"BLACKLISTED",
+			"component_type_variant"
+		],
+		"tagSetSourceFile": ""
+	}
+}

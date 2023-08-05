@@ -6,11 +6,14 @@
 			}
 		],
 		"BonusDescriptions": [
+				"IsSnubnosePPC",
+				"VariableShortMax: 270",
+				"VariableMedMin: 270",
+				"VariableMedMax: 390",
+				"VariableLongMin: 390",
+				"VariableLongMax: 530",
 				"PPCDEBUFF: 2",
 				"WpnRecoil: 1",
-				"DmgFallOff: 50%",
-				"DmgFallOffStart: 280",
-				"DmgFallOffEnd: 450",
 				"WeaponAttachmentCompatible: PPC Capacitor",
 				"WeaponAttachmentCompatible: PPC FCS"
 			]
@@ -19,16 +22,16 @@
 	"Type": "PPC",
 	"WeaponSubType": "PPC",
 	"MinRange": 0,
-	"MaxRange": 530,
+	"MaxRange": 390,
 	"RangeSplit": [
-		270,
 		390,
-		450
+		390,
+		390
 	],
 	"AmmoCategory": "NotSet",
 	"StartingAmmoCapacity": 0,
 	"HeatGenerated": 30,
-	"Damage": 65,
+	"Damage": 45,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
 	"EvasivePipsIgnored": 0,
@@ -43,11 +46,6 @@
 	"ProjectilesPerShot": 1,
 	"AttackRecoil": 1,
 	"Instability": 7,
-	"DistantVariance": 0.5,
-	"DamageFalloffStartDistance": 280,
-	"DamageFalloffEndDistance": 450,
-	"DistantVarianceReversed": false,
-	"RangedDmgFalloffType": "Linear",
 	"WeaponEffectID": "WeaponEffect-Weapon_PPC",
 	"Description": {
 		"Cost": 380000,
@@ -72,6 +70,37 @@
 	"AllowedLocations": "All",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
+	"Modes": [
+		{
+			"Id": "short",
+			"UIName": "Close",
+			"isBaseMode": false,
+			"MaxRange": -120.0,
+			"ShortRange": -120.0,
+			"MediumRange": -120.0,
+			"LongRange": -120.0,
+			"DamagePerShot": 20.0
+		},
+		{
+			"Id": "mid",
+			"UIName": "Medium",
+			"isBaseMode": true,
+			"forbiddenRangeEnable": true,
+			"ForbiddenRange": 275
+		},
+		{
+			"Id": "long",
+			"UIName": "Long",
+			"isBaseMode": false,
+			"MaxRange": 140.0,
+			"ShortRange": 140.0,
+			"MediumRange": 140.0,
+			"LongRange": 140.0,
+			"DamagePerShot": -20.0,
+			"forbiddenRangeEnable": true,
+			"ForbiddenRange": 385
+		}
+	],
 	"statusEffects": [
 		{
 			"durationData": {
@@ -130,9 +159,9 @@
 			"component_type_stock",
 			"range_standard",
 			"PPCCapacitorAttachable.{location}",
-			"PPCCapacitorSupported",
-			"PPCFCSSupported-Standard",
-			"WebbTCSupported-SingleShot"
+			"PPCCapacitorSupported-SnubNose",
+			"PPCFCSSupported-SnubNose",
+			"WebbTCSupported-VSPL"
 		],
 		"tagSetSourceFile": ""
 	}
