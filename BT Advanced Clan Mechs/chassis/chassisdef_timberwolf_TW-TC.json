@@ -1,4 +1,11 @@
 {
+	"Custom": {
+		"AssemblyVariant": {
+			"PrefabID": "Timberwolf",
+			"Exclude": false,
+			"Include": true
+		}
+	},
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",
@@ -22,7 +29,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engine_330",
+			"ComponentDefID": "emod_engine_375",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -75,7 +82,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engine_cooling",
+			"ComponentDefID": "emod_engine_cooling_5",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -97,29 +104,29 @@
 		}
 	],
 	"Description": {
-		"Cost": 7873010,
-		"Rarity": 2,
+		"Cost": 13946796,
+		"Rarity": 6,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Stormcrow",
-		"Id": "chassisdef_stormcrow_TC",
-		"Name": "Stormcrow",
-		"Details": "The Stormcrow is a wide-spread, second generation OmniMech fielded by many Clans. The Stormcrow is built on a lightweight Endo Steel chassis and is powered by a 330 XL engine. The Stormcrow is protected by nine and a half tons of Ferro-Fibrous armor. The TC configuration of the Stormcrow carries a mammoth Gauss Rifle for primary punch while a quartet of ER Medium Lasers provides ammo-free firepower. All of this is tied into an advanced FCS for extra effectiveness in combat.",
-		"Icon": "uixTxrIcon_stormcrow"
+		"UIName": "Timber Wolf",
+		"Id": "chassisdef_timberwolf_TW-TC",
+		"Name": "Timber Wolf",
+		"Details": "The Timber Wolf is a fast, heavy OmniMech. A signature design of the Clans' military might, it was arguably the first Clan OmniMech encountered by Inner Sphere forces on The Rock in 3049 by Phelan Kell. When first encountered by Inner Sphere forces the idea that a heavy 'Mech could move so swiftly while being as heavily armed and armored as the Timber Wolf was inconceivable. A highly maneuverable configuration of the Timber Wolf, the TC mounts five jump jets. For firepower, the TC configuration mounts two each Large Pulse Lasers, ER Medium Lasers, and Streak SRM-6s, with a lone ER Small Laser as the sole concession to point-blank combat.",
+		"Icon": "uixTxrIcon_madcat"
 	},
-	"MovementCapDefID": "movedef_stormcrow",
-	"PathingCapDefID": "pathingdef_medium",
-	"HardpointDataDefID": "hardpointdatadef_stormcrow",
-	"PrefabIdentifier": "chrprfmech_stormcrowbase-001",
-	"PrefabBase": "stormcrow",
-	"Tonnage": 55,
-	"InitialTonnage": 5.5,
-	"weightClass": "MEDIUM",
-	"BattleValue": 3749000,
+	"MovementCapDefID": "movedef_timberwolf",
+	"PathingCapDefID": "pathingdef_heavy",
+	"HardpointDataDefID": "hardpointdatadef_madcat",
+	"PrefabIdentifier": "chrprfmech_madcatbase-001",
+	"PrefabBase": "madcat",
+	"Tonnage": 75,
+	"InitialTonnage": 7.5,
+	"weightClass": "HEAVY",
+	"BattleValue": 8144000,
 	"Heatsinks": 0,
-	"TopSpeed": 85,
-	"TurnRadius": 90,
+	"TopSpeed": 76,
+	"TurnRadius": 180,
 	"MaxJumpjets": 99,
 	"Stability": 100,
 	"StabilityDefenses": [
@@ -134,15 +141,15 @@
 	"VisibilityMultiplier": 1,
 	"SensorRangeMultiplier": 1,
 	"Signature": 0,
-	"Radius": 4,
-	"PunchesWithLeftArm": true,
-	"MeleeDamage": 50,
-	"MeleeInstability": 15,
+	"Radius": 8,
+	"PunchesWithLeftArm": false,
+	"MeleeDamage": 65,
+	"MeleeInstability": 20,
 	"MeleeToHitModifier": 0,
-	"DFADamage": 50,
+	"DFADamage": 65,
 	"DFAToHitModifier": 0,
-	"DFASelfDamage": 50,
-	"DFAInstability": 15,
+	"DFASelfDamage": 65,
+	"DFAInstability": 20,
 	"Locations": [
 		{
 			"Location": "Head",
@@ -167,36 +174,59 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 90,
+			"MaxArmor": 120,
 			"MaxRearArmor": -1,
-			"InternalStructure": 45
+			"InternalStructure": 60
 		},
 		{
 			"Location": "LeftTorso",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMountID": "Missile",
+					"Omni": true
+				},
+				{
+					"WeaponMountID": "Energy",
+					"Omni": true
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 100,
-			"MaxRearArmor": 30,
-			"InternalStructure": 65
+			"MaxArmor": 120,
+			"MaxRearArmor": 40,
+			"InternalStructure": 80
 		},
 		{
 			"Location": "CenterTorso",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": true
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 15,
-			"MaxArmor": 135,
-			"MaxRearArmor": 45,
-			"InternalStructure": 90
+			"MaxArmor": 180,
+			"MaxRearArmor": 55,
+			"InternalStructure": 115
 		},
 		{
 			"Location": "RightTorso",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMountID": "Missile",
+					"Omni": true
+				},
+				{
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": true
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 100,
-			"MaxRearArmor": 30,
-			"InternalStructure": 65
+			"MaxArmor": 120,
+			"MaxRearArmor": 40,
+			"InternalStructure": 80
 		},
 		{
 			"Location": "RightArm",
@@ -208,39 +238,31 @@
 				{
 					"WeaponMountID": "Energy",
 					"Omni": true
-				},
-				{
-					"WeaponMountID": "Energy",
-					"Omni": true
-				},
-				{
-					"WeaponMountID": "Energy",
-					"Omni": true
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 90,
+			"MaxArmor": 120,
 			"MaxRearArmor": -1,
-			"InternalStructure": 45
+			"InternalStructure": 60
 		},
 		{
 			"Location": "LeftLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 130,
+			"MaxArmor": 160,
 			"MaxRearArmor": -1,
-			"InternalStructure": 65
+			"InternalStructure": 80
 		},
 		{
 			"Location": "RightLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 130,
+			"MaxArmor": 160,
 			"MaxRearArmor": -1,
-			"InternalStructure": 65
+			"InternalStructure": 80
 		}
 	],
 	"LOSSourcePositions": [
@@ -287,17 +309,19 @@
 			"z": 0.5
 		}
 	],
-	"VariantName": "SCR-TC",
+	"VariantName": "TW-TC",
 	"ChassisTags": {
 		"items": [
-			"ClanMech",
 			"OmniMech",
-			"MediumMech"
+			"ClanMech",
+			"ArmLimitLowerRight",
+			"ArmLimitLowerLeft",
+			"HeavyMech"
 		],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "Second-Generation Omnimech",
-	"YangsThoughts": "The Stormcrow is a wide-spread, second generation OmniMech fielded by many Clans. The Stormcrow is built on a lightweight Endo Steel chassis and is powered by a 330 XL engine. The Stormcrow is protected by nine and a half tons of Ferro-Fibrous armor. The TC configuration of the Stormcrow carries a mammoth Gauss Rifle for primary punch while a quartet of ER Medium Lasers provides ammo-free firepower. All of this is tied into an advanced FCS for extra effectiveness in combat.",
+	"StockRole": "Iconic Omnimech",
+	"YangsThoughts": "The Timber Wolf is a fast, heavy OmniMech. A signature design of the Clans' military might, it was arguably the first Clan OmniMech encountered by Inner Sphere forces on The Rock in 3049 by Phelan Kell. When first encountered by Inner Sphere forces the idea that a heavy 'Mech could move so swiftly while being as heavily armed and armored as the Timber Wolf was inconceivable. A highly maneuverable configuration of the Timber Wolf, the TC mounts five jump jets. For firepower, the TC configuration mounts two each Large Pulse Lasers, ER Medium Lasers, and Streak SRM-6s, with a lone ER Small Laser as the sole concession to point-blank combat.",
 	"CustomParts": {
 		"CustomParts": []
 	}
