@@ -6,25 +6,41 @@
 			}
 		],
 		"BonusDescriptions": [
-				"AMS",
-				"OLAMSAttacks",
-				"AMSShots: 10",
-				"AMSAcc: 35%",
-				"OLAMSHeat: 4",
-				"OLAMSJam: 40%",
-				"OLAMSShots: 20",
-				"AMSDamage: 2"
-			]
+			"AMS",
+			"OLAMSAttacks",
+			"AMSRadius: 150",
+			"AMSShots: 10",
+			"AMSAcc: 35%",
+			"OLAMSHeat: 8",
+			"OLAMSJam: 40%",
+			"OLAMSShots: 20",
+			"AMSDamage: 1"
+		]
 	},
+	"Auras": [
+		{
+			"Id": "AMS",
+			"Name": "AMS",
+			"ReticleColor": "#007FE4",
+			"Range": 150,
+			"RemoveOnSensorLock": false,
+			"State": "Persistent",
+			"ApplySelf": false,
+			"HideOnNotSelected": true,
+			"AllyStealthAffection": "None",
+			"EnemyStealthAffection": "None",
+			"IsPositiveToAlly": false
+		}
+	],
 	"Category": "AntiPersonnel",
 	"Type": "MachineGun",
 	"WeaponSubType": "MachineGun",
 	"MinRange": 0,
-	"MaxRange": 100,
+	"MaxRange": 150,
 	"RangeSplit": [
-		70,
-		80,
-		90
+		150,
+		150,
+		150
 	],
 	"AmmoCategory": "AntiMissile",
 	"StartingAmmoCapacity": 0,
@@ -47,7 +63,7 @@
 	"IsAMS": true,
 	"IsAAMS": true,
 	"NotUseInMelee": true,
-	"AMSDamage": 2,
+	"AMSDamage": 1,
 	"WeaponEffectID": "WeaponEffect-Weapon_MachineGun",
 	"Description": {
 		"Cost": 100000,
