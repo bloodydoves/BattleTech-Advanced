@@ -1,0 +1,83 @@
+{
+	"Description": {
+		"Id": "3067-11-07",
+		"Name": "MercNews Broadcast",
+		"Details": "LEADERS TRAVEL TO FOURTH WHITTING CONFERENCE\r\n\n\nTharkad, [[DM.Factions[faction_Steiner],Lyran Alliance]]:  Leaders of four [[DM.BaseDescriptionDefs[LoreGreatHouses],Great Houses]] and a host of minor nations are heading to Tharkad for the Second [[DM.BaseDescriptionDefs[LoreStarLeague2],Star League's]] Fourth [[DM.BaseDescriptionDefs[LoreWhittingCon],Whitting Conference]].  The Conference's objective is two-fold; to determine the response of the Star League against the Clan threat and on any inter-House conflict, and to elect a new First Lord of the Star League for another three year term.  Outgoing First Lord Christian Månsdottir is already on Tharkad, as are delegations from provisional members the [[DM.Factions[faction_TaurianConcordat],Taurian Concordat]] and the [[DM.Factions[faction_WordOfBlake],Word of Blake]] whom are seeking permanent memberhip in the League.  Notable absentees are the Chancellor [[DM.BaseDescriptionDefs[LoreSunTzuLiao],Liao]] and Magistrix Naomi Centralla.  Instead, Chancellor Liao sent a recorded message via courier, denouncing the Star League as nothing more than a \"hollow alliance of convenience that had already outlasted its usefulness.\"",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "CLAN SNOW RAVEN ATTACKS ANTALLOS, REZAK'S HOLE\r\n\n\nFresh from their border war with the [[DM.Factions[faction_Kurita],Draconis Combine]], [[DM.Factions[faction_ClanSnowRaven],Clan Snow Raven]] has moved on the pirate holds of Rezak's Hole and Antallos.  Sources from the [[DM.Factions[faction_Outworld],Outworlds Alliance]] indicate that the Snow Ravens have found the presence of the [[DM.Factions[faction_WordOfBlake],Word of Blake]] on both worlds, mixed in with the bands of pirates, criminals and disreputable mercenary groups that populate the planets.  Observers note that by seizing both Rezak's Hole and Antallos, the Snow Ravens will not only stablize the borders of their allies in the Outworlds Alliance, but secure advanced positions should hosilities resume with the Combine.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+							"WIIC_ClanSnowRaven_raids_starsystemdef_RezaksHole",
+							"WIIC_ClanSnowRaven_raids_starsystemdef_Antallos(PortKrin)"
+							],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}
