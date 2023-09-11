@@ -1,40 +1,33 @@
 {
 	"Description": {
-		"Id": "starsystemdef_EpsilonPegasus(Columbus)",
-		"Name": "Epsilon Pegasus (Columbus)",
-		"Details": "Used as a base by both the Terran Hegemony and the SLDF, Columbus was abandoned until it was rediscovered by the Explorer Corps.",
+		"Id": "starsystemdef_PortRime",
+		"Name": "Port Rime",
+		"Details": "Port Rime was first settled it quickly became an incredibly prosperous world despite its brutal winters. With the start of the Succession Wars, it found itself no longer able to support its population, 'mercifully' this problem was 'solved' by warships leaving the planet mostly devoid of human life. However after the discovery of the Helm Memory Core, the planet gained a new use due to the near lack of population: the clandestine testing of aircraft.",
 		"Icon": ""
 	},
 	"Position": {
-		"x": 405.006,
-		"y": 601.855,
+		"x": -52.02,
+		"y": -419.97,
 		"z": 0
 	},
 	"Tags": {
 		"items": [
-			"planet_name_epsilonpegasus(columbus)",
-			"planet_size_medium",
-			"planet_climate_terran",
-			"planet_feature_moon01",
+			"planet_name_portrime",
+			"planet_size_small",
+			"planet_climate_arctic",
+			"planet_feature_moon02",
 			"planet_other_moon",
 			"planet_pop_none",
 			"planet_civ_primitive",
 			"planet_industry_research",
-			"planet_other_comstar",
-			"planet_other_starleague",
-			"planet_other_ruins",
-			"planet_faction_comstar"
+			"planet_factory",
+			"planet_faction_magistracyofcanopus"
 		],
 		"tagSetSourceFile": ""
 	},
 	"SupportedBiomes": [
-		"highlandsSpring",
-		"highlandsFall",
-		"lowlandsSpring",
-		"lowlandsFall",
-		"badlandsParched",
-		"lowlandsCoastal",
-		"jungleTropical"
+		"polarFrozen",
+		"tundraFrozen"
 	],
 	"MapRequiredTags": {
 		"items": [],
@@ -44,9 +37,9 @@
 		"items": [],
 		"tagSetSourceFile": ""
 	},
-	"FuelingStation": false,
-	"JumpDistance": 9,
-	"ownerID": "ComStar",
+	"FuelingStation": true,
+	"JumpDistance": 15,
+	"ownerID": "MagistracyOfCanopus",
 	"ShopRefreshRate": 0,
 	"ShopMaxInventory": 0,
 	"ShopMaxSpecials": 9,
@@ -125,21 +118,23 @@
 		}
 	],
 	"StarPosition": null,
-	"StarType": "G",
+	"StarType": "F",
 	"Depletable": false,
 	"UseSystemRoninHiringChance": false,
 	"RoninHiringChance": 0,
 	"UseMaxContractOverride": false,
 	"MaxContractOverride": 0,
 	"SystemShopItems": [
-		"itemCollection_major_ComStar"
+		"itemCollection_major_MagistracyOfCanopus",
+		"itemCollection_shop_industrial",
+		"itemCollection_shop_research"
 	],
-	"factionShopOwnerID": "ComStar",
+	"factionShopOwnerID": "MagistracyOfCanopus",
 	"FactionShopItems": [
-		"itemCollection_faction_ComStar"
+		"itemCollection_faction_MagistracyOfCanopus"
 	],
 	"BlackMarketShopItems": null,
-	"CoreSystemID": "starsystemdef_EpsilonPegasus(Columbus)",
+	"CoreSystemID": "starsystemdef_PortRime",
 	"StartingSystemModes": [
 		"KAMEA_CAMPAIGN",
 		"CAREER",
@@ -149,10 +144,13 @@
 	"DifficultyList": [],
 	"DifficultyModes": [],
 	"contractEmployerIDs": [
-		"ComStar"
+		"MagistracyOfCanopus"
 	],
 	"contractTargetIDs": [
+		"Liao",
+		"Marik",
+		"AuriganRestoration",
 		"Mercenaries",
-		"Kurita"
+		"ComStar"
 	]
 }
