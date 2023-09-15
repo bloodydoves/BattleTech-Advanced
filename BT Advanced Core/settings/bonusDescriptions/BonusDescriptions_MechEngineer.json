@@ -1701,25 +1701,25 @@
 			"Bonus": "C3Jamming",
 			"Short": "C3 Jammer",
 			"Long": "C3 Jammer",
-			"Full": "C3 networks are fragile and are vulnerable to jamming. ECM effects jam C3 effects within {0} meters when activated, preventing any unit in the area from being part of any C3 networks."
+			"Full": "C3 networks are fragile and are vulnerable to jamming by ECM. ECM effects jam C3 effects within {0} meters when activated, preventing any unit in the area from being part of any C3 networks. Friendly ECM sources do not jam friendly C3 sources, they only jam enemy C3 sources."
 		},
 		{
 			"Bonus": "C3ECMWeakness",
 			"Short": "ECM Weakness",
 			"Long": "ECM Weakness",
-			"Full": "C3 networks are inherently fragile, causing the networks to be disabled when in the range of any ECM source, friendly or enemy."
+			"Full": "C3 networks are inherently fragile, causing the networks to be disabled when in the range of any enemy ECM source. C3 is not vulnerable to friendly ECM sources."
 		},
 		{
 			"Bonus": "C3Slave",
 			"Short": "C3 Slave",
 			"Long": "C3 Slave",
-			"Full": "C3 Network Slave Unit - Connects unit to a C3 network, allowing it to share sensor data with other C3-equipped units."
+			"Full": "C3 Network Slave Unit - Connects unit to a C3 network, allowing it to share sensor data with other C3-equipped units. Does not function without the presence of a C3 Master in the network."
 		},
 		{
 			"Bonus": "C3Master",
 			"Short": "C3 Master",
 			"Long": "C3 Master",
-			"Full": "C3 Network Master Unit - Connects unit to a C3 network, allowing it to share sensor data with other C3-equipped units"
+			"Full": "C3 Network Master Unit - Controls and generates a C3 network. Without a C3 Master, the C3 Network does not function. C3 networks allow C3-equipped units to share sensor data."
 		},
 		{
 			"Bonus": "C3",
@@ -1743,7 +1743,7 @@
 			"Bonus": "C3iECMHardened",
 			"Short": "ECM Hardening",
 			"Long": "ECM Hardening",
-			"Full": "C3i networks, unlike C3 networks, are hardened against ECM interference. C3i is not disabled when in range of an ECM source."
+			"Full": "C3i networks, unlike C3 networks, are hardened against ECM interference. C3i is not disabled when in range of an enemy ECM source."
 		},
 		{
 			"Bonus": "C3iUnit",
@@ -4086,6 +4086,12 @@
 			"Full": "On overload, the AMS will fire multiple times a turn instead of only once."
 		},
 		{
+			"Bonus": "AMSAttacks",
+			"Short": "AMSAttacks",
+			"Long": "AMSAttacks",
+			"Full": "This AMS will fire multiple times a turn instead of only once on all fire modes."
+		},
+		{
 			"Bonus": "LoanShark",
 			"Short": "C-Bill Loan",
 			"Long": "C-Bill Loan",
@@ -4335,7 +4341,7 @@
 			"Bonus": "ECMStacking",
 			"Short": "ECM Stacks",
 			"Long": "ECM Stacks",
-			"Full": "This ECM stacks with other sources instead of overriding them."
+			"Full": "This ECM stacks with other, different, ECM sources instead of overriding them. (It does not stack with other ECMs of the same type.)"
 		},
 		{
 			"Bonus": "SensorLockImmune",
@@ -5224,6 +5230,12 @@
 			"Short": "Immune to Damage",
 			"Long": "Immune to Damage",
 			"Full": "This component is immune to damage and cannot be destroyed through normal combat."
+		},
+		{
+			"Bonus": "LocationRestricted",
+			"Short": "Location Restricted",
+			"Long": "Location Restricted",
+			"Full": "This component is restricted to only specific locations: {0}."
 		}
 	]
 }

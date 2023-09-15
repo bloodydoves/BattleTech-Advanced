@@ -1,0 +1,140 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "LifeSupportA"
+			},
+			{
+				"CategoryID": "Quirk"
+			}
+		],
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "[[Chassis.Tonnage]]/10",
+				"CBillCost": "[[Chassis.Tonnage]] * 1.15"
+			}
+		},
+		"Flags": [
+				"default",
+				"not_broken",
+				"no_salvage",
+				"autorepair"
+		],
+		"BonusDescriptions": [
+				"Health: +1",
+				"NoBleedout",
+				"IsLifeSupportA"
+			]
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 900000,
+		"Rarity": 5,
+		"Purchasable": false,
+		"Manufacturer": "Quirk",
+		"Model": "Uranus",
+		"UIName": "Uranus Improved Life Support",
+		"Id": "Gear_Quirk_ImprovedLifeSupport_Uranus",
+		"Name": "Uranus Improved Life Support",
+		"Details": "This piece of gear represents the Uranus's inherent Improved Life Support quirk. This gives the Uranus's pilot an extra layer of protection against pilot hits.",
+		"Icon": "caduceus"
+	},
+	"BonusValueA": "+1 Pilot Health",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 1,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": -1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "InjuryPrevention",
+				"Name": "MAX INJURIES INCREASED",
+				"Details": "Prevents [AMT] Injuries against a MechWarrior.",
+				"Icon": "uixSvgIcon_equipment_Cockpit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "BonusHealth",
+				"operation": "Int_Add",
+				"modValue": "1",
+				"modType": "System.Int32",
+				"additionalRules": "NotSet",
+				"targetCollection": "Pilot",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "ReinforcedLifeSupport-NoBleed",
+				"Name": "No Bleedout",
+				"Details": "This unit cannot bleed out from injuries.",
+				"Icon": "layeredarmor"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "DisablesBleeding",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"BLACKLISTED"
+		],
+		"tagSetSourceFile": ""
+	}
+}

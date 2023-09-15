@@ -6,23 +6,23 @@
 			}
 		],
 		"BonusDescriptions": [
-				"LAMS",
-				"OLAMSAttacks",
-				"AMSRadius: 100",
-				"AMSShots: 20",
-				"AMSAcc: 30%",
-				"OLAMSHeat: 12",
-				"OLAMSJam: 30%",
-				"OLAMSShots: 35",
-				"AMSDamage: 2"
-			]
+			"LAMS",
+			"AMSAttacks",
+			"AMSRadius: 90",
+			"AMSShots: 10",
+			"AMSAcc: 30%",
+			"OLAMSHeat: 9",
+			"OLAMSJam: 40%",
+			"OLAMSShots: 20",
+			"AMSDamage: 1"
+		]
 	},
 	"Auras": [
 		{
 			"Id": "LAMS",
 			"Name": "Laser AMS",
 			"ReticleColor": "#007FE4",
-			"Range": 100,
+			"Range": 90,
 			"RemoveOnSensorLock": false,
 			"State": "Persistent",
 			"ApplySelf": false,
@@ -36,15 +36,15 @@
 	"Type": "Laser",
 	"WeaponSubType": "SmallLaser",
 	"MinRange": 0,
-	"MaxRange": 100,
+	"MaxRange": 90,
 	"RangeSplit": [
-		70,
-		80,
+		90,
+		90,
 		90
 	],
 	"AmmoCategory": "NotSet",
 	"StartingAmmoCapacity": 0,
-	"HeatGenerated": 6,
+	"HeatGenerated": 5,
 	"Damage": 0,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
@@ -62,7 +62,7 @@
 	"IsAMS": true,
 	"IsAAMS": true,
 	"NotUseInMelee": true,
-	"AMSDamage": 2,
+	"AMSDamage": 1,
 	"Instability": 0,
 	"ImprovedBallistic": true,
 	"FireDelayMultiplier": 0.01,
@@ -95,8 +95,8 @@
 			"Id": "On",
 			"UIName": "On",
 			"isBaseMode": true,
-			"AMSShootsEveryAttack": false,
-			"ShotsWhenFired": 20,
+			"AMSShootsEveryAttack": true,
+			"ShotsWhenFired": 10,
 			"AMSHitChance": 0.3
 		},
 		{
@@ -104,10 +104,10 @@
 			"UIName": "Overload",
 			"isBaseMode": false,
 			"AMSShootsEveryAttack": true,
-			"ShotsWhenFired": 35,
-			"AMSHitChance": 0.25,
-			"FlatJammingChance": 0.3,
-			"HeatGenerated": 6
+			"ShotsWhenFired": 20,
+			"AMSHitChance": 0.3,
+			"FlatJammingChance": 0.4,
+			"HeatGenerated": 4
 		},
 		{
 			"Id": "Off",

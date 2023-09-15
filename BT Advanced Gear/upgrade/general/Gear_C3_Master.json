@@ -1,55 +1,16 @@
 {
 	"Custom": {
 		"Flags": [
-				"not_broken",
-				"no_salvage",
-				"default"
+			"not_broken",
+			"no_salvage",
+			"default"
 		],
-		"ActivatableComponent": {
-			"ButtonName": "C3 Network",
-			"CanNotBeActivatedManualy": false,
-			"ActiveByDefault": true,
-			"FailFlatChance": 0.0,
-			"SafeActivation": true,
-			"statusEffects": [
-				{
-					"durationData": {
-						"duration": -1,
-						"stackLimit": -1
-					},
-					"targetingData": {
-						"effectTriggerType": "Passive",
-						"specialRules": "NotSet",
-						"effectTargetType": "Creator",
-						"range": 0.0,
-						"forcePathRebuild": false,
-						"forceVisRebuild": false,
-						"showInTargetPreview": false,
-						"showInStatusPanel": false
-					},
-					"effectType": "StatisticEffect",
-					"Description": {
-						"Id": "C3Slave_Network_Engagement",
-						"Name": "C3 Network - Slave",
-						"Details": "PASSIVE: Can be part of C3 network.",
-						"Icon": ""
-					},
-					"statisticData": {
-						"statName": "ADD_ENCOUNTER_TAG_C3_Network",
-						"operation": "Float_Add",
-						"modValue": "1",
-						"modType": "System.Single"
-					},
-					"nature": "Buff"
-				}
-			]
-		},
 		"BonusDescriptions": [
-				"C3",
-				"C3Master",
-				"C3ECMWeakness",
-				"Sensors: +20%",
-				"Sight: +20%"
+			"C3",
+			"C3Master",
+			"C3ECMWeakness",
+			"Sensors: +20%",
+			"Sight: +20%"
 		]
 	},
 	"StatName": null,
@@ -78,24 +39,120 @@
 	"AllowedLocations": "CenterTorso",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
+	"Auras": [
+		{
+			"Id": "Gear_C3_Master_Networking",
+			"Name": "C3 Network",
+			"ReticleColor": "#00f0ff",
+			"Range": 8000,
+			"RemoveOnSensorLock": false,
+			"State": "Persistent",
+			"ApplySelf": false,
+			"AllyStealthAffection": "None",
+			"EnemyStealthAffection": "None",
+			"HideOnNotSelected": true,
+			"FloatieAtEndOfMove": false,
+			"IsPositiveToAlly": true,
+			"IsNegativeToEnemy": false,
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"specialRules": "NotSet",
+						"effectTargetType": "AlliesWithinRange",
+						"range": 0.0,
+						"forcePathRebuild": false,
+						"forceVisRebuild": false,
+						"showInTargetPreview": false,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "C3Master_Network_Grant",
+						"Name": "C3 Network Engaged",
+						"Details": "PASSIVE: This unit is part of a C3 Network.",
+						"Icon": "mesh-network"
+					},
+					"statisticData": {
+						"statName": "ADD_ENCOUNTER_TAG_C3_Network",
+						"operation": "Float_Add",
+						"modValue": "1",
+						"modType": "System.Single"
+					},
+					"nature": "Buff"
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "AlliesWithinRange",
+						"showInTargetPreview": false,
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "SensorRange",
+						"Name": "C3M Probe",
+						"Details": "Increased Sight/Sensors",
+						"Icon": "uixSvgIcon_equipment_Cockpit"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"abilifierId": "C3_Network_Master_Bonus",
+						"statName": "SensorDistanceMultiplier",
+						"operation": "Float_Multiply",
+						"modValue": "1.02",
+						"modType": "System.Single"
+					}
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "AlliesWithinRange",
+						"showInTargetPreview": false,
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "SpottingRange",
+						"Name": "SPOTTING DISTANCE INCREASED",
+						"Details": "Increases spotting distance by 50m.",
+						"Icon": "uixSvgIcon_equipment_Cockpit"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"abilifierId": "C3_Network_Master_Bonus",
+						"statName": "SpotterDistanceMultiplier",
+						"operation": "Float_Multiply",
+						"modValue": "1.02",
+						"modType": "System.Single"
+					}
+				}
+			]
+		}
+	],
 	"statusEffects": [
 		{
 			"durationData": {
 				"duration": -1,
-				"ticksOnActivations": false,
-				"useActivationsOfTarget": false,
-				"ticksOnEndOfRound": false,
-				"ticksOnMovements": false,
-				"stackLimit": 1,
-				"clearedWhenAttacked": false
+				"stackLimit": -1
 			},
 			"targetingData": {
 				"effectTriggerType": "Passive",
-				"triggerLimit": 0,
-				"extendDurationOnTrigger": 0,
 				"specialRules": "NotSet",
 				"effectTargetType": "Creator",
-				"range": 0,
+				"range": 0.0,
 				"forcePathRebuild": false,
 				"forceVisRebuild": false,
 				"showInTargetPreview": false,
@@ -103,89 +160,25 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "SensorRange",
-				"Name": "C3M Probe",
-				"Details": "Increased Sight/Sensors",
-				"Icon": "uixSvgIcon_equipment_Cockpit"
+				"Id": "C3Master_Network_Engagement_Self",
+				"Name": "C3 Network Engaged - Self",
+				"Details": "PASSIVE: This unit is the master of a C3 Network, without this unit the C3 Network will not engage.",
+				"Icon": "mesh-network"
 			},
-			"nature": "Buff",
 			"statisticData": {
-				"appliesEachTick": false,
-				"effectsPersistAfterDestruction": false,
-				"statName": "SensorDistanceMultiplier",
-				"operation": "Float_Multiply",
-				"modValue": "1.2",
-				"modType": "System.Single",
-				"additionalRules": "NotSet",
-				"targetCollection": "NotSet",
-				"targetWeaponCategory": "NotSet",
-				"targetWeaponType": "NotSet",
-				"targetAmmoCategory": "NotSet",
-				"targetWeaponSubType": "NotSet"
+				"statName": "ADD_ENCOUNTER_TAG_C3_Network",
+				"operation": "Float_Add",
+				"modValue": "1",
+				"modType": "System.Single"
 			},
-			"tagData": null,
-			"floatieData": null,
-			"actorBurningData": null,
-			"vfxData": null,
-			"instantModData": null,
-			"poorlyMaintainedEffectData": null
-		},
-		{
-			"durationData": {
-				"duration": -1,
-				"ticksOnActivations": false,
-				"useActivationsOfTarget": false,
-				"ticksOnEndOfRound": false,
-				"ticksOnMovements": false,
-				"stackLimit": 1,
-				"clearedWhenAttacked": false
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"triggerLimit": 0,
-				"extendDurationOnTrigger": 0,
-				"specialRules": "NotSet",
-				"effectTargetType": "Creator",
-				"range": 0,
-				"forcePathRebuild": false,
-				"forceVisRebuild": false,
-				"showInTargetPreview": false,
-				"showInStatusPanel": false
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "SpottingRange",
-				"Name": "SPOTTING DISTANCE INCREASED",
-				"Details": "Increases spotting distance by 50m.",
-				"Icon": "uixSvgIcon_equipment_Cockpit"
-			},
-			"nature": "Buff",
-			"statisticData": {
-				"appliesEachTick": false,
-				"effectsPersistAfterDestruction": false,
-				"statName": "SpotterDistanceMultiplier",
-				"operation": "Float_Multiply",
-				"modValue": "1.2",
-				"modType": "System.Single",
-				"additionalRules": "NotSet",
-				"targetCollection": "NotSet",
-				"targetWeaponCategory": "NotSet",
-				"targetWeaponType": "NotSet",
-				"targetAmmoCategory": "NotSet",
-				"targetWeaponSubType": "NotSet"
-			},
-			"tagData": null,
-			"floatieData": null,
-			"actorBurningData": null,
-			"vfxData": null,
-			"instantModData": null,
-			"poorlyMaintainedEffectData": null
+			"nature": "Buff"
 		}
 	],
 	"ComponentTags": {
 		"items": [
 			"component_type_stock",
-			"lv-shares-sensors"
+			"lv-shares-sensors",
+			"C3Master"
 		],
 		"tagSetSourceFile": ""
 	}
