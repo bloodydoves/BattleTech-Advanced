@@ -1,34 +1,33 @@
 {
-	"StatusEffect-PotatoAccuracy": {
+	"C3Master_Network_Grant": {
 		"TargetCollectionsForSearch": {
 			"Component": {
-				"MustMatchAll": true,
-				"TargetCollectionTagMatch": [
-					"test_has_tag",
-					"test_has_also_tag"
-				],
-				"TargetCollectionNotMatch": [
-					"test_has_not_tag1",
-					"test_has_not_tag2"
-				]
-			},
-			"Unit": {
 				"MustMatchAll": false,
 				"TargetCollectionTagMatch": [
-					"test_unit_tag1",
-					"test_unit_tag2"
-				],
-				"TargetCollectionNotMatch": [
-					"test_unit_not_tag1",
-					"test_unit_not_tag2"
+					"C3Slave"
 				]
 			}
-		},
-		"TargetComponentTagMatch": [
-			"Potato_Gun",
-			"Tomato_Gun"
-		],
-		"MustMatchAllComponent": false
+		}
+	},
+	"C3_Network_Master_Bonus": {
+		"TargetCollectionsForSearch": {
+			"Component": {
+				"MustMatchAll": false,
+				"TargetCollectionTagMatch": [
+					"C3Slave"
+				]
+			}
+		}
+	},
+	"C3_Network_Slave_Bonus": {
+		"TargetCollectionsForSearch": {
+			"Component": {
+				"MustMatchAll": false,
+				"TargetCollectionTagMatch": [
+					"C3Master"
+				]
+			}
+		}
 	},
 	"AccMod1": {
 		"TargetCollectionsForSearch": {
