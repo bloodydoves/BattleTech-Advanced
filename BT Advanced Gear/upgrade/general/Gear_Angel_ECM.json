@@ -177,6 +177,60 @@
 					"nature": "Buff"
 				}
 			]
+		},
+		{
+			"Id": "Gear_ECM_VRPPScramble",
+			"Name": "VRPP Scrambling",
+			"ReticleColor": "#1a91ea",
+			"Range": 120,
+			"RemoveOnSensorLock": false,
+			"State": "Online",
+			"ApplySelf": true,
+			"AllyStealthAffection": "None",
+			"EnemyStealthAffection": "None",
+			"IsPositiveToAlly": true,
+			"IsNegativeToEnemy": false,
+			"ownerVFX": [],
+			"targetVFX": [],
+			"removeOwnerVFX": [],
+			"removeTargetVFX": [],
+			"ownerSFX": [],
+			"targetSFX": [],
+			"removeOwnerSFX": [],
+			"removeTargetSFX": [],
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"specialRules": "NotSet",
+						"effectTargetType": "EnemiesWithinRange",
+						"range": 0.0,
+						"forcePathRebuild": false,
+						"forceVisRebuild": false,
+						"showInTargetPreview": false,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect_ECM-VRPP-Jamming",
+						"Name": "VRPP Jamming",
+						"Details": "ECM is scrambling this unit's VRPP system, rendering the 'Mech functionally useless in combat due to turning its sensor systems effectively blind.",
+						"Icon": "UixSvgIcon_designMask_electricalField"
+					},
+					"statisticData": {
+						"statName": "AccuracyModifier",
+						"operation": "Float_Add",
+						"modValue": "+30.0",
+						"modType": "System.Single",
+						"targetCollection": "Weapon"
+					},
+					"nature": "Buff"
+				}
+			]
 		}
 	],
 	"statusEffects": [],

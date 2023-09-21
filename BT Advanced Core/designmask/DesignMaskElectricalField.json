@@ -61,5 +61,34 @@
 			"modType": "System.Single"
 		},
 		"nature": "Debuff"
+	},
+	"additionalStickyEffects": [
+		{
+		"durationData": {
+			"duration": -1,
+			"stackLimit": -1
+		},
+		"targetingData": {
+			"effectTriggerType": "Passive",
+			"effectTargetType": "Creator",
+			"showInStatusPanel": false,
+			"showInTargetPreview": true
+		},
+		"effectType": "StatisticEffect",
+		"Description": {
+			"Id": "StatusEffect_Weather-VRPP-Jamming",
+			"Name": "VRPP Jamming",
+			"Details": "Weather is scrambling this unit's VRPP system, rendering the 'Mech functionally useless in combat due to turning its sensor systems effectively blind.",
+			"Icon": "UixSvgIcon_designMask_electricalField"
+		},
+		"statisticData": {
+			"statName": "AccuracyModifier",
+			"operation": "Float_Add",
+			"modValue": "+30.0",
+			"modType": "System.Single",
+			"targetCollection": "Weapon"
+		},
+		"nature": "Buff"
 	}
+	]
 }
