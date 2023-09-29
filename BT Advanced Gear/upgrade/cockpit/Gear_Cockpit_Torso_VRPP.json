@@ -23,6 +23,7 @@
 			"Health: +6",
 			"Accuracy: +4",
 			"RunSpeed: +0.2",
+			"NoBleedout",
 			"IsCockpit"
 		],
 		"Linked": {
@@ -46,7 +47,7 @@
 		}
 	},
 	"Description": {
-		"Cost": 2500000,
+		"Cost": 5500000,
 		"Rarity": 4,
 		"Purchasable": false,
 		"Manufacturer": "Wildfire",
@@ -55,7 +56,7 @@
 		"Id": "Gear_Cockpit_Torso_VRPP",
 		"Name": "Virtual Reality Piloting Pod",
 		"Details": "The Virtual Reality Piloting Pod is a variant of the Direct Neural Interface technology pioneered by Professor Kale and the Dark Mirage project of the Federated Suns. After the Professor's unsightly end on Solaris VII, the technology was recovered by Davion operatives. Though the VRPP has extreme benefits for pilots, it proved extremely susceptible to electronic interference and as such was becoming ever more popular on the modern battlefield, the Davions shelved the technology.",
-		"Icon": "uixSvgIcon_equipment_Cockpit"
+		"Icon": "vr-headset"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
@@ -109,9 +110,9 @@
 			"effectType": "StatisticEffect",
 			"Description": {
 				"Id": "StatusEffect-VRPPAccuracy",
-				"Name": "VRPP Accuracy Boost",
-				"Details": "The VRPP provides a +4 bonus to weapon attacks thanks to its extreme pilot-mech connection.",
-				"Icon": "AdvancedTC"
+				"Name": "Virtual Reality Piloting Pod",
+				"Details": "The VRPP provides a +4 bonus to weapon attacks and a modest boost to sprint speed thanks to its extreme pilot-mech connection but when subjected to enemy ECM or to extreme weather effects renders the unit functionally unable to perform ranged weapon attacks.",
+				"Icon": "vr-headset"
 			},
 			"nature": "Buff",
 			"statisticData": {
@@ -131,7 +132,7 @@
 				"effectTriggerType": "Passive",
 				"effectTargetType": "Creator",
 				"showInTargetPreview": false,
-				"showInStatusPanel": true
+				"showInStatusPanel": false
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
@@ -146,6 +147,31 @@
 				"operation": "Float_Add",
 				"modValue": "0.2",
 				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-Torso_Cockpit-NoBleed",
+				"Name": "No Bleedout",
+				"Details": "This unit cannot bleed out from injuries.",
+				"Icon": "layeredarmor"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "DisablesBleeding",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
 			}
 		},
 		{

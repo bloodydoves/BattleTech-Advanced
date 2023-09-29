@@ -23,6 +23,7 @@
 			"Health: +6",
 			"DamageTaken: -10%",
 			"StabDamageTaken: -10%",
+			"NoBleedout",
 			"IsCockpit"
 		],
 		"Linked": {
@@ -46,7 +47,7 @@
 		}
 	},
 	"Description": {
-		"Cost": 2500000,
+		"Cost": 3500000,
 		"Rarity": 4,
 		"Purchasable": false,
 		"Manufacturer": "Dark Mirage",
@@ -167,6 +168,31 @@
 			"nature": "Debuff",
 			"statisticData": {
 				"statName": "InjureOnStructDmg",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-Torso_Cockpit-NoBleed",
+				"Name": "No Bleedout",
+				"Details": "This unit cannot bleed out from injuries.",
+				"Icon": "layeredarmor"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "DisablesBleeding",
 				"operation": "Set",
 				"modValue": "true",
 				"modType": "System.Boolean"
