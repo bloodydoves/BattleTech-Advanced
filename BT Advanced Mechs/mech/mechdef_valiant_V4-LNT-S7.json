@@ -6,14 +6,14 @@
 			"unit_lance_vanguard",
 			"unit_role_scout",
 			"unit_release",
-			"unit_rarity_4",
+			"unit_rarity_2",
 			"SolarisVIIMercLeague",
 			"unit_legal",
 			"unit_gladiator"
 		],
 		"tagSetSourceFile": ""
 	},
-	"ChassisID": "chassisdef_valiant_V4-LNT-K5",
+	"ChassisID": "chassisdef_valiant_V4-LNT-S7",
 	"HeraldryID": null,
 	"Description": {
 		"Cost": 444800,
@@ -21,10 +21,10 @@
 		"Purchasable": true,
 		"Manufacturer": null,
 		"Model": null,
-		"UIName": "Valiant V4-LNT-K5",
-		"Id": "mechdef_valiant_V4-LNT-K5",
+		"UIName": "Valiant V4-LNT-S7",
+		"Id": "mechdef_valiant_V4-LNT-S7",
 		"Name": "Valiant",
-		"Details": "Designed by VEST before the production model V4-LNT-K7, the -K5 served as the testbed prototype. After the -K7 met with a lukewarm reception from buyers, the -K5 was put onto the market for Periphery buyers who might have an interest in a cheap but fast skirmisher. The Valiant-K5 is downgraded to almost standard Succession Wars technology, with a trio of Medium Lasers and a pair of Small Lasers for armament. In the arms are the expected Hatchet and the one piece of advanced tech: a Small Shield for added protection. Additionally, 1 more ton of armor has been mounted. The -K5 achieves these savings by slowing down a little from what the -K7's speed is.",
+		"Details": "Developed as a secondary design by the remnants of the Dark Mirage project formerlly headlined by Professor Burke Kale, the Valiant V4-LNT-S7 is a true-blue Solaris design. Built around a Virtual Reality Piloting Pod from the Dark Mirage project the V4-LNT-S7 puts its shield and mace to good use in the arenas. For firepower, it can call upon a shockingly conventional trio of Medium Pulse Lasers and a lone ER Small Laser. An XL Gyro and 210-rated XL Engine power the design.",
 		"Icon": "uixTxrIcon_valiant"
 	},
 	"simGameMechPartCost": 310000,
@@ -51,10 +51,10 @@
 		{
 			"DamageLevel": "Functional",
 			"Location": "LeftTorso",
-			"CurrentArmor": 50,
+			"CurrentArmor": 55,
 			"CurrentRearArmor": 20,
 			"CurrentInternalStructure": 35,
-			"AssignedArmor": 50,
+			"AssignedArmor": 55,
 			"AssignedRearArmor": 20
 		},
 		{
@@ -69,10 +69,10 @@
 		{
 			"DamageLevel": "Functional",
 			"Location": "RightTorso",
-			"CurrentArmor": 50,
+			"CurrentArmor": 55,
 			"CurrentRearArmor": 20,
 			"CurrentInternalStructure": 35,
-			"AssignedArmor": 50,
+			"AssignedArmor": 55,
 			"AssignedRearArmor": 20
 		},
 		{
@@ -106,7 +106,7 @@
 	"inventory": [
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_armorslots_standard",
+			"ComponentDefID": "emod_armorslots_ferrosfibrous",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional",
@@ -115,7 +115,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engine_180",
+			"ComponentDefID": "emod_engine_210",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -126,7 +126,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_kit_shs",
+			"ComponentDefID": "emod_kit_dhs",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -148,7 +148,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engineslots_std_center",
+			"ComponentDefID": "emod_engineslots_xl_center",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -158,8 +158,30 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "Head",
-			"ComponentDefID": "Gear_Cockpit_Generic_Standard",
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "emod_engineslots_size3",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "emod_engineslots_size3",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "Gear_Gyro_XL",
 			"SimGameUID": null,
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
@@ -324,7 +346,7 @@
 		},
 		{
 			"MountedLocation": "Head",
-			"ComponentDefID": "Weapon_Laser_MediumLaser_0-STOCK",
+			"ComponentDefID": "Weapon_Laser_MediumLaserPulse_0-STOCK",
 			"SimGameUID": null,
 			"ComponentDefType": "Weapon",
 			"HardpointSlot": -1,
@@ -335,7 +357,7 @@
 		},
 		{
 			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "Weapon_Laser_MediumLaser_0-STOCK",
+			"ComponentDefID": "Weapon_Laser_MediumLaserPulse_0-STOCK",
 			"SimGameUID": null,
 			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
@@ -346,7 +368,7 @@
 		},
 		{
 			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Weapon_Laser_MediumLaser_0-STOCK",
+			"ComponentDefID": "Weapon_Laser_MediumLaserPulse_0-STOCK",
 			"SimGameUID": null,
 			"ComponentDefType": "Weapon",
 			"HardpointSlot": 1,
@@ -357,7 +379,7 @@
 		},
 		{
 			"MountedLocation": "RightArm",
-			"ComponentDefID": "Weapon_Laser_SmallLaser_0-STOCK",
+			"ComponentDefID": "Weapon_Laser_SmallLaserER_0-STOCK",
 			"SimGameUID": null,
 			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
@@ -367,30 +389,8 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "RightArm",
-			"ComponentDefID": "Weapon_Laser_SmallLaser_0-STOCK",
-			"SimGameUID": null,
-			"ComponentDefType": "Weapon",
-			"HardpointSlot": 1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
 			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "Gear_HeatSink_Generic_Standard",
-			"SimGameUID": null,
-			"ComponentDefType": "HeatSink",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "Gear_HeatSink_Generic_Standard",
+			"ComponentDefID": "Gear_HeatSink_Generic_Double",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -401,18 +401,7 @@
 		},
 		{
 			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Gear_HeatSink_Generic_Standard",
-			"SimGameUID": null,
-			"ComponentDefType": "HeatSink",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Gear_HeatSink_Generic_Standard",
+			"ComponentDefID": "Gear_HeatSink_Generic_Double",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,

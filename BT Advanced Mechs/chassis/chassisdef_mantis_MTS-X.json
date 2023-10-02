@@ -5,17 +5,17 @@
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Valiant",
-		"Id": "chassisdef_valiant_V4-LNT-K7",
-		"Name": "Valiant",
-		"Details": "The Valiant was developed by Vining Engineering and Salvage Team, one of the many weapon manufacturers on Solaris VII, at the behest of Irian BattleMechs Unlimited. Based on the Scarabus, the Valiant was conceived as a light skirmisher. As a fast skirmisher, the Valiant wields only three ER Medium Lasers and its Hatchet. The configuration's lack of ammo dependency is perhaps the characteristic that potential buyers are most interested in.",
-		"Icon": "uixTxrIcon_valiant"
+		"UIName": "Mantis",
+		"Id": "chassisdef_mantis_MTS-X",
+		"Name": "Mantis",
+		"Details": "The Mantis's reputation as a fearsome light brawler in the Solaris arenas drew great attention to the design from prospective buyers, including the Dark Mirage project helmed by Professor Burke Kale. Dark Mirage purchased several Mantis chassis and retrofitted them with a Virtual Reality Piloting Pod for greater combat control as well as two each Medium and Small X-Pulse Lasers for even further enhanced accuracy. To do so, they had to remove half a ton of armor and the MASC system of the MTS-S but the advantages were deemed worth the trade-offs.",
+		"Icon": "uixTxrIcon_mantis"
 	},
-	"MovementCapDefID": "movedef_spider_SDR-5V",
+	"MovementCapDefID": "movedef_osiris_OSR-3D",
 	"PathingCapDefID": "pathingdef_light",
-	"HardpointDataDefID": "hardpointdatadef_valiant",
-	"PrefabIdentifier": "chrprfmech_valiantbase-001",
-	"PrefabBase": "valiant",
+	"HardpointDataDefID": "hardpointdatadef_mantis",
+	"PrefabIdentifier": "chrprfmech_mantisbase-001",
+	"PrefabBase": "mantis",
 	"Tonnage": 30,
 	"InitialTonnage": 3,
 	"weightClass": "LIGHT",
@@ -39,12 +39,12 @@
 	"Signature": 0,
 	"Radius": 4,
 	"PunchesWithLeftArm": false,
-	"MeleeDamage": 40,
+	"MeleeDamage": 30,
 	"MeleeInstability": 10,
 	"MeleeToHitModifier": 0,
-	"DFADamage": 40,
+	"DFADamage": 30,
 	"DFAToHitModifier": 0,
-	"DFASelfDamage": 40,
+	"DFASelfDamage": 30,
 	"DFAInstability": 10,
 	"Locations": [
 		{
@@ -52,6 +52,10 @@
 			"Hardpoints": [
 				{
 					"WeaponMountID": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -63,12 +67,7 @@
 		},
 		{
 			"Location": "LeftArm",
-			"Hardpoints": [
-				{
-					"WeaponMountID": "MeleeWeapon",
-					"Omni": false
-				}
-			],
+			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 12,
 			"MaxArmor": 50,
@@ -85,10 +84,6 @@
 				{
 					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
-				},
-				{
-					"WeaponMountID": "AntiPersonnel",
-					"Omni": false
 				}
 			],
 			"Tonnage": 0,
@@ -99,9 +94,14 @@
 		},
 		{
 			"Location": "CenterTorso",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMountID": "Energy",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
-			"InventorySlots": 16,
+			"InventorySlots": 15,
 			"MaxArmor": 100,
 			"MaxRearArmor": 50,
 			"InternalStructure": 50
@@ -111,10 +111,6 @@
 			"Hardpoints": [
 				{
 					"WeaponMountID": "Energy",
-					"Omni": false
-				},
-				{
-					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				},
 				{
@@ -130,12 +126,7 @@
 		},
 		{
 			"Location": "RightArm",
-			"Hardpoints": [
-				{
-					"WeaponMountID": "AntiPersonnel",
-					"Omni": false
-				}
-			],
+			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 12,
 			"MaxArmor": 50,
@@ -205,38 +196,16 @@
 			"z": 0.5
 		}
 	],
-	"VariantName": "V4-LNT-K7",
+	"VariantName": "MTS-X",
 	"ChassisTags": {
 		"items": [
 			"LightMech"
 		],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "Light Melee Skirmisher",
-	"YangsThoughts": "The Valiant was developed by Vining Engineering and Salvage Team, one of the many weapon manufacturers on Solaris VII, at the behest of Irian BattleMechs Unlimited. Based on the Scarabus, the Valiant was conceived as a light skirmisher. As a fast skirmisher, the Valiant wields only three ER Medium Lasers and its Hatchet. The configuration's lack of ammo dependency is perhaps the characteristic that potential buyers are most interested in.",
+	"StockRole": "Melee Solaris Brawler",
+	"YangsThoughts": "The Mantis's reputation as a fearsome light brawler in the Solaris arenas drew great attention to the design from prospective buyers, including the Dark Mirage project helmed by Professor Burke Kale. Dark Mirage purchased several Mantis chassis and retrofitted them with a Virtual Reality Piloting Pod for greater combat control as well as two each Medium and Small X-Pulse Lasers for even further enhanced accuracy. To do so, they had to remove half a ton of armor and the MASC system of the MTS-S but the advantages were deemed worth the trade-offs.",
 	"FixedEquipment": [
-		{
-			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_structureslots_standard",
-			"SimGameUID": "",
-			"ComponentDefType": "Upgrade",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": "",
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "Head",
-			"ComponentDefID": "Gear_Quirk_ImprovedTargeting_Valiant",
-			"SimGameUID": "",
-			"ComponentDefType": "Upgrade",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": "",
-			"hasPrefabName": false
-		},
 		{
 			"MountedLocation": "LeftArm",
 			"ComponentDefID": "emod_arm_part_lower",
@@ -250,7 +219,18 @@
 		},
 		{
 			"MountedLocation": "LeftArm",
-			"ComponentDefID": "emod_arm_part_hand",
+			"ComponentDefID": "Gear_Actuator_Claws",
+			"SimGameUID": "",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightArm",
+			"ComponentDefID": "emod_arm_part_lower",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": 0,
@@ -260,11 +240,66 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "LeftArm",
-			"ComponentDefID": "Weapon_Valiant_Hatchet",
+			"MountedLocation": "RightArm",
+			"ComponentDefID": "Gear_Actuator_Claws",
+			"SimGameUID": "",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "emod_structureslots_endosteel",
+			"SimGameUID": "",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": "",
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "Gear_Cockpit_LifeSupportA_Torso",
 			"SimGameUID": null,
-			"ComponentDefType": "Weapon",
-			"HardpointSlot": 1,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "Gear_Cockpit_LifeSupportB_Torso",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "Gear_Cockpit_LifeSupportC_Torso",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "Gear_Cockpit_Torso_VRPP",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
 			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": null,
