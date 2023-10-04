@@ -32,7 +32,7 @@
         "id": "Unlimited_Power",
         "missionsRequired": 15,
         "levelName": "Unlimited Power",
-        "decription": "Energy, Ballistic, and Missile weapons deal 10% more damage.",
+        "decription": "Energy, Ballistic, Missile, and Artillery weapons deal 10% more damage.",
         "affinities": [],
         "effectData": [
           {
@@ -123,6 +123,39 @@
               "targetAmmoCategory": "NotSet",
               "targetCollection": "Weapon",
               "targetWeaponCategory": "Missile",
+              "targetWeaponSubType": "NotSet",
+              "targetWeaponType": "NotSet"
+            },
+            "targetingData": {
+              "effectTargetType": "Creator",
+              "effectTriggerType": "Passive",
+              "hideApplicationFloatie": true,
+              "showInStatusPanel": false,
+              "showInTargetPreview": false
+            }
+          },
+          {
+            "Description": {
+              "Details": "The pilot's incredible skill with this mech improves its Artillery weapon damage by 10%.",
+              "Icon": "UixSvgIcon_specialEquip_System",
+              "Id": "StatusEffect-Affinity-ArtilleryDamage",
+              "Name": "Mech Affinity Artillery Damage Boost"
+            },
+            "durationData": {
+              "duration": -1,
+              "stackLimit": -1
+            },
+            "effectType": "StatisticEffect",
+            "nature": "Buff",
+            "statisticData": {
+              "additionalRules": "NotSet",
+              "modType": "System.Single",
+              "modValue": "1.1",
+              "operation": "Float_Multiply",
+              "statName": "DamagePerShot",
+              "targetAmmoCategory": "NotSet",
+              "targetCollection": "Weapon",
+              "targetWeaponCategoryId": "Artillery",
               "targetWeaponSubType": "NotSet",
               "targetWeaponType": "NotSet"
             },
