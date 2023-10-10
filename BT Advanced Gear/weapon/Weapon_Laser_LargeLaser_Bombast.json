@@ -9,10 +9,10 @@
 			"Bombast",
 			"WpnCrits: 50%",
 			"WpnAccuracy: +1",
-			"ModalWeapon: Base Charge",
-			"ModalWeapon1: Low Charge",
-			"ModalWeapon2: Mid Charge",
-			"ModalWeapon3: Max Charge",
+			"BombastBaseMode: 50, 15",
+			"BombastLowMode: +10, +10, -1, +30",
+			"BombastMidMode: +20, +20, -1, +50",
+			"BombastMaxMode: +30, +30, -1, +80",
 			"WeaponAttachmentCompatible: Laser Insulator",
 			"WeaponAttachmentCompatible: Laser FCS"
 		]
@@ -29,7 +29,7 @@
 	],
 	"AmmoCategory": "NotSet",
 	"StartingAmmoCapacity": 0,
-	"HeatGenerated": 20,
+	"HeatGenerated": 15,
 	"Damage": 50,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
@@ -48,7 +48,7 @@
 	"FireTerrainChance": 0,
 	"WeaponEffectID": "WeaponEffect-Weapon_COILS",
 	"Description": {
-		"Cost": 370000,
+		"Cost": 450000,
 		"Rarity": 6,
 		"Purchasable": true,
 		"Manufacturer": "Defiance",
@@ -59,7 +59,7 @@
 		"Details": "Developed by the Lyran Alliance, the Bombast Laser was designed to be the ultimate word in laser weapons. During the design process, its engineers had to reduce the weight of the weapon. This sacrifice came from the power supply, which made the weapon slow at charging. The Bombast Laser has a quartet of charge levels, with commensurate damage and range boosts, though more powerful shots make more heat and are more inaccurate. \n\n <b><color=#00ffff>Left Click on Chance to hit during battle to switch firing mode</color></b>",
 		"Icon": "uixSvgIcon_weapon_Energy"
 	},
-	"BonusValueA": "Charge Levels",
+	"BonusValueA": "",
 	"BonusValueB": "",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",
@@ -73,12 +73,12 @@
 	"Modes": [
 		{
 			"Id": "lv1",
-			"UIName": "Base Charge",
+			"UIName": "Base",
 			"isBaseMode": true
 		},
 		{
 			"Id": "lv2",
-			"UIName": "Low Charge",
+			"UIName": "Low",
 			"isBaseMode": false,
 			"DamagePerShot": 10,
 			"HeatGenerated": 10,
@@ -90,7 +90,7 @@
 		},
 		{
 			"Id": "lv3",
-			"UIName": "Mid Charge",
+			"UIName": "Mid",
 			"isBaseMode": false,
 			"DamagePerShot": 20,
 			"HeatGenerated": 20,
@@ -102,7 +102,7 @@
 		},
 		{
 			"Id": "lv4",
-			"UIName": "Max Charge",
+			"UIName": "Max",
 			"isBaseMode": false,
 			"DamagePerShot": 30,
 			"HeatGenerated": 30,
