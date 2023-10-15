@@ -1,0 +1,102 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "LeagueNetFocalNode"
+			}
+		],
+		"BonusDescriptions": [
+			"C3",
+			"C3Master",
+			"C3ECMWeakness",
+			"Sensors: +20%",
+			"Sight: +20%"
+		]
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 1,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "Brooks Incorporated",
+		"Model": "Maxell TA1500",
+		"UIName": "LeagueNet Focal Node",
+		"Id": "Gear_LeagueNet_Focal_Node",
+		"Name": "LeagueNet Focal Node",
+		"Details": "XXXXXX.",
+		"Icon": "mesh-network"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 3,
+	"Tonnage": 3,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"Auras": [
+		{
+			"Id": "Gear_LeagueNet_Interference_Aura",
+			"Name": "LeagueNet Focal Aura",
+			"ReticleColor": "#00f0ff",
+			"Range": 8000,
+			"RemoveOnSensorLock": false,
+			"State": "Persistent",
+			"ApplySelf": false,
+			"AllyStealthAffection": "None",
+			"EnemyStealthAffection": "None",
+			"HideOnNotSelected": true,
+			"FloatieAtEndOfMove": false,
+			"IsPositiveToAlly": true,
+			"IsNegativeToEnemy": false,
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "AlliesWithinRange",
+						"showInTargetPreview": false,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "LeagueNet_Focal_Interference",
+						"Name": "LeagueNet Focal Node Interference",
+						"Details": "This LeagueNet Focal Node is being interfered with by other nearby Focal Nodes, rendering the carrier functionally unable to perform weapon attacks.",
+						"Icon": "cancel"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"abilifierId": "LeagueNet_Focal_Interference_id",
+						"additionalRules": "NotSet",
+						"modType": "System.Single",
+						"modValue": "100.0",
+						"operation": "Float_Add",
+						"statName": "AccuracyModifier",
+						"targetAmmoCategory": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponSubType": "NotSet",
+						"targetWeaponType": "NotSet"
+					}
+				}
+			]
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"lv-shares-sensors",
+			"LeagueNetFocalNode"
+		],
+		"tagSetSourceFile": ""
+	}
+}

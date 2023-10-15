@@ -1,0 +1,134 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "LeagueNetSupportNode"
+			}
+		],
+		"BonusDescriptions": [
+			"C3",
+			"C3Master",
+			"C3ECMWeakness",
+			"Sensors: +20%",
+			"Sight: +20%"
+		]
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 1,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "Brooks Incorporated",
+		"Model": "Maxell TA1520",
+		"UIName": "LeagueNet Node (Dmg)",
+		"Id": "Gear_LeagueNet_Support_Node_Damage",
+		"Name": "LeagueNet Damage Support Node",
+		"Details": "XXXXXX.",
+		"Icon": "mesh-network"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 1,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"Auras": [
+		{
+			"Id": "Gear_LeagueNet_Support_Node_Damage",
+			"Name": "LeagueNet Support (Dmg)",
+			"ReticleColor": "#00f0ff",
+			"Range": 8000,
+			"RemoveOnSensorLock": false,
+			"State": "Persistent",
+			"ApplySelf": false,
+			"AllyStealthAffection": "None",
+			"EnemyStealthAffection": "None",
+			"HideOnNotSelected": true,
+			"FloatieAtEndOfMove": false,
+			"IsPositiveToAlly": true,
+			"IsNegativeToEnemy": false,
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "AlliesWithinRange",
+						"showInTargetPreview": false,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "LeagueNet_Support_Damage",
+						"Name": "LeagueNet Support Node Damage",
+						"Details": "This LeagueNet Support Node is providing a 5% Weapon Damage bonus to the Focal Node.",
+						"Icon": "upgrade"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"abilifierId": "LeagueNet_Support_Damage_id",
+						"modType": "System.Single",
+						"modValue": "1.05",
+						"operation": "Float_Multiply",
+						"statName": "DamagePerShot",
+						"targetAmmoCategory": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategoryId": "NotSet",
+						"targetWeaponSubType": "NotSet",
+						"targetWeaponType": "NotSet"
+					}
+				}
+			]
+		}
+	],
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "LeagueNet_Support_Damage_Penalty",
+				"Name": "LeagueNet Support Node Penalty",
+				"Details": "This LeagueNet Support Node is interfering with the carrier's weapon attacks imposing a 5% weapon damage penalty due to part of its processing power being dedicated to supporting the Focal Node instead.",
+				"Icon": "plain-arrow"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"modType": "System.Single",
+				"modValue": "0.95",
+				"operation": "Float_Multiply",
+				"statName": "DamagePerShot",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategoryId": "NotSet",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "NotSet"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"lv-shares-sensors",
+			"LeagueNetSupportNode"
+		],
+		"tagSetSourceFile": ""
+	}
+}

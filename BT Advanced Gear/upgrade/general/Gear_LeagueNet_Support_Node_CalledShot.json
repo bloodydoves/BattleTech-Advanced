@@ -1,0 +1,124 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "LeagueNetSupportNode"
+			}
+		],
+		"BonusDescriptions": [
+			"C3",
+			"C3Master",
+			"C3ECMWeakness",
+			"Sensors: +20%",
+			"Sight: +20%"
+		]
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 1,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "Brooks Incorporated",
+		"Model": "Maxell TA1530",
+		"UIName": "LeagueNet Node (Called Shot)",
+		"Id": "Gear_LeagueNet_Support_Node_CalledShot",
+		"Name": "LeagueNet Called Shot Support Node",
+		"Details": "XXXXXX.",
+		"Icon": "mesh-network"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 1,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"Auras": [
+		{
+			"Id": "Gear_LeagueNet_Support_Node_CalledShot",
+			"Name": "LeagueNet Support (Called Shot)",
+			"ReticleColor": "#00f0ff",
+			"Range": 8000,
+			"RemoveOnSensorLock": false,
+			"State": "Persistent",
+			"ApplySelf": false,
+			"AllyStealthAffection": "None",
+			"EnemyStealthAffection": "None",
+			"HideOnNotSelected": true,
+			"FloatieAtEndOfMove": false,
+			"IsPositiveToAlly": true,
+			"IsNegativeToEnemy": false,
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "AlliesWithinRange",
+						"showInTargetPreview": false,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "LeagueNet_Support_CalledShot",
+						"Name": "LeagueNet Support Node Called Shot",
+						"Details": "This LeagueNet Support Node is providing a small bonus to hit called locations with Called Shots to the Focal Node.",
+						"Icon": "upgrade"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"abilifierId": "LeagueNet_Support_CalledShot_id",
+						"statName": "CalledShotBonusMultiplier",
+						"operation": "Float_Multiply",
+						"modValue": "1.1",
+						"modType": "System.Single"
+					}
+				}
+			]
+		}
+	],
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "LeagueNet_Support_CalledShot_Penalty",
+				"Name": "LeagueNet Support Node Penalty",
+				"Details": "This LeagueNet Support Node is interfering with the carrier's Called Shots by imposing a small penalty to hit called locations during a Called Shot due to part of its processing power being dedicated to supporting the Focal Node instead.",
+				"Icon": "plain-arrow"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CalledShotBonusMultiplier",
+				"operation": "Float_Multiply",
+				"modValue": "0.9",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"lv-shares-sensors",
+			"LeagueNetSupportNode"
+		],
+		"tagSetSourceFile": ""
+	}
+}
