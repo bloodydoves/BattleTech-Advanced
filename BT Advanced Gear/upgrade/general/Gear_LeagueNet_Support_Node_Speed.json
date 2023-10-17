@@ -7,7 +7,7 @@
 		],
 		"DecoratorComponent":[
 			{
-				"Text":"C",               
+				"Text":"S",               
 				"Color":"#c04eff",      
 				"Icon":"upgrade",       
 				"Importance": 10
@@ -16,7 +16,7 @@
 		"BonusDescriptions": [
 			"LeagueNet",
 			"LeagueNetSupportNode",
-			"LeagueNetCalledShotNode"
+			"LeagueNetSpeedNode: +0.15, -0.05"
 		]
 	},
 	"StatName": null,
@@ -27,11 +27,11 @@
 		"Rarity": 4,
 		"Purchasable": true,
 		"Manufacturer": "Brooks Incorporated",
-		"Model": "Maxell TA1530",
-		"UIName": "LeagueNet Node (Called Shot)",
-		"Id": "Gear_LeagueNet_Support_Node_CalledShot",
-		"Name": "LeagueNet Called Shot Support Node",
-		"Details": "Developed by Brooks Incorporated at the behest of the Free Worlds League Military, LeagueNet is the FWL answer to the Kuritan C3 system. LeagueNet functions similiarly to C3 in that it is composed of a distributed network of computer nodes spread among multiple units. However, where C3 shares targeting info between all units in the network LeagueNet instead gathers information and data with Support Nodes and funnels it all back to a single Focal Node, giving the Focal Node extreme benefits at the cost of the Support Nodes being slightly impaired due to channeling so much information back to the Focal Node. This piece of gear is a LeagueNet Support Node and is tuned to provide improved Called Shot accuracy to the Focal Node.",
+		"Model": "Maxell TA1540",
+		"UIName": "LeagueNet Node (Speed)",
+		"Id": "Gear_LeagueNet_Support_Node_Speed",
+		"Name": "LeagueNet Speed Support Node",
+		"Details": "Developed by Brooks Incorporated at the behest of the Free Worlds League Military, LeagueNet is the FWL answer to the Kuritan C3 system. LeagueNet functions similiarly to C3 in that it is composed of a distributed network of computer nodes spread among multiple units. However, where C3 shares targeting info between all units in the network LeagueNet instead gathers information and data with Support Nodes and funnels it all back to a single Focal Node, giving the Focal Node extreme benefits at the cost of the Support Nodes being slightly impaired due to channeling so much information back to the Focal Node. This piece of gear is a LeagueNet Support Node and is tuned to provide increased sprint speed to the Focal Node.",
 		"Icon": "upgrade"
 	},
 	"BonusValueA": "",
@@ -47,8 +47,8 @@
 	"CriticalComponent": false,
 	"Auras": [
 		{
-			"Id": "Gear_LeagueNet_Support_Node_CalledShot",
-			"Name": "LeagueNet Support (Called Shot)",
+			"Id": "Gear_LeagueNet_Support_Node_Speed",
+			"Name": "LeagueNet Support (Speed)",
 			"ReticleColor": "#00f0ff",
 			"Range": 8000,
 			"RemoveOnSensorLock": false,
@@ -74,16 +74,16 @@
 					},
 					"effectType": "StatisticEffect",
 					"Description": {
-						"Id": "LeagueNet_Support_CalledShot",
-						"Name": "LeagueNet Support Node Called Shot",
-						"Details": "This LeagueNet Support Node is providing a small bonus to hit called locations with Called Shots to the Focal Node.",
+						"Id": "LeagueNet_Support_Speed",
+						"Name": "LeagueNet Support Node Speed",
+						"Details": "This LeagueNet Support Node is providing a small sprint speed bonus to the Focal Node.",
 						"Icon": "upgrade"
 					},
 					"nature": "Buff",
 					"statisticData": {
-						"statName": "CalledShotBonusMultiplier",
-						"operation": "Float_Multiply",
-						"modValue": "1.15",
+						"modValue": "0.15",
+						"operation": "Float_Add",
+						"statName": "CBTBE_RunMultiMod",
 						"modType": "System.Single"
 					}
 				}
@@ -104,16 +104,16 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "LeagueNet_Support_CalledShot_Penalty",
+				"Id": "LeagueNet_Support_Speed_Penalty",
 				"Name": "LeagueNet Support Node Penalty",
-				"Details": "This LeagueNet Support Node is interfering with the carrier's Called Shots by imposing a small penalty to hit called locations during a Called Shot due to part of its processing power being dedicated to supporting the Focal Node instead.",
+				"Details": "This LeagueNet Support Node is interfering with the carrier's sprint speed by a small amount due to part of its processing power being dedicated to supporting the Focal Node instead.",
 				"Icon": "plain-arrow"
 			},
 			"nature": "Buff",
 			"statisticData": {
-				"statName": "CalledShotBonusMultiplier",
-				"operation": "Float_Multiply",
-				"modValue": "0.8",
+				"modValue": "-0.05",
+				"operation": "Float_Add",
+				"statName": "CBTBE_RunMultiMod",
 				"modType": "System.Single"
 			}
 		}

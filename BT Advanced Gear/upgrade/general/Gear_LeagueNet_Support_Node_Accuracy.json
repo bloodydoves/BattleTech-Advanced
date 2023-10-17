@@ -5,12 +5,18 @@
 				"CategoryID": "LeagueNetSupportNode"
 			}
 		],
+		"DecoratorComponent":[
+			{
+				"Text":"A",               
+				"Color":"#c04eff",      
+				"Icon":"upgrade",       
+				"Importance": 10
+			}
+		],
 		"BonusDescriptions": [
-			"C3",
-			"C3Master",
-			"C3ECMWeakness",
-			"Sensors: +20%",
-			"Sight: +20%"
+			"LeagueNet",
+			"LeagueNetSupportNode",
+			"LeagueNetAccuracyNode: +2, -1"
 		]
 	},
 	"StatName": null,
@@ -25,8 +31,8 @@
 		"UIName": "LeagueNet Node (Acc)",
 		"Id": "Gear_LeagueNet_Support_Node_Accuracy",
 		"Name": "LeagueNet Accuracy Support Node",
-		"Details": "XXXXXX.",
-		"Icon": "mesh-network"
+		"Details": "Developed by Brooks Incorporated at the behest of the Free Worlds League Military, LeagueNet is the FWL answer to the Kuritan C3 system. LeagueNet functions similiarly to C3 in that it is composed of a distributed network of computer nodes spread among multiple units. However, where C3 shares targeting info between all units in the network LeagueNet instead gathers information and data with Support Nodes and funnels it all back to a single Focal Node, giving the Focal Node extreme benefits at the cost of the Support Nodes being slightly impaired due to channeling so much information back to the Focal Node. This piece of gear is a LeagueNet Support Node and is tuned to provide increased accuracy to the Focal Node.",
+		"Icon": "upgrade"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
@@ -75,14 +81,13 @@
 					},
 					"nature": "Buff",
 					"statisticData": {
-						"abilifierId": "LeagueNet_Support_Accuracy_id",
 						"additionalRules": "NotSet",
 						"modType": "System.Single",
 						"modValue": "-2.0",
 						"operation": "Float_Add",
 						"statName": "AccuracyModifier",
 						"targetAmmoCategory": "NotSet",
-						"targetCollection": "Weapon",
+						"targetCollection": "NotSet",
 						"targetWeaponCategory": "NotSet",
 						"targetWeaponSubType": "NotSet",
 						"targetWeaponType": "NotSet"

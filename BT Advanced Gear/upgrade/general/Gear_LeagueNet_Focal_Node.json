@@ -5,12 +5,18 @@
 				"CategoryID": "LeagueNetFocalNode"
 			}
 		],
+		"DecoratorComponent":[
+			{
+				"Text":"",               
+				"Color":"#c04eff",      
+				"Icon":"mesh-network",       
+				"Importance": 10
+			}
+		],
 		"BonusDescriptions": [
-			"C3",
-			"C3Master",
-			"C3ECMWeakness",
-			"Sensors: +20%",
-			"Sight: +20%"
+			"LeagueNet",
+			"LeagueNetFocalNode",
+			"LeagueNetFocalInterference"
 		]
 	},
 	"StatName": null,
@@ -25,7 +31,7 @@
 		"UIName": "LeagueNet Focal Node",
 		"Id": "Gear_LeagueNet_Focal_Node",
 		"Name": "LeagueNet Focal Node",
-		"Details": "XXXXXX.",
+		"Details": "Developed by Brooks Incorporated at the behest of the Free Worlds League Military, LeagueNet is the FWL answer to the Kuritan C3 system. LeagueNet functions similiarly to C3 in that it is composed of a distributed network of computer nodes spread among multiple units. However, where C3 shares targeting info between all units in the network LeagueNet instead gathers information and data with Support Nodes and funnels it all back to a single Focal Node, giving the Focal Node extreme benefits at the cost of the Support Nodes being slightly impaired due to channeling so much information back to the Focal Node. This piece of gear is a LeagueNet Focal Node and thus serves as a receiver for the varied information and benefits of LeagueNet Support Nodes.",
 		"Icon": "mesh-network"
 	},
 	"BonusValueA": "",
@@ -70,12 +76,11 @@
 					"Description": {
 						"Id": "LeagueNet_Focal_Interference",
 						"Name": "LeagueNet Focal Node Interference",
-						"Details": "This LeagueNet Focal Node is being interfered with by other nearby Focal Nodes, rendering the carrier functionally unable to perform weapon attacks.",
+						"Details": "This LeagueNet Focal Node is being interfered with by other nearby Focal Nodes, rendering the carrier functionally unable to perform weapon attacks or melee attacks.",
 						"Icon": "cancel"
 					},
 					"nature": "Buff",
 					"statisticData": {
-						"abilifierId": "LeagueNet_Focal_Interference_id",
 						"additionalRules": "NotSet",
 						"modType": "System.Single",
 						"modValue": "100.0",
@@ -84,6 +89,38 @@
 						"targetAmmoCategory": "NotSet",
 						"targetCollection": "Weapon",
 						"targetWeaponCategory": "NotSet",
+						"targetWeaponSubType": "NotSet",
+						"targetWeaponType": "NotSet"
+					}
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "AlliesWithinRange",
+						"showInTargetPreview": false,
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "LeagueNet_Focal_Interference_Melee",
+						"Name": "LeagueNet Melee Focal Node Interference",
+						"Details": "This LeagueNet Focal Node is being interfered with by other nearby Focal Nodes, rendering the carrier functionally unable to perform weapon attacks.",
+						"Icon": "cancel"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"additionalRules": "NotSet",
+						"modType": "System.Single",
+						"modValue": "100.0",
+						"operation": "Float_Add",
+						"statName": "AccuracyModifier",
+						"targetAmmoCategory": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "Melee",
 						"targetWeaponSubType": "NotSet",
 						"targetWeaponType": "NotSet"
 					}
