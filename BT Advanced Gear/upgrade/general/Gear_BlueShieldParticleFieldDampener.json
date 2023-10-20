@@ -1,0 +1,128 @@
+{
+	"Custom": {
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "1.5 * [[Chassis.Tonnage]] / 15",
+				"CBillCost": "1500 * [[Chassis.Tonnage]] * [[Chassis.Tonnage]] / 30"
+			}
+		},
+		"Category": [
+			{
+				"CategoryID": "BlueShield"
+			}
+		],
+		"Flags": [
+			"not_broken",
+			"no_salvage"
+		],
+		"Linked": {
+			"Links": [
+				{
+					"ComponentDefId": "Gear_BlueShield_Linked",
+					"Location": "LeftTorso"
+				},
+				{
+					"ComponentDefId": "Gear_BlueShield_Linked",
+					"Location": "LeftArm"
+				},
+				{
+					"ComponentDefId": "Gear_BlueShield_Linked",
+					"Location": "LeftLeg"
+				},
+				{
+					"ComponentDefId": "Gear_BlueShield_Linked",
+					"Location": "RightTorso"
+				},
+				{
+					"ComponentDefId": "Gear_BlueShield_Linked",
+					"Location": "RightArm"
+				},
+				{
+					"ComponentDefId": "Gear_BlueShield_Linked",
+					"Location": "RightLeg"
+				}
+			]
+		},
+		"ActivatableComponent": {
+			"ButtonName": "Blue Shield",
+			"ActivationMessage": "Engaged",
+			"DeactivationMessage": "Disengaged",
+			"CanNotBeActivatedManualy": false,
+			"CanActivateAfterMove": true,
+			"CanActivateAfterFire": false,
+			"SwitchOffOnFall": false,
+			"ChargesCount": 5,
+			"ShutdownOnFail": true,
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": 2,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTargetsCreator": true,
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInTargetPreview": true,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect-BlueShield-PPCDR",
+						"Name": "Active Blue Shield",
+						"Details": "The Blue Shield system is engaged, reducing incoming energy weapon damage by 25%.",
+						"Icon": "lightning-shield"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamageReductionMultiplierEnergy",
+						"operation": "Float_Multiply",
+						"modValue": "0.75",
+						"modType": "System.Single"
+					}
+				}
+			]
+		},
+		"BonusDescriptions": [
+			"BlueShield",
+			"Activatable",
+			"UseCharges: 5",
+			"ActiveDamageReductionEnergy: 25%, 1",
+			"LinkedSlots: 6"
+		]
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 1500000,
+		"Rarity": 5,
+		"Purchasable": true,
+		"Manufacturer": "NAIS",
+		"Model": "BSPFD",
+		"UIName": "Blue Shield Particle Dampener",
+		"Id": "Gear_BlueShieldParticleFieldDampener",
+		"Name": "Blue Shield Particle Field Dampener",
+		"Details": "The Blue Shield Particle Field Dampener, or BSPFD for short, is an experimental Federated Suns system that was designed to dramatically reduce incoming damage from energy-type weapons. In this, it was highly successful but in order to achieve such success the system developed a number of other notable flaws. For one, it was hard to run for extended periods of time due to high power consumption, limiting its effective battlefield endurance. For another, the attached linkages across the mech's body were highly charged and liked to explode when damaged by weapons fire. With these drawbacks, the New Avalon Institute of Science eventually shelved the project, with it only appearing sporadically on the game world of Solaris VII.",
+		"Icon": "lightning-shield"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 3,
+	"AllowedLocations": "CenterTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"BlueShield"
+		],
+		"tagSetSourceFile": ""
+	}
+}

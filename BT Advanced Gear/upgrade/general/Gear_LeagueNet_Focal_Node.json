@@ -1,0 +1,139 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "LeagueNetFocalNode"
+			}
+		],
+		"DecoratorComponent":[
+			{
+				"Text":"",               
+				"Color":"#c04eff",      
+				"Icon":"mesh-network",       
+				"Importance": 10
+			}
+		],
+		"BonusDescriptions": [
+			"LeagueNet",
+			"LeagueNetFocalNode",
+			"LeagueNetFocalInterference"
+		]
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 1,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "Brooks Incorporated",
+		"Model": "Maxell TA1500",
+		"UIName": "LeagueNet Focal Node",
+		"Id": "Gear_LeagueNet_Focal_Node",
+		"Name": "LeagueNet Focal Node",
+		"Details": "Developed by Brooks Incorporated at the behest of the Free Worlds League Military, LeagueNet is the FWL answer to the Kuritan C3 system. LeagueNet functions similiarly to C3 in that it is composed of a distributed network of computer nodes spread among multiple units. However, where C3 shares targeting info between all units in the network LeagueNet instead gathers information and data with Support Nodes and funnels it all back to a single Focal Node, giving the Focal Node extreme benefits at the cost of the Support Nodes being slightly impaired due to channeling so much information back to the Focal Node. This piece of gear is a LeagueNet Focal Node and thus serves as a receiver for the varied information and benefits of LeagueNet Support Nodes.",
+		"Icon": "mesh-network"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 3,
+	"Tonnage": 3,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"Auras": [
+		{
+			"Id": "Gear_LeagueNet_Interference_Aura",
+			"Name": "LeagueNet Focal Aura",
+			"ReticleColor": "#00f0ff",
+			"Range": 8000,
+			"RemoveOnSensorLock": false,
+			"State": "Persistent",
+			"ApplySelf": false,
+			"AllyStealthAffection": "None",
+			"EnemyStealthAffection": "None",
+			"HideOnNotSelected": true,
+			"FloatieAtEndOfMove": false,
+			"IsPositiveToAlly": true,
+			"IsNegativeToEnemy": false,
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "AlliesWithinRange",
+						"showInTargetPreview": false,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "LeagueNet_Focal_Interference",
+						"Name": "LeagueNet Focal Node Interference",
+						"Details": "This LeagueNet Focal Node is being interfered with by other nearby Focal Nodes, rendering the carrier functionally unable to perform weapon attacks or melee attacks.",
+						"Icon": "cancel"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"additionalRules": "NotSet",
+						"modType": "System.Single",
+						"modValue": "100.0",
+						"operation": "Float_Add",
+						"statName": "AccuracyModifier",
+						"targetAmmoCategory": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponSubType": "NotSet",
+						"targetWeaponType": "NotSet"
+					}
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "AlliesWithinRange",
+						"showInTargetPreview": false,
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "LeagueNet_Focal_Interference_Melee",
+						"Name": "LeagueNet Melee Focal Node Interference",
+						"Details": "This LeagueNet Focal Node is being interfered with by other nearby Focal Nodes, rendering the carrier functionally unable to perform weapon attacks.",
+						"Icon": "cancel"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"additionalRules": "NotSet",
+						"modType": "System.Single",
+						"modValue": "100.0",
+						"operation": "Float_Add",
+						"statName": "AccuracyModifier",
+						"targetAmmoCategory": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "Melee",
+						"targetWeaponSubType": "NotSet",
+						"targetWeaponType": "NotSet"
+					}
+				}
+			]
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"lv-shares-sensors",
+			"LeagueNetFocalNode"
+		],
+		"tagSetSourceFile": ""
+	}
+}

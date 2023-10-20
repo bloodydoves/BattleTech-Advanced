@@ -325,6 +325,12 @@
 			"Full": "Item has {0} Uses"
 		},
 		{
+			"Bonus": "UseCharges",
+			"Short": "{0} Charges",
+			"Long": "{0} Charges",
+			"Full": "Item has {0} Charges each contract, consuming one each time it is activated. When out of charges, the item cannot be used again until the next contract."
+		},
+		{
 			"Bonus": "ActivateHeatLevel",
 			"Short": "{0} Heat Activated",
 			"Long": "{0} Heat Activated",
@@ -347,6 +353,12 @@
 			"Short": "{0} TurnFail.",
 			"Long": "{0}/Turn Failure Chance",
 			"Full": "{0} Additional Chance for Failure on consecutive Turns"
+		},
+		{
+			"Bonus": "FailChanceTurnDelay",
+			"Short": "{0} TurnFailDelay.",
+			"Long": "{0} Turn Delay in Failure Chance",
+			"Full": "Component will not check for activated failure until after {0} turns of activation."
 		},
 		{
 			"Bonus": "FailStruct",
@@ -415,6 +427,12 @@
 			"Full": "{0} Resistance against Energy based Attacks when Activated"
 		},
 		{
+			"Bonus": "ActivePPCProtection",
+			"Short": "{0} PPCRes",
+			"Long": "{0} PPC Resistance",
+			"Full": "{0} Damage Reduction against PPC Attacks when Activated"
+		},
+		{
 			"Bonus": "ActiveAccuracy",
 			"Short": "{0} Acc",
 			"Long": "{0} Accuracy",
@@ -449,6 +467,12 @@
 			"Short": "{0} Damage Reduction",
 			"Long": "{0} Damage Reduction",
 			"Full": "{0} Damage Reduction when Activated"
+		},
+		{
+			"Bonus": "ActiveDamageReductionEnergy",
+			"Short": "{0} Damage Reduction",
+			"Long": "{0} Damage Reduction",
+			"Full": "{0} Damage Reduction against energy weapons for {1} rounds when activated."
 		},
 		{
 			"Bonus": "ActivePPCCAPDMG",
@@ -1620,6 +1644,12 @@
 			"Full": "Targets take {0} more damage for 2 Turns - Multiple effects do not Stack"
 		},
 		{
+			"Bonus": "AcidStack",
+			"Short": "Acid",
+			"Long": "Corrosive Acid",
+			"Full": "Targets take {0} more damage for 2 Turns - Multiple effects stack up to {1} times."
+		},
+		{
 			"Bonus": "Paint",
 			"Short": "Paint",
 			"Long": "Paintgun",
@@ -1995,7 +2025,13 @@
 			"Bonus": "IsVRPP",
 			"Short": "VRPP",
 			"Long": "VRPP",
-			"Full": "Virtual Reality Piloting Pod enhances the capabilities of DNI or EI cockpits"
+			"Full": "The Virtual Reality Piloting Pod provides extreme benefits while piloting a 'Mech included excellent accuracy and mobility but is extremely vulnerable to enemy ECM effects and even certain extreme weather conditions such as solar storms."
+		},
+		{
+			"Bonus": "IsDNI",
+			"Short": "DNI",
+			"Long": "DNI Cockpit",
+			"Full": "This is a Direct Neural Interface cockpit, providing increased control over the 'Mech (and thus granting a wide variety of benefits) but coming with a risk of suffering pilot injuries from incoming structure damage."
 		},
 		{
 			"Bonus": "CalledShot",
@@ -2139,7 +2175,31 @@
 			"Bonus": "Bombast",
 			"Short": "Bombast",
 			"Long": "Bombast Laser",
-			"Full": "Bombast Lasers can select between Damage and Range at cost of Heat and Accuracy"
+			"Full": "Bombast Lasers have multiple fire modes, with each successive fire mode dealing more damage, generating more heat, gaining more range in each range band, and having an increased accuracy penalty."
+		},
+		{
+			"Bonus": "BombastBaseMode",
+			"Short": "Bombast Base Mode",
+			"Long": "Bombast Laser Base Mode",
+			"Full": "The Bombast Laser's Base mode deals {0} damage, generates {1} heat, has no penalty to attacks made in this mode, and uses the default displayed ranges."
+		},
+		{
+			"Bonus": "BombastLowMode",
+			"Short": "Bombast Low Mode",
+			"Long": "Bombast Laser Low Mode",
+			"Full": "The Bombast Laser's Low Power mode deals {0} additional damage, generates {1} additional heat, has a {2} penalty to attacks made in this mode, and gains {3} meters of range per range bracket (i.e. short range is +30m, medium is +60m, etc; does not create a minimum range)."
+		},
+		{
+			"Bonus": "BombastMidMode",
+			"Short": "Bombast Mid Mode",
+			"Long": "Bombast Laser Mid Mode",
+			"Full": "The Bombast Laser's Mid Power mode deals {0} additional damage, generates {1} additional heat, has a {2} penalty to attacks made in this mode, and gains {3} meters of range per range bracket (i.e. short range is +50m, medium is +100m, etc; does not create a minimum range)."
+		},
+		{
+			"Bonus": "BombastMaxMode",
+			"Short": "Bombast Max Mode",
+			"Long": "Bombast Laser Max Mode",
+			"Full": "The Bombast Laser's Max Power mode deals {0} additional damage, generates {1} additional heat, has a {2} penalty to attacks made in this mode, and gains {3} meters of range per range bracket (i.e. short range is +80m, medium is +160m, etc; does not create a minimum range)."
 		},
 		{
 			"Bonus": "IsLaser",
@@ -3798,6 +3858,12 @@
 			"Full": "When the weapon jams, it explodes, dealing damage equal to one shot from the weapon."
 		},
 		{
+			"Bonus": "PermanentJam",
+			"Short": "Permanent Jams",
+			"Long": "Permanent Jams",
+			"Full": "When this weapon or component jams it cannot be unjammed until the mission is over, when it will be automatically unjammed between missions."
+		},
+		{
 			"Bonus": "MultiTrac",
 			"Short": "MultiTrac",
 			"Long": "Grants the Multi-Shot pilot ability",
@@ -5166,6 +5232,12 @@
 			"Full": "This weapon attachment gives the attached Cannon the ability to accept external ammo from the same class of Rifle (i.e. the Light Cannon can accept Light Rifle ammo) but at a {0} damage penalty."
 		},
 		{
+			"Bonus": "WeaponAttachmentRevolverRifle",
+			"Short": "Revolver Rifle",
+			"Long": "Revolver Rifle",
+			"Full": "This weapon attachment gives the attached Rifle the ability to fire twice as fast as normal (like an Ultra Autocannon does) but at a {0} damage penalty and with a {1} jam chance on each trigger pull."
+		},
+		{
 			"Bonus": "WeaponAttachmentAmmoFeedRocket",
 			"Short": "Rocket Ammo Feed",
 			"Long": "Rocket Ammo Feed",
@@ -5236,6 +5308,54 @@
 			"Short": "Location Restricted",
 			"Long": "Location Restricted",
 			"Full": "This component is restricted to only specific locations: {0}."
+		},
+		{
+			"Bonus": "LeagueNet",
+			"Short": "LeagueNet",
+			"Long": "LeagueNet",
+			"Full": "This component is part of the LeagueNet system of nodes. This means it shares information between LeagueNet support nodes and the LeagueNet focal node in order to power the focal node carrier."
+		},
+		{
+			"Bonus": "LeagueNetFocalNode",
+			"Short": "LeagueNet Focal Node",
+			"Long": "LeagueNet Focal Node",
+			"Full": "This component is a LeagueNet Focal Node and receives various benefits from nearby allied LeagueNet Support Nodes."
+		},
+		{
+			"Bonus": "LeagueNetFocalInterference",
+			"Short": "LeagueNet Focal Interference",
+			"Long": "LeagueNet Focal Interference",
+			"Full": "LeagueNet Focal Nodes interfere with one another when deployed in the field as each tries to compete for dominance over the LeagueNet network. This equates to a -100 weapon attack and melee attack penalty if more than one LeagueNet Focal Node is deployed at once."
+		},
+		{
+			"Bonus": "LeagueNetSupportNode",
+			"Short": "LeagueNet Support Node",
+			"Long": "LeagueNet Support Node",
+			"Full": "This component is a LeagueNet Support Node and provides a benefit to the LeagueNet Focal Node carrier while inflicting a small penalty to the Support Node carrier."
+		},
+		{
+			"Bonus": "LeagueNetAccuracyNode",
+			"Short": "LeagueNet Acc Node",
+			"Long": "LeagueNet Accuracy Node",
+			"Full": "This LeagueNet Support Node provides a {0} accuracy bonus to the Focal Node carrier while imposing a {1} accuracy penalty to the Support Node carrier."
+		},
+		{
+			"Bonus": "LeagueNetDRNode",
+			"Short": "LeagueNet DR Node",
+			"Long": "LeagueNet Damage Reduction Node",
+			"Full": "This LeagueNet Support Node provides a {0} damage reduction bonus to the Focal Node carrier while imposing a {1} damage reduction penalty to the Support Node carrier."
+		},
+		{
+			"Bonus": "LeagueNetCalledShotNode",
+			"Short": "LeagueNet Called Shot Node",
+			"Long": "LeagueNet Called Shot Node",
+			"Full": "This LeagueNet Support Node provides a small Called Shot bonus to the Focal Node carrier while imposing a slightly smaller Called Shot penalty to the Support Node carrier."
+		},
+		{
+			"Bonus": "LeagueNetSpeedNode",
+			"Short": "LeagueNet Speed Node",
+			"Long": "LeagueNet Speed Node",
+			"Full": "This LeagueNet Support Node provides a {0} sprint speed bonus to the Focal Node carrier while imposing a {1} sprint speed penalty to the Support Node carrier."
 		}
 	]
 }

@@ -1,0 +1,141 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "LeagueNetSupportNode"
+			}
+		],
+		"DecoratorComponent":[
+			{
+				"Text":"A",               
+				"Color":"#c04eff",      
+				"Icon":"upgrade",       
+				"Importance": 10
+			}
+		],
+		"BonusDescriptions": [
+			"LeagueNet",
+			"LeagueNetSupportNode",
+			"LeagueNetAccuracyNode: +2, -1"
+		]
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 1,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "Brooks Incorporated",
+		"Model": "Maxell TA1510",
+		"UIName": "LeagueNet Node (Acc)",
+		"Id": "Gear_LeagueNet_Support_Node_Accuracy",
+		"Name": "LeagueNet Accuracy Support Node",
+		"Details": "Developed by Brooks Incorporated at the behest of the Free Worlds League Military, LeagueNet is the FWL answer to the Kuritan C3 system. LeagueNet functions similiarly to C3 in that it is composed of a distributed network of computer nodes spread among multiple units. However, where C3 shares targeting info between all units in the network LeagueNet instead gathers information and data with Support Nodes and funnels it all back to a single Focal Node, giving the Focal Node extreme benefits at the cost of the Support Nodes being slightly impaired due to channeling so much information back to the Focal Node. This piece of gear is a LeagueNet Support Node and is tuned to provide increased accuracy to the Focal Node.",
+		"Icon": "upgrade"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 1,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"Auras": [
+		{
+			"Id": "Gear_LeagueNet_Support_Node_Accuracy",
+			"Name": "LeagueNet Support (Acc)",
+			"ReticleColor": "#00f0ff",
+			"Range": 8000,
+			"RemoveOnSensorLock": false,
+			"State": "Persistent",
+			"ApplySelf": false,
+			"AllyStealthAffection": "None",
+			"EnemyStealthAffection": "None",
+			"HideOnNotSelected": true,
+			"FloatieAtEndOfMove": false,
+			"IsPositiveToAlly": true,
+			"IsNegativeToEnemy": false,
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "AlliesWithinRange",
+						"showInTargetPreview": false,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "LeagueNet_Support_Accuracy",
+						"Name": "LeagueNet Support Node Accuracy",
+						"Details": "This LeagueNet Support Node is providing a +2 Accuracy bonus to the Focal Node.",
+						"Icon": "upgrade"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"additionalRules": "NotSet",
+						"modType": "System.Single",
+						"modValue": "-2.0",
+						"operation": "Float_Add",
+						"statName": "AccuracyModifier",
+						"targetAmmoCategory": "NotSet",
+						"targetCollection": "NotSet",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponSubType": "NotSet",
+						"targetWeaponType": "NotSet"
+					}
+				}
+			]
+		}
+	],
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "LeagueNet_Support_Accuracy_Penalty",
+				"Name": "LeagueNet Support Node Penalty",
+				"Details": "This LeagueNet Support Node is interfering with the carrier's weapon attacks by -1 due to part of its processing power being dedicated to supporting the Focal Node instead.",
+				"Icon": "plain-arrow"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"additionalRules": "NotSet",
+				"modType": "System.Single",
+				"modValue": "1.0",
+				"operation": "Float_Add",
+				"statName": "AccuracyModifier",
+				"targetAmmoCategory": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponSubType": "NotSet",
+				"targetWeaponType": "NotSet"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"lv-shares-sensors",
+			"LeagueNetSupportNode"
+		],
+		"tagSetSourceFile": ""
+	}
+}

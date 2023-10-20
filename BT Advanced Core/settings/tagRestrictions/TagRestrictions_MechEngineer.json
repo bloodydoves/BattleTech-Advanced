@@ -54,11 +54,16 @@
 		{
 			"Tag": "StealthArmor",
 			"RequiredTags": [
-				"ElectronicCounterMeasures"
+				"ECM"
 			],
 			"IncompatibleTags": [
 				"ModularArmor",
-				"ModularRearArmor"
+				"ModularRearArmor",
+				"C3Master",
+				"C3Slave",
+				"NullSig",
+				"CLPS",
+				"BlueShield"
 			]
 		},
 		{
@@ -357,7 +362,10 @@
 				"C3Master",
 				"C3i",
 				"NullSig",
-				"CLPS"
+				"CLPS",
+				"StealthArmor",
+				"LeagueNetFocalNode",
+				"LeagueNetSupportNode"
 			]
 		},
 		{
@@ -366,34 +374,44 @@
 				"C3Slave",
 				"C3i",
 				"NullSig",
-				"CLPS"
+				"CLPS",
+				"StealthArmor",
+				"LeagueNetFocalNode",
+				"LeagueNetSupportNode"
 			]
 		},
 		{
 			"Tag": "C3i",
 			"IncompatibleTags": [
 				"C3Slave",
-				"C3Master"
+				"C3Master",
+				"LeagueNetFocalNode",
+				"LeagueNetSupportNode"
 			]
 		},
 		{
 			"Tag": "NullSig",
 			"IncompatibleTags": [
-				"ECM"
+				"ECM",
+				"ProtoMech",
+				"StealthArmor",
+				"BlueShield"
 			]
 		},
 		{
 			"Tag": "CLPS",
 			"IncompatibleTags": [
 				"ECM",
-				"ProtoMech"
+				"ProtoMech",
+				"StealthArmor"
 			]
 		},
 		{
 			"Tag": "Handhold",
 			"IncompatibleTags": [
 				"OmniGyro",
-				"Avionics"
+				"Avionics",
+				"ProtoMech"
 			]
 		},
 		{
@@ -585,6 +603,32 @@
 			"IncompatibleTags": [
 				"Supercharger",
 				"MASC"
+			]
+		},
+		{
+			"Tag": "BlueShield",
+			"IncompatibleTags": [
+				"StealthArmor",
+				"NullSig",
+				"OmniGyro"
+			]
+		},
+		{
+			"Tag": "LeagueNetFocalNode",
+			"IncompatibleTags": [
+				"LeagueNetSupportNode",
+				"C3Slave",
+				"C3Master",
+				"C3i"
+			]
+		},
+		{
+			"Tag": "LeagueNetSupportNode",
+			"IncompatibleTags": [
+				"LeagueNetFocalNode",
+				"C3Slave",
+				"C3Master",
+				"C3i"
 			]
 		}
 	]

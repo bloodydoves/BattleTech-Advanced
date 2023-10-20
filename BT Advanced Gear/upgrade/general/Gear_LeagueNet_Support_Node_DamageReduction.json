@@ -1,0 +1,129 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "LeagueNetSupportNode"
+			}
+		],
+		"DecoratorComponent":[
+			{
+				"Text":"D",               
+				"Color":"#c04eff",      
+				"Icon":"upgrade",       
+				"Importance": 10
+			}
+		],
+		"BonusDescriptions": [
+			"LeagueNet",
+			"LeagueNetSupportNode",
+			"LeagueNetDRNode: +5%, -2.5%"
+		]
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 1,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "Brooks Incorporated",
+		"Model": "Maxell TA1520",
+		"UIName": "LeagueNet Node (Dmg Reduc.)",
+		"Id": "Gear_LeagueNet_Support_Node_DamageReduction",
+		"Name": "LeagueNet Damage Reduction Support Node",
+		"Details": "Developed by Brooks Incorporated at the behest of the Free Worlds League Military, LeagueNet is the FWL answer to the Kuritan C3 system. LeagueNet functions similiarly to C3 in that it is composed of a distributed network of computer nodes spread among multiple units. However, where C3 shares targeting info between all units in the network LeagueNet instead gathers information and data with Support Nodes and funnels it all back to a single Focal Node, giving the Focal Node extreme benefits at the cost of the Support Nodes being slightly impaired due to channeling so much information back to the Focal Node. This piece of gear is a LeagueNet Support Node and is tuned to provide increased damage reduction to the Focal Node.",
+		"Icon": "upgrade"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 1,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"Auras": [
+		{
+			"Id": "Gear_LeagueNet_Support_Node_DamageReduction",
+			"Name": "LeagueNet Support (Dmg Reduc.)",
+			"ReticleColor": "#00f0ff",
+			"Range": 8000,
+			"RemoveOnSensorLock": false,
+			"State": "Persistent",
+			"ApplySelf": false,
+			"AllyStealthAffection": "None",
+			"EnemyStealthAffection": "None",
+			"HideOnNotSelected": true,
+			"FloatieAtEndOfMove": false,
+			"IsPositiveToAlly": true,
+			"IsNegativeToEnemy": false,
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "AlliesWithinRange",
+						"showInTargetPreview": false,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "LeagueNet_Support_DmgReduction",
+						"Name": "LeagueNet Support Node Damage Reduction",
+						"Details": "This LeagueNet Support Node is providing a 5% Weapon Damage bonus to the Focal Node.",
+						"Icon": "upgrade"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamageReductionMultiplierAll",
+						"operation": "Float_Multiply",
+						"modValue": "0.95",
+						"modType": "System.Single"
+					}
+				}
+			]
+		}
+	],
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "LeagueNet_Support_DamageReduction_Penalty",
+				"Name": "LeagueNet Support Node Penalty",
+				"Details": "This LeagueNet Support Node is interfering with the carrier's weapon attacks imposing a 2.5% damage reduction penalty due to part of its processing power being dedicated to supporting the Focal Node instead.",
+				"Icon": "plain-arrow"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "DamageReductionMultiplierAll",
+				"operation": "Float_Multiply",
+				"modValue": "0.975",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"lv-shares-sensors",
+			"LeagueNetSupportNode"
+		],
+		"tagSetSourceFile": ""
+	}
+}
