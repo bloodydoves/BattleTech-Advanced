@@ -8,18 +8,15 @@
 		"BonusDescriptions": [
 			"IsPhysWeap",
 			"PhysWeapUnsteady",
-			"PunchHitTable",
-			"PhysWeapDamage: 1",
-			"PhysWeapStab: 0.5",
-			"PhysWeapAccuracy: -2",
-			"ChargeDamageBonus: +24%",
-			"LanceCrit"
+			"PhysWeapDamage: 2",
+			"PhysWeapStab: 1",
+			"PhysWeapAccuracy: +1"
 		],
 		"Flags": [
 			"default",
 			"not_broken",
-			"no_salvage",
-			"autorepair"
+			"autorepair",
+			"no_salvage"
 		]
 	},
 	"weaponCategoryID": "MeleeWeapon",
@@ -41,7 +38,7 @@
 	"EvasivePipsIgnored": 0,
 	"DamageVariance": 0,
 	"HeatDamage": 0,
-	"AccuracyModifier": 1,
+	"AccuracyModifier": 0,
 	"CriticalChanceMultiplier": 1,
 	"AOECapable": false,
 	"IndirectFireCapable": false,
@@ -51,29 +48,28 @@
 	"AttackRecoil": 0,
 	"Instability": 0,
 	"NotUseInMelee": true,
-	"APCriticalChanceMultiplier": 1,
 	"WeaponEffectID": "WeaponEffect-Weapon_MachineGun",
 	"Description": {
 		"Cost": 12000,
 		"Rarity": 4,
 		"Purchasable": true,
-		"Manufacturer": "Valkyrie II",
-		"Model": "Lance",
-		"UIName": "Lance",
-		"Id": "Weapon_ValkyrieII_Lance",
-		"Name": "Lance",
-		"Details": "This is a unique lance, designed for the Valkyrie II. It cannot be removed or used elsewhere.",
-		"Icon": "arrowhead"
+		"Manufacturer": "Volkh",
+		"Model": "Lirpa",
+		"UIName": "Lirpa",
+		"Id": "Weapon_Volkh_Lirpa",
+		"Name": "Lirpa",
+		"Details": "This is a unique Lirpa, designed for the Volkh BattleMech. It cannot be removed or used elsewhere.",
+		"Icon": "crescent-blade"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",
-	"PrefabIdentifier": "lance",
+	"PrefabIdentifier": "lirpa",
 	"BattleValue": 0,
-	"InventorySize": 3,
-	"Tonnage": 3,
-	"AllowedLocations": "RightArm",
+	"InventorySize": 4,
+	"Tonnage": 4,
+	"AllowedLocations": "RightArm,LeftArm",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
 	"statusEffects": [
@@ -154,7 +150,7 @@
 			"statisticData": {
 				"statName": "CBTBE_Physical_Weapon_Location_Table",
 				"operation": "Set",
-				"modValue": "PUNCH",
+				"modValue": "STANDARD",
 				"modType": "System.String"
 			},
 			"nature": "Buff"
@@ -178,16 +174,16 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "StatusEffect-SwordBaseDamage",
-				"Name": "Lance Base Damage",
-				"Details": "Lances do 5 damage per 5 tons of the mech.",
-				"Icon": "arrowhead"
+				"Id": "StatusEffect-LirpaBaseDamage",
+				"Name": "Lirpa Base Damage",
+				"Details": "Lirpas do 10 damage per 5 tons of the mech.",
+				"Icon": "crescent-blade"
 			},
 			"nature": "Buff",
 			"statisticData": {
 				"statName": "CBTBE_Physical_Weapon_Target_Damage_Per_Attacker_Ton",
 				"operation": "Set",
-				"modValue": "1.0",
+				"modValue": "2.0",
 				"modType": "System.Single"
 			}
 		},
@@ -210,16 +206,16 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "StatusEffect-SwordBaseStabDamage",
-				"Name": "Lance Base Stab Damage",
-				"Details": "Lances do 5 stab damage per 10 tons of the mech.",
-				"Icon": "arrowhead"
+				"Id": "StatusEffect-LirpaBaseStabDamage",
+				"Name": "Lirpa Base Stab Damage",
+				"Details": "Lirpa do 5 stab damage per 5 tons of the mech.",
+				"Icon": "crescent-blade"
 			},
 			"nature": "Buff",
 			"statisticData": {
 				"statName": "CBTBE_Physical_Weapon_Target_Instability_Per_Attacker_Ton",
 				"operation": "Set",
-				"modValue": "0.5",
+				"modValue": "1.0",
 				"modType": "System.Single"
 			}
 		},
@@ -235,40 +231,16 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "StatusEffect-LanceBaseAcc",
-				"Name": "Lance Base Accuracy",
-				"Details": "Lances have a -2 accuracy penalty on their attacks.",
-				"Icon": "arrowhead"
+				"Id": "StatusEffect-LirpaBaseAcc",
+				"Name": "Lirpa Base Accuracy",
+				"Details": "Lirpas have a +1 accuracy bonus on their attacks.",
+				"Icon": "crescent-blade"
 			},
 			"nature": "Buff",
 			"statisticData": {
 				"statName": "CBTBE_Physical_Weapon_Attack_Mod",
 				"operation": "Int_Add",
-				"modValue": "2",
-				"modType": "System.Int32"
-			}
-		},
-		{
-			"durationData": {
-				"duration": -1,
-				"stackLimit": -1
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"effectTargetType": "Creator",
-				"showInStatusPanel": true
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "StatusEffect-LanceChargeDMGPerHex",
-				"Name": "Charge Damage Increased",
-				"Details": "Charge attacks deal 24% more damage.",
-				"Icon": "arrowhead"
-			},
-			"statisticData": {
-				"statName": "CBTBE_Charge_Target_Damage_Mod",
-				"operation": "Int_Add",
-				"modValue": "6",
+				"modValue": "-1",
 				"modType": "System.Int32"
 			}
 		}

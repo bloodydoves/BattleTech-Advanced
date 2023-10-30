@@ -11,15 +11,14 @@
 			"PunchHitTable",
 			"PhysWeapDamage: 1",
 			"PhysWeapStab: 0.5",
-			"PhysWeapAccuracy: -2",
-			"ChargeDamageBonus: +24%",
-			"LanceCrit"
+			"PhysWeapAccuracy: -1",
+			"TridentCrit"
 		],
 		"Flags": [
 			"default",
 			"not_broken",
-			"no_salvage",
-			"autorepair"
+			"autorepair",
+			"no_salvage"
 		]
 	},
 	"weaponCategoryID": "MeleeWeapon",
@@ -41,7 +40,7 @@
 	"EvasivePipsIgnored": 0,
 	"DamageVariance": 0,
 	"HeatDamage": 0,
-	"AccuracyModifier": 1,
+	"AccuracyModifier": 0,
 	"CriticalChanceMultiplier": 1,
 	"AOECapable": false,
 	"IndirectFireCapable": false,
@@ -57,23 +56,23 @@
 		"Cost": 12000,
 		"Rarity": 4,
 		"Purchasable": true,
-		"Manufacturer": "Valkyrie II",
-		"Model": "Lance",
-		"UIName": "Lance",
-		"Id": "Weapon_ValkyrieII_Lance",
-		"Name": "Lance",
-		"Details": "This is a unique lance, designed for the Valkyrie II. It cannot be removed or used elsewhere.",
-		"Icon": "arrowhead"
+		"Manufacturer": "Volkh",
+		"Model": "Trident",
+		"UIName": "Trident",
+		"Id": "Weapon_Volkh_Trident",
+		"Name": "Trident",
+		"Details": "This is a unique Trident, designed for the Volkh BattleMech. It cannot be removed or used elsewhere.",
+		"Icon": "harpoon-trident"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",
-	"PrefabIdentifier": "lance",
+	"PrefabIdentifier": "trident",
 	"BattleValue": 0,
 	"InventorySize": 3,
-	"Tonnage": 3,
-	"AllowedLocations": "RightArm",
+	"Tonnage": 2,
+	"AllowedLocations": "RightArm,LeftArm",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
 	"statusEffects": [
@@ -178,16 +177,16 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "StatusEffect-SwordBaseDamage",
-				"Name": "Lance Base Damage",
-				"Details": "Lances do 5 damage per 5 tons of the mech.",
-				"Icon": "arrowhead"
+				"Id": "StatusEffect-TridentBaseDamage",
+				"Name": "Trident Base Damage",
+				"Details": "Tridents do 5 damage per 5 tons of the mech.",
+				"Icon": "harpoon-trident"
 			},
 			"nature": "Buff",
 			"statisticData": {
 				"statName": "CBTBE_Physical_Weapon_Target_Damage_Per_Attacker_Ton",
 				"operation": "Set",
-				"modValue": "1.0",
+				"modValue": "1",
 				"modType": "System.Single"
 			}
 		},
@@ -210,10 +209,10 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "StatusEffect-SwordBaseStabDamage",
-				"Name": "Lance Base Stab Damage",
-				"Details": "Lances do 5 stab damage per 10 tons of the mech.",
-				"Icon": "arrowhead"
+				"Id": "StatusEffect-TridentBaseStabDamage",
+				"Name": "Trident Base Stab Damage",
+				"Details": "Tridents do 5 stab damage per 10 tons of the mech.",
+				"Icon": "harpoon-trident"
 			},
 			"nature": "Buff",
 			"statisticData": {
@@ -235,40 +234,16 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "StatusEffect-LanceBaseAcc",
-				"Name": "Lance Base Accuracy",
-				"Details": "Lances have a -2 accuracy penalty on their attacks.",
+				"Id": "StatusEffect-TridentBaseAcc",
+				"Name": "Trident Base Accuracy",
+				"Details": "Tridents have a -1 accuracy penalty on their attacks.",
 				"Icon": "arrowhead"
 			},
 			"nature": "Buff",
 			"statisticData": {
 				"statName": "CBTBE_Physical_Weapon_Attack_Mod",
 				"operation": "Int_Add",
-				"modValue": "2",
-				"modType": "System.Int32"
-			}
-		},
-		{
-			"durationData": {
-				"duration": -1,
-				"stackLimit": -1
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"effectTargetType": "Creator",
-				"showInStatusPanel": true
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "StatusEffect-LanceChargeDMGPerHex",
-				"Name": "Charge Damage Increased",
-				"Details": "Charge attacks deal 24% more damage.",
-				"Icon": "arrowhead"
-			},
-			"statisticData": {
-				"statName": "CBTBE_Charge_Target_Damage_Mod",
-				"operation": "Int_Add",
-				"modValue": "6",
+				"modValue": "1",
 				"modType": "System.Int32"
 			}
 		}

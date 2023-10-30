@@ -8,12 +8,9 @@
 		"BonusDescriptions": [
 			"IsPhysWeap",
 			"PhysWeapUnsteady",
-			"PunchHitTable",
-			"PhysWeapDamage: 1",
+			"PhysWeapDamage: 0.8333333333",
 			"PhysWeapStab: 0.5",
-			"PhysWeapAccuracy: -2",
-			"ChargeDamageBonus: +24%",
-			"LanceCrit"
+			"PhysWeapBonusHit: +1"
 		],
 		"Flags": [
 			"default",
@@ -26,11 +23,11 @@
 	"Type": "MachineGun",
 	"WeaponSubType": "MachineGun",
 	"MinRange": 0,
-	"MaxRange": 0,
+	"MaxRange": 30,
 	"RangeSplit": [
-		0,
-		0,
-		0
+		30,
+		30,
+		30
 	],
 	"AmmoCategory": "NotSet",
 	"StartingAmmoCapacity": 0,
@@ -51,29 +48,28 @@
 	"AttackRecoil": 0,
 	"Instability": 0,
 	"NotUseInMelee": true,
-	"APCriticalChanceMultiplier": 1,
 	"WeaponEffectID": "WeaponEffect-Weapon_MachineGun",
 	"Description": {
 		"Cost": 12000,
 		"Rarity": 4,
 		"Purchasable": true,
-		"Manufacturer": "Valkyrie II",
-		"Model": "Lance",
-		"UIName": "Lance",
-		"Id": "Weapon_ValkyrieII_Lance",
-		"Name": "Lance",
-		"Details": "This is a unique lance, designed for the Valkyrie II. It cannot be removed or used elsewhere.",
-		"Icon": "arrowhead"
+		"Manufacturer": "Volkh",
+		"Model": "Claws",
+		"UIName": "Claws",
+		"Id": "Weapon_Volkh_Claws",
+		"Name": "Claws",
+		"Details": "This is a unique set of claws, designed for the Volkh. It cannot be removed or used elsewhere.",
+		"Icon": "barbed-nails"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",
-	"PrefabIdentifier": "lance",
+	"PrefabIdentifier": "claws",
 	"BattleValue": 0,
 	"InventorySize": 3,
 	"Tonnage": 3,
-	"AllowedLocations": "RightArm",
+	"AllowedLocations": "RightArm,LeftArm",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
 	"statusEffects": [
@@ -154,7 +150,7 @@
 			"statisticData": {
 				"statName": "CBTBE_Physical_Weapon_Location_Table",
 				"operation": "Set",
-				"modValue": "PUNCH",
+				"modValue": "STANDARD",
 				"modType": "System.String"
 			},
 			"nature": "Buff"
@@ -178,16 +174,16 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "StatusEffect-SwordBaseDamage",
-				"Name": "Lance Base Damage",
-				"Details": "Lances do 5 damage per 5 tons of the mech.",
-				"Icon": "arrowhead"
+				"Id": "StatusEffect-ClawBaseDamage",
+				"Name": "Claw Base Damage",
+				"Details": "Claws do 5 damage per 6 tons of the mech.",
+				"Icon": "barbed-nails"
 			},
 			"nature": "Buff",
 			"statisticData": {
 				"statName": "CBTBE_Physical_Weapon_Target_Damage_Per_Attacker_Ton",
 				"operation": "Set",
-				"modValue": "1.0",
+				"modValue": "0.8333333333",
 				"modType": "System.Single"
 			}
 		},
@@ -210,10 +206,10 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "StatusEffect-SwordBaseStabDamage",
-				"Name": "Lance Base Stab Damage",
-				"Details": "Lances do 5 stab damage per 10 tons of the mech.",
-				"Icon": "arrowhead"
+				"Id": "StatusEffect-ClawBaseStabDamage",
+				"Name": "Claw Base Stab Damage",
+				"Details": "Claws do 5 stab damage per 10 tons of the mech.",
+				"Icon": "barbed-nails"
 			},
 			"nature": "Buff",
 			"statisticData": {
@@ -230,46 +226,29 @@
 			},
 			"targetingData": {
 				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
 				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
 				"showInStatusPanel": true
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "StatusEffect-LanceBaseAcc",
-				"Name": "Lance Base Accuracy",
-				"Details": "Lances have a -2 accuracy penalty on their attacks.",
-				"Icon": "arrowhead"
+				"Id": "StatusEffect-ClawMultiHit",
+				"Name": "Claw Multiple Hits",
+				"Details": "Claws clack rapidly during combat, hitting an extra time on each melee attack. Claws stack with themselves, multiple claws mean multiple bonus hits, +1 per Claw.",
+				"Icon": "barbed-nails"
 			},
 			"nature": "Buff",
 			"statisticData": {
-				"statName": "CBTBE_Physical_Weapon_Attack_Mod",
-				"operation": "Int_Add",
-				"modValue": "2",
-				"modType": "System.Int32"
-			}
-		},
-		{
-			"durationData": {
-				"duration": -1,
-				"stackLimit": -1
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"effectTargetType": "Creator",
-				"showInStatusPanel": true
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "StatusEffect-LanceChargeDMGPerHex",
-				"Name": "Charge Damage Increased",
-				"Details": "Charge attacks deal 24% more damage.",
-				"Icon": "arrowhead"
-			},
-			"statisticData": {
-				"statName": "CBTBE_Charge_Target_Damage_Mod",
-				"operation": "Int_Add",
-				"modValue": "6",
-				"modType": "System.Int32"
+				"statName": "CBTBE_Physical_Weapon_Extra_Hits_Count",
+				"operation": "Float_Add",
+				"modValue": "1",
+				"modType": "System.Single"
 			}
 		}
 	],

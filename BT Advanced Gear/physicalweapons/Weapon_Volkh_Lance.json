@@ -11,8 +11,8 @@
 			"PunchHitTable",
 			"PhysWeapDamage: 1",
 			"PhysWeapStab: 0.5",
-			"PhysWeapAccuracy: -2",
-			"ChargeDamageBonus: +24%",
+			"PhysWeapAccuracy: -1",
+			"ChargeDamageBonus: +12%",
 			"LanceCrit"
 		],
 		"Flags": [
@@ -35,7 +35,7 @@
 	"AmmoCategory": "NotSet",
 	"StartingAmmoCapacity": 0,
 	"HeatGenerated": 0,
-	"Damage": 0,
+	"Damage": 1,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
 	"EvasivePipsIgnored": 0,
@@ -57,12 +57,12 @@
 		"Cost": 12000,
 		"Rarity": 4,
 		"Purchasable": true,
-		"Manufacturer": "Valkyrie II",
+		"Manufacturer": "Volkh",
 		"Model": "Lance",
 		"UIName": "Lance",
-		"Id": "Weapon_ValkyrieII_Lance",
+		"Id": "Weapon_Volkh_Lance",
 		"Name": "Lance",
-		"Details": "This is a unique lance, designed for the Valkyrie II. It cannot be removed or used elsewhere.",
+		"Details": "This is a unique lance, designed for the Volkh. It cannot be removed or used elsewhere.",
 		"Icon": "arrowhead"
 	},
 	"BonusValueA": "",
@@ -73,7 +73,7 @@
 	"BattleValue": 0,
 	"InventorySize": 3,
 	"Tonnage": 3,
-	"AllowedLocations": "RightArm",
+	"AllowedLocations": "RightArm,LeftArm",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
 	"statusEffects": [
@@ -154,7 +154,7 @@
 			"statisticData": {
 				"statName": "CBTBE_Physical_Weapon_Location_Table",
 				"operation": "Set",
-				"modValue": "PUNCH",
+				"modValue": "STANDARD",
 				"modType": "System.String"
 			},
 			"nature": "Buff"
@@ -237,14 +237,14 @@
 			"Description": {
 				"Id": "StatusEffect-LanceBaseAcc",
 				"Name": "Lance Base Accuracy",
-				"Details": "Lances have a -2 accuracy penalty on their attacks.",
+				"Details": "Lances have a -1 accuracy penalty on their attacks.",
 				"Icon": "arrowhead"
 			},
 			"nature": "Buff",
 			"statisticData": {
 				"statName": "CBTBE_Physical_Weapon_Attack_Mod",
 				"operation": "Int_Add",
-				"modValue": "2",
+				"modValue": "1",
 				"modType": "System.Int32"
 			}
 		},
@@ -262,13 +262,13 @@
 			"Description": {
 				"Id": "StatusEffect-LanceChargeDMGPerHex",
 				"Name": "Charge Damage Increased",
-				"Details": "Charge attacks deal 24% more damage.",
+				"Details": "Charge attacks deal 12% more damage.",
 				"Icon": "arrowhead"
 			},
 			"statisticData": {
 				"statName": "CBTBE_Charge_Target_Damage_Mod",
 				"operation": "Int_Add",
-				"modValue": "6",
+				"modValue": "3",
 				"modType": "System.Int32"
 			}
 		}
