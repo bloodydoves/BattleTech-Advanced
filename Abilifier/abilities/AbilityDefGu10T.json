@@ -29,7 +29,7 @@
 			"effectType": "StatisticEffect",
 			"Description": {
 				"Id": "StatusEffect-HullDownCruise",
-				"Name": "Hull Down",
+				"Name": "Hull Down Cruise",
 				"Details": "This unit can not move this turn but takes 90% reduced damage from all sources until end of next turn.",
 				"Icon": "shield-reflect"
 			},
@@ -57,12 +57,68 @@
 			"effectType": "StatisticEffect",
 			"Description": {
 				"Id": "StatusEffect-HullDownFlank",
-				"Name": "Hull Down",
+				"Name": "Hull Down Flank",
 				"Details": "This unit can not move this turn but takes 90% reduced damage from all sources until end of next turn.",
 				"Icon": "shield-reflect"
 			},
 			"statisticData": {
 				"statName": "FlankSpeed",
+				"operation": "Float_Multiply",
+				"modValue": "0.01",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"forcePathRebuild": true,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-HullDownWalk",
+				"Name": "Hull Down Walk",
+				"Details": "This unit can not move this turn but takes 90% reduced damage from all sources until end of next turn.",
+				"Icon": "hypersonic-bolt"
+			},
+			"statisticData": {
+				"statName": "WalkSpeed",
+				"operation": "Float_Multiply",
+				"modValue": "0.01",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"forcePathRebuild": true,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-HullDownRun",
+				"Name": "Hull Down Run",
+				"Details": "This unit can not move this turn but takes 90% reduced damage from all sources until end of next turn.",
+				"Icon": "hypersonic-bolt"
+			},
+			"statisticData": {
+				"statName": "CBTBE_RunMultiMod",
 				"operation": "Float_Multiply",
 				"modValue": "0.01",
 				"modType": "System.Single"
@@ -84,7 +140,7 @@
 			"effectType": "StatisticEffect",
 			"Description": {
 				"Id": "StatusEffect-HullDownDmgReduce",
-				"Name": "Hull Down",
+				"Name": "Hull Down DR",
 				"Details": "This unit can not move this turn but takes 90% reduced damage from all sources until end of next turn.",
 				"Icon": "shield-reflect"
 			},
