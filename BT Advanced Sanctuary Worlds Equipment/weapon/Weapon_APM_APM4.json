@@ -6,11 +6,11 @@
 			}
 		],
 		"BonusDescriptions": [
-				"APM",
-				"WpnCrits: +25%",
-				"MissileHealth: 4",
-				"WeaponAttachmentCompatible: SRM FCS"
-			]
+			"APM",
+			"WpnCrits: +25%",
+			"MissileHealth: 4",
+			"WeaponAttachmentCompatible: SRM FCS"
+		]
 	},
     "Category" : "Missile",
     "Type" : "SRM",
@@ -25,7 +25,7 @@
     "AmmoCategory" : "APM",
     "StartingAmmoCapacity" : 0,
     "HeatGenerated" : 4,
-    "Damage" : 1,
+    "Damage" : 6,
     "OverheatedDamageMultiplier" : 0,
     "EvasiveDamageMultiplier" : 0,
     "EvasivePipsIgnored" : 0,
@@ -74,9 +74,173 @@
     "AllowedLocations" : "All",
     "DisallowedLocations" : "All",
     "CriticalComponent" : false,
-    "statusEffects" : [
-        
-    ],
+	"Modes": [
+		{
+			"Id": "HiEx",
+			"UIName": "HiEx",
+			"isBaseMode": true
+		},
+		{
+			"Id": "Acid",
+			"UIName": "Acid",
+			"isBaseMode": false,
+			"DamagePerShot": -4,
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": 2,
+						"ticksOnActivations": true,
+						"useActivationsOfTarget": true,
+						"ticksOnEndOfRound": false,
+						"ticksOnMovements": false,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "OnHit",
+						"extendDurationOnTrigger": 2,
+						"showInTargetPreview": true,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "Effect_AcidDMG",
+						"Name": "Acid",
+						"Details": "This unit is coated with corrosive Acid. It will take 20% increased Damage.",
+						"Icon": "uixSvgIcon_biome_Heated"
+					},
+					"statisticData": {
+						"statName": "DamageReductionMultiplierAll",
+						"operation": "Float_Add",
+						"modValue": "0.2",
+						"modType": "System.Single"
+					},
+					"nature": "Debuff"
+				}
+			]
+		},
+		{
+			"Id": "Cryo",
+			"UIName": "Cryo",
+			"isBaseMode": false,
+			"DamagePerShot": -4,
+			"statusEffects": [
+				{
+					  "durationData": {
+						"duration": 2,
+						"ticksOnActivations": true,
+						"useActivationsOfTarget": true,
+						"ticksOnEndOfRound": false,
+						"ticksOnMovements": false,
+						"stackLimit": 3
+					  },
+					  "targetingData": {
+						"effectTriggerType": "OnHit",
+						"showInTargetPreview": true,
+						"showInStatusPanel": true
+					  },
+					  "effectType": "StatisticEffect",
+					  "Description": {
+						"Id": "APMCryo-WalkSlow",
+						"Name": "Cryo Walk Impaired",
+						"Details": "The Mech's Movement is reduced.",
+						"Icon": "snowflake"
+					  },
+					  "nature": "Debuff",
+					  "statisticData": {
+						"statName": "WalkSpeed",
+						"operation": "Float_Multiply",
+						"modValue": "0.75",
+						"modType": "System.Single"
+					  }
+				},
+				{
+					  "durationData": {
+						"duration": 2,
+						"ticksOnActivations": true,
+						"useActivationsOfTarget": true,
+						"ticksOnEndOfRound": false,
+						"ticksOnMovements": false,
+						"stackLimit": 3
+					  },
+					  "targetingData": {
+						"effectTriggerType": "OnHit",
+						"showInTargetPreview": false,
+						"showInStatusPanel": false
+					  },
+					  "effectType": "StatisticEffect",
+					  "Description": {
+						"Id": "APMCryo-RunSlow",
+						"Name": "Cryo Sprint Impaired",
+						"Details": "The Mech's Movement is reduced.",
+						"Icon": "uixSvgIcon_status_sensorsImpaired"
+					  },
+					  "nature": "Debuff",
+					  "statisticData": {
+						"statName": "CBTBE_RunMultiMod",
+						"operation": "Float_Add",
+						"modValue": "-0.25",
+						"modType": "System.Single"
+					  }
+				}
+			]
+		},
+		{
+			"Id": "Inferno",
+			"UIName": "Inferno",
+			"DamagePerShot": -4,
+			"HeatDamage": 6,
+			"FireTerrainStrength": 4,
+			"FireTerrainChance":1,
+			"FireDurationWithoutForest":2,
+			"FireOnSuccessHit" : true
+		},
+		{
+			"Id": "Tandem",
+			"UIName": "Tandem",
+			"isBaseMode": false,
+			"DamagePerShot": -4,
+			"APDamage": 2
+		},
+		{
+			"Id": "Tracer",
+			"UIName": "Tracer",
+			"isBaseMode": false,
+			"DamagePerShot": -4,
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": 2,
+						"ticksOnActivations": true,
+						"useActivationsOfTarget": true,
+						"ticksOnEndOfRound": false,
+						"ticksOnMovements": false,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "OnHit",
+						"extendDurationOnTrigger": 2,
+						"showInTargetPreview": true,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "Effect_TracerDMG",
+						"Name": "Tracer",
+						"Details": "This unit is coated with sensor-attracting gel. Attacks against this unit are more accurate.",
+						"Icon": "uixSvgIcon_biome_Heated"
+					},
+					"statisticData": {
+						"statName": "ToHitThisActor",
+						"operation": "Float_Add",
+						"modValue": "-2.0",
+						"modType": "System.Single"
+					},
+					"nature": "Debuff"
+				}
+			]
+		}
+	],
+    "statusEffects" : [ ],
     "ComponentTags" : {
         "items" : [
             "component_type_stock",
