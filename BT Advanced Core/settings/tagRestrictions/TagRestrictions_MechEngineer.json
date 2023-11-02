@@ -23,9 +23,14 @@
 		},
 		{
 			"Tag": "ArmHandActuator",
-			"RequiredAnyTags": [
-				"LowerArm.LeftArm",
-				"LowerArm.RightArm"
+			"RequiredTags": [
+				"LowerArm.Equipped"
+			]
+		},
+		{
+			"Tag": "MeleeWeaponHandRequired",
+			"RequiredTags": [
+				"Hand.Equipped"
 			]
 		},
 		{
@@ -634,6 +639,12 @@
 		},
 		{
 			"Tag": "Probe",
+			"IncompatibleTags": [
+				"ProtoMech"
+			]
+		},
+		{
+			"Tag": "ECM",
 			"IncompatibleTags": [
 				"ProtoMech"
 			]
