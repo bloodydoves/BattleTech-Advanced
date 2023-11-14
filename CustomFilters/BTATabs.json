@@ -11,18 +11,6 @@
     },
     "Buttons": [
 			{
-				"Text": "All",
-				"Tooltip": "Show All Weapons",
-				"Filter": {
-					"ComponentTypes": [
-						"Weapon"
-					],
-					"NotCategories": [
-						"notused"
-					]
-				}
-			},
-			{
 				"Icon": "uixSvgIcon_weapon_Ballistic",
 				"Tooltip": "Show Autocannons",
 				"Filter": {
@@ -159,7 +147,7 @@
 			},
 			{
 				"Icon": "uixSvgIcon_weapon_Missile",
-				"Tooltip": "Show SRM, MML, and Narc weapons",
+				"Tooltip": "Show SRM-class weapons",
 				"Filter": {
 					"ComponentTypes": [
 						"Weapon"
@@ -168,10 +156,10 @@
 						"w/m/s/srm",
 						"w/m/s/ssrm",
 						"w/m/s/mml",
-						"w/m/s/narc",
 						"w/m/s/rl",
-						"w/m/s/drm",
-						"w/m/s/apm"
+						"w/m/l/atm",
+						"w/m/l/iatm",
+						"w/m/s/drm"
 					],
 					"NotCategories": [
 						"notused"
@@ -180,7 +168,7 @@
 			},
 			{
 				"Icon": "MRM",
-				"Tooltip": "Show LRM, MRM, and Thunderbolt weapons",
+				"Tooltip": "Show LRM-class weapons",
 				"Filter": {
 					"ComponentTypes": [
 						"Weapon"
@@ -190,10 +178,24 @@
 						"w/m/l/elrm",
 						"w/m/s/mrm",
 						"w/m/l/gyrojet",
-						"w/m/t/thunderbolt",
-						"w/m/l/atm",
-						"w/m/l/iatm",
 						"w/m/t/vrm"
+					],
+					"NotCategories": [
+						"notused"
+					]
+				}
+			},
+			{
+				"Icon": "missile-pod",
+				"Tooltip": "Show Misc Missile Weapons",
+				"Filter": {
+					"ComponentTypes": [
+						"Weapon"
+					],
+					"Categories": [
+						"w/m/t/thunderbolt",
+						"w/m/s/narc",
+						"w/m/s/apm"
 					],
 					"NotCategories": [
 						"notused"
@@ -249,21 +251,6 @@
 				}
 			},
 			{
-				"Icon": "bombing-run",
-				"Tooltip": "Show Bomb Bay weapons",
-				"Filter": {
-					"ComponentTypes": [
-						"Weapon"
-					],
-					"Categories": [
-						"w/m/t/bomb"
-					],
-					"NotCategories": [
-						"notused"
-					]
-				}
-			},
-			{
 				"Icon": "uixSvgIcon_equipment_TTS",
 				"Tooltip": "Show AMS systems",
 				"Filter": {
@@ -273,6 +260,21 @@
 					"Categories": [
 						"w/s/a/ams",
 						"w/s/a/lams"
+					],
+					"NotCategories": [
+						"notused"
+					]
+				}
+			},
+			{
+				"Icon": "bombing-run",
+				"Tooltip": "Show Bomb Bay weapons",
+				"Filter": {
+					"ComponentTypes": [
+						"Weapon"
+					],
+					"Categories": [
+						"w/m/t/bomb"
 					],
 					"NotCategories": [
 						"notused"
@@ -327,8 +329,6 @@
 							"a/a/a/sg",
 							"a/a/a/rac",
 							"a/a/a/taser",
-							"a/a/o/bombard",
-							"a/a/o/mortar",
 							"a/s/a/gatling",
 							"a/a/a/rifle"
 						],
@@ -411,7 +411,7 @@
 				},
 				{
 					"Icon": "uixSvgIcon_weapon_Missile",
-					"Tooltip": "Show SRM and Narc ammo",
+					"Tooltip": "Show SRM-class ammo",
 					"Filter": {
 						"ComponentTypes": [
 							"AmmunitionBox"
@@ -420,9 +420,7 @@
 							"a/m/s/srm",
 							"a/m/s/ssrm",
 							"SRMARTIVAmmo",
-							"a/m/s/narc",
-							"a/m/s/drm",
-							"a/m/s/apm"
+							"a/m/s/drm"
 						],
 						"NotCategories": [
 							"notused"
@@ -431,19 +429,35 @@
 				},
 				{
 					"Icon": "MRM",
-					"Tooltip": "Show LRM, MRM, and Thunderbolt ammo",
+					"Tooltip": "Show LRM-class ammo",
 					"Filter": {
 						"ComponentTypes": [
 							"AmmunitionBox"
 						],
 						"Categories": [
 							"a/m/l/lrm",
-							"a/m/t/thunderbolt",
 							"LRMARTIVAmmo",
 							"a/m/s/mrm",
 							"a/m/l/vrm",
 							"a/m/l/atm",
 							"a/m/l/iatm"
+						],
+						"NotCategories": [
+							"notused"
+						]
+					}
+				},
+				{
+					"Icon": "missile-pod",
+					"Tooltip": "Show Misc Missile ammo",
+					"Filter": {
+						"ComponentTypes": [
+							"AmmunitionBox"
+						],
+						"Categories": [
+							"a/m/t/thunderbolt",
+							"a/m/s/narc",
+							"a/m/s/apm"
 						],
 						"NotCategories": [
 							"notused"
