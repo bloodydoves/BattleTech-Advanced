@@ -1,0 +1,76 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "Quirk"
+			}
+		],
+		"BonusDescriptions": [
+			"ModularArmor: +100"
+		],
+		"Flags": [
+			"default",
+			"not_broken",
+			"no_salvage",
+			"autorepair"
+		]
+	},
+	"StatName": null,
+	"Description": {
+		"Cost": 500000,
+		"Rarity": 5,
+		"Purchasable": true,
+		"Manufacturer": "Quirk",
+		"Model": "Galleon",
+		"UIName": "Galleon Medium Shield",
+		"Id": "Gear_Quirk_Shield_Galleon",
+		"Name": "Galleon Medium Shield",
+		"Details": "This piece of gear represents the Galleon's inherent Medium Shield quirk. This gives the Galleon significant bonus arm armor.",
+		"Icon": "shield-reflect"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 5,
+	"Tonnage": 3,
+	"AllowedLocations": "LeftArm, RightArm",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-Shield_Large-{location}",
+				"Name": "Bonus Arm Armor",
+				"Details": "The BattleMech Shield is providing extra armor to the equipped arm at the cost of impairing that arm's accuracy with weaponry.",
+				"Icon": "shield-reflect"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "{location}.Armor",
+				"operation": "Float_Add",
+				"modValue": "100",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}
