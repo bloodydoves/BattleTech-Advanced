@@ -1,0 +1,424 @@
+{
+	"Custom": {
+		"ActivatableComponent": {
+			"ButtonName": "Conversion Gear",
+			"ActivationMessage": "AirMech",
+			"DeactivationMessage": "BattleMech",
+			"CanNotBeActivatedManualy": false,
+			"SwitchOffOnFall": true,
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect-LAM-AirMech-AccuracyDebuff",
+						"Name": "LAM Accuracy Decreased",
+						"Details": "Weapon attacks suffer -3 accuracy.",
+						"Icon": "uixSvgIcon_equipment_Gyro"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"modType": "System.Single",
+						"modValue": "3.0",
+						"operation": "Float_Add",
+						"statName": "AccuracyModifier",
+						"targetAmmoCategory": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponSubType": "NotSet",
+						"targetWeaponType": "NotSet"
+					}
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"forcePathRebuild": true,
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect-LAM-AirMech-Mode",
+						"Name": "AirMech mode",
+						"Details": "AirMech mode",
+						"Icon": "uixSvgIcon_equipment_Gyro"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"effectsPersistAfterDestruction": false,
+						"statName": "CUAlternateRepresentation",
+						"operation": "Set",
+						"modValue": "1",
+						"modType": "System.Single"
+					}
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"forcePathRebuild": true,
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect-LAM-AirMech-NoRandomAnim",
+						"Name": "AirMech mode",
+						"Details": "AirMech mode",
+						"Icon": "uixSvgIcon_equipment_Gyro"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"effectsPersistAfterDestruction": false,
+						"statName": "CUNoRandomIdleAnimations",
+						"operation": "Set",
+						"modValue": "True",
+						"modType": "System.Boolean"
+					}
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"forcePathRebuild": true,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect-LAM-AirMech-WalkSpeed",
+						"Name": "LAM Speed Boost",
+						"Details": "A LAM in AirMech Mode gains a substantial movement bonus.",
+						"Icon": "uixSvgIcon_equipment_Gyro"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"effectsPersistAfterDestruction": false,
+						"statName": "WalkSpeed",
+						"operation": "Float_Multiply",
+						"modValue": "2.0",
+						"modType": "System.Single"
+					}
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"forcePathRebuild": true,
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect-LAM-AirMech-RunSpeed",
+						"Name": "AirMech mode",
+						"Details": "AirMech mode",
+						"Icon": "uixSvgIcon_equipment_Gyro"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"effectsPersistAfterDestruction": false,
+						"statName": "CBTBE_RunMultiMod",
+						"operation": "Float_Add",
+						"modValue": "0.2",
+						"modType": "System.Single"
+					}
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"forcePathRebuild": true,
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect-LAM-AirMech-Landmines",
+						"Name": "AirMech mode",
+						"Details": "AirMech mode",
+						"Icon": "uixSvgIcon_equipment_Gyro"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"effectsPersistAfterDestruction": false,
+						"statName": "CULandminesUnaffected",
+						"operation": "Set",
+						"modValue": "True",
+						"modType": "System.Boolean"
+					}
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"forcePathRebuild": true,
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect-LAM-AirMech-Pathing",
+						"Name": "AirMech mode",
+						"Details": "AirMech mode",
+						"Icon": "uixSvgIcon_equipment_Gyro"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"effectsPersistAfterDestruction": false,
+						"statName": "CUPathingUnaffected",
+						"operation": "Set",
+						"modValue": "True",
+						"modType": "System.Boolean"
+					}
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"forcePathRebuild": true,
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect-LAM-AirMech-TerrainIgnore",
+						"Name": "AirMech mode",
+						"Details": "AirMech mode",
+						"Icon": "uixSvgIcon_equipment_Gyro"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"effectsPersistAfterDestruction": false,
+						"statName": "CUDesignMasksUnaffected",
+						"operation": "Set",
+						"modValue": "True",
+						"modType": "System.Boolean"
+					}
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"forcePathRebuild": true,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect-LAM-AirMech-FiringArc",
+						"Name": "LAM 360 Firing Arc",
+						"Details": "A LAM in AirMech Mode has a 360 degree arc of fire.",
+						"Icon": "uixSvgIcon_equipment_Gyro"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"effectsPersistAfterDestruction": false,
+						"statName": "CUFiringArc",
+						"operation": "Set",
+						"modValue": "360",
+						"modType": "System.Single"
+					}
+				},
+				{
+					"durationData": {
+						"duration": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInTargetPreview": false,
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect-LAMAirMech-UnsteadyPenalty",
+						"Name": "Gyroscopic Orientation",
+						"Details": "The gyro helps establish center-of-mass equilibrium for the BattleMech.",
+						"Icon": "uixSvgIcon_equipment_Gyro"
+					},
+					"statisticData": {
+						"statName": "UnsteadyThreshold",
+						"operation": "Float_Add",
+						"modValue": "-25.0",
+						"modType": "System.Single"
+					},
+					"nature": "Buff"
+				},
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StatusEffect-LAMAirMech-DamagePenalty",
+						"Name": "LAM Damage Penalty",
+						"Details": "All incoming damage increased by 10%.",
+						"Icon": "layeredarmor"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamageReductionMultiplierAll",
+						"operation": "Float_Multiply",
+						"modValue": "1.1",
+						"modType": "System.Single"
+					}
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInTargetPreview": false,
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "AEROUNIT",
+						"Name": "aero unit",
+						"Details": "aero unit thing",
+						"Icon": "uixSvgIcon_equipment_Cockpit"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "AeroUnit",
+						"operation": "Set",
+						"modValue": "true",
+						"modType": "System.Boolean"
+					}
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInTargetPreview": false,
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "Unswarmable",
+						"Name": "Unswarmable Stat",
+						"Details": "aero unit thing",
+						"Icon": "uixSvgIcon_equipment_Cockpit"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "IsUnswarmableBattleArmor",
+						"operation": "Set",
+						"modValue": "true",
+						"modType": "System.Boolean"
+					}
+				}
+			]
+		},
+		"Category": [
+			{
+				"CategoryID": "Avionics"
+			}
+		],
+		"Linked": {
+			"Links": [
+				{
+					"ComponentDefId": "emod_avionics_size1",
+					"Location": "LeftTorso"
+				},
+				{
+					"ComponentDefId": "emod_avionics_size1",
+					"Location": "RightTorso"
+				}
+			]
+		},
+		"Flags": [
+			"not_broken",
+			"no_salvage"
+		],
+		"BonusDescriptions": [
+			"Avionics",
+			"LAMDamageTaken: 10%",
+			"LAMAccuracy: -3",
+			"LAMStabTaken: 25",
+			"LAMWalkSpeed: 100%",
+			"LAMSprintSpeed: +0.2"
+		]
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 20000,
+		"Rarity": 99,
+		"Purchasable": false,
+		"Manufacturer": "Alliance Aerospace",
+		"Model": "LAM",
+		"UIName": "Avionics",
+		"Id": "Gear_Avionics_THM",
+		"Name": "Avionics",
+		"Details": "This is the transforming gear for the Thunder Hammer LAM. The avionics gear controls the mech's transformation technology and permits the mech to swap between modes easily and without trouble. The technology is fragile and heavy though, prone to breakage, which made LAMs troublesome in terms of maintanence, leading to LAMs slowly fading out of active service as more and more of them broke. However, in the 3060s, the knowledge to repair the avionics returned and LAMs began proliferating around the Inner Sphere again.\n\n <b><color=#ff0066>TRANSFORMS TO AIRMECH MODE: Mech will hover above the battlefield, will ignore terrain, and will move at considerably higher speeds. Mech walk speed translates to 'flight' speed in AirMech mode.</color></b>",
+		"Icon": "uixSvgIcon_equipment_Gyro"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 7,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [],
+	"ComponentTags": {
+		"items": [
+			"component_type_variant",
+			"component_type_variant3",
+			"cae_ai_speed",
+			"cae_ai_defence",
+			"cae_ai_offence"
+		],
+		"tagSetSourceFile": ""
+	}
+}
