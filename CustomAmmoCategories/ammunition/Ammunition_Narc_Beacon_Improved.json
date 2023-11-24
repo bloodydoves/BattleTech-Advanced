@@ -1,8 +1,8 @@
 {
 	"Description": {
 		"Id": "Ammunition_Narc_Beacon_Improved",
-		"Name": "Narc Beacon Improved Ammo",
-		"UIName": "Improved",
+		"Name": "iNarc Beacon Improved Ammo",
+		"UIName": "Beacon",
 		"Details": "Long range missiles, capable of dealing moderate damage at long range. Each missile lacks punch, but in a group they can deal significant damage.",
 		"Icon": null,
 		"Cost": 0,
@@ -10,21 +10,17 @@
 		"Purchasable": false
 	},
 	"Type": "Normal",
-	"Category": "NARC",
+	"Category": "INARC",
 	"AIBattleValue": 70,
 	"HeatGenerated": 0,
 	"HeatGeneratedModifier": 1,
 	"ArmorDamageModifier": 1,
 	"ISDamageModifier": 1,
 	"CriticalDamageModifier": 1,
-	"MaxRange": 330.0,
-	"ShortRange": 90.0,
-	"MiddleRange": 180.0,
-	"LongRange": 270.0,
 	"statusEffects": [
 		{
 			"durationData": {
-				"duration": 3,
+				"duration": -1,
 				"ticksOnActivations": true,
 				"useActivationsOfTarget": true,
 				"ticksOnEndOfRound": false,
@@ -47,8 +43,8 @@
 			"effectType": "StatisticEffect",
 			"Description": {
 				"Id": "PainterEffect",
-				"Name": "PING!",
-				"Details": "NARC'd. +2 to be hit.",
+				"Name": "iNarc Attached",
+				"Details": "This unit has been iNarc'd. Units shooting this unit gain a +2 bonus to hit them and missile weapons deal 20% more damage to them.",
 				"Icon": "radio-tower"
 			},
 			"nature": "Debuff",
@@ -77,7 +73,7 @@
 		},
 		{
 			"durationData": {
-				"duration": 3,
+				"duration": -1,
 				"ticksOnActivations": true,
 				"useActivationsOfTarget": true,
 				"ticksOnEndOfRound": false,
@@ -95,7 +91,7 @@
 				"forcePathRebuild": false,
 				"forceVisRebuild": false,
 				"showInTargetPreview": false,
-				"showInStatusPanel": true
+				"showInStatusPanel": false
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
@@ -121,7 +117,7 @@
 		},
 		{
 			"durationData": {
-				"duration": 3,
+				"duration": -1,
 				"ticksOnActivations": false,
 				"useActivationsOfTarget": false,
 				"ticksOnEndOfRound": false,
@@ -143,7 +139,7 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "PainterEffect1",
+				"Id": "StatusEffect-NARC-Signature",
 				"Name": "Detected",
 				"Details": "NARC increases Signature by 25%",
 				"Icon": "radio-tower"
@@ -172,7 +168,7 @@
 		},
 		{
 			"durationData": {
-				"duration": 3,
+				"duration": -1,
 				"ticksOnActivations": false,
 				"useActivationsOfTarget": false,
 				"ticksOnEndOfRound": false,
@@ -194,7 +190,7 @@
 			},
 			"effectType": "StatisticEffect",
 			"Description": {
-				"Id": "PainterEffect2",
+				"Id": "StatusEffect-NARC-Visibility",
 				"Name": "Detected",
 				"Details": "NARC increases Visibility by 25%",
 				"Icon": "radio-tower"
@@ -223,7 +219,7 @@
 		},
 		{
 			"durationData": {
-				"duration": 3,
+				"duration": -1,
 				"ticksOnActivations": true,
 				"useActivationsOfTarget": false,
 				"ticksOnEndOfRound": false,

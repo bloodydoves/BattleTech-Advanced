@@ -1848,6 +1848,12 @@
 			"Full": "Requires an ECM system to be installed"
 		},
 		{
+			"Bonus": "ReqISECM",
+			"Short": "IS ECM Required",
+			"Long": "Inner Sphere ECM Required",
+			"Full": "Requires an Inner Sphere ECM system to be installed. Clan/Sanctuary ECM is incompatible."
+		},
+		{
 			"Bonus": "ReqWings",
 			"Short": "PWS Required",
 			"Long": "Partial Wings Required",
@@ -2395,21 +2401,21 @@
 		},
 		{
 			"Bonus": "CASE",
-			"Short": "C.A.S.E",
-			"Long": "C.A.S.E",
-			"Full": "CASE prevents Ammo Explosion from traveling to Center Torso"
+			"Short": "CASE",
+			"Long": "CASE",
+			"Full": "CASE prevents internal explosions from transferring out of the CASE'd location (e.x. if an explosion happens in a CASE'd side torso it will not transfer into the center torso and destroy the mech)."
 		},
 		{
 			"Bonus": "CASEII",
 			"Short": "CASEII {0}",
 			"Long": "CASEII {0}",
-			"Full": "CASE II reduces Ammo Explosion Damage to only {0} points of Damage."
+			"Full": "CASE II reduces internal explosions damage to only {0} points of damage to the CASE'd location's structure and also prevents explosions from transferring out of the CASE'd location like CASE I does."
 		},
 		{
 			"Bonus": "SHIELD",
 			"Short": "SHIELD {0}",
 			"Long": "SHIELD {0}",
-			"Full": "SHIELD reduces Ammo Explosion Damage to only {0} points of Damage."
+			"Full": "SHIELD reduces internal explosions damage to only {0} points of damage to the SHIELDed location's structure and also prevents explosions from transferring out of the SHIELDed location like Inner Sphere CASE does."
 		},
 		{
 			"Bonus": "CASED",
@@ -3858,10 +3864,10 @@
 			"Full": "When the weapon jams, it explodes, dealing damage equal to one shot from the weapon."
 		},
 		{
-			"Bonus": "PermanentJam",
-			"Short": "Permanent Jams",
-			"Long": "Permanent Jams",
-			"Full": "When this weapon or component jams it cannot be unjammed until the mission is over, when it will be automatically unjammed between missions."
+			"Bonus": "DestroyOnJam",
+			"Short": "Destroy Jam",
+			"Long": "Destroy On Jam",
+			"Full": "When this weapon jams it destroys the weapon, requiring it to be replaced."
 		},
 		{
 			"Bonus": "MultiTrac",
@@ -5133,7 +5139,7 @@
 			"Bonus": "MaxCountJJ",
 			"Short": "Maximum JJ Count",
 			"Long": "Maximum JJ Count x{0}",
-			"Full": "When using this jump jet type, a mech can mount a number of max jump jets equal to {0} times its Walk MP (i.e. if Walk MP is 4 and Max JJ Count is 1, the mech can mount 4 JJs; if Walk MP is 4 and Max JJ Count is 1.5, the mech can mount 6 JJs)."
+			"Full": "When using this jump jet type, a mech can mount a number of max jump jets equal to {0} times its Walk MP (e.x. if Walk MP is 4 and Max JJ Count is 1, the mech can mount 4 JJs; if Walk MP is 4 and Max JJ Count is 1.5, the mech can mount 6 JJs)."
 		},
 		{
 			"Bonus": "PhysicalDamageReduction",
@@ -5356,6 +5362,30 @@
 			"Short": "LeagueNet Speed Node",
 			"Long": "LeagueNet Speed Node",
 			"Full": "This LeagueNet Support Node provides a {0} sprint speed bonus to the Focal Node carrier while imposing a {1} sprint speed penalty to the Support Node carrier."
+		},
+		{
+			"Bonus": "LanceCrit",
+			"Short": "Lance Crit",
+			"Long": "Lance Armor Penetration",
+			"Full": "Lances always punch through armor and force a critical damage check against the target, even if they don't damage structure."
+		},
+		{
+			"Bonus": "TridentCrit",
+			"Short": "Trident Crit",
+			"Long": "Trident Armor Penetration",
+			"Full": "Tridents always punch through armor and force a critical damage check against the target, even if they don't damage structure."
+		},
+		{
+			"Bonus": "iNarcECMScramble",
+			"Short": "iNarc ECM",
+			"Long": "iNarc ECM Scrambling",
+			"Full": "iNarc ECM Pods break enemy C3, C3i, and Drone Networks upon attaching to their targets. Essentially, the ECM pod affects an enemy as though it was forcibly disconnected from its electronic warfare networks; even if the network is not normally affected by ECM in this manner the iNarc ECM pod will remove them from the network."
+		},
+		{
+			"Bonus": "iNarcPermanence",
+			"Short": "iNarc Permanence",
+			"Long": "iNarc Permanence",
+			"Full": "Unlike its progenitor, the iNarc system is a permanent effect. This means that when a target is tagged by an iNarc pod they are stuck with the effects of the pod until the mission ends or they are destroyed, whichever comes first. iNarc pods do not stack with themselves or with standard Narc or TAG effects."
 		}
 	]
 }

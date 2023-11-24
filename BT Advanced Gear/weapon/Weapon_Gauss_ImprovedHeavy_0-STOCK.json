@@ -14,6 +14,8 @@
 			"IsHeavyGauss",
 			"WpnAccuracy: +1",
 			"WeaponBoom: 110",
+			"Knockdown",
+			"KnockdownChance: 60%",
 			"WeaponAttachmentCompatible: Gauss FCS",
 			"LocationRestricted: Torsos Only"
 		]
@@ -70,7 +72,33 @@
 	"AllowedLocations": "LeftTorso,RightTorso,CenterTorso",
 	"DisallowedLocations": "LeftArm,RightArm",
 	"CriticalComponent": false,
-	"statusEffects": [],
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": 1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnWeaponFire",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "WeaponEffect-SelfknockdownCheck_OnFire",
+				"Name": "self knockdown check",
+				"Details": "self knockdown check.",
+				"Icon": "uixSvgIcon_run_n_gun"
+			},
+			"statisticData": {
+				"statName": "SelfknockdownCheck_OnFire",
+				"operation": "Float_Add",
+				"modValue": "0.6",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	],
 	"ComponentTags": {
 		"items": [
 			"component_type_stock",

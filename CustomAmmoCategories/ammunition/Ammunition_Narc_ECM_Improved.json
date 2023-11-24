@@ -1,0 +1,174 @@
+{
+	"Description": {
+		"Id": "Ammunition_Narc_ECM_Improved",
+		"Name": "iNarc Beacon ECM Ammo",
+		"UIName": "ECM",
+		"Details": "Long range missiles, capable of dealing moderate damage at long range. Each missile lacks punch, but in a group they can deal significant damage.",
+		"Icon": null,
+		"Cost": 0,
+		"Rarity": 0,
+		"Purchasable": false
+	},
+	"Type": "Normal",
+	"Category": "INARC",
+	"AIBattleValue": 70,
+	"HeatGenerated": 0,
+	"HeatGeneratedModifier": 1,
+	"ArmorDamageModifier": 1,
+	"ISDamageModifier": 1,
+	"CriticalDamageModifier": 1,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-NARC-C3-Scrambling",
+				"Name": "Network Scrmbling",
+				"Details": "This unit has been hit with an iNarc ECM pod and has been disconnected from any C3, C3i, or Drone Networks it may have been attached to.",
+				"Icon": "UixSvgIcon_designMask_electricalField"
+			},
+			"nature": "Debuff",
+			"statisticData": {
+				"statName": "ADD_ENCOUNTER_TAG_C3_Network",
+				"operation": "Float_Add",
+				"modValue": "-2",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-NARC-C3i-Scrambling",
+				"Name": "C3i Network Scrmbling",
+				"Details": "This unit has been hit with an INarc ECM pod and has been disconnected from any C3, C3i, or Drone Networks it may have been attached to.",
+				"Icon": "radio-tower"
+			},
+			"nature": "Debuff",
+			"statisticData": {
+				"statName": "ADD_ENCOUNTER_TAG_C3i_Network",
+				"operation": "Float_Add",
+				"modValue": "-2",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-NARC-Drone-Scrambling",
+				"Name": "Drone Network Scrmbling",
+				"Details": "This unit has been hit with an INarc ECM pod and has been disconnected from any C3, C3i, or Drone Networks it may have been attached to.",
+				"Icon": "radio-tower"
+			},
+			"nature": "Debuff",
+			"statisticData": {
+				"statName": "ADD_ENCOUNTER_TAG_Drone_Network",
+				"operation": "Float_Add",
+				"modValue": "-2",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-NARC-Accuracy",
+				"Name": "iNarc Attached",
+				"Details": "This unit has been iNarc'd. Units shooting this unit gain a +2 bonus to hit them.",
+				"Icon": "radio-tower"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "ToHitThisActor",
+				"operation": "Float_Add",
+				"modValue": "-2.0",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 0,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "NotSet",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false,
+				"hideApplicationFloatie": true
+			},
+			"effectType": "VFXEffect",
+			"Description": {
+				"Id": "StatusEffect-NARC-IndicatorVFX",
+				"Name": "NARC ATTACHED",
+				"Details": "Visual indicator of the NARC effect",
+				"Icon": "uixSvgIcon_statusMarked"
+			},
+			"nature": "Debuff",
+			"vfxData": {
+				"vfxName": "vfxPrfPrtl_narcMarker_loop",
+				"attachToImpactPoint": true,
+				"location": -1,
+				"isAttached": true,
+				"facesAttacker": false,
+				"isOneShot": false,
+				"duration": -1.0
+			}
+		}
+	]
+}

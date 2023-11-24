@@ -23,9 +23,14 @@
 		},
 		{
 			"Tag": "ArmHandActuator",
-			"RequiredAnyTags": [
-				"LowerArm.LeftArm",
-				"LowerArm.RightArm"
+			"RequiredTags": [
+				"LowerArm.Equipped"
+			]
+		},
+		{
+			"Tag": "MeleeWeaponHandRequired",
+			"RequiredTags": [
+				"Hand.Equipped"
 			]
 		},
 		{
@@ -41,20 +46,9 @@
 			]
 		},
 		{
-			"Tag": "StealthSystem",
-			"RequiredTags": [
-				"ElectronicCounterMeasures",
-				"StealthArmor"
-			],
-			"IncompatibleTags": [
-				"ModularArmor",
-				"ModularRearArmor"
-			]
-		},
-		{
 			"Tag": "StealthArmor",
 			"RequiredTags": [
-				"ECM"
+				"StealthCompatible"
 			],
 			"IncompatibleTags": [
 				"ModularArmor",
@@ -63,7 +57,8 @@
 				"C3Slave",
 				"NullSig",
 				"CLPS",
-				"BlueShield"
+				"BlueShield",
+				"StealthIncompatible"
 			]
 		},
 		{
@@ -348,6 +343,25 @@
 				"MASC"
 			]
 		},
+		
+		{
+			"Tag": "Supercharger.CenterTorso",
+			"RequiredTags": [
+				"EnginePart.CenterTorso"
+			]
+		},
+		{
+			"Tag": "Supercharger.LeftTorso",
+			"RequiredTags": [
+				"EnginePart.LeftTorso"
+			]
+		},
+		{
+			"Tag": "Supercharger.RightTorso",
+			"RequiredTags": [
+				"EnginePart.RightTorso"
+			]
+		},
 		{
 			"Tag": "ProtoTSM",
 			"IncompatibleTags": [
@@ -629,6 +643,18 @@
 				"C3Slave",
 				"C3Master",
 				"C3i"
+			]
+		},
+		{
+			"Tag": "Probe",
+			"IncompatibleTags": [
+				"ProtoMech"
+			]
+		},
+		{
+			"Tag": "ECM",
+			"IncompatibleTags": [
+				"ProtoMech"
 			]
 		}
 	]

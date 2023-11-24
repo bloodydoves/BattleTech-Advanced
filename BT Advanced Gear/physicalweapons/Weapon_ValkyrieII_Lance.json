@@ -3,33 +3,37 @@
 		"Category": [
 			{
 				"CategoryID": "w/s/m/melee"
+			},
+			{
+				"CategoryID": "MeleeWeaponHandRequired"
 			}
 		],
 		"BonusDescriptions": [
-				"IsPhysWeap",
-				"PhysWeapUnsteady",
-				"PunchHitTable",
-				"PhysWeapDamage: 1",
-				"PhysWeapStab: 0.5",
-				"PhysWeapAccuracy: -2",
-				"ChargeDamageBonus: +24%"
-			],
+			"IsPhysWeap",
+			"PhysWeapUnsteady",
+			"PunchHitTable",
+			"PhysWeapDamage: 1",
+			"PhysWeapStab: 0.5",
+			"PhysWeapAccuracy: -2",
+			"ChargeDamageBonus: +24%",
+			"LanceCrit"
+		],
 		"Flags": [
 			"default",
-				"not_broken",
-				"no_salvage",
-				"autorepair"
+			"not_broken",
+			"no_salvage",
+			"autorepair"
 		]
 	},
 	"weaponCategoryID": "MeleeWeapon",
 	"Type": "MachineGun",
 	"WeaponSubType": "MachineGun",
 	"MinRange": 0,
-	"MaxRange": 30,
+	"MaxRange": 0,
 	"RangeSplit": [
-		30,
-		30,
-		30
+		0,
+		0,
+		0
 	],
 	"AmmoCategory": "NotSet",
 	"StartingAmmoCapacity": 0,
@@ -50,6 +54,7 @@
 	"AttackRecoil": 0,
 	"Instability": 0,
 	"NotUseInMelee": true,
+	"APCriticalChanceMultiplier": 1,
 	"WeaponEffectID": "WeaponEffect-Weapon_MachineGun",
 	"Description": {
 		"Cost": 12000,
@@ -264,10 +269,10 @@
 				"Icon": "arrowhead"
 			},
 			"statisticData": {
-				"statName": "CBTBE_Charge_Target_Damage_Mod",
-				"operation": "Int_Add",
-				"modValue": "6",
-				"modType": "System.Int32"
+				"statName": "CBTBE_Charge_Target_Damage_Mult",
+				"operation": "Float_Multiply",
+				"modValue": "1.24",
+				"modType": "System.Single"
 			}
 		}
 	],

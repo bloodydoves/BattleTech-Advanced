@@ -1,0 +1,171 @@
+{
+	"Description": {
+		"Id": "bd_event_co_JohannsJaegers",
+		"Name": "Johann's Jaegers",
+		"Details": "\"Well, Commander {Commander.LastName}? What do you say to a little friendly sparring?\" You lean back in your chair and run a hand through your hair as you ponder the Hauptmann's offer. \"Let me run it by my crew, Hauptmann von Heidelberg, you'll hear from me soon.\" As the connection cuts you rise and call Darius to assemble the staff.\r\n\r\n\"So, if I've got this right, Johann's Jaegers are an elite mercenary unit and they're asking us for a training battle to keep their skills sharp? That about the shape of it?\" You nod affirmative and Darius's frown deepens. \"This is a weird situation, Commander. The only info I can find about these guys is that they're a super-elite unit that dates to [[DM.BaseDescriptionDefs[LoreOpBulldog],Operation Bulldog]] where they helped wipe out the [[DM.BaseDescriptionDefs[LoreClanSmokeJaguar],Smoke Jaguars]]. Are we sure we want to throw our MechWarriors into combat with that kind of skill and firepower?\" Yang practically leaps out of his chair to object, \"We've gotta do it! They've promised us one of their 'Mechs! Imagine, a BattleMech that overthrew a Clan! Commander, we have to go for it!\"",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 10000,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"tagSetSourceFile": "",
+			"items": []
+		},
+		"ExclusionTags": {
+			"tagSetSourceFile": "",
+			"items": [
+				"fought_Jaegers"
+			]
+		},
+		"RequirementComparisons": [
+			{
+				"obj": "Travel",
+				"op": "Equal",
+				"val": 0,
+				"valueConstant": "0"
+			},
+			{
+				"obj" : "Reputation.MercenaryReviewBoard",
+				"op" : "GreaterThanOrEqual",
+				"val" : 500,
+				"valueConstant" : "[rep_friendly_min]"
+			}
+		]
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "outcome_0",
+				"Name": "Pass on the contract",
+				"Details": "Pass on the contract.",
+				"Icon": null
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "outcome_0_0",
+						"Name": "Pass on the contract.",
+						"Details": "After mulling on it for another minute, you shake your head. \"Sorry Yang but I'm with Darius. Too many unknowns with these guys to take the risk.\" Yang sits back down with a sad huff and you know in your heart you'll be hearing about this in the officer's mess for the next week.",
+						"Icon": null
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"tagSetSourceFile": "Tags/PilotTags",
+								"items": [
+									"fought_Jaegers"
+								]
+							},
+							"RemovedTags": {
+								"tagSetSourceFile": "",
+								"items": []
+							},
+							"Stats": null,
+							"Actions": [],
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"ExclusionTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"RequirementComparisons": []
+			}
+		},
+		{
+			"Description": {
+				"Id": "outcome_1",
+				"Name": "Accept the contract.",
+				"Details": "Accept the contract.",
+				"Icon": null
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "outcome_1_0",
+						"Name": "Accept the contract.",
+						"Details": "I think I'm with you on this, Yang. The opportunity to both get a unique 'Mech and to make a new friend in the mercenary market outweighs the risks. I'll comm the Hauptmann back and tell him we'll take the contract.\"\r\n\r\n\r\n<b>A unique contract named Johann's Jaegers has been added to the Command Center.</b>",
+						"Icon": null
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"tagSetSourceFile": "Tags/PilotTags",
+								"items": [
+									"fought_Jaegers"
+								]
+							},
+							"RemovedTags": {
+								"tagSetSourceFile": "",
+								"items": []
+							},
+							"Stats": null,
+							"Actions": [
+								{
+									"Type": "System_AddContract",
+									"value": "Assassinate_JohannsJaegers",
+									"valueConstant": null,
+									"additionalValues": [
+										"JohannsJaegers",
+										"SelfEmployed",
+										null,
+										null,
+										null,
+										null,
+										"8",
+										null
+									]
+								}
+							],
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"ExclusionTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "NORMAL",
+	"OneTimeEvent": true,
+	"Tags": {
+		"tagSetSourceFile": "tags/EventTags",
+		"items": []
+	}
+}

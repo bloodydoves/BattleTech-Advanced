@@ -1,13 +1,6 @@
 {
 	"Custom": {
 		"Color": "Gold",
-		"DynamicSlots": {
-			"ReservedSlots": 12,
-			"BackgroundColor": "GoldHalf",
-			"ShowIcon": true,
-			"NameText": "Dynamic Slot",
-			"BonusAText": "Dynamic Slot"
-		},
 		"WorkOrderCosts": {
 			"Install": {
 				"TechCost": "[[Chassis.Tonnage]]/10",
@@ -29,22 +22,234 @@
 		"Flags": [
 			"not_broken"
 		],
-		"RequiredCategories": {
-			"Categories": [
-				"ECM",
-				"AdvECM"
+		"Linked": {
+			"Links": [
+				{
+					"ComponentDefId": "Gear_Stealth_Linked",
+					"Location": "LeftTorso"
+				},
+				{
+					"ComponentDefId": "Gear_Stealth_Linked",
+					"Location": "LeftArm"
+				},
+				{
+					"ComponentDefId": "Gear_Stealth_Linked",
+					"Location": "LeftLeg"
+				},
+				{
+					"ComponentDefId": "Gear_Stealth_Linked",
+					"Location": "RightTorso"
+				},
+				{
+					"ComponentDefId": "Gear_Stealth_Linked",
+					"Location": "RightArm"
+				},
+				{
+					"ComponentDefId": "Gear_Stealth_Linked",
+					"Location": "RightLeg"
+				}
 			]
 		},
-		"ErrorMessage": "Stealth Armor requires a ECM!",
 		"BonusDescriptions": [
-				"EvaMax: +1",
-				"EvaPips: +1",
-				"Visibility: -30%",
-				"ReservedSlots: 12",
-				"HeatGenerated: +5%",
-				"HeatPerTurn: +3",
-				"ReqECM"
+			"EvaMax: +2",
+			"EvaPips: +2",
+			"Defense: +1",
+			"Visibility: -30%",
+			"ReservedSlots: 12",
+			"HeatPerTurn: +30",
+			"ReqISECM",
+			"Activatable"
+		],
+		"ActivatableComponent": {
+			"ButtonName": "Stealth Armor",
+			"CanNotBeActivatedManualy": false,
+			"ActiveByDefault": false,
+			"FailFlatChance": 0.0,
+			"SafeActivation": true,
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator"
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StealthArmor-MaxEvasion",
+						"Name": "EVASIVE MOVE",
+						"Details": "This unit generates an extra EVASIVE charge from movement actions (up to its maximum).",
+						"Icon": "uixSvgIcon_action_evasivemove"
+					},
+					"statisticData": {
+						"statName": "MaxEvasivePips",
+						"operation": "Int_Add",
+						"modValue": "2",
+						"modType": "System.Int32"
+					},
+					"nature": "Buff"
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": -1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StealthArmor-EvasionGain",
+						"Name": "EVASIVE MOVE",
+						"Details": "This unit generates an extra EVASIVE charge from movement actions (up to its maximum).",
+						"Icon": "uixSvgIcon_action_evasivemove"
+					},
+					"statisticData": {
+						"statName": "EvasivePipsGainedAdditional",
+						"operation": "Int_Add",
+						"modValue": "2",
+						"modType": "System.Int32"
+					},
+					"nature": "Buff"
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"specialRules": "NotSet",
+						"effectTargetType": "AlliesWithinRange",
+						"range": 0.0,
+						"forcePathRebuild": false,
+						"forceVisRebuild": false,
+						"showInTargetPreview": false,
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StealthArmor-Defense",
+						"Name": "Stealth Armor Defense",
+						"Details": "Stealth Armor is making this unit harder to hit, +1 penalty to enemy attacks.",
+						"Icon": "circuitry"
+					},
+					"statisticData": {
+						"statName": "ToHitThisActor",
+						"operation": "Float_Add",
+						"modValue": "1.0",
+						"modType": "System.Single"
+					},
+					"nature": "Buff"
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"ticksOnActivations": false,
+						"useActivationsOfTarget": false,
+						"ticksOnEndOfRound": false,
+						"ticksOnMovements": false,
+						"stackLimit": 1,
+						"clearedWhenAttacked": false
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"triggerLimit": 0,
+						"extendDurationOnTrigger": 0,
+						"specialRules": "NotSet",
+						"effectTargetType": "Creator",
+						"range": 0,
+						"forcePathRebuild": false,
+						"forceVisRebuild": false,
+						"showInTargetPreview": false,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StealthArmor-visi",
+						"Name": "Active Stealth Armor",
+						"Details": "Provides bonus evasion on movement as well as bonus hit defense and reduces the unit's visibility to enemies. Inflicts a 30 point heat penalty while active.",
+						"Icon": "invisible"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"appliesEachTick": false,
+						"effectsPersistAfterDestruction": false,
+						"statName": "SpottingVisibilityMultiplier",
+						"operation": "Float_Multiply",
+						"modValue": "0.7",
+						"modType": "System.Single",
+						"additionalRules": "NotSet",
+						"targetCollection": "NotSet",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponType": "NotSet",
+						"targetAmmoCategory": "NotSet",
+						"targetWeaponSubType": "NotSet"
+					},
+					"tagData": null,
+					"floatieData": null,
+					"actorBurningData": null,
+					"vfxData": null,
+					"instantModData": null,
+					"poorlyMaintainedEffectData": null
+				},
+				{
+					"durationData": {
+						"duration": -1,
+						"ticksOnActivations": false,
+						"useActivationsOfTarget": false,
+						"ticksOnEndOfRound": false,
+						"ticksOnMovements": false,
+						"stackLimit": 1,
+						"clearedWhenAttacked": false
+					},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"triggerLimit": 0,
+						"extendDurationOnTrigger": 0,
+						"specialRules": "NotSet",
+						"effectTargetType": "Creator",
+						"range": 0,
+						"forcePathRebuild": false,
+						"forceVisRebuild": false,
+						"showInTargetPreview": false,
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "StealthArmor-HeatPenalty",
+						"Name": "Stealth Heatsink Baffles",
+						"Details": "Generates an additional 30 heat per turn.",
+						"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+					},
+					"nature": "Debuff",
+					"statisticData": {
+						"appliesEachTick": false,
+						"effectsPersistAfterDestruction": false,
+						"statName": "HeatSinkCapacity",
+						"operation": "Int_Add",
+						"modValue": "-30",
+						"modType": "System.Int32",
+						"additionalRules": "NotSet",
+						"targetCollection": "NotSet",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponType": "NotSet",
+						"targetAmmoCategory": "NotSet",
+						"targetWeaponSubType": "NotSet"
+					},
+					"tagData": null,
+					"floatieData": null,
+					"actorBurningData": null,
+					"vfxData": null,
+					"instantModData": null,
+					"poorlyMaintainedEffectData": null
+				}
 			]
+		}
 	},
 	"Description": {
 		"Cost": 300000,
@@ -55,11 +260,11 @@
 		"UIName": "Stealth ",
 		"Id": "emod_armorslots_stealth",
 		"Name": "Stealth Armor",
-		"Details": "Developed by the Capellan Confederation, Stealth Armor is a modern day equivalent of the Star League era Null Signature System. Reserves 12 slots and requires an ECM.",
+		"Details": "Developed by the Capellan Confederation, Stealth Armor is a modern day recreation of the Star League era Null Signature System, at least as best modern technology permits to be created. Stealth Armor generates a lot of bonus heat while activated and is very bulky but provides defensive bonuses matched only by the LosTech Star League systems such as Null Sig and Chameleon LPS. Reserves 12 slots and requires an Inner Sphere ECM (Clan or Sanctuary ECM does not work with Stealth Armor).",
 		"Icon": "uixSvgIcon_action_end"
 	},
-	"BonusValueA": "Requires",
-	"BonusValueB": "ECM",
+	"BonusValueA": "",
+	"BonusValueB": "",
 	"ComponentType": "Upgrade",
 	"ComponentSubType": "NotSet",
 	"PrefabIdentifier": "",
@@ -69,210 +274,7 @@
 	"AllowedLocations": "CenterTorso",
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
-	"statusEffects": [
-		{
-			"durationData": {
-				"duration": -1,
-				"stackLimit": -1
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"effectTargetType": "Creator"
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "MaxEvasion",
-				"Name": "EVASIVE MOVE",
-				"Details": "This unit generates an extra EVASIVE charge from movement actions (up to its maximum).",
-				"Icon": "uixSvgIcon_action_evasivemove"
-			},
-			"statisticData": {
-				"statName": "MaxEvasivePips",
-				"operation": "Int_Add",
-				"modValue": "1",
-				"modType": "System.Int32"
-			},
-			"nature": "Buff"
-		},
-		{
-			"durationData": {
-				"duration": -1,
-				"stackLimit": -1
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"effectTargetType": "Creator",
-				"showInStatusPanel": false
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "GainEvasion",
-				"Name": "EVASIVE MOVE",
-				"Details": "This unit generates an extra EVASIVE charge from movement actions (up to its maximum).",
-				"Icon": "uixSvgIcon_action_evasivemove"
-			},
-			"statisticData": {
-				"statName": "EvasivePipsGainedAdditional",
-				"operation": "Int_Add",
-				"modValue": "1",
-				"modType": "System.Int32"
-			},
-			"nature": "Buff"
-		},
-		{
-			"durationData": {
-				"duration": -1,
-				"ticksOnActivations": false,
-				"useActivationsOfTarget": false,
-				"ticksOnEndOfRound": false,
-				"ticksOnMovements": false,
-				"stackLimit": 1,
-				"clearedWhenAttacked": false
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"triggerLimit": 0,
-				"extendDurationOnTrigger": 0,
-				"specialRules": "NotSet",
-				"effectTargetType": "Creator",
-				"range": 0,
-				"forcePathRebuild": false,
-				"forceVisRebuild": false,
-				"showInTargetPreview": false,
-				"showInStatusPanel": true
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "StealthArmor-visi",
-				"Name": "Active Stealth Armor",
-				"Details": "Provides increased Evasive bonus and reduced Visibility.",
-				"Icon": "uixSvgIcon_action_end"
-			},
-			"nature": "Buff",
-			"statisticData": {
-				"appliesEachTick": false,
-				"effectsPersistAfterDestruction": false,
-				"statName": "SpottingVisibilityMultiplier",
-				"operation": "Float_Multiply",
-				"modValue": "0.7",
-				"modType": "System.Single",
-				"additionalRules": "NotSet",
-				"targetCollection": "NotSet",
-				"targetWeaponCategory": "NotSet",
-				"targetWeaponType": "NotSet",
-				"targetAmmoCategory": "NotSet",
-				"targetWeaponSubType": "NotSet"
-			},
-			"tagData": null,
-			"floatieData": null,
-			"actorBurningData": null,
-			"vfxData": null,
-			"instantModData": null,
-			"poorlyMaintainedEffectData": null
-		},
-		{
-			"durationData": {
-				"duration": -1,
-				"ticksOnActivations": false,
-				"useActivationsOfTarget": false,
-				"ticksOnEndOfRound": false,
-				"ticksOnMovements": false,
-				"stackLimit": 1,
-				"clearedWhenAttacked": false
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"triggerLimit": 0,
-				"extendDurationOnTrigger": 0,
-				"specialRules": "NotSet",
-				"effectTargetType": "Creator",
-				"range": 0,
-				"forcePathRebuild": false,
-				"forceVisRebuild": false,
-				"showInTargetPreview": false,
-				"showInStatusPanel": false
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "StatusEffect-Heat_Nullsignature",
-				"Name": "Increased Heat",
-				"Details": "Weapon Heat generation increased by 5%.",
-				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
-			},
-			"nature": "Buff",
-			"statisticData": {
-				"appliesEachTick": false,
-				"effectsPersistAfterDestruction": false,
-				"statName": "HeatGenerated",
-				"operation": "Float_Multiply",
-				"modValue": "1.05",
-				"modType": "System.Single",
-				"additionalRules": "NotSet",
-				"targetCollection": "Weapon",
-				"targetWeaponCategory": "NotSet",
-				"targetWeaponType": "NotSet",
-				"targetAmmoCategory": "NotSet",
-				"targetWeaponSubType": "NotSet"
-			},
-			"tagData": null,
-			"floatieData": null,
-			"actorBurningData": null,
-			"vfxData": null,
-			"instantModData": null,
-			"poorlyMaintainedEffectData": null
-		},
-		{
-			"durationData": {
-				"duration": -1,
-				"ticksOnActivations": false,
-				"useActivationsOfTarget": false,
-				"ticksOnEndOfRound": false,
-				"ticksOnMovements": false,
-				"stackLimit": 1,
-				"clearedWhenAttacked": false
-			},
-			"targetingData": {
-				"effectTriggerType": "Passive",
-				"triggerLimit": 0,
-				"extendDurationOnTrigger": 0,
-				"specialRules": "NotSet",
-				"effectTargetType": "Creator",
-				"range": 0,
-				"forcePathRebuild": false,
-				"forceVisRebuild": false,
-				"showInTargetPreview": false,
-				"showInStatusPanel": false
-			},
-			"effectType": "StatisticEffect",
-			"Description": {
-				"Id": "StatusEffect-Heat_Stealth",
-				"Name": "Stealth Heatsink Baffles",
-				"Details": "Generates an additional 3 heat per turn.",
-				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
-			},
-			"nature": "Debuff",
-			"statisticData": {
-				"appliesEachTick": false,
-				"effectsPersistAfterDestruction": false,
-				"statName": "HeatSinkCapacity",
-				"operation": "Int_Add",
-				"modValue": "-3",
-				"modType": "System.Int32",
-				"additionalRules": "NotSet",
-				"targetCollection": "NotSet",
-				"targetWeaponCategory": "NotSet",
-				"targetWeaponType": "NotSet",
-				"targetAmmoCategory": "NotSet",
-				"targetWeaponSubType": "NotSet"
-			},
-			"tagData": null,
-			"floatieData": null,
-			"actorBurningData": null,
-			"vfxData": null,
-			"instantModData": null,
-			"poorlyMaintainedEffectData": null
-		}
-	],
+	"statusEffects": [],
 	"ComponentTags": {
 		"items": [
 			"component_type_stock"
