@@ -1,0 +1,91 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/s/m/melee"
+			},
+			{
+				"CategoryID": "PartHand"
+			},
+			{
+				"CategoryID": "ArmHandActuator"
+			}
+		],
+		"BonusDescriptions": [
+			"PhysWeapDamageBonus: +30%",
+		],
+		"Flags": [
+			"default",
+			"not_broken",
+			"autorepair",
+			"no_salvage"
+		]
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 480000,
+		"Rarity": 99,
+		"Purchasable": false,
+		"Manufacturer": "Blackbeard",
+		"Model": "Hook",
+		"UIName": "Hook",
+		"Id": "Gear_Actuator_Blackbeard_Hook",
+		"Name": "Hook",
+		"Details": "This is a unique Hook, designed for the Blackbeard Pirate BattleMech. It cannot be removed or used elsewhere.",
+		"Icon": "pirate-hook"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 2,
+	"Tonnage": 1,
+	"AllowedLocations": "Arms",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": 1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-BlackbeardHook-PhysWeapDamage",
+				"Name": "Hook Physical Weapon Damage",
+				"Details": "Physical weapon attacks deal 30% more damage.",
+				"Icon": "uixSvgIcon_equipment_ActuatorArm"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "CBTBE_Physical_Weapon_Target_Damage_Multi",
+				"operation": "Float_Multiply",
+				"modValue": "1.3",
+				"modType": "System.Single",
+				"additionalRules": "NotSet"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"BLACKLISTED"
+		],
+		"tagSetSourceFile": ""
+	}
+}
