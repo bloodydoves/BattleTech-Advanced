@@ -1,0 +1,62 @@
+{
+    "Custom": {
+       "Flags": [
+			"not_broken",
+			"no_salvage",
+			"autorepair",
+			"ignore_damage",
+			"default"
+		]
+    },
+    "StatName": null,
+    "RelativeModifier": 0,
+    "AbsoluteModifier": 0,
+    "Description": {
+        "Cost": 1000000,
+        "Rarity": 5,
+        "Purchasable": true,
+        "Manufacturer": "Gravity Industries",
+        "Model": "Beacon",
+        "UIName": "Tank Airdrop Beacon",
+        "Id": "Gear_Airdrop_Beacon_Tank_UrbanAmbush",
+        "Name": "Tank Airdrop Beacon",
+        "Details": "This bulky and heavy communication equipment grants the carrying mech's pilot the ability to coordinate with the Argo and call in an airdropped tank, either one of Yang's Vedettes or a tank provided by an ally faction. Tanks other than Yang's pet Vedette can be called in after buying their contract from the relevant faction.\r\n\r\n <b><color=#099ff2>Hold Shift when deploying the airdrop ability to select a specific unit from among those available!</color></b>",
+        "Icon": "tank"
+    },
+    "BonusValueA": "",
+    "BonusValueB": "",
+    "ComponentType": "Upgrade",
+    "ComponentSubType": "NotSet",
+    "PrefabIdentifier": "",
+    "BattleValue": 0,
+    "InventorySize": 2,
+    "Tonnage": 2,
+    "AllowedLocations": "All",
+    "DisallowedLocations": "All",
+    "CriticalComponent": false,
+    "statusEffects": [
+        {
+            "targetingData": {
+                "effectTriggerType": "OnActivation",
+                "effectTargetType": "Creator",
+                "showInStatusPanel": true
+            },
+            "effectType": "ActiveAbility",
+            "Description": {
+                "Id": "Airdrop_Beacon_Tank",
+                "Name": "Tank Airdrop Beacon",
+                "Details": "Activated ability (uses Firing action). Calls in a Tank Airdrop.",
+                "Icon": "uixSvgIcon_action_sensorlock"
+            },
+            "activeAbilityEffectData": {
+                "abilityName": "AbilityDefCMD_TonkDrop_UrbanAmbush"
+            }
+        }
+    ],
+    "ComponentTags": {
+        "items": [
+            "component_type_stock"
+        ],
+        "tagSetSourceFile": ""
+    }
+}
