@@ -93,7 +93,8 @@
 						"useActivationsOfTarget": true,
 						"ticksOnEndOfRound": false,
 						"ticksOnMovements": false,
-						"stackLimit": 1
+						"stackLimit": 4,
+						"clearedWhenAttacked": false
 					},
 					"targetingData": {
 						"effectTriggerType": "OnHit",
@@ -105,13 +106,13 @@
 					"Description": {
 						"Id": "Effect_AcidDMG",
 						"Name": "Acid",
-						"Details": "This unit is coated with corrosive Acid. It will take 20% increased Damage.",
+            "Details": "This unit is coated with corrosive Acid. It will take [AMT] increased Damage.",
 						"Icon": "acid"
 					},
 					"statisticData": {
 						"statName": "DamageReductionMultiplierAll",
 						"operation": "Float_Add",
-						"modValue": "0.2",
+						"modValue": "0.05",
 						"modType": "System.Single"
 					},
 					"nature": "Debuff"
@@ -227,7 +228,7 @@
 						"Id": "Effect_TracerDMG",
 						"Name": "Tracer",
 						"Details": "This unit is coated with sensor-attracting gel. Attacks against this unit are more accurate.",
-						"Icon": "uixSvgIcon_biome_Heated"
+						"Icon": "uixSvgIcon_artillery"
 					},
 					"statisticData": {
 						"statName": "ToHitThisActor",
