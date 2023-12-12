@@ -7,7 +7,8 @@
 		],
 		"BonusDescriptions": [
 			"APM",
-			"WpnCrits: +25%",
+			"WpnAccuracy: -2",
+			"WpnCrits: +10%",
 			"MissileHealth: 4",
 			"WeaponAttachmentCompatible: SRM FCS"
 		]
@@ -24,15 +25,15 @@
     ],
     "AmmoCategory" : "APM",
     "StartingAmmoCapacity" : 0,
-    "HeatGenerated" : 4,
+    "HeatGenerated" : 8,
     "Damage" : 6,
     "OverheatedDamageMultiplier" : 0,
     "EvasiveDamageMultiplier" : 0,
     "EvasivePipsIgnored" : 0,
     "DamageVariance" : 0,
     "HeatDamage" : 0,
-    "AccuracyModifier" : 1,
-    "CriticalChanceMultiplier" : 1.25,
+    "AccuracyModifier" : 2,
+    "CriticalChanceMultiplier" : 1.1,
     "AOECapable" : false,
     "IndirectFireCapable" : false,
     "RefireModifier" : 0,
@@ -84,7 +85,7 @@
 			"Id": "Acid",
 			"UIName": "Acid",
 			"isBaseMode": false,
-			"DamagePerShot": -4,
+			"DamagePerShot": -5,
 			"statusEffects": [
 				{
 					"durationData": {
@@ -106,7 +107,7 @@
 					"Description": {
 						"Id": "Effect_AcidDMG",
 						"Name": "Acid",
-            "Details": "This unit is coated with corrosive Acid. It will take [AMT] increased Damage.",
+						"Details": "This unit is coated with corrosive Acid. It will take [AMT] increased Damage.",
 						"Icon": "acid"
 					},
 					"statisticData": {
@@ -132,7 +133,7 @@
 						"useActivationsOfTarget": true,
 						"ticksOnEndOfRound": false,
 						"ticksOnMovements": false,
-						"stackLimit": 3
+						"stackLimit": 1
 					  },
 					  "targetingData": {
 						"effectTriggerType": "OnHit",
@@ -188,8 +189,8 @@
 		{
 			"Id": "Inferno",
 			"UIName": "Inferno",
-			"DamagePerShot": -4,
-			"HeatDamage": 6,
+			"DamagePerShot": -5,
+			"HeatDamage": 3,
 			"FireTerrainStrength": 4,
 			"FireTerrainChance":1,
 			"FireDurationWithoutForest":2,
@@ -200,7 +201,8 @@
 			"UIName": "Tandem",
 			"isBaseMode": false,
 			"DamagePerShot": -4,
-			"APDamage": 2
+			"APDamage": 2,
+			"CriticalChanceMultiplier" : -0.75
 		},
 		{
 			"Id": "Tracer",
@@ -227,13 +229,13 @@
 					"Description": {
 						"Id": "Effect_TracerDMG",
 						"Name": "Tracer",
-						"Details": "This unit is coated with sensor-attracting gel. Attacks against this unit are more accurate.",
+						"Details": "This unit is coated with sensor-attracting gel. Attacks against this unit gain a +1 to hit.",
 						"Icon": "uixSvgIcon_artillery"
 					},
 					"statisticData": {
 						"statName": "ToHitThisActor",
 						"operation": "Float_Add",
-						"modValue": "-2.0",
+						"modValue": "-1.0",
 						"modType": "System.Single"
 					},
 					"nature": "Debuff"
