@@ -1,7 +1,6 @@
 {
 	"MechTags": {
 		"items": [
-			"unit_jumpOK",
 			"unit_release",
 			"unit_rarity_3",
 			"unit_mech",
@@ -99,7 +98,7 @@
 		"UIName": "Firestarter FS9-J",
 		"Id": "mechdef_firestarter_FS9-J",
 		"Name": "Firestarter",
-		"Details": "The Firestarter-J is a very focused and highly specific Firestarter variant. Ditching the usual Flamers and energy weapons, the -J goes entirely in on Machine Guns, specifically MG Arrays. Armed with 4 MG Arrays, the Firestarter-J carries no other weaponry. It was built for one purpose: to destroy conventional forces. Mech fighting is a secondary concern for the -J but it's proven moderately effective against pre-weakened targets. Still, the -J needs real support when fighting other mechs.",
+		"Details": "The Firestarter-J is a very focused and highly specific Firestarter variant. Ditching the usual Flamers and energy weapons, the -J goes entirely in on Machine Guns, specifically Heavy Machine Guns linked in MG Arrays. Armed with a massive 12 HMGs, all linked into 4 Arrays, the Firestarter-J carries no other weaponry. It was built for one purpose: to destroy conventional forces. Mech fighting is a secondary concern for the -J but it's proven moderately effective against pre-weakened targets. Still, the -J needs real support when fighting other mechs.",
 		"Icon": "uixTxrIcon_firestarter"
 	},
 	"simGameMechPartCost": 410000,
@@ -223,7 +222,29 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_engineslots_std_center",
+			"ComponentDefID": "emod_engineslots_xl_center",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "emod_engineslots_size3",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "emod_engineslots_size3",
 			"SimGameUID": null,
 			"ComponentDefType": "HeatSink",
 			"HardpointSlot": -1,
@@ -421,7 +442,40 @@
 		},
 		{
 			"MountedLocation": "LeftArm",
-			"ComponentDefID": "Weapon_MachineGun_Array_0-STOCK",
+			"ComponentDefID": "Gear_Attachment_MG_Array",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftArm",
+			"ComponentDefID": "Weapon_MachineGun_HeavyMG_0-STOCK",
+			"SimGameUID": null,
+			"ComponentDefType": "Weapon",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftArm",
+			"ComponentDefID": "Weapon_MachineGun_HeavyMG_0-STOCK",
+			"SimGameUID": null,
+			"ComponentDefType": "Weapon",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftArm",
+			"ComponentDefID": "Weapon_MachineGun_HeavyMG_0-STOCK",
 			"SimGameUID": null,
 			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
@@ -432,7 +486,40 @@
 		},
 		{
 			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "Weapon_MachineGun_Array_0-STOCK",
+			"ComponentDefID": "Gear_Attachment_MG_Array",
+			"SimGameUID": null,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "Weapon_MachineGun_HeavyMG_0-STOCK",
+			"SimGameUID": null,
+			"ComponentDefType": "Weapon",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "Weapon_MachineGun_HeavyMG_0-STOCK",
+			"SimGameUID": null,
+			"ComponentDefType": "Weapon",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "Weapon_MachineGun_HeavyMG_0-STOCK",
 			"SimGameUID": null,
 			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
@@ -453,7 +540,7 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "LeftTorso",
+			"MountedLocation": "Head",
 			"ComponentDefID": "Ammo_AmmunitionBox_HE_MG",
 			"SimGameUID": null,
 			"ComponentDefType": "AmmunitionBox",
@@ -464,33 +551,11 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "Gear_JumpJet_Generic_Standard",
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "Gear_Attachment_MG_Array",
 			"SimGameUID": null,
-			"ComponentDefType": "JumpJet",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "Gear_JumpJet_Generic_Standard",
-			"SimGameUID": null,
-			"ComponentDefType": "JumpJet",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "LeftTorso",
-			"ComponentDefID": "Gear_JumpJet_Generic_Standard",
-			"SimGameUID": null,
-			"ComponentDefType": "JumpJet",
-			"HardpointSlot": -1,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": 0,
 			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": null,
@@ -498,7 +563,7 @@
 		},
 		{
 			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Weapon_MachineGun_Array_0-STOCK",
+			"ComponentDefID": "Weapon_MachineGun_HeavyMG_0-STOCK",
 			"SimGameUID": null,
 			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
@@ -509,9 +574,20 @@
 		},
 		{
 			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Ammo_AmmunitionBox_Generic_MG_half",
+			"ComponentDefID": "Weapon_MachineGun_HeavyMG_0-STOCK",
 			"SimGameUID": null,
-			"ComponentDefType": "AmmunitionBox",
+			"ComponentDefType": "Weapon",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "Weapon_MachineGun_HeavyMG_0-STOCK",
+			"SimGameUID": null,
+			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
 			"GUID": null,
 			"DamageLevel": "Functional",
@@ -530,33 +606,11 @@
 			"hasPrefabName": false
 		},
 		{
-			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Gear_JumpJet_Generic_Standard",
+			"MountedLocation": "RightArm",
+			"ComponentDefID": "Gear_Attachment_MG_Array",
 			"SimGameUID": null,
-			"ComponentDefType": "JumpJet",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Gear_JumpJet_Generic_Standard",
-			"SimGameUID": null,
-			"ComponentDefType": "JumpJet",
-			"HardpointSlot": -1,
-			"GUID": null,
-			"DamageLevel": "Functional",
-			"prefabName": null,
-			"hasPrefabName": false
-		},
-		{
-			"MountedLocation": "RightTorso",
-			"ComponentDefID": "Gear_JumpJet_Generic_Standard",
-			"SimGameUID": null,
-			"ComponentDefType": "JumpJet",
-			"HardpointSlot": -1,
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": 0,
 			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": null,
@@ -564,7 +618,29 @@
 		},
 		{
 			"MountedLocation": "RightArm",
-			"ComponentDefID": "Weapon_MachineGun_Array_0-STOCK",
+			"ComponentDefID": "Weapon_MachineGun_HeavyMG_0-STOCK",
+			"SimGameUID": null,
+			"ComponentDefType": "Weapon",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightArm",
+			"ComponentDefID": "Weapon_MachineGun_HeavyMG_0-STOCK",
+			"SimGameUID": null,
+			"ComponentDefType": "Weapon",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "RightArm",
+			"ComponentDefID": "Weapon_MachineGun_HeavyMG_0-STOCK",
 			"SimGameUID": null,
 			"ComponentDefType": "Weapon",
 			"HardpointSlot": 0,
