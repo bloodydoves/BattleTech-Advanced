@@ -1,0 +1,317 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/s/m/melee"
+			},
+			{
+				"CategoryID": "CombatShield"
+			},
+			{
+				"CategoryID": "MeleeWeaponHandRequired"
+			}
+		],
+		"BonusDescriptions": [
+			"ModularArmor: +125",
+			"ArmAccuracy: -1",
+			"IsPhysWeap",
+			"PhysWeapUnsteady",
+			"PhysWeapDamage: 1.5",
+			"PhysWeapStab: 0.5",
+			"PhysWeapAccuracy: +4"
+		],
+		"Flags": [
+			"default",
+			"not_broken",
+			"autorepair",
+			"no_salvage"
+		]
+	},
+	"weaponCategoryID": "MeleeWeapon",
+	"Type": "MachineGun",
+	"WeaponSubType": "MachineGun",
+	"MinRange": 0,
+	"MaxRange": 0,
+	"RangeSplit": [
+		0,
+		0,
+		0
+	],
+	"AmmoCategory": "NotSet",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 0,
+	"Damage": 0,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 0,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": 1,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 0,
+	"Instability": 0,
+	"NotUseInMelee": true,
+	"WeaponEffectID": "WeaponEffect-Weapon_MachineGun",
+	"Description": {
+		"Cost": 12000,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "Slagmaiden",
+		"Model": "Large Shield",
+		"UIName": "Spiked Large Shield",
+		"Id": "Weapon_Slagmaiden_Shield_Spiked",
+		"Name": "Spiked Large Shield",
+		"Details": "This is a unique spiked shield, designed for the Slagmaiden. It cannot be removed or used elsewhere. Designed for the arenas of Solaris VII, BattleMech Shields are a mostly untested technology, though they're not terribly complex. Mountable only in the arms, a BattleMech Shield provides additional armor protection for the carrying mech as it uses the shield to soak incoming fire. The Large Shield is the largest of the BattleMech Shields and provides the most protection of the three",
+		"Icon": "steel-claws"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "spikes",
+	"BattleValue": 0,
+	"InventorySize": 8,
+	"Tonnage": 7,
+	"AllowedLocations": "LeftArm",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-Shield_Large-{location}",
+				"Name": "Bonus Arm Armor",
+				"Details": "The BattleMech Shield is providing extra armor to the equipped arm at the cost of impairing that arm's accuracy with weaponry.",
+				"Icon": "shield-reflect"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "{location}.Armor",
+				"operation": "Float_Add",
+				"modValue": "125",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-Shield_AccuracyPenalty-{location}",
+				"Name": "Shield Acc Penalty",
+				"Details": "Reduced Arm Weapon Accuracy.",
+				"Icon": "uixSvgIcon_equipment_ActuatorArm"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "{location}.Accuracy",
+				"operation": "Float_Add",
+				"modValue": "1",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "PunchIsPhysical",
+				"Name": "This is a Physical Weapon",
+				"Details": "This is a physical weapon and uses those melee rules."
+			},
+			"statisticData": {
+				"statName": "CBTBE_Punch_Is_Physical_Weapon",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0.0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "CBTBE_PHYSICAL_WEAPON_APPLY_UNSTEADY",
+				"Name": "Target will be Unsteady",
+				"Details": "Foo"
+			},
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Unsteady_Target_On_Hit",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0.0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "CBTBE_PHYSICAL_WEAPON_LOCATION_TABLE",
+				"Name": "Location table to use",
+				"Details": "Foo"
+			},
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Location_Table",
+				"operation": "Set",
+				"modValue": "STANDARD",
+				"modType": "System.String"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-SpikedShieldBaseDamage",
+				"Name": "Spiked Shield Base Damage",
+				"Details": "Spiked shields do 7.5 damage per 5 tons of the mech.",
+				"Icon": "steel-claws"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Target_Damage_Per_Attacker_Ton",
+				"operation": "Set",
+				"modValue": "1.5",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-SpikedShieldBaseStabDamage",
+				"Name": "Spiked Shield Base Stab Damage",
+				"Details": "Spiked shields do 5 stab damage per 10 tons of the mech.",
+				"Icon": "steel-claws"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Target_Instability_Per_Attacker_Ton",
+				"operation": "Set",
+				"modValue": "0.5",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-SpikedShieldBaseAcc",
+				"Name": "Spiked Shield Base Accuracy",
+				"Details": "Spiked shields have a +4 accuracy bonus on their attacks.",
+				"Icon": "steel-claws"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Attack_Mod",
+				"operation": "Int_Add",
+				"modValue": "-4",
+				"modType": "System.Int32"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_close"
+		],
+		"tagSetSourceFile": ""
+	}
+}
