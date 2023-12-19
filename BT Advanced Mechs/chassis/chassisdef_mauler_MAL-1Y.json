@@ -13,9 +13,9 @@
 		"Manufacturer": "",
 		"Model": "",
 		"UIName": "Mauler",
-		"Id": "chassisdef_mauler_MAL-3R",
+		"Id": "chassisdef_mauler_MAL-1Y",
 		"Name": "Mauler",
-		"Details": "The -3R variant of the Mauler upgrades the design and addresses the concerns of pilots that used the -1R model. The four Autocannon/2s have been replaced with a pair of LB-X Autocannon/10s. The ER Large Lasers were removed from the design, but the MAL-3R retains the two LRM-15 launchers of its predecessor. Also incorporated in the design is a single Small Laser and a C3 Slave unit, the latter of which allows the -3R to use targeting data from units that are closer to the enemy and vice versa. It also has a ninety meter jump capability.",
+		"Details": "The Mauler is armed with four Imperator Smoothie-2 Autocannon/2s as its longest ranged primary weapons. Individually, the damage the AC/2s deal is insignificant, but together they can steadily whittle away armor at extreme range. The 'Mech also carries two Shigunga LRM-15 launchers, adding much needed punch to the extreme reach of its four autocannons. The 'Mech also carries two Tronel Large Lasers for added long range punch.",
 		"Icon": "uixTxrIcon_mauler"
 	},
 	"MovementCapDefID": "movedef_mauler_MAL-1R",
@@ -56,12 +56,7 @@
 	"Locations": [
 		{
 			"Location": "Head",
-			"Hardpoints": [
-				{
-					"WeaponMountID": "AntiPersonnel",
-					"Omni": false
-				}
-			],
+			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
 			"MaxArmor": 45,
@@ -72,11 +67,11 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMountID": "Ballistic",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMountID": "Ballistic",
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -96,10 +91,18 @@
 				{
 					"WeaponMountID": "Missile",
 					"Omni": false
+				},
+				{
+					"WeaponMountID": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Ballistic",
+					"Omni": false
 				}
 			],
 			"Tonnage": 0,
-			"InventorySlots": 12,
+			"InventorySlots": 14,
 			"MaxArmor": 190,
 			"MaxRearArmor": 95,
 			"InternalStructure": 95
@@ -123,10 +126,18 @@
 				{
 					"WeaponMountID": "Missile",
 					"Omni": false
+				},
+				{
+					"WeaponMountID": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Ballistic",
+					"Omni": false
 				}
 			],
 			"Tonnage": 0,
-			"InventorySlots": 12,
+			"InventorySlots": 14,
 			"MaxArmor": 190,
 			"MaxRearArmor": 95,
 			"InternalStructure": 95
@@ -135,11 +146,11 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMountID": "Ballistic",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMountID": "Ballistic",
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -212,7 +223,7 @@
 			"z": 1
 		}
 	],
-	"VariantName": "MAL-3R",
+	"VariantName": "MAL-1Y",
 	"ChassisTags": {
 		"items": [
 			"ArmLimitLowerRight",
@@ -222,7 +233,7 @@
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Juggernaut & Heavy Cavalry",
-	"YangsThoughts": "The -3R variant of the Mauler upgrades the design and addresses the concerns of pilots that used the -1R model. The four Autocannon/2s have been replaced with a pair of LB-X Autocannon/10s. The ER Large Lasers were removed from the design, but the MAL-3R retains the two LRM-15 launchers of its predecessor. Also incorporated in the design is a single Small Laser and a C3 Slave unit, the latter of which allows the -3R to use targeting data from units that are closer to the enemy and vice versa. It also has a ninety meter jump capability.",
+	"YangsThoughts": "The Mauler is armed with four Imperator Smoothie-2 Autocannon/2s as its longest ranged primary weapons. Individually, the damage the AC/2s deal is insignificant, but together they can steadily whittle away armor at extreme range. The 'Mech also carries two Shigunga LRM-15 launchers, adding much needed punch to the extreme reach of its four autocannons. The 'Mech also carries two Tronel Large Lasers for added long range punch.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",
@@ -245,6 +256,54 @@
 			"DamageLevel": "Functional",
 			"prefabName": "",
 			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "Gear_Attachment_Quirk_Mauler_StabilizedAim",
+			"SimGameUID": "",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": "",
+			"hasPrefabName": false,
+			"TargetComponentGUID":"target_AC2_1"
+		},
+		{
+			"MountedLocation": "LeftTorso",
+			"ComponentDefID": "Gear_Attachment_Quirk_Mauler_StabilizedAim",
+			"SimGameUID": "",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": "",
+			"hasPrefabName": false,
+			"TargetComponentGUID":"target_AC2_2"
+		},
+		{
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "Gear_Attachment_Quirk_Mauler_StabilizedAim",
+			"SimGameUID": "",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": "",
+			"hasPrefabName": false,
+			"TargetComponentGUID":"target_AC2_3"
+		},
+		{
+			"MountedLocation": "RightTorso",
+			"ComponentDefID": "Gear_Attachment_Quirk_Mauler_StabilizedAim",
+			"SimGameUID": "",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": "",
+			"hasPrefabName": false,
+			"TargetComponentGUID":"target_AC2_4"
 		}
 	],
 	"CustomParts": {
