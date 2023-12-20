@@ -1,0 +1,94 @@
+{
+	"Custom": {
+		"Color": "Gold",
+		"BonusDescriptions": [
+			"ArmorFactor: 11%",
+			"TACImmune",
+			"Reserved: 9",
+			"CASE"
+		],
+		"Category": {
+			"CategoryID": "Armor"
+		},
+		"DynamicSlots": {
+			"ReservedSlots": 9,
+			"ShowIcon": false,
+            "NameText": "Ferro-AntiPierce",
+            "BonusAText": "Dynamic Slot"
+		},
+		 "CASE": {
+            "AllLocations": true
+        },
+		"Weights": {
+			"ArmorFactor": 0.89286
+		},
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "[[Chassis.Tonnage]] / 4",
+				"CBillCost": "250 * [[Chassis.Tonnage]] * [[Chassis.Tonnage]] / 50"
+			}
+		},
+		"Flags": [
+			"ignore_damage",
+			"autorepair",
+			"not_broken"
+		]
+	},
+	"Description": {
+		"Cost": 800000,
+		"Rarity": 0,
+		"Purchasable": true,
+		"Manufacturer": "RAD-Group",
+		"Model": "Compound M34F",
+		"UIName": "Ferro-AntiPierce",
+		"Id": "emod_armorslots_ferroantipierce",
+		"Name": "Ferro-AntiPierce",
+		"Details": "Compound M34F, better known as Ferro-AntiPierce, is a heavily modified blend of Ferro-Fibrous armor that takes several advanced technologies to create an armor compound that can stop piercing munitions and tandem missiles while being slightly less bulky than traditional Ferro-Fibrous armor, though still bulkier than Clan Spec Ferro-Fibrous, though it also takes a cue from that armor and has CASE technology incorporated into it.\r\n\r\nArmor tonnage gets reduced by <b>1/12</b> while taking up <b>9</b> Ferro-AntiPierce slots, <b><color=#00ff00>CASE Enabled</color></b>.",
+		"Icon": "uixSvgIcon_action_end"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0,
+	"AllowedLocations": "CenterTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": 
+	[
+		{
+            "durationData": {
+                "duration": -1,
+                "stackLimit": 1
+            },
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "effectTargetType": "Creator",
+                "showInStatusPanel": false
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "HardenedCritImmune",
+                "Name": "ChargerSprint",
+                "Details": "MORE SPEED.",
+                "Icon": "uixSvgIcon_run_n_gun"
+            },
+            "statisticData": {
+                 "statName": "CACAPProtection",
+                "operation": "Set",
+                "modValue": "true",
+                "modType": "System.Boolean"
+            },
+            "nature": "Buff"
+        }
+    ],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}
