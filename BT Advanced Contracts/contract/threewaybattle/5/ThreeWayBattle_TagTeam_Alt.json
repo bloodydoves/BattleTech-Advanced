@@ -85,7 +85,35 @@
 			"title": "Destroy {TEAM_TAR.FactionDef.Demonym} Forces",
 			"description": "",
 			"isPrimary": true,
-			"OnSuccessResults": [],
+			"OnSuccessResults": [
+				{
+					"Scope": "Company",
+					"Requirements": null,
+					"AddedTags": {
+						"items": [
+							"chain_agamemnon_vengeance"
+						],
+						"tagSetSourceFile": ""
+					},
+					"RemovedTags": {
+						"items": [],
+						"tagSetSourceFile": ""
+					},
+					"Stats": [
+						{
+							"typeString": "System.Single",
+							"name": "ContractBonusRewardPct",
+							"value": "0.1",
+							"set": false,
+							"valueConstant": null
+						}
+					],
+					"Actions": [],
+					"ForceEvents": [],
+					"TemporaryResult": false,
+					"ResultDuration": 0
+				}
+			],
 			"OnFailureResults": [],
 			"OnSuccessDialogueGUID": "",
 			"OnFailureDialogueGUID": ""
@@ -150,7 +178,9 @@
 					"Scope": "Company",
 					"Requirements": null,
 					"AddedTags": {
-						"items": [],
+						"items": [
+							"chain_agamemnon_vengeance"
+						],
 						"tagSetSourceFile": ""
 					},
 					"RemovedTags": {
