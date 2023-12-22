@@ -1,0 +1,93 @@
+{
+	"Custom": {
+		"Cooling": {
+			"HeatSinkDefId": "Gear_HeatSink_Generic_Standard"
+		},
+		"Weights": {
+			"EngineFactor": 1.2
+		},
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "[[Chassis.Tonnage]] / 2",
+				"CBillCost": "12000 * [[Chassis.Tonnage]] * [[Chassis.Tonnage]] / 30"
+			}
+		},
+		"Category": [
+			{
+				"CategoryID": "EngineShield"
+			},
+			{
+				"CategoryID": "EnginePart"
+			}
+		],
+		"Flags": [
+			"vital",
+				"engine_part",
+				"no_salvage"
+		],
+		"BonusDescriptions": [
+				"FuelCellSHS",
+				"EngineWeight: +20%",
+				"HeatPerTurn: -10"
+			]
+	},
+	"Description": {
+		"Cost": 450000,
+		"Rarity": 1,
+		"Purchasable": false,
+		"Manufacturer": "Vlar",
+		"Model": "Fuel Cell",
+		"UIName": "Engine Fuel Cell",
+		"Id": "emod_engineslots_fuelcell_center",
+		"Name": "Fuel Cell Engine",
+		"Details": "Fuel Cell engines are primarily used in civilian applications like rail systems, personal transport, and IndustrialMechs. Fuel Cell engines generate electrical power that is then used by the vehicle to operate its propulsion system. A Fuel Cell engine has several advantages over the typical Internal Combustion Engine. While they require an oxidizer to operate, they are readily able to accept a stored oxidizer along with their fuel, making it a good choice for submarines, satellites, and naval applications. As most fuel cells run on hydrogen and oxygen, they have no exhaust other than water vapor so Fuel Cells are also used as generators for buildings and other large structures.",
+		"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "HeatSink",
+	"ComponentSubType": "Heatsink",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 3,
+	"Tonnage": 0,
+	"AllowedLocations": "CenterTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-FuelCellHeatReduction",
+				"Name": "Reduced Heat",
+				"Details": "Fuel Cell Engines are highly heat efficient, wicking away 20 heat each turn.",
+				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "HeatSinkCapacity",
+				"operation": "Int_Add",
+				"modValue": "10",
+				"modType": "System.Int32"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"EnginePart.{location}",
+			"component_type_stock",
+			"FuelCell"
+		],
+		"tagSetSourceFile": ""
+	}
+}

@@ -1,0 +1,191 @@
+{
+	"Description": {
+		"Id": "bta_event_stockingstuffers",
+		"Name": "Stocking Stuffers",		
+		"Details": "Sitting at your desk in your quarters on the night before Christmas, you sipped your hot cocoa (which [[DM.BaseDescriptionDefs[TooltipSimGameCharacterDARIUS],Darius]] managed to procure at your last resupply somehow) and ruminated on the season. Ah, Christmas! A magical time for all the good girl and boy MechWarriors, a time of magic and mystery, and you had a feeling this year was going to be something special indeed. Just like clockwork, a message popped up on your console with a graphic of a stocking above a fireplace, hung with care. Intrigued and expecting one of [[DM.BaseDescriptionDefs[TooltipSimGameCharacterSumire,Sumire's]] jokes you clicked the message only to be met with a picture of a laughing Santa Claus and the text \"Merry Christmas, Commander! Tell me, were you good or bad this year?\" You ponder for a moment and click the appropriate response.",
+		"Icon": "urbiemascard.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"tagSetSourceFile": "Tags/CompanyTags",
+			"items": []
+		},
+		"ExclusionTags": {
+			"tagSetSourceFile": "",
+			"items": []
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [
+		{
+			"Scope": "SecondaryMechWarrior",
+			"Requirements": {
+				"Scope": "SecondaryMechWarrior",
+				"RequirementTags": {
+					"tagSetSourceFile": "Tags/PilotTags",
+					"items": []
+				},
+				"ExclusionTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"Options": [
+		{
+			"Description": {
+				"Id": "outcome_0",
+				"Name": "Good, Of Course!",
+				"Details": "Good Ending",
+				"Icon": null
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "outcome_0_0",
+						"Name": "Good, Of Course",
+						"Details": "\"Well in that case, you better check in with Yang about tonight's shipment of supplies, there might be a treat in your stocking! Ho ho ho!!\" Confused yet amused, you reach for the comm just in time for it to pre-emptively buzz, the ID indicating Yang was calling. \"Commander, why didn't you tell me about this? What a great surprise for the staff! I'll get them distributed right away!\" A magical season, indeed, and to all a good night!",
+						"Icon": null
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"tagSetSourceFile": "",
+								"items": []
+							},
+							"RemovedTags": {
+								"tagSetSourceFile": "",
+								"items": []
+							},
+							"Stats": [
+								{
+									"typeString": "System.Int32",
+									"name": "Morale",
+									"value": "3",
+									"set": false,
+									"valueConstant": null
+								}
+							],
+							"Actions": null,
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						},
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"tagSetSourceFile": "",
+								"items": []
+							},
+							"RemovedTags": {
+								"tagSetSourceFile": "",
+								"items": []
+							},
+							"Stats": null,
+							"Actions": [
+								{
+                                    "Type" : "System_ShowRewards",
+                                    "value" : "itemCollection_loot_eventStockingStuffersGood",
+                                    "valueConstant" : null,
+                                    "additionalValues" : null
+                                }
+							],
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"ExclusionTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"RequirementComparisons": []
+			}
+		},
+		{
+			"Description": {
+				"Id": "outcome_1",
+				"Name": "Bad, Sadly",
+				"Details": "Bad Ending",
+				"Icon": null
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "outcome_1_1",
+						"Name": "Bad, Sadly",
+						"Details": "\"Oh, Commander, I already know you were bad this year. But even bad MechWarriors get something, even if it's just Coal! Ho ho ho!!\" Confused and slightly alarmed, you reach for the comm just in time for it to pre-emptively buzz, the ID indicating Yang was calling. \"Commander, why did you order a box of weird SRM ammo? Hell, where'd you even find this ammo, it's not like anything I've ever seen before!\" You laugh and hang up the call. A magical season, indeed, and to all a good night!",
+						"Icon": null
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"tagSetSourceFile": "",
+								"items": []
+							},
+							"RemovedTags": {
+								"tagSetSourceFile": "",
+								"items": []
+							},
+							"Stats": null,
+							"Actions": [
+								{
+                                    "Type" : "System_ShowRewards",
+                                    "value" : "itemCollection_loot_eventStockingStuffersBad",
+                                    "valueConstant" : null,
+                                    "additionalValues" : null
+                                }
+							],
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"ExclusionTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "NORMAL",
+	"OneTimeEvent": true,
+	"Tags": {
+		"tagSetSourceFile": "tags/EventTags",
+		"items": []
+	}
+}

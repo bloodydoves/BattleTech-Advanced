@@ -1,0 +1,73 @@
+{
+	"Custom": {
+		"Flags": [
+			"not_broken",
+			"no_salvage",
+			"autorepair"
+		],
+		"BonusDescriptions": [
+			"ChargeDamageBonus: +10"
+		],
+		"Category": {
+			"CategoryID": "Quirk"
+		}
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 500000,
+		"Rarity": 100,
+		"Purchasable": false,
+		"Manufacturer": "Bergan Industries",
+		"Model": "Production",
+		"UIName": "Body Spikes",
+		"Id": "Gear_Spikes_Body",
+		"Name": "Body Spikes",
+		"Details": "Spikes are about as basic as mech weapon technology gets: take a big sharp wedge of metal, weld it to a mech somewhere, smash into people. Doesn't get any easier than that.",
+		"Icon": "steel-claws"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0.5,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "LeftLeg,RightLeg",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 6
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator"
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Spikes-Charge_Damage",
+				"Name": "Spikes Charge Damage",
+				"Details": "Charge attacks deal 10 more damage.",
+				"Icon": "steel-claws"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CBTBE_Charge_Target_Damage_Mod",
+				"operation": "Int_Add",
+				"modValue": "10",
+				"modType": "System.Int32"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}

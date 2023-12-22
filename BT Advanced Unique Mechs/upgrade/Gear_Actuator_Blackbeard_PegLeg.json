@@ -1,0 +1,115 @@
+{
+  "Custom": {
+    "Category": [
+      {
+        "CategoryID": "LegLowerActuator"
+      },
+      {
+        "CategoryID": "LegFootActuator"
+      },
+      {
+        "CategoryID": "Quirk"
+      }
+    ],
+    "BonusDescriptions": [
+		"WalkSpeed: -10%",
+		"KickDamageBonus: +30%"
+    ],
+    "Flags": [
+		"default",
+        "ignore_shutdown",
+        "not_broken",
+		"no_salvage",
+		"ignore_damage"
+    ]
+  },
+  "StatName": null,
+  "RelativeModifier": 0,
+  "AbsoluteModifier": 0,
+  "Description": {
+    "Cost": 510000,
+    "Rarity": 1,
+    "Purchasable": true,
+    "Manufacturer": "Blackbeard",
+    "Model": "Pegleg",
+    "UIName": "Pegleg",
+    "Id": "Gear_Actuator_Blackbeard_PegLeg",
+    "Name": "Pegleg",
+    "Details": "This is the Blackbeard's unique Pegleg actuator. This actuator reduces Blackbeard's movement speed somewhat but improves its kick damage in return.",
+    "Icon": "wooden-pegleg"
+  },
+  "BonusValueA": "",
+  "BonusValueB": "",
+  "ComponentType": "Upgrade",
+  "ComponentSubType": "NotSet",
+  "PrefabIdentifier": "",
+  "BattleValue": 0,
+  "InventorySize": 2,
+  "Tonnage": 0,
+  "AllowedLocations": "RightLeg",
+  "DisallowedLocations": "All",
+  "CriticalComponent": false,
+  "statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-BlackbeardPegleg-WalkPenalty",
+				"Name": "Blackbeard Pegleg",
+				"Details": "Blackbeard's pegleg slows it down but also increases the kick damage it deals.",
+				"Icon": "wooden-pegleg"
+			},
+			"statisticData": {
+				"statName": "WalkSpeed",
+				"operation": "Float_Multiply",
+				"modValue": "0.9",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-BlackbeardPegleg-KickDamage",
+				"Name": "Blackbeard Kick Damage",
+				"Details": "Kick attacks deal 50% more damage.",
+				"Icon": "wooden-pegleg"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "CBTBE_Kick_Target_Damage_Multi",
+				"operation": "Float_Multiply",
+				"modValue": "1.3",
+				"modType": "System.Single",
+				"additionalRules": "NotSet"
+			}
+		}
+  ],
+  "ComponentTags": {
+    "items": [
+      "ignore_shutdown",
+      "component_type_stock"
+    ],
+    "tagSetSourceFile": ""
+  }
+}

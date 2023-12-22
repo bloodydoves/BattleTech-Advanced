@@ -1,0 +1,159 @@
+{
+	"Custom": {
+		"Color": "Gold",
+		"DynamicSlots": {
+			"ReservedSlots": 4,
+			"BackgroundColor": "GoldHalf",
+			"ShowIcon": false,
+			"NameText": "Hardened (C)",
+			"BonusAText": "Dynamic Slot",
+			"BonusBText": " "
+		},
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "[[Chassis.Tonnage]]/7",
+				"CBillCost": "250 * [[Chassis.Tonnage]] * [[Chassis.Tonnage]] / 50"
+			}
+		},
+		"Weights": {
+			"ArmorFactor": 1.75
+		},
+		"ArmorStructureChanges": {
+			"ArmorFactor": 1.75
+		},
+		"Category": {
+			"CategoryID": "Armor"
+		},
+		"ArmorRepair": {
+			"ArmorTPCost": 1.5,
+			"ArmorCBCost": 1.5
+		},
+		"CASE": {
+			"AllLocations": true,
+			"MaximumDamage": 10
+		},
+		"Flags": [
+				"ignore_damage",
+				"autorepair",
+				"not_broken",
+				"no_salvage"
+		],
+		"BonusDescriptions": [
+				"ArmorProtection: x1.75",
+				"ArmorFactor: x1.75",
+				"CASEII: 10",
+				"CritRes: 50%",
+				"WalkSpeed: -10%",
+				"RunSpeed: -10%"
+			]
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 500000,
+		"Rarity": 5,
+		"Purchasable": true,
+		"Manufacturer": "CLAN",
+		"Model": "Hardened",
+		"UIName": "Hardened Armor (C)",
+		"Id": "emod_armorslots_hardened_CLAN",
+		"Name": "Hardened Armor (C)",
+		"Details": "Hardened Armor is a thicker armor type that uses multiple overlapping plates to provide additional protection against enemy fire. Though capable of diverting more damage than standard armor, the increased number of armor plates and their lack of flexibility makes any unit employing it more difficult to pilot, and can affect the speed as well. Clan-spec Hardened Armor resembles its Inner Sphere counterpart, though in keeping with Clan doctrine weighs less and reduces speed less. However, it also protects less well than IS Hardened Armor (though not by much). To compensate for the lack of protection, Clan Hardened also incorporates CASE II functionality.\n\n <b><color=#e51717>COMMUNITY CONTENT</color></b>",
+		"Icon": "uixSvgIcon_action_end"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0,
+	"AllowedLocations": "CenterTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "HardenedPenaltyRun",
+				"Name": "Reduced Speed",
+				"Details": "Hardened Armour reduces movement.",
+				"Icon": "uixSvgIcon_equipment_ActuatorLeg"
+			},
+			"statisticData": {
+				"statName": "RunSpeed",
+				"operation": "Float_Multiply",
+				"modValue": "0.9",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "HardenedPenaltyWalk",
+				"Name": "ChargerSprint",
+				"Details": "MORE SPEED.",
+				"Icon": "uixSvgIcon_run_n_gun"
+			},
+			"statisticData": {
+				"statName": "WalkSpeed",
+				"operation": "Float_Multiply",
+				"modValue": "0.9",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "HardenedCritImmune",
+				"Name": "ChargerSprint",
+				"Details": "MORE SPEED.",
+				"Icon": "uixSvgIcon_run_n_gun"
+			},
+			"statisticData": {
+				"statName": "CriticalHitChanceReceivedMultiplier",
+				"operation": "Float_Multiply",
+				"modValue": "0.5",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}

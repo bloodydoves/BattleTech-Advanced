@@ -1,0 +1,86 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "ArmShoulder"
+			},
+			{
+				"CategoryID": "Quirk"
+			}
+		],
+		"ArmActuator": {
+			"Type": "PartShoulder"
+		},
+		"BonusDescriptions": [
+			"LocationAccuracy: +2"
+		],
+		"Flags": [
+			"default",
+			"not_broken",
+			"no_salvage",
+			"autorepair"
+		]
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 80000,
+		"Rarity": 1,
+		"Purchasable": true,
+		"Manufacturer": "Quirk",
+		"Model": "Slagmaiden",
+		"UIName": "Slagmaiden Hyper-Extending Actuators",
+		"Id": "Gear_Quirk_HyperExtendingActuators_Slagmaiden",
+		"Name": "Slagmaiden Hyper-Extending Actuators",
+		"Details": "This gear represents the Slagmaiden's inherent Hyper-Extending Actuators quirk. This grants the Slagmaiden bonus weapon accuracy with weapons in the actuator's location.",
+		"Icon": "uixSvgIcon_equipment_ActuatorArm"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0,
+	"AllowedLocations": "Arms",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "Status-ArmAccuracy-{location}",
+				"Name": "Arm Accuracy",
+				"Details": "+2 Arm Mounted accuracy.",
+				"Icon": "uixSvgIcon_equipment_ActuatorArm"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "{location}.Accuracy",
+				"operation": "Float_Add",
+				"modValue": "-2",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_variant",
+			"component_type_variant1",
+			"BLACKLISTED"
+		],
+		"tagSetSourceFile": ""
+	}
+}

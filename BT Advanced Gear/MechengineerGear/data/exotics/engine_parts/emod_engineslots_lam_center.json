@@ -1,0 +1,180 @@
+{
+	"Custom": {
+		"Weights": {
+			"ReservedSlots": 4
+		},
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "1.35 * [[Chassis.Tonnage]] / 2",
+				"CBillCost": "12000 * [[Chassis.Tonnage]] * [[Chassis.Tonnage]] / 33"
+			}
+		},
+		"Category": [
+			{
+				"CategoryID": "EngineShield"
+			},
+			{
+				"CategoryID": "EnginePart"
+			}
+		],
+		"Linked": {
+			"Links": [
+				{
+					"ComponentDefId": "emod_engineslots_size1",
+					"Location": "LeftTorso"
+				},
+				{
+					"ComponentDefId": "emod_engineslots_size1",
+					"Location": "RightTorso"
+				}
+			]
+		},
+		"Flags": [
+				"vital",
+				"engine_part",
+				"no_salvage"
+		],
+		"BonusDescriptions": [
+				"JumpDistance: 20%",
+				"EvaPips: +1",
+				"EngineReserved: 4"
+			]
+	},
+	"DissipationCapacity": 0,
+	"Description": {
+		"Cost": 500000,
+		"Rarity": 10,
+		"Purchasable": false,
+		"Manufacturer": "Allied Aerospace",
+		"Model": "Valkyrie",
+		"UIName": "Engine (LAM)",
+		"Id": "emod_engineslots_lam_center",
+		"Name": "Land Air Mech Engine",
+		"Details": "Originally conceived during the Star League era, the Land-Air 'Mech (or LAM) is a hybrid military unit capable of transforming between BattleMech and Aerospace Fighter forms. <b><color=#0066ff>Reserves 2 Slots</color></b>",
+		"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "HeatSink",
+	"ComponentSubType": "Heatsink",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 4,
+	"Tonnage": 0,
+	"AllowedLocations": "CenterTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator"
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "MaxEvasion",
+				"Name": "EVASIVE MOVE",
+				"Details": "This unit generates an extra EVASIVE charge from movement actions (up to its maximum).",
+				"Icon": "uixSvgIcon_action_evasivemove"
+			},
+			"statisticData": {
+				"statName": "MaxEvasivePips",
+				"operation": "Int_Add",
+				"modValue": "1",
+				"modType": "System.Int32"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator"
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-PhantasmEvasionGained",
+				"Name": "EVASIVE MOVE",
+				"Details": "This unit generates 1 extra EVASIVE charges from movement actions.",
+				"Icon": "lv_static"
+			},
+			"statisticData": {
+				"statName": "EvasivePipsGainedAdditional",
+				"operation": "Int_Add",
+				"modValue": "1",
+				"modType": "System.Int32"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-LAMJump-Engine",
+				"Name": "JUMP DISTANCE INCREASED",
+				"Details": "Conversion Gear increase Jump Distance by 20%",
+				"Icon": "uixSvgIcon_equipment_Gyro"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "JumpDistanceMultiplier",
+				"operation": "Float_Multiply",
+				"modValue": "1.2",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-Attack_SelfDamageDFA-T1",
+				"Name": "DFA SELF-INFLICTED DAMAGE DECREASED",
+				"Details": "DFA attacks deal [AMT] less damage to the attacker.",
+				"Icon": "uixSvgIcon_equipment_ActuatorLeg"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "DFASelfDamage",
+				"operation": "Float_Subtract",
+				"modValue": "25.0",
+				"modType": "System.Single",
+				"targetCollection": "NotSet",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "DFA"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"EnginePart.{location}",
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}

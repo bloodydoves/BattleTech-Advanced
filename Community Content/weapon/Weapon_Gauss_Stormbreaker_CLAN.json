@@ -1,0 +1,109 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/a/g/gaussrifle"
+			}
+		],	
+		"ComponentExplosion": {
+			"ExplosionDamage": 200,
+			"StabilityDamage": 40
+		},
+		"BonusDescriptions": [
+			"WpnRecoil: 1",
+			"IsGauss",
+			"WeaponBoom: 200",
+			"AntiBA: 150%"
+		]
+	},
+    "Category" : "Ballistic",
+    "Type" : "Gauss",
+    "WeaponSubType" : "Gauss",
+    "MinRange": 0,
+	"MaxRange": 340,
+	"RangeSplit": [
+		90,
+		160,
+		260
+	],
+    "AmmoCategory" : "APGAUSS",
+    "StartingAmmoCapacity" : 0,
+    "HeatGenerated" : 9,
+    "Damage" : 3,
+    "OverheatedDamageMultiplier" : 0,
+    "EvasiveDamageMultiplier" : 0,
+    "EvasivePipsIgnored" : 1,
+    "DamageVariance" : 0,
+    "HeatDamage" : 0,
+    "AccuracyModifier" : -1,
+    "CriticalChanceMultiplier" : 0.025,
+    "AOECapable" : false,
+    "IndirectFireCapable" : false,
+    "RefireModifier" : 2,
+    "ShotsWhenFired" : 5,
+    "ProjectilesPerShot" : 1,
+    "AttackRecoil" : 1,
+    "Instability" : 2,
+	"APDamage": 1,	
+    "WeaponEffectID" : "WeaponEffect-Weapon_GaussRifle",
+    "Description" : {
+        "Cost" : 23854217,
+        "Rarity" : 20,
+        "Purchasable" : true,
+        "Manufacturer" : "Pafftek Industries",
+        "Model" : "Magnetic Rail Stormbreaker Cannon Mk-17",
+        "UIName" : "Stormbreaker (C)",
+        "Id" : "Weapon_Gauss_Stormbreaker_CLAN",
+        "Name" : "Stormbreaker (C)",
+        "Details" : "During the Development of the Stormbreaker magshot weapon system, Pafftek Industries acquired new technology gauss coils from Clan Diamond Shark.  Part of the payment for these advanced coils was the design specifications for the Stormbreaker itself in its initial Mk9 form.   Clan Diamond Shark then adjusted these design specs to a Clan Specific Stormbreaker AP array utilizing the new AP Gauss round.  Has 3 fire modes, 5, 10 and 15 rounds.  Each sucessive fire mode increases heat and jamming chances.  Fire mode 3 (15 rounds) has a 25% jam chance.",
+        "Icon" : "uixSvgIcon_weapon_Ballistic"
+    },
+    "BonusValueA" : "",
+    "BonusValueB" : "",
+    "ComponentType" : "Weapon",
+    "ComponentSubType" : "Weapon",
+    "PrefabIdentifier" : "Gauss",
+    "BattleValue" : 0,
+    "InventorySize" : 4,
+    "Tonnage" : 6,
+    "AllowedLocations" : "All",
+    "DisallowedLocations" : "All",
+    "CriticalComponent" : false,
+	"Modes": [
+		{
+			"Id": "x1",
+			"UIName": "x1",
+			"isBaseMode": true,
+			"ShotsWhenFired": 0
+		},
+		{
+			"Id": "x2",
+			"UIName": "x2",
+			"isBaseMode": false,
+			"ShotsWhenFired": 5,
+			"RefireModifier": 4,
+			"FlatJammingChance": 0.1,			
+			"HeatGenerated": 12
+		},
+		{
+			"Id": "x3",
+			"UIName": "x3",
+			"isBaseMode": false,
+			"ShotsWhenFired": 10,
+			"RefireModifier": 8,
+			"FlatJammingChance": 0.25,			
+			"HeatGenerated": 26
+		}
+	],	
+    "statusEffects" : [
+        
+    ],
+    "ComponentTags" : {
+        "items" : [
+            "component_type_stock",
+            "range_extreme",
+			"wr-jammable_weapon"			
+        ],
+        "tagSetSourceFile" : ""
+    }
+}

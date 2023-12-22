@@ -1,0 +1,93 @@
+{
+	"Custom": {
+		"Cooling": {
+			"HeatSinkDefId": "Gear_HeatSink_Generic_Standard"
+		},
+		"Weights": {
+			"EngineFactor": 1.8
+		},
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "[[Chassis.Tonnage]] / 2",
+				"CBillCost": "12000 * [[Chassis.Tonnage]] * [[Chassis.Tonnage]] / 30"
+			}
+		},
+		"Category": [
+			{
+				"CategoryID": "EngineShield"
+			},
+			{
+				"CategoryID": "EnginePart"
+			}
+		],
+		"Flags": [
+			"vital",
+				"engine_part",
+				"no_salvage"
+		],
+		"BonusDescriptions": [
+				"FissionSHS",
+				"EngineWeight: +80%",
+				"HeatPerTurn: -20"
+			]
+	},
+	"Description": {
+		"Cost": 450000,
+		"Rarity": 1,
+		"Purchasable": false,
+		"Manufacturer": "Vlar",
+		"Model": "Fission",
+		"UIName": "Engine Fission",
+		"Id": "emod_engineslots_fission_center",
+		"Name": "Fission Engine",
+		"Details": "Fission engines are a rarely seen piece of engine technology. Originally the predecessor to the much more widely accepted fusion engine, the fission engine is extremely fuel efficient and relatively inexpensive to both fabricate and operate, making them fairly popular for support vehicles and the occassional IndustrialMech. Compared to fusion however, the fission engine has few advantages and many downsides, such as high doses of dangerous radiation, making them rarely seen on combat units such as BattleMechs.",
+		"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "HeatSink",
+	"ComponentSubType": "Heatsink",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 3,
+	"Tonnage": 0,
+	"AllowedLocations": "CenterTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-FissionHeatReduction",
+				"Name": "Reduced Heat",
+				"Details": "Fission Engines are mildly more heat efficient, wicking away 20 heat each turn.",
+				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "HeatSinkCapacity",
+				"operation": "Int_Add",
+				"modValue": "20",
+				"modType": "System.Int32"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"EnginePart.{location}",
+			"component_type_stock",
+			"Fission"
+		],
+		"tagSetSourceFile": ""
+	}
+}

@@ -1,0 +1,131 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/a/a/lbx"
+			},
+			{
+				"CategoryID": "CombatShield"
+			}
+		],
+		"BonusDescriptions": [
+			"ModularArmor: +125",
+			"WpnRecoil: 2",
+			"LBX"
+		],
+		"Flags": [
+			"default",
+			"not_broken",
+			"autorepair",
+			"no_salvage"
+		]
+	},
+	"Category": "Ballistic",
+	"Type": "Autocannon",
+	"WeaponSubType": "LB10X",
+	"MinRange": 0,
+	"MaxRange": 720,
+	"RangeSplit": [
+		180,
+		360,
+		540
+	],
+	"AmmoCategory": "Flamer",
+	"StartingAmmoCapacity": 2,
+	"HeatGenerated": 8,
+	"Damage": 60,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 0,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": 0,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 2,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 2,
+	"Instability": 15,
+	"DisableClustering": false,
+	"ImprovedBallistic": true,
+	"BallisticDamagePerPallet": true,
+	"AlternateDamageCalc": true,
+	"WeaponEffectID": "WeaponEffect-Weapon_AC10_Single",
+	"Description": {
+		"Cost": 352000,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "Slagmaiden",
+		"Model": "Large Shield",
+		"UIName": "Shotgun Shield",
+		"Id": "Weapon_Slagmaiden_Shield_Gun",
+		"Name": "Shotgun Shield",
+		"Details": "This is a unique shield, designed for the Slagmaiden. It cannot be removed or used elsewhere. This particular shield has an in-built autocannon barrel with a small ammo reserve, letting it function as a LB-10X Autocannon with a few shots in the bin. It also still serves as a large shield, providing a high armor defense to the Slagmaiden.",
+		"Icon": "uixSvgIcon_weapon_Ballistic"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "ac10",
+	"BattleValue": 0,
+	"InventorySize": 8,
+	"Tonnage": 7,
+	"AllowedLocations": "LeftArm",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"Modes": [
+		{
+			"Id": "Slug",
+			"UIName": "Slug",
+			"isBaseMode": true
+		},
+		{
+			"Id": "Cluster",
+			"UIName": "Cluster",
+			"isBaseMode": false,
+			"AccuracyModifier": -1,
+			"CriticalChanceMultiplier": 0.5,
+			"Instability": -12,
+			"ProjectilesPerShot": 9,
+			"HitGenerator": "Cluster"
+		}
+	],
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-Shield_Large-{location}",
+				"Name": "Bonus Arm Armor",
+				"Details": "The BattleMech Shield is providing extra armor to the equipped arm at the cost of impairing that arm's accuracy with weaponry.",
+				"Icon": "shield-reflect"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "{location}.Armor",
+				"operation": "Float_Add",
+				"modValue": "125",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_close"
+		],
+		"tagSetSourceFile": ""
+	}
+}

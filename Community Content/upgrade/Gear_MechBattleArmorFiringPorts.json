@@ -1,0 +1,71 @@
+{
+	"Custom": {
+		"Flags": [
+			"not_broken",
+			"no_salvage",
+			"autorepair"
+		],
+		"Category": [
+			{
+				"CategoryID": "Misc"
+			}
+		]
+	},
+	"Description": {
+		"Cost": 0,
+		"Rarity": 99,
+		"Purchasable": true,
+		"Manufacturer": "Science Labs",
+		"Model": "Battle Armor Firing Ports",
+		"UIName": "Battle Armor Firing Ports",
+		"Id": "Gear_MechBattleArmorFiringPorts",
+		"Name": "Battle Armor Firing Ports",
+		"Details": "This component permits any Battle Armor carried by this unit to perform actions from inside the unit and to shoot at enemy targets from inside the unit.",
+		"Icon": "uixSvgIcon_equipment_HeatBank"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 1,
+	"AllowedLocations": "Torso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-getHasBattleArmorFiringPort",
+				"Name": "getHasBattleArmorFiringPort",
+				"Details": "getHasBattleArmorFiringPort",
+				"Icon": "uixSvgIcon_ability_precisionstrike"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "HasFiringPorts",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"BLACKLISTED",
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}

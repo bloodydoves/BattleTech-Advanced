@@ -2,7 +2,7 @@
 	"Description": {
 		"Id": "AbilityDefGu8a",
 		"Name": "BRAWLER",
-		"Details": "PASSIVE: Grants a 35% damage bonus to kicks, punches, and DFAs. Reduces self-damage from DFAs by 50%.",
+		"Details": "PASSIVE: Grants a 35% damage bonus to kicks, punches, and DFAs. Reduces self-damage from DFAs by 50%. Grants one extra punch attack.",
 		"Icon": "biceps"
 	},
 	"DisplayParams": "ShowInMWTRay",
@@ -109,6 +109,31 @@
 				"modValue": "0.5",
 				"modType": "System.Single"
 			}
+		},
+		{
+			"durationData": {
+				"duration": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDefGU8a_TwoPunches",
+				"Name": "Two Punches",
+				"Details": "Gain One Additional Punch",
+				"Icon": "uixSvgIcon_action_evasivemove"
+			},
+			"statisticData": {
+				"statName": "CBTBE_Punch_Extra_Hits_Count",
+				"operation": "Float_Add",
+				"modValue": "1.0",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
 		}
 	],
 	"IsPrimaryAbility": true

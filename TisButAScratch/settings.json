@@ -9,7 +9,15 @@
 	"BleedingOutTimerString": "activations",
 	"enableInternalDmgInjuries": true,
 	"pilotPainShunt": "pilot_PainShunt",
-	"pilotingReqs": {},
+	"pilotingReqs": {
+		"RequireCommander": {
+			"ComponentTag": "RequireCommander",
+			"PilotTags": [
+				"pilot_commander_permissions"
+			],
+			"PilotTagDisplay": "Pilot needs to be the Commander"
+		}
+	},
 	"internalDmgStatName": "InjureOnStructDmg",
 	"internalDmgInjuryLimit": 1,
 	"internalDmgLvlReq": 20,

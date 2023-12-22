@@ -9,41 +9,45 @@
 			}
 		],
 		"ComponentExplosion": {
-			"ExplosionDamage": 200,
+			"ExplosionDamage": 150,
 			"StabilityDamage": 60
 		},
 		"BonusDescriptions": [
-				"Knockdown",
-				"KnockdownChance: 140%",
-				"DmgFallOff: 50%",
-				"DmgFallOffStart: 300",
-				"DmgFallOffEnd: 600",
-				"WpnRecoil: 4",
-				"NoFireInMelee",
-				"IsHeavyGauss",
-				"WpnAccuracy: +1",
-				"WpnCooldown: 1",
-				"WeaponBoom: 200"
-			],
+			"Knockdown",
+			"KnockdownChance: 140%",
+			"VariableShortMax: 180",
+			"VariableMedMin: 180",
+			"VariableMedMax: 390",
+			"VariableLongMin: 390",
+			"VariableLongMax: 780",
+			"WpnRecoil: 4",
+			"NoFireInMelee",
+			"IsHeavyGauss",
+			"WpnAccuracy: +1",
+			"WpnCooldown: 1",
+			"WeaponBoom: 150",
+			"WeaponAttachmentCompatible: Gauss FCS",
+			"LocationRestricted: Torsos Only"
+		],
 		"Flags": [
-				"no_salvage",
-				"not_broken"
-			]
+			"no_salvage",
+			"not_broken"
+		]
 	},
 	"Category": "Ballistic",
 	"Type": "Gauss",
 	"WeaponSubType": "Gauss",
-	"MinRange": 120,
-	"MaxRange": 780,
+	"MinRange": 0,
+	"MaxRange": 390,
 	"RangeSplit": [
-		180,
 		390,
-		600
+		390,
+		390
 	],
 	"AmmoCategory": "HGAUSS",
 	"StartingAmmoCapacity": 0,
 	"HeatGenerated": 30,
-	"Damage": 200,
+	"Damage": 150,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
 	"EvasivePipsIgnored": 1,
@@ -58,17 +62,12 @@
 	"ProjectilesPerShot": 1,
 	"AttackRecoil": 4,
 	"Instability": 60,
-	"DistantVariance": 0.5,
-	"DamageFalloffStartDistance": 300,
-	"DamageFalloffEndDistance": 600,
-	"DistantVarianceReversed": false,
-	"RangedDmgFalloffType": "Linear",
 	"Cooldown": 1,
 	"ProjectileSpeedMultiplier": 2.5,
 	"ImprovedBallistic": true,
 	"WeaponEffectID": "WeaponEffect-Weapon_GaussRifle",
 	"Description": {
-		"Cost": 5000000,
+		"Cost": 3500000,
 		"Rarity": 20,
 		"Purchasable": true,
 		"Manufacturer": "VEST",
@@ -87,7 +86,7 @@
 	"BattleValue": 0,
 	"InventorySize": 10,
 	"Tonnage": 15,
-	"AllowedLocations": "LeftTorso",
+	"AllowedLocations": "LeftTorso,RightTorso,CenterTorso",
 	"DisallowedLocations": "LeftArm,RightArm",
 	"CriticalComponent": false,
 	"statusEffects": [
@@ -117,11 +116,46 @@
 			"nature": "Buff"
 		}
 	],
+	"Modes": [
+		{
+			"Id": "short",
+			"UIName": "Close",
+			"isBaseMode": false,
+			"MinRange": 120.0,
+			"MaxRange": -210.0,
+			"ShortRange": -210.0,
+			"MediumRange": -210.0,
+			"LongRange": -210.0,
+			"DamagePerShot": 75.0,
+			"AccuracyModifier": -1
+		},
+		{
+			"Id": "mid",
+			"UIName": "Medium",
+			"isBaseMode": true,
+			"forbiddenRangeEnable": true,
+			"ForbiddenRange": 180
+		},
+		{
+			"Id": "long",
+			"UIName": "Long",
+			"isBaseMode": false,
+			"MaxRange": 390.0,
+			"ShortRange": 390.0,
+			"MediumRange": 390.0,
+			"LongRange": 390.0,
+			"DamagePerShot": -75.0,
+			"forbiddenRangeEnable": true,
+			"ForbiddenRange": 390,
+			"AccuracyModifier": 1
+		}
+	],
 	"ComponentTags": {
 		"items": [
 			"component_type_stock",
 			"range_standard",
-			"WebbTCSupported-SingleShot"
+			"GaussFCSSupported-Heavy",
+			"WebbTCSupported-VSPL"
 		],
 		"tagSetSourceFile": ""
 	}

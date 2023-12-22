@@ -41,6 +41,8 @@ main settings in mod.json
 										  you can't hit cause your units have flag but you can move. When you've done AI units chooses to reserve act 
 										  and still can't hit cause they have flag. Next round both yours and AI units loose protection flag and can shoot normally
 	"DeployAutoSpawnProtection": true - if true on first round begin all units gain spawn protection 
+	"OnUnitSpawnProtection": true - if true AI units will gain spawn protection after they spawn in a middle of battle
+	                                Note! this spawn protection will NOT stop objectives timers (if any) from count
 	"AskForDeployManual": true - if true and manual deployment is allowed will ask if player wants to set deploy position. 
 	                             if false and manual deployment is allowed - deploy will be manual. 
 	"ManualDeployForbidContractTypes": [] - list of contract types names, for listed contract types manual deploy will be forbidden
@@ -74,6 +76,8 @@ main settings in mod.json
     "ShowPassiveAbilitiesIcon": "ram",
     "HideActiveAbilitiesIcon": "futuristic",
     "HidePassiveAbilitiesIcon": "ram",
+	"globalGameRepresenationAudioEventsSupress": [], - list of audio events names to suppress. I'm using value [ "hatchet_latch" ] 
+	                                                   to suppress annoying hatchetman's clicking sound
 	"PlayerControlConvoyTag": "convoy_player_control" - tag added to lance's spawnEffects to turn on player controllable convoy to mechanic
 example from contract override definition:
 .............
@@ -255,6 +259,25 @@ VehicleChassis/Chassis
     "MeleeWeaponOverride":{    - override melee weapon for chassis. If you'll set weapon with non-melee weapon category or weapon than needs ammo, it will be only your fucken problem.
       "DefaultWeapon": "Weapon_MeleeAttackBattleClaw"
     }
+	"CrewLocation":"Head", - location where pilot's cockpit is supposed to be. Can be in mech (Head, CenterTorso etc) or vehicle (Turret, Left, Right etc) style
+	                         pilot gets injures if CrewLocation is hit
+							 on eject CrewLocation nuked
+							 Can be altered at runtime via unit statistic "CUCrewLocation"(string). 
+							 Value in CustomParts.CrewLocation is inital value for this statistic
+							 Default value is Head (Turret for vehicles)
+	"InjurePilotOnCrewLocationHit": true - if true pilot gets injures if CrewLocation is hit, 
+											if false pilot would not get hurt by CU code (other mods can override this)
+											Can be altered at runtime via unit statistic "CUInjurePilotOnCrewLocationHit"(boolean). 
+											Value in CustomParts.InjurePilotOnCrewLocationHit is inital value for this statistic
+											Default value is true
+	"NukeCrewLocationOnEject": true - if true on eject CrewLocation nuked, 
+									  if false eject would not be nuked by CU code (other mods can override this)
+									  Can be altered at runtime via unit statistic "CUNukeCrewLocationOnEject"(boolean). 
+									  Value in CustomParts.NukeCrewLocationOnEject is inital value for this statistic
+									  Default value is true
+
+									  Note! For squads these settings are meaningless. 
+
     "AOEHeight": 55,  - this value will be added to y-coordinate of current position in AoE damage calculations (weapon/landmines/component's explosions). 
                         Can be altered runtime via CUAOEHeight actor's statistic value (float)
     "FiringArc":60, - if set and > 10 means vehicle firing arc in degrees and vehicle have to rotate toward target to fire. 
@@ -722,6 +745,21 @@ Custom hit table
 		}
 	},
 }
+
+Animator Replacer
+you can create component can be used to replace animation from one mech model to another
+for example you can create component which gives hatchetman style melee animation to any other mech you want
+to do it you should add AnimatorReplacer custom component to Custom section of component you want
+"Custom": {
+	"AnimatorReplacer":{
+		"AnimationSource":"chrPrfMech_hatchetmanBase-001" - prefab used as source of animation clips
+	}
+},
+in example - if chrPrfMech_hatchetmanBase-001 is exists in player manifest (eg. DLC bought) 
+any mech having this component get hatchetman animation
+if AnimationSource prefab is absent is manifest - animations remains intact
+NOTE! this only works for "normal" mechs, trying to use this mechanic for vehicles, quads, troopers 
+can lead to unpredictable behavior.
 
 appendix A. Game's build-in audio events names in format '<name>':<id>
 id - just for info purposes

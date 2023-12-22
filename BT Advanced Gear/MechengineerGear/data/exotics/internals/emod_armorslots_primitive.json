@@ -1,0 +1,206 @@
+{
+	"Custom": {
+		"Color": "GoldHalf",
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "3",
+				"CBillCost": "1000 * [[Chassis.Tonnage]]"
+			}
+		},
+		"ArmorStructureChanges": {
+			"ArmorFactor": 0.67
+		},
+		"Category": {
+			"CategoryID": "Armor"
+		},
+		"ArmorRepair": {
+			"ArmorTPCost": 0.5,
+			"ArmorCBCost": 0.5
+		},
+		"DynamicSlots": {
+			"ReservedSlots": 4,
+			"BackgroundColor": "GoldHalf",
+			"ShowIcon": true,
+			"NameText": "Primitive Armor",
+			"BonusAText": "Dynamic Slot",
+			"BonusBText": " "
+		},
+		"Flags": [
+				"default",
+				"ignore_damage",
+				"autorepair",
+				"not_broken",
+				"no_salvage"
+		],
+		"BonusDescriptions": [
+				"ReservedSlots: 4",
+				"ArmorProtection: -33%",
+				"PhysicalDamageReduction: 50%"
+			]
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 0,
+		"Rarity": 1,
+		"Purchasable": true,
+		"Manufacturer": "Earthwerks",
+		"Model": "Primitive",
+		"UIName": "Primitive",
+		"Id": "emod_armorslots_primitive",
+		"Name": "Primitive Armor",
+		"Details": "Developed during the Age of War, Primitive Armor was introduced on the Mackie, the original BattleMech. In terms of total protection against weapon attacks, Primitive Armor is inferior to the standard BattleMech armor that would come later. However, Primitive Armor is uniquely durable against physical impact damage and resists melee damage fairly well.",
+		"Icon": "uixSvgIcon_action_end"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0,
+	"AllowedLocations": "CenterTorso",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+		  "durationData": {
+			"duration": -1,
+			"stackLimit": -1
+		  },
+		  "targetingData": {
+			"effectTriggerType": "Passive",
+			"effectTargetType": "Creator",
+			"showInTargetPreview": false,
+			"showInStatusPanel": false
+		  },
+		  "effectType": "StatisticEffect",
+		  "Description": {
+			"Id": "MeleeResistPunch",
+			"Name": "Melee Resistance Punch",
+			"Details": "All incoming Melee damage reduced, extra Melee Damage.",
+			"Icon": "uixSvgIcon_mwFury"
+		  },
+		  "nature": "Buff",
+		  "statisticData": {
+			"statName": "CBTBE_Punch_Target_Damage_Reduction_Multi",
+			"operation": "Float_Multiply",
+			"modValue": "0.5",
+			"modType": "System.Single"
+		  }
+		},
+		{
+		  "durationData": {
+			"duration": -1,
+			"stackLimit": -1
+		  },
+		  "targetingData": {
+			"effectTriggerType": "Passive",
+			"effectTargetType": "Creator",
+			"showInTargetPreview": false,
+			"showInStatusPanel": false
+		  },
+		  "effectType": "StatisticEffect",
+		  "Description": {
+			"Id": "MeleeResistKick",
+			"Name": "Melee Resistance Charge",
+			"Details": "All incoming Melee damage reduced, extra Melee Damage.",
+			"Icon": "uixSvgIcon_mwFury"
+		  },
+		  "nature": "Buff",
+		  "statisticData": {
+			"statName": "CBTBE_Kick_Target_Damage_Reduction_Multi",
+			"operation": "Float_Multiply",
+			"modValue": "0.5",
+			"modType": "System.Single"
+		  }
+		},
+		{
+		  "durationData": {
+			"duration": -1,
+			"stackLimit": -1
+		  },
+		  "targetingData": {
+			"effectTriggerType": "Passive",
+			"effectTargetType": "Creator",
+			"showInTargetPreview": false,
+			"showInStatusPanel": false
+		  },
+		  "effectType": "StatisticEffect",
+		  "Description": {
+			"Id": "MeleeResistPhysDmg",
+			"Name": "Melee Resistance Phys",
+			"Details": "All incoming Melee damage reduced, extra Melee Damage.",
+			"Icon": "uixSvgIcon_mwFury"
+		  },
+		  "nature": "Buff",
+		  "statisticData": {
+			"statName": "CBTBE_Physical_Weapon_Target_Damage_Reduction_Multi",
+			"operation": "Float_Multiply",
+			"modValue": "0.5",
+			"modType": "System.Single"
+		  }
+		},
+		{
+		  "durationData": {
+			"duration": -1,
+			"stackLimit": -1
+		  },
+		  "targetingData": {
+			"effectTriggerType": "Passive",
+			"effectTargetType": "Creator",
+			"showInTargetPreview": false,
+			"showInStatusPanel": false
+		  },
+		  "effectType": "StatisticEffect",
+		  "Description": {
+			"Id": "MeleeResist",
+			"Name": "Melee Resistance Charge",
+			"Details": "All incoming Melee damage reduced, extra Melee Damage.",
+			"Icon": "uixSvgIcon_mwFury"
+		  },
+		  "nature": "Buff",
+		  "statisticData": {
+			"statName": "CBTBE_Charge_Target_Damage_Reduction_Multi",
+			"operation": "Float_Multiply",
+			"modValue": "0.5",
+			"modType": "System.Single"
+		  }
+		},
+		{
+		  "durationData": {
+			"duration": -1,
+			"stackLimit": -1
+		  },
+		  "targetingData": {
+			"effectTriggerType": "Passive",
+			"effectTargetType": "Creator",
+			"showInTargetPreview": false,
+			"showInStatusPanel": false
+		  },
+		  "effectType": "StatisticEffect",
+		  "Description": {
+			"Id": "MeleeResistDFA",
+			"Name": "Melee Resistance DFA",
+			"Details": "All incoming Melee damage reduced, extra Melee Damage.",
+			"Icon": "uixSvgIcon_mwFury"
+		  },
+		  "nature": "Buff",
+		  "statisticData": {
+			"statName": "CBTBE_DFA_Target_Damage_Reduction_Multi",
+			"operation": "Float_Multiply",
+			"modValue": "0.5",
+			"modType": "System.Single"
+		  }
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"BLACKLISTED"
+		],
+		"tagSetSourceFile": ""
+	}
+}
