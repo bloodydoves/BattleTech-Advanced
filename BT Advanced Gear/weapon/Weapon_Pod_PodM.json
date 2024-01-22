@@ -1,0 +1,121 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/a/o/pod"
+			}
+		],
+		"ComponentExplosion": {
+			"ExplosionDamagePerAmmo": 45,
+			"StabilityDamagePerAmmo": 5
+		},
+		"InternalAmmoTonnage": {
+            "InternalAmmoTons": 0.05
+        },
+		"BonusDescriptions": [
+			"MPod",
+			"VariableShortMax: 30",
+			"VariableMedMin: 30",
+			"VariableMedMax: 60",
+			"VariableLongMin: 60",
+			"VariableLongMax: 90",
+			"WeaponBoom: 45",
+			"PipsIgnored: 1",
+			"WpnAccuracy: +1",
+			"InternalAmmo: 1"
+		]
+	},
+	"Category": "AntiPersonnel",
+	"Type": "Autocannon",
+	"WeaponSubType": "AC2",
+	"MinRange": 0,
+	"MaxRange": 30,
+	"RangeSplit": [
+		30,
+		30,
+		30
+	],
+	"AmmoCategory": "Flamer",
+	"StartingAmmoCapacity": 1,
+	"HeatGenerated": 0,
+	"Damage": 75,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 1,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": -1,
+	"CriticalChanceMultiplier": 0.5,
+	"IndirectFireCapable": false,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 15,
+	"AttackRecoil": 4,
+	"Instability": 5,
+	"HitGenerator": "Cluster",
+	"WeaponEffectID": "WeaponEffect-Weapon_AC10_Single",
+	"Description": {
+		"Cost": 200000,
+		"Rarity": 0,
+		"Purchasable": true,
+		"Manufacturer": "Generic",
+		"Model": "Explosive Canister",
+		"UIName": "M-Pod",
+		"Id": "Weapon_Pod_PodM",
+		"Name": "Anti-Mech Pod",
+		"Details": "An Anti-Mech Pod (M-Pod) is a piece of equipment designed specifically, unlike the other Pod weapons, to destroy 'Mechs. M-Pods are effectively 1-ton LB-15X Autocannons with a single shot in them. However, unlike a true Autocannon shell, M-Pod attacks fall off rather dramatically across their very short three hex range, encouraging MechWarriors to close to point blank.",
+		"Icon": "crowned-explosion"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "MachineGun",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 1,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [],
+	"Modes": [
+		{
+			"Id": "short",
+			"UIName": "Close",
+			"isBaseMode": true
+		},
+		{
+			"Id": "mid",
+			"UIName": "Medium",
+			"isBaseMode": true,
+			"MinRange": 30.0,
+			"MaxRange": 30.0,
+			"ShortRange": 30.0,
+			"MediumRange": 30.0,
+			"LongRange": 30.0,
+			"DamagePerShot": -25.0,
+			"forbiddenRangeEnable": true,
+			"ForbiddenRange": 30
+		},
+		{
+			"Id": "long",
+			"UIName": "Long",
+			"isBaseMode": false,
+			"MaxRange": 60.0,
+			"ShortRange": 60.0,
+			"MediumRange": 60.0,
+			"LongRange": 60.0,
+			"DamagePerShot": -50.0,
+			"forbiddenRangeEnable": true,
+			"ForbiddenRange": 60
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_close",
+			"WebbTCSupported-SingleShot"
+		],
+		"tagSetSourceFile": ""
+	}
+}
