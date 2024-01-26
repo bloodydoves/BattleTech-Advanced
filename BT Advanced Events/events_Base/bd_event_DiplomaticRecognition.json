@@ -1,0 +1,202 @@
+{
+	"Description": {
+		"Id": "bd_event_DiplomaticRecognition",
+		"Name": "Diplomatic Recognition",
+		"Details": "What a way to start your day. The [[DM.Factions[faction_WordOfBlake],Word of Blake]] logo on your viewscreen fades, indicating the connection has been made, and a gently smiling Blakist [[DM.BaseDescriptionDefs[LorePrecentor],Precentor]] takes the logo's place. The robed figure greets you warmly. \"Thank you for speaking with me, Commander {COMMANDER.LastName}. The [[DM.Factions[faction_WordOfBlake],Word of Blake]] has taken notice of your mercenary company's many excellent works throughout the Inner Sphere and wishes to recognize you formally as a friend of interstellar relations. To that end, we are prepared to send you a hand-built [[DM.BaseDescriptionDefs[LoreAmbassadorClass],Ambassador]]-class BattleMech, straight out of the First [[DM.BaseDescriptionDefs[LoreStarLeague],Star League]]'s archives here on Terra. In return, we only ask that you continue your good works and that you consider continuing to spread the word of Holy Blake as you have done. What say you?\" You'd heard rumors that the fabled Ambassadors were being put back into production by [[DM.Factions[faction_ComStar],ComStar]] and later the [[DM.Factions[faction_WordOfBlake],Word of Blake]] but you never dreamed that you'd somehow acquire one. You ask if there's any strings attached. \"None, Commander, this is a recognition of your excellent [[DM.BaseDescriptionDefs[LoreMRBC],MRBC]] rating and your willingness to further the cause of international relations. The Word stands ready to deliver your BattleMech immediately, you only need give the word.\"",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 500,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"tagSetSourceFile": "",
+			"items": []
+		},
+		"ExclusionTags": {
+			"tagSetSourceFile": "",
+			"items": [
+				"bd_event_DiplomaticRecognition_complete"
+			]
+		},
+		"RequirementComparisons": [
+			{
+				"obj": "Travel",
+				"op": "Equal",
+				"val": 0,
+				"valueConstant": "0"
+			},
+			{
+				"obj" : "Reputation.MercenaryReviewBoard",
+				"op" : "GreaterThanOrEqual",
+				"val" : 900,
+				"valueConstant" : "900"
+			},
+			{
+				"obj" : "Reputation.WordOfBlake",
+				"op" : "GreaterThanOrEqual",
+				"val" : 25,
+				"valueConstant" : "25"
+			}
+		]
+	},
+	"AdditionalRequirements": [
+		{
+			"Scope": "Commander",
+			"RequirementTags": {
+				"tagSetSourceFile": "",
+				"items": []
+			},
+			"ExclusionTags": {
+				"tagSetSourceFile": "",
+				"items": []
+			},
+			"RequirementComparisons": [
+				{
+					"obj": "Injuries",
+					"op": "Equal",
+					"val": 0,
+					"valueConstant": "0"
+				}
+			]
+		},
+		{
+			"Scope": "StarSystem",
+			"RequirementTags": {
+				"tagSetSourceFile": "",
+				"items": []
+			},
+			"ExclusionTags": {
+				"tagSetSourceFile": "",
+				"items": [
+					"planet_other_empty"
+				]
+			},
+			"RequirementComparisons": []
+		}
+	],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "outcome_0",
+				"Name": "Accept.",
+				"Details": "Get the Ambassador",
+				"Icon": null
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "outcome_0_0",
+						"Name": "Accepted",
+						"Details": "The [[DM.BaseDescriptionDefs[LorePrecentor],Precentor]] smiles beneath his hood. \"You've made a wise choice, Commander. My acolytes will deliver your 'Mech shortly. Oh, a word of caution though. The [[DM.BaseDescriptionDefs[LoreAmbassadorClass],Ambassador]]-class is highly selective about its pilots. The neurohelmet has been calibrated such that it will only accept you, personally, as a pilot. The rest of your mercenary pilots cannot make use of the 'Mech. This is a reward for you, specifically, after all, not your various employees.\" You nod in understanding and thank the [[DM.BaseDescriptionDefs[LorePrecentor],Precentor]] for their time. As they cut the connection, you signal Yang to prepare for receipt of the new 'Mech.",
+						"Icon": null
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"tagSetSourceFile": "",
+								"items": [
+									"bd_event_DiplomaticRecognition_complete"
+								]
+							},
+							"RemovedTags": {
+								"tagSetSourceFile": "",
+								"items": []
+							},
+							"Stats": null,
+							"Actions": [
+								{
+									"Type": "Mech_AddRoster",
+									"value": "mechdef_ambassador_MBSDR-1",
+									"valueConstant": null,
+									"additionalValues": null
+								}
+							],
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"ExclusionTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"RequirementComparisons": []
+			}
+		},
+		{
+			"Description": {
+				"Id": "outcome_1",
+				"Name": "Refuse.",
+				"Details": "End the event",
+				"Icon": null
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "outcome_1_0",
+						"Name": "Hired",
+						"Details": "There is a pause as the Blakist [[DM.BaseDescriptionDefs[LorePrecentor],Precentor]] processes your response. After a moment, he responds. \"While I can't say I agree with your decision, I will of course honor it. Thank you for your time today, Commander, and may the light of Blake illuminate your path. Farewell.\" As the image fades, you feel sure you've made the right decision. Those Blakists might pay well but who knows what hidden strings might lurk in a gift 'Mech from them. Best to not take the chance, even though you know Yang is going to be disappointed and that you're gonna hear about it for a month.",
+						"Icon": null
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"tagSetSourceFile": "",
+								"items": [
+									"bd_event_DiplomaticRecognition_complete"
+								]
+							},
+							"RemovedTags": {
+								"tagSetSourceFile": "",
+								"items": []
+							},
+							"Stats": null,
+							"Actions": [],
+							"ForceEvents": null,
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"ExclusionTags": {
+					"tagSetSourceFile": "",
+					"items": []
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "NORMAL",
+	"OneTimeEvent": true,
+	"Tags": {
+		"tagSetSourceFile": "tags/EventTags",
+		"items": []
+	}
+}

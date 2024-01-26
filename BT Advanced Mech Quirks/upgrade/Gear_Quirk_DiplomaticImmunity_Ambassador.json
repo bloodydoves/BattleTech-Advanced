@@ -1,0 +1,235 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "SensorsA"
+			},
+			{
+				"CategoryID": "Cockpit"
+			},
+			{
+				"CategoryID": "SensorsB"
+			},
+			{
+				"CategoryID": "Quirk"
+			}
+		],
+		"WorkOrderCosts": {
+			"Install": {
+				"TechCost": "[[Chassis.Tonnage]]/10",
+				"CBillCost": "[[Chassis.Tonnage]] * 1.15"
+			}
+		},
+		"Flags": [
+			"default",
+			"not_broken",
+			"no_salvage",
+			"autorepair"
+		],
+		"BonusDescriptions": [
+			"Health: +1",
+			"NoBleedout",
+			"IndividualResolve: +5",
+			"MaxResolveIncrease: 30",
+			"Sensors: +10%",
+			"Sight: +15%"
+		]
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 500000,
+		"Rarity": 99,
+		"Purchasable": false,
+		"Manufacturer": "Quirk",
+		"Model": "Ambassador",
+		"UIName": "Ambassador Diplomatic Immunity",
+		"Id": "Gear_Quirk_DiplomaticImmunity_Ambassador",
+		"Name": "Ambassador Diplomatic Immunity",
+		"Details": "This piece of gear represents the Ambassador's inherent Diplomatic Immunity quirk. This gives the Ambassador a raft of benefits in combat, including a boost to resolve generation, extra resistance to pilot damage, and much improved sensor and sight range. Additionally, this quirk also represents the incredible opulence that the Ambassador was constructed with, to the point of including a heated reclining seat, heated joysticks for the controls, excellent air conditioning, a small fridge, kettle, and cabinet for refreshments during long negotiations, and even a cupholder.",
+		"Icon": "uixSvgIcon_equipment_Cockpit"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "InjuryPrevention",
+				"Name": "MAX INJURIES INCREASED",
+				"Details": "Prevents [AMT] Injuries against a MechWarrior.",
+				"Icon": "uixSvgIcon_equipment_Cockpit"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "BonusHealth",
+				"operation": "Int_Add",
+				"modValue": "4",
+				"modType": "System.Int32",
+				"additionalRules": "NotSet",
+				"targetCollection": "Pilot",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "ReinforcedLifeSupport-NoBleed",
+				"Name": "No Bleedout",
+				"Details": "This unit cannot bleed out from injuries.",
+				"Icon": "layeredarmor"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "DisablesBleeding",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "ImprovedCommunications",
+				"Name": "Improved Communications",
+				"Details": "Provides a +5 bonus to actions that generate Morale.",
+				"Icon": "uixSvgIcon_equipment_Rangefinder"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "resolveRoundBaseMod",
+				"operation": "Float_Add",
+				"modValue": "5",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "MaxResolveIncreased",
+				"Name": "Pilot Max Resolve Boosted",
+				"Details": "Increases maximum resolve by 30.",
+				"Icon": "uixSvgIcon_equipment_Rangefinder"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "maxResolveMod",
+				"operation": "Int_Add",
+				"modValue": "30",
+				"modType": "System.Int32"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "SensorRange",
+				"Name": "Beagle Probe",
+				"Details": "Increases sensor range by 10%",
+				"Icon": "uixSvgIcon_equipment_Rangefinder"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "SensorDistanceMultiplier",
+				"operation": "Float_Multiply",
+				"modValue": "1.1",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "SpottingRange",
+				"Name": "SPOTTING DISTANCE INCREASED",
+				"Details": "Increases spotting distance by 15%.",
+				"Icon": "uixSvgIcon_equipment_Rangefinder"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "SpotterDistanceMultiplier",
+				"operation": "Float_Multiply",
+				"modValue": "1.15",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"BLACKLISTED",
+			"component_type_stock",
+			"RequireCommander",
+			"lv-shares-sensors"
+		],
+		"tagSetSourceFile": ""
+	}
+}

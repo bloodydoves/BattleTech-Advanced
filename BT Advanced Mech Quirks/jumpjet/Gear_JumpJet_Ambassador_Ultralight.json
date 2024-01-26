@@ -1,0 +1,106 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "StandardJJ"
+			}
+		],
+		"Flags": [
+			"not_broken",
+			"no_salvage"
+		],
+		"BonusDescriptions": [
+			"JumpCapacity: 6",
+			"JumpHeat: 5",
+			"MinWeightJJ: 15",
+			"MaxWeightJJ: 15",
+			"MaxCountJJ: 1"
+		]
+	},
+	"JumpCapacity": 6,
+	"MinTonnage": 15,
+	"MaxTonnage": 15,
+	"Description": {
+		"Cost": 30000,
+		"Rarity": 0,
+		"Purchasable": true,
+		"Manufacturer": "Star League",
+		"Model": "Ambassador",
+		"UIName": "Ambassador Jump Jet (UL)",
+		"Id": "Gear_JumpJet_Ambassador_Ultralight",
+		"Name": "Ambassador Jump Jet (UL)",
+		"Details": "The Ambassador was made with the best technology the Star League could invent in order to ensure that the diplomatic figure driving the 'Mech was as protected and comfortable as possible. Among the technology invented for the Ambassador was this jump jet, a unique design for ultralight BattleMechs that has massively increased jumping power at the cost of more heat during the jump. Due to the fine tuning required for this jump jet's power, it cannot be removed from the Ambassador.",
+		"Icon": "uixSvgIcon_action_jump"
+	},
+	"BonusValueA": null,
+	"BonusValueB": null,
+	"ComponentType": "JumpJet",
+	"ComponentSubType": "Functionality",
+	"PrefabIdentifier": "JumpJet",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 0.5,
+	"AllowedLocations": "Torso, Legs",
+	"DisallowedLocations": "Head, Arms",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-JumpHeat",
+				"Name": "Jump Jet Heat",
+				"Details": "This Jump Jets Heat Generation per Hex",
+				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "JumpHeat",
+				"operation": "Float_Add",
+				"modValue": "5",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-JumpAmount",
+				"Name": "Jump Jet Amount",
+				"Details": "Max Jump Jet Amount per Walk MP",
+				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "JumpJetCountMultiplier",
+				"operation": "Set",
+				"modValue": "1",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock"
+		],
+		"tagSetSourceFile": ""
+	}
+}

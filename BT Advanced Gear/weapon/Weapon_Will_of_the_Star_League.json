@@ -1,0 +1,101 @@
+{
+	"Custom": {
+		"BonusDescriptions": [
+			"TaserStrength: 75%",
+			"WpnCooldown: 2"
+		],
+		"Flags": [
+			"default",
+			"not_broken",
+			"autorepair",
+			"no_salvage"
+		]
+	},
+	"Category": "AntiPersonnel",
+	"Type": "PPC",
+	"WeaponSubType": "PPC",
+	"MinRange": 0,
+	"MaxRange": 600,
+	"RangeSplit": [
+		150,
+		300,
+		450
+	],
+	"AmmoCategory": "NotSet",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 20,
+	"Damage": 50,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 0,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": 0,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 0,
+	"Instability": 0,
+	"Cooldown": 2,
+	"WeaponEffectID": "WeaponEffect-Weapon_COILS",
+	"ImprovedBallistic": true,
+	"Description": {
+		"Cost": 380000,
+		"Rarity": 3,
+		"Purchasable": true,
+		"Manufacturer": "The Star League",
+		"Model": "Ambassador",
+		"UIName": "Will of the Star League",
+		"Id": "Weapon_Will_of_the_Star_League",
+		"Name": "Will of the Star League",
+		"Details": "The Ambassador is not an offensive 'Mech, it was never meant to destroy its enemies via weapons fire. However, in the case of emergencies, the original designers included a defensive tool that they informally called the 'Will of the Star League'. Effectively, the Will is a complex laser and sensor suite that beams shutdown commands into enemy 'Mechs over diplomatic channels. The intent was that, if cornered, the Will shuts enemies down so that the diplomat driving the Ambassador can turn tail and escape. It proved moderately effective if very niche.",
+		"Icon": "orbital-rays"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "satellite",
+	"BattleValue": 0,
+	"InventorySize": 3,
+	"Tonnage": 0,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": 1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "WeaponEffect-AmbassadorShutdown",
+				"Name": "Will of the Star League!",
+				"Details": "This unit has been hit commanded by the Will of the Star League, it has a high chance to shut down. It also suffers a penalty to accuracy and to movement speed.",
+				"Icon": "magnet-blast"
+			},
+			"statisticData": {
+				"statName": "OnHitShutdownChance",
+				"operation": "Float_Add",
+				"modValue": "0.75",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_standard"
+		],
+		"tagSetSourceFile": ""
+	}
+}
