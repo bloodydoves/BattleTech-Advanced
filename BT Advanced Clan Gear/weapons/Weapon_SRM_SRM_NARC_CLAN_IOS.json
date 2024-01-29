@@ -2,13 +2,14 @@
 	"Custom": {
 		"Category": [
 			{
-				"CategoryID": "w/m/s/srm"
+				"CategoryID": "w/m/s/narc"
 			}
 		],
 		"BonusDescriptions": [
+			"WpnAccuracy: +1",
+			"PipsIgnored: 2",
 			"InternalAmmo: 2",
-			"MissileHealth: 2",
-			"WeaponAttachmentCompatible: SRM FCS"
+			"AMSImmune"
 		]
 	},
 	"Category": "Missile",
@@ -23,41 +24,41 @@
 	],
 	"AmmoCategory": "Flamer",
 	"StartingAmmoCapacity": 2,
-	"HeatGenerated": 4,
-	"Damage": 8,
+	"HeatGenerated": 0,
+	"Damage": 1,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
-	"EvasivePipsIgnored": 0,
+	"EvasivePipsIgnored": 2,
 	"DamageVariance": 0,
 	"HeatDamage": 0,
-	"AccuracyModifier": 0,
-	"CriticalChanceMultiplier": 1,
+	"AccuracyModifier": -1,
+	"CriticalChanceMultiplier": 0,
 	"AOECapable": false,
 	"IndirectFireCapable": false,
 	"RefireModifier": 0,
 	"ShotsWhenFired": 2,
 	"ProjectilesPerShot": 1,
 	"AttackRecoil": 1,
-	"Instability": 4,
-	"MissileHealth": 2,
-	"WeaponEffectID": "WeaponEffect-Weapon_SRM2",
+	"Instability": 0,
+	"AMSImmune": true,
+	"WeaponEffectID": "WeaponEffect-Weapon_Narc",
 	"Description": {
-		"Cost": 20000,
+		"Cost": 380000,
 		"Rarity": 0,
 		"Purchasable": true,
-		"Manufacturer": "Holly",
-		"Model": "Short-Range Missile Launcher",
-		"UIName": "SRM2 (OS)",
-		"Id": "Weapon_SRM_SRM2_OS_0-STOCK",
-		"Name": "SRM2 (OS)",
-		"Details": "A tiny rack of Short-Range Missiles, SRM2s deal little damage but also cost almost nothing in the way of weight, space, heat, or ammunition consumption. This is a rack of One-Shot SRMs, specifically a One-Shot SRM-2. These weapons have limited utility and are rare on the battlefield for good reason.",
-		"Icon": "uixSvgIcon_weapon_Missile"
+		"Manufacturer": "Clan",
+		"Model": "Narc Launcher",
+		"UIName": "Narc Launcher (C, iOS)",
+		"Id": "Weapon_SRM_SRM_NARC_CLAN_IOS",
+		"Name": "Narc Launcher (C, iOS)",
+		"Details": "This launcher fires a Narc beacon that attaches itself to the enemy and emits a homing signal for all friendly weapons. This specific Narc Launcher is an Improved One-Shot launcher and has enough ammunition for one volley. \n\n <b><color=#ffcc00>Uses NARC Ammo.</color></b>",
+		"Icon": "missile-pod"
 	},
 	"BonusValueA": "",
 	"BonusValueB": "",
 	"ComponentType": "Weapon",
 	"ComponentSubType": "Weapon",
-	"PrefabIdentifier": "srm2",
+	"PrefabIdentifier": "narc",
 	"BattleValue": 0,
 	"InventorySize": 1,
 	"Tonnage": 1.5,
@@ -68,8 +69,8 @@
 	"ComponentTags": {
 		"items": [
 			"component_type_stock",
+			"component_type_lostech",
 			"range_standard",
-			"SRMFCSSupported",
 			"WebbTCSupported-SingleShot"
 		],
 		"tagSetSourceFile": ""
