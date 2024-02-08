@@ -1,0 +1,47 @@
+{
+	"Id": "WeaponUpgrade_Artillery_FCS_Sirocco",
+	"addonType": "artilleryfcs",
+	"targetComponentTags": [
+		"ArtilleryFCSSupported-Sirocco"
+	],
+	"modes": [
+		{
+			"Id": "FCS",
+			"UIName": "FCS",
+			"Name": "FCS",
+			"isBaseMode": true,
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": 2,
+						"ticksOnActivations": true,
+						"useActivationsOfTarget": true,
+						"ticksOnEndOfRound": false,
+						"ticksOnMovements": false,
+						"stackLimit": 1,
+						"clearedWhenAttacked": false
+					},
+					"targetingData": {
+						"effectTriggerType": "OnHit",
+						"showInTargetPreview": true,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "ArtyFCS-Effect-Sirocco",
+						"Name": "Sirocco Shelled",
+						"Details": "This target was hit by a Sirocco Artillery Piece and is suffering a heat generation penalty. This target generates an extra 4 heat each turn.",
+						"Icon": "mushroom-cloud"
+					},
+					"nature": "Debuff",
+					"statisticData": {
+						"statName": "HeatSinkCapacity",
+						"operation": "Int_Subtract",
+						"modValue": "4",
+						"modType": "System.Int32"
+					}
+				}
+			]
+		}
+	]
+}

@@ -3,46 +3,46 @@
 		"Category": [
 			{
 				"CategoryID": "w/a/o/artillery"
+			},
+			{
+				"CategoryID": "NeverMelee"
 			}
 		],
 		"BonusDescriptions": [
-			"IsArtillery",
-			"VariableDmg: 15",
-			"WpnRecoil: 3",
-			"ScatterRadius: 15, 40",
-			"AMSImmune",
+			"IsArtilleryCannon",
+			"VariableDmg: 10",
+			"WpnRecoil: 2",
+			"NoFireInMelee",
 			"WeaponAttachmentCompatible: Artillery FCS"
 		]
 	},
 	"weaponCategoryID": "Artillery",
 	"Type": "Autocannon",
 	"WeaponSubType": "AC20",
-	"MinRange": 0,
+	"MinRange": 60,
 	"MaxRange": 540,
 	"RangeSplit": [
 		120,
 		270,
 		350
 	],
-	"AmmoCategory": "Thumper",
+	"AmmoCategory": "ThumperCannon",
 	"StartingAmmoCapacity": 0,
 	"HeatGenerated": 20,
 	"Damage": 40,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
 	"EvasivePipsIgnored": 0,
-	"DamageVariance": 15,
+	"DamageVariance": 10,
 	"HeatDamage": 0,
-	"AccuracyModifier": -1,
+	"AccuracyModifier": 0,
 	"CriticalChanceMultiplier": 1,
-	"RefireModifier": 3,
+	"RefireModifier": 2,
 	"ShotsWhenFired": 1,
 	"ProjectilesPerShot": 1,
 	"AttackRecoil": 4,
-	"Instability": 15,
+	"Instability": 20,
 	"AMSImmune": true,
-	"MinMissRadius": 15,
-	"MaxMissRadius": 40,
 	"WeaponEffectID": "WeaponEffect-Weapon_AC5",
 	"Description": {
 		"Cost": 950000,
@@ -53,7 +53,7 @@
 		"UIName": "Thumper Cannon",
 		"Id": "Weapon_Autocannon_THUMPER_CANNON",
 		"Name": "Thumper Cannon",
-		"Details": "The Thumper Artillery Cannon is to the Thumper Artillery Piece what a sawn-off shotgun is to a standard 12 gauge. The Thumper Cannon is a short-barreled direct fire artillery piece meant for breaking fortifications at close range. However, it is sometimes, rarely, mounted onto mechs. \n\n <b><color=#ffcc00>Uses Thumper Ammo.</color></b>",
+		"Details": "The Thumper Artillery Cannon is to the Thumper Artillery Piece what a sawn-off shotgun is to a standard 12 gauge. The Thumper Cannon is a short-barreled artillery piece meant for breaking fortifications at close range. However, it is sometimes, rarely, mounted onto mechs. \n\n <b><color=#ffcc00>Uses Thumper Ammo.</color></b>",
 		"Icon": "Art-illery"
 	},
 	"BonusValueA": "",
@@ -69,13 +69,29 @@
 	"CriticalComponent": false,
 	"ImprovedBallistic": true,
 	"statusEffects": [],
+	"Modes": [
+		{
+			"Id": "DirectFire",
+			"UIName": "Direct",
+			"isBaseMode": true,
+			"IndirectFireCapable": false
+		},
+		{
+			"Id": "IndirectFire",
+			"UIName": "Indirect",
+			"isBaseMode": false,
+			"IndirectFireCapable": true,
+			"AlwaysIndirectVisuals": true,
+			"AccuracyModifier": 2.0
+		}
+	],
 	"ComponentTags": {
 		"items": [
 			"component_type_stock",
 			"mr-resize-6",
 			"range_extreme",
-			"ArtilleryFCSSupported",
-			"WebbTCSupported-SingleShot"
+			"ArtilleryFCSSupported-ArtyCannon",
+			"WebbTCSupported-ArtyCannon"
 		],
 		"tagSetSourceFile": ""
 	}

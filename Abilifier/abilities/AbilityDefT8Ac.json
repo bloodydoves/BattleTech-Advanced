@@ -1,0 +1,47 @@
+{
+	"Description": {
+		"Id": "AbilityDefT8Ac",
+		"Name": "FAST FIRE",
+		"Details": "ACTION: Cannot be used if you have moved this turn. Engage in rapid target acquisition, gaining an +4 increase to initiative on your following turn. 5 turn cooldown. <b><color=#099ff2>Costs 30 Resolve to use!</color></b>",
+		"Icon": "arrow-scope"
+	},
+	"DisplayParams": "ShowInMWTRay",
+	"ReqSkill": "Tactics",
+	"ReqSkillLevel": 8,
+	"ActivationTime": "ConsumedByMovement",
+	"ActivationCooldown": 5,
+	"Targeting": "ActorSelf",
+	"ResolveCost": 30,
+	"EffectData": [
+		{
+			"durationData": {
+				"duration": 2,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnActivation",
+				"effectTargetType": "Creator",
+				"forcePathRebuild": true,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-FastFireInitGain",
+				"Name": "Fast Fire Initiative Boosted",
+				"Details": "This unit gains +4 initiative on its next turn.",
+				"Icon": "arrow-scope"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "BaseInitiative",
+				"operation": "Int_Add",
+				"modValue": "-4",
+				"modType": "System.Int32"
+			}
+		}
+	],
+	"IsPrimaryAbility": true,
+	"Priority": 5
+}

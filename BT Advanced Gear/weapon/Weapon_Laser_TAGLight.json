@@ -6,10 +6,10 @@
 			}
 		],
 		"BonusDescriptions": [
-				"TAG: 1",
-				"PipsIgnored: 4",
-				"WeaponAttachmentCompatible: TAG FCS"
-			]
+			"TAG: 25%",
+			"PipsIgnored: 4",
+			"WeaponAttachmentCompatible: TAG FCS"
+		]
 	},
 	"Category": "AntiPersonnel",
 	"Type": "Laser",
@@ -41,7 +41,7 @@
 	"Instability": 0,
 	"WeaponEffectID": "WeaponEffect-Weapon_TAG",
 	"Description": {
-		"Cost": 210000,
+		"Cost": 110000,
 		"Rarity": 5,
 		"Purchasable": false,
 		"Manufacturer": "NAIS",
@@ -76,13 +76,6 @@
 			},
 			"targetingData": {
 				"effectTriggerType": "OnHit",
-				"triggerLimit": 0,
-				"extendDurationOnTrigger": 0,
-				"specialRules": "NotSet",
-				"effectTargetType": "NotSet",
-				"range": 0,
-				"forcePathRebuild": false,
-				"forceVisRebuild": false,
 				"showInTargetPreview": false,
 				"showInStatusPanel": true
 			},
@@ -90,32 +83,21 @@
 			"Description": {
 				"Id": "TAG-Effect",
 				"Name": "Target Acquired",
-				"Details": "This target was TAG'ed. +1 to hit.",
+				"Details": "This target was TAG'ed. Target takes 25% more AoE damage.",
 				"Icon": "uixSvgIcon_artillery"
 			},
 			"nature": "Debuff",
 			"statisticData": {
-				"statName": "ToHitThisActor",
-				"operation": "Float_Add",
-				"modValue": "-1.0",
-				"modType": "System.Single",
-				"additionalRules": "NotSet",
-				"targetCollection": "NotSet",
-				"targetWeaponCategory": "NotSet",
-				"targetWeaponType": "NotSet",
-				"targetAmmoCategory": "NotSet",
-				"targetWeaponSubType": "NotSet"
+				"statName": "CACAoEDamageMult",
+				"operation": "Float_Multiply",
+				"modValue": "1.25",
+				"modType": "System.Single"
 			},
 			"tagData": {
 				"tagList": [
 					"lv-tag-effect"
 				]
-			},
-			"floatieData": null,
-			"actorBurningData": null,
-			"vfxData": null,
-			"instantModData": null,
-			"poorlyMaintainedEffectData": null
+			}
 		},
 		{
 			"durationData": {

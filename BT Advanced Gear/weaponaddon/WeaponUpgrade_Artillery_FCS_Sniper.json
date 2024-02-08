@@ -1,0 +1,47 @@
+{
+	"Id": "WeaponUpgrade_Artillery_FCS_Sniper",
+	"addonType": "artilleryfcs",
+	"targetComponentTags": [
+		"ArtilleryFCSSupported-Sniper"
+	],
+	"modes": [
+		{
+			"Id": "FCS",
+			"UIName": "FCS",
+			"Name": "FCS",
+			"isBaseMode": true,
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": 2,
+						"ticksOnActivations": true,
+						"useActivationsOfTarget": true,
+						"ticksOnEndOfRound": false,
+						"ticksOnMovements": false,
+						"stackLimit": 1,
+						"clearedWhenAttacked": false
+					},
+					"targetingData": {
+						"effectTriggerType": "OnHit",
+						"showInTargetPreview": true,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "ArtyFCS-Effect-Sniper",
+						"Name": "Sniper Shelled",
+						"Details": "This target was hit by a Sniper Artillery Piece and is suffering an accuracy penalty due to being shaken. Target has a -1 to hit with weapon attacks.",
+						"Icon": "mushroom-cloud"
+					},
+					"nature": "Debuff",
+					"statisticData": {
+						"modType": "System.Single",
+						"modValue": "1.0",
+						"operation": "Float_Add",
+						"statName": "AccuracyModifier"
+					}
+				}
+			]
+		}
+	]
+}
