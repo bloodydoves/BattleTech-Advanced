@@ -1,0 +1,47 @@
+{
+	"Id": "WeaponUpgrade_Artillery_FCS_ArrowIV",
+	"addonType": "artilleryfcs",
+	"targetComponentTags": [
+		"ArtilleryFCSSupported-ArrowIV"
+	],
+	"modes": [
+		{
+			"Id": "FCS",
+			"UIName": "FCS",
+			"Name": "FCS",
+			"isBaseMode": true,
+			"statusEffects": [
+				{
+					"durationData": {
+						"duration": 2,
+						"ticksOnActivations": true,
+						"useActivationsOfTarget": true,
+						"ticksOnEndOfRound": false,
+						"ticksOnMovements": false,
+						"stackLimit": 1,
+						"clearedWhenAttacked": false
+					},
+					"targetingData": {
+						"effectTriggerType": "OnHit",
+						"showInTargetPreview": true,
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "ArtyFCS-Effect-ArrowIV",
+						"Name": "Arrow IV Shelled",
+						"Details": "This target was hit by a Arrow IV Artillery Piece and is suffering from armor degredation. This target takes 2% more damage from incoming attacks.",
+						"Icon": "mushroom-cloud"
+					},
+					"nature": "Debuff",
+					"statisticData": {
+						"statName": "DamageReductionMultiplierAll",
+						"operation": "Float_Add",
+						"modValue": "0.02",
+						"modType": "System.Single"
+					}
+				}
+			]
+		}
+	]
+}

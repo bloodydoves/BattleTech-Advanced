@@ -3,14 +3,16 @@
 		"Category": [
 			{
 				"CategoryID": "w/a/o/artillery"
+			},
+			{
+				"CategoryID": "NeverMelee"
 			}
 		],
 		"BonusDescriptions": [
-			"IsArtillery",
-			"VariableDmg: 50",
+			"IsArtilleryCannon",
+			"VariableDmg: 20",
 			"WpnRecoil: 4",
-			"ScatterRadius: 37, 67",
-			"AMSImmune",
+			"NoFireInMelee",
 			"WeaponAttachmentCompatible: Artillery FCS"
 		]
 	},
@@ -24,14 +26,14 @@
 		390,
 		600
 	],
-	"AmmoCategory": "LongTom",
+	"AmmoCategory": "LongTomCannon",
 	"StartingAmmoCapacity": 0,
-	"HeatGenerated": 60,
-	"Damage": 90,
+	"HeatGenerated": 50,
+	"Damage": 80,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
 	"EvasivePipsIgnored": 0,
-	"DamageVariance": 50,
+	"DamageVariance": 20,
 	"HeatDamage": 0,
 	"AccuracyModifier": 0,
 	"CriticalChanceMultiplier": 1,
@@ -41,9 +43,6 @@
 	"AttackRecoil": 6,
 	"Instability": 40,
 	"AMSImmune": true,
-	"FireTerrainChance": 0.085,
-	"MinMissRadius": 37,
-	"MaxMissRadius": 67,
 	"WeaponEffectID": "WeaponEffect-Weapon_AC20_Single",
 	"Description": {
 		"Cost": 2100000,
@@ -54,7 +53,7 @@
 		"UIName": "Long Tom Cannon",
 		"Id": "Weapon_Autocannon_LONGTOM_CANNON",
 		"Name": "Long Tom Cannon",
-		"Details": "The Long Tom Artillery Cannon is to the Long Tom Artillery Piece what a sawn-off shotgun is to a 12 gauge. The Long Tom Cannon is a short-barreled direct-fire artillery piece meant for breaking fortifications at close range. However, it can more easily be mounted to a combat vehicle than its progenitor and so it sometimes shows up on 'Mechs as a devastating close-range weapon. \n\n <b><color=#ffcc00>Uses LongTom Ammo.</color></b>",
+		"Details": "The Long Tom Artillery Cannon is to the Long Tom Artillery Piece what a sawn-off shotgun is to a 12 gauge. The Long Tom Cannon is a short-barreled artillery piece meant for breaking fortifications at close range. However, it can more easily be mounted to a combat vehicle than its progenitor and so it sometimes shows up on 'Mechs as a devastating close-range weapon. \n\n <b><color=#ffcc00>Uses LongTom Ammo.</color></b>",
 		"Icon": "Art-illery"
 	},
 	"BonusValueA": "",
@@ -70,14 +69,30 @@
 	"CriticalComponent": false,
 	"ImprovedBallistic": true,
 	"statusEffects": [],
+	"Modes": [
+		{
+			"Id": "DirectFire",
+			"UIName": "Direct",
+			"isBaseMode": true,
+			"IndirectFireCapable": false
+		},
+		{
+			"Id": "IndirectFire",
+			"UIName": "Indirect",
+			"isBaseMode": false,
+			"IndirectFireCapable": true,
+			"AlwaysIndirectVisuals": true,
+			"AccuracyModifier": 2.0
+		}
+	],
 	"ComponentTags": {
 		"items": [
 			"OmniRestriction.{location}",
 			"component_type_stock",
 			"mr-resize-12",
 			"range_extreme",
-			"ArtilleryFCSSupported",
-			"WebbTCSupported-SingleShot"
+			"ArtilleryFCSSupported-ArtyCannon",
+			"WebbTCSupported-ArtyCannon"
 		],
 		"tagSetSourceFile": ""
 	}

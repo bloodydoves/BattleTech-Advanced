@@ -2070,6 +2070,24 @@
 			"Full": "Weapon carries internal Ammo for a single salvo"
 		},
 		{
+			"Bonus": "ArtilleryAttack",
+			"Short": "Artillery Attack",
+			"Long": "Artillery Attack",
+			"Full": "True artillery weapons have a unique attack sequence. When a target is selected, the attack is programmed in targeting that location (not a unit but the place the unit is standing) and the artillery unit enters an artillery stance and ends its turn. On the artillery unit's next turn, it can either brace (exiting the artillery stance and canceling the attack) or it can fire, completing the attack against the targeted location. Artillery weapons target the ground, not individual units, and do not track if units move out of the blast radius."
+		},
+		{
+			"Bonus": "ArtilleryDetails",
+			"Short": "Artillery Details",
+			"Long": "Artillery Details",
+			"Full": "Because of the special artillery attack, artillery weapons do not use accuracy as a statistic and are completely incapable of direct hits against targets (even stationary ones), only dealing AoE damage, instability damage, and heat damage. Artillery weapons do generate heat but only the turn they actually fire. Artillery weapons do not follow targets and do not make attacks against targets directly, instead functioning like Attack Ground in all situations."
+		},
+		{
+			"Bonus": "NonArtilleryWeapons",
+			"Short": "Non-Artillery Weapons",
+			"Long": "Non-Artillery Weapons",
+			"Full": "If a mech that mounts this weapon also mounts other, non-artillery, weapons, they do not fire during an artillery attack. In order to use non-artillery weapons on a mech that mounts this weapon, disable this weapon in the weapons panel. If this weapon is active, it will override all other non-artillery weapons and perform an artillery attack."
+		},
+		{
 			"Bonus": "IsArtillery",
 			"Short": "Artillery",
 			"Long": "Artillery",
@@ -2283,7 +2301,13 @@
 			"Bonus": "TAG",
 			"Short": "TAG Acc {0}",
 			"Long": "Target Acquisition Gear",
-			"Full": "Target Acquisition Gear grants {0} on attacks against the TAG'd unit."
+			"Full": "TAG, or Target Acquisition Gear, grants a {0} bonus to AoE damage against the TAG'd unit."
+		},
+		{
+			"Bonus": "ClanTAG",
+			"Short": "TAG Acc {0}",
+			"Long": "Target Acquisition Gear",
+			"Full": "TAG, or Target Acquisition Gear, grants a {0} bonus to AoE damage against the TAG'd unit. Clan TAG fires two shots and can stack with itself up to a total of two stacks of the effect."
 		},
 		{
 			"Bonus": "LBX",
