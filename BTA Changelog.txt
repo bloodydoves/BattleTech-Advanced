@@ -1,9 +1,37 @@
 BTA Changelog
 
-Date:
-Log:
-	x
-	x
-	x
-	x
-	x
+Date: 3/1/2024
+Version: v17.3 (aka the "Backend Updates" patch) has been released to the installer.
+Features:
+
+CAB REORGANIZATION: The headline news with this patch is that the CAB (or Community Asset Bundle) has been completely reorganized. In recent months we in BTA and our friends over in RT have been noticing more and more users having CAB download failures. We believe that the issue lies with the size of the CAB, as it is quite chunky now. Before today, the CAB was organized into about 6 sub-repositories (CAB Misc, CAB Tank, CAB CU, CAB Maps, CAB Clan, CAB IS). Most of these are pretty small, but CAB Clan and CAB IS are quite large, with CAB IS reaching almost 6 GB in the Mods folder alone. To alleviate the issue and to help fight against downloads timing out, the CAB team (headed by myself and by Jamie Wolf [who also makes our installer]) has split CAB Clan and CAB IS into a total of 7 sub-repositories, bringing the total number of CAB repos to 11. Each of these is much smaller than CAB Clan and CAB IS used to be and should result in easier downloads for end users. 
+----------------------------
+
+SPECIAL UPDATE NOTES: However, because of this, we have released a new installer and *require* that you download it for today's patch and for future patches. This was necessary because the CAB download paths have changed. Additionally, this patch does require that you do something special with the new installer. After downloading and starting the new installer, please follow these directions:
+1. Upon booting the new installer, it will ask you to set your settings. Please do so, the options are pretty self-explanatory.
+
+2. Before doing *anything else*, go to Cache Options on the top bar menu and select Wipe BTA Cache. Once done, also select Wipe BTA Install.
+
+3. Proceed to install BTA as normal, following the installation guide as usual.
+
+This is necessary because the CAB has changed organization structure and if you do not do this you may run into unexpected problems. Be absolutely certain you follow these steps. 
+----------------------------
+
+SOME MORE NEW ICONS: The Xerxes, Rattlesnake, and Woden got shiny new icons! Hurrah! All glory to the Plog!
+
+GRASSHOPPER RARITIES ADJUSTED: The Grasshopper is meant to be fairly rare in the Inner Sphere but I swear I fight one every mission. Adjusted their rarities to be a little less common, hopefully.
+
+ARTILLERY AOE FIX: You shouldn't see artillery damage just vanish into the void anymore, at least that's the plan. If that still happens, let us know.
+
+AMMUNITION CLARIFICATIONS: For the true artillery tubes, Shaped Charges are now Seismic Charges (effect is unchanged, still labeled as SC in-mission). The Extended LRM ammo now says its for the Extended LRM weapon system.
+
+ARTILLERY FIX: The true artillery tubes no longer work with the Webb FCS since they didn't *do* anything with the Webb. This means they also don't really "take up a slot" in terms of the Webb so if you use the Webb alongside a tube arty you can have an actual weapon in the same location to get the benefit. Hurrah...?
+
+COMMUNITY CONTENT: The Ultra Arrow IV now works like the other true artillery and properly works with the Artillery FCS. Huzzahs!
+----------------------------
+
+IMPORTANT: v17.3 is an "update" update. In this case, read the detailed update notes above to see best practices on how to update to 17.3.
+IMPORTANT: v17.3 is not a save breaking update, your saves are compatible and will work fine.
+
+REMINDER: This update, and others like it, are made possible by my Patreon and Ko-Fi supporters. Without their support, updates would come slower and be less impactful. If you feel like being a part of the support for BTA, you can find me on Patreon (https://www.patreon.com/bloodydoves) and on Ko-Fi (https://ko-fi.com/bloodydoves)
+REMINDER: Custom mod commissions are still available if you're interested. If you'd like to get your own community content added to BTA DM me, bloodydoves, and we can work something out. 
