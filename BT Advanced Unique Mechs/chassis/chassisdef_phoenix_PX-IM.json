@@ -12,10 +12,10 @@
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Phoenix",
-		"Id": "chassisdef_phoenix_PX-3N",
-		"Name": "Phoenix",
-		"Details": "Though the Phoenix fell with House Amaris, like the mythical bird it was reborn in the 3060s with the Rim Collection after its plans were discovered in a long-forgotten bunker. Among those plans were proposed upgrades to the design that never saw use. The Rim Collection analyzed the upgrades and decided to enact them, starting with the PX-3N, a simple Star League tech upgrade. Armed with an ER PPC and a quartet of Streak SRM-2s, the PX-3N proved adept if unimpressive, and took its place as the core of the Rim Collection's budding military force.",
+		"UIName": "The Immortal",
+		"Id": "chassisdef_phoenix_PX-IM",
+		"Name": "The Immortal",
+		"Details": "Just like its namesake, this Phoenix cannot be killed, earning it the name The Immortal in the arenas of Solaris VII. The firepower is an unusual blend of an Inner Sphere ER Large Laser and a trio of Early Clantech Improved SRM-4s and the engine is a cutting-edge Clan-grade 250-rated XXL which provides plenty of power and speed. The armor is where The Immortal really shines though, as it is clad in Hardened Armor, ensuring it can shrug off nearly anything. Five jump jets give it wings, just like its mythical namesake.",
 		"Icon": "uixTxrIcon_phoenix"
 	},
 	"MovementCapDefID": "movedef_enforcer_ENF-4R",
@@ -66,6 +66,14 @@
 		{
 			"Location": "LeftArm",
 			"Hardpoints": [
+				{
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": false
+				},
 				{
 					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
@@ -134,6 +142,14 @@
 				},
 				{
 					"WeaponMountID": "Energy",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Ballistic",
 					"Omni": false
 				}
 			],
@@ -206,16 +222,17 @@
 			"z": 2.5
 		}
 	],
-	"VariantName": "PX-3N",
+	"VariantName": "PX-IM",
 	"ChassisTags": {
 		"items": [
 			"ArmLimitUpperRight",
-			"MediumMech"
+			"MediumMech",
+			"HeroMech"
 		],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "Early Skirmisher",
-	"YangsThoughts": "Though the Phoenix fell with House Amaris, like the mythical bird it was reborn in the 3060s with the Rim Collection after its plans were discovered in a long-forgotten bunker. Among those plans were proposed upgrades to the design that never saw use. The Rim Collection analyzed the upgrades and decided to enact them, starting with the PX-3N, a simple Star League tech upgrade. Armed with an ER PPC and a quartet of Streak SRM-2s, the PX-3N proved adept if unimpressive, and took its place as the core of the Rim Collection's budding military force.",
+	"StockRole": "Gladiator",
+	"YangsThoughts": "Just like its namesake, this Phoenix cannot be killed, earning it the name The Immortal in the arenas of Solaris VII. The firepower is an unusual blend of an Inner Sphere ER Large Laser and a trio of Early Clantech Improved SRM-4s and the engine is a cutting-edge Clan-grade 250-rated XXL which provides plenty of power and speed. The armor is where The Immortal really shines though, as it is clad in Hardened Armor, ensuring it can shrug off nearly anything. Five jump jets give it wings, just like its mythical namesake.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "LeftTorso",
@@ -230,7 +247,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_structureslots_standard",
+			"ComponentDefID": "emod_structureslots_endosteel",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional",
