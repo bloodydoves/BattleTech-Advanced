@@ -4,8 +4,7 @@
 			"PrefabID": "Cyclone",
 			"Exclude": false,
 			"Include": true
-		},
-		 "ChassisDefaults": []
+		}
 	},
 	"Description": {
 		"Cost": 2224000,
@@ -13,10 +12,10 @@
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Cyclone",
-		"Id": "chassisdef_cyclone_CYC-D1",
-		"Name": "Cyclone",
-		"Details": "Designed by request of House Davion and in cooperation with the New Avalon Institute of Science, the Cyclone D1 stands apart from the rest of the Cyclone family. The D1 sports a Mydron Snakekiller Light Autocannon 5 in each arm backed up with a Magna VI ER Medium Laser and one ton of ammunition in each side torso. This variant is also built on the same Endo-Steel chassis as the B2 but drops the lower arm and hand actuators and utilizes a Magna 180XL engine.",
+		"UIName": "Typhoon",
+		"Id": "chassisdef_cyclone_CYC-TY",
+		"Name": "Typhoon",
+		"Details": "The Cyclone might have started life as a way to sell Magna Metals engines but it quickly blossomed into a reliable, respectable 'Mech that any MechWarrior could be proud to drive. This Cyclone, lovingly named Typhoon by its former owner, is one such design. Armed with a solitary weapon, a Rotary AC/2, Typhoon is named such because it just turns into a whirlwind of bullets the second it hits the ground in the arenas. The RAC/2 is assisted by a Targeting Computer and a Fire Control System for maximum effectiveness and its two tons of ammo is protected by CASE II.",
 		"Icon": "uixTxrIcon_cyclone"
 	},
 	"MovementCapDefID": "movedef_osiris_OSR-3D",
@@ -70,6 +69,14 @@
 				{
 					"WeaponMountID": "Ballistic",
 					"Omni": false
+				},
+				{
+					"WeaponMountID": "Missile",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": false
 				}
 			],
 			"Tonnage": 0,
@@ -86,7 +93,7 @@
 					"Omni": false
 				},
 				{
-					"WeaponMountID": "Ballistic",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
@@ -98,7 +105,12 @@
 		},
 		{
 			"Location": "CenterTorso",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMountID": "Energy",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 15,
 			"MaxArmor": 100,
@@ -108,10 +120,6 @@
 		{
 			"Location": "RightTorso",
 			"Hardpoints": [
-				{
-					"WeaponMountID": "Energy",
-					"Omni": false
-				},
 				{
 					"WeaponMountID": "Ballistic",
 					"Omni": false
@@ -128,6 +136,14 @@
 			"Hardpoints": [
 				{
 					"WeaponMountID": "Ballistic",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Missile",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -200,18 +216,19 @@
 			"z": 0.5
 		}
 	],
-	"VariantName": "CYC-D1",
+	"VariantName": "CYC-TY",
 	"ChassisTags": {
 		"items": [
 			"OmniMech",
 			"ArmLimitUpperRight",
 			"ArmLimitUpperLeft",
-			"LightMech"
+			"LightMech",
+			"HeroMech"
 		],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "Engine Sales Platform",
-	"YangsThoughts": "Designed by request of House Davion and in cooperation with the New Avalon Institute of Science, the Cyclone D1 stands apart from the rest of the Cyclone family. The D1 sports a Mydron Snakekiller Light Autocannon 5 in each arm backed up with a Magna VI ER Medium Laser and one ton of ammunition in each side torso. This variant is also built on the same Endo-Steel chassis as the B2 but drops the lower arm and hand actuators and utilizes a Magna 180XL engine.",
+	"StockRole": "Gladiator",
+	"YangsThoughts": "The Cyclone might have started life as a way to sell Magna Metals engines but it quickly blossomed into a reliable, respectable 'Mech that any MechWarrior could be proud to drive. This Cyclone, lovingly named Typhoon by its former owner, is one such design. Armed with a solitary weapon, a Rotary AC/2, Typhoon is named such because it just turns into a whirlwind of bullets the second it hits the ground in the arenas. The RAC/2 is assisted by a Targeting Computer and a Fire Control System for maximum effectiveness and its two tons of ammo is protected by CASE II.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",

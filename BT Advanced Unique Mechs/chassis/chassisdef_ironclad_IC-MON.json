@@ -12,10 +12,10 @@
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Ironclad",
-		"Id": "chassisdef_ironclad_IC-100",
-		"Name": "Ironclad",
-		"Details": "Built to provide armor and firepower on the cheap, the Ironclad is a walking slab of armor and guns. The price is kept down thanks to its unusual 200-rated Fuel-Cell Engine, which keeps it running without the maintanence requirements of a fusion engine. Triple Strength Myomer let the Ironclad surprise enemies in combat while its twin Gauss Rifles provide heavy firepower. Up close, the Ironclad's massive battery of Medium, Small, and Small Pulse Lasers let it lay down dizzying firepower. 18 heat sinks and a pair of coolant pods manage the heat well enough for most combat situations.",
+		"UIName": "Monitor",
+		"Id": "chassisdef_ironclad_IC-MON",
+		"Name": "Monitor",
+		"Details": "Named after an oft-theorized and little-proven WarShip concept from the Star League era, Monitor is a nigh-indestructible slab of steel and fire. Armed with twin Autocannon/10s with three tons of CASE II protected ammo as well as four ER Medium Pulse Lasers (sourced straight from Clan Wolf salvage), Monitor is deadly and efficient. However, it is sometimes betrayed by its rare Laser Heat Sinks, which behave a little oddly now and then. Still, a small price to pay for such firepower.",
 		"Icon": "uixTxrIcon_ironclad"
 	},
 	"MovementCapDefID": "movedef_atlas_AS7-D",
@@ -97,7 +97,7 @@
 					"Omni": false
 				},
 				{
-					"WeaponMountID": "AntiPersonnel",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				}
 			],
@@ -109,12 +109,7 @@
 		},
 		{
 			"Location": "CenterTorso",
-			"Hardpoints": [
-				{
-					"WeaponMountID": "AntiPersonnel",
-					"Omni": false
-				}
-			],
+			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 16,
 			"MaxArmor": 320,
@@ -137,7 +132,7 @@
 					"Omni": false
 				},
 				{
-					"WeaponMountID": "AntiPersonnel",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				}
 			],
@@ -252,6 +247,28 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "emod_kit_lhs",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "CenterTorso",
+			"ComponentDefID": "emod_engine_cooling",
+			"SimGameUID": null,
+			"ComponentDefType": "HeatSink",
+			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "CenterTorso",
 			"ComponentDefID": "emod_structureslots_standard",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
@@ -260,16 +277,17 @@
 			"hasPrefabName": true
 		}
 	],
-	"VariantName": "IC-100",
+	"VariantName": "IC-MON",
 	"ChassisTags": {
 		"items": [
 			"OmniMech",
-			"AssaultMech"
+			"AssaultMech",
+			"HeroMech"
 		],
 		"tagSetSourceFile": ""
 	},
-	"StockRole": "Juggernaut On The Cheap",
-	"YangsThoughts": "Built to provide armor and firepower on the cheap, the Ironclad is a walking slab of armor and guns. The price is kept down thanks to its unusual 200-rated Fuel-Cell Engine, which keeps it running without the maintanence requirements of a fusion engine. Triple Strength Myomer let the Ironclad surprise enemies in combat while its twin Gauss Rifles provide heavy firepower. Up close, the Ironclad's massive battery of Medium, Small, and Small Pulse Lasers let it lay down dizzying firepower. 18 heat sinks and a pair of coolant pods manage the heat well enough for most combat situations.",
+	"StockRole": "Gladiator",
+	"YangsThoughts": "Named after an oft-theorized and little-proven WarShip concept from the Star League era, Monitor is a nigh-indestructible slab of steel and fire. Armed with twin Autocannon/10s with three tons of CASE II protected ammo as well as four ER Medium Pulse Lasers (sourced straight from Clan Wolf salvage), Monitor is deadly and efficient. However, it is sometimes betrayed by its rare Laser Heat Sinks, which behave a little oddly now and then. Still, a small price to pay for such firepower.",
 	"CustomParts": {
 		"CustomParts": []
 	}
