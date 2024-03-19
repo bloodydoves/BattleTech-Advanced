@@ -11,33 +11,32 @@
 		"CombatHUDTooltipName": "WEAPON MOUNT",
 		"CombatHUDTooltipNameDescription": "The name to call the ARM MOUNTED accuracy bonus in the combat tooltips."
 	},
-	"ArmorMaximizer": {
-		"Enabled": true,
-		"StripBeforeMax": false,
-		"StepSize": {
-			"Default": 0.5,
-			"Shift": 1,
-            "Alt": 25
-		},
-		"StepPrecision": {
-			"Default": 5,
-			"Shift": 1,
-			"Control": 999
-		}
-	},
 	"ArmorStructureChanges": {
 		"Enabled": true
 	},
 	"ArmorStructureRatio": {
 		"Enabled": false
 	},
+	"ArmorMaximizer": {
+		"Enabled": true,
+		"StripBeforeMax": false,
+		"StepSize": {
+			"Alt": 25,
+			"Control": null,
+			"Shift": 1,
+			"Default": 0.5
+		},
+		"StepPrecision": {
+			"Alt": 1,
+			"Control": 999,
+			"Shift": 1,
+			"Default": 5
+		}
+	},
 	"AutoFixer": {
 		"Enabled": true,
-		"MechTagsAutoFixEnabled": [],
-		"MechDefSkip": [],
-		"ChassisDefSkip": [],
-		"MechDefAutoFixAgainstMaxFreeTonnage": [],
 		"MechDefEngine": true,
+		"MechTagsAutoFixEnabled": [],
 		"MechDefHeatBlockDef": "emod_engine_cooling",
 		"MechDefCoreDummy": "emod_engine_dummy",
 		"InternalizeHeatSinksOnValidEngines": false,
@@ -50,23 +49,28 @@
 					"Names": [
 						{
 							"Location": "LeftArm",
-							"Label": "FRONT"
+							"Label": "FRONT",
+							"ShortLabel": "F"
 						},
 						{
 							"Location": "RightArm",
-							"Label": "REAR"
+							"Label": "REAR",
+							"ShortLabel": "R"
 						},
 						{
 							"Location": "LeftLeg",
-							"Label": "LEFT SIDE"
+							"Label": "LEFT SIDE",
+							"ShortLabel": "LS"
 						},
 						{
 							"Location": "RightLeg",
-							"Label": "RIGHT SIDE"
+							"Label": "RIGHT SIDE",
+							"ShortLabel": "RS"
 						},
 						{
 							"Location": "Head",
-							"Label": "TURRET"
+							"Label": "TURRET",
+							"ShortLabel": "T"
 						}
 					]
 				}
@@ -79,62 +83,74 @@
 					"Names": [
 						{
 							"Location": "LeftArm",
-							"Label": "Front Left Leg"
+							"Label": "Front Left Leg",
+							"ShortLabel": "FL"
 						},
 						{
 							"Location": "RightArm",
-							"Label": "Front Right Leg"
+							"Label": "Front Right Leg",
+							"ShortLabel": "RL"
 						},
 						{
 							"Location": "LeftLeg",
-							"Label": "Hind Left Leg"
+							"Label": "Hind Left Leg",
+							"ShortLabel": "HL"
 						},
 						{
 							"Location": "RightLeg",
-							"Label": "Hind Right Leg"
+							"Label": "Hind Right Leg",
+							"ShortLabel": "HR"
 						}
 					]
 				}
 			},
 			{
 				"Tags": [
-				  "ProtoMech"
+					"ProtoMech"
 				],
 				"Template": {
-				  "Names": [
-					{
-					  "Location": "LeftArm",
-					  "Label": "Trooper 5"
-					},
-					{
-					  "Location": "RightArm",
-					  "Label": "Trooper 6"
-					},
-					{
-					  "Location": "LeftLeg",
-					  "Label": "Trooper 7"
-					},
-					{
-					  "Location": "RightLeg",
-					  "Label": "Trooper 8"
-					},
-					{
-					  "Location": "CenterTorso",
-					  "Label": "Trooper 2"
-					},
-					{
-					  "Location": "RightTorso",
-					  "Label": "Trooper 4"
-					},
-					{
-					  "Location": "LeftTorso",
-					  "Label": "Trooper 3"
-					},
-					{
-					  "Location": "Head",
-					  "Label": "Trooper 1"
-					}
-				  ]
+					"Names": [
+						{
+							"Location": "LeftArm",
+							"Label": "Trooper 5",
+							"ShortLabel": "5"
+						},
+						{
+							"Location": "RightArm",
+							"Label": "Trooper 6",
+							"ShortLabel": "6"
+						},
+						{
+							"Location": "LeftLeg",
+							"Label": "Trooper 7",
+							"ShortLabel": "7"
+						},
+						{
+							"Location": "RightLeg",
+							"Label": "Trooper 8",
+							"ShortLabel": "8"
+						},
+						{
+							"Location": "CenterTorso",
+							"Label": "Trooper 2",
+							"ShortLabel": "2"
+						},
+						{
+							"Location": "RightTorso",
+							"Label": "Trooper 4",
+							"ShortLabel": "4"
+						},
+						{
+							"Location": "LeftTorso",
+							"Label": "Trooper 3",
+							"ShortLabel": "3"
+						},
+						{
+							"Location": "Head",
+							"Label": "Trooper 1",
+							"ShortLabel": "1"
+						}
+					]
 				}
 			}
 		],
@@ -178,6 +194,7 @@
 		"ChassisDefSlotsChanges": null,
 		"ChassisDefInitialTonnage": false,
 		"ChassisDefInitialToTotalTonnageFactor": 0.1,
+		"ChassisDefArmorStructureRatio": true,
 		"ChassisDefMaxJumpjets": false,
 		"ChassisDefMaxJumpjetsCount": 100,
 		"ChassisDefMaxJumpjetsRating": 400,
@@ -190,7 +207,8 @@
 			"ShowIcon": false,
 			"ShowFixedEquipmentOverlay": true,
 			"NameText": "",
-			"BonusAText": "",
+			"DefaultBonusATextIfReservedSlot": "reserved slot",
+			"DefaultBonusATextIfMovableSlot": "movable slot",
 			"BonusBText": "",
 			"BackgroundColor": null
 		},
@@ -203,6 +221,29 @@
 	"CompressFloatieMessages": {
 		"Enabled": true,
 		"EnabledDescription": "Compresses similar floatie messages to a single message with a multiplier. E.g. MEDIUM LASER DESTROYED x 4"
+	},
+	"CriticalEffects": {
+		"Enabled": true,
+		"ShowComponentFloatie": false,
+		"DefaultMaxCritsPerSlots": 0,
+		"DefaultMaxCritsPerSlotsDescription": "How many critical hits a component by default can take for each occupied slot. For CBT use 0, for Expanded Critical Damage behavior use 0.5. Custom CriticalEffects overwrite this behavior.",
+		"DefaultMaxCritsComponentTypes": [
+			"Weapon",
+			"JumpJet",
+			"Upgrade"
+		],
+		"DefaultMaxCritsComponentTypesDescription": "For which types the default max crits are applied.",
+		"DescriptionEnabled": true,
+		"DescriptionIdentifier": "Criticals",
+		"DescriptionTemplate": "Critical Effects:<b><color=#F79B26FF>\r\n{{elements}}</color></b>\r\n",
+		"ElementTemplate": " <indent=10%><line-indent=-5%><line-height=65%>{{element}}</line-height></line-indent></indent>\r\n",
+		"DescriptionUseName": false,
+		"CritFloatieMessage": "{0} CRIT",
+		"DestroyedFloatieMessage": "{0} DESTROYED",
+		"CritHitText": "HIT {0}: {1}",
+		"CritDestroyedText": "DESTROYED: {0}",
+		"CritDestroyedDeathText": "DESTROYED: Unit is incapacitated, reason is {0}",
+		"CritLinkedText": "Critical hits are linked to '{0}'"
 	},
 	"CustomCapacities": {
 		"Enabled": true,
@@ -244,29 +285,6 @@
 			"HideIfNoUsageAndCapacity": true
 		}
 	},
-	"CriticalEffects": {
-		"Enabled": true,
-		"DefaultMaxCritsPerSlots": 0,
-		"DefaultMaxCritsPerSlotsDescription": "How many critical hits a component by default can take for each occupied slot. For CBT use 0, for Expanded Critical Damage behavior use 0.5. Custom CriticalEffects overwrite this behavior.",
-		"DefaultMaxCritsComponentTypes": [
-			"Weapon",
-			"JumpJet",
-			"Upgrade"
-		],
-		"DefaultMaxCritsComponentTypesDescription": "For which types the default max crits are applied to.",
-		"EnabledDescription": "Allows custom multiple critical hit states for individual components.",
-		"DescriptionIdentifier": "Criticals",
-		"DescriptionTemplate": "Critical Effects:<b><color=#F79B26FF>\r\n{{elements}}</color></b>\r\n",
-		"ElementTemplate": " <indent=10%><line-indent=-5%><line-height=65%>{{element}}</line-height></line-indent></indent>\r\n",
-		"DescriptionUseName": false,
-		"CritFloatieMessage": "{0} CRIT",
-		"DestroyedFloatieMessage": "{0} DESTROYED",
-		"CritHitText": "HIT {0}: {1}",
-		"CritDestroyedText": "DESTROYED: {0}",
-		"CritDestroyedDeathText": "DESTROYED: Unit is incapacitated, reason is {0}",
-		"CritLinkedText": "Critical hits are linked to '{0}'",
-		"ShowComponentFloatie": false
-	},
 	"DynamicSlots": {
 		"Enabled": true,
 		"EnabledDescription": "Allows components to take up space dynamically on a mech.",
@@ -287,8 +305,8 @@
 	"Engine": {
 		"Enabled": true,
 		"EnabledDescription": "Provides engines that can be installed on mechs similar to how CBT works.",
-		"AdditionalWalkSpeedDescription": "Additional max walk distance regardless of any installed engine.",
 		"CBTWalkAndRunMPRoundingDescription": "If true, walking MPs are rounded down and running MPs are rounded up.",
+		"AdditionalWalkSpeedDescription": "Additional max walk distance regardless of any installed engine.",
 		"AdditionalRunSpeedDescription": "Additional max run distance regardless of any installed engine.",
 		"MovementPointDistanceMultiplierDescription": "The distance of a TT movement point, 24 is vanilla CombatGameConstants.ExperimentalGridDistance .",
 		"MinimJumpHeatDescription": "Minimum heat when doing a jump, even if only one jump jet exists and only when jumping one hex.",
@@ -301,8 +319,8 @@
 		"MinimumHeatSinksOnMechDescription": "Minimum heatsinks a mech requires.",
 		"EnforceRulesForAdditionalInternalHeatSinks": true,
 		"EnforceRulesForAdditionalInternalHeatSinksDescription": "Can't have those juicy ++ cooling systems with smaller fusion cores than the rules allow it.",
-		"AllowMixingHeatSinkTypes": false,
-		"AllowMixingHeatSinkTypesDescription": "Allow heat sinks patchwork.",
+		"KeepIncompatibleHeatSinks": false,
+		"KeepIncompatibleHeatSinksDescription": "Replace incompatible heat sinks with compatible ones.",
 		"EngineMissingFallbackHeatSinkCapacity": 30,
 		"EngineMissingFallbackHeatSinkCapacityDescription": "Heat sink capacity if no engine is detected.",
 		"AdditionalWalkSpeed": 0,
@@ -830,8 +848,8 @@
 		"EnabledDescription": "Required by the engine feature to work. Disabled the mech.GetHeatSinkDissipation method.",
 		"ShutdownStatuseffectsExcludedComponentTypesDescription": "By default in CBT, heat sinks are still effective even when a mech is shut down. Heat Sink has to be part of the array or the engine will bug out once a mech is shut down.",
 		"ShutdownStatusEffectsExcludedComponentTagsDescription": "Don't shut down status effects for the components having the listed tags.",
-		"ShutdownStatusEffectsExcludedComponentTypes" : [
-				"HeatSink"
+		"ShutdownStatusEffectsExcludedComponentTypes": [
+			"HeatSink"
 		],
 		"ShutdownStatusEffectsExcludedComponentTags": [
 			"ignore_shutdown"
@@ -839,15 +857,16 @@
 	},
 	"InvalidInventory": {
 		"Enabled": true,
-        "EnabledDescription" : "Make sure invalid mech configurations can't be saved in skirmish and can't be fielded in the campaign."
+		"EnabledDescription": "Make sure invalid mech configurations can't be saved in skirmish and can't be fielded in the campaign."
 	},
 	"MechLabSlots": {
-		"MechLabStatusLeftShift" : 0,
-        "MechLabMechRightShift" : 0,
-		"MechLabArmTopPadding": 120,
 		"Enabled": true,
 		"HideHelpButton": true,
 		"HideECMButton": true,
+		"ZoomMaximumScale": 0.95,
+		"MechLabStatusLeftShift": 0,
+		"MechLabMechRightShift": 0,
+		"MechLabArmTopPadding": 120,
 		"TopLeftWidget": {
 			"Enabled": true,
 			"Label": "Chassis",
@@ -925,10 +944,10 @@
 		"BonusDescriptionsElementTemplate": " <indent=10%><line-indent=-5%><line-height=65%>{{element}}</line-height></line-indent></indent>\r\n"
 	},
 	"OverrideGhostVFX": {
+		"Enabled": false,
 		"Blacklisted": [],
 		"BlipWeak": "Weak",
-		"BlipStrong": "Weak",
-		"Enabled": false
+		"BlipStrong": "Weak"
 	},
 	"OverrideTonnage": {
 		"Enabled": true,
@@ -941,15 +960,15 @@
 		"KilogramStandardPrecisionDescription": "Used for Small Support Vehicles, ProtoMechs and battlesuits.",
 		"ArmorRoundingPrecision": 0.0125,
 		"ArmorRoundingPrecisionDescription": "If not set, default is ARMOR_PER_STEP * TONNAGE_PER_ARMOR_POINT",
-		"UnderweightWarningThreshold": 0.1,
+		"UnderweightWarningThreshold": 0.5,
 		"UnderweightWarningThresholdDescription": "How many tons a mech has to be underweight to show a warning",
 		"WeightsDefaultBonusSlot": null
 	},
 	"ShutdownInjuryProtection": {
+		"Enabled": true,
 		"EnabledDescription": "Pilots receive injury when mech receives overheat damage or has to shut down in case life support is destroyed.",
 		"HeatDamageInjuryEnabled": true,
-		"ShutdownInjuryEnabled": false,
-		"Enabled": true
+		"ShutdownInjuryEnabled": false
 	},
 	"TurretLimitedAmmo": {
 		"Enabled": true,
