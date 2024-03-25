@@ -1,14 +1,14 @@
 {
 	"Description": {
 		"Cost": 450000,
-		"Rarity": 4,
+		"Rarity": 0,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
 		"UIName": "Commando",
-		"Id": "chassisdef_commando_COM-2D-BI",
+		"Id": "chassisdef_commando_COM-7W",
 		"Name": "Commando",
-		"Details": "Dubbed the 'Blazing Inferno', this variant of the 2D chassis removes all the missiles and instead adds three more Medium Lasers and six Small Lasers, along with an extra ton of armor.",
+		"Details": "A further continuation of the mercenary-style 'standardized' refits of the basic Commando COM-2D chassis, the COM-7W is a hybrid design that takes design cues from the production COM-5S and overlays them on the COM-7A chassis.  The result is a Commando with 2 Medium Lasers, a CT-mounted TharHes SRM-4 launcher, and a Holly Streak SRM-2 in the arm.  When the three tons of CASEed ammunition is applied to this warload, the COM-7W has a longevity rarely seen on the Commando chassis.",
 		"Icon": "uixTxrIcon_commando"
 	},
 	"MovementCapDefID": "movedef_commando_COM-2D",
@@ -51,13 +51,9 @@
 			"Location": "Head",
 			"Hardpoints": [
 				{
-					"WeaponMountID": "Energy",
-					"Omni": false
-				},
-				{
 					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
-				}
+				}			
 			],
 			"Tonnage": 0,
 			"InventorySlots": 6,
@@ -73,7 +69,7 @@
 					"Omni": false
 				},
 				{
-					"WeaponMountID": "AntiPersonnel",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
@@ -85,12 +81,7 @@
 		},
 		{
 			"Location": "LeftTorso",
-			"Hardpoints": [
-				{
-					"WeaponMountID": "Energy",
-					"Omni": false
-				}			
-			],
+			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 12,
 			"MaxArmor": 60,
@@ -101,15 +92,11 @@
 			"Location": "CenterTorso",
 			"Hardpoints": [
 				{
-					"WeaponMountID": "AntiPersonnel",
-					"Omni": false
-				},
-				{
-					"WeaponMountID": "AntiPersonnel",
-					"Omni": false
-				},
-				{
 					"WeaponMountID": "Missile",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "AntiPersonnel",
 					"Omni": false
 				}
 			],
@@ -121,12 +108,7 @@
 		},
 		{
 			"Location": "RightTorso",
-			"Hardpoints": [
-				{
-					"WeaponMountID": "Energy",
-					"Omni": false
-				}			
-			],
+			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 12,
 			"MaxArmor": 60,
@@ -137,7 +119,7 @@
 			"Location": "RightArm",
 			"Hardpoints": [
 				{
-					"WeaponMountID": "Energy",
+					"WeaponMountID": "Missile",
 					"Omni": false
 				},
 				{
@@ -153,16 +135,7 @@
 		},
 		{
 			"Location": "LeftLeg",
-			"Hardpoints": [
-				{
-					"WeaponMountID": "AntiPersonnel",
-					"Omni": false
-				},
-				{
-					"WeaponMountID": "AntiPersonnel",
-					"Omni": false
-				}			
-			],
+			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
 			"MaxArmor": 60,
@@ -171,16 +144,7 @@
 		},
 		{
 			"Location": "RightLeg",
-			"Hardpoints": [
-				{
-					"WeaponMountID": "AntiPersonnel",
-					"Omni": false
-				},
-				{
-					"WeaponMountID": "AntiPersonnel",
-					"Omni": false
-				}			
-			],
+			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
 			"MaxArmor": 60,
@@ -232,7 +196,7 @@
 			"z": 0.5
 		}
 	],
-	"VariantName": "COM-7Y2-BI",
+	"VariantName": "COM-7W",
 	"ChassisTags": {
 		"items": [
 			"LightMech"
@@ -240,7 +204,7 @@
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Light Striker & Scout",
-	"YangsThoughts": "When they say Inferno, no one realized they were referring to the temperature inside the cockpit.  I suggest removing some of the lasers and adding a heat sink or two.",
+	"YangsThoughts": "A further continuation of the mercenary-style 'standardized' refits of the basic Commando COM-2D chassis, the COM-7W is a hybrid design that takes design cues from the production COM-5S and overlays them on the COM-7A chassis.  The result is a Commando with 2 Medium Lasers, a CT-mounted TharHes SRM-4 launcher, and a Holly Streak SRM-2 in the arm.  When the three tons of CASEed ammunition is applied to this warload, the COM-7W has a longevity rarely seen on the Commando chassis.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",
@@ -255,7 +219,7 @@
 		},
 		{
 			"MountedLocation": "CenterTorso",
-			"ComponentDefID": "emod_structureslots_standard",
+			"ComponentDefID": "emod_structureslots_endosteel",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
 			"DamageLevel": "Functional",
