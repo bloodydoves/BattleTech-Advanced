@@ -61,7 +61,7 @@
 		"UIName": "Vehicular Grenade Launcher",
 		"Id": "Weapon_Vehicular_Grenade_Launcher_0-STOCK",
 		"Name": "Vehicular Grenade Launcher",
-		"Details": "The Vehicular Grenade Launcher is a small one-shot weapon used for suppression purposes in heavy combat, often intended for use in urban environments where its effects make the most sense. The VGL has only a single shot but can be fired in one of three modes: Fragmentation, Inferno, and Smoke. This gives it decent flexibility even if its a one-use weapon. While never a common weapon, the VGL has been in continual service for centuries.",
+		"Details": "The Vehicular Grenade Launcher is a small one-shot weapon used for suppression purposes in heavy combat, often intended for use in urban environments where its effects make the most sense. The VGL has only a single shot but can be fired in one of three modes: Fragmentation, Inferno, and AoE. This gives it decent flexibility even if its a one-use weapon. While never a common weapon, the VGL has been in continual service for centuries.",
 		"Icon": "mor-tar"
 	},
 	"BonusValueA": "",
@@ -94,23 +94,18 @@
 			"FireTerrainChance": 1
 		},
 		{
-			"Id": "Smoke",
-			"UIName": "Smoke",
+			"Id": "AoE",
+			"UIName": "AoE",
 			"isBaseMode": false,
-			"LongVFXOnImpactScaleX": 0.5,
-			"LongVFXOnImpactScaleY": 0.5,
-			"LongVFXOnImpactScaleZ": 0.5,
-			"tempDesignMaskCellRadius": 4,
-			"tempDesignMaskOnImpactTurns": 3,
-			"tempDesignMaskOnImpact": "DesignMaskSmoke",
-			"LongVFXOnImpact": "vfxPrfPrtl_miningSmokePlume_sm_loop"
+			"AOECapable": true,
+			"AOERange": 30,
+			"AOEDamage": 15,
 		}
 	],
 	"ComponentTags": {
 		"items": [
 			"component_type_stock",
-			"range_standard",
-			"WebbTCSupported-SingleShot"
+			"range_standard"
 		],
 		"tagSetSourceFile": ""
 	}
