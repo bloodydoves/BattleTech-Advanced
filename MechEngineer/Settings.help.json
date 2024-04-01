@@ -441,6 +441,8 @@
     "CriticalEffects" : {
         "Enabled" : true,
         "EnabledDescription" : "Allows custom multiple critical hit states for individual components.",
+        "ShowComponentFloatie" : true,
+        "ShowComponentFloatieDescription" : "Shows the component status after being damaged using floaties.",
         "DebugLogEffects" : false,
         "DebugLogEffectsDescription" : "Log effect changes for debugging purposes.",
         "DefaultMaxCritsPerSlots" : 0.5,
@@ -452,6 +454,7 @@
             "Upgrade"
         ],
         "DefaultMaxCritsComponentTypesDescription" : "For which types the default max crits are applied.",
+        "DescriptionEnabled" : true,
         "DescriptionIdentifier" : "Criticals",
         "DescriptionTemplate" : "Critical Effects:<b><color=#F79B26FF>\r\n{{elements}}</color></b>\r\n",
         "ElementTemplate" : " <indent=10%><line-indent=-5%><line-height=65%>{{element}}</line-height></line-indent></indent>\r\n",
@@ -792,10 +795,6 @@
             "ignore_shutdown"
         ]
     },
-    "InvalidInventory" : {
-        "Enabled" : true,
-        "EnabledDescription" : "Make sure invalid mech configurations can't be saved in skirmish and can't be fielded in the campaign."
-    },
     "MechLabSlots" : {
         "Enabled" : true,
         "EnabledDescription" : "Makes the mech lab adhere to any custom mech slot counts.",
@@ -810,13 +809,11 @@
         "MechLabMechRightShift" : 0,
         "MechLabArmTopPadding" : 73,
         "TopLeftWidget" : {
-            "Enabled" : true,
             "Label" : "Technology Base",
             "ShortLabel" : "TB",
             "Slots" : 3
         },
         "TopRightWidget" : {
-            "Enabled" : true,
             "Label" : "Quirk",
             "ShortLabel" : "Q",
             "Slots" : 1

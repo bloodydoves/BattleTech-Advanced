@@ -1,0 +1,104 @@
+{
+	"Description": {
+		"Id": "3065-04-01-forced",
+		"Name": "MercNews Broadcast",
+		"Details": "HANSEATIC CRUSADE GRINDS ONWARDS!\r\n\n\nBremen, [[DM.Factions[faction_Hanse],Hanseatic League]]: Now four months into the campaign, [[DM.Factions[faction_ClanGoliathScorpion],Clan Goliath Scorpion]] shows no sign of slowing their assault on the Hanseatic League. The Clan's forces are digging in on their most recently conquered worlds while the Hanseatic League prepares counterattacks. Meanwhile, [[DM.BaseDescriptionDefs[LoreMagonScott],Khan Magon Scott]] has directed several galaxies to attack from an unusual angle, striking the mostly unprepared worlds of Braunschweig, Tomalov, and Lübeck. Truly, the Scorpions appear to be intent on taking the entire League at once, a premise the Hansa are virulently opposed to. Meanwhile, the League has launched a counter-attack against Köningsberg. Reports indicate that the counterattack is being met by Alpha Galaxy under the command of Khan Scott himself.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues.",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "BATTLE FOR BRAUNSCHWEIG BRUTAL AND BLOODY!\r\n\n\nBraunschweig, [[DM.Factions[faction_Hanse],Hanseatic League]]: While the [[DM.Factions[faction_ClanGoliathScorpion],Goliath Scorpion]] forces on Lübeck and Tomalov mostly face private security and garrison troops, Braunschweig is much better defended. The entirety of [[DM.BaseDescriptionDefs[LoreRDF],Regional Defense Force]] 6 is stationed on-world and is meeting the Clan's Omega Galaxy with their full fury. Reports indicate that the fighting is savage, with no quarter offered nor given. RDF 6's Captain-General, Leopold von Daun, has reportedly sworn to die before giving the invaders a single inch of territory on Braunschweig, something Omega Galaxy appears more than satisfied to provide the Captain-General.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_ClanGoliathScorpion_attacks_starsystemdef_Braunschweig",
+									"WIIC_set_starsystemdef_Braunschweig_defender_strength_45",
+									"WIIC_set_starsystemdef_Braunschweig_attacker_strength_50",
+									"WIIC_ClanGoliathScorpion_attacks_starsystemdef_Luebeck",
+									"WIIC_set_starsystemdef_Luebeck_defender_strength_20",
+									"WIIC_set_starsystemdef_Luebeck_attacker_strength_45",
+									"WIIC_ClanGoliathScorpion_attacks_starsystemdef_Tomalov",
+									"WIIC_set_starsystemdef_Tomalov_defender_strength_20",
+									"WIIC_set_starsystemdef_Tomalov_attacker_strength_45",
+									"WIIC_give_starsystemdef_Kampen_to_ClanGoliathScorpion",
+									"WIIC_give_starsystemdef_Bruges_to_ClanGoliathScorpion",
+									"WIIC_give_starsystemdef_Koeningsberg_to_ClanGoliathScorpion",
+									"WIIC_Hanse_attacks_starsystemdef_Koeningsberg",
+									"WIIC_set_starsystemdef_Koeningsberg_defender_strength_40",
+									"WIIC_set_starsystemdef_Koeningsberg_attacker_strength_20"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": [
+								{
+									"Scope": "Company",
+									"EventID": "3065-05-09-forced",
+									"MinDaysWait": 38,
+									"MaxDaysWait": 38,
+									"Probability": 100
+								}
+							],
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

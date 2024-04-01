@@ -21,6 +21,7 @@
 			"JumpDistance: +10%",
 			"Accuracy: +1",
 			"EndMoveHeat: -6",
+			"HeatGenerated: -10%",
 			"MeleeAcc: -30"
 		]
 	},
@@ -33,7 +34,7 @@
 		"UIName": "Clan Quirk",
 		"Id": "Gear_LifeSupportA_Clan_Quirk",
 		"Name": "Clan Quirk",
-		"Details": "This piece of equipment represents the inherent bonuses and negatives that Clan mechs, both BattleMechs and OmniMechs, have over their Inner Sphere counterparts. It grants +1 accuracy with weapons, 6 bonus heat venting, and bonus movement speed as well as inflicting a major penalty to melee (except for DFAs).",
+		"Details": "This piece of equipment represents the inherent bonuses and negatives that Clan mechs, both BattleMechs and OmniMechs, have over their Inner Sphere counterparts. It grants +1 accuracy with weapons, 6 bonus heat venting, 10% decreased heat generation, and bonus movement speed as well as inflicting a major penalty to melee (except for DFAs).",
 		"Icon": "caduceus"
 	},
 	"BonusValueA": "",
@@ -340,6 +341,36 @@
 			"vfxData": null,
 			"instantModData": null,
 			"poorlyMaintainedEffectData": null
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator"
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "ClanQuirkHeatGen",
+				"Name": "Decreased Heat Generation",
+				"Details": "Heat generation decreased by 10%.",
+				"Icon": "uixSvgIcon_equipment_ThermalExchanger"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "HeatGenerated",
+				"operation": "Float_Multiply",
+				"modValue": "0.9",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			}
 		}
 	],
 	"ComponentTags": {

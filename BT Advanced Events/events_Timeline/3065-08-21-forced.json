@@ -1,0 +1,99 @@
+{
+	"Description": {
+		"Id": "3065-08-21-forced",
+		"Name": "MercNews Broadcast",
+		"Details": "BREMEN CONQUERED, HANSEATIC LEAGUE FALLS!\r\n\n\nBremen, [[DM.Factions[faction_ClanGoliathScorpion],Clan Goliath Scorpion]]: After more than eight months of constant conflict, the [[DM.Factions[faction_Hanse],Hanseatic League]] has fallen before Clan Goliath Scorpion's onslaught. When it became clear that they would not hold the capital, the [[DM.BaseDescriptionDefs[LoreCouncilofMerchants],Council of Merchants]] displayed the depths of their treachery, detonating a nuclear booby trap, leveling much the capital city and annihilating tens of thousands of lives, civilians and soldiers alike. Shocked, [[DM.BaseDescriptionDefs[LoreRudolfSchmidt],Captain-Marshal Rudolf Schmidt]] ordered his remaining troops to cease hostilities immediately as he hoped to save what remained of his people. [[DM.BaseDescriptionDefs[LoreMagonScott],Khan Magon Scott]] of the Goliath Scorpions accepted the Captain-Marshal's surrender though [[DM.BaseDescriptionDefs[LoreRDF],Regional Defense Force]] 3 refused to stand down and was summarily executed at the hands of the Scorpions (who flew into a frenzy at the senseless destruction wrought by the merchants).",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues.",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "LEAGUE SHATTERED BUT NOT DEFEATED, SCORPIONS STILL FACE LENGTHY EFFORT!\r\n\n\nBremen, [[DM.Factions[faction_ClanGoliathScorpion],Clan Goliath Scorpion]]: Even though the battle for Bremen is over and the [[DM.Factions[faction_Hanse],Hanseatic League]] is officially conquered, almost half of the League's worlds remain unbowed and have vowed to resist the Scorpions with their last ounce of strength, despite Captain-Marshal Schmidt's order to stand down. The conflict may be won but it is not yet over for the Clan. Despite their mounting losses, the Goliath Scorpions are dedicated to the task and have set out to conquer the remaining systems.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_ClanGoliathScorpion_attacks_starsystemdef_Antwerp",
+									"WIIC_set_starsystemdef_Antwerp_defender_strength_40",
+									"WIIC_set_starsystemdef_Antwerp_attacker_strength_45",
+									"WIIC_ClanGoliathScorpion_attacks_starsystemdef_Danzig",
+									"WIIC_set_starsystemdef_Danzig_defender_strength_15",
+									"WIIC_set_starsystemdef_Danzig_attacker_strength_30",
+									"WIIC_ClanGoliathScorpion_attacks_starsystemdef_Hamburg",
+									"WIIC_set_starsystemdef_Hamburg_defender_strength_15",
+									"WIIC_set_starsystemdef_Hamburg_attacker_strength_30",
+									"WIIC_give_starsystemdef_Bremen(HL)_to_ClanGoliathScorpion"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": [
+								{
+									"Scope": "Company",
+									"EventID": "3065-09-18-forced",
+									"MinDaysWait": 28,
+									"MaxDaysWait": 28,
+									"Probability": 100
+								}
+							],
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

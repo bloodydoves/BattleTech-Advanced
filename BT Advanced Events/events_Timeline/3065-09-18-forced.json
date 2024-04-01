@@ -1,0 +1,102 @@
+{
+	"Description": {
+		"Id": "3065-09-18-forced",
+		"Name": "MercNews Broadcast",
+		"Details": "GOLIATH SCORPIONS CONSOLIDATE HOLDINGS!\r\n\n\nBremen, [[DM.Factions[faction_ClanGoliathScorpion],Clan Goliath Scorpion]]: Though the [[DM.Factions[faction_Hanse],Hanseatic League]] has been felled, the battle for the region rages onwards, with almost a dozen worlds remaining unconquered. Clan Goliath Scorpion's forces are pushing forwards to conquer these worlds while also consolidating their new, massive, holdings.[[DM.BaseDescriptionDefs[LoreMagonScott],Khan Magon Scott]] has ordered his garrison forces forward into the former League to keep worlds pacified while his front-line forces move onwards to complete the conquest.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues.",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "REMAINING WORLDS STAND DEFIANT, NO SURRENDER OFFERED DESPITE LEAGUE COLLAPSE!\r\n\n\nBremen, [[DM.Factions[faction_ClanGoliathScorpion],Clan Goliath Scorpion]]: Though it has been near on a month since Bremen's fall, many of the worlds of the former [[DM.Factions[faction_Hanse],Hanseatic League]] have refused to capitulate to the Goliath Scorpions. On Antwerp, resistance was extremely stiff and the battle raged for weeks before the planet finally fell. The worlds furthest from the Goliath Scorpion's forces have been digging in, laying traps, and preparing with all their might to resist the invaders with all that they have. [[DM.BaseDescriptionDefs[LoreMagonScott],Khan Scott]] has repeatedly asked for their surrender, hoping to spare as many lives as possible, but to date only one world, Lynn, has taken his offer.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_ClanGoliathScorpion_attacks_starsystemdef_Goslar",
+									"WIIC_set_starsystemdef_Goslar_defender_strength_10",
+									"WIIC_set_starsystemdef_Goslar_attacker_strength_25",
+									"WIIC_ClanGoliathScorpion_attacks_starsystemdef_Stralsund",
+									"WIIC_set_starsystemdef_Stralsund_defender_strength_10",
+									"WIIC_set_starsystemdef_Stralsund_attacker_strength_25",
+									"WIIC_ClanGoliathScorpion_attacks_starsystemdef_Koeln(HL)",
+									"WIIC_set_starsystemdef_Koeln(HL)_defender_strength_10",
+									"WIIC_set_starsystemdef_Koeln(HL)_attacker_strength_25",
+									"WIIC_give_starsystemdef_Antwerp_to_ClanGoliathScorpion",
+									"WIIC_give_starsystemdef_Danzig_to_ClanGoliathScorpion",
+									"WIIC_give_starsystemdef_Hamburg_to_ClanGoliathScorpion",
+									"WIIC_give_starsystemdef_Lynn_to_ClanGoliathScorpion"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": [
+								{
+									"Scope": "Company",
+									"EventID": "3065-11-05-forced",
+									"MinDaysWait": 48,
+									"MaxDaysWait": 48,
+									"Probability": 100
+								}
+							],
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

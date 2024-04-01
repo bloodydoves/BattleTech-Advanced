@@ -1,0 +1,101 @@
+{
+	"Description": {
+		"Id": "3066-01-21-forced",
+		"Name": "MercNews Broadcast",
+		"Details": "HANSEATIC CRUSADE CROSSES ONE YEAR MARK!\r\n\n\nBremen, [[DM.Factions[faction_ClanGoliathScorpion],Clan Goliath Scorpion]]: It has now been more than a year since Clan Goliath Scorpion began the [[DM.BaseDescriptionDefs[LoreHanseaticCrusade],Hanseatic Crusade]] and more than six months since the League formally fell with the capture of Bremen. However, the last few worlds stubbornly remain unwilling to surrender and are putting up stiff resistance against what now looks inevitable: a complete Goliath Scorpion victory. This victory has been a long time coming and Scorpion MechWarriors are eager for the day to finally arrive and for their hard work to be vindicated. While the touman puts the spurs to the final few holdout planets, [[DM.BaseDescriptionDefs[LoreMagonScott],Khan Magon Scott]] is rumored to be planning a major announcement of some kind.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues.",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "FINAL WAVE OF ASSAULTS BEGIN!\r\n\n\nBremen, [[DM.Factions[faction_ClanGoliathScorpion],Clan Goliath Scorpion]]: Only the last three worlds of the old Hanseatic League remain: Greifswald, Gateway, and Thorn. Of these, only Thorn is predicted to put up any serious resistance as Greifswald and Gateway largely only have militia forces defending them. Thorn meanwhile has become the last refuge of the remaining free Hansa merchants and is fortified against attack, complete with mercenary armies and an extensive militia. To crush this last holdout, [[DM.BaseDescriptionDefs[LoreMagonScott],Khan Scott]] has ordered Alpha Galaxy to bring the world to heel, a task that the elite Alpha Galaxy MechWarriors reportedly are relishing.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_ClanGoliathScorpion_attacks_starsystemdef_Greifswald",
+									"WIIC_set_starsystemdef_Greifswald_defender_strength_10",
+									"WIIC_set_starsystemdef_Greifswald_attacker_strength_25",
+									"WIIC_ClanGoliathScorpion_attacks_starsystemdef_Gateway",
+									"WIIC_set_starsystemdef_Gateway_defender_strength_10",
+									"WIIC_set_starsystemdef_Gateway_attacker_strength_25",
+									"WIIC_ClanGoliathScorpion_attacks_starsystemdef_Thorn",
+									"WIIC_set_starsystemdef_Thorn_defender_strength_20",
+									"WIIC_set_starsystemdef_Thorn_attacker_strength_35",
+									"WIIC_give_starsystemdef_Anklan_to_ClanGoliathScorpion",
+									"WIIC_give_starsystemdef_Visby_to_ClanGoliathScorpion",
+									"WIIC_give_starsystemdef_Bergen_to_ClanGoliathScorpion"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": [
+								{
+									"Scope": "Company",
+									"EventID": "3066-04-01-forced",
+									"MinDaysWait": 70,
+									"MaxDaysWait": 70,
+									"Probability": 100
+								}
+							],
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

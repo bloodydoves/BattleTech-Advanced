@@ -1,0 +1,157 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/e/p/ppc"
+			},
+			{
+				"CategoryID": "NeverMelee"
+			}
+		],
+		"BonusDescriptions": [
+			"NoFireInMelee",
+			"PPCDEBUFF: 2",
+			"BombastBaseMode: 55, 25",
+			"BombastLowMode: +10, +10, -1, +30",
+			"BombastMidMode: +20, +20, -2, +50",
+			"BombastMaxMode: +30, +30, -3, +80",
+			"WeaponAttachmentCompatible: PPC Capacitor"		
+		]
+	},
+	"Category": "Energy",
+	"Type": "PPC",
+	"WeaponSubType": "PPC",
+	"MinRange": 60,
+	"MaxRange": 720,
+	"RangeSplit": [
+		180,
+		360,
+		540
+	],
+	"AmmoCategory": "NotSet",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 25,
+	"Damage": 55,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 0,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": 0,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 1,
+	"Instability": 15,
+	"WeaponEffectID": "WeaponEffect-Weapon_PPC",
+	"Description": {
+		"Cost": 480000,
+		"Rarity": 0,
+		"Purchasable": true,
+		"Manufacturer": "Jimbo's Crabshack",
+		"Model": "Particle Projector Cannon",
+		"UIName": "Bombast PPC",
+		"Id": "Weapon_PPC_Bombast_0-STOCK",
+		"Name": "Bombast PPC",
+		"Details": "Modeled after the rare and largely neglected Bombast Laser, the Bombast Particle Projector Cannon is a PPC capable of scaling its damage output while also affecting its accuracy and heat generation at the same time. The Bombast PPC is a fiddly weapon with great damage potential if used well.\n\n <b><color=#e51717>COMMUNITY CONTENT</color></b>",
+		"Icon": "particle"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "PPC",
+	"BattleValue": 0,
+	"InventorySize": 5,
+	"Tonnage": 9,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": 1,
+				"ticksOnActivations": true,
+				"useActivationsOfTarget": true,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "OnHit",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "AbilityDefPPC",
+				"Name": "SENSORS IMPAIRED",
+				"Details": "[AMT] Difficulty to all of this unit's attacks until its next activation.",
+				"Icon": "uixSvgIcon_status_sensorsImpaired"
+			},
+			"nature": "Debuff",
+			"statisticData": {
+				"statName": "AccuracyModifier",
+				"operation": "Float_Add",
+				"modValue": "2.0",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"Modes": [
+		{
+			"Id": "lv1",
+			"UIName": "Base",
+			"isBaseMode": true
+		},
+		{
+			"Id": "lv2",
+			"UIName": "Low",
+			"isBaseMode": false,
+			"DamagePerShot": 10,
+			"HeatGenerated": 10,
+			"MinRange": 30.0,
+			"MaxRange": 120.0,
+			"ShortRange": 30.0,
+			"MediumRange": 60.0,
+			"LongRange": 90.0,
+			"AccuracyModifier": 1
+		},
+		{
+			"Id": "lv3",
+			"UIName": "Mid",
+			"isBaseMode": false,
+			"DamagePerShot": 20,
+			"HeatGenerated": 20,
+			"MinRange": 50.0,
+			"MaxRange": 200.0,
+			"ShortRange": 50.0,
+			"MediumRange": 100.0,
+			"LongRange": 150.0,
+			"AccuracyModifier": 2
+		},
+		{
+			"Id": "lv4",
+			"UIName": "Max",
+			"isBaseMode": false,
+			"DamagePerShot": 30,
+			"HeatGenerated": 30,
+			"MinRange": 80.0,
+			"MaxRange": 320.0,
+			"ShortRange": 80.0,
+			"MediumRange": 160.0,
+			"LongRange": 240.0,
+			"AccuracyModifier": 3
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_very-long",
+			"PPCCapacitorSupported-Bombast",
+			"WebbTCSupported-Bombast"
+		],
+		"tagSetSourceFile": ""
+	}
+}

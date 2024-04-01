@@ -1,0 +1,158 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "MissTTSART"
+			},
+			{
+				"CategoryID": "notused"
+			}
+		],
+		"BonusDescriptions": [
+				"MissileAcc: +1",
+				"IsSensorsB"
+			],
+		"Flags": [
+			"ignore_damage",
+			"default",
+			"no_salvage"
+		]
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 350000,
+		"Rarity": 2,
+		"Purchasable": true,
+		"Manufacturer": "Hartford",
+		"Model": "F1800",
+		"UIName": "Rattler TTS",
+		"Id": "Gear_TargetingTrackingSystem_Rattler",
+		"Name": "Rattler TTS",
+		"Details": "All 'Mechs come equipped with a stock targeting and tracking system-or TTS-which can be upgraded for improved performance. Upgrades increase accuracy when attacking with Ballistic, Energy, or Missile weaponry, depending on the type of TTS.",
+		"Icon": "AdvancedTC"
+	},
+	"BonusValueA": "+ 1 Acc. (Missile)",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 1,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": -1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-Rattler_ToHit",
+				"Name": "Rattler TTS",
+				"Details": "The Rattler is providing control and command functions to its turrets, increasing their hit chance by +4 as well as ignoring 2 evasion.",
+				"Icon": "AdvancedTC"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "AccuracyModifier",
+				"operation": "Float_Add",
+				"modValue": "-6.0",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"ticksOnActivations": false,
+				"useActivationsOfTarget": false,
+				"ticksOnEndOfRound": false,
+				"ticksOnMovements": false,
+				"stackLimit": -1,
+				"clearedWhenAttacked": false
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-Overlord_EvasionIgnore",
+				"Name": "Missile WEAPON HIT CHANCE IMPROVED",
+				"Details": "Missile weapon attacks have their hit improved by [AMT].",
+				"Icon": "AdvancedTC"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"appliesEachTick": false,
+				"effectsPersistAfterDestruction": false,
+				"statName": "EvasivePipsIgnored",
+				"operation": "Float_Add",
+				"modValue": "4.0",
+				"modType": "System.Single",
+				"additionalRules": "NotSet",
+				"targetCollection": "Weapon",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			},
+			"tagData": null,
+			"floatieData": null,
+			"actorBurningData": null,
+			"vfxData": null,
+			"instantModData": null,
+			"poorlyMaintainedEffectData": null
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_variant",
+			"component_type_variant1"
+		],
+		"tagSetSourceFile": ""
+	}
+}

@@ -1,0 +1,98 @@
+{
+	"Description": {
+		"Id": "3065-01-01",
+		"Name": "MercNews Broadcast",
+		"Details": "GOLIATH SCORPION LAUNCHES HANSEATIC CRUSADE!\r\n\n\nBremen, [[DM.Factions[faction_Hanse],Hanseatic League]]: After long preparation, it seems that [[DM.Factions[faction_ClanGoliathScorpion],Clan Goliath Scorpion]] has finally launched their long-rumored assault against the Hanseatic League, colloquially named the [[DM.BaseDescriptionDefs[LoreHanseaticCrusade],Hanseatic Crusade]]. The two nations have been posturing against each other for more than a year at this point and minor raids have taken place several times against each other but after the slaughter of a team of Goliath Scorpion Seekers on Bergen by Hanseatic security forces [[DM.BaseDescriptionDefs[LoreMagonScott],Khan Magon Scott]] of the [[DM.BaseDescriptionDefs[LoreEscorpiónImperio],Escorpión Imperio]] asked the Clan Council to support an invasion of the League, to which the Council granted their unanimous support.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues.",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "SCORPIONS SEE LIGHT RESISTANCE, HANSEATIC FORCES NOWHERE TO BE SEEN!\r\n\n\nStettin, [[DM.Factions[faction_Hanse],Hanseatic League]]: The initial attacks by the Goliath Scorpions seem to have taken the Hanseatic League off-balance as the Scorpion forces on Wismar, Stettin, and Novgorod have encountered only light resistance thus far. It seems that the League's [[DM.BaseDescriptionDefs[LoreRDF],Regional Defense Force]] in the area, RDF 9, is spread between the worlds evenly and was not prepared for a full-scale invasion. Word from the front is light but early reports indicate the Scorpions are likely to conquer the worlds with little trouble.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "Company",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_ClanGoliathScorpion_attacks_starsystemdef_Wismar",
+									"WIIC_set_starsystemdef_Wismar_defender_strength_15",
+									"WIIC_set_starsystemdef_Wismar_attacker_strength_45",
+									"WIIC_ClanGoliathScorpion_attacks_starsystemdef_Stettin(HL)",
+									"WIIC_set_starsystemdef_Stettin(HL)_defender_strength_15",
+									"WIIC_set_starsystemdef_Stettin(HL)_attacker_strength_45",
+									"WIIC_ClanGoliathScorpion_attacks_starsystemdef_Novgorod",
+									"WIIC_set_starsystemdef_Novgorod_defender_strength_15",
+									"WIIC_set_starsystemdef_Novgorod_attacker_strength_45"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": [
+								{
+									"Scope": "Company",
+									"EventID": "3065-01-28-forced",
+									"MinDaysWait": 27,
+									"MaxDaysWait": 27,
+									"Probability": 100
+								}
+							],
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}

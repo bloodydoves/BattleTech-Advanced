@@ -1,4 +1,11 @@
 {
+	"Custom": {
+		"AssemblyVariant": {
+			"PrefabID": "Preta",
+			"Exclude": false,
+			"Include": true
+		}
+	},
 	"Description": {
 		"Cost": 3800000,
 		"Rarity": 2,
@@ -8,7 +15,7 @@
 		"UIName": "Preta",
 		"Id": "chassisdef_preta_X-PRT-O-RAPTUS",
 		"Name": "Preta",
-		"Details": "This mech is a mystery. It is not listed on any recorded mech registry and is visually unique. It's not clear where it came from or what it is, only that it uses cutting-edge technology and is very dangerous. Named the Preta according to captured Word of Blake MechWarriors, the Preta seems to be a middle-weight skirmisher design. It is fast for its size, well armored, and apparently is an OmniMech. Expect the unexpected from the Preta. The Preta Raptus seems to carry a brawler loadout of two each Streak SRM-6s and Medium Pulse Lasers.",
+		"Details": "This mech is a mystery. It is not listed on any recorded mech registry and is visually unique. It's not clear where it came from or what it is, only that it uses cutting-edge technology and is very dangerous. Named the Preta according to captured Word of Blake MechWarriors, the Preta seems to be a middle-weight skirmisher design. It is fast for its size, well armored, and apparently is an OmniMech. Expect the unexpected from the Preta. The Preta Raptus seems to carry a brawler loadout of two each Streak SRM-4s and Medium Pulse Lasers as well as a Retractable Blade.",
 		"Icon": "uixTxrIcon_preta"
 	},
 	"MovementCapDefID": "movedef_vindicator_VND-1R",
@@ -65,7 +72,11 @@
 			"Location": "LeftArm",
 			"Hardpoints": [
 				{
-					"WeaponMountID": "AntiPersonnel",
+					"WeaponMountID": "MeleeWeapon",
+					"Omni": false
+				},
+				{
+					"WeaponMountID": "Energy",
 					"Omni": true
 				}
 			],
@@ -103,6 +114,10 @@
 			"Hardpoints": [
 				{
 					"WeaponMountID": "AntiPersonnel",
+					"Omni": true
+				},
+				{
+					"WeaponMountID": "Energy",
 					"Omni": true
 				}
 			],
@@ -203,7 +218,7 @@
 		"tagSetSourceFile": ""
 	},
 	"StockRole": "Fire Support & Brawler",
-	"YangsThoughts": "This mech is a mystery. It is not listed on any recorded mech registry and is visually unique. It's not clear where it came from or what it is, only that it uses cutting-edge technology and is very dangerous. Named the Preta according to captured Word of Blake MechWarriors, the Preta seems to be a middle-weight skirmisher design. It is fast for its size, well armored, and apparently is an OmniMech. Expect the unexpected from the Preta. The Preta Raptus seems to carry a brawler loadout of two each Streak SRM-6s and Medium Pulse Lasers.",
+	"YangsThoughts": "This mech is a mystery. It is not listed on any recorded mech registry and is visually unique. It's not clear where it came from or what it is, only that it uses cutting-edge technology and is very dangerous. Named the Preta according to captured Word of Blake MechWarriors, the Preta seems to be a middle-weight skirmisher design. It is fast for its size, well armored, and apparently is an OmniMech. Expect the unexpected from the Preta. The Preta Raptus seems to carry a brawler loadout of two each Streak SRM-4s and Medium Pulse Lasers as well as a Retractable Blade.",
 	"FixedEquipment": [
 		{
 			"MountedLocation": "CenterTorso",
@@ -297,6 +312,39 @@
 			"SimGameUID": null,
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftArm",
+			"ComponentDefID": "emod_arm_part_lower",
+			"SimGameUID": "",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftArm",
+			"ComponentDefID": "emod_arm_part_hand",
+			"SimGameUID": "",
+			"ComponentDefType": "Upgrade",
+			"HardpointSlot": 0,
+			"GUID": null,
+			"DamageLevel": "Functional",
+			"prefabName": null,
+			"hasPrefabName": false
+		},
+		{
+			"MountedLocation": "LeftArm",
+			"ComponentDefID": "Weapon_Preta_RetractableBlade",
+			"SimGameUID": "",
+			"ComponentDefType": "Weapon",
+			"HardpointSlot": 0,
 			"GUID": null,
 			"DamageLevel": "Functional",
 			"prefabName": null,

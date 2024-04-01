@@ -1,0 +1,101 @@
+{
+	"Description": {
+		"Id": "3065-11-05-forced",
+		"Name": "MercNews Broadcast",
+		"Details": "HANSEATIC LEAGUE CIVILIAN UNREST!\r\n\n\nBremen, [[DM.Factions[faction_ClanGoliathScorpion],Clan Goliath Scorpion]]: On the newly conquered worlds of the Hanseatic League there appears to be extensive civilian unrest. While the merchants of the League were not particularly kind to their citizens, the Clans have a poor reputation for dealing with their lesser castes and the League's civilians are justifiably worried. However, the Goliath Scorpions appear to be taking a very un-clanlike approach to dealing with the lower castes, even going so far as to incorporate them (in a limited capacity) into the leadership structure of the Clan. [[DM.BaseDescriptionDefs[LoreMagonScott],Khan Magon Scott]] will almost certainly face challenges for this approach but all indications are that he will endure any challenges.",
+		"Icon": "uixTxrSpot_ComputerScreen.png"
+	},
+	"Scope": "Company",
+	"Weight": 0,
+	"Requirements": {
+		"Scope": "Company",
+		"RequirementTags": {
+			"items": "mercnews_subscription",
+			"tagSetSourceFile": ""
+		},
+		"ExclusionTags": {
+			"items": null,
+			"tagSetSourceFile": ""
+		},
+		"RequirementComparisons": []
+	},
+	"AdditionalRequirements": [],
+	"AdditionalObjects": [],
+	"Options": [
+		{
+			"Description": {
+				"Id": "continue",
+				"Name": "Continue.",
+				"Details": "Broadcast continues.",
+				"Icon": ""
+			},
+			"RequirementList": [],
+			"ResultSets": [
+				{
+					"Description": {
+						"Id": "continue1",
+						"Name": "MercNews Broadcast",
+						"Details": "REMAINING CONQUESTS BLOODY AND BRUTAL!\r\n\n\nBremen, [[DM.Factions[faction_ClanGoliathScorpion],Clan Goliath Scorpion]]: Though few worlds remain unconquered by the Goliath Scorpions, those that do remain are putting up extreme resistance. On Anklan the merchants and their hired mercenaries have heavily entrenched themselves in the capital city while on Visby resistance forces have faded into the wilderness, running from prepared cache to prepared cache to remain supplied and forcing the Scorpions to chase them across the entire world's surface to stamp them out. Despite the challenge and the increasingly weary Scorpion warriors, the Clan's efforts continue.",
+						"Icon": ""
+					},
+					"Weight": 100,
+					"Results": [
+						{
+							"Scope": "",
+							"Requirements": null,
+							"AddedTags": {
+								"items": [
+									"WIIC_ClanGoliathScorpion_attacks_starsystemdef_Anklan",
+									"WIIC_set_starsystemdef_Anklan_defender_strength_15",
+									"WIIC_set_starsystemdef_Anklan_attacker_strength_25",
+									"WIIC_ClanGoliathScorpion_attacks_starsystemdef_Visby",
+									"WIIC_set_starsystemdef_Visby_defender_strength_15",
+									"WIIC_set_starsystemdef_Visby_attacker_strength_25",
+									"WIIC_ClanGoliathScorpion_attacks_starsystemdef_Bergen",
+									"WIIC_set_starsystemdef_Bergen_defender_strength_10",
+									"WIIC_set_starsystemdef_Bergen_attacker_strength_25",
+									"WIIC_give_starsystemdef_Goslar_to_ClanGoliathScorpion",
+									"WIIC_give_starsystemdef_Stralsund_to_ClanGoliathScorpion",
+									"WIIC_give_starsystemdef_Koeln(HL)_to_ClanGoliathScorpion"
+								],
+								"tagSetSourceFile": ""
+							},
+							"RemovedTags": {
+								"items": null,
+								"tagSetSourceFile": ""
+							},
+							"Stats": null,
+							"Actions": null,
+							"ForceEvents": [
+								{
+									"Scope": "Company",
+									"EventID": "3066-01-21-forced",
+									"MinDaysWait": 77,
+									"MaxDaysWait": 77,
+									"Probability": 100
+								}
+							],
+							"TemporaryResult": false,
+							"ResultDuration": 0
+						}
+					]
+				}
+			],
+			"Requirements": {
+				"Scope": "Company",
+				"RequirementTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"ExclusionTags": {
+					"items": null,
+					"tagSetSourceFile": ""
+				},
+				"RequirementComparisons": []
+			}
+		}
+	],
+	"PublishState": "PUBLISHED",
+	"ValidationState": "UNTESTED",
+	"EventType": "UNSELECTABLE"
+}
