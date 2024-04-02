@@ -1,0 +1,133 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "MissTTSART"
+			},
+			{
+				"CategoryID": "notused"
+			}
+		],
+		"Flags": [
+			"ignore_damage",
+			"default",
+			"no_salvage"
+		]
+	},
+	"StatName": null,
+	"RelativeModifier": 0,
+	"AbsoluteModifier": 0,
+	"Description": {
+		"Cost": 350000,
+		"Rarity": 2,
+		"Purchasable": true,
+		"Manufacturer": "Hartford",
+		"Model": "F1800",
+		"UIName": "Rattler Resistances",
+		"Id": "Gear_Rattler_Resistances",
+		"Name": "Rattler Resistances",
+		"Details": "All 'Mechs come equipped with a stock targeting and tracking system-or TTS-which can be upgraded for improved performance. Upgrades increase accuracy when attacking with Ballistic, Energy, or Missile weaponry, depending on the type of TTS.",
+		"Icon": "AdvancedTC"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Upgrade",
+	"ComponentSubType": "NotSet",
+	"PrefabIdentifier": "",
+	"BattleValue": 0,
+	"InventorySize": 1,
+	"Tonnage": 1,
+	"AllowedLocations": "Head",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-Rattler_PilotHits",
+				"Name": "Rattler Resistances",
+				"Details": "The Rattler is resistant to pilot hits.",
+				"Icon": "AdvancedTC"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "BonusHealth",
+				"operation": "Int_Add",
+				"modValue": "10",
+				"modType": "System.Int32",
+				"additionalRules": "NotSet",
+				"targetCollection": "Pilot",
+				"targetWeaponCategory": "NotSet",
+				"targetWeaponType": "NotSet",
+				"targetAmmoCategory": "NotSet",
+				"targetWeaponSubType": "NotSet"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-Rattler_NoBleed",
+				"Name": "Rattler No Bleedout",
+				"Details": "The Rattler cannot bleed out from injuries.",
+				"Icon": "layeredarmor"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "DisablesBleeding",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-Rattler_CritResist",
+				"Name": "Rattler Crit Resistance",
+				"Details": "The Rattler is resistant to crits due to its bulk.",
+				"Icon": "uixSvgIcon_run_n_gun"
+			},
+			"statisticData": {
+				"statName": "CriticalHitChanceReceivedMultiplier",
+				"operation": "Float_Multiply",
+				"modValue": "0.85",
+				"modType": "System.Single"
+			},
+			"nature": "Buff"
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_variant",
+			"component_type_variant1"
+		],
+		"tagSetSourceFile": ""
+	}
+}
