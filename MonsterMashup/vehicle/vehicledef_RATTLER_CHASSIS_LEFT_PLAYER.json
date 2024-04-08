@@ -1,22 +1,24 @@
 {
 	"Version": 1,
 	"Description": {
-		"Cost": 500000000,
+		"Id": "vehicledef_RATTLER_CHASSIS_LEFT_PLAYER",
+		"Name": "Rattler Chassis Left",
+		"Details": "",
+		"Icon": "",
+		"Cost": 564,
 		"Rarity": 0,
-		"Purchasable": false,
-		"UIName": "Rattler Mobile Fortress",
-		"Id": "vehicledef_RATTLER_FORTRESS_PLAYER",
-		"Name": "Rattler Mobile Fortress",
-		"Details": "It's the Rattler. It's a fortress the size of a dropship and it carries enough firepower to level a city in one volley. You fought one, you know how dangerous it can be, and now we're deploying one somehow. Enjoy, Commander, you earned it.</color></b>\n\n \n\n <b><color=#ffcc00>Movement: 1/2 Hex: 30/60 Meters.</color></b>\n\n<b>Armor:</b> Armor\n<b>Structure:</b> Structure\n<b>Values       A        S  </b>\n<b>Front</b>       3000     850\n<b>Left</b>         3000     850\n<b>Right</b>       3000     850\n<b>Rear</b>        3000     850\n<b>Turret</b>      3000     850\n\n<b>Total</b>      15000    4250\n",
-		"Icon": "Rattler"
+		"Purchasable": false
 	},
-	"ChassisID": "vehiclechassisdef_RATTLER_FORTRESS_PLAYER",
+	"ChassisID": "vehiclechassisdef_RATTLER_CHASSIS_LEFT_PLAYER",
 	"VehicleTags": {
 		"items": [		
-			"mmash_no_ground_align",
+			"irbtmu_immobile_unit",		
 			"unit_vehicle",
-			"unit_assault",
-			"unit_tracks"
+			"unit_light",
+			"unit_wheels",
+			"unit_release",
+			"NoBiome_martianVacuum",
+			"NoBiome_lunarVacuum"
 		],
 		"tagSetSourceFile": ""
 	},
@@ -59,101 +61,65 @@
 	],
 	"inventory": [
 		{
-			"ComponentDefID": "Gear_Rattler_Track_Left_Front_Player",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Left",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Gear_Rattler_Chassis_Left_Player",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Turret",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Gear_Rattler_Track_Left_Rear_Player",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Left",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Gear_Rattler_Track_Right_Front_Player",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Right",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Gear_Rattler_Chassis_Right_Player",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Turret",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Gear_Rattler_Track_Right_Rear_Player",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Right",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Gear_Rattler_Tower_Player",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Turret",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
-		},
-		{
-			"ComponentDefID": "Gear_Rattler_Chassis_Rear_Player",
-			"ComponentDefType": "Upgrade",
-			"MountedLocation": "Turret",
-			"HardpointSlot": -1,
-			"DamageLevel": "Functional"
-		},
-		
-		{
-		  "ComponentDefID": "Weapon_Gauss_ImprovedHeavy_Twin_0-STOCK",
+		  "ComponentDefID": "Weapon_LRM_LRM20_0-STOCK",
 		  "ComponentDefType": "Weapon",
-		  "MountedLocation": "Front",		  
+		  "MountedLocation": "Left",		  
 		  "HardpointSlot": 1,
-		  "DamageLevel" : "Functional"
-		},		
-		{
-		  "ComponentDefID": "Weapon_Gauss_ImprovedHeavy_0-STOCK",
-		  "ComponentDefType": "Weapon",
-		  "MountedLocation": "Front",		  
-		  "HardpointSlot": 2,
 		  "DamageLevel" : "Functional"
 		},				
 		{
-		  "ComponentDefID": "Weapon_Gauss_ImprovedHeavy_0-STOCK",
+		  "ComponentDefID": "Weapon_SRM_SRM12_0-STOCK",
 		  "ComponentDefType": "Weapon",
-		  "MountedLocation": "Front",		  
-		  "HardpointSlot": 3,
+		  "MountedLocation": "Left",		  
+		  "HardpointSlot": 2,
 		  "DamageLevel" : "Functional"
 		},	
 		{
-		  "ComponentDefID": "Weapon_AMS",
+		  "ComponentDefID": "Weapon_SRM_SRM12_0-STOCK",
 		  "ComponentDefType": "Weapon",
-		  "MountedLocation": "Front",		  
-		  "HardpointSlot": 4,
+		  "MountedLocation": "Left",		  
+		  "HardpointSlot": 3,
 		  "DamageLevel" : "Functional"
 		},		
 		{
-		  "ComponentDefID": "Weapon_AMS",
+		  "ComponentDefID": "Weapon_LRM_LRM20_0-STOCK",
 		  "ComponentDefType": "Weapon",
-		  "MountedLocation": "Front",		  
+		  "MountedLocation": "Left",		  
+		  "HardpointSlot": 4,
+		  "DamageLevel" : "Functional"
+		},	
+		{
+		  "ComponentDefID": "Weapon_Laser_LargeLaserER_Twin_0-STOCK",
+		  "ComponentDefType": "Weapon",
+		  "MountedLocation": "Left",		  
 		  "HardpointSlot": 5,
+		  "DamageLevel" : "Functional"
+		},				
+		{
+		  "ComponentDefID": "Weapon_Laser_LargeLaserER_Twin_0-STOCK",
+		  "ComponentDefType": "Weapon",
+		  "MountedLocation": "Left",		  
+		  "HardpointSlot": 6,
+		  "DamageLevel" : "Functional"
+		},	
+		{
+		  "ComponentDefID": "Weapon_MachineGun_MachineGun_0-STOCK",
+		  "ComponentDefType": "Weapon",
+		  "MountedLocation": "Left",		  
+		  "HardpointSlot": 7,
+		  "DamageLevel" : "Functional"
+		},
+		{
+		  "ComponentDefID": "Weapon_MachineGun_MachineGun_0-STOCK",
+		  "ComponentDefType": "Weapon",
+		  "MountedLocation": "Left",		  
+		  "HardpointSlot": 8,
 		  "DamageLevel" : "Functional"
 		},	
 		
 		{
-		  "MountedLocation": "Front",
-		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_HGAUSS",
+		  "MountedLocation": "Turret",
+		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_SRM",
 		  "SimGameUID": null,
 		  "ComponentDefType": "AmmunitionBox",
 		  "HardpointSlot": -1,
@@ -163,8 +129,8 @@
 		  "hasPrefabName": false
 		},
 		{
-		  "MountedLocation": "Front",
-		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_HGAUSS",
+		  "MountedLocation": "Turret",
+		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_SRM",
 		  "SimGameUID": null,
 		  "ComponentDefType": "AmmunitionBox",
 		  "HardpointSlot": -1,
@@ -174,8 +140,8 @@
 		  "hasPrefabName": false
 		},
 		{
-		  "MountedLocation": "Front",
-		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_HGAUSS",
+		  "MountedLocation": "Turret",
+		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_SRM",
 		  "SimGameUID": null,
 		  "ComponentDefType": "AmmunitionBox",
 		  "HardpointSlot": -1,
@@ -185,8 +151,8 @@
 		  "hasPrefabName": false
 		},
 		{
-		  "MountedLocation": "Front",
-		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_HGAUSS",
+		  "MountedLocation": "Turret",
+		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_SRM",
 		  "SimGameUID": null,
 		  "ComponentDefType": "AmmunitionBox",
 		  "HardpointSlot": -1,
@@ -196,8 +162,8 @@
 		  "hasPrefabName": false
 		},
 		{
-		  "MountedLocation": "Front",
-		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_HGAUSS",
+		  "MountedLocation": "Turret",
+		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_SRM",
 		  "SimGameUID": null,
 		  "ComponentDefType": "AmmunitionBox",
 		  "HardpointSlot": -1,
@@ -207,8 +173,8 @@
 		  "hasPrefabName": false
 		},
 		{
-		  "MountedLocation": "Front",
-		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_HGAUSS",
+		  "MountedLocation": "Turret",
+		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_SRM",
 		  "SimGameUID": null,
 		  "ComponentDefType": "AmmunitionBox",
 		  "HardpointSlot": -1,
@@ -218,8 +184,19 @@
 		  "hasPrefabName": false
 		},
 		{
-		  "MountedLocation": "Front",
-		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_HGAUSS",
+		  "MountedLocation": "Turret",
+		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_MG",
+		  "SimGameUID": null,
+		  "ComponentDefType": "AmmunitionBox",
+		  "HardpointSlot": -1,
+		  "GUID": null,
+		  "DamageLevel": "Functional",
+		  "prefabName": null,
+		  "hasPrefabName": false
+		},	
+		{
+		  "MountedLocation": "Turret",
+		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_MG",
 		  "SimGameUID": null,
 		  "ComponentDefType": "AmmunitionBox",
 		  "HardpointSlot": -1,
@@ -229,8 +206,8 @@
 		  "hasPrefabName": false
 		},
 		{
-		  "MountedLocation": "Front",
-		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_HGAUSS",
+		  "MountedLocation": "Turret",
+		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_LRM",
 		  "SimGameUID": null,
 		  "ComponentDefType": "AmmunitionBox",
 		  "HardpointSlot": -1,
@@ -240,8 +217,8 @@
 		  "hasPrefabName": false
 		},
 		{
-		  "MountedLocation": "Front",
-		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_HGAUSS",
+		  "MountedLocation": "Turret",
+		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_LRM",
 		  "SimGameUID": null,
 		  "ComponentDefType": "AmmunitionBox",
 		  "HardpointSlot": -1,
@@ -251,8 +228,8 @@
 		  "hasPrefabName": false
 		},
 		{
-		  "MountedLocation": "Front",
-		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_HGAUSS",
+		  "MountedLocation": "Turret",
+		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_LRM",
 		  "SimGameUID": null,
 		  "ComponentDefType": "AmmunitionBox",
 		  "HardpointSlot": -1,
@@ -262,8 +239,8 @@
 		  "hasPrefabName": false
 		},
 		{
-		  "MountedLocation": "Front",
-		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_HGAUSS",
+		  "MountedLocation": "Turret",
+		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_LRM",
 		  "SimGameUID": null,
 		  "ComponentDefType": "AmmunitionBox",
 		  "HardpointSlot": -1,
@@ -273,8 +250,8 @@
 		  "hasPrefabName": false
 		},
 		{
-		  "MountedLocation": "Front",
-		  "ComponentDefID": "Ammo_AmmunitionBox_AntiMissile",
+		  "MountedLocation": "Turret",
+		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_LRM",
 		  "SimGameUID": null,
 		  "ComponentDefType": "AmmunitionBox",
 		  "HardpointSlot": -1,
@@ -284,8 +261,8 @@
 		  "hasPrefabName": false
 		},
 		{
-		  "MountedLocation": "Front",
-		  "ComponentDefID": "Ammo_AmmunitionBox_AntiMissile",
+		  "MountedLocation": "Turret",
+		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_LRM",
 		  "SimGameUID": null,
 		  "ComponentDefType": "AmmunitionBox",
 		  "HardpointSlot": -1,
@@ -295,8 +272,8 @@
 		  "hasPrefabName": false
 		},
 		{
-		  "MountedLocation": "Front",
-		  "ComponentDefID": "Ammo_AmmunitionBox_AntiMissile",
+		  "MountedLocation": "Turret",
+		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_LRM",
 		  "SimGameUID": null,
 		  "ComponentDefType": "AmmunitionBox",
 		  "HardpointSlot": -1,
@@ -306,30 +283,8 @@
 		  "hasPrefabName": false
 		},
 		{
-		  "MountedLocation": "Front",
-		  "ComponentDefID": "Ammo_AmmunitionBox_AntiMissile",
-		  "SimGameUID": null,
-		  "ComponentDefType": "AmmunitionBox",
-		  "HardpointSlot": -1,
-		  "GUID": null,
-		  "DamageLevel": "Functional",
-		  "prefabName": null,
-		  "hasPrefabName": false
-		},
-		{
-		  "MountedLocation": "Front",
-		  "ComponentDefID": "Ammo_AmmunitionBox_AntiMissile",
-		  "SimGameUID": null,
-		  "ComponentDefType": "AmmunitionBox",
-		  "HardpointSlot": -1,
-		  "GUID": null,
-		  "DamageLevel": "Functional",
-		  "prefabName": null,
-		  "hasPrefabName": false
-		},
-		{
-		  "MountedLocation": "Front",
-		  "ComponentDefID": "Ammo_AmmunitionBox_AntiMissile",
+		  "MountedLocation": "Turret",
+		  "ComponentDefID": "Ammo_AmmunitionBox_Generic_LRM",
 		  "SimGameUID": null,
 		  "ComponentDefType": "AmmunitionBox",
 		  "HardpointSlot": -1,
@@ -360,6 +315,17 @@
 		  "DamageLevel": "Functional",
 		  "prefabName": null,
 		  "hasPrefabName": false
-		}
+		},
+		{
+		  "MountedLocation": "Front",
+		  "ComponentDefID": "Gear_C3i",
+		  "SimGameUID": null,
+		  "ComponentDefType": "Upgrade",
+		  "HardpointSlot": -1,
+		  "GUID": null,
+		  "DamageLevel": "Functional",
+		  "prefabName": null,
+		  "hasPrefabName": false
+		}		
 	]
 }
