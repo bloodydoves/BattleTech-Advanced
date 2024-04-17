@@ -6,29 +6,30 @@
 			}
 		],
 		"BonusDescriptions": [
-				"PipsIgnored: 1",
-				"WpnAccuracy: +1",
-				"WeaponAttachmentCompatible: Laser Insulator",
-				"WeaponAttachmentCompatible: Laser FCS"
-			]
+			"ERPulse",
+			"WpnCrits: 20%",
+			"WpnAccuracy: +1",
+			"WeaponAttachmentCompatible: Laser Insulator",
+			"WeaponAttachmentCompatible: Laser FCS"
+		]
 	},
 	"Category": "Energy",
 	"Type": "Laser",
 	"WeaponSubType": "LargeLaserPulse",
 	"MinRange": 0,
-	"MaxRange": 600,
+	"MaxRange": 700,
 	"RangeSplit": [
-		170,
-		300,
-		450
+		200,
+		400,
+		600
 	],
 	"AmmoCategory": "NotSet",
 	"StartingAmmoCapacity": 0,
-	"HeatGenerated": 32,
+	"HeatGenerated": 30,
 	"Damage": 55,
 	"OverheatedDamageMultiplier": 0,
 	"EvasiveDamageMultiplier": 0,
-	"EvasivePipsIgnored": 1,
+	"EvasivePipsIgnored": 0,
 	"DamageVariance": 0,
 	"HeatDamage": 0,
 	"AccuracyModifier": -1,
@@ -52,7 +53,7 @@
 	"ColorChangeRule": "Linear",
 	"WeaponEffectID": "WeaponEffect-Weapon_LaserPulse_Large",
 	"Description": {
-		"Cost": 1527000,
+		"Cost": 1227000,
 		"Rarity": 10,
 		"Purchasable": true,
 		"Manufacturer": "CLAN",
@@ -75,6 +76,24 @@
 	"DisallowedLocations": "All",
 	"CriticalComponent": false,
 	"statusEffects": [],
+	"Modes": [
+		{
+			"Id": "ER",
+			"UIName": "ER",
+			"isBaseMode": true
+		},
+		{
+			"Id": "Pulse",
+			"UIName": "Pulse",
+			"isBaseMode": false,
+			"EvasivePipsIgnored": 3,
+			"AccuracyModifier": 1,
+			"ShortRange": -50.0,
+			"MediumRange": -130.0,
+			"LongRange": -240.0,
+			"MaxRange": -220.0
+		}
+	],
 	"ComponentTags": {
 		"items": [
 			"component_type_variant",
@@ -82,9 +101,9 @@
 			"component_type_lostech",
 			"range_long",
 			"LaserInsulatorAttachable.{location}",
-			"LaserInsulatorSupported-SingleShot",
-			"LaserFCSSupported-SingleShot",
-			"WebbTCSupported-SingleShot"
+			"LaserInsulatorSupported-ERPulse",
+			"LaserFCSSupported-ERPulse",
+			"WebbTCSupported-ERPulse"
 		],
 		"tagSetSourceFile": ""
 	}
