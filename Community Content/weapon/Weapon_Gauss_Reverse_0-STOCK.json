@@ -1,0 +1,119 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/a/g/gaussrifle"
+			},
+			{
+				"CategoryID": "NeverMelee"
+			}
+		],
+		"ComponentExplosion": {
+			"ExplosionDamage": 70,
+			"StabilityDamage": 30
+		},
+		"BonusDescriptions": [
+			"ReverseScaling: 50%, -1, 50%, +1",
+			"IsGauss",
+			"NoFireInMelee",
+			"WpnRecoil: 3",
+			"WeaponBoom: 75"
+		]
+	},
+	"Category": "Ballistic",
+	"Type": "Gauss",
+	"WeaponSubType": "Gauss",
+	"MinRange": 60,
+	"MaxRange": 700,
+	"RangeSplit": [
+		400,
+		500,
+		600
+	],
+	"AmmoCategory": "GAUSS",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 10,
+	"Damage": 70,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 0,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": 0,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 3,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 2,
+	"Instability": 30,
+	"WeaponEffectID": "WeaponEffect-Weapon_GaussRifle",
+	"Description": {
+		"Cost": 750000,
+		"Rarity": 20,
+		"Purchasable": false,
+		"Manufacturer": "SCI",
+		"Model": "Magnetic Cannon",
+		"UIName": "Reverse Gauss Rifle",
+		"Id": "Weapon_Gauss_Reverse_0-STOCK",
+		"Name": "Reverse Gauss Rifle",
+		"Details": "The Reverse Gauss Rifle is similar to the Inner Sphere Gauss Rifle but with an unusual twist. Where the standard Gauss is consistent across all ranges, the Reverse Gauss is weaker up close and much stronger at range, similar to the Sanctuary VRM weapon system (and using some of the same basic gyrojet-style principles as the VRM, though the Reverse Gauss remains a magnetic weapon). The Reverse Gauss is largely considered a niche weapon but has some strong applications if used properly. <b><color=#099ff2>VOLATILE!</color></b>\n\n <b><color=#ffcc00>Uses Gauss Ammo.</color></b>\n\n <b><color=#e51717>COMMUNITY CONTENT</color></b>",
+		"Icon": "FerroMag"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "Gauss",
+	"BattleValue": 0,
+	"InventorySize": 10,
+	"Tonnage": 17,
+	"AllowedLocations": "All",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [],
+	"Modes": [
+		{
+			"Id": "short",
+			"UIName": "Close",
+			"isBaseMode": false,
+			"ShortRange": -275.0,
+			"MediumRange": -250.0,
+			"LongRange": -275.0,
+			"MaxRange": -300.0,
+			"DamagePerShot": -35.0,
+			"AccuracyModifier": 1
+		},
+		{
+			"Id": "mid",
+			"UIName": "Medium",
+			"isBaseMode": true,
+			"forbiddenRangeEnable": true,
+			"ForbiddenRange": 399
+		},
+		{
+			"Id": "long",
+			"UIName": "Long",
+			"isBaseMode": false,
+			"ShortRange": 300.0,
+			"MediumRange": 350.0,
+			"LongRange": 350.0,
+			"MaxRange": 400.0,
+			"DamagePerShot": 35.0,
+			"forbiddenRangeEnable": true,
+			"ForbiddenRange": 699,
+			"Instability": 10,
+			"AccuracyModifier": -1
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"component_type_lostech",
+			"range_extreme",
+			"WebbTCSupported-VRM"
+		],
+		"tagSetSourceFile": ""
+	}
+}
