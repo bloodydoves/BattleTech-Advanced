@@ -1,25 +1,25 @@
 {
 	"Description": {
-		"Cost": 11300000,
+		"Cost": 10700000,
 		"Rarity": 4,
 		"Purchasable": true,
 		"Manufacturer": "",
 		"Model": "",
-		"UIName": "Misery",
-		"Id": "chassisdef_stalker_STK-M",
-		"Name": "Misery",
-		"Details": "Colonel J. Elliot Jamison of the Wolf's Dragoons was reknown as a crack Stalker pilot. So much so that imitators of his personal ride, Misery, appeared over time in the arenas of the Inner Sphere. Misery was said to mount a mixed loadout of a Gauss Rifle and triple Large Lasers for ranged combat with a pair of Medium Lasers and a SRM-6 for up close work. The Misery copycats proved able, though none could match Jamison's personal skill, and they proliferated throughout the Inner Sphere's gladiatorial circuits.",
-		"Icon": "uixTxrIcon_stalker"
+		"UIName": "Awesome",
+		"Id": "chassisdef_awesome_AWS-10KM",
+		"Name": "Awesome",
+		"Details": "The AWS-10KM is a joint venture between Irian Technologies and Alshain Weaponry that modernizes the Awesome for today's battlefield. Built on an Endo-Steel frame and armed with twin Heavy PPCs as well as a Snub-Nose PPC, the -10KM's true claim to fame is its Compact Gyro and Compact Engine, giving it extreme survivability in combat. 16 DHS manage to mostly keep the heat managed while teh traditional thick Awesome armor keeps the design secure.",
+		"Icon": "uixTxrIcon_awesome"
 	},
-	"MovementCapDefID": "movedef_stalker_STK-3F",
+	"MovementCapDefID": "movedef_awesome_AWS-8Q",
 	"PathingCapDefID": "pathingdef_assault",
-	"HardpointDataDefID": "hardpointdatadef_stalker",
-	"PrefabIdentifier": "chrPrfMech_stalkerBase-001",
-	"PrefabBase": "stalker",
-	"Tonnage": 85,
-	"InitialTonnage": 8.5,
+	"HardpointDataDefID": "hardpointdatadef_awesome",
+	"PrefabIdentifier": "chrPrfMech_awesomeBase-001",
+	"PrefabBase": "awesome",
+	"Tonnage": 80,
+	"InitialTonnage": 8,
 	"weightClass": "ASSAULT",
-	"BattleValue": 8821000,
+	"BattleValue": 7718000,
 	"Heatsinks": 0,
 	"TopSpeed": 105,
 	"TurnRadius": 90,
@@ -38,7 +38,7 @@
 	"SensorRangeMultiplier": 1,
 	"Signature": 0,
 	"Radius": 8,
-	"PunchesWithLeftArm": false,
+	"PunchesWithLeftArm": true,
 	"MeleeDamage": 85,
 	"MeleeInstability": 40,
 	"MeleeToHitModifier": 0,
@@ -49,7 +49,12 @@
 	"Locations": [
 		{
 			"Location": "Head",
-			"Hardpoints": [],
+			"Hardpoints": [
+				{
+					"WeaponMountID": "AntiPersonnel",
+					"Omni": false
+				}
+			],
 			"Tonnage": 0,
 			"InventorySlots": 6,
 			"MaxArmor": 45,
@@ -70,59 +75,54 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 140,
+			"MaxArmor": 130,
 			"MaxRearArmor": -1,
-			"InternalStructure": 70
+			"InternalStructure": 65
 		},
 		{
 			"Location": "LeftTorso",
 			"Hardpoints": [
 				{
-					"WeaponMountID": "Ballistic",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
-				{
-					"WeaponMountID": "AntiPersonnel",
-					"Omni": false
-				}
-			],
-			"Tonnage": 0,
-			"InventorySlots": 12,
-			"MaxArmor": 180,
-			"MaxRearArmor": 90,
-			"InternalStructure": 90
-		},
-		{
-			"Location": "CenterTorso",
-			"Hardpoints": [
 				{
 					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
+			"InventorySlots": 12,
+			"MaxArmor": 170,
+			"MaxRearArmor": 85,
+			"InternalStructure": 85
+		},
+		{
+			"Location": "CenterTorso",
+			"Hardpoints": [],
+			"Tonnage": 0,
 			"InventorySlots": 16,
-			"MaxArmor": 270,
-			"MaxRearArmor": 135,
-			"InternalStructure": 135
+			"MaxArmor": 250,
+			"MaxRearArmor": 125,
+			"InternalStructure": 125
 		},
 		{
 			"Location": "RightTorso",
 			"Hardpoints": [
 				{
-					"WeaponMountID": "Missile",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				},
 				{
-					"WeaponMountID": "Missile",
+					"WeaponMountID": "Energy",
 					"Omni": false
 				}
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 180,
-			"MaxRearArmor": 90,
-			"InternalStructure": 90
+			"MaxArmor": 170,
+			"MaxRearArmor": 85,
+			"InternalStructure": 85
 		},
 		{
 			"Location": "RightArm",
@@ -138,60 +138,60 @@
 			],
 			"Tonnage": 0,
 			"InventorySlots": 12,
-			"MaxArmor": 140,
+			"MaxArmor": 130,
 			"MaxRearArmor": -1,
-			"InternalStructure": 70
+			"InternalStructure": 65
 		},
 		{
 			"Location": "LeftLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 180,
+			"MaxArmor": 170,
 			"MaxRearArmor": -1,
-			"InternalStructure": 90
+			"InternalStructure": 85
 		},
 		{
 			"Location": "RightLeg",
 			"Hardpoints": [],
 			"Tonnage": 0,
 			"InventorySlots": 6,
-			"MaxArmor": 180,
+			"MaxArmor": 170,
 			"MaxRearArmor": -1,
-			"InternalStructure": 90
+			"InternalStructure": 85
 		}
 	],
 	"LOSSourcePositions": [
 		{
 			"x": 0,
-			"y": 15,
+			"y": 14,
 			"z": 0
 		},
 		{
-			"x": 3.5,
-			"y": 16,
+			"x": 4,
+			"y": 15,
 			"z": -1
 		},
 		{
-			"x": -3.5,
-			"y": 16,
+			"x": -4,
+			"y": 15,
 			"z": -1
 		}
 	],
 	"LOSTargetPositions": [
 		{
 			"x": 0,
-			"y": 15,
+			"y": 14,
 			"z": 0
 		},
 		{
-			"x": 3.5,
-			"y": 16,
+			"x": 4,
+			"y": 15,
 			"z": -1
 		},
 		{
-			"x": -3.5,
-			"y": 16,
+			"x": -4,
+			"y": 15,
 			"z": -1
 		},
 		{
@@ -205,22 +205,10 @@
 			"z": 1
 		}
 	],
-	"VariantName": "STK-M",
-	"ChassisTags": {
-		"items": [
-			"HeroMech",
-			"ArmLimitUpperRight",
-			"ArmLimitUpperLeft",
-			"AssaultMech"
-		],
-		"tagSetSourceFile": ""
-	},
-	"StockRole": "Gladiator",
-	"YangsThoughts": "Colonel J. Elliot Jamison of the Wolf's Dragoons was reknown as a crack Stalker pilot. So much so that imitators of his personal ride, Misery, appeared over time in the arenas of the Inner Sphere. Misery was said to mount a mixed loadout of a Gauss Rifle and triple Large Lasers for ranged combat with a pair of Medium Lasers and a SRM-6 for up close work. The Misery copycats proved able, though none could match Jamison's personal skill, and they proliferated throughout the Inner Sphere's gladiatorial circuits.",
 	"FixedEquipment": [
 		{
-			"MountedLocation": "Head",
-			"ComponentDefID": "Gear_Quirk_CombatComputer_Stalker",
+			"MountedLocation": "LeftArm",
+			"ComponentDefID": "Gear_Quirk_Battlefists_Awesome",
 			"SimGameUID": "",
 			"ComponentDefType": "Upgrade",
 			"HardpointSlot": -1,
@@ -241,6 +229,16 @@
 			"hasPrefabName": false
 		}
 	],
+	"VariantName": "AWS-10KM",
+	"ChassisTags": {
+		"items": [
+			"ArmLimitLowerRight",
+			"AssaultMech"
+		],
+		"tagSetSourceFile": ""
+	},
+	"StockRole": "Heavy Sniper & Defender",
+	"YangsThoughts": "The AWS-10KM is a joint venture between Irian Technologies and Alshain Weaponry that modernizes the Awesome for today's battlefield. Built on an Endo-Steel frame and armed with twin Heavy PPCs as well as a Snub-Nose PPC, the -10KM's true claim to fame is its Compact Gyro and Compact Engine, giving it extreme survivability in combat. 16 DHS manage to mostly keep the heat managed while teh traditional thick Awesome armor keeps the design secure.",
 	"CustomParts": {
 		"CustomParts": []
 	}
