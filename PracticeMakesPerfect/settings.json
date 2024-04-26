@@ -449,7 +449,9 @@
 				"ClanJadeFalcon",
 				"ClanGhostBear",
 				"ClanNovaCat",
-				"ClanSnowRaven"
+				"ClanSnowRaven",
+				"ClanGoliathScorpion",
+				"ScorpionEmpire"
 			],
 			"description": "This pilot is an expert at fighting Clan Wolf, and does 5% increased damage to all Clan forces.",
 			"effectDataJO": [
@@ -520,7 +522,9 @@
 				"ClanJadeFalcon",
 				"ClanGhostBear",
 				"ClanNovaCat",
-				"ClanSnowRaven"
+				"ClanSnowRaven",
+				"ClanGoliathScorpion",
+				"ScorpionEmpire"
 			],
 			"description": "This pilot is an expert at fighting Clan Jade Falcon, and does 5% increased damage to all Clan forces.",
 			"effectDataJO": [
@@ -591,7 +595,9 @@
 				"ClanJadeFalcon",
 				"ClanGhostBear",
 				"ClanNovaCat",
-				"ClanSnowRaven"
+				"ClanSnowRaven",
+				"ClanGoliathScorpion",
+				"ScorpionEmpire"
 			],
 			"description": "This pilot is an expert at fighting Clan Ghost Bear, and does 5% increased damage to all Clan forces.",
 			"effectDataJO": [
@@ -662,7 +668,9 @@
 				"ClanJadeFalcon",
 				"ClanGhostBear",
 				"ClanNovaCat",
-				"ClanSnowRaven"
+				"ClanSnowRaven",
+				"ClanGoliathScorpion",
+				"ScorpionEmpire"
 			],
 			"description": "This pilot is an expert at fighting Clan Nova Cat, and does 5% increased damage to all Clan forces.",
 			"effectDataJO": [
@@ -733,7 +741,9 @@
 				"ClanJadeFalcon",
 				"ClanGhostBear",
 				"ClanNovaCat",
-				"ClanSnowRaven"
+				"ClanSnowRaven",
+				"ClanGoliathScorpion",
+				"ScorpionEmpire"
 			],
 			"description": "This pilot is an expert at fighting Clan Snow Raven, and does 5% increased damage to all Clan forces.",
 			"effectDataJO": [
@@ -773,9 +783,155 @@
 					},
 					"effectType": "StatisticEffect",
 					"Description": {
-						"Id": "CNC_UnkindnessBearDmg",
+						"Id": "CNC_UnkindnessDmg",
 						"Name": "Unkindness of Ravens",
 						"Details": "This pilot is an expert at fighting Clan Snow Raven, and does 5% increased damage to all Clan forces.",
+						"Icon": "allied-star"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamagePerShot",
+						"operation": "Float_Multiply",
+						"modValue": "1.05",
+						"modType": "System.Single",
+						"additionalRules": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponType": "NotSet",
+						"targetAmmoCategory": "NotSet",
+						"targetWeaponSubType": "NotSet"
+					}
+				}
+			]
+		},
+		{
+			"OpForSpecID": "CGS_ScorpionsSting",
+			"OpForSpecName": "Clan Goliath Scorpion: Scorpion's Sting",
+			"killsRequired": 12,
+			"factionID": "ClanGoliathScorpion",
+			"applyToFaction": [
+				"ClanWolf",
+				"ClanJadeFalcon",
+				"ClanGhostBear",
+				"ClanNovaCat",
+				"ClanSnowRaven",
+				"ClanGoliathScorpion",
+				"ScorpionEmpire"
+			],
+			"description": "This pilot is an expert at fighting Clan Goliath Scorpion, and does 5% increased damage to all Clan forces.",
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "CGS_ScorpionStingDmgPassive",
+						"Name": "Scorpion's Sting",
+						"Details": "This pilot is an expert at fighting Clan Goliath Scorpion, and does 5% increased damage to all Clan forces.",
+						"Icon": "allied-star"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "dummyOpForStat",
+						"operation": "Set",
+						"modValue": "true",
+						"modType": "System.Boolean"
+					}
+				},
+				{
+					"durationData": {
+						"duration": 1,
+						"ticksOnEndOfRound": true,
+						"useActivationsOfTarget": true,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "OnWeaponFire",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "CGS_ScorpionStingDmg",
+						"Name": "Scorpion's Sting",
+						"Details": "This pilot is an expert at fighting Clan Goliath Scorpion, and does 5% increased damage to all Clan forces.",
+						"Icon": "allied-star"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "DamagePerShot",
+						"operation": "Float_Multiply",
+						"modValue": "1.05",
+						"modType": "System.Single",
+						"additionalRules": "NotSet",
+						"targetCollection": "Weapon",
+						"targetWeaponCategory": "NotSet",
+						"targetWeaponType": "NotSet",
+						"targetAmmoCategory": "NotSet",
+						"targetWeaponSubType": "NotSet"
+					}
+				}
+			]
+		},
+		{
+			"OpForSpecID": "SE_ScorpionsSting",
+			"OpForSpecName": "Scorpion Empire: Scorpion's Sting",
+			"killsRequired": 12,
+			"factionID": "ScorpionEmpire",
+			"applyToFaction": [
+				"ClanWolf",
+				"ClanJadeFalcon",
+				"ClanGhostBear",
+				"ClanNovaCat",
+				"ClanSnowRaven",
+				"ClanGoliathScorpion",
+				"ScorpionEmpire"
+			],
+			"description": "This pilot is an expert at fighting the Scorpion Empire, and does 5% increased damage to all Clan forces.",
+			"effectDataJO": [
+				{
+					"durationData": {},
+					"targetingData": {
+						"effectTriggerType": "Passive",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": true
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "SE_ScorpionStingDmgPassive",
+						"Name": "Scorpion's Sting",
+						"Details": "This pilot is an expert at fighting the Scorpion Empire, and does 5% increased damage to all Clan forces.",
+						"Icon": "allied-star"
+					},
+					"nature": "Buff",
+					"statisticData": {
+						"statName": "dummyOpForStat",
+						"operation": "Set",
+						"modValue": "true",
+						"modType": "System.Boolean"
+					}
+				},
+				{
+					"durationData": {
+						"duration": 1,
+						"ticksOnEndOfRound": true,
+						"useActivationsOfTarget": true,
+						"stackLimit": 1
+					},
+					"targetingData": {
+						"effectTriggerType": "OnWeaponFire",
+						"effectTargetType": "Creator",
+						"showInStatusPanel": false
+					},
+					"effectType": "StatisticEffect",
+					"Description": {
+						"Id": "SE_ScorpionStingDmg",
+						"Name": "Scorpion's Sting",
+						"Details": "This pilot is an expert at fighting the Scorpion Empire, and does 5% increased damage to all Clan forces.",
 						"Icon": "allied-star"
 					},
 					"nature": "Buff",
@@ -969,6 +1125,25 @@
 			"repMod": {
 				"JacobsonHaven": 5,
 				"DaneSacellum": 5
+			},
+			"effectDataJO": []
+		},
+		{
+			"OpForSpecID": "RWR_EmperorsFall",
+			"OpForSpecName": "Rim Worlds Republic: Emperor's Fall",
+			"killsRequired": 12,
+			"factionID": "RimWorldsRepublic",
+			"applyToFaction": [
+				"RimWorldsRepublic"
+			],
+			"description": "The Rim Worlds Republic has a history of imperial ambitions and it's about time someone put an end to it. Gain bonus reputation with their enemies, ComStar and the Great Houses, when fighting the Rim Worlds Republic.",
+			"repMod": {
+				"Davion": 2,
+				"Kurita": 2,
+				"Liao": 2,
+				"Steiner": 2,
+				"Marik": 2,
+				"ComStar": 2
 			},
 			"effectDataJO": []
 		}
@@ -1550,7 +1725,9 @@
 			"description": "This pilot is an expert at escorting other units and keeping them out of harm's way. Allies take 15% less damage.",
 			"effectDataJO": [
 				{
-					"durationData": {},
+					"durationData":  {
+						"stackLimit": 1
+					},
 					"targetingData": {
 						"effectTriggerType": "Passive",
 						"effectTargetType": "AllAllies",

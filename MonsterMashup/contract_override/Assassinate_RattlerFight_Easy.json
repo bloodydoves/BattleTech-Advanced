@@ -11,9 +11,9 @@
 	"missionSuccessStatementOverride": null,
 	"badFaithStatementOverride": null,
 	"goodFaithStatementOverride": null,
-	"shortDescription": "SPECIAL BTA CONTRACT: Commander, ComStar has dug up a SLDF Rattler Mk I on this backwater world. Why the Star League Defense Force built a Rattler here is anyone's guess but ComStar has been trying to get it back up and operational for awhile. It looks like they've finally managed it, so we've been hired to destroy it before ComStar can start to use it to take control of the planet. While Rattlers are insanely hard targets, this one is old and in poor repair, meaning it has much less armor than the more modern Rattler Mk IIs on Terra. Still, it'll be a bear to fight. Good luck, Commander.\r\n\r\n <b><color=#f44336>THIS CONTRACT IS VERY HARD, POSSIBLY IMPOSSIBLE. PREPARE FOR HEAVY COMBAT FROM THE SECOND YOU LAND. YOU HAVE BEEN WARNED.</color></b>\r\n\r\n <b><color=#ffcc00>DO NOT BRING TANKS TO THIS MISSION, TANKS CAN BUG OUT ON CONTRACT COMPLETION AND YOU CAN LOSE THEM PERMANENTLY. YOU HAVE BEEN WARNED.</color></b>",
+	"shortDescription": "SPECIAL BTA CONTRACT: Commander, ComStar has dug up a SLDF Rattler Mk I on this planet. Why the Star League Defense Force built a Rattler here is anyone's guess but ComStar has been trying to get it back up and operational for awhile. It looks like they've finally managed it, so we've been hired to destroy it before ComStar can start to use it fully. While Rattlers are insanely hard targets, this one is old and in poor repair, meaning it has much less armor than the more modern Rattler Mk IIs on Terra. Still, it'll be a bear to fight. Good luck, Commander.\r\n\r\n <b><color=#f44336>THIS CONTRACT IS VERY HARD, POSSIBLY IMPOSSIBLE. PREPARE FOR HEAVY COMBAT FROM THE SECOND YOU LAND. YOU HAVE BEEN WARNED.</color></b>\r\n\r\n <b><color=#ffcc00>DO NOT BRING TANKS TO THIS MISSION, TANKS CAN BUG OUT ON CONTRACT COMPLETION AND YOU CAN LOSE THEM PERMANENTLY. YOU HAVE BEEN WARNED.</color></b>",
 	"longDescription": "Commander, this is nuts, you can't be serious! We can't fight a Rattler, it's a moving mountain! Rethink this, please!",
-	"salvagePotential": 48,
+	"salvagePotential": 36,
 	"requirementList": [],
 	"OnContractSuccessResults": [
 		{
@@ -260,7 +260,7 @@
 					"revealRadius": -1
 				},
 				{
-					"words": "Keep an eye out though, the Rattler is likely running with an escort though telemetry indicates it's not a large one. Additionally, Rattlers carry on-board combat vehicles and it'll probably be deploying them throughout the fight, including VTOLs, tanks, and maybe more. I'd say be careful but the time for that is passed. Good luck and try to come back alive. Oliveira out.",
+					"words": "Keep an eye out though, the Rattler is likely running with an escort though recon indicates it's not a large one. Additionally, Rattlers carry on-board combat vehicles and it'll probably be deploying them throughout the fight, including VTOLs, tanks, and maybe more. I'd say be careful but the time for that is passed. Good luck and try to come back alive. Oliveira out.",
 					"wordsColor": {
 						"r": 1,
 						"g": 1,
@@ -669,13 +669,18 @@
 					"EncounterObjectGuid": "72773efa-5537-4273-89f8-5fcf1a06f7ff"
 				},
 				"name": "Lance_Enemy_OpposingForce",
-				"lanceDefId": "Manual",
+				"lanceDefId": "Tagged",
 				"lanceTagSet": {
-					"items": [],
+					"items": [
+						"lance_type_heavy"
+					],
 					"tagSetSourceFile": "tags/LanceTags"
 				},
 				"lanceExcludedTagSet": {
-					"items": [],
+					"items": [
+						"lance_type_gladiator",
+						"lance_type_turret"
+					],
 					"tagSetSourceFile": "tags/LanceTags"
 				},
 				"spawnEffectTags": {
@@ -693,7 +698,7 @@
 						"customUnitName": "",
 						"customHeraldryDefId": "",
 						"unitType": "Mech",
-						"unitDefId": "mechdef_archangel_C-ANG-CONDITUS",
+						"unitDefId": "mechDef_InheritLance",
 						"unitTagSet": {
 							"items": [],
 							"tagSetSourceFile": "tags/UnitTags"
@@ -726,7 +731,7 @@
 						"customUnitName": "",
 						"customHeraldryDefId": "",
 						"unitType": "Mech",
-						"unitDefId": "mechdef_deva_X-DVA-O-CONDITUS",
+						"unitDefId": "mechDef_InheritLance",
 						"unitTagSet": {
 							"items": [],
 							"tagSetSourceFile": "tags/UnitTags"
@@ -759,7 +764,7 @@
 						"customUnitName": "",
 						"customHeraldryDefId": "",
 						"unitType": "Mech",
-						"unitDefId": "mechdef_grigori_X-GRG-O-CONDITUS",
+						"unitDefId": "mechDef_InheritLance",
 						"unitTagSet": {
 							"items": [],
 							"tagSetSourceFile": "tags/UnitTags"
@@ -792,7 +797,7 @@
 						"customUnitName": "",
 						"customHeraldryDefId": "",
 						"unitType": "Mech",
-						"unitDefId": "mechdef_malak_C-MK-O-CONDITUS",
+						"unitDefId": "mechDef_InheritLance",
 						"unitTagSet": {
 							"items": [],
 							"tagSetSourceFile": "tags/UnitTags"
@@ -828,8 +833,7 @@
 				"lanceDefId": "Tagged",
 				"lanceTagSet": {
 					"items": [
-						"lance_type_cavalry",
-						"lance_type_notallvehicles"
+						"lance_type_support"
 					],
 					"tagSetSourceFile": "tags/LanceTags"
 				},
@@ -854,7 +858,7 @@
 						"customUnitName": "",
 						"customHeraldryDefId": "",
 						"unitType": "Mech",
-						"unitDefId": "mechdef_archangel_C-ANG-DEICIO",
+						"unitDefId": "mechDef_InheritLance",
 						"unitTagSet": {
 							"items": [],
 							"tagSetSourceFile": "tags/UnitTags"
@@ -887,7 +891,7 @@
 						"customUnitName": "",
 						"customHeraldryDefId": "",
 						"unitType": "Mech",
-						"unitDefId": "mechdef_deva_X-DVA-O-DEICIO",
+						"unitDefId": "mechDef_InheritLance",
 						"unitTagSet": {
 							"items": [],
 							"tagSetSourceFile": "tags/UnitTags"
@@ -920,7 +924,7 @@
 						"customUnitName": "",
 						"customHeraldryDefId": "",
 						"unitType": "Mech",
-						"unitDefId": "mechdef_grigori_X-GRG-O-DEICIO",
+						"unitDefId": "mechDef_InheritLance",
 						"unitTagSet": {
 							"items": [],
 							"tagSetSourceFile": "tags/UnitTags"
@@ -953,7 +957,7 @@
 						"customUnitName": "",
 						"customHeraldryDefId": "",
 						"unitType": "Mech",
-						"unitDefId": "mechdef_malak_C-MK-O-DEICIO",
+						"unitDefId": "mechDef_InheritLance",
 						"unitTagSet": {
 							"items": [],
 							"tagSetSourceFile": "tags/UnitTags"
@@ -1043,7 +1047,7 @@
 						"customUnitName": "",
 						"customHeraldryDefId": "",
 						"unitType": "Mech",
-						"unitDefId": "mechdef_yazata_X-YZT-FUNDATUS",
+						"unitDefId": "mechdef_kingcrab_KGC-001",
 						"unitTagSet": {
 							"items": [],
 							"tagSetSourceFile": "tags/UnitTags"
@@ -1076,7 +1080,7 @@
 						"customUnitName": "",
 						"customHeraldryDefId": "",
 						"unitType": "Mech",
-						"unitDefId": "mechdef_yazata_X-YZT-FUNDATUS",
+						"unitDefId": "mechdef_matar_SAM-RS",
 						"unitTagSet": {
 							"items": [],
 							"tagSetSourceFile": "tags/UnitTags"
@@ -1109,7 +1113,7 @@
 						"customUnitName": "",
 						"customHeraldryDefId": "",
 						"unitType": "Mech",
-						"unitDefId": "mechdef_yazata_X-YZT-FUNDATUS",
+						"unitDefId": "mechdef_pallas_PLS-1X",
 						"unitTagSet": {
 							"items": [],
 							"tagSetSourceFile": "tags/UnitTags"

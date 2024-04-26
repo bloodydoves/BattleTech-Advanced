@@ -196,30 +196,30 @@
 		],
 		"DeswarmConfigs": {
 			"AbilityDefDeSwarmerRoll": {
-				"BaseSuccessChance": 0.5,
-				"MaxSuccessChance": 0.9,
+				"BaseSuccessChance": 0.6,
+				"MaxSuccessChance": 0.95,
 				"PilotingSuccessFactor": 0.05,
-				"TotalDamage": 150,
+				"TotalDamage": 200,
 				"Clusters": 6,
 				"InitPenalty": 2
 			},
 			"AbilityDefDeSwarmerSwat": {
-				"BaseSuccessChance": 0.33,
-				"MaxSuccessChance": 0.9,
+				"BaseSuccessChance": 0.5,
+				"MaxSuccessChance": 0.95,
 				"PilotingSuccessFactor": 0.05,
-				"TotalDamage": 75,
+				"TotalDamage": 100,
 				"Clusters": 3,
 				"InitPenalty": 1
 			}
 		},
 		"DeswarmMovementConfig": {
 			"AbilityDefID": "AbilityDefDeSwarmerMovement",
-			"BaseSuccessChance": 0.35,
+			"BaseSuccessChance": 0.45,
 			"MaxSuccessChance": 0.95,
 			"EvasivePipsFactor": 0.1,
 			"JumpMovementModifier": 1.2,
 			"UseDFADamage": false,
-			"LocationDamageOverride": 100,
+			"LocationDamageOverride": 150,
 			"PilotingDamageReductionFactor": 0.1
 		},
 		"BPodComponentIDs": [
@@ -274,7 +274,7 @@
 						"statisticData": {
 							"statName": "CalledShotBonusMultiplier",
 							"operation": "Float_Multiply",
-							"modValue": "9001.0",
+							"modValue": "2.5",
 							"modType": "System.Single"
 						}
 					},
@@ -299,7 +299,7 @@
 						"statisticData": {
 							"statName": "ClusteringModifier",
 							"operation": "Float_Add",
-							"modValue": "9001",
+							"modValue": "10",
 							"modType": "System.Single",
 							"targetCollection": "Weapon"
 						},
@@ -360,7 +360,7 @@
 						"statisticData": {
 							"statName": "AccuracyModifier",
 							"operation": "Float_Add",
-							"modValue": "6",
+							"modValue": "20",
 							"modType": "System.Single"
 						}
 					}
@@ -468,14 +468,14 @@
 						"Description": {
 							"Id": "BA_CarrierCruise",
 							"Name": "Carrier Slowdown",
-							"Details": "This vehicle is 20% slower thanks to the BA it is carrying being heavy.",
+							"Details": "This vehicle is 35% slower thanks to the BA it is carrying weighing it down.",
 							"Icon": "cargo-crate"
 						},
 						"nature": "Buff",
 						"statisticData": {
 							"statName": "CruiseSpeed",
 							"operation": "Float_Multiply",
-							"modValue": "0.8",
+							"modValue": "0.65",
 							"modType": "System.Single"
 						}
 					},
@@ -497,7 +497,7 @@
 						"statisticData": {
 							"statName": "FlankSpeed",
 							"operation": "Float_Multiply",
-							"modValue": "0.8",
+							"modValue": "0.65",
 							"modType": "System.Single"
 						}
 					}
@@ -585,9 +585,9 @@
 				"SpawnChanceDiffMod": 0.05,
 				"MaxSquadsPerContract": 3,
 				"InternalBattleArmorWeight": {
-					"mechdef_ba_elemental": 6,
+					"mechdef_ba_elemental": 5,
 					"mechdef_ba_salamander": 3,
-					"BA_EMPTY": 2
+					"BA_EMPTY": 3
 				},
 				"MountedBattleArmorWeight": {
 					"mechdef_ba_elemental": 6,
@@ -608,10 +608,12 @@
 				"SpawnChanceDiffMod": 0.05,
 				"MaxSquadsPerContract": 3,
 				"InternalBattleArmorWeight": {
-					"mechdef_ba_dragoon": 6
+					"mechdef_ba_dragoon": 6,
+					"BA_EMPTY": 3
 				},
 				"MountedBattleArmorWeight": {
-					"mechdef_ba_dragoon": 6
+					"mechdef_ba_dragoon": 6,
+					"BA_EMPTY": 3
 				},
 				"HandsyBattleArmorWeight": {
 					"BA_EMPTY": 1
