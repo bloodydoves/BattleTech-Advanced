@@ -1,0 +1,263 @@
+{
+	"Custom": {
+		"Category": [
+			{
+				"CategoryID": "w/s/m/melee"
+			},
+			{
+				"CategoryID": "CombatShield"
+			}
+		],
+		"BonusDescriptions": [
+			"ModularArmor: +60",
+			"IsPhysWeap",
+			"PhysWeapUnsteady",
+			"PunchHitTable",
+			"PhysWeapDamage: 0.75",
+			"PhysWeapStab: 0.75"
+		],
+		"Flags": [
+			"default",
+			"not_broken",
+			"autorepair",
+			"no_salvage"
+		],
+		"AnimatorReplacer":{
+			"AnimationSource":"chrPrfMech_hatchetmanBase-001"
+		}
+	},
+	"weaponCategoryID": "MeleeWeapon",
+	"Type": "MachineGun",
+	"WeaponSubType": "MachineGun",
+	"MinRange": 0,
+	"MaxRange": 0,
+	"RangeSplit": [
+		0,
+		0,
+		0
+	],
+	"AmmoCategory": "NotSet",
+	"StartingAmmoCapacity": 0,
+	"HeatGenerated": 0,
+	"Damage": 0,
+	"OverheatedDamageMultiplier": 0,
+	"EvasiveDamageMultiplier": 0,
+	"EvasivePipsIgnored": 0,
+	"DamageVariance": 0,
+	"HeatDamage": 0,
+	"AccuracyModifier": 1,
+	"CriticalChanceMultiplier": 1,
+	"AOECapable": false,
+	"IndirectFireCapable": false,
+	"RefireModifier": 0,
+	"ShotsWhenFired": 1,
+	"ProjectilesPerShot": 1,
+	"AttackRecoil": 0,
+	"Instability": 0,
+	"NotUseInMelee": true,
+	"WeaponEffectID": "WeaponEffect-Weapon_MachineGun",
+	"Description": {
+		"Cost": 12000,
+		"Rarity": 4,
+		"Purchasable": true,
+		"Manufacturer": "Excalibur",
+		"Model": "Sword-Shield",
+		"UIName": "Sword-Shield",
+		"Id": "Weapon_Excalibur_SwordShield",
+		"Name": "Sword-Shield",
+		"Details": "This is a unique Sword-Shield, designed for the Excalibur. It cannot be removed or used elsewhere. Designed for the arenas of Solaris VII, BattleMech Shields are a mostly untested technology, though they're not terribly complex. Mountable only in the arms, a BattleMech Shield provides additional armor protection for the carrying mech as it uses the shield to soak incoming fire. The Sword-Shield is an unusual weapon in that it both provides physical protection to the arm of the Exaclibur but it also serves as a passable melee weapon in a pinch.",
+		"Icon": "broadsword"
+	},
+	"BonusValueA": "",
+	"BonusValueB": "",
+	"ComponentType": "Weapon",
+	"ComponentSubType": "Weapon",
+	"PrefabIdentifier": "sword",
+	"BattleValue": 0,
+	"InventorySize": 2,
+	"Tonnage": 0,
+	"AllowedLocations": "RightArm",
+	"DisallowedLocations": "All",
+	"CriticalComponent": false,
+	"statusEffects": [
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-Shield_Large-{location}",
+				"Name": "Bonus Arm Armor",
+				"Details": "The BattleMech Sword-Shield is providing extra armor to the equipped arm.",
+				"Icon": "shield-reflect"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "{location}.Armor",
+				"operation": "Float_Add",
+				"modValue": "60",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"effectTargetType": "Creator",
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "PunchIsPhysical",
+				"Name": "This is a Physical Weapon",
+				"Details": "This is a physical weapon and uses those melee rules."
+			},
+			"statisticData": {
+				"statName": "CBTBE_Punch_Is_Physical_Weapon",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0.0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "CBTBE_PHYSICAL_WEAPON_APPLY_UNSTEADY",
+				"Name": "Target will be Unsteady",
+				"Details": "Foo"
+			},
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Unsteady_Target_On_Hit",
+				"operation": "Set",
+				"modValue": "true",
+				"modType": "System.Boolean"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": 1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0.0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "CBTBE_PHYSICAL_WEAPON_LOCATION_TABLE",
+				"Name": "Location table to use",
+				"Details": "Foo"
+			},
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Location_Table",
+				"operation": "Set",
+				"modValue": "PUNCH",
+				"modType": "System.String"
+			},
+			"nature": "Buff"
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": true
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-SwordBaseDamage",
+				"Name": "Sword Base Damage",
+				"Details": "Swords do 7.5 damage per 10 tons of the mech and do do 7.5 stab damage per 10 tons of the mech.",
+				"Icon": "broadsword"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Target_Damage_Per_Attacker_Ton",
+				"operation": "Set",
+				"modValue": "0.75",
+				"modType": "System.Single"
+			}
+		},
+		{
+			"durationData": {
+				"duration": -1,
+				"stackLimit": -1
+			},
+			"targetingData": {
+				"effectTriggerType": "Passive",
+				"triggerLimit": 0,
+				"extendDurationOnTrigger": 0,
+				"specialRules": "NotSet",
+				"effectTargetType": "Creator",
+				"range": 0,
+				"forcePathRebuild": false,
+				"forceVisRebuild": false,
+				"showInTargetPreview": false,
+				"showInStatusPanel": false
+			},
+			"effectType": "StatisticEffect",
+			"Description": {
+				"Id": "StatusEffect-SwordBaseStabDamage",
+				"Name": "Swords Base Stab Damage",
+				"Details": "Swords do 7.5 stab damage per 10 tons of the mech.",
+				"Icon": "broadsword"
+			},
+			"nature": "Buff",
+			"statisticData": {
+				"statName": "CBTBE_Physical_Weapon_Target_Instability_Per_Attacker_Ton",
+				"operation": "Set",
+				"modValue": "0.75",
+				"modType": "System.Single"
+			}
+		}
+	],
+	"ComponentTags": {
+		"items": [
+			"component_type_stock",
+			"range_close"
+		],
+		"tagSetSourceFile": ""
+	}
+}
